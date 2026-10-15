@@ -9,4 +9,4 @@ List what's waiting for the person to grade on the active Moodle site, in the co
 - Quizzes: `list_questions_to_grade` for questions graded by hand (essays).
 - Forums graded as a whole: `get_forum_grades`, when there are any.
 
-Answer as a table: course, activity, how many to grade, oldest since. Only read: change nothing. Then offer to start with the oldest, following the `grade-with-rubric` skill.
+Answer as a table: course, activity, how many to grade, oldest since. Only read: change nothing. Then offer to start with the oldest, following the `grading` skill.

@@ -1,0 +1,41 @@
+---
+name: course-content
+description: Put learning content into a Moodle course with moodle-mcp - choose the resource (page, book, file, folder, URL, text and media area, section summary), write it as HTML Moodle keeps, embed images and upload files, and edit existing content without breaking it. Use whenever notes, documents, links or section texts go into Moodle or change there; activities have their own skills.
+---
+
+# Content in Moodle
+
+What the content says is the person's (or comes from wherever the agent's teaching knowledge does); this skill is how it lands in Moodle intact. New content goes up hidden first: see the `publishing` skill.
+
+## Which resource
+
+| Content | Moodle resource | How |
+| --- | --- | --- |
+| Notes of reasonable length | Page (`page`) | `create_activity` with `content` (HTML) |
+| Long notes in parts | Book (`book`) | `create_activity` creates it; moodle-mcp has no tool for its chapters: the person adds them, or a page per part |
+| A document to download (a syllabus, a template, notes as PDF) | File (`resource`), or folder (`folder`) for several | `create_activity` with `files` (absolute local paths; the first is a file resource's main one) |
+| An external reference | URL (`url`) | `create_activity` with `url`, and a `description` saying what to look at and why |
+| A short note between activities on the course page | Text and media area (`label`) | `create_activity` with `content`; no `name` needed |
+| What a section is about and the order to follow | The section's summary | `add_section` or `edit_section` with `summary` |
+
+Check the type is offered in this course first (`get_site_info` with `courseId`).
+
+## HTML that survives
+
+- Write the content as HTML, never as text typed into an editor: headings, lists and code blocks come through only as markup.
+- Headings start at `<h2>` (the activity's name is the page's `<h1>`), in order, without skipped levels.
+- Code and commands in `<pre><code>`, with HTML entities for `<`, `>` and `&`: they can be copied and keep their indentation.
+- Images: local files in `embed`, named in the HTML by file name (`<img src="flow.png" alt="...">`); moodle-mcp uploads them into the activity. Alt text says what the image shows; empty only for decoration.
+- Links say where they go ("the official documentation of Docker volumes"), never "click here". Tables only for tabular data, with `<th>` headers.
+
+## Editing what's there
+
+1. Read it first: `get_activity_content` for the text, `get_activity_settings` for the rest (a resource's or folder's files are listed there by path).
+2. Change only what's needed: `update_activity` changes only what you give (`content`, `description`, `name`, `url`, `files` to add, remove or replace). Keep the person's wording when a correction does.
+3. Read it back and say what changed and why.
+
+## Good practice
+
+- Descriptive names ("Unit 2 notes: Dockerfiles and building images"), not "Unit 2" or "Page 1": they're what students see in the course index and the gradebook.
+- Place it where it belongs: `create_activity` adds at the end of a section; `edit_activity` with `beforeActivityId` moves it into place.
+- A file name is what students download: name local files before uploading them, without spaces or the person's private folder names.

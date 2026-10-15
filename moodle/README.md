@@ -5,7 +5,7 @@
 # moodle
 
 **Your AI agent works in your Moodle courses as you, and knows how to do it well.**<br/>
-moodle-mcp's 140 tools, with the good practice to grade, build quizzes and reuse courses.
+moodle-mcp's 140 tools, with the good practice to build, grade, follow and reuse your courses.
 
 ![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
@@ -16,7 +16,7 @@ moodle-mcp's 140 tools, with the good practice to grade, build quizzes and reuse
 
 </div>
 
-This extension gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit), or Claude Code, the [moodle-mcp](https://github.com/falkenslab/moodle-mcp) server and what to do with it: skills for grading with a rubric, building a quiz from a question bank, copying and restoring courses and working with several Moodle sites, and commands for a quick look at what's due. It runs moodle-mcp from npm, at a fixed version, through a real browser on your computer, logged in as you.
+This extension gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit), or Claude Code, the [moodle-mcp](https://github.com/falkenslab/moodle-mcp) server and what to do with it: skills for everything a course holds (content, assignments, quizzes, forums, other activities, the gradebook), for grading, following the class and checking a course, for publishing safely and for reusing courses across sites, and commands for a quick look at what's due. It knows Moodle, not teaching: an agent that knows teaching, like [miyagi](https://github.com/falkenslab/miyagi), installs it to work in Moodle. It runs moodle-mcp from npm, at a fixed version, through a real browser on your computer, logged in as you.
 
 ## ✨ Why this extension
 
@@ -60,6 +60,8 @@ Change them later with `my-agent extension config moodle`, in the chat with `/ex
 - 👩‍🏫 "Grade the essays of unit 3 with their rubric, and show me the proposals first."
 - 👩‍🏫 "Make a 10-question quiz on fractions from the course's question bank."
 - 👩‍🏫 "Copy last year's unit 2 from my old school's Moodle into this year's course."
+- 👩‍🏫 "Who's falling behind in unit 3, and on which activity?"
+- 👩‍🏫 "Check the course is ready for the new term: dates, locked activities, the gradebook."
 - 👩‍🏫 "/moodle:to-grade" or "/moodle:week": what's waiting, and what's due.
 - 🧑‍🎓 "What do I have to hand in this week?"
 
@@ -68,8 +70,18 @@ Change them later with `my-agent extension config moodle`, in the chat with `/ex
 | Part | What it is |
 | --- | --- |
 | 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.3.0`, with your settings |
-| 📝 `quiz-from-bank` | Building or extending a quiz from a question bank |
-| ✅ `grade-with-rubric` | Grading submissions with the rubric, proposals first |
+| 🔎 `read-a-course` | What the person can do in a course, its structure, restrictions, completion and dates |
+| 🫥 `publishing` | New content hidden first, checked, then shown; one approval per item |
+| 📄 `course-content` | Pages, books, files, folders, links and section texts, as HTML Moodle keeps |
+| 📤 `assignments` | Submission settings that match the statement, dates, groups, feedback and the rubric |
+| 📝 `quizzes` | Settings for the quiz's purpose, GIFT that imports well, slots, order and total |
+| 🧩 `other-activities` | Workshop, lesson, glossary, wiki, forums, choice, H5P; completion, restrictions and groups |
+| 💬 `forums` | Reading threads, posting exactly once, announcements and moderation |
+| ✅ `grading` | Assignments with their rubric, quiz essays and graded forums, proposals first |
+| 🧮 `gradebook` | Categories, aggregation and weights that compute the grading scheme |
+| 📈 `class-progress` | Completion, grades, submissions and activity, and writing to who's behind |
+| 🩺 `course-check` | What's broken or stale in a course, and getting it ready for a new term |
+| 🎮 `scorm` | An HTML activity packaged as SCORM, uploaded and tested so Moodle records it |
 | 📦 `copy-and-restore` | Copying, importing, backing up and restoring courses, and checking the result |
 | 🌐 `several-sites` | Adding and switching sites, and copying between them |
 | 📅 `/moodle:week` | What's due this week and what's waiting for you |

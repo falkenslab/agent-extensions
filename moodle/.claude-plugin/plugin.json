@@ -73,7 +73,7 @@
         "moodle"
       ],
       "requires": [],
-      "help": "Moodle, through moodle-mcp: your courses, grading, quizzes, forums and copies between your sites; my moodle:* skills hold the good practice for each, and /moodle:week and /moodle:to-grade are quick looks at what's pending.",
+      "help": "Moodle, through moodle-mcp: building your courses (content, assignments, quizzes, forums, other activities, the gradebook), grading, following the class, checking a course and copying between your sites; my moodle:* skills hold how to do each well in Moodle, and /moodle:week and /moodle:to-grade are quick looks at what's pending.",
       "labels": {
         "list_courses": {
           "en": {
