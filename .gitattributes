@@ -1,0 +1,6 @@
+# LF everywhere: an extension's files hash the same on every computer (agent-kit checks them by hash).
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
