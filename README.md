@@ -57,7 +57,7 @@ An agent whose own marketplace this is (its `officialMarketplace`) offers them i
 
 ## 🛠️ Developing
 
-Each extension is a folder with `.claude-plugin/plugin.json`, `.mcp.json`, `skills/` and `commands/`, listed in `.claude-plugin/marketplace.json` with the same version as its manifest. After changing one, `node scripts/build-catalog.mjs` writes `catalog.json` again (the workflow checks it's up to date, and publishes the page from `site/`). Try a change by linking it into an agent (`my-agent extension add ./moodle --link`); the workflow runs `claude plugin validate --strict` on the marketplace and every extension. How an extension is written: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/next/extensions/writing).
+Each extension is a folder with `.claude-plugin/plugin.json`, `.mcp.json`, `skills/` and `commands/`, listed in `.claude-plugin/marketplace.json` with the same version as its manifest. After changing one, `npx -y @falkenslab/agent-kit-catalog@0.1.0` writes `catalog.json` again (the workflow checks it's up to date, and publishes the page from `site/`). Try a change by linking it into an agent (`my-agent extension add ./moodle --link`); the workflow runs `claude plugin validate --strict` on the marketplace and every extension. How an extension is written: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/next/extensions/writing).
 
 <div align="center">
 

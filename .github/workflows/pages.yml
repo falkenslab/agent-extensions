@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/build-catalog.mjs --check
+      - run: npx -y @falkenslab/agent-kit-catalog@0.1.0 --check
       - run: |
           mkdir -p _site
           cp site/index.html catalog.json _site/
