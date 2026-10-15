@@ -12,7 +12,7 @@ Install one, and your agent gains its tools, its skills and the know-how to use 
 [![validate](https://github.com/falkenslab/agent-kit-extensions/actions/workflows/validate.yml/badge.svg)](https://github.com/falkenslab/agent-kit-extensions/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
 
-**[📖 agent-kit's documentation](https://falkenslab.github.io/agent-kit/)**
+**[🧭 Browse the extensions](https://falkenslab.github.io/agent-kit-extensions/)** · [📖 agent-kit's documentation](https://falkenslab.github.io/agent-kit/)
 
 </div>
 
@@ -46,9 +46,16 @@ An agent whose own marketplace this is (its `officialMarketplace`) offers them i
 | --- | --- |
 | 🎓 [moodle](moodle/) | Works in your Moodle courses as you, through [moodle-mcp](https://github.com/falkenslab/moodle-mcp): grading with rubrics, quizzes from question banks, copies between sites |
 
+## 🧭 The catalog
+
+[The catalog page](https://falkenslab.github.io/agent-kit-extensions/) shows every extension as a card, with a search and topic chips; `?topic=miyagi` opens it filtered, so an agent can link to what it offers. The same catalog is one file, [`catalog.json`](catalog.json): each extension's name, version, description, topics, install commands and images.
+
+- 🏷️ **Topics** are Claude Code's own fields: the extension's `keywords`, and its marketplace entry's `tags` and `category`. An audience is a topic too (`miyagi`): an agent on agent-kit offers its users only its `catalogTopics`.
+- 🖼️ **Its look**: a `logo` (square) and a `banner` (wide) in its `plugin.json`, under `metadata["agent-kit"].catalog`, files inside its folder.
+
 ## 🛠️ Developing
 
-Each extension is a folder with `.claude-plugin/plugin.json`, `.mcp.json`, `skills/` and `commands/`, listed in `.claude-plugin/marketplace.json` with the same version as its manifest. Try a change by linking it into an agent (`my-agent extension add ./moodle --link`); the workflow runs `claude plugin validate --strict` on the marketplace and every extension. How an extension is written: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/next/capabilities/extensions).
+Each extension is a folder with `.claude-plugin/plugin.json`, `.mcp.json`, `skills/` and `commands/`, listed in `.claude-plugin/marketplace.json` with the same version as its manifest. After changing one, `node scripts/build-catalog.mjs` writes `catalog.json` again (the workflow checks it's up to date, and publishes the page from `site/`). Try a change by linking it into an agent (`my-agent extension add ./moodle --link`); the workflow runs `claude plugin validate --strict` on the marketplace and every extension. How an extension is written: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/next/capabilities/extensions).
 
 <div align="center">
 

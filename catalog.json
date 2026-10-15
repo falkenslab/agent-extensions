@@ -1,0 +1,35 @@
+{
+  "marketplace": "falkenslab",
+  "description": "Falken's Lab extensions for agents built on agent-kit, and plugins for Claude Code: each one a Claude Code plugin as it is.",
+  "repository": "https://github.com/falkenslab/agent-kit-extensions",
+  "add": {
+    "claudeCode": "claude plugin marketplace add falkenslab/agent-kit-extensions",
+    "agentKit": "extension marketplace add falkenslab/agent-kit-extensions"
+  },
+  "extensions": [
+    {
+      "name": "moodle",
+      "version": "0.1.0",
+      "description": "Work in your Moodle courses as you, through moodle-mcp: grading, quizzes, forums, copies between sites, with good practice for each.",
+      "category": "education",
+      "topics": [
+        "moodle",
+        "lms",
+        "teaching",
+        "mcp",
+        "miyagi",
+        "education"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/moodle",
+      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/moodle/README.md",
+      "install": {
+        "claudeCode": "claude plugin install moodle@falkenslab",
+        "agentKit": "extension add moodle@falkenslab"
+      },
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/moodle/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/moodle/assets/banner.svg"
+    }
+  ]
+}
