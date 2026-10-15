@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -59,6 +59,7 @@
         "logo": "assets/logo.svg",
         "banner": "assets/banner.svg"
       },
+      "kit": ">=0.22.0",
       "provides": [
         "moodle",
         "moodle-teacher"

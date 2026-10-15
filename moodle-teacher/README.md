@@ -87,7 +87,7 @@ Change them later with `my-agent extension config moodle-teacher`, in the chat w
 
 ## 🛠️ Developing
 
-The extension is a Claude Code plugin: `.claude-plugin/plugin.json` (its settings in `userConfig`, agent-kit's data in `metadata["agent-kit"]`), `.mcp.json`, `skills/` and `commands/`. To try a change, link it into an agent instead of installing it (`my-agent extension add ./moodle-teacher --link`), and check it with `claude plugin validate --strict moodle-teacher`. How agent-kit runs it: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/next/extensions/writing).
+The extension is a Claude Code plugin: `.claude-plugin/plugin.json` (its settings in `userConfig`, agent-kit's data in `metadata["agent-kit"]`), `.mcp.json`, `skills/` and `commands/`. To try a change, link it into an agent instead of installing it (`my-agent extension add ./moodle-teacher --link`), and check it with `claude plugin validate --strict moodle-teacher`. How agent-kit runs it: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
 
 <div align="center">
 

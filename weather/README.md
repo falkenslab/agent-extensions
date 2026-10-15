@@ -11,11 +11,11 @@ Today and the next days, from Open-Meteo: no account, no key.
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../LICENSE)
 
-**[📖 How it was built, step by step](https://falkenslab.github.io/agent-kit/docs/next/extensions/writing)**
+**[📖 How it was built, step by step](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**
 
 </div>
 
-weather gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit), or Claude Code, the forecast for the person's city: the temperature now, and each day's range, rain chance and wind. It's also agent-kit's example of an installable extension with its own MCP server, written with the official MCP SDK and bundled into one file: the tutorial [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/next/extensions/writing) builds it from scratch.
+weather gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit), or Claude Code, the forecast for the person's city: the temperature now, and each day's range, rain chance and wind. It's also agent-kit's example of an installable extension with its own MCP server, written with the official MCP SDK and bundled into one file: the tutorial [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing) builds it from scratch.
 
 ## ✨ What it shows
 
