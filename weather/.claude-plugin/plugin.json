@@ -1,0 +1,61 @@
+{
+  "name": "weather",
+  "version": "0.1.0",
+  "description": "The weather in your city, for an agent that plans with you: today and the next days, from Open-Meteo.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://falkenslab.github.io/agent-kit/docs/next/extensions/writing",
+  "repository": "https://github.com/falkenslab/agent-kit-extensions",
+  "license": "MIT",
+  "keywords": [
+    "weather",
+    "planning",
+    "example"
+  ],
+  "userConfig": {
+    "city": {
+      "type": "string",
+      "title": "Your city",
+      "description": "Where you are, e.g. Santa Cruz de Tenerife.",
+      "required": true
+    },
+    "units": {
+      "type": "string",
+      "title": "Units",
+      "description": "metric (°C, km/h) or imperial (°F, mph).",
+      "options": [
+        "metric",
+        "imperial"
+      ],
+      "default": "metric"
+    }
+  },
+  "metadata": {
+    "agent-kit": {
+      "catalog": {
+        "logo": "assets/logo.svg"
+      },
+      "help": "Weather: `forecast` gives today and the next days in your city; /weather:today sums up the day.",
+      "labels": {
+        "forecast": {
+          "en": {
+            "label": "Checking the weather in {city}",
+            "phrase": [
+              "checked the weather",
+              "checked the weather {n} times"
+            ]
+          },
+          "es": {
+            "label": "Mirando el tiempo en {city}",
+            "phrase": [
+              "miró el tiempo",
+              "miró el tiempo {n} veces"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

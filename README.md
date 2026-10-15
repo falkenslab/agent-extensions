@@ -45,6 +45,7 @@ An agent whose own marketplace this is (its `officialMarketplace`) offers them i
 | Extension | What it does |
 | --- | --- |
 | 🎓 [moodle](moodle/) | Works in your Moodle courses as you, through [moodle-mcp](https://github.com/falkenslab/moodle-mcp): grading with rubrics, quizzes from question banks, copies between sites |
+| ☀️ [weather](weather/) | The weather in your city, for an agent that plans with you; also agent-kit's example of an extension with its own MCP server, built step by step in [its tutorial](https://falkenslab.github.io/agent-kit/docs/next/extensions/writing) |
 
 ## 🧭 The catalog
 
@@ -55,7 +56,7 @@ An agent whose own marketplace this is (its `officialMarketplace`) offers them i
 
 ## 🛠️ Developing
 
-Each extension is a folder with `.claude-plugin/plugin.json`, `.mcp.json`, `skills/` and `commands/`, listed in `.claude-plugin/marketplace.json` with the same version as its manifest. After changing one, `node scripts/build-catalog.mjs` writes `catalog.json` again (the workflow checks it's up to date, and publishes the page from `site/`). Try a change by linking it into an agent (`my-agent extension add ./moodle --link`); the workflow runs `claude plugin validate --strict` on the marketplace and every extension. How an extension is written: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/next/capabilities/extensions).
+Each extension is a folder with `.claude-plugin/plugin.json`, `.mcp.json`, `skills/` and `commands/`, listed in `.claude-plugin/marketplace.json` with the same version as its manifest. After changing one, `node scripts/build-catalog.mjs` writes `catalog.json` again (the workflow checks it's up to date, and publishes the page from `site/`). Try a change by linking it into an agent (`my-agent extension add ./moodle --link`); the workflow runs `claude plugin validate --strict` on the marketplace and every extension. How an extension is written: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/next/extensions/writing).
 
 <div align="center">
 

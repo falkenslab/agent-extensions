@@ -30,6 +30,27 @@
       },
       "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/moodle/assets/logo.svg",
       "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/moodle/assets/banner.svg"
+    },
+    {
+      "name": "weather",
+      "version": "0.1.0",
+      "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
+      "category": "productivity",
+      "topics": [
+        "weather",
+        "planning",
+        "example",
+        "productivity"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://falkenslab.github.io/agent-kit/docs/next/extensions/writing",
+      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/weather/README.md",
+      "install": {
+        "claudeCode": "claude plugin install weather@falkenslab",
+        "agentKit": "extension add weather@falkenslab"
+      },
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/weather/assets/logo.svg"
     }
   ]
 }

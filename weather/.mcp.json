@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "weather": {
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+      ],
+      "env": {
+        "WEATHER_CITY": "${user_config.city}",
+        "WEATHER_UNITS": "${user_config.units}"
+      }
+    }
+  }
+}

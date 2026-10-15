@@ -20,6 +20,17 @@
         "teaching",
         "miyagi"
       ]
+    },
+    {
+      "name": "weather",
+      "source": "./weather",
+      "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
+      "version": "0.1.0",
+      "category": "productivity",
+      "tags": [
+        "weather",
+        "example"
+      ]
     }
   ]
 }
