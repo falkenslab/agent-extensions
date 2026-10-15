@@ -11,7 +11,7 @@ Every write in Moodle is a publication: students may see it, and Moodle may tell
 
 1. **Create it hidden.** `create_activity` creates hidden by default (`visibility: "hidden"`); `add_section` then `edit_section` with `visible: false` for a new section. Say in the approval that it goes up **hidden, to be checked**.
 2. **Don't notify.** Activity forms have a "Send content change notification" box: leave it off for a draft (read its field with `get_activity_settings`).
-3. **Read it back.** Every write returns what Moodle saved (the course structure, the activity, the grade): check it says what you meant. `get_activity_settings` for the settings, `get_activity_content` for a page's text, `get_quiz_structure` for a quiz's questions.
+3. **Read it back.** Every write returns what Moodle saved (the course structure, the activity, the grade): check it says what you meant. `get_activity_settings` for the settings (a checkbox's state is its `checked`, not its `value`), `get_activity_content` for a page's text, `get_quiz_structure` for a quiz's questions.
 4. **Have it tried.** Ask the person to open it in Moodle as a student would (a quiz's "Preview", "Switch role to... Student", every link and interactive part, on a phone width), since moodle-mcp works as them and can't see it as a student. Fix what they find, each fix with its approval.
 5. **Show it** with `edit_activity` (`visibility: "shown"`) or `edit_section` (`visible: true`), after asking. The same change on several drafts (a whole unit) can share one approval if it names each.
 
@@ -23,6 +23,7 @@ A typo, a date, a broken link: change it in place (`update_activity`, `edit_sect
 
 ## Approvals
 
+- **A request that already says exactly what to create** ("an assignment called X, one PDF, due on Y, out of 10") is the approval to create it hidden. Whatever you decide on top of it (a setting they didn't mention, a description you wrote) goes in the proposal first, or is named in your report as your decision, so they can undo it.
 - **One new item per approval**: a section's text, a page, a statement, a set of questions listed one by one, a rubric. Creating a quiz and importing its questions are two approvals.
 - **Show what will be published**, not a promise of it: "and then I'll add the questions" hides them from whoever approves.
 - **The same setting change on several items** (unlimited attempts on three quizzes) can share one approval naming each item and the exact change.

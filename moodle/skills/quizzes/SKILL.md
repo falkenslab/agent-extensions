@@ -21,7 +21,7 @@ A quiz is its **settings** (when, how many times, how it's graded, what students
 
 Layout: one question per page for long ones, all on one page for short checks. Shuffle within questions for multiple choice, unless an option like "all of the above" depends on its place.
 
-Create it hidden with `create_activity` (`type: "quiz"`); the description says what it covers, how long it takes, how many attempts and how it counts. Field names for `settings` come from `get_activity_settings` on an existing quiz (dates are groups: `timeopen[day]`...); never guess them. The maximum grade goes in at creation, as the gradebook needs it (see `gradebook`).
+Create it hidden with `create_activity` (`type: "quiz"`); the description says what it covers, how long it takes, how many attempts and how it counts. Field names for `settings` come from `get_activity_settings` on an existing quiz (dates are groups: `timeopen[day]`...); never guess them. The maximum grade isn't in the quiz's settings form: it's the quiz's grade item in `get_gradebook_setup` (10 by default), and it should be what the gradebook needs (see `gradebook`). A quiz that mustn't count toward the course total gets weight 0 there (`update_grade_item`), with the person's yes.
 
 ## 2. Questions in a bank
 
@@ -65,4 +65,6 @@ After importing, read the result: every question created, none missing. If one c
 
 Look first: `get_quiz_results`. With no attempts, anything can change. With attempts, Moodle refuses to add or remove questions and to reorder them; marks can change (it regrades). Never change what a question asks or which answer is right after students were graded on it: propose a new question, or a manual regrade the person decides. Individual extra time or attempts: `set_quiz_override`.
 
-Then the `publishing` skill: the person previews it as a student (questions in order, feedback and review options as intended) before it's shown.
+## 5. Preview
+
+Before it's shown (see `publishing`), check it as students will meet it: questions in order, code keeping its indentation, feedback and review options as intended. When the server offers the attempt tools (role `all`), `start_quiz_attempt` as the teacher opens a preview that doesn't count in the results: read it with `get_quiz_attempt`, then `finish_quiz_attempt`, so no preview is left open. Otherwise the person previews it in Moodle.

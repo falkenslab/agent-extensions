@@ -9,7 +9,7 @@
   "extensions": [
     {
       "name": "moodle",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Work in your Moodle courses as you, through moodle-mcp: grading, quizzes, forums, copies between sites, with good practice for each.",
       "category": "education",
       "topics": [

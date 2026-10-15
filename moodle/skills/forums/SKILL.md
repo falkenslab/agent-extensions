@@ -22,7 +22,7 @@ Whether to step in and what to say is the person's call (or comes from the agent
 
 ## Announcements
 
-An announcement reaches everyone, usually by email too. One subject each; a deadline or a change in the first sentence. For one student's situation, a private message (`send_message`), not an announcement. `message_participants` writes to several at once (by role, by group, or those inactive since a date); confirm the recipients and the text.
+An announcement reaches everyone, usually by email too. It goes in the course's announcements forum; if the course has none, say so and offer to create one (`create_activity`, type `forum`, in section 0) rather than posting it in a discussion forum. One subject each; a deadline or a change in the first sentence. For one student's situation, a private message (`send_message`), not an announcement. `message_participants` writes to several at once (by role, by group, or those inactive since a date); confirm the recipients and the text.
 
 ## Moderating
 

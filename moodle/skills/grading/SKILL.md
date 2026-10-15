@@ -13,11 +13,13 @@ The person grades; you prepare. Nothing is saved without their yes, submission b
 2. **Can feedback be saved?** Written feedback is only kept when the assignment has "Feedback comments" on: check in `get_activity_settings`. If it's off and feedback is wanted, turning it on is a settings change (`update_activity`) with its own yes, before grading.
 3. **What's to grade.** `get_submissions`, a page at a time (`more` says there are others): status (`submitted`, `draft`, `new`, `reopened`, `none`), whether it needs grading, extensions and dates, and the content (online text, file links; `download_file` to read a file).
 4. **Propose.** Per submission: the level per criterion (or the grade), with a reason quoting the work, and feedback to the student as "you". Show the proposals as a table the person can correct.
-5. **Save what's approved.** `grade_submission` with `user` (the alias), `rubric` (criterion id → level id) or `guide` (criterion id → score) or `grade`, `remarks` per criterion, and `feedback`. Ask whether to `notify`.
+5. **Save exactly what's approved**, word for word: a change you'd like to make afterwards (a line added to the feedback, a different level) goes back to the person first. `grade_submission` with `user` (the alias), `rubric` (criterion id → level id) or `guide` (criterion id → score) or `grade`, `remarks` per criterion, and `feedback`. Ask whether to `notify`.
 6. **Check what was saved.** `grade_submission` returns the grade and the feedback Moodle has now: if the feedback isn't there, it wasn't saved. Never tell the person students got feedback you haven't seen saved.
 
 ### Cases
 
+- **The person's scale isn't the activity's** (they grade out of 10, the assignment is out of 100): say so before proposing, and let them choose between converting each grade or changing the maximum grade first (a settings change, and the gradebook's weights move with it: see `gradebook`).
+- **Students see grades at once** unless the assignment uses the marking workflow: `notify: false` only skips the notification. Say so before saving.
 - **Group submissions**: `applyToGroup: true` gives the whole group the same grade and feedback; grade once, not member by member.
 - **No submission after the deadline**: `grade_submission` works without one. Whether it's a 0 or left alone is the person's policy: ask, and don't leave it silently ungraded (it looks like "not reviewed yet").
 - **Late work and extensions**: `get_submissions` shows the dates; `grant_extension` gives more time. Penalties are the person's decision: point them out, never apply them on your own.
