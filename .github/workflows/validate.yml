@@ -1,0 +1,26 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # Claude Code's own validator, strict: a warning fails too. userConfig's `options` needs 2.1.271 or later.
+      - run: npm install --global @anthropic-ai/claude-code@latest
+      - name: The marketplace
+        run: claude plugin validate --strict .
+      - name: Each extension
+        run: |
+          for plugin in */.claude-plugin/plugin.json; do
+            dir="$(dirname "$(dirname "$plugin")")"
+            echo "::group::$dir"
+            claude plugin validate --strict "$dir"
+            echo "::endgroup::"
+          done

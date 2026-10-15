@@ -1,0 +1,119 @@
+{
+  "name": "moodle",
+  "version": "0.1.0",
+  "description": "Work in your Moodle courses as you, through moodle-mcp: grading, quizzes, forums, copies between sites, with good practice for each.",
+  "author": { "name": "Falken's Lab", "url": "https://github.com/falkenslab" },
+  "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/moodle",
+  "repository": "https://github.com/falkenslab/agent-kit-extensions",
+  "license": "MIT",
+  "keywords": ["moodle", "lms", "teaching", "mcp"],
+  "userConfig": {
+    "sites": {
+      "type": "string",
+      "title": "Moodle sites",
+      "description": "Your Moodle sites, each as name=address, e.g. school=https://campus.myschool.org. The first one is where the agent starts; you can add more later by asking it.",
+      "multiple": true,
+      "required": true
+    },
+    "headless": {
+      "type": "boolean",
+      "title": "Work without a browser window",
+      "description": "The agent's browser works out of sight. A window opens anyway when you need to log in, or when you ask to watch.",
+      "default": true
+    },
+    "role": {
+      "type": "string",
+      "title": "Your role",
+      "description": "Offer only a teacher's tools, only a student's, or all of them.",
+      "options": ["all", "teacher", "student"],
+      "default": "all"
+    },
+    "access": {
+      "type": "string",
+      "title": "What the agent may do",
+      "description": "write: read and change your courses (it asks before changing anything). read: only look, never change.",
+      "options": ["write", "read"],
+      "default": "write"
+    },
+    "student_data": {
+      "type": "string",
+      "title": "Other people's data",
+      "description": "pseudonymize: students reach the agent as aliases, never by name. block: their data never reaches it. clear: with their names, only for an AI that runs on your own computer.",
+      "options": ["pseudonymize", "block", "clear"],
+      "default": "pseudonymize"
+    }
+  },
+  "metadata": {
+    "agent-kit": {
+      "provides": ["moodle"],
+      "requires": [],
+      "help": "Moodle, through moodle-mcp: your courses, grading, quizzes, forums and copies between your sites; my moodle:* skills hold the good practice for each, and /moodle:week and /moodle:to-grade are quick looks at what's pending.",
+      "labels": {
+        "list_courses": {
+          "en": { "label": "Listing courses", "phrase": ["listed the courses", "listed the courses {n} times"] },
+          "es": { "label": "Listando los cursos", "phrase": ["listó los cursos", "listó los cursos {n} veces"] }
+        },
+        "get_course_structure": {
+          "en": { "label": "Reading a course's structure", "phrase": ["read a course's structure", "read {n} courses' structure"] },
+          "es": { "label": "Leyendo la estructura de un curso", "phrase": ["leyó la estructura de un curso", "leyó la estructura de {n} cursos"] }
+        },
+        "list_deadlines": {
+          "en": { "label": "Checking deadlines", "phrase": ["checked the deadlines", "checked the deadlines {n} times"] },
+          "es": { "label": "Mirando las fechas de entrega", "phrase": ["miró las fechas de entrega", "miró las fechas de entrega {n} veces"] }
+        },
+        "get_submissions": {
+          "en": { "label": "Reading submissions", "phrase": ["read the submissions", "read submissions {n} times"] },
+          "es": { "label": "Leyendo las entregas", "phrase": ["leyó las entregas", "leyó entregas {n} veces"] }
+        },
+        "get_rubric": {
+          "en": { "label": "Reading the rubric", "phrase": ["read a rubric", "read {n} rubrics"] },
+          "es": { "label": "Leyendo la rúbrica", "phrase": ["leyó una rúbrica", "leyó {n} rúbricas"] }
+        },
+        "grade_submission": {
+          "en": { "label": "Grading a submission", "phrase": ["graded a submission", "graded {n} submissions"] },
+          "es": { "label": "Calificando una entrega", "phrase": ["calificó una entrega", "calificó {n} entregas"] }
+        },
+        "list_questions": {
+          "en": { "label": "Reading a question bank", "phrase": ["read a question bank", "read question banks {n} times"] },
+          "es": { "label": "Leyendo un banco de preguntas", "phrase": ["leyó un banco de preguntas", "leyó bancos de preguntas {n} veces"] }
+        },
+        "add_questions_to_quiz": {
+          "en": { "label": "Adding questions to a quiz", "phrase": ["added questions to a quiz", "added questions to quizzes {n} times"] },
+          "es": { "label": "Añadiendo preguntas a un cuestionario", "phrase": ["añadió preguntas a un cuestionario", "añadió preguntas a cuestionarios {n} veces"] }
+        },
+        "list_discussions": {
+          "en": { "label": "Reading a forum", "phrase": ["read a forum", "read forums {n} times"] },
+          "es": { "label": "Leyendo un foro", "phrase": ["leyó un foro", "leyó foros {n} veces"] }
+        },
+        "reply_to_post": {
+          "en": { "label": "Replying in the forum", "phrase": ["replied in the forum", "replied in forums {n} times"] },
+          "es": { "label": "Respondiendo en el foro", "phrase": ["respondió en el foro", "respondió en foros {n} veces"] }
+        },
+        "list_sites": {
+          "en": { "label": "Listing your Moodle sites", "phrase": ["listed your sites", "listed your sites {n} times"] },
+          "es": { "label": "Listando tus aulas Moodle", "phrase": ["listó tus aulas", "listó tus aulas {n} veces"] }
+        },
+        "use_site": {
+          "en": { "label": "Switching to site {name}", "phrase": ["switched sites", "switched sites {n} times"] },
+          "es": { "label": "Cambiando al aula {name}", "phrase": ["cambió de aula", "cambió de aula {n} veces"] }
+        },
+        "copy_between_sites": {
+          "en": { "label": "Copying from {fromSite} to {toSite}", "phrase": ["copied between sites", "copied between sites {n} times"] },
+          "es": { "label": "Copiando de {fromSite} a {toSite}", "phrase": ["copió entre aulas", "copió entre aulas {n} veces"] }
+        },
+        "backup_course": {
+          "en": { "label": "Backing up a course", "phrase": ["backed up a course", "backed up {n} courses"] },
+          "es": { "label": "Haciendo copia de seguridad de un curso", "phrase": ["hizo copia de un curso", "hizo copia de {n} cursos"] }
+        },
+        "restore_course": {
+          "en": { "label": "Restoring a backup", "phrase": ["restored a backup", "restored {n} backups"] },
+          "es": { "label": "Restaurando una copia", "phrase": ["restauró una copia", "restauró {n} copias"] }
+        },
+        "login": {
+          "en": { "label": "Waiting for you to log in to Moodle", "phrase": ["waited for the login", "waited for logins {n} times"] },
+          "es": { "label": "Esperando a que entres en Moodle", "phrase": ["esperó a que entraras", "esperó a que entraras {n} veces"] }
+        }
+      }
+    }
+  }
+}

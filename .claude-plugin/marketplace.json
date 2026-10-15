@@ -1,0 +1,17 @@
+{
+  "name": "falkenslab",
+  "owner": { "name": "Falken's Lab", "url": "https://github.com/falkenslab" },
+  "metadata": {
+    "description": "Falken's Lab extensions for agents built on agent-kit, and plugins for Claude Code: each one a Claude Code plugin as it is."
+  },
+  "plugins": [
+    {
+      "name": "moodle",
+      "source": "./moodle",
+      "description": "Work in your Moodle courses as you, through moodle-mcp: grading, quizzes, forums, copies between sites, with good practice for each.",
+      "version": "0.1.0",
+      "category": "education",
+      "tags": ["moodle", "lms", "teaching"]
+    }
+  ]
+}
