@@ -124,7 +124,7 @@ Zip the **contents** of `package/`, so `imsmanifest.xml` is at the archive's roo
 
 ## 5. Test that Moodle records it
 
-- When the server offers `open_scorm` (role `all` or `student`): open it, do a step with the `browser_*` tools, leave, and `get_scorm`: the attempt must show a status and a score. Opening it starts a real attempt in the person's name.
-- Otherwise the person opens it in normal mode (not only "Preview", which records nothing), plays a step and checks "Reports", "Attempts".
+- The person opens it in normal mode (not only "Preview", which records nothing), plays a step and checks "Reports", "Attempts": the attempt must show a status and a score.
+- `get_scorm` shows what Moodle recorded for the person's own attempts, once they've played it.
 
 If nothing is recorded, fix the hook and zip again. To replace the package: moodle-mcp 0.3.0 replaces files only in file resources and folders, so the person uploads the new ZIP in the activity's settings ("Package file"); or, since it's a hidden draft no student has opened, delete it and upload it again, with the person's yes. Then show it with their yes (see `publishing`).

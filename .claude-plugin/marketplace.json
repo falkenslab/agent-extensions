@@ -9,16 +9,31 @@
   },
   "plugins": [
     {
-      "name": "moodle",
-      "source": "./moodle",
-      "description": "Work in your Moodle courses as you, through moodle-mcp: grading, quizzes, forums, copies between sites, with good practice for each.",
-      "version": "0.1.1",
+      "name": "moodle-teacher",
+      "source": "./moodle-teacher",
+      "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
+      "version": "0.2.0",
       "category": "education",
       "tags": [
         "moodle",
         "lms",
         "teaching",
+        "teacher",
         "miyagi"
+      ]
+    },
+    {
+      "name": "moodle-student",
+      "source": "./moodle-student",
+      "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
+      "version": "0.1.0",
+      "category": "education",
+      "tags": [
+        "moodle",
+        "lms",
+        "learning",
+        "student",
+        "padawan"
       ]
     },
     {

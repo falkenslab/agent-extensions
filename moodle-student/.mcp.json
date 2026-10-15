@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "moodle": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@falkenslab/moodle-mcp@0.3.0"
+      ],
+      "env": {
+        "MOODLE_MCP_SITES": "${user_config.sites}",
+        "MOODLE_MCP_HEADLESS": "${user_config.headless}",
+        "MOODLE_MCP_ROLE": "student",
+        "MOODLE_MCP_ACCESS": "${user_config.access}",
+        "MOODLE_MCP_STUDENT_DATA": "${user_config.student_data}"
+      }
+    }
+  }
+}

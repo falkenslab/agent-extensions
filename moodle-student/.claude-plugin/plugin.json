@@ -1,0 +1,472 @@
+{
+  "name": "moodle-student",
+  "version": "0.1.0",
+  "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/moodle-student",
+  "repository": "https://github.com/falkenslab/agent-kit-extensions",
+  "license": "MIT",
+  "keywords": [
+    "moodle",
+    "lms",
+    "learning",
+    "student",
+    "mcp",
+    "padawan"
+  ],
+  "userConfig": {
+    "sites": {
+      "type": "string",
+      "title": "Moodle sites",
+      "description": "Your Moodle sites, each as name=address, e.g. school=https://campus.myschool.org. The first one is where the agent starts; you can add more later by asking it.",
+      "multiple": true,
+      "required": true
+    },
+    "headless": {
+      "type": "boolean",
+      "title": "Work without a browser window",
+      "description": "The agent's browser works out of sight. A window opens anyway when you need to log in, or when you ask to watch.",
+      "default": true
+    },
+    "access": {
+      "type": "string",
+      "title": "What the agent may do",
+      "description": "write: hand in, answer and post for you (it asks before each). read: only look, never change.",
+      "options": [
+        "write",
+        "read"
+      ],
+      "default": "write"
+    },
+    "student_data": {
+      "type": "string",
+      "title": "Other people's data",
+      "description": "pseudonymize: classmates and teachers reach the agent as aliases, never by name. block: their data never reaches it. clear: with their names, only for an AI that runs on your own computer.",
+      "options": [
+        "pseudonymize",
+        "block",
+        "clear"
+      ],
+      "default": "pseudonymize"
+    }
+  },
+  "metadata": {
+    "agent-kit": {
+      "catalog": {
+        "logo": "assets/logo.svg",
+        "banner": "assets/banner.svg"
+      },
+      "provides": [
+        "moodle",
+        "moodle-student"
+      ],
+      "requires": [],
+      "help": "Moodle as a student, through moodle-mcp: what you have left and when, handing in assignments, quizzes, forums, the other activities, your grades and feedback, and your several sites; my moodle-student:* skills hold how to do each well in Moodle, and /moodle-student:week is a quick look at what's due.",
+      "labels": {
+        "list_courses": {
+          "en": {
+            "label": "Listing courses",
+            "phrase": [
+              "listed the courses",
+              "listed the courses {n} times"
+            ]
+          },
+          "es": {
+            "label": "Listando los cursos",
+            "phrase": [
+              "listó los cursos",
+              "listó los cursos {n} veces"
+            ]
+          }
+        },
+        "get_course_structure": {
+          "en": {
+            "label": "Reading a course's structure",
+            "phrase": [
+              "read a course's structure",
+              "read {n} courses' structure"
+            ]
+          },
+          "es": {
+            "label": "Leyendo la estructura de un curso",
+            "phrase": [
+              "leyó la estructura de un curso",
+              "leyó la estructura de {n} cursos"
+            ]
+          }
+        },
+        "get_activity_content": {
+          "en": {
+            "label": "Reading a resource",
+            "phrase": [
+              "read a resource",
+              "read {n} resources"
+            ]
+          },
+          "es": {
+            "label": "Leyendo un recurso",
+            "phrase": [
+              "leyó un recurso",
+              "leyó {n} recursos"
+            ]
+          }
+        },
+        "list_deadlines": {
+          "en": {
+            "label": "Checking deadlines",
+            "phrase": [
+              "checked the deadlines",
+              "checked the deadlines {n} times"
+            ]
+          },
+          "es": {
+            "label": "Mirando las fechas de entrega",
+            "phrase": [
+              "miró las fechas de entrega",
+              "miró las fechas de entrega {n} veces"
+            ]
+          }
+        },
+        "list_pending": {
+          "en": {
+            "label": "Checking what you have left",
+            "phrase": [
+              "checked what was left",
+              "checked what was left {n} times"
+            ]
+          },
+          "es": {
+            "label": "Mirando lo que te queda",
+            "phrase": [
+              "miró lo que te quedaba",
+              "miró lo que te quedaba {n} veces"
+            ]
+          }
+        },
+        "get_my_grades": {
+          "en": {
+            "label": "Reading your grades",
+            "phrase": [
+              "read your grades",
+              "read your grades {n} times"
+            ]
+          },
+          "es": {
+            "label": "Leyendo tus notas",
+            "phrase": [
+              "leyó tus notas",
+              "leyó tus notas {n} veces"
+            ]
+          }
+        },
+        "get_assignment": {
+          "en": {
+            "label": "Reading an assignment",
+            "phrase": [
+              "read an assignment",
+              "read {n} assignments"
+            ]
+          },
+          "es": {
+            "label": "Leyendo una tarea",
+            "phrase": [
+              "leyó una tarea",
+              "leyó {n} tareas"
+            ]
+          }
+        },
+        "save_submission": {
+          "en": {
+            "label": "Saving your submission",
+            "phrase": [
+              "saved a submission",
+              "saved {n} submissions"
+            ]
+          },
+          "es": {
+            "label": "Guardando tu entrega",
+            "phrase": [
+              "guardó una entrega",
+              "guardó {n} entregas"
+            ]
+          }
+        },
+        "submit_assignment": {
+          "en": {
+            "label": "Submitting your assignment",
+            "phrase": [
+              "submitted an assignment",
+              "submitted {n} assignments"
+            ]
+          },
+          "es": {
+            "label": "Enviando tu tarea",
+            "phrase": [
+              "envió una tarea",
+              "envió {n} tareas"
+            ]
+          }
+        },
+        "get_quiz_info": {
+          "en": {
+            "label": "Reading a quiz",
+            "phrase": [
+              "read a quiz",
+              "read {n} quizzes"
+            ]
+          },
+          "es": {
+            "label": "Leyendo un cuestionario",
+            "phrase": [
+              "leyó un cuestionario",
+              "leyó {n} cuestionarios"
+            ]
+          }
+        },
+        "start_quiz_attempt": {
+          "en": {
+            "label": "Starting a quiz attempt",
+            "phrase": [
+              "started an attempt",
+              "started {n} attempts"
+            ]
+          },
+          "es": {
+            "label": "Empezando un intento",
+            "phrase": [
+              "empezó un intento",
+              "empezó {n} intentos"
+            ]
+          }
+        },
+        "answer_quiz_questions": {
+          "en": {
+            "label": "Saving quiz answers",
+            "phrase": [
+              "saved quiz answers",
+              "saved quiz answers {n} times"
+            ]
+          },
+          "es": {
+            "label": "Guardando respuestas",
+            "phrase": [
+              "guardó respuestas",
+              "guardó respuestas {n} veces"
+            ]
+          }
+        },
+        "finish_quiz_attempt": {
+          "en": {
+            "label": "Submitting a quiz attempt",
+            "phrase": [
+              "submitted an attempt",
+              "submitted {n} attempts"
+            ]
+          },
+          "es": {
+            "label": "Enviando un intento",
+            "phrase": [
+              "envió un intento",
+              "envió {n} intentos"
+            ]
+          }
+        },
+        "get_attempt_review": {
+          "en": {
+            "label": "Reviewing an attempt",
+            "phrase": [
+              "reviewed an attempt",
+              "reviewed {n} attempts"
+            ]
+          },
+          "es": {
+            "label": "Revisando un intento",
+            "phrase": [
+              "revisó un intento",
+              "revisó {n} intentos"
+            ]
+          }
+        },
+        "list_discussions": {
+          "en": {
+            "label": "Reading a forum",
+            "phrase": [
+              "read a forum",
+              "read forums {n} times"
+            ]
+          },
+          "es": {
+            "label": "Leyendo un foro",
+            "phrase": [
+              "leyó un foro",
+              "leyó foros {n} veces"
+            ]
+          }
+        },
+        "create_discussion": {
+          "en": {
+            "label": "Posting in the forum",
+            "phrase": [
+              "posted in the forum",
+              "posted in forums {n} times"
+            ]
+          },
+          "es": {
+            "label": "Publicando en el foro",
+            "phrase": [
+              "publicó en el foro",
+              "publicó en foros {n} veces"
+            ]
+          }
+        },
+        "reply_to_post": {
+          "en": {
+            "label": "Replying in the forum",
+            "phrase": [
+              "replied in the forum",
+              "replied in forums {n} times"
+            ]
+          },
+          "es": {
+            "label": "Respondiendo en el foro",
+            "phrase": [
+              "respondió en el foro",
+              "respondió en foros {n} veces"
+            ]
+          }
+        },
+        "answer_choice": {
+          "en": {
+            "label": "Answering a choice",
+            "phrase": [
+              "answered a choice",
+              "answered {n} choices"
+            ]
+          },
+          "es": {
+            "label": "Respondiendo una consulta",
+            "phrase": [
+              "respondió una consulta",
+              "respondió {n} consultas"
+            ]
+          }
+        },
+        "submit_survey": {
+          "en": {
+            "label": "Answering a survey",
+            "phrase": [
+              "answered a survey",
+              "answered {n} surveys"
+            ]
+          },
+          "es": {
+            "label": "Respondiendo una encuesta",
+            "phrase": [
+              "respondió una encuesta",
+              "respondió {n} encuestas"
+            ]
+          }
+        },
+        "answer_lesson_page": {
+          "en": {
+            "label": "Going on in a lesson",
+            "phrase": [
+              "went on in a lesson",
+              "went on in lessons {n} times"
+            ]
+          },
+          "es": {
+            "label": "Avanzando en una lección",
+            "phrase": [
+              "avanzó en una lección",
+              "avanzó en lecciones {n} veces"
+            ]
+          }
+        },
+        "open_scorm": {
+          "en": {
+            "label": "Opening a SCORM package",
+            "phrase": [
+              "opened a SCORM package",
+              "opened {n} SCORM packages"
+            ]
+          },
+          "es": {
+            "label": "Abriendo un paquete SCORM",
+            "phrase": [
+              "abrió un paquete SCORM",
+              "abrió {n} paquetes SCORM"
+            ]
+          }
+        },
+        "set_completion": {
+          "en": {
+            "label": "Marking an activity as done",
+            "phrase": [
+              "marked an activity",
+              "marked {n} activities"
+            ]
+          },
+          "es": {
+            "label": "Marcando una actividad como hecha",
+            "phrase": [
+              "marcó una actividad",
+              "marcó {n} actividades"
+            ]
+          }
+        },
+        "list_sites": {
+          "en": {
+            "label": "Listing your Moodle sites",
+            "phrase": [
+              "listed your sites",
+              "listed your sites {n} times"
+            ]
+          },
+          "es": {
+            "label": "Listando tus aulas Moodle",
+            "phrase": [
+              "listó tus aulas",
+              "listó tus aulas {n} veces"
+            ]
+          }
+        },
+        "use_site": {
+          "en": {
+            "label": "Switching to site {name}",
+            "phrase": [
+              "switched sites",
+              "switched sites {n} times"
+            ]
+          },
+          "es": {
+            "label": "Cambiando al aula {name}",
+            "phrase": [
+              "cambió de aula",
+              "cambió de aula {n} veces"
+            ]
+          }
+        },
+        "login": {
+          "en": {
+            "label": "Waiting for you to log in to Moodle",
+            "phrase": [
+              "waited for the login",
+              "waited for logins {n} times"
+            ]
+          },
+          "es": {
+            "label": "Esperando a que entres en Moodle",
+            "phrase": [
+              "esperó a que entraras",
+              "esperó a que entraras {n} veces"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

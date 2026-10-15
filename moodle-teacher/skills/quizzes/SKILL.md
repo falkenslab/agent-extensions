@@ -67,4 +67,4 @@ Look first: `get_quiz_results`. With no attempts, anything can change. With atte
 
 ## 5. Preview
 
-Before it's shown (see `publishing`), check it as students will meet it: questions in order, code keeping its indentation, feedback and review options as intended. When the server offers the attempt tools (role `all`), `start_quiz_attempt` as the teacher opens a preview that doesn't count in the results: read it with `get_quiz_attempt`, then `finish_quiz_attempt`, so no preview is left open. Otherwise the person previews it in Moodle.
+Before it's shown (see `publishing`), check it as students will meet it: questions in order, code keeping its indentation, feedback and review options as intended. `get_quiz_structure` shows the order and marks; for how it looks and behaves, the person previews it in Moodle (the quiz's "Preview", which doesn't count in the results).
