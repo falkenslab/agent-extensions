@@ -10,6 +10,7 @@ Install one, and your agent gains its tools, its skills and the know-how to use 
 ![Claude Code marketplace](https://img.shields.io/badge/Claude%20Code-marketplace-d97757)
 ![agent-kit extensions](https://img.shields.io/badge/agent--kit-extensions-0b0b0b)
 [![validate](https://github.com/falkenslab/agent-kit-extensions/actions/workflows/validate.yml/badge.svg)](https://github.com/falkenslab/agent-kit-extensions/actions/workflows/validate.yml)
+[![agent-kit-catalog](https://img.shields.io/npm/v/@falkenslab/agent-kit-catalog?label=agent-kit-catalog&color=cb3837&logo=npm)](https://www.npmjs.com/package/@falkenslab/agent-kit-catalog)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
 
 **[🧭 Browse the extensions](https://falkenslab.github.io/agent-kit-extensions/)** · [📖 agent-kit's documentation](https://falkenslab.github.io/agent-kit/)
