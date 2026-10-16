@@ -9,7 +9,7 @@ Today and the next days, from Open-Meteo: no account, no key.
 
 ![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
-[![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
 **[📖 How it was built, step by step](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**
 
@@ -55,7 +55,7 @@ Then ask: "What's the weather like this week?", "When should I go for a walk tom
 
 ## 🛠️ Developing
 
-The server's source is `src/server.mjs`; `npm install` then `npm run build` writes `dist/server.mjs`, which is committed (`package.json` and `src/` are only for building it). Try a change linked into an agent: `my-agent extension add ./weather --link --set city=Madrid`, then `/extensions disable weather` and `enable` after each build.
+The server's source is `src/server.mjs`; `npm install` then `npm run build` writes `dist/server.mjs`, which is committed (`package.json` and `src/` are only for building it). Try a change linked into an agent: `my-agent extension add ./extensions/weather --link --set city=Madrid`, then `/extensions disable weather` and `enable` after each build.
 
 <div align="center">
 

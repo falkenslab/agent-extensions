@@ -9,7 +9,7 @@
   "extensions": [
     {
       "name": "moodle-student",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "category": "education",
       "topics": [
@@ -23,18 +23,18 @@
       ],
       "author": "Falken's Lab",
       "license": "MIT",
-      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/moodle-student",
-      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/moodle-student/README.md",
+      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-student",
+      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-student/README.md",
       "install": {
         "claudeCode": "claude plugin install moodle-student@falkenslab",
         "agentKit": "extension add moodle-student@falkenslab"
       },
-      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/moodle-student/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/moodle-student/assets/banner.svg"
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-student/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-student/assets/banner.svg"
     },
     {
       "name": "moodle-teacher",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
       "category": "education",
       "topics": [
@@ -48,18 +48,18 @@
       ],
       "author": "Falken's Lab",
       "license": "MIT",
-      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/moodle-teacher",
-      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/moodle-teacher/README.md",
+      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-teacher",
+      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-teacher/README.md",
       "install": {
         "claudeCode": "claude plugin install moodle-teacher@falkenslab",
         "agentKit": "extension add moodle-teacher@falkenslab"
       },
-      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/moodle-teacher/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/moodle-teacher/assets/banner.svg"
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-teacher/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-teacher/assets/banner.svg"
     },
     {
       "name": "weather",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
       "category": "productivity",
       "topics": [
@@ -71,12 +71,12 @@
       "author": "Falken's Lab",
       "license": "MIT",
       "homepage": "https://falkenslab.github.io/agent-kit/docs/extensions/writing",
-      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/weather/README.md",
+      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/weather/README.md",
       "install": {
         "claudeCode": "claude plugin install weather@falkenslab",
         "agentKit": "extension add weather@falkenslab"
       },
-      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/weather/assets/logo.svg"
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/weather/assets/logo.svg"
     }
   ]
 }

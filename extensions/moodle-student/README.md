@@ -10,7 +10,7 @@ moodle-mcp's student tools, with the good practice to plan, hand in, take quizze
 ![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
 ![Moodle 5.x](https://img.shields.io/badge/Moodle-5.x-f98012?logo=moodle&logoColor=white)
-[![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
 **[📖 moodle-mcp's documentation](https://falkenslab.github.io/moodle-mcp/)** · [📖 Documentación en español](https://falkenslab.github.io/moodle-mcp/es/)
 
@@ -80,7 +80,7 @@ Change them later with `my-agent extension config moodle-student`, in the chat w
 
 ## 🛠️ Developing
 
-The extension is a Claude Code plugin: `.claude-plugin/plugin.json` (its settings in `userConfig`, agent-kit's data in `metadata["agent-kit"]`), `.mcp.json`, `skills/` and `commands/`. To try a change, link it into an agent instead of installing it (`my-agent extension add ./moodle-student --link`), and check it with `claude plugin validate --strict moodle-student`. How agent-kit runs it: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
+The extension is a Claude Code plugin: `.claude-plugin/plugin.json` (its settings in `userConfig`, agent-kit's data in `metadata["agent-kit"]`), `.mcp.json`, `skills/` and `commands/`. To try a change, link it into an agent instead of installing it (`my-agent extension add ./extensions/moodle-student --link`), and check it with `claude plugin validate --strict extensions/moodle-student`. How agent-kit runs it: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
 
 <div align="center">
 

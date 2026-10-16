@@ -20,7 +20,7 @@ jobs:
         run: claude plugin validate --strict .
       - name: Each extension
         run: |
-          for plugin in */.claude-plugin/plugin.json; do
+          for plugin in extensions/*/.claude-plugin/plugin.json; do
             dir="$(dirname "$(dirname "$plugin")")"
             echo "::group::$dir"
             claude plugin validate --strict "$dir"

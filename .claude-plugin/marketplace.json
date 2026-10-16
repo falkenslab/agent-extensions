@@ -10,9 +10,9 @@
   "plugins": [
     {
       "name": "moodle-teacher",
-      "source": "./moodle-teacher",
+      "source": "./extensions/moodle-teacher",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "category": "education",
       "tags": [
         "moodle",
@@ -24,9 +24,9 @@
     },
     {
       "name": "moodle-student",
-      "source": "./moodle-student",
+      "source": "./extensions/moodle-student",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "education",
       "tags": [
         "moodle",
@@ -38,9 +38,9 @@
     },
     {
       "name": "weather",
-      "source": "./weather",
+      "source": "./extensions/weather",
       "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "productivity",
       "tags": [
         "weather",
