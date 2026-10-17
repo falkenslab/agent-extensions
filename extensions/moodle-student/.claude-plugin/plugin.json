@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -62,9 +62,214 @@
       "kit": ">=0.22.0",
       "provides": [
         "moodle",
-        "moodle-student"
+        "moodle-student",
+        "lms-student"
       ],
       "requires": [],
+      "capabilities": [
+        {
+          "id": "lms-course-browsing",
+          "skills": [
+            "read-a-course"
+          ],
+          "tools": [
+            "list_courses",
+            "get_course_structure",
+            "get_activity_content",
+            "download_file",
+            "get_course_updates",
+            "list_notifications"
+          ],
+          "texts": {
+            "en": {
+              "label": "Reading a course",
+              "description": "Sections, resources and activities, what's locked and why, and what counts as done."
+            },
+            "es": {
+              "label": "Leer un curso",
+              "description": "Secciones, recursos y actividades, qué está bloqueado y por qué, y qué cuenta como hecho."
+            }
+          }
+        },
+        {
+          "id": "lms-planning",
+          "skills": [
+            "plan-my-work"
+          ],
+          "tools": [
+            "list_pending",
+            "list_deadlines",
+            "list_events",
+            "get_activities_overview",
+            "get_my_grades",
+            "get_assignment",
+            "get_quiz_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Planning your work",
+              "description": "What's left, deadlines and cut-offs, and what unlocks what, in a realistic order."
+            },
+            "es": {
+              "label": "Organizar tu trabajo",
+              "description": "Lo que queda, las fechas de entrega y de corte, y qué desbloquea qué, en un orden realista."
+            }
+          }
+        },
+        {
+          "id": "lms-submissions",
+          "skills": [
+            "hand-in-an-assignment"
+          ],
+          "tools": [
+            "get_assignment",
+            "download_file",
+            "save_submission",
+            "submit_assignment",
+            "send_message"
+          ],
+          "texts": {
+            "en": {
+              "label": "Handing in assignments",
+              "description": "What it accepts, saving, checking and submitting for good, only with your yes."
+            },
+            "es": {
+              "label": "Entregar tareas",
+              "description": "Qué admite, guardar, comprobar y enviar definitivamente, solo con tu sí."
+            }
+          }
+        },
+        {
+          "id": "lms-quiz-taking",
+          "skills": [
+            "take-a-quiz"
+          ],
+          "tools": [
+            "get_quiz_info",
+            "start_quiz_attempt",
+            "get_quiz_attempt",
+            "answer_quiz_questions",
+            "finish_quiz_attempt",
+            "get_attempt_review"
+          ],
+          "texts": {
+            "en": {
+              "label": "Taking quizzes",
+              "description": "The rules before starting, answering each question type, submitting with your yes, and the review."
+            },
+            "es": {
+              "label": "Hacer cuestionarios",
+              "description": "Las reglas antes de empezar, responder cada tipo de pregunta, enviar con tu sí, y la revisión."
+            }
+          }
+        },
+        {
+          "id": "lms-forum-participation",
+          "skills": [
+            "forums"
+          ],
+          "tools": [
+            "list_discussions",
+            "get_discussion",
+            "create_discussion",
+            "reply_to_post",
+            "edit_post",
+            "delete_post",
+            "set_discussion_subscription",
+            "rate",
+            "send_message",
+            "list_participants",
+            "list_conversations",
+            "get_conversation"
+          ],
+          "texts": {
+            "en": {
+              "label": "Taking part in forums",
+              "description": "Reading threads, asking where it belongs, posting exactly once, and writing to the teacher."
+            },
+            "es": {
+              "label": "Participar en los foros",
+              "description": "Leer los hilos, preguntar donde corresponde, publicar una sola vez y escribir al docente."
+            }
+          }
+        },
+        {
+          "id": "lms-activity-taking",
+          "skills": [
+            "other-activities"
+          ],
+          "tools": [
+            "get_choice",
+            "answer_choice",
+            "get_survey",
+            "submit_survey",
+            "get_lesson_page",
+            "answer_lesson_page",
+            "get_scorm",
+            "open_scorm",
+            "get_h5p_activity",
+            "assess_workshop_submission",
+            "set_completion"
+          ],
+          "texts": {
+            "en": {
+              "label": "Other activities",
+              "description": "Choices, surveys, lessons, SCORM, H5P, peer assessment and manual completion."
+            },
+            "es": {
+              "label": "Otras actividades",
+              "description": "Consultas, encuestas, lecciones, SCORM, H5P, evaluación entre iguales y finalización manual."
+            }
+          }
+        },
+        {
+          "id": "lms-grades",
+          "skills": [
+            "grades-and-feedback"
+          ],
+          "tools": [
+            "get_my_grades",
+            "get_assignment",
+            "get_quiz_info",
+            "get_attempt_review",
+            "download_file",
+            "send_message"
+          ],
+          "texts": {
+            "en": {
+              "label": "Grades and feedback",
+              "description": "Your grade report, each activity's feedback, and what's still to be graded."
+            },
+            "es": {
+              "label": "Notas y retroalimentación",
+              "description": "Tu informe de calificaciones, la retroalimentación de cada actividad y lo que falta por corregir."
+            }
+          }
+        },
+        {
+          "id": "lms-sites",
+          "skills": [
+            "several-sites"
+          ],
+          "tools": [
+            "list_sites",
+            "add_site",
+            "use_site",
+            "remove_site",
+            "login"
+          ],
+          "texts": {
+            "en": {
+              "label": "Several Moodle sites",
+              "description": "Adding and switching sites, kept apart."
+            },
+            "es": {
+              "label": "Varios sitios Moodle",
+              "description": "Añadir sitios y cambiar de uno a otro, por separado."
+            }
+          }
+        }
+      ],
       "help": "Moodle as a student, through moodle-mcp: what you have left and when, handing in assignments, quizzes, forums, the other activities, your grades and feedback, and your several sites; my moodle-student:* skills hold how to do each well in Moodle, and /moodle-student:week is a quick look at what's due.",
       "labels": {
         "list_courses": {

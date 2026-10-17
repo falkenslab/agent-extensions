@@ -9,7 +9,7 @@
   "extensions": [
     {
       "name": "moodle-student",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "category": "education",
       "topics": [
@@ -29,12 +29,216 @@
         "claudeCode": "claude plugin install moodle-student@falkenslab",
         "agentKit": "extension add moodle-student@falkenslab"
       },
+      "capabilities": [
+        {
+          "id": "lms-course-browsing",
+          "skills": [
+            "read-a-course"
+          ],
+          "tools": [
+            "list_courses",
+            "get_course_structure",
+            "get_activity_content",
+            "download_file",
+            "get_course_updates",
+            "list_notifications"
+          ],
+          "texts": {
+            "en": {
+              "label": "Reading a course",
+              "description": "Sections, resources and activities, what's locked and why, and what counts as done."
+            },
+            "es": {
+              "label": "Leer un curso",
+              "description": "Secciones, recursos y actividades, qué está bloqueado y por qué, y qué cuenta como hecho."
+            }
+          }
+        },
+        {
+          "id": "lms-planning",
+          "skills": [
+            "plan-my-work"
+          ],
+          "tools": [
+            "list_pending",
+            "list_deadlines",
+            "list_events",
+            "get_activities_overview",
+            "get_my_grades",
+            "get_assignment",
+            "get_quiz_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Planning your work",
+              "description": "What's left, deadlines and cut-offs, and what unlocks what, in a realistic order."
+            },
+            "es": {
+              "label": "Organizar tu trabajo",
+              "description": "Lo que queda, las fechas de entrega y de corte, y qué desbloquea qué, en un orden realista."
+            }
+          }
+        },
+        {
+          "id": "lms-submissions",
+          "skills": [
+            "hand-in-an-assignment"
+          ],
+          "tools": [
+            "get_assignment",
+            "download_file",
+            "save_submission",
+            "submit_assignment",
+            "send_message"
+          ],
+          "texts": {
+            "en": {
+              "label": "Handing in assignments",
+              "description": "What it accepts, saving, checking and submitting for good, only with your yes."
+            },
+            "es": {
+              "label": "Entregar tareas",
+              "description": "Qué admite, guardar, comprobar y enviar definitivamente, solo con tu sí."
+            }
+          }
+        },
+        {
+          "id": "lms-quiz-taking",
+          "skills": [
+            "take-a-quiz"
+          ],
+          "tools": [
+            "get_quiz_info",
+            "start_quiz_attempt",
+            "get_quiz_attempt",
+            "answer_quiz_questions",
+            "finish_quiz_attempt",
+            "get_attempt_review"
+          ],
+          "texts": {
+            "en": {
+              "label": "Taking quizzes",
+              "description": "The rules before starting, answering each question type, submitting with your yes, and the review."
+            },
+            "es": {
+              "label": "Hacer cuestionarios",
+              "description": "Las reglas antes de empezar, responder cada tipo de pregunta, enviar con tu sí, y la revisión."
+            }
+          }
+        },
+        {
+          "id": "lms-forum-participation",
+          "skills": [
+            "forums"
+          ],
+          "tools": [
+            "list_discussions",
+            "get_discussion",
+            "create_discussion",
+            "reply_to_post",
+            "edit_post",
+            "delete_post",
+            "set_discussion_subscription",
+            "rate",
+            "send_message",
+            "list_participants",
+            "list_conversations",
+            "get_conversation"
+          ],
+          "texts": {
+            "en": {
+              "label": "Taking part in forums",
+              "description": "Reading threads, asking where it belongs, posting exactly once, and writing to the teacher."
+            },
+            "es": {
+              "label": "Participar en los foros",
+              "description": "Leer los hilos, preguntar donde corresponde, publicar una sola vez y escribir al docente."
+            }
+          }
+        },
+        {
+          "id": "lms-activity-taking",
+          "skills": [
+            "other-activities"
+          ],
+          "tools": [
+            "get_choice",
+            "answer_choice",
+            "get_survey",
+            "submit_survey",
+            "get_lesson_page",
+            "answer_lesson_page",
+            "get_scorm",
+            "open_scorm",
+            "get_h5p_activity",
+            "assess_workshop_submission",
+            "set_completion"
+          ],
+          "texts": {
+            "en": {
+              "label": "Other activities",
+              "description": "Choices, surveys, lessons, SCORM, H5P, peer assessment and manual completion."
+            },
+            "es": {
+              "label": "Otras actividades",
+              "description": "Consultas, encuestas, lecciones, SCORM, H5P, evaluación entre iguales y finalización manual."
+            }
+          }
+        },
+        {
+          "id": "lms-grades",
+          "skills": [
+            "grades-and-feedback"
+          ],
+          "tools": [
+            "get_my_grades",
+            "get_assignment",
+            "get_quiz_info",
+            "get_attempt_review",
+            "download_file",
+            "send_message"
+          ],
+          "texts": {
+            "en": {
+              "label": "Grades and feedback",
+              "description": "Your grade report, each activity's feedback, and what's still to be graded."
+            },
+            "es": {
+              "label": "Notas y retroalimentación",
+              "description": "Tu informe de calificaciones, la retroalimentación de cada actividad y lo que falta por corregir."
+            }
+          }
+        },
+        {
+          "id": "lms-sites",
+          "skills": [
+            "several-sites"
+          ],
+          "tools": [
+            "list_sites",
+            "add_site",
+            "use_site",
+            "remove_site",
+            "login"
+          ],
+          "texts": {
+            "en": {
+              "label": "Several Moodle sites",
+              "description": "Adding and switching sites, kept apart."
+            },
+            "es": {
+              "label": "Varios sitios Moodle",
+              "description": "Añadir sitios y cambiar de uno a otro, por separado."
+            }
+          }
+        }
+      ],
       "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-student/assets/logo.svg",
       "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-student/assets/banner.svg"
     },
     {
       "name": "moodle-teacher",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
       "category": "education",
       "topics": [
@@ -54,12 +258,377 @@
         "claudeCode": "claude plugin install moodle-teacher@falkenslab",
         "agentKit": "extension add moodle-teacher@falkenslab"
       },
+      "capabilities": [
+        {
+          "id": "lms-course-reading",
+          "skills": [
+            "read-a-course"
+          ],
+          "tools": [
+            "list_courses",
+            "get_course_structure",
+            "get_activity_settings",
+            "get_activity_content",
+            "get_me",
+            "get_site_info",
+            "get_course_updates",
+            "get_activities_overview"
+          ],
+          "texts": {
+            "en": {
+              "label": "Reading a course",
+              "description": "What you can do in a course, its sections, activities, restrictions, completion and dates, as Moodle has them now."
+            },
+            "es": {
+              "label": "Leer un curso",
+              "description": "Qué puedes hacer en un curso, sus secciones, actividades, restricciones, finalización y fechas, tal como están ahora en Moodle."
+            }
+          }
+        },
+        {
+          "id": "lms-publishing",
+          "skills": [
+            "publishing"
+          ],
+          "tools": [
+            "create_activity",
+            "update_activity",
+            "edit_activity",
+            "add_section",
+            "edit_section"
+          ],
+          "texts": {
+            "en": {
+              "label": "Publishing safely",
+              "description": "New content goes up hidden, is checked, and is shown only with your yes; one approval per item."
+            },
+            "es": {
+              "label": "Publicar con seguridad",
+              "description": "Lo nuevo se sube oculto, se comprueba y solo se muestra con tu sí; una aprobación por cada cosa."
+            }
+          }
+        },
+        {
+          "id": "lms-content",
+          "skills": [
+            "course-content"
+          ],
+          "tools": [
+            "create_activity",
+            "update_activity",
+            "edit_activity",
+            "add_section",
+            "edit_section",
+            "download_file"
+          ],
+          "texts": {
+            "en": {
+              "label": "Course content",
+              "description": "Pages, books, files, folders, links and section texts, as HTML Moodle keeps."
+            },
+            "es": {
+              "label": "Contenidos del curso",
+              "description": "Páginas, libros, archivos, carpetas, enlaces y textos de sección, en un HTML que Moodle conserva."
+            }
+          }
+        },
+        {
+          "id": "lms-assignments",
+          "skills": [
+            "assignments"
+          ],
+          "tools": [
+            "create_activity",
+            "update_activity",
+            "get_activity_settings",
+            "list_assignments",
+            "get_submissions",
+            "get_rubric",
+            "grant_extension"
+          ],
+          "texts": {
+            "en": {
+              "label": "Assignments",
+              "description": "Submission settings that match the statement: files and formats, dates and cut-off, groups, feedback and grade."
+            },
+            "es": {
+              "label": "Tareas",
+              "description": "Ajustes de entrega que encajan con el enunciado: archivos y formatos, fechas y fecha límite, grupos, retroalimentación y nota."
+            }
+          }
+        },
+        {
+          "id": "lms-quizzes",
+          "skills": [
+            "quizzes"
+          ],
+          "tools": [
+            "list_question_banks",
+            "list_questions",
+            "import_questions",
+            "create_question",
+            "update_question",
+            "set_question_status",
+            "get_quiz_structure",
+            "add_questions_to_quiz",
+            "edit_quiz_slot",
+            "set_quiz_pages",
+            "add_quiz_section",
+            "get_quiz_results",
+            "set_quiz_override"
+          ],
+          "texts": {
+            "en": {
+              "label": "Quizzes",
+              "description": "Settings for the quiz's purpose, questions imported from GIFT or Moodle XML, their order, pages and total."
+            },
+            "es": {
+              "label": "Cuestionarios",
+              "description": "Ajustes según el propósito del cuestionario, preguntas importadas en GIFT o Moodle XML, su orden, sus páginas y el total."
+            }
+          }
+        },
+        {
+          "id": "lms-activities",
+          "skills": [
+            "other-activities"
+          ],
+          "tools": [
+            "create_activity",
+            "update_activity",
+            "get_workshop",
+            "set_workshop_phase",
+            "create_group",
+            "set_group_members",
+            "create_grouping",
+            "set_grouping_groups",
+            "update_course"
+          ],
+          "texts": {
+            "en": {
+              "label": "Other activities",
+              "description": "Workshops, lessons, glossaries, wikis, forums, choices and H5P, with completion, restrictions and groups."
+            },
+            "es": {
+              "label": "Otras actividades",
+              "description": "Talleres, lecciones, glosarios, wikis, foros, consultas y H5P, con finalización, restricciones y grupos."
+            }
+          }
+        },
+        {
+          "id": "lms-forums",
+          "skills": [
+            "forums"
+          ],
+          "tools": [
+            "list_discussions",
+            "get_discussion",
+            "reply_to_post",
+            "create_discussion",
+            "edit_post",
+            "delete_post",
+            "set_discussion_state",
+            "set_discussion_subscription",
+            "rate",
+            "send_message",
+            "message_participants"
+          ],
+          "texts": {
+            "en": {
+              "label": "Running the forums",
+              "description": "Reading threads, replying and announcing exactly once, and moderating."
+            },
+            "es": {
+              "label": "Llevar los foros",
+              "description": "Leer los hilos, responder y publicar avisos una sola vez, y moderar."
+            }
+          }
+        },
+        {
+          "id": "lms-grading",
+          "skills": [
+            "grading"
+          ],
+          "tools": [
+            "get_rubric",
+            "get_submissions",
+            "grade_submission",
+            "grant_extension",
+            "set_workflow_state",
+            "allocate_marker",
+            "list_questions_to_grade",
+            "get_attempt_review",
+            "grade_quiz_question",
+            "get_forum_grades",
+            "grade_forum_user"
+          ],
+          "texts": {
+            "en": {
+              "label": "Grading",
+              "description": "Assignments with their rubric or guide, quiz essays and graded forums: proposals first, and only what you approve is saved."
+            },
+            "es": {
+              "label": "Corregir",
+              "description": "Tareas con su rúbrica o guía, preguntas de ensayo y foros calificados: primero las propuestas, y solo se guarda lo que apruebas."
+            }
+          }
+        },
+        {
+          "id": "lms-gradebook",
+          "skills": [
+            "gradebook"
+          ],
+          "tools": [
+            "get_gradebook_setup",
+            "get_grader_report",
+            "add_grade_item",
+            "update_grade_item",
+            "delete_grade_item",
+            "add_grade_category",
+            "update_grade_category",
+            "delete_grade_category",
+            "set_grade",
+            "export_grades"
+          ],
+          "texts": {
+            "en": {
+              "label": "The gradebook",
+              "description": "Categories, aggregation and weights that compute your grading scheme, checked against it."
+            },
+            "es": {
+              "label": "El libro de calificaciones",
+              "description": "Categorías, agregación y pesos que calculan tu sistema de calificación, comprobados con él."
+            }
+          }
+        },
+        {
+          "id": "lms-class-progress",
+          "skills": [
+            "class-progress"
+          ],
+          "tools": [
+            "get_completion_report",
+            "get_grader_report",
+            "get_submissions",
+            "get_quiz_results",
+            "list_participants",
+            "get_participation_report",
+            "get_activity_report",
+            "get_course_logs",
+            "message_participants",
+            "override_completion"
+          ],
+          "texts": {
+            "en": {
+              "label": "Following the class",
+              "description": "Who's falling behind and on what, from completion, grades, submissions and activity, and writing to them."
+            },
+            "es": {
+              "label": "Seguir a la clase",
+              "description": "Quién se queda atrás y en qué, a partir de la finalización, las notas, las entregas y la actividad, y escribirles."
+            }
+          }
+        },
+        {
+          "id": "lms-course-check",
+          "skills": [
+            "course-check"
+          ],
+          "tools": [
+            "get_course_structure",
+            "get_activity_settings",
+            "get_gradebook_setup",
+            "get_rubric",
+            "get_quiz_structure",
+            "reset_course",
+            "backup_course"
+          ],
+          "texts": {
+            "en": {
+              "label": "Checking a course",
+              "description": "What's broken or stale (locked activities, dates, gradebook weights) and getting a course ready for a new term."
+            },
+            "es": {
+              "label": "Revisar un curso",
+              "description": "Lo que está roto o desfasado (actividades bloqueadas, fechas, pesos del calificador) y preparar un curso para una nueva edición."
+            }
+          }
+        },
+        {
+          "id": "lms-scorm",
+          "skills": [
+            "scorm"
+          ],
+          "tools": [
+            "create_activity",
+            "get_activity_settings",
+            "get_scorm"
+          ],
+          "texts": {
+            "en": {
+              "label": "SCORM packages",
+              "description": "An HTML activity packaged as SCORM 1.2, uploaded and set up so Moodle records completion and a score."
+            },
+            "es": {
+              "label": "Paquetes SCORM",
+              "description": "Una actividad HTML empaquetada como SCORM 1.2, subida y configurada para que Moodle registre la finalización y la nota."
+            }
+          }
+        },
+        {
+          "id": "lms-course-copy",
+          "skills": [
+            "copy-and-restore"
+          ],
+          "tools": [
+            "import_activities",
+            "copy_course",
+            "backup_course",
+            "restore_course",
+            "copy_between_sites"
+          ],
+          "texts": {
+            "en": {
+              "label": "Copying courses",
+              "description": "Copying, importing, backing up and restoring courses, and checking the result."
+            },
+            "es": {
+              "label": "Copiar cursos",
+              "description": "Copiar, importar, hacer copias de seguridad y restaurar cursos, y comprobar el resultado."
+            }
+          }
+        },
+        {
+          "id": "lms-sites",
+          "skills": [
+            "several-sites"
+          ],
+          "tools": [
+            "list_sites",
+            "add_site",
+            "use_site",
+            "remove_site",
+            "login",
+            "copy_between_sites"
+          ],
+          "texts": {
+            "en": {
+              "label": "Several Moodle sites",
+              "description": "Adding and switching sites, and copying content from one to another."
+            },
+            "es": {
+              "label": "Varios sitios Moodle",
+              "description": "Añadir sitios, cambiar de uno a otro y copiar contenidos entre ellos."
+            }
+          }
+        }
+      ],
       "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-teacher/assets/logo.svg",
       "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-teacher/assets/banner.svg"
     },
     {
       "name": "moodle-ui-kit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
       "category": "education",
       "topics": [
@@ -79,12 +648,30 @@
         "claudeCode": "claude plugin install moodle-ui-kit@falkenslab",
         "agentKit": "extension add moodle-ui-kit@falkenslab"
       },
+      "capabilities": [
+        {
+          "id": "lms-style",
+          "skills": [
+            "style-content"
+          ],
+          "texts": {
+            "en": {
+              "label": "A visual style for Moodle",
+              "description": "Assignment statements, code blocks, solutions, quiz questions and feedback with inline styles, from noeper's moodle-ui-kit."
+            },
+            "es": {
+              "label": "Un estilo visual para Moodle",
+              "description": "Enunciados de tareas, bloques de código, soluciones, preguntas y retroalimentación con estilos inline, del moodle-ui-kit de noeper."
+            }
+          }
+        }
+      ],
       "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-ui-kit/assets/logo.svg",
       "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-ui-kit/assets/banner.svg"
     },
     {
       "name": "weather",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
       "category": "productivity",
       "topics": [
@@ -101,6 +688,27 @@
         "claudeCode": "claude plugin install weather@falkenslab",
         "agentKit": "extension add weather@falkenslab"
       },
+      "capabilities": [
+        {
+          "id": "weather-forecast",
+          "skills": [
+            "plan-the-day"
+          ],
+          "tools": [
+            "forecast"
+          ],
+          "texts": {
+            "en": {
+              "label": "The weather",
+              "description": "The weather now and the next days in your city, and plans around it with a plan B when rain is likely."
+            },
+            "es": {
+              "label": "El tiempo",
+              "description": "El tiempo ahora y los próximos días en tu ciudad, y planes según la previsión, con un plan B si es probable que llueva."
+            }
+          }
+        }
+      ],
       "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/weather/assets/logo.svg"
     }
   ]

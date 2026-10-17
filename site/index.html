@@ -59,6 +59,9 @@
   .readme th, .readme td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
   .readme th { background: var(--chip); }
   .readme img { max-width: 100%; height: auto; }
+  .caps { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .cap { border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--bg); }
+  .cap strong { display: block; font-size: 14px; } .cap span { display: block; color: var(--text-2); font-size: 13px; line-height: 1.4; }
   dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
   dialog .banner { width: 100%; display: block; aspect-ratio: 3 / 1; object-fit: cover; }
   dialog .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 12px; }
@@ -116,6 +119,7 @@ const TEXTS = {
     agent: "An agent on agent-kit",
     source: "Source",
     close: "Close",
+    capabilities: "What it can do",
     readmeLoading: "Loading the README…",
     readmeMissing: "The README couldn't be loaded.",
   },
@@ -134,6 +138,7 @@ const TEXTS = {
     agent: "Un agente con agent-kit",
     source: "Código",
     close: "Cerrar",
+    capabilities: "Qué sabe hacer",
     readmeLoading: "Cargando el README…",
     readmeMissing: "No se ha podido cargar el README.",
   },
@@ -287,6 +292,14 @@ function openDetails(extension) {
   install.append(commandBox(`<agent> ${extension.install.agentKit}`));
   body.append(install);
   body.insertAdjacentHTML("beforeend", `<div class="links"><a href="${escape(extension.readme)}">README</a><a href="${escape(extension.homepage)}">${escape(t("source"))}</a></div>`);
+  // Its capabilities (skills + tools), in the page's language, English where a text is missing.
+  if (extension.capabilities?.length) {
+    const items = extension.capabilities.map((capability) => {
+      const text = capability.texts?.[lang] ?? capability.texts?.en ?? { label: capability.id };
+      return `<li class="cap"><strong>${escape(text.label)}</strong>${text.description ? `<span>${escape(text.description)}</span>` : ""}</li>`;
+    });
+    body.insertAdjacentHTML("beforeend", `<span class="label">${escape(t("capabilities"))}</span><ul class="caps">${items.join("")}</ul>`);
+  }
   const readme = document.createElement("div");
   body.append(readme);
   showReadme(extension, readme);
