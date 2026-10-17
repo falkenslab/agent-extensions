@@ -58,6 +58,31 @@
       "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-teacher/assets/banner.svg"
     },
     {
+      "name": "moodle-ui-kit",
+      "version": "0.1.0",
+      "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
+      "category": "education",
+      "topics": [
+        "moodle",
+        "lms",
+        "style",
+        "teaching",
+        "teacher",
+        "miyagi",
+        "education"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-ui-kit",
+      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-ui-kit/README.md",
+      "install": {
+        "claudeCode": "claude plugin install moodle-ui-kit@falkenslab",
+        "agentKit": "extension add moodle-ui-kit@falkenslab"
+      },
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-ui-kit/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-ui-kit/assets/banner.svg"
+    },
+    {
       "name": "weather",
       "version": "0.1.3",
       "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",

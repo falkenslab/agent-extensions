@@ -47,6 +47,7 @@ An agent whose own marketplace this is (its `officialMarketplace`) offers them i
 | --- | --- |
 | 👩‍🏫 [moodle-teacher](extensions/moodle-teacher/) | Works in the Moodle courses you teach, as you, through [moodle-mcp](https://github.com/falkenslab/moodle-mcp): building them, grading, following the class, checking and reusing courses |
 | 🧑‍🎓 [moodle-student](extensions/moodle-student/) | Helps in the Moodle courses you take, as you, through [moodle-mcp](https://github.com/falkenslab/moodle-mcp): what you have left, handing in, quizzes, forums, grades and feedback |
+| 🎨 [moodle-ui-kit](extensions/moodle-ui-kit/) | A clean visual style for what your agent publishes in Moodle, with inline styles that work on any site; based on [noeper](https://github.com/noeper)'s [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit) |
 | ☀️ [weather](extensions/weather/) | The weather in your city, for an agent that plans with you; also agent-kit's example of an extension with its own MCP server, built step by step in [its tutorial](https://falkenslab.github.io/agent-kit/docs/extensions/writing) |
 
 ## 🧭 The catalog

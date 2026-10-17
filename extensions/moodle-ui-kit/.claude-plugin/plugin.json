@@ -1,0 +1,35 @@
+{
+  "name": "moodle-ui-kit",
+  "version": "0.1.0",
+  "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-ui-kit",
+  "repository": "https://github.com/falkenslab/agent-kit-extensions",
+  "license": "MIT",
+  "keywords": [
+    "moodle",
+    "lms",
+    "style",
+    "teaching",
+    "teacher",
+    "miyagi"
+  ],
+  "metadata": {
+    "agent-kit": {
+      "catalog": {
+        "logo": "assets/logo.svg",
+        "banner": "assets/banner.svg"
+      },
+      "kit": ">=0.22.0",
+      "provides": [
+        "lms-style",
+        "moodle-ui-kit"
+      ],
+      "requires": [],
+      "help": "A visual style for Moodle, from moodle-ui-kit: my moodle-ui-kit:style-content skill fills its templates (an assignment's statement, code blocks, solutions, quiz questions and feedback) with inline styles, and publishes them with moodle-teacher."
+    }
+  }
+}

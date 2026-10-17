@@ -37,6 +37,20 @@
       ]
     },
     {
+      "name": "moodle-ui-kit",
+      "source": "./extensions/moodle-ui-kit",
+      "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
+      "version": "0.1.0",
+      "category": "education",
+      "tags": [
+        "moodle",
+        "lms",
+        "style",
+        "teacher",
+        "miyagi"
+      ]
+    },
+    {
       "name": "weather",
       "source": "./extensions/weather",
       "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
