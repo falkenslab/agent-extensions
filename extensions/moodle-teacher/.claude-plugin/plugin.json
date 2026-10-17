@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -255,7 +255,8 @@
         {
           "id": "lms-grading",
           "skills": [
-            "grading"
+            "grading",
+            "to-grade"
           ],
           "tools": [
             "get_rubric",
@@ -312,7 +313,8 @@
         {
           "id": "lms-class-progress",
           "skills": [
-            "class-progress"
+            "class-progress",
+            "week"
           ],
           "tools": [
             "get_completion_report",
@@ -431,7 +433,7 @@
           }
         }
       ],
-      "help": "Moodle as a teacher, through moodle-mcp: building your courses (content, assignments, quizzes, forums, other activities, the gradebook), grading, following the class, checking a course and copying between your sites; my moodle-teacher:* skills hold how to do each well in Moodle, and /moodle-teacher:week and /moodle-teacher:to-grade are quick looks at what's pending.",
+      "help": "Moodle as a teacher, through moodle-mcp: building your courses (content, assignments, quizzes, forums, other activities, the gradebook), grading, following the class, checking a course and copying between your sites; my moodle-teacher:* skills hold how to do each well in Moodle, and my week and to-grade skills are quick looks at what's pending.",
       "labels": {
         "list_courses": {
           "en": {

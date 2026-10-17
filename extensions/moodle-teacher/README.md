@@ -16,7 +16,7 @@ moodle-mcp's teacher tools, with the good practice to build, grade, follow and r
 
 </div>
 
-This extension, for teachers, gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit), or Claude Code, the [moodle-mcp](https://github.com/falkenslab/moodle-mcp) server and what to do with it: skills for everything a course holds (content, assignments, quizzes, forums, other activities, the gradebook), for grading, following the class and checking a course, for publishing safely and for reusing courses across sites, and commands for a quick look at what's due. It knows Moodle, not teaching: an agent that knows teaching, like [miyagi](https://github.com/falkenslab/miyagi), installs it to work in Moodle. For the courses you take as a student, there is [moodle-student](../moodle-student/). It runs moodle-mcp from npm, at a fixed version, through a real browser on your computer, logged in as you.
+This extension, for teachers, gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit), or Claude Code, the [moodle-mcp](https://github.com/falkenslab/moodle-mcp) server and what to do with it: skills for everything a course holds (content, assignments, quizzes, forums, other activities, the gradebook), for grading, following the class and checking a course, for publishing safely and for reusing courses across sites, and skills for a quick look at what's due. It knows Moodle, not teaching: an agent that knows teaching, like [miyagi](https://github.com/falkenslab/miyagi), installs it to work in Moodle. For the courses you take as a student, there is [moodle-student](../moodle-student/). It runs moodle-mcp from npm, at a fixed version, through a real browser on your computer, logged in as you.
 
 ## ✨ Why this extension
 
@@ -84,12 +84,12 @@ Change them later with `my-agent extension config moodle-teacher`, in the chat w
 | 🎮 `scorm` | An HTML activity packaged as SCORM, uploaded and tested so Moodle records it |
 | 📦 `copy-and-restore` | Copying, importing, backing up and restoring courses, and checking the result |
 | 🌐 `several-sites` | Adding and switching sites, and copying between them |
-| 📅 `/moodle-teacher:week` | What's due this week and what's waiting for you |
-| 🗂️ `/moodle-teacher:to-grade` | What's waiting to be graded, course by course |
+| 📅 `week` | What's due this week and what's waiting for you (in Claude Code, also `/moodle-teacher:week`) |
+| 🗂️ `to-grade` | What's waiting to be graded, course by course (in Claude Code, also `/moodle-teacher:to-grade`) |
 
 ## 🛠️ Developing
 
-The extension is a Claude Code plugin: `.claude-plugin/plugin.json` (its settings in `userConfig`, agent-kit's data in `metadata["agent-kit"]`), `.mcp.json`, `skills/` and `commands/`. To try a change, link it into an agent instead of installing it (`my-agent extension add ./extensions/moodle-teacher --link`), and check it with `claude plugin validate --strict extensions/moodle-teacher`. How agent-kit runs it: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
+The extension is a Claude Code plugin: `.claude-plugin/plugin.json` (its settings in `userConfig`, agent-kit's data in `metadata["agent-kit"]`), `.mcp.json` and `skills/`. To try a change, link it into an agent instead of installing it (`my-agent extension add ./extensions/moodle-teacher --link`), and check it with `claude plugin validate --strict extensions/moodle-teacher`. How agent-kit runs it: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
 
 <div align="center">
 

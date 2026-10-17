@@ -16,7 +16,7 @@ Las herramientas de profesor de moodle-mcp, con las buenas prácticas para crear
 
 </div>
 
-Esta extensión, para docentes, da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), o a Claude Code, el servidor [moodle-mcp](https://github.com/falkenslab/moodle-mcp) y lo que hay que saber para usarlo: skills para todo lo que tiene un curso (contenidos, tareas, cuestionarios, foros, otras actividades, el libro de calificaciones), para corregir, seguir a la clase y revisar un curso, para publicar con seguridad y para reutilizar cursos entre sitios, y comandos para ver de un vistazo lo pendiente. Sabe de Moodle, no de enseñar: un agente que sabe enseñar, como [miyagi](https://github.com/falkenslab/miyagi), la instala para trabajar en Moodle. Para los cursos en los que eres alumno está [moodle-student](../moodle-student/README.es.md). Ejecuta moodle-mcp desde npm, a una versión fija, con un navegador real en tu ordenador y con tu sesión.
+Esta extensión, para docentes, da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), o a Claude Code, el servidor [moodle-mcp](https://github.com/falkenslab/moodle-mcp) y lo que hay que saber para usarlo: skills para todo lo que tiene un curso (contenidos, tareas, cuestionarios, foros, otras actividades, el libro de calificaciones), para corregir, seguir a la clase y revisar un curso, para publicar con seguridad y para reutilizar cursos entre sitios, y skills para ver de un vistazo lo pendiente. Sabe de Moodle, no de enseñar: un agente que sabe enseñar, como [miyagi](https://github.com/falkenslab/miyagi), la instala para trabajar en Moodle. Para los cursos en los que eres alumno está [moodle-student](../moodle-student/README.es.md). Ejecuta moodle-mcp desde npm, a una versión fija, con un navegador real en tu ordenador y con tu sesión.
 
 ## ✨ Por qué esta extensión
 
@@ -84,12 +84,12 @@ Cámbialos después con `my-agent extension config moodle-teacher`, en el chat c
 | 🎮 `scorm` | Una actividad HTML empaquetada como SCORM, subida y probada para que Moodle la registre |
 | 📦 `copy-and-restore` | Copiar, importar, hacer copias de seguridad y restaurar cursos, y comprobar el resultado |
 | 🌐 `several-sites` | Añadir sitios, cambiar de uno a otro y copiar entre ellos |
-| 📅 `/moodle-teacher:week` | Lo que vence esta semana y lo que te espera |
-| 🗂️ `/moodle-teacher:to-grade` | Lo que espera corrección, curso a curso |
+| 📅 `week` | Lo que vence esta semana y lo que te espera (en Claude Code, también `/moodle-teacher:week`) |
+| 🗂️ `to-grade` | Lo que espera corrección, curso a curso (en Claude Code, también `/moodle-teacher:to-grade`) |
 
 ## 🛠️ Desarrollo
 
-La extensión es un plugin de Claude Code: `.claude-plugin/plugin.json` (sus ajustes en `userConfig`, los datos de agent-kit en `metadata["agent-kit"]`), `.mcp.json`, `skills/` y `commands/`. Para probar un cambio, enlázala en un agente en vez de instalarla (`my-agent extension add ./extensions/moodle-teacher --link`) y compruébala con `claude plugin validate --strict extensions/moodle-teacher`. Cómo la ejecuta agent-kit: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
+La extensión es un plugin de Claude Code: `.claude-plugin/plugin.json` (sus ajustes en `userConfig`, los datos de agent-kit en `metadata["agent-kit"]`), `.mcp.json` y `skills/`. Para probar un cambio, enlázala en un agente en vez de instalarla (`my-agent extension add ./extensions/moodle-teacher --link`) y compruébala con `claude plugin validate --strict extensions/moodle-teacher`. Cómo la ejecuta agent-kit: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
 
 <div align="center">
 

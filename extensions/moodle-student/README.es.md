@@ -16,7 +16,7 @@ Las herramientas de alumno de moodle-mcp, con las buenas prácticas para organiz
 
 </div>
 
-Esta extensión, para estudiantes, da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), o a Claude Code, el servidor [moodle-mcp](https://github.com/falkenslab/moodle-mcp) con las herramientas de alumno y lo que hay que saber para usarlas: skills para leer un curso, planificar lo que queda, entregar tareas, hacer cuestionarios, los foros y las demás actividades, y leer notas y retroalimentación, y un comando para lo que vence esta semana. Sabe de Moodle, no de estudiar: un agente que sabe aprender, como [padawan](https://github.com/falkenslab/padawan), la instala para trabajar en Moodle. Para los cursos que impartes está [moodle-teacher](../moodle-teacher/README.es.md). Ejecuta moodle-mcp desde npm, a una versión fija, con un navegador real en tu ordenador y con tu sesión.
+Esta extensión, para estudiantes, da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), o a Claude Code, el servidor [moodle-mcp](https://github.com/falkenslab/moodle-mcp) con las herramientas de alumno y lo que hay que saber para usarlas: skills para leer un curso, planificar lo que queda, entregar tareas, hacer cuestionarios, los foros y las demás actividades, y leer notas y retroalimentación, y una skill para lo que vence esta semana. Sabe de Moodle, no de estudiar: un agente que sabe aprender, como [padawan](https://github.com/falkenslab/padawan), la instala para trabajar en Moodle. Para los cursos que impartes está [moodle-teacher](../moodle-teacher/README.es.md). Ejecuta moodle-mcp desde npm, a una versión fija, con un navegador real en tu ordenador y con tu sesión.
 
 ## ✨ Por qué esta extensión
 
@@ -78,11 +78,11 @@ Cámbialos después con `my-agent extension config moodle-student`, en el chat c
 | 🧩 `other-activities` | Consultas, encuestas, lecciones, SCORM, H5P, evaluación entre iguales y finalización manual |
 | 📊 `grades-and-feedback` | El informe de calificaciones, la retroalimentación de cada actividad y lo que falta por corregir |
 | 🌐 `several-sites` | Añadir sitios y cambiar de uno a otro, por separado |
-| 📅 `/moodle-student:week` | Lo que tienes que hacer esta semana, en orden |
+| 📅 `week` | Lo que tienes que hacer esta semana, en orden (en Claude Code, también `/moodle-student:week`) |
 
 ## 🛠️ Desarrollo
 
-La extensión es un plugin de Claude Code: `.claude-plugin/plugin.json` (sus ajustes en `userConfig`, los datos de agent-kit en `metadata["agent-kit"]`), `.mcp.json`, `skills/` y `commands/`. Para probar un cambio, enlázala en un agente en vez de instalarla (`my-agent extension add ./extensions/moodle-student --link`) y compruébala con `claude plugin validate --strict extensions/moodle-student`. Cómo la ejecuta agent-kit: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
+La extensión es un plugin de Claude Code: `.claude-plugin/plugin.json` (sus ajustes en `userConfig`, los datos de agent-kit en `metadata["agent-kit"]`), `.mcp.json` y `skills/`. Para probar un cambio, enlázala en un agente en vez de instalarla (`my-agent extension add ./extensions/moodle-student --link`) y compruébala con `claude plugin validate --strict extensions/moodle-student`. Cómo la ejecuta agent-kit: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
 
 <div align="center">
 
