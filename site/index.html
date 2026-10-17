@@ -107,7 +107,7 @@ const TEXTS = {
   en: {
     title: "Falken's Lab extensions",
     description: "Extensions for agents built on agent-kit, and plugins for Claude Code: search them by name or topic.",
-    intro: `Extensions for agents built on <a href="https://github.com/falkenslab/agent-kit">agent-kit</a>, and plugins for Claude Code: the same folder for both. Add the marketplace, then install what you need.`,
+    intro: `Extensions for agents built on <a href="https://github.com/falkenslab/agent-kit">agent-kit</a>, and plugins for Claude Code and Codex: the same folder for all. Add the marketplace, then install what you need.`,
     search: "Search by name, description or topic…",
     searchLabel: "Search extensions",
     topics: "Topics",
@@ -126,7 +126,7 @@ const TEXTS = {
   es: {
     title: "Extensiones de Falken's Lab",
     description: "Extensiones para agentes hechos con agent-kit, y plugins para Claude Code: búscalas por nombre o por tema.",
-    intro: `Extensiones para agentes hechos con <a href="https://github.com/falkenslab/agent-kit">agent-kit</a>, y plugins para Claude Code: la misma carpeta para los dos. Añade el marketplace e instala lo que necesites.`,
+    intro: `Extensiones para agentes hechos con <a href="https://github.com/falkenslab/agent-kit">agent-kit</a>, y plugins para Claude Code y Codex: la misma carpeta para todos. Añade el marketplace e instala lo que necesites.`,
     search: "Busca por nombre, descripción o tema…",
     searchLabel: "Buscar extensiones",
     topics: "Temas",
@@ -290,6 +290,9 @@ function openDetails(extension) {
   install.append(commandBox(extension.install.claudeCode));
   install.insertAdjacentHTML("beforeend", `<span class="label">${escape(t("agent"))}</span>`);
   install.append(commandBox(`<agent> ${extension.install.agentKit}`));
+  // Codex reads this marketplace too (.claude-plugin/marketplace.json); catalog.json doesn't list its commands yet.
+  install.insertAdjacentHTML("beforeend", `<span class="label">Codex</span>`);
+  install.append(commandBox(`codex plugin add ${extension.name}@${catalog.marketplace}`));
   body.append(install);
   body.insertAdjacentHTML("beforeend", `<div class="links"><a href="${escape(extension.readme)}">README</a><a href="${escape(extension.homepage)}">${escape(t("source"))}</a></div>`);
   // Its capabilities (skills + tools), in the page's language, English where a text is missing.
@@ -362,7 +365,8 @@ async function showReadme(extension, target) {
 function renderAdd() {
   if (!catalog.add) return;
   $("add").innerHTML = "";
-  $("add").append(commandBox(catalog.add.claudeCode), commandBox(`<agent> ${catalog.add.agentKit}`));
+  const repo = (catalog.repository ?? "").replace(/^https:\/\/github\.com\//, "");
+  $("add").append(commandBox(catalog.add.claudeCode), commandBox(`<agent> ${catalog.add.agentKit}`), ...(repo ? [commandBox(`codex plugin marketplace add ${repo}`)] : []));
 }
 $("details").addEventListener("click", (event) => event.target === $("details") && $("details").close());
 $("search").addEventListener("input", renderGrid);

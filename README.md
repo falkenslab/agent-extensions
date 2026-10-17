@@ -37,9 +37,15 @@ my-agent extension add moodle-teacher@falkenslab
 # Claude Code 2.1.271 or later
 claude plugin marketplace add falkenslab/agent-kit-extensions
 claude plugin install moodle-teacher@falkenslab
+
+# Codex
+codex plugin marketplace add falkenslab/agent-kit-extensions
+codex plugin add moodle-ui-kit@falkenslab
 ```
 
 An agent whose own marketplace this is (its `officialMarketplace`) offers them in its chat's catalog, without the first command.
+
+Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` works fully; `moodle-teacher` and `moodle-student` will, once moodle-mcp asks for your Moodle sites in the chat ([moodle-mcp#25](https://github.com/falkenslab/moodle-mcp/issues/25)); `weather` loads its skill but not its server, which runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand).
 
 ## 🧩 The extensions
 

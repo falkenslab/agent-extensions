@@ -40,9 +40,13 @@ my-agent extension add moodle-ui-kit@falkenslab
 claude plugin marketplace add falkenslab/agent-kit-extensions
 claude plugin install moodle-teacher@falkenslab
 claude plugin install moodle-ui-kit@falkenslab
+
+# Codex
+codex plugin marketplace add falkenslab/agent-kit-extensions
+codex plugin add moodle-ui-kit@falkenslab
 ```
 
-No tiene ajustes propios.
+No tiene ajustes propios, así que funciona igual en Codex.
 
 ## 💬 Qué puedes pedirle
 

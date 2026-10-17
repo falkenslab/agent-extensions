@@ -43,6 +43,8 @@ claude plugin install moodle-student@falkenslab
 
 Los dos piden sus ajustes al instalarla: tus sitios Moodle (`nombre=dirección`, por ejemplo `instituto=https://campus.miinstituto.org`) y los opcionales de abajo. La primera vez que trabaja en un sitio se abre una ventana del navegador para que entres.
 
+Codex también la instala (`codex plugin marketplace add falkenslab/agent-kit-extensions` y luego `codex plugin add moodle-student@falkenslab`), con sus skills y su servidor, pero no tiene ajustes de plugins: hasta que moodle-mcp te pida los sitios en el chat ([moodle-mcp#25](https://github.com/falkenslab/moodle-mcp/issues/25)), usa Claude Code o un agente con agent-kit.
+
 ## ⚙️ Ajustes
 
 | Ajuste | Qué hace | Por defecto |

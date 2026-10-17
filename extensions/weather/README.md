@@ -34,9 +34,13 @@ my-agent extension add weather@falkenslab --set "city=Santa Cruz de Tenerife"
 # Claude Code
 claude plugin marketplace add falkenslab/agent-kit-extensions
 claude plugin install weather@falkenslab
+
+# Codex
+codex plugin marketplace add falkenslab/agent-kit-extensions
+codex plugin add weather@falkenslab
 ```
 
-Then ask: "What's the weather like this week?", "When should I go for a walk tomorrow?", or `/weather:today`.
+In Codex its skill loads, but its server doesn't start: Codex doesn't expand `${CLAUDE_PLUGIN_ROOT}`, the extension's folder, in `.mcp.json`. Then ask: "What's the weather like this week?", "When should I go for a walk tomorrow?", or `/weather:today`.
 
 ## ⚙️ Settings
 

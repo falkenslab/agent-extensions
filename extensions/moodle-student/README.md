@@ -43,6 +43,8 @@ claude plugin install moodle-student@falkenslab
 
 Both ask for its settings when you install it: your Moodle sites (`name=address`, e.g. `school=https://campus.myschool.org`), and the optional ones below. The first time it works on a site, a browser window opens for you to log in.
 
+Codex installs it too (`codex plugin marketplace add falkenslab/agent-kit-extensions`, then `codex plugin add moodle-student@falkenslab`), with its skills and server, but it has no plugin settings: until moodle-mcp asks for your sites in the chat ([moodle-mcp#25](https://github.com/falkenslab/moodle-mcp/issues/25)), use Claude Code or an agent on agent-kit.
+
 ## ⚙️ Settings
 
 | Setting | What it does | Default |

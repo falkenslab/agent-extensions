@@ -4,8 +4,10 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 
-const city = process.env.WEATHER_CITY ?? "";
-const imperial = process.env.WEATHER_UNITS === "imperial";
+// A client without plugin settings (Codex) passes "${user_config.city}" as it is: that's no setting.
+const setting = (value) => (value && !/^\$\{[^}]*\}$/.test(value.trim()) ? value.trim() : "");
+const city = setting(process.env.WEATHER_CITY);
+const imperial = setting(process.env.WEATHER_UNITS) === "imperial";
 
 const server = new McpServer(
   { name: "weather", version: "0.1.0" },
@@ -30,7 +32,7 @@ server.registerTool(
   },
   async ({ city: other, days }) => {
     const name = other || city;
-    if (!name) return { isError: true, content: [{ type: "text", text: "No city set: the person sets it in the extension's settings (city)." }] };
+    if (!name) return { isError: true, content: [{ type: "text", text: "No city set: ask the person which city, and call again with it as city. To keep it, they can set the extension's city setting, where their app has one." }] };
     const place = await locate(name);
     const units = imperial ? "&temperature_unit=fahrenheit&wind_speed_unit=mph" : "";
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${place.latitude}&longitude=${place.longitude}&current=temperature_2m,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto&forecast_days=${days}${units}`;

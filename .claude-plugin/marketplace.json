@@ -12,7 +12,7 @@
       "name": "moodle-teacher",
       "source": "./extensions/moodle-teacher",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "category": "education",
       "tags": [
         "moodle",
@@ -26,7 +26,7 @@
       "name": "moodle-student",
       "source": "./extensions/moodle-student",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "category": "education",
       "tags": [
         "moodle",
@@ -40,7 +40,7 @@
       "name": "moodle-ui-kit",
       "source": "./extensions/moodle-ui-kit",
       "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "education",
       "tags": [
         "moodle",
@@ -54,7 +54,7 @@
       "name": "weather",
       "source": "./extensions/weather",
       "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "category": "productivity",
       "tags": [
         "weather",
