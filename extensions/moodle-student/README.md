@@ -12,7 +12,7 @@ moodle-mcp's student tools, with the good practice to plan, hand in, take quizze
 ![Moodle 5.x](https://img.shields.io/badge/Moodle-5.x-f98012?logo=moodle&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
-**[📖 moodle-mcp's documentation](https://falkenslab.github.io/moodle-mcp/)** · [📖 Documentación en español](https://falkenslab.github.io/moodle-mcp/es/)
+**[📖 moodle-mcp's documentation](https://falkenslab.github.io/moodle-mcp/)** · [🇪🇸 Leer en español](README.es.md)
 
 </div>
 

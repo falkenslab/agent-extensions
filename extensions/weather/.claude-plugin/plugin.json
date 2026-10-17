@@ -1,6 +1,6 @@
 {
   "name": "weather",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The weather in your city, for an agent that plans with you: today and the next days, from Open-Meteo.",
   "author": {
     "name": "Falken's Lab",

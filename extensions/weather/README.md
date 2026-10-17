@@ -11,7 +11,7 @@ Today and the next days, from Open-Meteo: no account, no key.
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
-**[📖 How it was built, step by step](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**
+**[📖 How it was built, step by step](https://falkenslab.github.io/agent-kit/docs/extensions/writing)** · [🇪🇸 Leer en español](README.es.md)
 
 </div>
 
