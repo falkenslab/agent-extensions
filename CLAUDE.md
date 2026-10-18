@@ -16,7 +16,7 @@ Node 22, no dependencies, no `npm install` at the root.
 - `claude plugin validate --strict .` validates the marketplace; `claude plugin validate --strict extensions/moodle-teacher` validates one extension. Strict means warnings fail. `userConfig` with `options` needs Claude Code 2.1.271 or later.
 - `extensions/weather/` builds its own MCP server: `npm install` and `npm run build` in `extensions/weather/` write its `dist/server.mjs`, which is committed (agent-kit installs files and never runs `npm install`); its `node_modules/` stays out. Rebuild it after any change to `weather/src/`.
 - To try an extension in an agent: `my-agent extension add ./extensions/moodle-teacher --link`.
-- To preview the catalog page, serve the repository root over HTTP and open `site/index.html` (it fetches `catalog.json` or `../catalog.json`).
+- To preview the site, serve the repository root over HTTP and open `site/index.html` or `site/catalog.html` (they fetch `catalog.json` or `../catalog.json`).
 
 ## How the pieces fit
 
@@ -29,7 +29,7 @@ Node 22, no dependencies, no `npm install` at the root.
 - **Requirements**: an extension whose server uses a program the person installs apart (Docker, ffmpeg) declares it in `requirements`, `{ name, program, version?, install, for? }`, with an install command per system and the capabilities that need it; its server also offers a read-only `check_requirements`. Extensions that need nothing declare nothing.
 - **Topics** shown in the catalog are the union, lowercased, of `plugin.json` `keywords` plus the marketplace entry's `tags`, `keywords` and `category`. An audience is a topic too (`miyagi`): agent-kit agents offer their users only extensions matching their `catalogTopics`.
 - **`catalog.json`** is generated, never edited by hand. Image paths become `raw.githubusercontent.com/.../main/...` URLs, so assets must exist and be committed on `main`.
-- **`site/index.html`** is a self-contained catalog page (search, topic chips, `?topic=` filter) reading `catalog.json`. The `pages` workflow publishes `site/index.html` and `catalog.json` to GitHub Pages on every push to `main`.
+- **`site/`** is the public site, reading `catalog.json`: `index.html` (the home page: the hero and the marketplace's install commands per client) and `catalog.html` (search, topic chips, `?topic=` filter, and each extension's card with how to install, configure and use it per client), sharing `site.css` and `site.js`; light, dark and system themes. `index.html?topic=…` redirects to the catalog, for links made before it had its own page. The `pages` workflow publishes `site/` and `catalog.json` to GitHub Pages on every push to `main`.
 
 ## Conventions
 

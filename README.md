@@ -14,7 +14,7 @@ Install one, and your agent gains its tools, its skills and the know-how to use 
 [![agent-kit-catalog](https://img.shields.io/npm/v/@falkenslab/agent-kit-catalog?label=agent-kit-catalog&color=cb3837&logo=npm)](https://www.npmjs.com/package/@falkenslab/agent-kit-catalog)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
 
-**[🧭 Browse the extensions](https://falkenslab.github.io/agent-extensions/)** · [📖 agent-kit's documentation](https://falkenslab.github.io/agent-kit/)
+**[🧭 Browse the extensions](https://falkenslab.github.io/agent-extensions/catalog.html)** · [📖 agent-kit's documentation](https://falkenslab.github.io/agent-kit/)
 
 </div>
 
@@ -60,7 +60,7 @@ Codex installs them too, with their skills and servers, but it has no plugin set
 
 ## 🧭 The catalog
 
-[The catalog page](https://falkenslab.github.io/agent-extensions/) shows every extension as a card, with a search and topic chips; `?topic=miyagi` opens it filtered, so an agent can link to what it offers. The same catalog is one file, [`catalog.json`](catalog.json): each extension's name, version, description, topics, install commands and images.
+[The catalog page](https://falkenslab.github.io/agent-extensions/catalog.html) shows every extension as a card, with a search and topic chips, and how to install, configure and use it in Claude Code, Codex or an agent on agent-kit; `?topic=miyagi` opens it filtered, so an agent can link to what it offers. The same catalog is one file, [`catalog.json`](catalog.json): each extension's name, version, description, topics, install commands and images.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/falkenslab/agent-extensions/main/assets/catalog.png" alt="The catalog page: the install commands in tabs for Claude Code, Codex and an agent on agent-kit, a search box, topic chips and the extensions' cards" width="760"/>
@@ -72,7 +72,7 @@ Codex installs them too, with their skills and servers, but it has no plugin set
 
 ## 📚 Documentation
 
-- **[The catalog](https://falkenslab.github.io/agent-extensions/)**: every extension, in English and Spanish, with its install commands, capabilities and README.
+- **[The catalog](https://falkenslab.github.io/agent-extensions/catalog.html)**: every extension, in English and Spanish, with its install commands, capabilities and README.
 - **[Installing extensions](https://falkenslab.github.io/agent-kit/docs/extensions/installing)**: in an agent built on agent-kit.
 - **[Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**: the tutorial, which builds `extensions/weather/`.
 - **[The extensions reference](https://falkenslab.github.io/agent-kit/docs/extensions/reference)**: every field of the manifest and of `metadata["agent-kit"]`.
