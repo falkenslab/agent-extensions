@@ -45,7 +45,7 @@ codex plugin add moodle-ui-kit@falkenslab
 
 An agent whose own marketplace this is (its `officialMarketplace`) offers them in its chat's catalog, without the first command.
 
-Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` works fully, and `docker-lab` too, in `full` mode; `moodle-teacher` and `moodle-student` will, once moodle-mcp asks for your Moodle sites in the chat ([moodle-mcp#25](https://github.com/falkenslab/moodle-mcp/issues/25)); `weather` loads its skill but not its server, which runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand).
+Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` works fully, and `docker-lab` too, in `full` mode; `moodle-teacher` and `moodle-student` too, asking for your Moodle site in the chat (enable only one of them: both name their server `moodle`, and Codex keeps one per name); `weather` loads its skill but not its server, which runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand).
 
 ## 🧩 The extensions
 
@@ -61,8 +61,20 @@ Codex installs them too, with their skills and servers, but it has no plugin set
 
 [The catalog page](https://falkenslab.github.io/agent-kit-extensions/) shows every extension as a card, with a search and topic chips; `?topic=miyagi` opens it filtered, so an agent can link to what it offers. The same catalog is one file, [`catalog.json`](catalog.json): each extension's name, version, description, topics, install commands and images.
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/assets/catalog.png" alt="The catalog page: the install commands in tabs for Claude Code, Codex and an agent on agent-kit, a search box, topic chips and the extensions' cards" width="760"/>
+</p>
+
+
 - 🏷️ **Topics** are Claude Code's own fields: the extension's `keywords`, and its marketplace entry's `tags` and `category`. An audience is a topic too (`miyagi`): an agent on agent-kit offers its users only its `catalogTopics`.
 - 🖼️ **Its look**: a `logo` (square) and a `banner` (wide) in its `plugin.json`, under `metadata["agent-kit"].catalog`, files inside its folder.
+
+## 📚 Documentation
+
+- **[The catalog](https://falkenslab.github.io/agent-kit-extensions/)**: every extension, in English and Spanish, with its install commands, capabilities and README.
+- **[Installing extensions](https://falkenslab.github.io/agent-kit/docs/extensions/installing)**: in an agent built on agent-kit.
+- **[Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**: the tutorial, which builds `extensions/weather/`.
+- **[The extensions reference](https://falkenslab.github.io/agent-kit/docs/extensions/reference)**: every field of the manifest and of `metadata["agent-kit"]`.
 
 ## 🛠️ Developing
 

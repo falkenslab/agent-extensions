@@ -9,7 +9,7 @@ moodle-mcp's teacher tools, with the good practice to build, grade, follow and r
 
 ![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
-![Moodle 5.x](https://img.shields.io/badge/Moodle-5.x-f98012?logo=moodle&logoColor=white)
+![Moodle 4.5 and 5.x](https://img.shields.io/badge/Moodle-4.5%20%7C%205.x-f98012?logo=moodle&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
 **[📖 moodle-mcp's documentation](https://falkenslab.github.io/moodle-mcp/)** · [🇪🇸 Leer en español](README.es.md)
@@ -43,7 +43,7 @@ claude plugin install moodle-teacher@falkenslab
 
 Both ask for its settings when you install it: your Moodle sites (`name=address`, e.g. `school=https://campus.myschool.org`), and the optional ones below. The first time it works on a site, a browser window opens for you to log in.
 
-Codex installs it too (`codex plugin marketplace add falkenslab/agent-kit-extensions`, then `codex plugin add moodle-teacher@falkenslab`), with its skills and server, but it has no plugin settings: until moodle-mcp asks for your sites in the chat ([moodle-mcp#25](https://github.com/falkenslab/moodle-mcp/issues/25)), use Claude Code or an agent on agent-kit.
+Codex installs it too (`codex plugin marketplace add falkenslab/agent-kit-extensions`, then `codex plugin add moodle-teacher@falkenslab`), with its skills and server. Codex has no plugin settings, so the first time the agent asks you for your Moodle site's address in the chat. Codex keeps one server per name and both Moodle extensions call theirs `moodle`, so enable only one of `moodle-teacher` and `moodle-student` there.
 
 ## ⚙️ Settings
 
@@ -65,17 +65,25 @@ Change them later with `my-agent extension config moodle-teacher`, in the chat w
 - 👩‍🏫 "Check the course is ready for the new term: dates, locked activities, the gradebook."
 - 👩‍🏫 "/moodle-teacher:to-grade" or "/moodle-teacher:week": what's waiting, and what's due.
 
+## 📸 See it at work
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-teacher/assets/screenshot.png" alt="A Moodle assignment's rubric, ready for use, that the agent defined with set_rubric" width="760"/>
+</p>
+
+<p align="center"><em>In moodle-sandbox: the rubric Claude Code defined for a new assignment, after drafting it and asking first.</em></p>
+
 ## 🧰 What's inside
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.3.0`, with your settings |
+| 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.4.0`, with your settings |
 | 🔎 `read-a-course` | What the person can do in a course, its structure, restrictions, completion and dates |
 | 🫥 `publishing` | New content hidden first, checked, then shown; one approval per item |
-| 📄 `course-content` | Pages, books, files, folders, links and section texts, as HTML Moodle keeps |
-| 📤 `assignments` | Submission settings that match the statement, dates, groups, feedback and the rubric |
-| 📝 `quizzes` | Settings for the quiz's purpose, GIFT that imports well, slots, order and total |
-| 🧩 `other-activities` | Workshop, lesson, glossary, wiki, forums, choice, H5P; completion, restrictions and groups |
+| 📄 `course-content` | Pages, books with their chapters, files, folders, links and section texts, as HTML checked before Moodle gets it |
+| 📤 `assignments` | Submission settings that match the statement, dates, groups, feedback, and its rubric or marking guide |
+| 📝 `quizzes` | Settings for the quiz's purpose, GIFT checked before importing, banks exported to reuse, slots, order and total |
+| 🧩 `other-activities` | Workshop and its allocation, lesson pages and jumps, database, glossary, wiki, feedback, forums, choice, H5P; completion, restrictions, groups and badges |
 | 💬 `forums` | Reading threads, posting exactly once, announcements and moderation |
 | ✅ `grading` | Assignments with their rubric, quiz essays and graded forums, proposals first |
 | 🧮 `gradebook` | Categories, aggregation and weights that compute the grading scheme |
@@ -86,6 +94,12 @@ Change them later with `my-agent extension config moodle-teacher`, in the chat w
 | 🌐 `several-sites` | Adding and switching sites, and copying between them |
 | 📅 `week` | What's due this week and what's waiting for you (in Claude Code, also `/moodle-teacher:week`) |
 | 🗂️ `to-grade` | What's waiting to be graded, course by course (in Claude Code, also `/moodle-teacher:to-grade`) |
+
+## 📚 Documentation
+
+- **[moodle-mcp's documentation](https://falkenslab.github.io/moodle-mcp/)**: what the server does, logging in, privacy and limits.
+- **[moodle-mcp's tools](https://falkenslab.github.io/moodle-mcp/reference/tools)**: every tool, with the roles that have it.
+- **[Installing extensions](https://falkenslab.github.io/agent-kit/docs/extensions/installing)**: in an agent built on agent-kit.
 
 ## 🛠️ Developing
 

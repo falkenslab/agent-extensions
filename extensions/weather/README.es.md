@@ -49,6 +49,13 @@ En Codex se carga su skill, pero su servidor no arranca: Codex no expande `${CLA
 | `city` | Dónde estás, por ejemplo `Santa Cruz de Tenerife` | obligatorio |
 | `units` | `metric` (°C, km/h) o `imperial` (°F, mph) | `metric` |
 
+## 💬 Qué puedes pedirle
+
+- 🌤️ «¿Qué tiempo va a hacer esta semana?»
+- ☔ «¿Va a llover mañana por la tarde? ¿Me llevo el paraguas?»
+- 🚲 «¿Qué día de esta semana es mejor para ir al trabajo en bici?»
+- 🧳 «Me voy a Sevilla el viernes: ¿qué me llevo?»
+
 ## 🧰 Qué trae
 
 | Parte | Qué es |
@@ -56,6 +63,12 @@ En Codex se carga su skill, pero su servidor no arranca: Codex no expande `${CLA
 | 🔌 `forecast` | El tiempo ahora y los próximos días (de 1 a 7) en tu ciudad, o en otra que nombres |
 | 🗓️ `plan-the-day` | Una skill: planificar el día o la semana según la previsión, con un plan B si es probable que llueva |
 | ☀️ `/weather:today` | El tiempo de hoy en dos líneas |
+
+## 📚 Documentación
+
+- **[Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing)** (en inglés): el tutorial de agent-kit, que construye esta extensión paso a paso.
+- **[The extensions reference](https://falkenslab.github.io/agent-kit/docs/extensions/reference)** (en inglés): todos los campos del manifiesto y de `metadata["agent-kit"]`.
+- **[Open-Meteo](https://open-meteo.com/)**: el servicio de previsión gratuito que consulta, sin clave de API.
 
 ## 🛠️ Desarrollo
 

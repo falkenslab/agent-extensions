@@ -9,7 +9,7 @@ Las herramientas de profesor de moodle-mcp, con las buenas prácticas para crear
 
 ![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
-![Moodle 5.x](https://img.shields.io/badge/Moodle-5.x-f98012?logo=moodle&logoColor=white)
+![Moodle 4.5 y 5.x](https://img.shields.io/badge/Moodle-4.5%20%7C%205.x-f98012?logo=moodle&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
 **[📖 Documentación de moodle-mcp](https://falkenslab.github.io/moodle-mcp/es/)** · [🇬🇧 Read in English](README.md)
@@ -43,7 +43,7 @@ claude plugin install moodle-teacher@falkenslab
 
 Los dos piden sus ajustes al instalarla: tus sitios Moodle (`nombre=dirección`, por ejemplo `centro=https://campus.micentro.org`) y los opcionales de abajo. La primera vez que trabaja en un sitio se abre una ventana del navegador para que entres.
 
-Codex también la instala (`codex plugin marketplace add falkenslab/agent-kit-extensions` y luego `codex plugin add moodle-teacher@falkenslab`), con sus skills y su servidor, pero no tiene ajustes de plugins: hasta que moodle-mcp te pida los sitios en el chat ([moodle-mcp#25](https://github.com/falkenslab/moodle-mcp/issues/25)), usa Claude Code o un agente con agent-kit.
+Codex también la instala (`codex plugin marketplace add falkenslab/agent-kit-extensions` y luego `codex plugin add moodle-teacher@falkenslab`), con sus skills y su servidor. Codex no tiene ajustes de plugins, así que la primera vez el agente te pide en el chat la dirección de tu Moodle. Codex guarda un servidor por nombre y las dos extensiones de Moodle llaman al suyo `moodle`, así que activa solo una de `moodle-teacher` y `moodle-student` en él.
 
 ## ⚙️ Ajustes
 
@@ -65,17 +65,25 @@ Cámbialos después con `my-agent extension config moodle-teacher`, en el chat c
 - 👩‍🏫 «Revisa que el curso esté listo para el nuevo trimestre: fechas, actividades bloqueadas, el libro de calificaciones.»
 - 👩‍🏫 «/moodle-teacher:to-grade» o «/moodle-teacher:week»: lo que espera corrección y lo que vence.
 
+## 📸 Míralo en acción
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-teacher/assets/screenshot.png" alt="La rúbrica de una tarea de Moodle, lista para usar, que el agente definió con set_rubric" width="760"/>
+</p>
+
+<p align="center"><em>En moodle-sandbox: la rúbrica que Claude Code definió para una tarea nueva, tras proponerla y preguntar antes.</em></p>
+
 ## 🧰 Qué trae
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.3.0`, con tus ajustes |
+| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.4.0`, con tus ajustes |
 | 🔎 `read-a-course` | Lo que la persona puede hacer en un curso, su estructura, restricciones, finalización y fechas |
 | 🫥 `publishing` | Lo nuevo, primero oculto, comprobado y luego visible; una aprobación por cada cosa |
-| 📄 `course-content` | Páginas, libros, archivos, carpetas, enlaces y textos de sección, en un HTML que Moodle conserva |
-| 📤 `assignments` | Ajustes de entrega que encajan con el enunciado, fechas, grupos, retroalimentación y rúbrica |
-| 📝 `quizzes` | Ajustes según el propósito del cuestionario, GIFT que se importa bien, preguntas, orden y total |
-| 🧩 `other-activities` | Taller, lección, glosario, wiki, foros, consulta, H5P; finalización, restricciones y grupos |
+| 📄 `course-content` | Páginas, libros con sus capítulos, archivos, carpetas, enlaces y textos de sección, en un HTML comprobado antes de llegar a Moodle |
+| 📤 `assignments` | Ajustes de entrega que encajan con el enunciado, fechas, grupos, retroalimentación, y su rúbrica o guía de calificación |
+| 📝 `quizzes` | Ajustes según el propósito del cuestionario, GIFT comprobado antes de importarlo, bancos exportados para reutilizarlos, orden y total |
+| 🧩 `other-activities` | Taller y su asignación, páginas y saltos de lección, base de datos, glosario, wiki, encuesta, foros, consulta, H5P; finalización, restricciones, grupos e insignias |
 | 💬 `forums` | Leer los hilos, publicar una sola vez, avisos y moderación |
 | ✅ `grading` | Tareas con su rúbrica, preguntas de ensayo y foros calificados, con propuestas antes |
 | 🧮 `gradebook` | Categorías, agregación y pesos que calculan el sistema de calificación |
@@ -86,6 +94,12 @@ Cámbialos después con `my-agent extension config moodle-teacher`, en el chat c
 | 🌐 `several-sites` | Añadir sitios, cambiar de uno a otro y copiar entre ellos |
 | 📅 `week` | Lo que vence esta semana y lo que te espera (en Claude Code, también `/moodle-teacher:week`) |
 | 🗂️ `to-grade` | Lo que espera corrección, curso a curso (en Claude Code, también `/moodle-teacher:to-grade`) |
+
+## 📚 Documentación
+
+- **[Documentación de moodle-mcp](https://falkenslab.github.io/moodle-mcp/es/)**: qué hace el servidor, el inicio de sesión, la privacidad y los límites.
+- **[Herramientas de moodle-mcp](https://falkenslab.github.io/moodle-mcp/es/reference/tools)**: todas, con los roles que las tienen.
+- **[Installing extensions](https://falkenslab.github.io/agent-kit/docs/extensions/installing)** (en inglés): en un agente hecho con agent-kit.
 
 ## 🛠️ Desarrollo
 

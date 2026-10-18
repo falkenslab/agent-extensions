@@ -70,6 +70,14 @@ Cámbialos después con `my-agent extension config docker-lab`, en el chat con `
 - 🧑‍🎓 «Arranca el laboratorio de mi práctica y dime si ya funciona».
 - 🧑‍🎓 «Reinicia mi laboratorio: me he cargado la base de datos».
 
+## 📸 Míralo en acción
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/falkenslab/docker-mcp/main/docs/static/img/see-it-claude-code-es.png" alt="Claude Code arrancando un laboratorio con docker-mcp y pasando su comprobación" width="760"/>
+</p>
+
+<p align="center"><em>Claude Code, en modo lab: arranca un laboratorio de prácticas y su comprobación pasa, a través de docker-mcp.</em></p>
+
 ## 🧰 Qué incluye
 
 | Parte | Qué es |
@@ -79,6 +87,13 @@ Cámbialos después con `my-agent extension config docker-lab`, en el chat con `
 | 🏗️ `build-a-lab` | Un laboratorio reproducible de uno o varios servicios: su fichero de Compose y su comprobación, las reglas de seguridad, arrancarlo, reiniciarlo y pararlo |
 | ✅ `verify-by-running` | Si un código, unas instrucciones, un enunciado y su solución o una entrega funcionan, con un veredicto y sus pruebas, y escribir la comprobación de un laboratorio |
 | 🐳 `use-docker` | Tu Docker: contenedores, imágenes, volúmenes, redes, Compose y limpieza, qué confirmar, las opciones peligrosas y qué hacer si falta Docker |
+
+## 📚 Documentación
+
+- **[Documentación de docker-mcp](https://falkenslab.github.io/docker-mcp/es/)**: el servidor, sus ajustes y la configuración de Codex.
+- **[Modos y ajustes](https://falkenslab.github.io/docker-mcp/es/modes)**: qué permite cada modo, las áreas y las reglas de los laboratorios.
+- **[Herramientas de docker-mcp](https://falkenslab.github.io/docker-mcp/es/reference/tools)**: todas, con lo que mantiene cada modo.
+- **[Installing extensions](https://falkenslab.github.io/agent-kit/docs/extensions/installing)** (en inglés): en un agente hecho con agent-kit.
 
 ## 🛠️ Desarrollo
 

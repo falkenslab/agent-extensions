@@ -9,7 +9,7 @@ Las herramientas de alumno de moodle-mcp, con las buenas prácticas para organiz
 
 ![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
-![Moodle 5.x](https://img.shields.io/badge/Moodle-5.x-f98012?logo=moodle&logoColor=white)
+![Moodle 4.5 y 5.x](https://img.shields.io/badge/Moodle-4.5%20%7C%205.x-f98012?logo=moodle&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
 **[📖 Documentación de moodle-mcp](https://falkenslab.github.io/moodle-mcp/es/)** · [🇬🇧 Read in English](README.md)
@@ -43,7 +43,7 @@ claude plugin install moodle-student@falkenslab
 
 Los dos piden sus ajustes al instalarla: tus sitios Moodle (`nombre=dirección`, por ejemplo `instituto=https://campus.miinstituto.org`) y los opcionales de abajo. La primera vez que trabaja en un sitio se abre una ventana del navegador para que entres.
 
-Codex también la instala (`codex plugin marketplace add falkenslab/agent-kit-extensions` y luego `codex plugin add moodle-student@falkenslab`), con sus skills y su servidor, pero no tiene ajustes de plugins: hasta que moodle-mcp te pida los sitios en el chat ([moodle-mcp#25](https://github.com/falkenslab/moodle-mcp/issues/25)), usa Claude Code o un agente con agent-kit.
+Codex también la instala (`codex plugin marketplace add falkenslab/agent-kit-extensions` y luego `codex plugin add moodle-student@falkenslab`), con sus skills y su servidor. Codex no tiene ajustes de plugins, así que la primera vez el agente te pide en el chat la dirección de tu Moodle. Codex guarda un servidor por nombre y las dos extensiones de Moodle llaman al suyo `moodle`, así que activa solo una de `moodle-student` y `moodle-teacher` en él.
 
 ## ⚙️ Ajustes
 
@@ -65,20 +65,34 @@ Cámbialos después con `my-agent extension config moodle-student`, en el chat c
 - 🧑‍🎓 «¿Alguien ha preguntado en el foro por la caché del Dockerfile? Si no, ayúdame a preguntarlo.»
 - 🧑‍🎓 «¿Cómo voy en el curso, y qué me dijo el profesor de la práctica 1?»
 
+## 📸 Míralo en acción
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-student/assets/screenshot.png" alt="La tarea de un alumno en Moodle, enviada para calificar con el PDF que subió el agente" width="760"/>
+</p>
+
+<p align="center"><em>En moodle-sandbox: el informe de un alumno, subido y enviado por Claude Code después de enseñárselo.</em></p>
+
 ## 🧰 Qué trae
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.3.0`, con las herramientas de alumno y tus ajustes |
+| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.4.0`, con las herramientas de alumno y tus ajustes |
 | 🔎 `read-a-course` | Secciones, recursos y actividades, qué está bloqueado y por qué, qué cuenta como hecho |
 | 🗓️ `plan-my-work` | Lo que queda, las fechas de entrega y de corte, qué desbloquea qué, en un orden realista |
 | 📤 `hand-in-an-assignment` | Qué admite, guardar, comprobar y enviar definitivamente, la declaración de autoría |
 | 📝 `take-a-quiz` | Las reglas antes de empezar, responder cada tipo de pregunta, enviar, la revisión |
 | 💬 `forums` | Leer los hilos, preguntar donde corresponde, publicar una sola vez, escribir al docente |
-| 🧩 `other-activities` | Consultas, encuestas, lecciones, SCORM, H5P, evaluación entre iguales y finalización manual |
+| 🧩 `other-activities` | Consultas, encuestas, lecciones, SCORM, H5P, talleres (entregar y evaluar a compañeros), entradas de glosario, wiki y base de datos, insignias y finalización manual |
 | 📊 `grades-and-feedback` | El informe de calificaciones, la retroalimentación de cada actividad y lo que falta por corregir |
 | 🌐 `several-sites` | Añadir sitios y cambiar de uno a otro, por separado |
 | 📅 `week` | Lo que tienes que hacer esta semana, en orden (en Claude Code, también `/moodle-student:week`) |
+
+## 📚 Documentación
+
+- **[Documentación de moodle-mcp](https://falkenslab.github.io/moodle-mcp/es/)**: qué hace el servidor, el inicio de sesión, la privacidad y los límites.
+- **[Herramientas de moodle-mcp](https://falkenslab.github.io/moodle-mcp/es/reference/tools)**: todas, con los roles que las tienen.
+- **[Installing extensions](https://falkenslab.github.io/agent-kit/docs/extensions/installing)** (en inglés): en un agente hecho con agent-kit.
 
 ## 🛠️ Desarrollo
 

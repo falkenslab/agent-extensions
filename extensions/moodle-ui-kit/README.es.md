@@ -9,7 +9,7 @@ Enunciados, código, soluciones y preguntas de cuestionario con estilos inline, 
 
 ![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
-![Moodle 5.x](https://img.shields.io/badge/Moodle-5.x-f98012?logo=moodle&logoColor=white)
+![Moodle 4.5 y 5.x](https://img.shields.io/badge/Moodle-4.5%20%7C%205.x-f98012?logo=moodle&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
 **[🧩 Basado en moodle-ui-kit, de noeper](https://github.com/noeper/moodle-ui-kit)** · [🇬🇧 Read in English](README.md)
@@ -80,6 +80,12 @@ Las cinco plantillas son las de noeper, adaptadas: encabezados reales en lugar d
 ## 🙏 Basado en moodle-ui-kit
 
 Las plantillas vienen de [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), de [noeper](https://github.com/noeper), publicado con licencia CC0 1.0 (uso libre, como quieras). Su [demo](https://noeper.github.io/moodle-ui-kit/) las muestra tal como un docente las copia a mano en Moodle; esta extensión permite que lo haga un agente.
+
+## 📚 Documentación
+
+- **[moodle-ui-kit de noeper](https://github.com/noeper/moodle-ui-kit)**: el kit original en el que se basa esta extensión.
+- **[Documentación de moodle-mcp](https://falkenslab.github.io/moodle-mcp/es/)**: el servidor que publica el contenido (a través de moodle-teacher).
+- **[Installing extensions](https://falkenslab.github.io/agent-kit/docs/extensions/installing)** (en inglés): en un agente hecho con agent-kit.
 
 ## 🛠️ Desarrollo
 

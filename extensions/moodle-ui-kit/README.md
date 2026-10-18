@@ -9,7 +9,7 @@ Statements, code, solutions and quiz questions with inline styles, so they look 
 
 ![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
-![Moodle 5.x](https://img.shields.io/badge/Moodle-5.x-f98012?logo=moodle&logoColor=white)
+![Moodle 4.5 and 5.x](https://img.shields.io/badge/Moodle-4.5%20%7C%205.x-f98012?logo=moodle&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
 **[🧩 Based on noeper's moodle-ui-kit](https://github.com/noeper/moodle-ui-kit)** · [🇪🇸 Leer en español](README.es.md)
@@ -80,6 +80,12 @@ The five templates are noeper's, adapted: real headings instead of bold paragrap
 ## 🙏 Based on moodle-ui-kit
 
 The templates come from [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), by [noeper](https://github.com/noeper), released under CC0 1.0 (free to use however you like). Its [demo](https://noeper.github.io/moodle-ui-kit/) shows them as a teacher copies them into Moodle by hand; this extension lets an agent do it.
+
+## 📚 Documentation
+
+- **[noeper's moodle-ui-kit](https://github.com/noeper/moodle-ui-kit)**: the original kit this extension is based on.
+- **[moodle-mcp's documentation](https://falkenslab.github.io/moodle-mcp/)**: the server that publishes the content (through moodle-teacher).
+- **[Installing extensions](https://falkenslab.github.io/agent-kit/docs/extensions/installing)**: in an agent built on agent-kit.
 
 ## 🛠️ Developing
 
