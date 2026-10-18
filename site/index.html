@@ -108,9 +108,6 @@
   code.cmd { font-family: var(--mono); font-size: 14px; background: var(--code); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; display: inline-flex; gap: 14px; align-items: center; max-width: 100%; overflow-x: auto; white-space: nowrap; color: var(--text); }
   .copy { font-family: var(--sans); font-size: 12px; font-weight: 700; border: 1px solid var(--line); background: var(--panel); color: var(--text-2); cursor: pointer; padding: 3px 9px; border-radius: 6px; }
   .copy:hover { color: var(--accent); border-color: var(--accent); }
-  .works { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 12px; margin-top: 28px; color: var(--dim); font-size: 14px; }
-  .works .client { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 10px; background: var(--accent-soft); color: var(--text); font-weight: 600; }
-  .works svg { width: 18px; height: 18px; }
 
   /* The catalog. */
   .catalog { padding-block: 56px 32px; flex: 1 0 auto; }
@@ -204,7 +201,6 @@
       <a class="btn secondary" href="https://github.com/falkenslab/agent-extensions" id="cta-github">GitHub</a>
     </div>
     <div class="add" id="add"></div>
-    <div class="works" id="works"></div>
   </div>
 </section>
 <main class="catalog" id="catalog">
@@ -242,7 +238,6 @@ const TEXTS = {
     catalog: "Catalog",
     docs: "Docs",
     catalogTitle: (n) => `${n} extensions, ready to install`,
-    works: "Works with",
     search: "Search by name, description or topic…",
     searchLabel: "Search extensions",
     topics: "Topics",
@@ -287,7 +282,6 @@ const TEXTS = {
     catalog: "Catálogo",
     docs: "Documentación",
     catalogTitle: (n) => `${n} extensiones, listas para instalar`,
-    works: "Funciona con",
     search: "Busca por nombre, descripción o tema…",
     searchLabel: "Buscar extensiones",
     topics: "Temas",
@@ -505,7 +499,6 @@ const addCommands = (key) => ({
 function renderAdd() {
   if (!catalog.add) return;
   $("add").replaceChildren(clientTabs((key) => addCommands(key).map(commandBox)));
-  $("works").innerHTML = `<span>${escape(t("works"))}</span>` + CLIENTS.map((client) => `<span class="client">${LOGOS[client.key]}${escape(client.key === "agentKit" ? "agent-kit" : client.label())}</span>`).join("");
 }
 function renderCount() {
   $("catalog-title").textContent = catalog.extensions.length ? t("catalogTitle")(catalog.extensions.length) : t("catalog");
