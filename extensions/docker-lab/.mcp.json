@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "docker": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@falkenslab/docker-mcp@0.1.0"
+      ],
+      "env": {
+        "DOCKER_MCP_MODE": "${user_config.mode}",
+        "DOCKER_MCP_SCOPES": "${user_config.scopes}",
+        "DOCKER_MCP_LABS_DIR": "${user_config.labs_dir}",
+        "DOCKER_MCP_ALLOW_INTERNET": "${user_config.allow_internet}",
+        "DOCKER_MCP_CPUS": "${user_config.cpus}",
+        "DOCKER_MCP_MEMORY": "${user_config.memory}",
+        "DOCKER_MCP_ALLOWED_IMAGES": "${user_config.allowed_images}"
+      }
+    }
+  }
+}

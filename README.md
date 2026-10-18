@@ -45,7 +45,7 @@ codex plugin add moodle-ui-kit@falkenslab
 
 An agent whose own marketplace this is (its `officialMarketplace`) offers them in its chat's catalog, without the first command.
 
-Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` works fully; `moodle-teacher` and `moodle-student` will, once moodle-mcp asks for your Moodle sites in the chat ([moodle-mcp#25](https://github.com/falkenslab/moodle-mcp/issues/25)); `weather` loads its skill but not its server, which runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand).
+Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` works fully, and `docker-lab` too, in `full` mode; `moodle-teacher` and `moodle-student` will, once moodle-mcp asks for your Moodle sites in the chat ([moodle-mcp#25](https://github.com/falkenslab/moodle-mcp/issues/25)); `weather` loads its skill but not its server, which runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand).
 
 ## 🧩 The extensions
 
@@ -54,6 +54,7 @@ Codex installs them too, with their skills and servers, but it has no plugin set
 | 👩‍🏫 [moodle-teacher](extensions/moodle-teacher/) | Works in the Moodle courses you teach, as you, through [moodle-mcp](https://github.com/falkenslab/moodle-mcp): building them, grading, following the class, checking and reusing courses |
 | 🧑‍🎓 [moodle-student](extensions/moodle-student/) | Helps in the Moodle courses you take, as you, through [moodle-mcp](https://github.com/falkenslab/moodle-mcp): what you have left, handing in, quizzes, forums, grades and feedback |
 | 🎨 [moodle-ui-kit](extensions/moodle-ui-kit/) | A clean visual style for what your agent publishes in Moodle, with inline styles that work on any site; based on [noeper](https://github.com/noeper)'s [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit) |
+| 🐳 [docker-lab](extensions/docker-lab/) | Runs and tries software (tools, services, someone's code) in isolated Docker labs without touching your computer, verifies by running, and manages your Docker, through [docker-mcp](https://github.com/falkenslab/docker-mcp) |
 | ☀️ [weather](extensions/weather/) | The weather in your city, for an agent that plans with you; also agent-kit's example of an extension with its own MCP server, built step by step in [its tutorial](https://falkenslab.github.io/agent-kit/docs/extensions/writing) |
 
 ## 🧭 The catalog

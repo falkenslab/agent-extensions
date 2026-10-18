@@ -1,0 +1,1019 @@
+{
+  "name": "docker-lab",
+  "version": "0.1.0",
+  "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/docker-lab",
+  "repository": "https://github.com/falkenslab/agent-kit-extensions",
+  "license": "MIT",
+  "keywords": [
+    "docker",
+    "containers",
+    "compose",
+    "labs",
+    "sandbox",
+    "practices",
+    "mcp",
+    "miyagi",
+    "padawan"
+  ],
+  "userConfig": {
+    "mode": {
+      "type": "string",
+      "title": "What the agent may do",
+      "description": "full: everything Docker does, asking before anything dangerous. lab: only labs, isolated under a safety policy. read: only look, never change.",
+      "options": [
+        "full",
+        "lab",
+        "read"
+      ],
+      "default": "full"
+    },
+    "scopes": {
+      "type": "string",
+      "title": "Areas",
+      "description": "Only some areas, comma-separated: containers, images, volumes, networks, compose, system, labs. Empty: all of them.",
+      "default": ""
+    },
+    "labs_dir": {
+      "type": "string",
+      "title": "Labs folder",
+      "description": "Where the labs are: a folder per lab, with its compose.yaml. Empty: a labs folder in the extension's data folder.",
+      "default": ""
+    },
+    "allow_internet": {
+      "type": "boolean",
+      "title": "Labs reach the internet",
+      "description": "Labs' services reach the internet and publish ports to this computer. Off: they only reach each other.",
+      "default": false
+    },
+    "cpus": {
+      "type": "string",
+      "title": "CPUs per lab service",
+      "description": "The CPUs each service of a lab may use, e.g. 1 or 0.5.",
+      "default": "1"
+    },
+    "memory": {
+      "type": "string",
+      "title": "Memory per lab service",
+      "description": "The memory each service of a lab may use, e.g. 512m or 1g.",
+      "default": "512m"
+    },
+    "allowed_images": {
+      "type": "string",
+      "title": "Images allowed in labs",
+      "description": "Only these images in labs, comma-separated (e.g. nginx, postgres). Empty: any.",
+      "default": ""
+    }
+  },
+  "metadata": {
+    "agent-kit": {
+      "catalog": {
+        "logo": "assets/logo.svg",
+        "banner": "assets/banner.svg"
+      },
+      "kit": ">=0.23.0",
+      "provides": [
+        "docker-lab",
+        "docker"
+      ],
+      "requires": [],
+      "capabilities": [
+        {
+          "id": "docker-containers",
+          "skills": [
+            "use-docker"
+          ],
+          "tools": [
+            "list_containers",
+            "inspect_container",
+            "container_logs",
+            "container_stats",
+            "container_processes",
+            "run_container",
+            "start_container",
+            "stop_container",
+            "restart_container",
+            "remove_container",
+            "exec_in_container",
+            "copy_to_container",
+            "copy_from_container"
+          ],
+          "texts": {
+            "en": {
+              "label": "Containers",
+              "description": "Run, inspect, follow, measure and clean up containers, asking before anything dangerous."
+            },
+            "es": {
+              "label": "Contenedores",
+              "description": "Arrancar, inspeccionar, seguir, medir y limpiar contenedores, preguntando antes de lo peligroso."
+            }
+          }
+        },
+        {
+          "id": "docker-images",
+          "skills": [
+            "use-docker"
+          ],
+          "tools": [
+            "list_images",
+            "inspect_image",
+            "pull_image",
+            "build_image",
+            "tag_image",
+            "push_image",
+            "remove_image"
+          ],
+          "texts": {
+            "en": {
+              "label": "Images",
+              "description": "Pull, build, tag and push images, with your own registry login."
+            },
+            "es": {
+              "label": "Imágenes",
+              "description": "Descargar, construir, etiquetar y subir imágenes, con tu propio login en el registro."
+            }
+          }
+        },
+        {
+          "id": "docker-compose",
+          "skills": [
+            "use-docker"
+          ],
+          "tools": [
+            "compose_ps",
+            "compose_logs",
+            "compose_build",
+            "compose_up",
+            "compose_down",
+            "compose_exec"
+          ],
+          "texts": {
+            "en": {
+              "label": "Compose projects",
+              "description": "Build, start, follow and stop Compose projects."
+            },
+            "es": {
+              "label": "Proyectos de Compose",
+              "description": "Construir, arrancar, seguir y parar proyectos de Compose."
+            }
+          }
+        },
+        {
+          "id": "docker-system",
+          "skills": [
+            "use-docker"
+          ],
+          "tools": [
+            "docker_info",
+            "disk_usage",
+            "prune",
+            "list_volumes",
+            "inspect_volume",
+            "create_volume",
+            "remove_volume",
+            "list_networks",
+            "inspect_network",
+            "create_network",
+            "remove_network"
+          ],
+          "texts": {
+            "en": {
+              "label": "Volumes, networks and clean-ups",
+              "description": "Volumes and networks, Docker's disk usage, and cleaning up what isn't used."
+            },
+            "es": {
+              "label": "Volúmenes, redes y limpieza",
+              "description": "Volúmenes y redes, el disco que usa Docker y limpiar lo que no se usa."
+            }
+          }
+        },
+        {
+          "id": "sandbox",
+          "skills": [
+            "try-in-a-lab",
+            "build-a-lab"
+          ],
+          "tools": [
+            "list_labs",
+            "lab_status",
+            "lab_logs",
+            "lab_up",
+            "lab_exec",
+            "lab_reset",
+            "lab_down"
+          ],
+          "texts": {
+            "en": {
+              "label": "Software lab",
+              "description": "Run and try tools, services and someone's code in isolated labs, without installing anything on your computer: no internet, no host mounts, with limits."
+            },
+            "es": {
+              "label": "Laboratorio de software",
+              "description": "Ejecutar y probar herramientas, servicios y código ajeno en laboratorios aislados, sin instalar nada en tu ordenador: sin internet, sin montar el equipo, con límites."
+            }
+          }
+        },
+        {
+          "id": "run-and-verify",
+          "skills": [
+            "verify-by-running"
+          ],
+          "tools": [
+            "lab_up",
+            "lab_exec",
+            "lab_check",
+            "lab_status",
+            "lab_logs",
+            "lab_reset"
+          ],
+          "texts": {
+            "en": {
+              "label": "Verifying by running",
+              "description": "Whether code, instructions, a statement and its solution or a submission work, by running them in a lab, with a verdict and its evidence."
+            },
+            "es": {
+              "label": "Verificar ejecutando",
+              "description": "Si un código, unas instrucciones, un enunciado y su solución o una entrega funcionan, ejecutándolos en un laboratorio, con un veredicto y sus pruebas."
+            }
+          }
+        }
+      ],
+      "requirements": [
+        {
+          "name": "Docker",
+          "program": "docker",
+          "version": {
+            "args": [
+              "--version"
+            ],
+            "min": "24.0.0"
+          },
+          "install": {
+            "windows": "winget install Docker.DockerDesktop",
+            "macos": "brew install --cask docker",
+            "url": "https://docs.docker.com/get-started/get-docker/"
+          }
+        }
+      ],
+      "help": "Docker, through docker-mcp, in the mode chosen when it was installed (read, lab or full): isolated labs to run and try software without touching the computer, verifying by running, and managing containers, images, volumes, networks and Compose; my docker-lab:* skills say how.",
+      "labels": {
+        "server_info": {
+          "en": {
+            "label": "Reading docker-mcp's settings",
+            "phrase": [
+              "read its settings",
+              "read its settings {n} times"
+            ]
+          },
+          "es": {
+            "label": "Leyendo los ajustes de docker-mcp",
+            "phrase": [
+              "leyó sus ajustes",
+              "leyó sus ajustes {n} veces"
+            ]
+          }
+        },
+        "check_requirements": {
+          "en": {
+            "label": "Checking Docker is installed",
+            "phrase": [
+              "checked Docker",
+              "checked Docker {n} times"
+            ]
+          },
+          "es": {
+            "label": "Comprobando que Docker está instalado",
+            "phrase": [
+              "comprobó Docker",
+              "comprobó Docker {n} veces"
+            ]
+          }
+        },
+        "docker_info": {
+          "en": {
+            "label": "Reading Docker's information",
+            "phrase": [
+              "read Docker's information",
+              "read Docker's information {n} times"
+            ]
+          },
+          "es": {
+            "label": "Leyendo la información de Docker",
+            "phrase": [
+              "leyó la información de Docker",
+              "leyó la información de Docker {n} veces"
+            ]
+          }
+        },
+        "disk_usage": {
+          "en": {
+            "label": "Measuring Docker's disk usage",
+            "phrase": [
+              "measured the disk usage",
+              "measured the disk usage {n} times"
+            ]
+          },
+          "es": {
+            "label": "Midiendo el disco que usa Docker",
+            "phrase": [
+              "midió el disco",
+              "midió el disco {n} veces"
+            ]
+          }
+        },
+        "prune": {
+          "en": {
+            "label": "Cleaning up Docker",
+            "phrase": [
+              "cleaned up Docker",
+              "cleaned up Docker {n} times"
+            ]
+          },
+          "es": {
+            "label": "Limpiando Docker",
+            "phrase": [
+              "limpió Docker",
+              "limpió Docker {n} veces"
+            ]
+          }
+        },
+        "list_containers": {
+          "en": {
+            "label": "Listing containers",
+            "phrase": [
+              "listed the containers",
+              "listed the containers {n} times"
+            ]
+          },
+          "es": {
+            "label": "Listando los contenedores",
+            "phrase": [
+              "listó los contenedores",
+              "listó los contenedores {n} veces"
+            ]
+          }
+        },
+        "inspect_container": {
+          "en": {
+            "label": "Inspecting {container}",
+            "phrase": [
+              "inspected a container",
+              "inspected {n} containers"
+            ]
+          },
+          "es": {
+            "label": "Inspeccionando {container}",
+            "phrase": [
+              "inspeccionó un contenedor",
+              "inspeccionó {n} contenedores"
+            ]
+          }
+        },
+        "container_logs": {
+          "en": {
+            "label": "Reading {container}'s logs",
+            "phrase": [
+              "read a container's logs",
+              "read logs {n} times"
+            ]
+          },
+          "es": {
+            "label": "Leyendo los logs de {container}",
+            "phrase": [
+              "leyó los logs de un contenedor",
+              "leyó logs {n} veces"
+            ]
+          }
+        },
+        "container_stats": {
+          "en": {
+            "label": "Measuring the containers' usage",
+            "phrase": [
+              "measured the containers",
+              "measured the containers {n} times"
+            ]
+          },
+          "es": {
+            "label": "Midiendo lo que consumen los contenedores",
+            "phrase": [
+              "midió los contenedores",
+              "midió los contenedores {n} veces"
+            ]
+          }
+        },
+        "container_processes": {
+          "en": {
+            "label": "Listing {container}'s processes",
+            "phrase": [
+              "listed a container's processes",
+              "listed processes {n} times"
+            ]
+          },
+          "es": {
+            "label": "Listando los procesos de {container}",
+            "phrase": [
+              "listó los procesos de un contenedor",
+              "listó procesos {n} veces"
+            ]
+          }
+        },
+        "run_container": {
+          "en": {
+            "label": "Running {image}",
+            "phrase": [
+              "ran a container",
+              "ran {n} containers"
+            ]
+          },
+          "es": {
+            "label": "Arrancando {image}",
+            "phrase": [
+              "arrancó un contenedor",
+              "arrancó {n} contenedores"
+            ]
+          }
+        },
+        "start_container": {
+          "en": {
+            "label": "Starting {container}",
+            "phrase": [
+              "started a container",
+              "started {n} containers"
+            ]
+          },
+          "es": {
+            "label": "Arrancando {container}",
+            "phrase": [
+              "arrancó un contenedor",
+              "arrancó {n} contenedores"
+            ]
+          }
+        },
+        "stop_container": {
+          "en": {
+            "label": "Stopping {container}",
+            "phrase": [
+              "stopped a container",
+              "stopped {n} containers"
+            ]
+          },
+          "es": {
+            "label": "Parando {container}",
+            "phrase": [
+              "paró un contenedor",
+              "paró {n} contenedores"
+            ]
+          }
+        },
+        "restart_container": {
+          "en": {
+            "label": "Restarting {container}",
+            "phrase": [
+              "restarted a container",
+              "restarted {n} containers"
+            ]
+          },
+          "es": {
+            "label": "Reiniciando {container}",
+            "phrase": [
+              "reinició un contenedor",
+              "reinició {n} contenedores"
+            ]
+          }
+        },
+        "remove_container": {
+          "en": {
+            "label": "Removing {container}",
+            "phrase": [
+              "removed a container",
+              "removed {n} containers"
+            ]
+          },
+          "es": {
+            "label": "Eliminando {container}",
+            "phrase": [
+              "eliminó un contenedor",
+              "eliminó {n} contenedores"
+            ]
+          }
+        },
+        "exec_in_container": {
+          "en": {
+            "label": "Running a command in {container}",
+            "phrase": [
+              "ran a command in a container",
+              "ran {n} commands in containers"
+            ]
+          },
+          "es": {
+            "label": "Ejecutando una orden en {container}",
+            "phrase": [
+              "ejecutó una orden en un contenedor",
+              "ejecutó {n} órdenes en contenedores"
+            ]
+          }
+        },
+        "copy_to_container": {
+          "en": {
+            "label": "Copying files into {container}",
+            "phrase": [
+              "copied files into a container",
+              "copied files in {n} times"
+            ]
+          },
+          "es": {
+            "label": "Copiando archivos a {container}",
+            "phrase": [
+              "copió archivos a un contenedor",
+              "copió archivos {n} veces"
+            ]
+          }
+        },
+        "copy_from_container": {
+          "en": {
+            "label": "Copying files out of {container}",
+            "phrase": [
+              "copied files out of a container",
+              "copied files out {n} times"
+            ]
+          },
+          "es": {
+            "label": "Copiando archivos de {container}",
+            "phrase": [
+              "copió archivos de un contenedor",
+              "copió archivos {n} veces"
+            ]
+          }
+        },
+        "list_images": {
+          "en": {
+            "label": "Listing images",
+            "phrase": [
+              "listed the images",
+              "listed the images {n} times"
+            ]
+          },
+          "es": {
+            "label": "Listando las imágenes",
+            "phrase": [
+              "listó las imágenes",
+              "listó las imágenes {n} veces"
+            ]
+          }
+        },
+        "inspect_image": {
+          "en": {
+            "label": "Inspecting {image}",
+            "phrase": [
+              "inspected an image",
+              "inspected {n} images"
+            ]
+          },
+          "es": {
+            "label": "Inspeccionando {image}",
+            "phrase": [
+              "inspeccionó una imagen",
+              "inspeccionó {n} imágenes"
+            ]
+          }
+        },
+        "pull_image": {
+          "en": {
+            "label": "Pulling {image}",
+            "phrase": [
+              "pulled an image",
+              "pulled {n} images"
+            ]
+          },
+          "es": {
+            "label": "Descargando {image}",
+            "phrase": [
+              "descargó una imagen",
+              "descargó {n} imágenes"
+            ]
+          }
+        },
+        "build_image": {
+          "en": {
+            "label": "Building {tag}",
+            "phrase": [
+              "built an image",
+              "built {n} images"
+            ]
+          },
+          "es": {
+            "label": "Construyendo {tag}",
+            "phrase": [
+              "construyó una imagen",
+              "construyó {n} imágenes"
+            ]
+          }
+        },
+        "tag_image": {
+          "en": {
+            "label": "Tagging {image}",
+            "phrase": [
+              "tagged an image",
+              "tagged {n} images"
+            ]
+          },
+          "es": {
+            "label": "Etiquetando {image}",
+            "phrase": [
+              "etiquetó una imagen",
+              "etiquetó {n} imágenes"
+            ]
+          }
+        },
+        "push_image": {
+          "en": {
+            "label": "Pushing {image}",
+            "phrase": [
+              "pushed an image",
+              "pushed {n} images"
+            ]
+          },
+          "es": {
+            "label": "Subiendo {image}",
+            "phrase": [
+              "subió una imagen",
+              "subió {n} imágenes"
+            ]
+          }
+        },
+        "remove_image": {
+          "en": {
+            "label": "Removing {image}",
+            "phrase": [
+              "removed an image",
+              "removed {n} images"
+            ]
+          },
+          "es": {
+            "label": "Eliminando {image}",
+            "phrase": [
+              "eliminó una imagen",
+              "eliminó {n} imágenes"
+            ]
+          }
+        },
+        "list_volumes": {
+          "en": {
+            "label": "Listing volumes",
+            "phrase": [
+              "listed the volumes",
+              "listed the volumes {n} times"
+            ]
+          },
+          "es": {
+            "label": "Listando los volúmenes",
+            "phrase": [
+              "listó los volúmenes",
+              "listó los volúmenes {n} veces"
+            ]
+          }
+        },
+        "inspect_volume": {
+          "en": {
+            "label": "Inspecting {volume}",
+            "phrase": [
+              "inspected a volume",
+              "inspected {n} volumes"
+            ]
+          },
+          "es": {
+            "label": "Inspeccionando {volume}",
+            "phrase": [
+              "inspeccionó un volumen",
+              "inspeccionó {n} volúmenes"
+            ]
+          }
+        },
+        "create_volume": {
+          "en": {
+            "label": "Creating the volume {name}",
+            "phrase": [
+              "created a volume",
+              "created {n} volumes"
+            ]
+          },
+          "es": {
+            "label": "Creando el volumen {name}",
+            "phrase": [
+              "creó un volumen",
+              "creó {n} volúmenes"
+            ]
+          }
+        },
+        "remove_volume": {
+          "en": {
+            "label": "Removing {volume}",
+            "phrase": [
+              "removed a volume",
+              "removed {n} volumes"
+            ]
+          },
+          "es": {
+            "label": "Eliminando {volume}",
+            "phrase": [
+              "eliminó un volumen",
+              "eliminó {n} volúmenes"
+            ]
+          }
+        },
+        "list_networks": {
+          "en": {
+            "label": "Listing networks",
+            "phrase": [
+              "listed the networks",
+              "listed the networks {n} times"
+            ]
+          },
+          "es": {
+            "label": "Listando las redes",
+            "phrase": [
+              "listó las redes",
+              "listó las redes {n} veces"
+            ]
+          }
+        },
+        "inspect_network": {
+          "en": {
+            "label": "Inspecting {network}",
+            "phrase": [
+              "inspected a network",
+              "inspected {n} networks"
+            ]
+          },
+          "es": {
+            "label": "Inspeccionando {network}",
+            "phrase": [
+              "inspeccionó una red",
+              "inspeccionó {n} redes"
+            ]
+          }
+        },
+        "create_network": {
+          "en": {
+            "label": "Creating the network {name}",
+            "phrase": [
+              "created a network",
+              "created {n} networks"
+            ]
+          },
+          "es": {
+            "label": "Creando la red {name}",
+            "phrase": [
+              "creó una red",
+              "creó {n} redes"
+            ]
+          }
+        },
+        "remove_network": {
+          "en": {
+            "label": "Removing {network}",
+            "phrase": [
+              "removed a network",
+              "removed {n} networks"
+            ]
+          },
+          "es": {
+            "label": "Eliminando {network}",
+            "phrase": [
+              "eliminó una red",
+              "eliminó {n} redes"
+            ]
+          }
+        },
+        "compose_ps": {
+          "en": {
+            "label": "Reading a Compose project",
+            "phrase": [
+              "read a Compose project",
+              "read Compose projects {n} times"
+            ]
+          },
+          "es": {
+            "label": "Leyendo un proyecto de Compose",
+            "phrase": [
+              "leyó un proyecto de Compose",
+              "leyó proyectos de Compose {n} veces"
+            ]
+          }
+        },
+        "compose_logs": {
+          "en": {
+            "label": "Reading a Compose project's logs",
+            "phrase": [
+              "read a project's logs",
+              "read projects' logs {n} times"
+            ]
+          },
+          "es": {
+            "label": "Leyendo los logs de un proyecto de Compose",
+            "phrase": [
+              "leyó los logs de un proyecto",
+              "leyó logs de proyectos {n} veces"
+            ]
+          }
+        },
+        "compose_build": {
+          "en": {
+            "label": "Building a Compose project",
+            "phrase": [
+              "built a Compose project",
+              "built Compose projects {n} times"
+            ]
+          },
+          "es": {
+            "label": "Construyendo un proyecto de Compose",
+            "phrase": [
+              "construyó un proyecto de Compose",
+              "construyó proyectos de Compose {n} veces"
+            ]
+          }
+        },
+        "compose_up": {
+          "en": {
+            "label": "Starting a Compose project",
+            "phrase": [
+              "started a Compose project",
+              "started Compose projects {n} times"
+            ]
+          },
+          "es": {
+            "label": "Arrancando un proyecto de Compose",
+            "phrase": [
+              "arrancó un proyecto de Compose",
+              "arrancó proyectos de Compose {n} veces"
+            ]
+          }
+        },
+        "compose_down": {
+          "en": {
+            "label": "Stopping a Compose project",
+            "phrase": [
+              "stopped a Compose project",
+              "stopped Compose projects {n} times"
+            ]
+          },
+          "es": {
+            "label": "Parando un proyecto de Compose",
+            "phrase": [
+              "paró un proyecto de Compose",
+              "paró proyectos de Compose {n} veces"
+            ]
+          }
+        },
+        "compose_exec": {
+          "en": {
+            "label": "Running a command in {service}",
+            "phrase": [
+              "ran a command in a service",
+              "ran {n} commands in services"
+            ]
+          },
+          "es": {
+            "label": "Ejecutando una orden en {service}",
+            "phrase": [
+              "ejecutó una orden en un servicio",
+              "ejecutó {n} órdenes en servicios"
+            ]
+          }
+        },
+        "list_labs": {
+          "en": {
+            "label": "Listing the labs",
+            "phrase": [
+              "listed the labs",
+              "listed the labs {n} times"
+            ]
+          },
+          "es": {
+            "label": "Listando los laboratorios",
+            "phrase": [
+              "listó los laboratorios",
+              "listó los laboratorios {n} veces"
+            ]
+          }
+        },
+        "lab_status": {
+          "en": {
+            "label": "Reading the lab {lab}",
+            "phrase": [
+              "read a lab's status",
+              "read labs' status {n} times"
+            ]
+          },
+          "es": {
+            "label": "Leyendo el laboratorio {lab}",
+            "phrase": [
+              "leyó el estado de un laboratorio",
+              "leyó el estado de laboratorios {n} veces"
+            ]
+          }
+        },
+        "lab_logs": {
+          "en": {
+            "label": "Reading the lab {lab}'s logs",
+            "phrase": [
+              "read a lab's logs",
+              "read labs' logs {n} times"
+            ]
+          },
+          "es": {
+            "label": "Leyendo los logs del laboratorio {lab}",
+            "phrase": [
+              "leyó los logs de un laboratorio",
+              "leyó logs de laboratorios {n} veces"
+            ]
+          }
+        },
+        "lab_up": {
+          "en": {
+            "label": "Starting the lab {lab}",
+            "phrase": [
+              "started a lab",
+              "started {n} labs"
+            ]
+          },
+          "es": {
+            "label": "Arrancando el laboratorio {lab}",
+            "phrase": [
+              "arrancó un laboratorio",
+              "arrancó {n} laboratorios"
+            ]
+          }
+        },
+        "lab_exec": {
+          "en": {
+            "label": "Running a command in the lab {lab}",
+            "phrase": [
+              "ran a command in a lab",
+              "ran {n} commands in labs"
+            ]
+          },
+          "es": {
+            "label": "Ejecutando una orden en el laboratorio {lab}",
+            "phrase": [
+              "ejecutó una orden en un laboratorio",
+              "ejecutó {n} órdenes en laboratorios"
+            ]
+          }
+        },
+        "lab_check": {
+          "en": {
+            "label": "Checking the lab {lab}",
+            "phrase": [
+              "checked a lab",
+              "checked labs {n} times"
+            ]
+          },
+          "es": {
+            "label": "Comprobando el laboratorio {lab}",
+            "phrase": [
+              "comprobó un laboratorio",
+              "comprobó laboratorios {n} veces"
+            ]
+          }
+        },
+        "lab_reset": {
+          "en": {
+            "label": "Resetting the lab {lab}",
+            "phrase": [
+              "reset a lab",
+              "reset labs {n} times"
+            ]
+          },
+          "es": {
+            "label": "Reiniciando el laboratorio {lab}",
+            "phrase": [
+              "reinició un laboratorio",
+              "reinició laboratorios {n} veces"
+            ]
+          }
+        },
+        "lab_down": {
+          "en": {
+            "label": "Stopping the lab {lab}",
+            "phrase": [
+              "stopped a lab",
+              "stopped {n} labs"
+            ]
+          },
+          "es": {
+            "label": "Parando el laboratorio {lab}",
+            "phrase": [
+              "paró un laboratorio",
+              "paró {n} laboratorios"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

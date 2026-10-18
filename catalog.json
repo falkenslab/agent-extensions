@@ -8,6 +8,215 @@
   },
   "extensions": [
     {
+      "name": "docker-lab",
+      "version": "0.1.0",
+      "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
+      "category": "development",
+      "topics": [
+        "docker",
+        "containers",
+        "compose",
+        "labs",
+        "sandbox",
+        "practices",
+        "mcp",
+        "miyagi",
+        "padawan",
+        "devops",
+        "teaching",
+        "learning",
+        "development"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/docker-lab",
+      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/docker-lab/README.md",
+      "install": {
+        "claudeCode": "claude plugin install docker-lab@falkenslab",
+        "agentKit": "extension add docker-lab@falkenslab"
+      },
+      "capabilities": [
+        {
+          "id": "docker-containers",
+          "skills": [
+            "use-docker"
+          ],
+          "tools": [
+            "list_containers",
+            "inspect_container",
+            "container_logs",
+            "container_stats",
+            "container_processes",
+            "run_container",
+            "start_container",
+            "stop_container",
+            "restart_container",
+            "remove_container",
+            "exec_in_container",
+            "copy_to_container",
+            "copy_from_container"
+          ],
+          "texts": {
+            "en": {
+              "label": "Containers",
+              "description": "Run, inspect, follow, measure and clean up containers, asking before anything dangerous."
+            },
+            "es": {
+              "label": "Contenedores",
+              "description": "Arrancar, inspeccionar, seguir, medir y limpiar contenedores, preguntando antes de lo peligroso."
+            }
+          }
+        },
+        {
+          "id": "docker-images",
+          "skills": [
+            "use-docker"
+          ],
+          "tools": [
+            "list_images",
+            "inspect_image",
+            "pull_image",
+            "build_image",
+            "tag_image",
+            "push_image",
+            "remove_image"
+          ],
+          "texts": {
+            "en": {
+              "label": "Images",
+              "description": "Pull, build, tag and push images, with your own registry login."
+            },
+            "es": {
+              "label": "Imágenes",
+              "description": "Descargar, construir, etiquetar y subir imágenes, con tu propio login en el registro."
+            }
+          }
+        },
+        {
+          "id": "docker-compose",
+          "skills": [
+            "use-docker"
+          ],
+          "tools": [
+            "compose_ps",
+            "compose_logs",
+            "compose_build",
+            "compose_up",
+            "compose_down",
+            "compose_exec"
+          ],
+          "texts": {
+            "en": {
+              "label": "Compose projects",
+              "description": "Build, start, follow and stop Compose projects."
+            },
+            "es": {
+              "label": "Proyectos de Compose",
+              "description": "Construir, arrancar, seguir y parar proyectos de Compose."
+            }
+          }
+        },
+        {
+          "id": "docker-system",
+          "skills": [
+            "use-docker"
+          ],
+          "tools": [
+            "docker_info",
+            "disk_usage",
+            "prune",
+            "list_volumes",
+            "inspect_volume",
+            "create_volume",
+            "remove_volume",
+            "list_networks",
+            "inspect_network",
+            "create_network",
+            "remove_network"
+          ],
+          "texts": {
+            "en": {
+              "label": "Volumes, networks and clean-ups",
+              "description": "Volumes and networks, Docker's disk usage, and cleaning up what isn't used."
+            },
+            "es": {
+              "label": "Volúmenes, redes y limpieza",
+              "description": "Volúmenes y redes, el disco que usa Docker y limpiar lo que no se usa."
+            }
+          }
+        },
+        {
+          "id": "sandbox",
+          "skills": [
+            "try-in-a-lab",
+            "build-a-lab"
+          ],
+          "tools": [
+            "list_labs",
+            "lab_status",
+            "lab_logs",
+            "lab_up",
+            "lab_exec",
+            "lab_reset",
+            "lab_down"
+          ],
+          "texts": {
+            "en": {
+              "label": "Software lab",
+              "description": "Run and try tools, services and someone's code in isolated labs, without installing anything on your computer: no internet, no host mounts, with limits."
+            },
+            "es": {
+              "label": "Laboratorio de software",
+              "description": "Ejecutar y probar herramientas, servicios y código ajeno en laboratorios aislados, sin instalar nada en tu ordenador: sin internet, sin montar el equipo, con límites."
+            }
+          }
+        },
+        {
+          "id": "run-and-verify",
+          "skills": [
+            "verify-by-running"
+          ],
+          "tools": [
+            "lab_up",
+            "lab_exec",
+            "lab_check",
+            "lab_status",
+            "lab_logs",
+            "lab_reset"
+          ],
+          "texts": {
+            "en": {
+              "label": "Verifying by running",
+              "description": "Whether code, instructions, a statement and its solution or a submission work, by running them in a lab, with a verdict and its evidence."
+            },
+            "es": {
+              "label": "Verificar ejecutando",
+              "description": "Si un código, unas instrucciones, un enunciado y su solución o una entrega funcionan, ejecutándolos en un laboratorio, con un veredicto y sus pruebas."
+            }
+          }
+        }
+      ],
+      "requirements": [
+        {
+          "name": "Docker",
+          "program": "docker",
+          "version": {
+            "args": [
+              "--version"
+            ],
+            "min": "24.0.0"
+          },
+          "install": {
+            "windows": "winget install Docker.DockerDesktop",
+            "macos": "brew install --cask docker",
+            "url": "https://docs.docker.com/get-started/get-docker/"
+          }
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/docker-lab/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/docker-lab/assets/banner.svg"
+    },
+    {
       "name": "moodle-student",
       "version": "0.1.6",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
