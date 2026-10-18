@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -55,11 +55,14 @@
   },
   "metadata": {
     "agent-kit": {
+      "kit": ">=0.22.0",
+      "description": {
+        "es": "Trabaja en tus cursos de Moodle como alumno, a través de moodle-mcp: lo que te queda y para cuándo, tareas, cuestionarios, foros y las demás actividades, tus notas y la retroalimentación, con cómo hacer bien cada cosa en Moodle."
+      },
       "catalog": {
         "logo": "assets/logo.svg",
         "banner": "assets/banner.svg"
       },
-      "kit": ">=0.22.0",
       "provides": [
         "moodle",
         "moodle-student",

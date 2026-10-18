@@ -9,8 +9,12 @@
   "extensions": [
     {
       "name": "docker-lab",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
+      "descriptions": {
+        "en": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
+        "es": "Docker como laboratorio para tu agente: ejecuta y prueba software (herramientas, servicios, código ajeno) en contenedores aislados sin tocar tu ordenador, comprueba que las cosas funcionan ejecutándolas y gestiona tu Docker, a través de docker-mcp, en el modo que elijas (solo mirar, solo laboratorios o todo)."
+      },
       "category": "development",
       "topics": [
         "docker",
@@ -31,6 +35,10 @@
       "license": "MIT",
       "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/docker-lab",
       "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/docker-lab/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/docker-lab/README.md",
+        "es": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/docker-lab/README.es.md"
+      },
       "install": {
         "claudeCode": "claude plugin install docker-lab@falkenslab",
         "agentKit": "extension add docker-lab@falkenslab"
@@ -218,8 +226,12 @@
     },
     {
       "name": "moodle-student",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
+      "descriptions": {
+        "en": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
+        "es": "Trabaja en tus cursos de Moodle como alumno, a través de moodle-mcp: lo que te queda y para cuándo, tareas, cuestionarios, foros y las demás actividades, tus notas y la retroalimentación, con cómo hacer bien cada cosa en Moodle."
+      },
       "category": "education",
       "topics": [
         "moodle",
@@ -234,6 +246,10 @@
       "license": "MIT",
       "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-student",
       "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-student/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-student/README.md",
+        "es": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-student/README.es.md"
+      },
       "install": {
         "claudeCode": "claude plugin install moodle-student@falkenslab",
         "agentKit": "extension add moodle-student@falkenslab"
@@ -448,8 +464,12 @@
     },
     {
       "name": "moodle-teacher",
-      "version": "0.2.6",
+      "version": "0.2.7",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
+      "descriptions": {
+        "en": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
+        "es": "Trabaja en tus cursos de Moodle como docente, a través de moodle-mcp: construirlos, calificar, seguir a la clase, revisar y reutilizar cursos, con cómo hacer bien cada cosa en Moodle."
+      },
       "category": "education",
       "topics": [
         "moodle",
@@ -464,6 +484,10 @@
       "license": "MIT",
       "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-teacher",
       "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-teacher/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-teacher/README.md",
+        "es": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-teacher/README.es.md"
+      },
       "install": {
         "claudeCode": "claude plugin install moodle-teacher@falkenslab",
         "agentKit": "extension add moodle-teacher@falkenslab"
@@ -840,8 +864,12 @@
     },
     {
       "name": "moodle-ui-kit",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
+      "descriptions": {
+        "en": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
+        "es": "Un estilo visual limpio para lo que tu agente publica en Moodle: enunciados de tareas, bloques de código, soluciones, preguntas de cuestionario y retroalimentación, con estilos en línea que funcionan en cualquier sitio Moodle. Basado en el moodle-ui-kit de noeper."
+      },
       "category": "education",
       "topics": [
         "moodle",
@@ -856,6 +884,10 @@
       "license": "MIT",
       "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-ui-kit",
       "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-ui-kit/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-ui-kit/README.md",
+        "es": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-ui-kit/README.es.md"
+      },
       "install": {
         "claudeCode": "claude plugin install moodle-ui-kit@falkenslab",
         "agentKit": "extension add moodle-ui-kit@falkenslab"
@@ -883,8 +915,12 @@
     },
     {
       "name": "weather",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
+      "descriptions": {
+        "en": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
+        "es": "El tiempo en tu ciudad, para un agente que planifica contigo: hoy y los próximos días, de Open-Meteo."
+      },
       "category": "productivity",
       "topics": [
         "weather",
@@ -896,6 +932,10 @@
       "license": "MIT",
       "homepage": "https://falkenslab.github.io/agent-kit/docs/extensions/writing",
       "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/weather/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/weather/README.md",
+        "es": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/weather/README.es.md"
+      },
       "install": {
         "claudeCode": "claude plugin install weather@falkenslab",
         "agentKit": "extension add weather@falkenslab"

@@ -1,6 +1,6 @@
 {
   "name": "moodle-ui-kit",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
   "author": {
     "name": "Falken's Lab",
@@ -19,11 +19,14 @@
   ],
   "metadata": {
     "agent-kit": {
+      "kit": ">=0.22.0",
+      "description": {
+        "es": "Un estilo visual limpio para lo que tu agente publica en Moodle: enunciados de tareas, bloques de código, soluciones, preguntas de cuestionario y retroalimentación, con estilos en línea que funcionan en cualquier sitio Moodle. Basado en el moodle-ui-kit de noeper."
+      },
       "catalog": {
         "logo": "assets/logo.svg",
         "banner": "assets/banner.svg"
       },
-      "kit": ">=0.22.0",
       "provides": [
         "moodle-ui-kit"
       ],

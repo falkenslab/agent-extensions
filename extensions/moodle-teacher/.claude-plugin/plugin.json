@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -55,11 +55,14 @@
   },
   "metadata": {
     "agent-kit": {
+      "kit": ">=0.22.0",
+      "description": {
+        "es": "Trabaja en tus cursos de Moodle como docente, a través de moodle-mcp: construirlos, calificar, seguir a la clase, revisar y reutilizar cursos, con cómo hacer bien cada cosa en Moodle."
+      },
       "catalog": {
         "logo": "assets/logo.svg",
         "banner": "assets/banner.svg"
       },
-      "kit": ">=0.22.0",
       "provides": [
         "moodle",
         "moodle-teacher",

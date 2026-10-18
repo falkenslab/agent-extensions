@@ -1,6 +1,6 @@
 {
   "name": "docker-lab",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
   "author": {
     "name": "Falken's Lab",
@@ -71,11 +71,14 @@
   },
   "metadata": {
     "agent-kit": {
+      "kit": ">=0.23.0",
+      "description": {
+        "es": "Docker como laboratorio para tu agente: ejecuta y prueba software (herramientas, servicios, código ajeno) en contenedores aislados sin tocar tu ordenador, comprueba que las cosas funcionan ejecutándolas y gestiona tu Docker, a través de docker-mcp, en el modo que elijas (solo mirar, solo laboratorios o todo)."
+      },
       "catalog": {
         "logo": "assets/logo.svg",
         "banner": "assets/banner.svg"
       },
-      "kit": ">=0.23.0",
       "provides": [
         "docker-lab",
         "docker"

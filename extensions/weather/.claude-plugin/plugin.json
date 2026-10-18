@@ -1,6 +1,6 @@
 {
   "name": "weather",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "The weather in your city, for an agent that plans with you: today and the next days, from Open-Meteo.",
   "author": {
     "name": "Falken's Lab",
@@ -34,10 +34,13 @@
   },
   "metadata": {
     "agent-kit": {
+      "kit": ">=0.22.0",
+      "description": {
+        "es": "El tiempo en tu ciudad, para un agente que planifica contigo: hoy y los próximos días, de Open-Meteo."
+      },
       "catalog": {
         "logo": "assets/logo.svg"
       },
-      "kit": ">=0.22.0",
       "help": "Weather: `forecast` gives today and the next days in your city; /weather:today sums up the day.",
       "labels": {
         "forecast": {
