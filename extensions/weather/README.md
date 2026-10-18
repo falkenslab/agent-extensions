@@ -28,15 +28,15 @@ weather gives an agent built on [agent-kit](https://github.com/falkenslab/agent-
 
 ```bash
 # An agent built on agent-kit (its own command)
-my-agent extension marketplace add falkenslab/agent-kit-extensions
+my-agent extension marketplace add falkenslab/agent-extensions
 my-agent extension add weather@falkenslab --set "city=Santa Cruz de Tenerife"
 
 # Claude Code
-claude plugin marketplace add falkenslab/agent-kit-extensions
+claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install weather@falkenslab
 
 # Codex
-codex plugin marketplace add falkenslab/agent-kit-extensions
+codex plugin marketplace add falkenslab/agent-extensions
 codex plugin add weather@falkenslab
 ```
 

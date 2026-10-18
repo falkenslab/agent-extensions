@@ -1,13 +1,13 @@
 {
   "name": "moodle-teacher",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
     "url": "https://github.com/falkenslab"
   },
-  "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-teacher",
-  "repository": "https://github.com/falkenslab/agent-kit-extensions",
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/moodle-teacher",
+  "repository": "https://github.com/falkenslab/agent-extensions",
   "license": "MIT",
   "keywords": [
     "moodle",

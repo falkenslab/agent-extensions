@@ -1,13 +1,13 @@
 {
   "name": "docker-lab",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
   "author": {
     "name": "Falken's Lab",
     "url": "https://github.com/falkenslab"
   },
-  "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/docker-lab",
-  "repository": "https://github.com/falkenslab/agent-kit-extensions",
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/docker-lab",
+  "repository": "https://github.com/falkenslab/agent-extensions",
   "license": "MIT",
   "keywords": [
     "docker",

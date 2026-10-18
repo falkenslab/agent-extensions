@@ -32,17 +32,17 @@ Necesitas un agente con agent-kit 0.22 o posterior, o Claude Code 2.1.271 o post
 
 ```bash
 # Un agente hecho con agent-kit (con su propio comando)
-my-agent extension marketplace add falkenslab/agent-kit-extensions
+my-agent extension marketplace add falkenslab/agent-extensions
 my-agent extension add moodle-teacher@falkenslab
 my-agent extension add moodle-ui-kit@falkenslab
 
 # Claude Code
-claude plugin marketplace add falkenslab/agent-kit-extensions
+claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install moodle-teacher@falkenslab
 claude plugin install moodle-ui-kit@falkenslab
 
 # Codex
-codex plugin marketplace add falkenslab/agent-kit-extensions
+codex plugin marketplace add falkenslab/agent-extensions
 codex plugin add moodle-ui-kit@falkenslab
 ```
 
@@ -60,7 +60,7 @@ Un cuestionario que un agente creó con moodle-teacher y esta extensión, en la 
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-ui-kit/assets/quiz-preview.png" alt="Vista previa de un cuestionario en Moodle: el texto de la pregunta en un recuadro blanco con un signo de interrogación, y la retroalimentación de la respuesta elegida en un recuadro blanco con la etiqueta verde «Retroalimentación»" width="760"/>
+<img src="https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-ui-kit/assets/quiz-preview.png" alt="Vista previa de un cuestionario en Moodle: el texto de la pregunta en un recuadro blanco con un signo de interrogación, y la retroalimentación de la respuesta elegida en un recuadro blanco con la etiqueta verde «Retroalimentación»" width="760"/>
 
 </div>
 

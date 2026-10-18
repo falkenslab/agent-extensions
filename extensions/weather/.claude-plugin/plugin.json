@@ -1,13 +1,13 @@
 {
   "name": "weather",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "The weather in your city, for an agent that plans with you: today and the next days, from Open-Meteo.",
   "author": {
     "name": "Falken's Lab",
     "url": "https://github.com/falkenslab"
   },
   "homepage": "https://falkenslab.github.io/agent-kit/docs/extensions/writing",
-  "repository": "https://github.com/falkenslab/agent-kit-extensions",
+  "repository": "https://github.com/falkenslab/agent-extensions",
   "license": "MIT",
   "keywords": [
     "weather",

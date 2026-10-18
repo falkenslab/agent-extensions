@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/docker-lab/assets/logo.svg" alt="docker-lab logo: a cube inside a dashed boundary, a sandbox" width="112"/>
+<img src="https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/docker-lab/assets/logo.svg" alt="docker-lab logo: a cube inside a dashed boundary, a sandbox" width="112"/>
 
 # docker-lab
 
@@ -33,17 +33,17 @@ You need [Node.js](https://nodejs.org) 20 or later, [Docker](https://docs.docker
 
 ```bash
 # An agent built on agent-kit (its own command)
-my-agent extension marketplace add falkenslab/agent-kit-extensions
+my-agent extension marketplace add falkenslab/agent-extensions
 my-agent extension add docker-lab@falkenslab
 
 # Claude Code
-claude plugin marketplace add falkenslab/agent-kit-extensions
+claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install docker-lab@falkenslab
 ```
 
 Both ask for its settings when you install it: the mode first (`lab` to give it only the labs, as for a student), and the labs' options below. Then ask: "Is Docker running, and in what mode are you?"
 
-Codex installs it too (`codex plugin marketplace add falkenslab/agent-kit-extensions`, then `codex plugin add docker-lab@falkenslab`), with its skills and server, but it has no plugin settings: it runs in `full` mode with the default labs folder. For another mode, add docker-mcp as a server of your own, as [its configuration page](https://falkenslab.github.io/docker-mcp/configuration) shows.
+Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add docker-lab@falkenslab`), with its skills and server, but it has no plugin settings: it runs in `full` mode with the default labs folder. For another mode, add docker-mcp as a server of your own, as [its configuration page](https://falkenslab.github.io/docker-mcp/configuration) shows.
 
 ## ⚙️ Settings
 

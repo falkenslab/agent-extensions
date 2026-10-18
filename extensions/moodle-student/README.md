@@ -33,17 +33,17 @@ You need [Node.js](https://nodejs.org) 20 or later, and an agent on agent-kit 0.
 
 ```bash
 # An agent built on agent-kit (its own command)
-my-agent extension marketplace add falkenslab/agent-kit-extensions
+my-agent extension marketplace add falkenslab/agent-extensions
 my-agent extension add moodle-student@falkenslab
 
 # Claude Code
-claude plugin marketplace add falkenslab/agent-kit-extensions
+claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install moodle-student@falkenslab
 ```
 
 Both ask for its settings when you install it: your Moodle sites (`name=address`, e.g. `school=https://campus.myschool.org`), and the optional ones below. The first time it works on a site, a browser window opens for you to log in.
 
-Codex installs it too (`codex plugin marketplace add falkenslab/agent-kit-extensions`, then `codex plugin add moodle-student@falkenslab`), with its skills and server. Codex has no plugin settings, so the first time the agent asks you for your Moodle site's address in the chat. Codex keeps one server per name and both Moodle extensions call theirs `moodle`, so enable only one of `moodle-student` and `moodle-teacher` there.
+Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add moodle-student@falkenslab`), with its skills and server. Codex has no plugin settings, so the first time the agent asks you for your Moodle site's address in the chat. Codex keeps one server per name and both Moodle extensions call theirs `moodle`, so enable only one of `moodle-student` and `moodle-teacher` there.
 
 ## ⚙️ Settings
 
@@ -68,7 +68,7 @@ Change them later with `my-agent extension config moodle-student`, in the chat w
 ## 📸 See it at work
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-student/assets/screenshot.png" alt="A student's assignment in Moodle, submitted for grading with the PDF the agent uploaded" width="760"/>
+<img src="https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-student/assets/screenshot.png" alt="A student's assignment in Moodle, submitted for grading with the PDF the agent uploaded" width="760"/>
 </p>
 
 <p align="center"><em>In moodle-sandbox: a student's report, uploaded and submitted by Claude Code after showing it first.</em></p>

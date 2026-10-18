@@ -2,22 +2,23 @@
 
 <img src="https://raw.githubusercontent.com/falkenslab/agent-kit/main/docs/static/img/logo.svg" alt="agent-kit logo" width="112"/>
 
-# agent-kit-extensions
+# agent-extensions
 
-**Extensions for agents built on agent-kit, and plugins for Claude Code: the same folder for both.**<br/>
+**Extensions for Claude Code, Codex and agents built on agent-kit: the same folder for all.**<br/>
 Install one, and your agent gains its tools, its skills and the know-how to use them.
 
 ![Claude Code marketplace](https://img.shields.io/badge/Claude%20Code-marketplace-d97757)
+![Codex plugins](https://img.shields.io/badge/Codex-plugins-10a37f)
 ![agent-kit extensions](https://img.shields.io/badge/agent--kit-extensions-0b0b0b)
-[![validate](https://github.com/falkenslab/agent-kit-extensions/actions/workflows/validate.yml/badge.svg)](https://github.com/falkenslab/agent-kit-extensions/actions/workflows/validate.yml)
+[![validate](https://github.com/falkenslab/agent-extensions/actions/workflows/validate.yml/badge.svg)](https://github.com/falkenslab/agent-extensions/actions/workflows/validate.yml)
 [![agent-kit-catalog](https://img.shields.io/npm/v/@falkenslab/agent-kit-catalog?label=agent-kit-catalog&color=cb3837&logo=npm)](https://www.npmjs.com/package/@falkenslab/agent-kit-catalog)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
 
-**[🧭 Browse the extensions](https://falkenslab.github.io/agent-kit-extensions/)** · [📖 agent-kit's documentation](https://falkenslab.github.io/agent-kit/)
+**[🧭 Browse the extensions](https://falkenslab.github.io/agent-extensions/)** · [📖 agent-kit's documentation](https://falkenslab.github.io/agent-kit/)
 
 </div>
 
-This is Falken's Lab's marketplace of extensions: each one is a Claude Code plugin as it is, which an agent built on [agent-kit](https://github.com/falkenslab/agent-kit) installs from its command or its chat's catalog, and Claude Code from `/plugin`. An extension brings an MCP server (run from npm at a fixed version), the skills and commands that say how to use it well, and the settings it asks for when it's installed.
+This is Falken's Lab's marketplace of extensions: each one is a Claude Code plugin as it is, which Claude Code installs from `/plugin`, Codex as one of its plugins, and an agent built on [agent-kit](https://github.com/falkenslab/agent-kit) from its command or its chat's catalog. An extension brings an MCP server (run from npm at a fixed version), the skills and commands that say how to use it well, and the settings it asks for when it's installed.
 
 ## ✨ Why these extensions
 
@@ -31,15 +32,15 @@ This is Falken's Lab's marketplace of extensions: each one is a Claude Code plug
 
 ```bash
 # An agent built on agent-kit 0.22 or later (its own command)
-my-agent extension marketplace add falkenslab/agent-kit-extensions
+my-agent extension marketplace add falkenslab/agent-extensions
 my-agent extension add moodle-teacher@falkenslab
 
 # Claude Code 2.1.271 or later
-claude plugin marketplace add falkenslab/agent-kit-extensions
+claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install moodle-teacher@falkenslab
 
 # Codex
-codex plugin marketplace add falkenslab/agent-kit-extensions
+codex plugin marketplace add falkenslab/agent-extensions
 codex plugin add moodle-ui-kit@falkenslab
 ```
 
@@ -59,10 +60,10 @@ Codex installs them too, with their skills and servers, but it has no plugin set
 
 ## 🧭 The catalog
 
-[The catalog page](https://falkenslab.github.io/agent-kit-extensions/) shows every extension as a card, with a search and topic chips; `?topic=miyagi` opens it filtered, so an agent can link to what it offers. The same catalog is one file, [`catalog.json`](catalog.json): each extension's name, version, description, topics, install commands and images.
+[The catalog page](https://falkenslab.github.io/agent-extensions/) shows every extension as a card, with a search and topic chips; `?topic=miyagi` opens it filtered, so an agent can link to what it offers. The same catalog is one file, [`catalog.json`](catalog.json): each extension's name, version, description, topics, install commands and images.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/assets/catalog.png" alt="The catalog page: the install commands in tabs for Claude Code, Codex and an agent on agent-kit, a search box, topic chips and the extensions' cards" width="760"/>
+<img src="https://raw.githubusercontent.com/falkenslab/agent-extensions/main/assets/catalog.png" alt="The catalog page: the install commands in tabs for Claude Code, Codex and an agent on agent-kit, a search box, topic chips and the extensions' cards" width="760"/>
 </p>
 
 
@@ -71,7 +72,7 @@ Codex installs them too, with their skills and servers, but it has no plugin set
 
 ## 📚 Documentation
 
-- **[The catalog](https://falkenslab.github.io/agent-kit-extensions/)**: every extension, in English and Spanish, with its install commands, capabilities and README.
+- **[The catalog](https://falkenslab.github.io/agent-extensions/)**: every extension, in English and Spanish, with its install commands, capabilities and README.
 - **[Installing extensions](https://falkenslab.github.io/agent-kit/docs/extensions/installing)**: in an agent built on agent-kit.
 - **[Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**: the tutorial, which builds `extensions/weather/`.
 - **[The extensions reference](https://falkenslab.github.io/agent-kit/docs/extensions/reference)**: every field of the manifest and of `metadata["agent-kit"]`.

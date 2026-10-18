@@ -1,7 +1,7 @@
 name: pages
 
 # The public catalog: site/index.html and catalog.json, on GitHub Pages
-# (falkenslab.github.io/agent-kit-extensions). Pages must use "GitHub Actions" as its source.
+# (falkenslab.github.io/agent-extensions). Pages must use "GitHub Actions" as its source.
 on:
   push:
     branches: [main]

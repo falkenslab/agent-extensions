@@ -33,17 +33,17 @@ Necesitas [Node.js](https://nodejs.org) 20 o posterior, y un agente con agent-ki
 
 ```bash
 # Un agente hecho con agent-kit (con su propio comando)
-my-agent extension marketplace add falkenslab/agent-kit-extensions
+my-agent extension marketplace add falkenslab/agent-extensions
 my-agent extension add moodle-student@falkenslab
 
 # Claude Code
-claude plugin marketplace add falkenslab/agent-kit-extensions
+claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install moodle-student@falkenslab
 ```
 
 Los dos piden sus ajustes al instalarla: tus sitios Moodle (`nombre=dirección`, por ejemplo `instituto=https://campus.miinstituto.org`) y los opcionales de abajo. La primera vez que trabaja en un sitio se abre una ventana del navegador para que entres.
 
-Codex también la instala (`codex plugin marketplace add falkenslab/agent-kit-extensions` y luego `codex plugin add moodle-student@falkenslab`), con sus skills y su servidor. Codex no tiene ajustes de plugins, así que la primera vez el agente te pide en el chat la dirección de tu Moodle. Codex guarda un servidor por nombre y las dos extensiones de Moodle llaman al suyo `moodle`, así que activa solo una de `moodle-student` y `moodle-teacher` en él.
+Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add moodle-student@falkenslab`), con sus skills y su servidor. Codex no tiene ajustes de plugins, así que la primera vez el agente te pide en el chat la dirección de tu Moodle. Codex guarda un servidor por nombre y las dos extensiones de Moodle llaman al suyo `moodle`, así que activa solo una de `moodle-student` y `moodle-teacher` en él.
 
 ## ⚙️ Ajustes
 
@@ -68,7 +68,7 @@ Cámbialos después con `my-agent extension config moodle-student`, en el chat c
 ## 📸 Míralo en acción
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-student/assets/screenshot.png" alt="La tarea de un alumno en Moodle, enviada para calificar con el PDF que subió el agente" width="760"/>
+<img src="https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-student/assets/screenshot.png" alt="La tarea de un alumno en Moodle, enviada para calificar con el PDF que subió el agente" width="760"/>
 </p>
 
 <p align="center"><em>En moodle-sandbox: el informe de un alumno, subido y enviado por Claude Code después de enseñárselo.</em></p>

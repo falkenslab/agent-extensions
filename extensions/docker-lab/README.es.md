@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/docker-lab/assets/logo.svg" alt="Logo de docker-lab: un cubo dentro de un borde discontinuo, un sandbox" width="112"/>
+<img src="https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/docker-lab/assets/logo.svg" alt="Logo de docker-lab: un cubo dentro de un borde discontinuo, un sandbox" width="112"/>
 
 # docker-lab
 
@@ -33,17 +33,17 @@ Necesitas [Node.js](https://nodejs.org) 20 o posterior, [Docker](https://docs.do
 
 ```bash
 # Un agente hecho con agent-kit (su propia orden)
-my-agent extension marketplace add falkenslab/agent-kit-extensions
+my-agent extension marketplace add falkenslab/agent-extensions
 my-agent extension add docker-lab@falkenslab
 
 # Claude Code
-claude plugin marketplace add falkenslab/agent-kit-extensions
+claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install docker-lab@falkenslab
 ```
 
 Ambos piden sus ajustes al instalarla: primero el modo (`lab` para darle solo los laboratorios, como a un alumno), y las opciones de los laboratorios de abajo. Luego pregunta: «¿Está Docker en marcha, y en qué modo estás?».
 
-Codex también la instala (`codex plugin marketplace add falkenslab/agent-kit-extensions` y luego `codex plugin add docker-lab@falkenslab`), con sus skills y su servidor, pero no tiene ajustes de plugins: funciona en modo `full` con la carpeta de laboratorios por defecto. Para otro modo, añade docker-mcp como un servidor propio, como explica [su página de configuración](https://falkenslab.github.io/docker-mcp/es/configuration).
+Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add docker-lab@falkenslab`), con sus skills y su servidor, pero no tiene ajustes de plugins: funciona en modo `full` con la carpeta de laboratorios por defecto. Para otro modo, añade docker-mcp como un servidor propio, como explica [su página de configuración](https://falkenslab.github.io/docker-mcp/es/configuration).
 
 ## ⚙️ Ajustes
 

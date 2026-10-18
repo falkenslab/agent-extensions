@@ -1,15 +1,15 @@
 {
   "marketplace": "falkenslab",
   "description": "Falken's Lab extensions for agents built on agent-kit, and plugins for Claude Code: each one a Claude Code plugin as it is.",
-  "repository": "https://github.com/falkenslab/agent-kit-extensions",
+  "repository": "https://github.com/falkenslab/agent-extensions",
   "add": {
-    "claudeCode": "claude plugin marketplace add falkenslab/agent-kit-extensions",
-    "agentKit": "extension marketplace add falkenslab/agent-kit-extensions"
+    "claudeCode": "claude plugin marketplace add falkenslab/agent-extensions",
+    "agentKit": "extension marketplace add falkenslab/agent-extensions"
   },
   "extensions": [
     {
       "name": "docker-lab",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
       "descriptions": {
         "en": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
@@ -33,11 +33,11 @@
       ],
       "author": "Falken's Lab",
       "license": "MIT",
-      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/docker-lab",
-      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/docker-lab/README.md",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/docker-lab",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/docker-lab/README.md",
       "readmes": {
-        "en": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/docker-lab/README.md",
-        "es": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/docker-lab/README.es.md"
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/docker-lab/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/docker-lab/README.es.md"
       },
       "install": {
         "claudeCode": "claude plugin install docker-lab@falkenslab",
@@ -221,12 +221,12 @@
           }
         }
       ],
-      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/docker-lab/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/docker-lab/assets/banner.svg"
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/docker-lab/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/docker-lab/assets/banner.svg"
     },
     {
       "name": "moodle-student",
-      "version": "0.1.8",
+      "version": "0.1.9",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
@@ -244,11 +244,11 @@
       ],
       "author": "Falken's Lab",
       "license": "MIT",
-      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-student",
-      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-student/README.md",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/moodle-student",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/moodle-student/README.md",
       "readmes": {
-        "en": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-student/README.md",
-        "es": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-student/README.es.md"
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/moodle-student/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/moodle-student/README.es.md"
       },
       "install": {
         "claudeCode": "claude plugin install moodle-student@falkenslab",
@@ -470,12 +470,12 @@
           }
         }
       ],
-      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-student/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-student/assets/banner.svg"
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-student/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-student/assets/banner.svg"
     },
     {
       "name": "moodle-teacher",
-      "version": "0.2.8",
+      "version": "0.2.9",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
@@ -493,11 +493,11 @@
       ],
       "author": "Falken's Lab",
       "license": "MIT",
-      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-teacher",
-      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-teacher/README.md",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/moodle-teacher",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/moodle-teacher/README.md",
       "readmes": {
-        "en": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-teacher/README.md",
-        "es": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-teacher/README.es.md"
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/moodle-teacher/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/moodle-teacher/README.es.md"
       },
       "install": {
         "claudeCode": "claude plugin install moodle-teacher@falkenslab",
@@ -898,12 +898,12 @@
           }
         }
       ],
-      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-teacher/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-teacher/assets/banner.svg"
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-teacher/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-teacher/assets/banner.svg"
     },
     {
       "name": "moodle-ui-kit",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
       "descriptions": {
         "en": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
@@ -921,11 +921,11 @@
       ],
       "author": "Falken's Lab",
       "license": "MIT",
-      "homepage": "https://github.com/falkenslab/agent-kit-extensions/tree/main/extensions/moodle-ui-kit",
-      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-ui-kit/README.md",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/moodle-ui-kit",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/moodle-ui-kit/README.md",
       "readmes": {
-        "en": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-ui-kit/README.md",
-        "es": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/moodle-ui-kit/README.es.md"
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/moodle-ui-kit/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/moodle-ui-kit/README.es.md"
       },
       "install": {
         "claudeCode": "claude plugin install moodle-ui-kit@falkenslab",
@@ -949,12 +949,12 @@
           }
         }
       ],
-      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-ui-kit/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-ui-kit/assets/banner.svg"
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-ui-kit/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-ui-kit/assets/banner.svg"
     },
     {
       "name": "weather",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
       "descriptions": {
         "en": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
@@ -970,10 +970,10 @@
       "author": "Falken's Lab",
       "license": "MIT",
       "homepage": "https://falkenslab.github.io/agent-kit/docs/extensions/writing",
-      "readme": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/weather/README.md",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/weather/README.md",
       "readmes": {
-        "en": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/weather/README.md",
-        "es": "https://github.com/falkenslab/agent-kit-extensions/blob/main/extensions/weather/README.es.md"
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/weather/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/weather/README.es.md"
       },
       "install": {
         "claudeCode": "claude plugin install weather@falkenslab",
@@ -1000,7 +1000,7 @@
           }
         }
       ],
-      "logo": "https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/weather/assets/logo.svg"
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/weather/assets/logo.svg"
     }
   ]
 }

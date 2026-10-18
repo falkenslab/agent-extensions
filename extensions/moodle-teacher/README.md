@@ -33,17 +33,17 @@ You need [Node.js](https://nodejs.org) 20 or later, and an agent on agent-kit 0.
 
 ```bash
 # An agent built on agent-kit (its own command; Captain Whiskers': npm start --)
-my-agent extension marketplace add falkenslab/agent-kit-extensions
+my-agent extension marketplace add falkenslab/agent-extensions
 my-agent extension add moodle-teacher@falkenslab
 
 # Claude Code
-claude plugin marketplace add falkenslab/agent-kit-extensions
+claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install moodle-teacher@falkenslab
 ```
 
 Both ask for its settings when you install it: your Moodle sites (`name=address`, e.g. `school=https://campus.myschool.org`), and the optional ones below. The first time it works on a site, a browser window opens for you to log in.
 
-Codex installs it too (`codex plugin marketplace add falkenslab/agent-kit-extensions`, then `codex plugin add moodle-teacher@falkenslab`), with its skills and server. Codex has no plugin settings, so the first time the agent asks you for your Moodle site's address in the chat. Codex keeps one server per name and both Moodle extensions call theirs `moodle`, so enable only one of `moodle-teacher` and `moodle-student` there.
+Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add moodle-teacher@falkenslab`), with its skills and server. Codex has no plugin settings, so the first time the agent asks you for your Moodle site's address in the chat. Codex keeps one server per name and both Moodle extensions call theirs `moodle`, so enable only one of `moodle-teacher` and `moodle-student` there.
 
 ## ⚙️ Settings
 
@@ -68,7 +68,7 @@ Change them later with `my-agent extension config moodle-teacher`, in the chat w
 ## 📸 See it at work
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/moodle-teacher/assets/screenshot.png" alt="A Moodle assignment's rubric, ready for use, that the agent defined with set_rubric" width="760"/>
+<img src="https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-teacher/assets/screenshot.png" alt="A Moodle assignment's rubric, ready for use, that the agent defined with set_rubric" width="760"/>
 </p>
 
 <p align="center"><em>In moodle-sandbox: the rubric Claude Code defined for a new assignment, after drafting it and asking first.</em></p>
