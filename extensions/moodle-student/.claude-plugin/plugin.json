@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -213,16 +213,27 @@
             "open_scorm",
             "get_h5p_activity",
             "assess_workshop_submission",
-            "set_completion"
+            "set_completion",
+            "get_workshop_submission",
+            "save_workshop_submission",
+            "list_glossary_entries",
+            "add_glossary_entry",
+            "list_wiki_pages",
+            "get_wiki_page",
+            "create_wiki_page",
+            "edit_wiki_page",
+            "list_database_entries",
+            "add_database_entry",
+            "list_badges"
           ],
           "texts": {
             "en": {
               "label": "Other activities",
-              "description": "Choices, surveys, lessons, SCORM, H5P, peer assessment and manual completion."
+              "description": "Choices, surveys, lessons, SCORM, H5P, workshops (submitting and peer assessment), glossary, wiki and database entries, badges and manual completion."
             },
             "es": {
               "label": "Otras actividades",
-              "description": "Consultas, encuestas, lecciones, SCORM, H5P, evaluación entre iguales y finalización manual."
+              "description": "Consultas, encuestas, lecciones, SCORM, H5P, talleres (entregar y evaluar a compañeros), entradas de glosario, wiki y base de datos, insignias y finalización manual."
             }
           }
         },
@@ -673,6 +684,70 @@
             "phrase": [
               "esperó a que entraras",
               "esperó a que entraras {n} veces"
+            ]
+          }
+        },
+        "save_workshop_submission": {
+          "en": {
+            "label": "Saving the workshop submission",
+            "phrase": [
+              "saved a workshop submission",
+              "saved workshop submissions {n} times"
+            ]
+          },
+          "es": {
+            "label": "Guardando la entrega del taller",
+            "phrase": [
+              "guardó una entrega de taller",
+              "guardó entregas de taller {n} veces"
+            ]
+          }
+        },
+        "add_glossary_entry": {
+          "en": {
+            "label": "Adding a glossary entry",
+            "phrase": [
+              "added a glossary entry",
+              "added {n} glossary entries"
+            ]
+          },
+          "es": {
+            "label": "Añadiendo una entrada al glosario",
+            "phrase": [
+              "añadió una entrada al glosario",
+              "añadió {n} entradas al glosario"
+            ]
+          }
+        },
+        "edit_wiki_page": {
+          "en": {
+            "label": "Editing a wiki page",
+            "phrase": [
+              "edited a wiki page",
+              "edited wiki pages {n} times"
+            ]
+          },
+          "es": {
+            "label": "Editando una página de la wiki",
+            "phrase": [
+              "editó una página de la wiki",
+              "editó páginas de la wiki {n} veces"
+            ]
+          }
+        },
+        "add_database_entry": {
+          "en": {
+            "label": "Adding a database entry",
+            "phrase": [
+              "added a database entry",
+              "added {n} database entries"
+            ]
+          },
+          "es": {
+            "label": "Añadiendo una entrada a la base de datos",
+            "phrase": [
+              "añadió una entrada a la base de datos",
+              "añadió {n} entradas a la base de datos"
             ]
           }
         }

@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -130,16 +130,21 @@
             "edit_activity",
             "add_section",
             "edit_section",
-            "download_file"
+            "download_file",
+            "list_book_chapters",
+            "add_book_chapter",
+            "edit_book_chapter",
+            "move_book_chapter",
+            "validate_html"
           ],
           "texts": {
             "en": {
               "label": "Course content",
-              "description": "Pages, books, files, folders, links and section texts, as HTML Moodle keeps."
+              "description": "Pages, books with their chapters, files, folders, links and section texts, as HTML checked before Moodle gets it."
             },
             "es": {
               "label": "Contenidos del curso",
-              "description": "Páginas, libros, archivos, carpetas, enlaces y textos de sección, en un HTML que Moodle conserva."
+              "description": "Páginas, libros con sus capítulos, archivos, carpetas, enlaces y textos de sección, en un HTML comprobado antes de llegar a Moodle."
             }
           }
         },
@@ -155,16 +160,17 @@
             "list_assignments",
             "get_submissions",
             "get_rubric",
-            "grant_extension"
+            "grant_extension",
+            "set_rubric"
           ],
           "texts": {
             "en": {
               "label": "Assignments",
-              "description": "Submission settings that match the statement: files and formats, dates and cut-off, groups, feedback and grade."
+              "description": "Submission settings that match the statement (files and formats, dates and cut-off, groups, feedback and grade), and its rubric or marking guide."
             },
             "es": {
               "label": "Tareas",
-              "description": "Ajustes de entrega que encajan con el enunciado: archivos y formatos, fechas y fecha límite, grupos, retroalimentación y nota."
+              "description": "Ajustes de entrega que encajan con el enunciado (archivos y formatos, fechas y fecha límite, grupos, retroalimentación y nota), y su rúbrica o guía de calificación."
             }
           }
         },
@@ -186,16 +192,19 @@
             "set_quiz_pages",
             "add_quiz_section",
             "get_quiz_results",
-            "set_quiz_override"
+            "set_quiz_override",
+            "validate_gift",
+            "export_questions",
+            "add_question_category"
           ],
           "texts": {
             "en": {
               "label": "Quizzes",
-              "description": "Settings for the quiz's purpose, questions imported from GIFT or Moodle XML, their order, pages and total."
+              "description": "Settings for the quiz's purpose, questions checked and imported from GIFT or Moodle XML or exported to reuse, their order, pages and total."
             },
             "es": {
               "label": "Cuestionarios",
-              "description": "Ajustes según el propósito del cuestionario, preguntas importadas en GIFT o Moodle XML, su orden, sus páginas y el total."
+              "description": "Ajustes según el propósito del cuestionario, preguntas comprobadas e importadas en GIFT o Moodle XML o exportadas para reutilizarlas, su orden, sus páginas y el total."
             }
           }
         },
@@ -213,16 +222,34 @@
             "set_group_members",
             "create_grouping",
             "set_grouping_groups",
-            "update_course"
+            "update_course",
+            "get_workshop_allocation",
+            "allocate_workshop_randomly",
+            "schedule_workshop_allocation",
+            "allocate_workshop_reviewer",
+            "get_lesson_pages",
+            "add_lesson_page",
+            "edit_lesson_page",
+            "add_database_field",
+            "list_database_presets",
+            "apply_database_preset",
+            "set_database_template",
+            "add_glossary_entry",
+            "create_wiki_page",
+            "add_feedback_item",
+            "create_badge",
+            "set_badge_criteria",
+            "set_badge_enabled",
+            "award_badge"
           ],
           "texts": {
             "en": {
               "label": "Other activities",
-              "description": "Workshops, lessons, glossaries, wikis, forums, choices and H5P, with completion, restrictions and groups."
+              "description": "Workshops with their allocation, lessons with their pages and jumps, databases, glossaries, wikis, feedback, forums, choices and H5P, with completion, restrictions, groups and badges."
             },
             "es": {
               "label": "Otras actividades",
-              "description": "Talleres, lecciones, glosarios, wikis, foros, consultas y H5P, con finalización, restricciones y grupos."
+              "description": "Talleres con su asignación, lecciones con sus páginas y saltos, bases de datos, glosarios, wikis, encuestas, foros, consultas y H5P, con finalización, restricciones, grupos e insignias."
             }
           }
         },
@@ -375,16 +402,17 @@
           "tools": [
             "create_activity",
             "get_activity_settings",
-            "get_scorm"
+            "get_scorm",
+            "update_activity"
           ],
           "texts": {
             "en": {
               "label": "SCORM packages",
-              "description": "An HTML activity packaged as SCORM 1.2, uploaded and set up so Moodle records completion and a score."
+              "description": "An HTML activity packaged as SCORM 1.2, uploaded, replaced in place and set up so Moodle records completion and a score."
             },
             "es": {
               "label": "Paquetes SCORM",
-              "description": "Una actividad HTML empaquetada como SCORM 1.2, subida y configurada para que Moodle registre la finalización y la nota."
+              "description": "Una actividad HTML empaquetada como SCORM 1.2, subida, sustituida en su sitio y configurada para que Moodle registre la finalización y la nota."
             }
           }
         },
@@ -691,6 +719,134 @@
             "phrase": [
               "esperó a que entraras",
               "esperó a que entraras {n} veces"
+            ]
+          }
+        },
+        "set_rubric": {
+          "en": {
+            "label": "Defining the rubric",
+            "phrase": [
+              "defined a rubric",
+              "defined {n} rubrics"
+            ]
+          },
+          "es": {
+            "label": "Definiendo la rúbrica",
+            "phrase": [
+              "definió una rúbrica",
+              "definió {n} rúbricas"
+            ]
+          }
+        },
+        "validate_gift": {
+          "en": {
+            "label": "Checking GIFT questions",
+            "phrase": [
+              "checked GIFT questions",
+              "checked GIFT {n} times"
+            ]
+          },
+          "es": {
+            "label": "Comprobando preguntas GIFT",
+            "phrase": [
+              "comprobó preguntas GIFT",
+              "comprobó GIFT {n} veces"
+            ]
+          }
+        },
+        "validate_html": {
+          "en": {
+            "label": "Checking the HTML",
+            "phrase": [
+              "checked HTML",
+              "checked HTML {n} times"
+            ]
+          },
+          "es": {
+            "label": "Comprobando el HTML",
+            "phrase": [
+              "comprobó HTML",
+              "comprobó HTML {n} veces"
+            ]
+          }
+        },
+        "export_questions": {
+          "en": {
+            "label": "Exporting questions",
+            "phrase": [
+              "exported questions",
+              "exported questions {n} times"
+            ]
+          },
+          "es": {
+            "label": "Exportando preguntas",
+            "phrase": [
+              "exportó preguntas",
+              "exportó preguntas {n} veces"
+            ]
+          }
+        },
+        "add_book_chapter": {
+          "en": {
+            "label": "Adding a book chapter",
+            "phrase": [
+              "added a chapter",
+              "added {n} chapters"
+            ]
+          },
+          "es": {
+            "label": "Añadiendo un capítulo al libro",
+            "phrase": [
+              "añadió un capítulo",
+              "añadió {n} capítulos"
+            ]
+          }
+        },
+        "add_lesson_page": {
+          "en": {
+            "label": "Adding a lesson page",
+            "phrase": [
+              "added a lesson page",
+              "added {n} lesson pages"
+            ]
+          },
+          "es": {
+            "label": "Añadiendo una página a la lección",
+            "phrase": [
+              "añadió una página a la lección",
+              "añadió {n} páginas a lecciones"
+            ]
+          }
+        },
+        "create_badge": {
+          "en": {
+            "label": "Creating a badge",
+            "phrase": [
+              "created a badge",
+              "created {n} badges"
+            ]
+          },
+          "es": {
+            "label": "Creando una insignia",
+            "phrase": [
+              "creó una insignia",
+              "creó {n} insignias"
+            ]
+          }
+        },
+        "allocate_workshop_randomly": {
+          "en": {
+            "label": "Allocating the workshop's reviews",
+            "phrase": [
+              "allocated reviews",
+              "allocated reviews {n} times"
+            ]
+          },
+          "es": {
+            "label": "Asignando las revisiones del taller",
+            "phrase": [
+              "asignó revisiones",
+              "asignó revisiones {n} veces"
             ]
           }
         }

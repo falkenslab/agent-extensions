@@ -43,6 +43,8 @@ With moodle-teacher's tools (its `publishing` skill: hidden first, checked, then
 
 ## Checking it
 
+Before saving, `validate_html` (moodle-mcp) reports tags left open and what Moodle's cleaning removes. It doesn't decide inline styles: whether `style` attributes survive is the site's HTML filter, the same for all of a teacher's content.
+
 After saving, read it back (`get_activity_content` for a page or label, `get_activity_settings` for an assignment's description): if the site's HTML filter removed the `style` attributes, the content arrives plain. Tell the person instead of saving it again: that's the site's setting, and only its administrator changes it.
 
-A quiz question's saved HTML can't be read back: moodle-mcp 0.3.0 gives a question's text without its markup. Ask the person to open the quiz's "Preview" (it doesn't count in the results) and check the white box around the question and the green feedback label. Then, for everything, the person previews it as a student.
+A quiz question's HTML is checked through an export: `export_questions` in `xml` of the category you imported into, then read the file: each question's `<text>` must still have its `style` attributes. If an assignment or a page already showed the site keeps styles, that check is enough for the rest. Then, for everything, the person previews it as a student (a quiz's "Preview" doesn't count in the results).

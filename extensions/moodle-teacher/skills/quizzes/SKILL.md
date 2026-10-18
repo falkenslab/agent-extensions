@@ -26,8 +26,11 @@ Create it hidden with `create_activity` (`type: "quiz"`); the description says w
 ## 2. Questions in a bank
 
 - **Which bank.** `list_question_banks`: in Moodle 5 each quiz has its own bank, and shared banks are separate "Question bank" activities any quiz in the course can use; in 4.x there is one course bank. `list_questions` lists a bank's categories and questions with their status.
-- **Several questions: import them.** `import_questions` with GIFT or Moodle XML, as text or a file, into a category named for the topic, never the default one. Moodle checks the whole file first: when it can't parse it, nothing is imported and its messages say why.
-- **One or two:** `create_question` (multichoice, truefalse, shortanswer, numerical, essay).
+- **Several questions: import them.** `import_questions` with GIFT or Moodle XML, as text or a file, into a category named for the topic, never the default one (`add_question_category` if it doesn't exist). Moodle checks the whole file first: when it can't parse it, nothing is imported and its messages say why.
+- **GIFT: `validate_gift` first**, with the same text or file: it splits the questions as Moodle does and reports each problem with its line (a question Moodle can't read, a multiple choice with no right answer, a weight Moodle doesn't take). Fix and check again until it's valid, then import.
+- **Other types** (Cloze, ordering, drag and drop, calculated…) in Moodle XML, or `create_question` for the types it takes.
+- **Reusing a bank**: `export_questions` saves a bank or a category to a GIFT or Moodle XML file, which `import_questions` recreates in another course.
+- **One or two:** `create_question`, and `update_question` to fix one.
 - **Approve the questions on their own**, apart from creating the quiz: list each one (stem, type, right answer, distractors briefly). "6 GIFT questions about X" isn't reviewable.
 - **Ready, not draft.** A quiz can't use a draft question: `set_question_status` to `ready` once the person has seen them.
 - Names carrying their place (`U1-01 Container vs VM`, `U1-02 ...`) keep the order visible in the bank and the quiz.

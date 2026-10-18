@@ -38,12 +38,10 @@ When the task calls for it: "Require that students accept the submission stateme
 
 ## Its rubric
 
-moodle-mcp 0.3.0 reads a rubric (`get_rubric`) but has no tool to define one. Draft the criteria and levels (each level with its description and points; the top levels add up to the maximum grade), then either:
+Draft it with the person first: a **rubric** (criteria, each with two levels or more, a definition and its points; the top levels add up to the maximum grade) or a **marking guide** (criteria, each with a short name, a description for students, one for markers and a maximum, plus the comments markers use often). Then `set_rubric` (`method: "rubric"` or `"guide"`) defines it, ready to use, after their yes; it returns the definition as `get_rubric` reads it, so compare it with the draft.
 
-- the person defines it in Moodle: the assignment's "Advanced grading", "Change active grading method to" Rubric, "Define new grading form from scratch", "Save rubric and make it ready"; or
-- with their yes, you do it with the `browser_*` tools, typing into each field (the rubric editor only saves what it saw typed) and reading the page again after saving.
-
-Then `get_rubric` confirms it's ready, with the criteria intended. Saving it is a publication: students see the rubric.
+- Saving it is a publication: students see the rubric.
+- It replaces any rubric the assignment had, with new criterion and level ids, and it's refused once anything was graded with it (Moodle would regrade). To change a rubric already in use, the person decides in Moodle's "Advanced grading" what happens to the grades.
 
 ## Changing one with submissions
 

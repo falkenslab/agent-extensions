@@ -12,7 +12,7 @@ What the content says is the person's (or comes from wherever the agent's teachi
 | Content | Moodle resource | How |
 | --- | --- | --- |
 | Notes of reasonable length | Page (`page`) | `create_activity` with `content` (HTML) |
-| Long notes in parts | Book (`book`) | `create_activity` creates it; moodle-mcp has no tool for its chapters: the person adds them, or a page per part |
+| Long notes in parts | Book (`book`) | `create_activity` creates it empty, then `add_book_chapter` per chapter (HTML `content`, images in `embed`, `subchapter` for a part of the one before); `list_book_chapters` reads them back |
 | A document to download (a syllabus, a template, notes as PDF) | File (`resource`), or folder (`folder`) for several | `create_activity` with `files` (absolute local paths; the first is a file resource's main one) |
 | An external reference | URL (`url`) | `create_activity` with `url`, and a `description` saying what to look at and why |
 | A short note between activities on the course page | Text and media area (`label`) | `create_activity` with `content`; no `name` needed |
@@ -27,6 +27,7 @@ Check the type is offered in this course first (`get_site_info` with `courseId`)
 - Code and commands in `<pre><code>`, with HTML entities for `<`, `>` and `&`: they can be copied and keep their indentation.
 - Images: local files in `embed`, named in the HTML by file name (`<img src="flow.png" alt="...">`); moodle-mcp uploads them into the activity. Alt text says what the image shows; empty only for decoration.
 - Links say where they go ("the official documentation of Docker volumes"), never "click here". Tables only for tabular data, with `<th>` headers.
+- **Check it before sending**: `validate_html` with the HTML and its `embed` reports tags left open, what Moodle's cleaning will remove (scripts, `<style>`, frames, forms, `onclick`), and images named but not embedded or embedded but not named. Fix what it reports; it's approximate, so still read the result back.
 
 ## Editing what's there
 
