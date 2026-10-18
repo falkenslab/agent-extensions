@@ -1,6 +1,6 @@
 {
   "name": "docker-lab",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
   "author": {
     "name": "Falken's Lab",

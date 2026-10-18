@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/falkenslab/docker-mcp/main/docs/static/img/logo.svg" alt="Logo de docker-mcp: dos piezas de puzle que encajan, un robot para el agente y contenedores apilados para Docker" width="112"/>
+<img src="https://raw.githubusercontent.com/falkenslab/agent-kit-extensions/main/extensions/docker-lab/assets/logo.svg" alt="Logo de docker-lab: un cubo dentro de un borde discontinuo, un sandbox" width="112"/>
 
 # docker-lab
 
