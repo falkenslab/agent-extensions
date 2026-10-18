@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Falken's Lab extensions</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cstyle%3E.a%7Bfill:%232e3a8c%7D.b%7Bfill:%234453b8%7D.c%7Bfill:%236272de%7D@media (prefers-color-scheme:dark)%7B.a%7Bfill:%238a97f0%7D.c%7Bfill:%234453b8%7D.b%7Bfill:%236272de%7D%7D%3C/style%3E%3Cpath d='M32 26V34M32 34H11V46M32 34V46M32 34H53V46' fill='none' stroke='%236272de' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='21' y='4' width='22' height='22' rx='6' fill='%23ff6b57'/%3E%3Crect class='a' x='4' y='46' width='14' height='14' rx='4'/%3E%3Crect class='b' x='25' y='46' width='14' height='14' rx='4'/%3E%3Crect class='c' x='46' y='46' width='14' height='14' rx='4'/%3E%3C/svg%3E">
 <meta name="description" content="Extensions for agents built on agent-kit, and plugins for Claude Code: search them by name or topic.">
 <style>
   :root {
@@ -23,7 +24,10 @@
   .langs { display: flex; gap: 2px; border: 1px solid var(--line); border-radius: 999px; padding: 2px; background: var(--panel); flex: none; }
   .lang { font: inherit; font-size: 13px; border: 0; background: none; color: var(--text-2); border-radius: 999px; padding: 3px 10px; cursor: pointer; }
   .lang[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
-  header h1 { margin: 0 0 6px; font-size: clamp(26px, 4vw, 36px); }
+  header h1 { margin: 0 0 6px; font-size: clamp(26px, 4vw, 36px); display: flex; align-items: center; gap: 12px; }
+  /* agent-extensions' logo, in agent-kit's colors: lighter blues on a dark page. */
+  .brand { width: 1.25em; height: 1.25em; flex: none; --b1: #2e3a8c; --b2: #4453b8; --b3: #6272de; }
+  @media (prefers-color-scheme: dark) { .brand { --b1: #8a97f0; --b2: #6272de; --b3: #4453b8; } }
   header p { margin: 0 0 18px; color: var(--text-2); max-width: 720px; }
   header a { color: var(--accent); }
   .add { margin-bottom: 26px; }
@@ -86,7 +90,7 @@
 <main>
   <header>
     <div class="bar">
-      <h1 id="title">Falken's Lab extensions</h1>
+      <h1><svg class="brand" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 26V34M32 34H11V46M32 34V46M32 34H53V46" fill="none" stroke="#6272de" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="21" y="4" width="22" height="22" rx="6" fill="#ff6b57"/><rect x="4" y="46" width="14" height="14" rx="4" fill="var(--b1)"/><rect x="25" y="46" width="14" height="14" rx="4" fill="var(--b2)"/><rect x="46" y="46" width="14" height="14" rx="4" fill="var(--b3)"/></svg><span id="title">Falken's Lab extensions</span></h1>
       <div class="langs" id="langs" role="group" aria-label="Language">
         <button class="lang" type="button" data-lang="en" lang="en">EN</button>
         <button class="lang" type="button" data-lang="es" lang="es">ES</button>

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/falkenslab/agent-kit/main/docs/static/img/logo.svg" alt="agent-kit logo" width="112"/>
+<img src="https://raw.githubusercontent.com/falkenslab/agent-extensions/main/assets/logo.svg" alt="agent-extensions logo" width="112"/>
 
 # agent-extensions
 
