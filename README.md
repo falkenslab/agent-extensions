@@ -46,7 +46,7 @@ codex plugin add moodle-ui-kit@falkenslab
 
 An agent whose own marketplace this is (its `officialMarketplace`) offers them in its chat's catalog, without the first command.
 
-Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` works fully, and `docker-lab` too, in `full` mode; `moodle-teacher` and `moodle-student` too, asking for your Moodle site in the chat (enable only one of them: both name their server `moodle`, and Codex keeps one per name); `weather` loads its skill but not its server, which runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand).
+Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` works fully, and `docker-lab` too, in `full` mode; `moodle-teacher` and `moodle-student` too, asking for your Moodle site in the chat (enable only one of them: both name their server `moodle`, and Codex keeps one per name); `weather` loads its skill but not its server, which runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand); `canva`, whose server is Canva's remote one behind its sign-in, isn't checked there yet.
 
 ## 🧩 The extensions
 

@@ -58,6 +58,10 @@ const TEXTS = {
     useCodex: "Start Codex (`codex`) and ask, in your own words:",
     useAgent: "Open your agent's chat and ask, in your own words:",
     noExamples: "Its README has examples of what to ask.",
+    remote: (hosts) => `Nothing to install: it works on ${hosts}, where what your agent sends it goes.`,
+    signInClaude: "Sign in with your account: run `/mcp` in Claude Code, pick its server and follow the link.",
+    signInCodex: "It signs in to its server with your account; not checked in Codex yet.",
+    signInAgent: (name) => `Sign in with your account from the chat: \`/extensions sign-in ${name}\` gives you the link to open. A new session doesn't ask again.`,
     conceptsTitle: "What's in an extension",
     concepts: [
       ["🧩", "Extension", "A pack you add to your agent, like an app on your phone. Each one lets it work with something new: your Moodle courses, your Canva designs, Docker…"],
@@ -110,6 +114,10 @@ const TEXTS = {
     useCodex: "Abre Codex (`codex`) y pide, con tus palabras:",
     useAgent: "Abre el chat de tu agente y pide, con tus palabras:",
     noExamples: "Su README tiene ejemplos de qué pedirle.",
+    remote: (hosts) => `Nada que instalar: funciona en ${hosts}, adonde va lo que tu agente le envía.`,
+    signInClaude: "Inicia sesión con tu cuenta: ejecuta `/mcp` en Claude Code, elige su servidor y sigue el enlace.",
+    signInCodex: "Inicia sesión en su servidor con tu cuenta; aún no está probada en Codex.",
+    signInAgent: (name) => `Inicia sesión con tu cuenta desde el chat: \`/extensions sign-in ${name}\` te da el enlace que abrir. Una sesión nueva no lo vuelve a pedir.`,
     conceptsTitle: "Qué hay en una extensión",
     concepts: [
       ["🧩", "Extensión", "Un paquete que añades a tu agente, como una app en el móvil. Cada una le permite trabajar con algo nuevo: tus cursos de Moodle, tus diseños de Canva, Docker…"],
@@ -404,10 +412,12 @@ function howTo(extension, key, data) {
     agentKit: [t("installAgent"), [`<agent> ${catalog.add?.agentKit}`, `<agent> ${extension.install.agentKit}`]],
   }[key];
   const needs = (extension.requirements ?? []).map((r) => para(`${escape(t("needs")(r))}${r.install?.url ? ` <a href="${escape(r.install.url)}" target="_blank" rel="noopener">${escape(t("howToGet"))}</a>` : ""}`, "need"));
-  steps.append(step(t("install"), para(inline(install[0])), ...install[1].filter(Boolean).map(commandBox), ...needs));
+  // A remote server (catalog.json's remote): nothing runs on the computer, and what the agent sends goes to its hosts.
+  const remote = extension.remote?.length ? [para(inline(t("remote")(extension.remote.map((host) => `\`${host}\``).join(", "))), "need")] : [];
+  steps.append(step(t("install"), para(inline(install[0])), ...install[1].filter(Boolean).map(commandBox), ...needs, ...remote));
   let configure;
   if (!data) configure = [para(escape(t("loading")), "muted")];
-  else if (!data.settings.length) configure = [para(escape(t("noSettings")))];
+  else if (!data.settings.length) configure = extension.remote?.length ? [] : [para(escape(t("noSettings")))];
   // Codex has no plugin settings: only how the extension behaves without them.
   else if (key === "codex") configure = [para(inline(t("settingsCodex")))];
   else {
@@ -420,6 +430,8 @@ function howTo(extension, key, data) {
     }).join("");
     configure = [para(inline(intro)), list];
   }
+  // Signing in to a remote server, each client its own way.
+  if (data && extension.remote?.length) configure.push(para(inline({ claude: t("signInClaude"), codex: t("signInCodex"), agentKit: t("signInAgent")(name) }[key])));
   steps.append(step(t("configure"), ...configure));
   const useIntro = { claude: t("useClaude"), codex: t("useCodex"), agentKit: t("useAgent") }[key];
   let use;
