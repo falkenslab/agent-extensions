@@ -93,6 +93,15 @@ code.cmd { font-family: var(--mono); font-size: 14px; background: var(--code); b
 .copy { font-family: var(--sans); font-size: 12px; font-weight: 700; border: 1px solid var(--line); background: var(--panel); color: var(--text-2); cursor: pointer; padding: 3px 9px; border-radius: 6px; }
 .copy:hover { color: var(--accent); border-color: var(--accent); }
 
+/* What an extension holds, under the install card: four cards in plain words. */
+.concepts { max-width: 1000px; margin: 64px auto 0; }
+.concepts h2 { margin: 0 0 22px; font-size: clamp(24px, 3.4vw, 32px); font-weight: 800; letter-spacing: -0.03em; }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; text-align: left; }
+.concept { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow); }
+.concept .icon { font-size: 26px; line-height: 1; }
+.concept h3 { margin: 10px 0 6px; font-size: 17px; font-weight: 700; }
+.concept p { margin: 0; font-size: 15px; color: var(--text-2); }
+
 /* The catalog. */
 .catalog { padding-block: 56px 32px; flex: 1 0 auto; }
 .catalog .head { text-align: center; margin-bottom: 26px; }

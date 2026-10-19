@@ -58,6 +58,13 @@ const TEXTS = {
     useCodex: "Start Codex (`codex`) and ask, in your own words:",
     useAgent: "Open your agent's chat and ask, in your own words:",
     noExamples: "Its README has examples of what to ask.",
+    conceptsTitle: "What's in an extension",
+    concepts: [
+      ["🧩", "Extension", "A pack you add to your agent, like an app on your phone. Each one lets it work with something new: your Moodle courses, your Canva designs, Docker…"],
+      ["📖", "Skills", "The know-how that comes with it: how to do each task well, step by step, and when to ask you first. Like the notes an expert would leave you."],
+      ["🔧", "Tools", "What lets your agent actually do things instead of only talking about them: look up your courses, create a design, start a program."],
+      ["✨", "Capabilities", "What your agent can do thanks to an extension, in plain words: grading, creating designs, copying a course. Skills and tools together, and what each extension's card lists."],
+    ],
   },
   es: {
     title: "Dale a tu agente nuevas capacidades",
@@ -103,6 +110,13 @@ const TEXTS = {
     useCodex: "Abre Codex (`codex`) y pide, con tus palabras:",
     useAgent: "Abre el chat de tu agente y pide, con tus palabras:",
     noExamples: "Su README tiene ejemplos de qué pedirle.",
+    conceptsTitle: "Qué hay en una extensión",
+    concepts: [
+      ["🧩", "Extensión", "Un paquete que añades a tu agente, como una app en el móvil. Cada una le permite trabajar con algo nuevo: tus cursos de Moodle, tus diseños de Canva, Docker…"],
+      ["📖", "Habilidades", "El saber hacer que trae: cómo hacer bien cada tarea, paso a paso, y cuándo preguntarte antes. Como las notas que te dejaría alguien experto."],
+      ["🔧", "Herramientas", "Lo que permite a tu agente hacer las cosas de verdad, y no solo hablar de ellas: consultar tus cursos, crear un diseño, arrancar un programa."],
+      ["✨", "Capacidades", "Lo que tu agente sabe hacer gracias a una extensión, dicho en llano: calificar, crear diseños, copiar un curso. Son las habilidades y las herramientas juntas, y lo que muestra la tarjeta de cada extensión."],
+    ],
   },
 };
 // ?lang=es, else what the person chose last time, else the browser's language.
@@ -151,6 +165,13 @@ function applyLang() {
   setText("nav-cta", t("browse"));
   setText("cta-browse", t("browse"));
   setText("catalog-eyebrow", t("catalog"));
+  setText("concepts-title", t("conceptsTitle"));
+  if ($("concepts")) $("concepts").replaceChildren(...t("concepts").map(([icon, name, text]) => {
+    const card = document.createElement("div");
+    card.className = "concept";
+    card.innerHTML = `<span class="icon" aria-hidden="true">${icon}</span><h3>${escape(name)}</h3><p>${escape(text)}</p>`;
+    return card;
+  }));
   if ($("search")) {
     $("search").placeholder = t("search");
     $("search").setAttribute("aria-label", t("searchLabel"));
