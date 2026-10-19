@@ -8,6 +8,217 @@
   },
   "extensions": [
     {
+      "name": "canva",
+      "version": "0.1.0",
+      "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
+      "descriptions": {
+        "en": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
+        "es": "Canva para tu agente, a través del servidor MCP remoto oficial de Canva: buscar, crear, editar y exportar tus diseños, con imágenes y kits de marca, iniciando sesión con tu cuenta de Canva. No está hecha por Canva."
+      },
+      "category": "design",
+      "topics": [
+        "canva",
+        "design",
+        "graphics",
+        "presentations",
+        "worksheets",
+        "images",
+        "mcp",
+        "miyagi",
+        "padawan",
+        "teaching",
+        "learning"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/canva",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/canva/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/canva/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/canva/README.es.md"
+      },
+      "install": {
+        "claudeCode": "claude plugin install canva@falkenslab",
+        "agentKit": "extension add canva@falkenslab"
+      },
+      "capabilities": [
+        {
+          "id": "design-find",
+          "skills": [
+            "designs"
+          ],
+          "tools": [
+            "search-designs",
+            "read-design",
+            "search-folders",
+            "list-folder-items",
+            "resolve-shortlink",
+            "help"
+          ],
+          "texts": {
+            "en": {
+              "label": "Finding designs",
+              "description": "Searching your designs and folders, and reading what a design holds."
+            },
+            "es": {
+              "label": "Encontrar diseños",
+              "description": "Buscar en tus diseños y carpetas, y leer lo que tiene un diseño."
+            }
+          }
+        },
+        {
+          "id": "design-create",
+          "skills": [
+            "designs"
+          ],
+          "tools": [
+            "create-design",
+            "get-create-design-async-job",
+            "generate-design",
+            "request-outline-review",
+            "generate-design-structured",
+            "create-design-from-candidate",
+            "copy-design",
+            "resize-design",
+            "import-design-from-url"
+          ],
+          "texts": {
+            "en": {
+              "label": "Creating designs",
+              "description": "Presentations, posters, infographics and worksheets from a description, a copy, another size or a file."
+            },
+            "es": {
+              "label": "Crear diseños",
+              "description": "Presentaciones, pósteres, infografías y fichas a partir de una descripción, una copia, otro tamaño o un archivo."
+            }
+          }
+        },
+        {
+          "id": "design-edit",
+          "skills": [
+            "designs"
+          ],
+          "tools": [
+            "read-design",
+            "edit-design",
+            "merge-designs",
+            "create-folder",
+            "move-item-to-folder"
+          ],
+          "texts": {
+            "en": {
+              "label": "Editing designs",
+              "description": "Changing texts, images and pages, with your yes before saving, and keeping your designs in folders."
+            },
+            "es": {
+              "label": "Editar diseños",
+              "description": "Cambiar textos, imágenes y páginas, con tu sí antes de guardar, y ordenar tus diseños en carpetas."
+            }
+          }
+        },
+        {
+          "id": "design-images",
+          "skills": [
+            "images"
+          ],
+          "tools": [
+            "get-assets",
+            "generate-image",
+            "get-generate-image-job",
+            "remove-background",
+            "separate-image-layers",
+            "get-separate-image-layers-job",
+            "create-upload-url",
+            "upload-asset-from-url",
+            "import-claude-motion-from-url",
+            "get-motion-import-job-status"
+          ],
+          "texts": {
+            "en": {
+              "label": "Images for designs",
+              "description": "Generating images, removing backgrounds, separating layers and bringing your files into Canva."
+            },
+            "es": {
+              "label": "Imágenes para diseños",
+              "description": "Generar imágenes, quitar fondos, separar capas y llevar tus archivos a Canva."
+            }
+          }
+        },
+        {
+          "id": "design-brand",
+          "skills": [
+            "brand"
+          ],
+          "tools": [
+            "list-brand-kits",
+            "search-brand-templates",
+            "get-brand-template-dataset",
+            "get-design-dataset",
+            "create-design-from-brand-template",
+            "create-brand-template-draft",
+            "publish-brand-template"
+          ],
+          "texts": {
+            "en": {
+              "label": "Brand kits and templates",
+              "description": "Your or your school's colours, fonts and templates, on the Canva plans that have them."
+            },
+            "es": {
+              "label": "Kits y plantillas de marca",
+              "description": "Los colores, fuentes y plantillas tuyos o de tu centro, en los planes de Canva que los tienen."
+            }
+          }
+        },
+        {
+          "id": "design-export",
+          "skills": [
+            "export"
+          ],
+          "tools": [
+            "get-export-formats",
+            "export-design"
+          ],
+          "texts": {
+            "en": {
+              "label": "Exporting designs",
+              "description": "PDF to print, PNG or JPG for images, PPTX for slides, MP4 for video."
+            },
+            "es": {
+              "label": "Exportar diseños",
+              "description": "PDF para imprimir, PNG o JPG para imágenes, PPTX para diapositivas y MP4 para vídeo."
+            }
+          }
+        },
+        {
+          "id": "design-comments",
+          "skills": [
+            "designs"
+          ],
+          "tools": [
+            "list-comments",
+            "list-replies",
+            "comment-on-design",
+            "reply-to-comment"
+          ],
+          "texts": {
+            "en": {
+              "label": "Comments on designs",
+              "description": "Reading a design's comments and, with your yes, writing and answering them."
+            },
+            "es": {
+              "label": "Comentarios en diseños",
+              "description": "Leer los comentarios de un diseño y, con tu sí, escribirlos y responderlos."
+            }
+          }
+        }
+      ],
+      "remote": [
+        "mcp.canva.com"
+      ],
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/canva/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/canva/assets/banner.svg"
+    },
+    {
       "name": "docker-lab",
       "version": "0.1.4",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",

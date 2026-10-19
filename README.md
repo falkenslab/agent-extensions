@@ -56,6 +56,7 @@ Codex installs them too, with their skills and servers, but it has no plugin set
 | 🧑‍🎓 [moodle-student](extensions/moodle-student/) | Helps in the Moodle courses you take, as you, through [moodle-mcp](https://github.com/falkenslab/moodle-mcp): what you have left, handing in, quizzes, forums, grades and feedback |
 | 🎨 [moodle-ui-kit](extensions/moodle-ui-kit/) | A clean visual style for what your agent publishes in Moodle, with inline styles that work on any site; based on [noeper](https://github.com/noeper)'s [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit) |
 | 🐳 [docker-lab](extensions/docker-lab/) | Runs and tries software (tools, services, someone's code) in isolated Docker labs without touching your computer, verifies by running, and manages your Docker, through [docker-mcp](https://github.com/falkenslab/docker-mcp) |
+| 🖌️ [canva](extensions/canva/) | Makes, edits and exports your Canva designs (presentations, posters, worksheets, images, brand kits) through [Canva's official remote MCP server](https://www.canva.dev/docs/mcp/), signed in with your Canva account; not made by Canva |
 | ☀️ [weather](extensions/weather/) | The weather in your city, for an agent that plans with you; also agent-kit's example of an extension with its own MCP server, built step by step in [its tutorial](https://falkenslab.github.io/agent-kit/docs/extensions/writing) |
 
 ## 🧭 The catalog
