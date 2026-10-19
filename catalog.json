@@ -226,7 +226,7 @@
     },
     {
       "name": "moodle-student",
-      "version": "0.1.9",
+      "version": "0.1.10",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
@@ -475,7 +475,7 @@
     },
     {
       "name": "moodle-teacher",
-      "version": "0.2.9",
+      "version": "0.2.10",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
@@ -860,16 +860,18 @@
             "copy_course",
             "backup_course",
             "restore_course",
-            "copy_between_sites"
+            "copy_between_sites",
+            "read_backup",
+            "anonymize_backup"
           ],
           "texts": {
             "en": {
               "label": "Copying courses",
-              "description": "Copying, importing, backing up and restoring courses, and checking the result."
+              "description": "Copying, importing, backing up and restoring courses, checking the result, and reading or anonymizing a backup file."
             },
             "es": {
               "label": "Copiar cursos",
-              "description": "Copiar, importar, hacer copias de seguridad y restaurar cursos, y comprobar el resultado."
+              "description": "Copiar, importar, hacer copias de seguridad y restaurar cursos, comprobar el resultado, y leer o anonimizar una copia de seguridad."
             }
           }
         },

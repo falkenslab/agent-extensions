@@ -77,7 +77,7 @@ Cámbialos después con `my-agent extension config moodle-student`, en el chat c
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.4.0`, con las herramientas de alumno y tus ajustes |
+| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.4.1`, con las herramientas de alumno y tus ajustes |
 | 🔎 `read-a-course` | Secciones, recursos y actividades, qué está bloqueado y por qué, qué cuenta como hecho |
 | 🗓️ `plan-my-work` | Lo que queda, las fechas de entrega y de corte, qué desbloquea qué, en un orden realista |
 | 📤 `hand-in-an-assignment` | Qué admite, guardar, comprobar y enviar definitivamente, la declaración de autoría |

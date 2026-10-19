@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -426,16 +426,18 @@
             "copy_course",
             "backup_course",
             "restore_course",
-            "copy_between_sites"
+            "copy_between_sites",
+            "read_backup",
+            "anonymize_backup"
           ],
           "texts": {
             "en": {
               "label": "Copying courses",
-              "description": "Copying, importing, backing up and restoring courses, and checking the result."
+              "description": "Copying, importing, backing up and restoring courses, checking the result, and reading or anonymizing a backup file."
             },
             "es": {
               "label": "Copiar cursos",
-              "description": "Copiar, importar, hacer copias de seguridad y restaurar cursos, y comprobar el resultado."
+              "description": "Copiar, importar, hacer copias de seguridad y restaurar cursos, comprobar el resultado, y leer o anonimizar una copia de seguridad."
             }
           }
         },
@@ -703,6 +705,38 @@
             "phrase": [
               "restauró una copia",
               "restauró {n} copias"
+            ]
+          }
+        },
+        "read_backup": {
+          "en": {
+            "label": "Reading a backup file",
+            "phrase": [
+              "read a backup file",
+              "read {n} backup files"
+            ]
+          },
+          "es": {
+            "label": "Leyendo una copia de seguridad",
+            "phrase": [
+              "leyó una copia",
+              "leyó {n} copias"
+            ]
+          }
+        },
+        "anonymize_backup": {
+          "en": {
+            "label": "Anonymizing a backup file",
+            "phrase": [
+              "anonymized a backup file",
+              "anonymized {n} backup files"
+            ]
+          },
+          "es": {
+            "label": "Anonimizando una copia de seguridad",
+            "phrase": [
+              "anonimizó una copia",
+              "anonimizó {n} copias"
             ]
           }
         },

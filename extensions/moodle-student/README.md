@@ -77,7 +77,7 @@ Change them later with `my-agent extension config moodle-student`, in the chat w
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.4.0`, a student's tools, with your settings |
+| 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.4.1`, a student's tools, with your settings |
 | 🔎 `read-a-course` | Sections, resources and activities, what's locked and why, what counts as done |
 | 🗓️ `plan-my-work` | What's left, deadlines and cut-offs, what unlocks what, in a realistic order |
 | 📤 `hand-in-an-assignment` | What it accepts, saving, checking and submitting for good, the statement |

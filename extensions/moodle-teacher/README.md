@@ -77,7 +77,7 @@ Change them later with `my-agent extension config moodle-teacher`, in the chat w
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.4.0`, with your settings |
+| 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.4.1`, with your settings |
 | 🔎 `read-a-course` | What the person can do in a course, its structure, restrictions, completion and dates |
 | 🫥 `publishing` | New content hidden first, checked, then shown; one approval per item |
 | 📄 `course-content` | Pages, books with their chapters, files, folders, links and section texts, as HTML checked before Moodle gets it |
