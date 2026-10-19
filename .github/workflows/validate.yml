@@ -15,7 +15,7 @@ jobs:
       # Claude Code's own validator, strict: a warning fails too. userConfig's `options` needs 2.1.271 or later.
       - run: npm install --global @anthropic-ai/claude-code@latest
       - name: The catalog is up to date
-        run: npx -y @falkenslab/agent-kit-catalog@0.3.0 --check
+        run: npx -y @falkenslab/agent-kit-catalog@0.4.0 --check
       - name: The marketplace
         run: claude plugin validate --strict .
       - name: Each extension

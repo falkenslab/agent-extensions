@@ -10,8 +10,8 @@ Falken's Lab's marketplace (`falkenslab`) of extensions. Each extension folder i
 
 Node 22, no dependencies, no `npm install` at the root.
 
-- `npx -y @falkenslab/agent-kit-catalog@0.3.0` rewrites `catalog.json` from the manifests. Run it after any change to `.claude-plugin/marketplace.json` or an extension's `plugin.json`, and commit the result. The generator lives in agent-kit (the `agent-kit-catalog` package), with the catalog's format; bump its pinned version here and in both workflows together.
-- `npx -y @falkenslab/agent-kit-catalog@0.3.0 --check` fails if `catalog.json` is stale (CI runs it in both workflows).
+- `npx -y @falkenslab/agent-kit-catalog@0.4.0` rewrites `catalog.json` from the manifests. Run it after any change to `.claude-plugin/marketplace.json` or an extension's `plugin.json`, and commit the result. The generator lives in agent-kit (the `agent-kit-catalog` package), with the catalog's format; bump its pinned version here and in both workflows together.
+- `npx -y @falkenslab/agent-kit-catalog@0.4.0 --check` fails if `catalog.json` is stale (CI runs it in both workflows).
 - The links point to `--repo owner/name`, else `GITHUB_REPOSITORY`, else the `origin` remote, else the `repository` shared by every `plugin.json`; the branch is `--branch`, else always `main` (never the checked-out one, so the output is the same on every branch).
 - `claude plugin validate --strict .` validates the marketplace; `claude plugin validate --strict extensions/moodle-teacher` validates one extension. Strict means warnings fail. `userConfig` with `options` needs Claude Code 2.1.271 or later.
 - `extensions/weather/` builds its own MCP server: `npm install` and `npm run build` in `extensions/weather/` write its `dist/server.mjs`, which is committed (agent-kit installs files and never runs `npm install`); its `node_modules/` stays out. Rebuild it after any change to `weather/src/`.
