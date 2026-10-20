@@ -9,7 +9,7 @@
   "extensions": [
     {
       "name": "canva",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
       "descriptions": {
         "en": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",

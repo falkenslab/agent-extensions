@@ -5,7 +5,7 @@ description: Brand kits and brand templates in Canva through Canva's official MC
 
 # Brand kits and templates in Canva
 
-Brand kits and brand templates are Canva Pro and above (Canva for Education and Teams have them; Free doesn't).
+Brand kits and brand templates are Canva Pro and above (Canva for Education and Teams have them; Free doesn't). Reading them needs no yes; creating a design from a template, drafting a template or publishing one each waits for the person's yes, asked as `designs` says ("The yes before creating or changing").
 
 ## First, what there is
 

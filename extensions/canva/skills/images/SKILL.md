@@ -5,7 +5,7 @@ description: Images for the person's Canva designs through Canva's official MCP 
 
 # Images in Canva
 
-Every tool here puts something new in the person's Canva account; only `get-assets` just reads.
+Every tool here puts something new in the person's Canva account; only `get-assets` just reads. So each one waits for the person's yes, asked as `designs` says ("The yes before creating or changing"): what will be made or uploaded, then a yes-or-no question. Picking a style or an option isn't that yes.
 
 ## Generating and editing
 
