@@ -9,13 +9,17 @@ Canva's MCP server works on the person's own Canva account, signed in from the c
 
 ## The yes before creating or changing
 
-Before any tool that creates or changes something in their account (`create-design`, `generate-design`, `generate-design-structured`, `create-design-from-candidate`, `copy-design`, `resize-design`, `merge-designs`, `import-design-from-url`, `edit-design` saving, `create-folder`, `move-item-to-folder`, `comment-on-design`, `reply-to-comment`), say exactly what will happen and ask a yes-or-no question, then wait for the answer:
+Before any tool that creates or changes something in their account (`create-design`, `generate-design`, `generate-design-structured`, `create-design-from-candidate`, `copy-design`, `resize-design`, `merge-designs`, `import-design-from-url`, `edit-design` saving, `create-folder`, `move-item-to-folder`, `comment-on-design`, `reply-to-comment`), say exactly what will happen, in a few lines:
 
-- **What**: the type and size, the title, and the content in a few lines (the sections or slides, the texts that go in), or the exact change.
+- **What**: the type and size, the title, and the content (the sections or slides, the texts that go in), or the exact change.
 - **Where**: in their Canva account (and which folder, if any).
-- **The question**: "Shall I create it?", "Shall I save these changes?". Only a clear yes goes on.
 
-Asking which format, style or option they want is not that yes: when the person picks an option, show what will be created with it and ask again. The person asking for a design ("make me a cheatsheet") isn't that yes either: they asked for one, not for this one. One yes covers the one action it was asked for.
+Then the person's yes, once:
+
+- **The session asks it**, so don't ask another before it: an agent on agent-kit, in guided or interactive mode, stops each of these tools with a panel the person answers (yes, for this session, always, no, never), and Claude Code asks for a tool the person hasn't allowed. Describe first, so they answer knowing what it does, then call the tool. A no there means no: don't retry it without asking. An "always" the person gave is their choice not to be asked: respect it, and still say what you're doing.
+- **Only in a client with no confirmation of its own**, ask a yes-or-no question yourself ("Shall I create it?", "Shall I save these changes?") and wait: only a clear yes goes on.
+
+Asking which format, style or option they want is never that yes, nor is the person asking for a design ("make me a cheatsheet"): they asked for one, not for this one. One yes covers the one action it was given for.
 
 ## Finding
 

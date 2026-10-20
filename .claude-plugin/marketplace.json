@@ -81,7 +81,7 @@
       "name": "canva",
       "source": "./extensions/canva",
       "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "category": "design",
       "tags": [
         "canva",

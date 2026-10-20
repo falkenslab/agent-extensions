@@ -22,14 +22,14 @@ Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkensl
 
 - 🧩 **Nada que instalar.** El servidor de Canva funciona en Canva; la extensión solo le dice al agente dónde está y cómo usarlo.
 - 🔐 **Tu cuenta, tu inicio de sesión.** Entras en Canva desde tu navegador; el agente nunca ve tu contraseña.
-- 🎚️ **Pregunta antes de cambiar.** Lo que solo lee va directo; crear, editar, comentar o publicar una plantilla espera a tu sí, y el modo plan solo deja pasar lo que lee.
+- 🎚️ **Pregunta antes de cambiar.** Lo que solo lee va directo; crear, editar, comentar o publicar una plantilla espera a tu sí, que en agent-kit pide el propio agente (sí, en esta sesión, siempre, no, nunca), y el modo plan solo deja pasar lo que lee. Borrar páginas, publicar una plantilla y comentar preguntan siempre.
 - 🕶️ **Los datos de otros se quedan fuera.** Nombres de alumnos, listas de clase o fotos nunca van a Canva sin tu sí expreso.
 - 🧭 **Conoce tu plan.** En Free dice qué necesita otro plan (kits de marca, cambiar de tamaño, calidad Pro) y ofrece lo que Free permite.
 - 🤖 **Capacidades, no una marca.** Sus capacidades (`design-create`, `design-export`…) son neutras, así que las habilidades de un agente dependen de lo que se puede hacer.
 
 ## 🚀 Empezar
 
-Necesitas una cuenta de Canva y un agente con agent-kit 0.25 o posterior, o Claude Code 2.1.271 o posterior.
+Necesitas una cuenta de Canva y un agente con agent-kit 0.27 o posterior, o Claude Code 2.1.271 o posterior.
 
 ```bash
 # Un agente hecho con agent-kit (su propio comando)
@@ -41,7 +41,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install canva@falkenslab
 ```
 
-Después inicia sesión: en el chat de un agente, `/extensions sign-in canva` te da el enlace que abrir (mientras el chat a pantalla completa lo parta, [agent-kit#72](https://github.com/falkenslab/agent-kit/issues/72), abre el chat con `--plain` para copiarlo entero); en Claude Code, `/mcp`. Una sesión nueva no lo vuelve a pedir. Luego pregunta: «¿Cuáles son mis cinco últimos diseños de Canva?»
+Después inicia sesión: en el chat de un agente, `/extensions sign-in canva` abre en tu navegador la página de inicio de sesión de Canva (y muestra el enlace, por si es otro ordenador); en Claude Code, `/mcp`. Una sesión nueva no lo vuelve a pedir. Luego pregunta: «¿Cuáles son mis cinco últimos diseños de Canva?»
 
 Aún no está probada en Codex.
 

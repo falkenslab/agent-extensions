@@ -1,6 +1,6 @@
 {
   "name": "canva",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
   "author": {
     "name": "Falken's Lab",
@@ -22,7 +22,7 @@
   ],
   "metadata": {
     "agent-kit": {
-      "kit": ">=0.25.0",
+      "kit": ">=0.27.0",
       "description": {
         "es": "Canva para tu agente, a través del servidor MCP remoto oficial de Canva: buscar, crear, editar y exportar tus diseños, con imágenes y kits de marca, iniciando sesión con tu cuenta de Canva. No está hecha por Canva."
       },
@@ -225,6 +225,12 @@
         "get-generate-image-job",
         "get-separate-image-layers-job",
         "get-motion-import-job-status"
+      ],
+      "confirmTools": [
+        "merge-designs",
+        "publish-brand-template",
+        "comment-on-design",
+        "reply-to-comment"
       ],
       "help": "Canva through Canva's official MCP server, signed in with the person's own Canva account (/extensions sign-in canva): finding, creating, editing and exporting designs, images and brand kits; my canva:* skills hold how to do each well in Canva and what never goes to Canva without the person's yes.",
       "labels": {

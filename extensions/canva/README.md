@@ -22,14 +22,14 @@ This extension gives an agent built on [agent-kit](https://github.com/falkenslab
 
 - 🧩 **Nothing to install.** Canva's server runs at Canva; the extension only tells the agent where it is and how to use it.
 - 🔐 **Your account, your sign-in.** You sign in to Canva in your browser; the agent never sees your password.
-- 🎚️ **Asks before it changes.** Reads go straight away; creating, editing, posting a comment or publishing a template waits for your yes, and plan mode lets only the reads through.
+- 🎚️ **Asks before it changes.** Reads go straight away; creating, editing, posting a comment or publishing a template waits for your yes, asked by the agent itself on agent-kit (yes, for this session, always, no, never), and plan mode lets only the reads through. Deleting pages, publishing a template and commenting always ask.
 - 🕶️ **Other people's data stays out.** Students' names, class lists or photos never go to Canva without your explicit yes.
 - 🧭 **Knows your plan.** On Free it says what needs another plan (brand kits, resizing, Pro quality) and offers what Free allows.
 - 🤖 **Capabilities, not a brand.** Its capabilities (`design-create`, `design-export`…) are neutral, so an agent's skills depend on what can be done.
 
 ## 🚀 Quick start
 
-You need a Canva account and an agent on agent-kit 0.25 or later, or Claude Code 2.1.271 or later.
+You need a Canva account and an agent on agent-kit 0.27 or later, or Claude Code 2.1.271 or later.
 
 ```bash
 # An agent built on agent-kit (its own command)
@@ -41,7 +41,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install canva@falkenslab
 ```
 
-Then sign in: in an agent's chat, `/extensions sign-in canva` gives you the link to open (while the full-screen chat splits it, [agent-kit#72](https://github.com/falkenslab/agent-kit/issues/72), open the chat with `--plain` to copy it whole); in Claude Code, `/mcp`. A new session doesn't ask again. Then ask: "What are my last five Canva designs?"
+Then sign in: in an agent's chat, `/extensions sign-in canva` opens Canva's sign-in page in your browser (and shows the link, for another computer); in Claude Code, `/mcp`. A new session doesn't ask again. Then ask: "What are my last five Canva designs?"
 
 Not checked in Codex yet.
 
