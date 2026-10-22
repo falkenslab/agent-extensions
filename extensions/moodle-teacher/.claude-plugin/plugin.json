@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.2.10",
+  "version": "0.3.0",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -24,6 +24,12 @@
       "description": "Your Moodle sites, each as name=address, e.g. school=https://campus.myschool.org. The first one is where the agent starts; you can add more later by asking it.",
       "multiple": true,
       "required": true
+    },
+    "courses": {
+      "type": "string",
+      "title": "Your courses (classrooms)",
+      "description": "Only these courses, by their URLs (e.g. https://campus.myschool.org/course/view.php?id=12), comma-separated, on one site or several: the agent is refused any other. Empty: every course your account sees.",
+      "default": ""
     },
     "headless": {
       "type": "boolean",
@@ -180,6 +186,7 @@
             "quizzes"
           ],
           "tools": [
+            "list_question_types",
             "list_question_banks",
             "list_questions",
             "import_questions",
@@ -561,6 +568,22 @@
             "phrase": [
               "calificó una entrega",
               "calificó {n} entregas"
+            ]
+          }
+        },
+        "list_question_types": {
+          "en": {
+            "label": "Looking at the site's question types",
+            "phrase": [
+              "looked at the question types",
+              "looked at the question types {n} times"
+            ]
+          },
+          "es": {
+            "label": "Mirando los tipos de pregunta del sitio",
+            "phrase": [
+              "miró los tipos de pregunta",
+              "miró los tipos de pregunta {n} veces"
             ]
           }
         },

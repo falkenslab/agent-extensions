@@ -50,6 +50,7 @@ Codex también la instala (`codex plugin marketplace add falkenslab/agent-extens
 | Ajuste | Qué hace | Por defecto |
 | --- | --- | --- |
 | `sites` | Tus sitios Moodle, cada uno como `nombre=dirección`; empieza por el primero | obligatorio |
+| `courses` | Solo estos cursos (tus aulas), por su URL: cualquier otro se rechaza | todos los cursos |
 | `headless` | El navegador trabaja sin verse (se abre una ventana para entrar, o si pides mirar) | sí |
 | `access` | `read`: solo mirar, sin entregar, responder ni publicar | `write` |
 | `student_data` | `pseudonymize` (alias), `block` (nada) o `clear` (nombres: solo para una IA que funcione en tu propio ordenador) | `pseudonymize` |
@@ -77,7 +78,7 @@ Cámbialos después con `my-agent extension config moodle-student`, en el chat c
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.4.1`, con las herramientas de alumno y tus ajustes |
+| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.5.0`, con las herramientas de alumno y tus ajustes |
 | 🔎 `read-a-course` | Secciones, recursos y actividades, qué está bloqueado y por qué, qué cuenta como hecho |
 | 🗓️ `plan-my-work` | Lo que queda, las fechas de entrega y de corte, qué desbloquea qué, en un orden realista |
 | 📤 `hand-in-an-assignment` | Qué admite, guardar, comprobar y enviar definitivamente, la declaración de autoría |

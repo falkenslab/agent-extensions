@@ -32,5 +32,6 @@ A typo, a date, a broken link: change it in place (`update_activity`, `edit_sect
 ## Good practice
 
 - HTML for Moodle's editors: real headings starting at `<h2>` (Moodle shows the activity's name as the `<h1>`), lists, `<pre><code>` for code. Images go in `embed`, named in the HTML by file name (`<img src="diagram.png" alt="...">`), with alt text that says what they show.
-- Deleting (`delete_activity`, `delete_section`, `delete_questions`) loses students' work and can't be undone: never as a shortcut to redo something, and only with an approval that names what goes.
+- Deleting (`delete_activity`, `delete_section`, `delete_questions`) loses students' work and can't be undone: never as a shortcut to redo something.
+- **What can't be undone asks the person itself**: before deleting, unenrolling (`unenrol_user`), resetting a course (`reset_course`) or restoring over one (`restore_course` with `replace`), moodle-mcp asks them in their app, a question the agent can't answer or skip, with ten minutes to answer. Say what will go before calling it, then let that question be the yes: don't ask another first. A no, or no answer in time, means nothing was done: say so, and don't call it again unless they ask. In an app that can't ask, these tools are refused: tell the person, never look for a way around it.
 - After a batch of writes, `get_course_structure` once: everything in its section, in order, with the visibility intended.

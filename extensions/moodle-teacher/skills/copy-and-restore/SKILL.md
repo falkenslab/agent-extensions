@@ -18,7 +18,7 @@ Pick the lightest tool that does the job, and never bring other people's data al
 ## Steps
 
 1. **Confirm the source and the target** with the person: course names and ids (`list_courses`, `get_course_structure`), what goes (all, some sections, some activities) and whether the target is new or existing.
-2. **Say what will be written** before the write: a new course, or added to which section, or replacing what. Restoring with `mode: "replace"` deletes what the target had: ask twice.
+2. **Say what will be written** before the write: a new course, or added to which section, or replacing what. Restoring with `mode: "replace"` deletes what the target had: say so plainly; moodle-mcp then asks the person itself before it runs (see `publishing`).
 3. **Do it**, then **check** (below).
 
 ## A backup file on this computer

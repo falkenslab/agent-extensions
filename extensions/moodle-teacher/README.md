@@ -50,6 +50,7 @@ Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions
 | Setting | What it does | Default |
 | --- | --- | --- |
 | `sites` | Your Moodle sites, `name=address` each; the first is where it starts | required |
+| `courses` | Only these courses (your classrooms), by their URLs: any other is refused | every course |
 | `headless` | The browser works out of sight (a window opens to log in, or when you ask to watch) | yes |
 | `access` | `read`: only look, never change anything | `write` |
 | `student_data` | `pseudonymize` (aliases), `block` (none) or `clear` (names: only for an AI on your own computer) | `pseudonymize` |
@@ -77,7 +78,7 @@ Change them later with `my-agent extension config moodle-teacher`, in the chat w
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.4.1`, with your settings |
+| 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.5.0`, with your settings |
 | 🔎 `read-a-course` | What the person can do in a course, its structure, restrictions, completion and dates |
 | 🫥 `publishing` | New content hidden first, checked, then shown; one approval per item |
 | 📄 `course-content` | Pages, books with their chapters, files, folders, links and section texts, as HTML checked before Moodle gets it |

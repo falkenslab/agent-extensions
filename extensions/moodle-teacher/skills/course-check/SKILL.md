@@ -32,4 +32,4 @@ When the course is for a new term (copied, restored or reused):
 
 - **Dates**: list every dated activity (open, due, cut-off, close) and ask the person for the new calendar. `reset_course` with only `start` moves the course start and every activity's dates with it, deleting nothing; then adjust single dates with `update_activity`.
 - **Last edition's people**: groups, groupings and overrides from the previous cohort; forum posts and announcements that mention last year.
-- **Students' data**: `reset_course` deletes only what's named in `delete` (submissions, attempts, posts, grades) and unenrols only `unenrolRoles`, and can't be undone: only when the person asks, confirming each item, after a backup (`backup_course`, see `copy-and-restore`).
+- **Students' data**: `reset_course` deletes only what's named in `delete` (submissions, attempts, posts, grades) and unenrols only `unenrolRoles`, and can't be undone: only when the person asks, naming each item, after a backup (`backup_course`, see `copy-and-restore`).

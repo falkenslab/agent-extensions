@@ -4,10 +4,11 @@
       "command": "npx",
       "args": [
         "-y",
-        "@falkenslab/moodle-mcp@0.4.1"
+        "@falkenslab/moodle-mcp@0.5.0"
       ],
       "env": {
         "MOODLE_MCP_SITES": "${user_config.sites}",
+        "MOODLE_MCP_COURSES": "${user_config.courses}",
         "MOODLE_MCP_HEADLESS": "${user_config.headless}",
         "MOODLE_MCP_ROLE": "teacher",
         "MOODLE_MCP_ACCESS": "${user_config.access}",

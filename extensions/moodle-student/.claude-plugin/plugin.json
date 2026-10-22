@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -24,6 +24,12 @@
       "description": "Your Moodle sites, each as name=address, e.g. school=https://campus.myschool.org. The first one is where the agent starts; you can add more later by asking it.",
       "multiple": true,
       "required": true
+    },
+    "courses": {
+      "type": "string",
+      "title": "Your courses (classrooms)",
+      "description": "Only these courses, by their URLs (e.g. https://campus.myschool.org/course/view.php?id=12), comma-separated, on one site or several: the agent is refused any other. Empty: every course your account sees.",
+      "default": ""
     },
     "headless": {
       "type": "boolean",

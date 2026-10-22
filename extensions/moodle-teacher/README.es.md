@@ -50,6 +50,7 @@ Codex también la instala (`codex plugin marketplace add falkenslab/agent-extens
 | Ajuste | Qué hace | Por defecto |
 | --- | --- | --- |
 | `sites` | Tus sitios Moodle, cada uno como `nombre=dirección`; empieza por el primero | obligatorio |
+| `courses` | Solo estos cursos (tus aulas), por su URL: cualquier otro se rechaza | todos los cursos |
 | `headless` | El navegador trabaja sin verse (se abre una ventana para entrar, o si pides mirar) | sí |
 | `access` | `read`: solo mirar, sin cambiar nada | `write` |
 | `student_data` | `pseudonymize` (alias), `block` (nada) o `clear` (nombres: solo para una IA que funcione en tu propio ordenador) | `pseudonymize` |
@@ -77,7 +78,7 @@ Cámbialos después con `my-agent extension config moodle-teacher`, en el chat c
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.4.1`, con tus ajustes |
+| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.5.0`, con tus ajustes |
 | 🔎 `read-a-course` | Lo que la persona puede hacer en un curso, su estructura, restricciones, finalización y fechas |
 | 🫥 `publishing` | Lo nuevo, primero oculto, comprobado y luego visible; una aprobación por cada cosa |
 | 📄 `course-content` | Páginas, libros con sus capítulos, archivos, carpetas, enlaces y textos de sección, en un HTML comprobado antes de llegar a Moodle |
