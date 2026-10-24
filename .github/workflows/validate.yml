@@ -18,6 +18,10 @@ jobs:
         run: npx -y @falkenslab/agent-kit-catalog@0.6.0 --check
       - name: The marketplace
         run: claude plugin validate --strict .
+      # Every tool a manifest, a skill or a command names exists in its pinned server and role; readOnlyTools
+      # keeps up with the server's readOnlyHint. Starts each local server for its tools/list only.
+      - name: The tools they name
+        run: node scripts/check-tools.mjs
       - name: Each extension
         run: |
           for plugin in extensions/*/.claude-plugin/plugin.json; do

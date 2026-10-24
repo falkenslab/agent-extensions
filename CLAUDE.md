@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Falken's Lab's marketplace (`falkenslab`) of extensions. Each extension folder is both a Claude Code plugin, unchanged, and an extension for agents built on [agent-kit](https://github.com/falkenslab/agent-kit). There is no application code: the repository is JSON manifests, Markdown skills and commands, SVG assets, the `weather` example server and a static catalog page.
+Falken's Lab's marketplace (`falkenslab`) of extensions. Each extension folder is both a Claude Code plugin, unchanged, and an extension for agents built on [agent-kit](https://github.com/falkenslab/agent-kit). There is no application code: the repository is JSON manifests, Markdown skills and commands, SVG assets, the `weather` example server, a static catalog page and `scripts/check-tools.mjs`.
 
 ## Commands
 
@@ -13,6 +13,7 @@ Node 22, no dependencies, no `npm install` at the root.
 - `npx -y @falkenslab/agent-kit-catalog@0.6.0` rewrites `catalog.json` from the manifests. Run it after any change to `.claude-plugin/marketplace.json` or an extension's `plugin.json`, and commit the result. The generator lives in agent-kit (the `agent-kit-catalog` package), with the catalog's format; bump its pinned version here and in both workflows together.
 - `npx -y @falkenslab/agent-kit-catalog@0.6.0 --check` fails if `catalog.json` is stale (CI runs it in both workflows).
 - The links point to `--repo owner/name`, else `GITHUB_REPOSITORY`, else the `origin` remote, else the `repository` shared by every `plugin.json`; the branch is `--branch`, else always `main` (never the checked-out one, so the output is the same on every branch).
+- `node scripts/check-tools.mjs [extension…]` starts each local MCP server at its pinned version (only `tools/list`: no Moodle or Docker needed) and fails if a capability, a label, `readOnlyTools`, `confirmTools`, `serverConfirmTools`, a skill or a command names a tool its server doesn't have in that role, or if `readOnlyTools` leaves out a tool the server marks read-only; it warns of tools without a label. CI runs it; run it after bumping a server.
 - `claude plugin validate --strict .` validates the marketplace; `claude plugin validate --strict extensions/moodle-teacher` validates one extension. Strict means warnings fail. `userConfig` with `options` needs Claude Code 2.1.271 or later.
 - `extensions/weather/` builds its own MCP server: `npm install` and `npm run build` in `extensions/weather/` write its `dist/server.mjs`, which is committed (agent-kit installs files and never runs `npm install`); its `node_modules/` stays out. Rebuild it after any change to `weather/src/`.
 - To try an extension in an agent: `my-agent extension add ./extensions/moodle-teacher --link`.

@@ -80,7 +80,7 @@ Codex installs them too, with their skills and servers, but it has no plugin set
 
 ## 🛠️ Developing
 
-Each extension is a folder in `extensions/` with `.claude-plugin/plugin.json`, `.mcp.json`, `skills/` and `commands/`, listed in `.claude-plugin/marketplace.json` with the same version as its manifest. After changing one, `npx -y @falkenslab/agent-kit-catalog@0.6.0` writes `catalog.json` again (the workflow checks it's up to date, and publishes the page from `site/`). Try a change by linking it into an agent (`my-agent extension add ./extensions/moodle-teacher --link`); the workflow runs `claude plugin validate --strict` on the marketplace and every extension. How an extension is written: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
+Each extension is a folder in `extensions/` with `.claude-plugin/plugin.json`, `.mcp.json`, `skills/` and `commands/`, listed in `.claude-plugin/marketplace.json` with the same version as its manifest. After changing one, `npx -y @falkenslab/agent-kit-catalog@0.6.0` writes `catalog.json` again (the workflow checks it's up to date, and publishes the page from `site/`). Try a change by linking it into an agent (`my-agent extension add ./extensions/moodle-teacher --link`); the workflow runs `claude plugin validate --strict` on the marketplace and every extension, and `node scripts/check-tools.mjs`, which checks that every tool a manifest or a skill names exists in its pinned server. How an extension is written: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
 
 <div align="center">
 
