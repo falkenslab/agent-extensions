@@ -12,7 +12,7 @@
       "name": "moodle-teacher",
       "source": "./extensions/moodle-teacher",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
-      "version": "0.3.2",
+      "version": "0.3.3",
       "category": "education",
       "tags": [
         "moodle",

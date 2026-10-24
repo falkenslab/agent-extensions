@@ -42,7 +42,7 @@ Graded participation: "Whole forum grading" (points or a scale), graded with `gr
 
 - **Choice**: one question with a purpose (sides for a debate, a project topic); "allow choice to be updated" if they may change their mind; a limit per option to balance groups.
 - **Feedback** (survey): no right answers; "anonymous" when honesty matters more than follow-up.
-- **H5P**: check which content types the site has before planning one.
+- **H5P**: an `.h5p` package (the person's, or one another extension built for them) becomes an H5P activity with `create_activity`, `type: "h5pactivity"` and the package as the only path in `files`, hidden as always; its settings (attempts tracked, grade, which attempt counts) come from `get_activity_settings` on one like it. A package without its libraries plays only where the site has its content type (Moodle downloads them, or an admin installs them), and no tool lists them yet: once created, `get_h5p_activity` says the content type Moodle read, and opening it shows whether it plays. If the site lacks the type, say so and that an administrator installs it; never look for a way around it.
 - **SCORM**: the `scorm` skill.
 
 ## What connects activities

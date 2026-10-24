@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -351,7 +351,8 @@
             "create_badge",
             "set_badge_criteria",
             "set_badge_enabled",
-            "award_badge"
+            "award_badge",
+            "get_h5p_activity"
           ],
           "texts": {
             "en": {
