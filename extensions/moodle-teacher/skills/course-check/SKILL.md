@@ -22,6 +22,15 @@ These are the checks only Moodle can answer. Whether the course teaches well is 
 - **Completion**: tracking on in the course but key activities without conditions; or conditions students can't meet.
 - **Links and files**: external URLs that fail (checkable from the agent's web tools where reachable; say "couldn't check" when blocked or behind a login, not "broken"); files and pages linking to another course or site.
 
+## Course completion
+
+Course completion (the whole course done) isn't activity completion (each activity ticked):
+
+- **What completes it**: `get_course_completion_criteria` says whether completion is on, the criteria (activities, other courses, a date, days enrolled, a course grade, self completion, roles that mark it), whether all or any complete the course, what the form offers, and whether the criteria are locked.
+- **Setting it**: `set_course_completion_criteria` replaces the kinds it's given, removes those in `remove` and keeps the rest; `overall` says all or any. Activities need completion tracking on, and roles the right to mark completion (the criteria's `offered` lists both). Once someone has met a criterion Moodle locks them, and `unlock` first deletes every participant's course completion data (not their activity completion): only when the person asks, after saying exactly that, and moodle-mcp then asks them itself.
+- **Who has completed it**: `get_course_completion_status`, per participant and criterion. A grade, a date or days enrolled are worked out by Moodle's scheduled tasks, so a criterion met a moment ago may not show yet.
+- **By hand**: `mark_course_complete` is the "manual completion by others" criterion, for a role the person holds; Moodle completes the course when the other criteria allow it.
+
 ## Reporting
 
 By impact, not as a flat checklist: what blocks students first (a locked unit, a quiz with no questions), then what misleads them (wrong dates, a statement asking for what can't be uploaded), then tidiness. For each: what's wrong, where (section, activity), and what fixing it would take. Fixes are writes: propose them, and make them only with the person's yes (see `publishing`).

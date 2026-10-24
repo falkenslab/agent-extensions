@@ -20,6 +20,7 @@ What the data means for teaching is the person's reading (or the agent's teachin
 | Which activities are looked at | `get_activity_report` | Counts only, no one's name |
 | What a student did, when | `get_course_logs` with `user` | Detailed: only when the person asks about one student |
 | What's waiting, per activity | `get_activities_overview` (Moodle 5) | Submissions and what needs grading, not per student |
+| Who has completed the course | `get_course_completion_status` (a group with `groupId`) | Only with course completion on (see `course-check`); scheduled tasks work some criteria out later |
 
 Deadlines are in `list_deadlines` and each activity's settings: "overdue" is relative to a student's own dates (overrides and extensions in `get_submissions`).
 

@@ -35,6 +35,13 @@ Check the type is offered in this course first (`get_site_info` with `courseId`)
 2. Change only what's needed: `update_activity` changes only what you give (`content`, `description`, `name`, `url`, `files` to add, remove or replace). Keep the person's wording when a correction does.
 3. Read it back and say what changed and why.
 
+## The course calendar
+
+- **Course events** (an exam day, a talk, a deadline that isn't an activity's): `create_event` with a name, a `start` in ISO 8601 with its time zone (`2026-11-03T10:00:00+01:00`) and, optionally, `durationMinutes` and a description. Every participant sees it in their calendar: say what goes in before calling it.
+- **What's coming**: `list_events` (one course with `courseId`, every course without it) gives course events, activities' dates and the person's own events; `get_event` reads one.
+- **Changing one**: `update_event` changes only what's given; a new start keeps its length unless a new one is given, and `wholeSeries` changes every event of a repeated one. `delete_event` removes it, after moodle-mcp asks the person itself.
+- **An activity's dates** (an assignment's due date, a quiz's close) aren't events to edit: they show in the calendar because the activity has them, and they change in the activity (`update_activity`).
+
 ## Good practice
 
 - Descriptive names ("Unit 2 notes: Dockerfiles and building images"), not "Unit 2" or "Page 1": they're what students see in the course index and the gradebook.

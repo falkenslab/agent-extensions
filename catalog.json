@@ -437,7 +437,7 @@
     },
     {
       "name": "moodle-student",
-      "version": "0.2.4",
+      "version": "0.3.0",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
@@ -477,7 +477,11 @@
             "get_activity_content",
             "download_file",
             "get_course_updates",
-            "list_notifications"
+            "list_notifications",
+            "list_groups",
+            "mark_notifications_read",
+            "get_me",
+            "get_site_info"
           ],
           "texts": {
             "en": {
@@ -503,7 +507,9 @@
             "get_activities_overview",
             "get_my_grades",
             "get_assignment",
-            "get_quiz_info"
+            "get_quiz_info",
+            "list_assignments",
+            "get_event"
           ],
           "texts": {
             "en": {
@@ -526,7 +532,8 @@
             "download_file",
             "save_submission",
             "submit_assignment",
-            "send_message"
+            "send_message",
+            "validate_html"
           ],
           "texts": {
             "en": {
@@ -580,7 +587,8 @@
             "send_message",
             "list_participants",
             "list_conversations",
-            "get_conversation"
+            "get_conversation",
+            "validate_html"
           ],
           "texts": {
             "en": {
@@ -620,7 +628,13 @@
             "edit_wiki_page",
             "list_database_entries",
             "add_database_entry",
-            "list_badges"
+            "list_badges",
+            "assess_workshop_example",
+            "edit_database_entry",
+            "delete_database_entry",
+            "edit_glossary_entry",
+            "delete_glossary_entry",
+            "list_glossary_categories"
           ],
           "texts": {
             "en": {
@@ -686,7 +700,7 @@
     },
     {
       "name": "moodle-teacher",
-      "version": "0.3.5",
+      "version": "0.4.0",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
@@ -780,7 +794,12 @@
             "add_book_chapter",
             "edit_book_chapter",
             "move_book_chapter",
-            "validate_html"
+            "validate_html",
+            "duplicate_activity",
+            "delete_activity",
+            "delete_section",
+            "set_book_chapter_visibility",
+            "delete_book_chapter"
           ],
           "texts": {
             "en": {
@@ -841,7 +860,15 @@
             "set_quiz_override",
             "validate_gift",
             "export_questions",
-            "add_question_category"
+            "add_question_category",
+            "get_quiz_info",
+            "get_quiz_statistics",
+            "delete_questions",
+            "list_question_categories",
+            "edit_question_category",
+            "delete_question_category",
+            "move_questions",
+            "remove_quiz_slot"
           ],
           "texts": {
             "en": {
@@ -887,7 +914,54 @@
             "set_badge_criteria",
             "set_badge_enabled",
             "award_badge",
-            "get_h5p_activity"
+            "get_h5p_activity",
+            "get_choice",
+            "get_choice_results",
+            "get_survey_results",
+            "get_workshop_submission",
+            "assess_workshop_submission",
+            "save_workshop_submission",
+            "list_workshop_examples",
+            "add_workshop_example",
+            "edit_workshop_example",
+            "delete_workshop_example",
+            "assess_workshop_example",
+            "calculate_workshop_grades",
+            "override_workshop_grade",
+            "remove_workshop_reviewer",
+            "move_lesson_page",
+            "delete_lesson_page",
+            "get_database_fields",
+            "edit_database_field",
+            "delete_database_field",
+            "get_database_templates",
+            "list_database_entries",
+            "add_database_entry",
+            "edit_database_entry",
+            "delete_database_entry",
+            "set_database_entry_approved",
+            "export_database_entries",
+            "import_database_entries",
+            "list_glossary_entries",
+            "edit_glossary_entry",
+            "delete_glossary_entry",
+            "set_glossary_entry_approved",
+            "list_glossary_categories",
+            "add_glossary_category",
+            "export_glossary",
+            "import_glossary",
+            "list_wiki_pages",
+            "get_wiki_page",
+            "edit_wiki_page",
+            "get_feedback_items",
+            "edit_feedback_item",
+            "move_feedback_item",
+            "delete_feedback_item",
+            "list_feedback_templates",
+            "use_feedback_template",
+            "save_feedback_template",
+            "delete_feedback_template",
+            "list_badges"
           ],
           "texts": {
             "en": {
@@ -916,7 +990,11 @@
             "set_discussion_subscription",
             "rate",
             "send_message",
-            "message_participants"
+            "message_participants",
+            "list_notifications",
+            "mark_notifications_read",
+            "list_conversations",
+            "get_conversation"
           ],
           "texts": {
             "en": {
@@ -974,7 +1052,13 @@
             "update_grade_category",
             "delete_grade_category",
             "set_grade",
-            "export_grades"
+            "export_grades",
+            "import_grades",
+            "list_scales",
+            "add_scale",
+            "edit_scale",
+            "get_grade_letters",
+            "set_grade_letters"
           ],
           "texts": {
             "en": {
@@ -1003,7 +1087,8 @@
             "get_activity_report",
             "get_course_logs",
             "message_participants",
-            "override_completion"
+            "override_completion",
+            "list_deadlines"
           ],
           "texts": {
             "en": {
@@ -1109,6 +1194,88 @@
             "es": {
               "label": "Varios sitios Moodle",
               "description": "Añadir sitios, cambiar de uno a otro y copiar contenidos entre ellos."
+            }
+          }
+        },
+        {
+          "id": "lms-participants",
+          "skills": [
+            "participants-and-groups"
+          ],
+          "tools": [
+            "list_participants",
+            "list_potential_users",
+            "enrol_users",
+            "unenrol_user",
+            "set_user_roles",
+            "list_enrolment_methods",
+            "set_enrolment_method",
+            "list_groups",
+            "create_group",
+            "update_group",
+            "delete_group",
+            "set_group_members",
+            "auto_create_groups",
+            "import_groups",
+            "list_groupings",
+            "create_grouping",
+            "set_grouping_groups",
+            "delete_grouping"
+          ],
+          "texts": {
+            "en": {
+              "label": "Participants and groups",
+              "description": "Enrolling people and their roles, how the course lets people in, and making and filling groups."
+            },
+            "es": {
+              "label": "Participantes y grupos",
+              "description": "Matricular a personas y sus roles, cómo se entra en el curso, y crear y llenar grupos."
+            }
+          }
+        },
+        {
+          "id": "lms-calendar",
+          "skills": [
+            "course-content"
+          ],
+          "tools": [
+            "list_events",
+            "get_event",
+            "create_event",
+            "update_event",
+            "delete_event"
+          ],
+          "texts": {
+            "en": {
+              "label": "The course calendar",
+              "description": "Course events everyone in the course sees, and what's coming."
+            },
+            "es": {
+              "label": "El calendario del curso",
+              "description": "Eventos del curso que ven todos sus participantes, y lo que está por llegar."
+            }
+          }
+        },
+        {
+          "id": "lms-course-completion",
+          "skills": [
+            "course-check",
+            "class-progress"
+          ],
+          "tools": [
+            "get_course_completion_criteria",
+            "set_course_completion_criteria",
+            "get_course_completion_status",
+            "mark_course_complete"
+          ],
+          "texts": {
+            "en": {
+              "label": "Course completion",
+              "description": "What completes the course, who has completed it, and marking it by hand."
+            },
+            "es": {
+              "label": "Finalización del curso",
+              "description": "Qué completa el curso, quién lo ha completado y marcarlo a mano."
             }
           }
         }

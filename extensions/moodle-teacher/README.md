@@ -81,7 +81,7 @@ Change them later with `my-agent extension config moodle-teacher`, in the chat w
 | 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.5.0`, with your settings |
 | 🔎 `read-a-course` | What the person can do in a course, its structure, restrictions, completion and dates |
 | 🫥 `publishing` | New content hidden first, checked, then shown; one approval per item |
-| 📄 `course-content` | Pages, books with their chapters, files, folders, links and section texts, as HTML checked before Moodle gets it |
+| 📄 `course-content` | Pages, books with their chapters, files, folders, links and section texts, as HTML checked before Moodle gets it, and the course calendar |
 | 📤 `assignments` | Submission settings that match the statement, dates, groups, feedback, and its rubric or marking guide |
 | 📝 `quizzes` | Settings for the quiz's purpose, GIFT checked before importing, banks exported to reuse, slots, order and total |
 | 🧩 `other-activities` | Workshop and its allocation, lesson pages and jumps, database, glossary, wiki, feedback, forums, choice, H5P; completion, restrictions, groups and badges |
@@ -89,7 +89,8 @@ Change them later with `my-agent extension config moodle-teacher`, in the chat w
 | ✅ `grading` | Assignments with their rubric, quiz essays and graded forums, proposals first |
 | 🧮 `gradebook` | Categories, aggregation and weights that compute the grading scheme |
 | 📈 `class-progress` | Completion, grades, submissions and activity, and writing to who's behind |
-| 🩺 `course-check` | What's broken or stale in a course, and getting it ready for a new term |
+| 🩺 `course-check` | What's broken or stale in a course, getting it ready for a new term, and what completes it |
+| 👥 `participants-and-groups` | Enrolling people and their roles, how the course lets people in, and making and filling groups |
 | 🎮 `scorm` | An HTML activity packaged as SCORM, uploaded and tested so Moodle records it |
 | 📦 `copy-and-restore` | Copying, importing, backing up and restoring courses, and checking the result |
 | 🌐 `several-sites` | Adding and switching sites, and copying between them |

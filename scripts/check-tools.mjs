@@ -7,7 +7,7 @@
 // Errors: a tool named by a capability, a label, readOnlyTools, confirmTools, serverConfirmTools, a skill
 // or a command that its servers don't have; a read-only tool missing from readOnlyTools (once a manifest
 // lists it, the kit stops reading readOnlyHint); a destructive tool in readOnlyTools; a capability's skill
-// with no folder. Warnings: tools without a label.
+// with no folder; a tool without a label in an extension that labels its tools. Warnings: an extension that labels none.
 //
 // Usage: node scripts/check-tools.mjs [extension…]   (no dependencies; Node 22)
 import { spawn } from "node:child_process";
@@ -172,8 +172,10 @@ for (const { entry, dir, rel, kit, tools, packages } of checked) {
     }
   }
 
+  // Once an extension labels its tools, every one: an unlabelled tool shows in the chat by its own name, and its result as the model's.
   const unlabelled = [...names].filter((tool) => !(kit.labels ?? {})[tool]);
-  if (unlabelled.length) warn(file, `${unlabelled.length} of ${names.size} tools have no label: ${unlabelled.slice(0, 12).join(", ")}${unlabelled.length > 12 ? "…" : ""}`);
+  if (unlabelled.length && Object.keys(kit.labels ?? {}).length) error(file, `${unlabelled.length} of ${names.size} tools have no label: ${unlabelled.slice(0, 12).join(", ")}${unlabelled.length > 12 ? "…" : ""}`);
+  else if (unlabelled.length) warn(file, `none of its ${names.size} tools has a label`);
   if (errors + warnings === before) console.log("  ok");
 }
 

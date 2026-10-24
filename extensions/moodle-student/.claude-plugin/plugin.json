@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -139,7 +139,11 @@
             "get_activity_content",
             "download_file",
             "get_course_updates",
-            "list_notifications"
+            "list_notifications",
+            "list_groups",
+            "mark_notifications_read",
+            "get_me",
+            "get_site_info"
           ],
           "texts": {
             "en": {
@@ -165,7 +169,9 @@
             "get_activities_overview",
             "get_my_grades",
             "get_assignment",
-            "get_quiz_info"
+            "get_quiz_info",
+            "list_assignments",
+            "get_event"
           ],
           "texts": {
             "en": {
@@ -188,7 +194,8 @@
             "download_file",
             "save_submission",
             "submit_assignment",
-            "send_message"
+            "send_message",
+            "validate_html"
           ],
           "texts": {
             "en": {
@@ -242,7 +249,8 @@
             "send_message",
             "list_participants",
             "list_conversations",
-            "get_conversation"
+            "get_conversation",
+            "validate_html"
           ],
           "texts": {
             "en": {
@@ -282,7 +290,13 @@
             "edit_wiki_page",
             "list_database_entries",
             "add_database_entry",
-            "list_badges"
+            "list_badges",
+            "assess_workshop_example",
+            "edit_database_entry",
+            "delete_database_entry",
+            "edit_glossary_entry",
+            "delete_glossary_entry",
+            "list_glossary_categories"
           ],
           "texts": {
             "en": {
@@ -1513,6 +1527,330 @@
               "quitó {n} aulas"
             ],
             "result": "Aula quitada, con su sesión"
+          }
+        },
+        "list_groups": {
+          "en": {
+            "label": "Listing a course's groups",
+            "phrase": [
+              "listed the groups",
+              "listed the groups {n} times"
+            ],
+            "result": "Groups listed"
+          },
+          "es": {
+            "label": "Listando los grupos de un curso",
+            "phrase": [
+              "listó los grupos",
+              "listó los grupos {n} veces"
+            ],
+            "result": "Grupos listados"
+          }
+        },
+        "list_assignments": {
+          "en": {
+            "label": "Listing a course's assignments",
+            "phrase": [
+              "listed the assignments",
+              "listed the assignments {n} times"
+            ],
+            "result": "Assignments listed"
+          },
+          "es": {
+            "label": "Listando las tareas de un curso",
+            "phrase": [
+              "listó las tareas",
+              "listó las tareas {n} veces"
+            ],
+            "result": "Tareas listadas"
+          }
+        },
+        "assess_workshop_example": {
+          "en": {
+            "label": "Assessing a workshop's example",
+            "phrase": [
+              "assessed an example",
+              "assessed {n} examples"
+            ],
+            "result": "Assessment saved"
+          },
+          "es": {
+            "label": "Evaluando un ejemplo del taller",
+            "phrase": [
+              "evaluó un ejemplo",
+              "evaluó {n} ejemplos"
+            ],
+            "result": "Evaluación guardada"
+          }
+        },
+        "mark_notifications_read": {
+          "en": {
+            "label": "Marking your notifications read",
+            "phrase": [
+              "marked notifications read",
+              "marked notifications read {n} times"
+            ],
+            "result": "Notifications marked read"
+          },
+          "es": {
+            "label": "Marcando tus notificaciones como leídas",
+            "phrase": [
+              "marcó notificaciones como leídas",
+              "marcó notificaciones como leídas {n} veces"
+            ],
+            "result": "Notificaciones marcadas como leídas"
+          }
+        },
+        "validate_html": {
+          "en": {
+            "label": "Checking the HTML",
+            "phrase": [
+              "checked HTML",
+              "checked HTML {n} times"
+            ],
+            "result": "HTML checked"
+          },
+          "es": {
+            "label": "Comprobando el HTML",
+            "phrase": [
+              "comprobó HTML",
+              "comprobó HTML {n} veces"
+            ],
+            "result": "HTML comprobado"
+          }
+        },
+        "edit_database_entry": {
+          "en": {
+            "label": "Changing a database entry",
+            "phrase": [
+              "changed an entry",
+              "changed {n} entries"
+            ],
+            "result": "Entry saved"
+          },
+          "es": {
+            "label": "Cambiando una entrada de la base de datos",
+            "phrase": [
+              "cambió una entrada",
+              "cambió {n} entradas"
+            ],
+            "result": "Entrada guardada"
+          }
+        },
+        "delete_database_entry": {
+          "en": {
+            "label": "Deleting a database entry",
+            "phrase": [
+              "deleted an entry",
+              "deleted {n} entries"
+            ],
+            "result": "Entry deleted"
+          },
+          "es": {
+            "label": "Eliminando una entrada de la base de datos",
+            "phrase": [
+              "eliminó una entrada",
+              "eliminó {n} entradas"
+            ],
+            "result": "Entrada eliminada"
+          }
+        },
+        "edit_glossary_entry": {
+          "en": {
+            "label": "Changing a glossary entry",
+            "phrase": [
+              "changed a glossary entry",
+              "changed {n} glossary entries"
+            ],
+            "result": "Entry saved"
+          },
+          "es": {
+            "label": "Cambiando una entrada del glosario",
+            "phrase": [
+              "cambió una entrada del glosario",
+              "cambió {n} entradas del glosario"
+            ],
+            "result": "Entrada guardada"
+          }
+        },
+        "delete_glossary_entry": {
+          "en": {
+            "label": "Deleting a glossary entry",
+            "phrase": [
+              "deleted a glossary entry",
+              "deleted {n} glossary entries"
+            ],
+            "result": "Entry deleted"
+          },
+          "es": {
+            "label": "Eliminando una entrada del glosario",
+            "phrase": [
+              "eliminó una entrada del glosario",
+              "eliminó {n} entradas del glosario"
+            ],
+            "result": "Entrada eliminada"
+          }
+        },
+        "list_glossary_categories": {
+          "en": {
+            "label": "Listing a glossary's categories",
+            "phrase": [
+              "listed the categories",
+              "listed the categories {n} times"
+            ],
+            "result": "Categories listed"
+          },
+          "es": {
+            "label": "Listando las categorías del glosario",
+            "phrase": [
+              "listó las categorías",
+              "listó las categorías {n} veces"
+            ],
+            "result": "Categorías listadas"
+          }
+        },
+        "get_event": {
+          "en": {
+            "label": "Reading a calendar event",
+            "phrase": [
+              "read an event",
+              "read {n} events"
+            ],
+            "result": "Event read"
+          },
+          "es": {
+            "label": "Leyendo un evento del calendario",
+            "phrase": [
+              "leyó un evento",
+              "leyó {n} eventos"
+            ],
+            "result": "Evento leído"
+          }
+        },
+        "browser_navigate": {
+          "en": {
+            "label": "Opening {url} in the browser",
+            "phrase": [
+              "opened a page",
+              "opened {n} pages"
+            ],
+            "result": "Page open"
+          },
+          "es": {
+            "label": "Abriendo {url} en el navegador",
+            "phrase": [
+              "abrió una página",
+              "abrió {n} páginas"
+            ],
+            "result": "Página abierta"
+          }
+        },
+        "browser_snapshot": {
+          "en": {
+            "label": "Reading the browser's page",
+            "phrase": [
+              "read the page",
+              "read the page {n} times"
+            ],
+            "result": "Page read"
+          },
+          "es": {
+            "label": "Leyendo la página del navegador",
+            "phrase": [
+              "leyó la página",
+              "leyó la página {n} veces"
+            ],
+            "result": "Página leída"
+          }
+        },
+        "browser_click": {
+          "en": {
+            "label": "Clicking in the browser",
+            "phrase": [
+              "clicked",
+              "clicked {n} times"
+            ],
+            "result": "Clicked"
+          },
+          "es": {
+            "label": "Haciendo clic en el navegador",
+            "phrase": [
+              "hizo clic",
+              "hizo clic {n} veces"
+            ],
+            "result": "Clic hecho"
+          }
+        },
+        "browser_type": {
+          "en": {
+            "label": "Typing in the browser",
+            "phrase": [
+              "typed",
+              "typed {n} times"
+            ],
+            "result": "Typed"
+          },
+          "es": {
+            "label": "Escribiendo en el navegador",
+            "phrase": [
+              "escribió",
+              "escribió {n} veces"
+            ],
+            "result": "Escrito"
+          }
+        },
+        "browser_select": {
+          "en": {
+            "label": "Choosing an option in the browser",
+            "phrase": [
+              "chose an option",
+              "chose options {n} times"
+            ],
+            "result": "Chosen"
+          },
+          "es": {
+            "label": "Eligiendo una opción en el navegador",
+            "phrase": [
+              "eligió una opción",
+              "eligió opciones {n} veces"
+            ],
+            "result": "Elegido"
+          }
+        },
+        "browser_upload": {
+          "en": {
+            "label": "Choosing files in the browser",
+            "phrase": [
+              "chose files",
+              "chose files {n} times"
+            ],
+            "result": "Files chosen"
+          },
+          "es": {
+            "label": "Eligiendo archivos en el navegador",
+            "phrase": [
+              "eligió archivos",
+              "eligió archivos {n} veces"
+            ],
+            "result": "Archivos elegidos"
+          }
+        },
+        "browser_wait": {
+          "en": {
+            "label": "Waiting for the page",
+            "phrase": [
+              "waited for the page",
+              "waited {n} times"
+            ],
+            "result": "Done waiting"
+          },
+          "es": {
+            "label": "Esperando a la página",
+            "phrase": [
+              "esperó a la página",
+              "esperó {n} veces"
+            ],
+            "result": "Espera terminada"
           }
         }
       }

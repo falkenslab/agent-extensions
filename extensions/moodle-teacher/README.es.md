@@ -81,7 +81,7 @@ Cámbialos después con `my-agent extension config moodle-teacher`, en el chat c
 | 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.5.0`, con tus ajustes |
 | 🔎 `read-a-course` | Lo que la persona puede hacer en un curso, su estructura, restricciones, finalización y fechas |
 | 🫥 `publishing` | Lo nuevo, primero oculto, comprobado y luego visible; una aprobación por cada cosa |
-| 📄 `course-content` | Páginas, libros con sus capítulos, archivos, carpetas, enlaces y textos de sección, en un HTML comprobado antes de llegar a Moodle |
+| 📄 `course-content` | Páginas, libros con sus capítulos, archivos, carpetas, enlaces y textos de sección, en un HTML comprobado antes de llegar a Moodle, y el calendario del curso |
 | 📤 `assignments` | Ajustes de entrega que encajan con el enunciado, fechas, grupos, retroalimentación, y su rúbrica o guía de calificación |
 | 📝 `quizzes` | Ajustes según el propósito del cuestionario, GIFT comprobado antes de importarlo, bancos exportados para reutilizarlos, orden y total |
 | 🧩 `other-activities` | Taller y su asignación, páginas y saltos de lección, base de datos, glosario, wiki, encuesta, foros, consulta, H5P; finalización, restricciones, grupos e insignias |
@@ -89,7 +89,8 @@ Cámbialos después con `my-agent extension config moodle-teacher`, en el chat c
 | ✅ `grading` | Tareas con su rúbrica, preguntas de ensayo y foros calificados, con propuestas antes |
 | 🧮 `gradebook` | Categorías, agregación y pesos que calculan el sistema de calificación |
 | 📈 `class-progress` | Finalización, notas, entregas y actividad, y escribir a quien se queda atrás |
-| 🩺 `course-check` | Lo que está roto o desfasado en un curso, y prepararlo para una nueva edición |
+| 👥 `participants-and-groups` | Matricular a personas y sus roles, cómo se entra en el curso, y crear y llenar grupos |
+| 🩺 `course-check` | Lo que está roto o desfasado en un curso, prepararlo para una nueva edición y qué lo completa |
 | 🎮 `scorm` | Una actividad HTML empaquetada como SCORM, subida y probada para que Moodle la registre |
 | 📦 `copy-and-restore` | Copiar, importar, hacer copias de seguridad y restaurar cursos, y comprobar el resultado |
 | 🌐 `several-sites` | Añadir sitios, cambiar de uno a otro y copiar entre ellos |
