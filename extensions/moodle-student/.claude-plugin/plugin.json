@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -351,14 +351,16 @@
             "phrase": [
               "listed the courses",
               "listed the courses {n} times"
-            ]
+            ],
+            "result": "Courses listed"
           },
           "es": {
             "label": "Listando los cursos",
             "phrase": [
               "listó los cursos",
               "listó los cursos {n} veces"
-            ]
+            ],
+            "result": "Cursos listados"
           }
         },
         "get_course_structure": {
@@ -367,14 +369,16 @@
             "phrase": [
               "read a course's structure",
               "read {n} courses' structure"
-            ]
+            ],
+            "result": "Course structure read"
           },
           "es": {
             "label": "Leyendo la estructura de un curso",
             "phrase": [
               "leyó la estructura de un curso",
               "leyó la estructura de {n} cursos"
-            ]
+            ],
+            "result": "Estructura del curso leída"
           }
         },
         "get_activity_content": {
@@ -383,14 +387,16 @@
             "phrase": [
               "read a resource",
               "read {n} resources"
-            ]
+            ],
+            "result": "Resource read"
           },
           "es": {
             "label": "Leyendo un recurso",
             "phrase": [
               "leyó un recurso",
               "leyó {n} recursos"
-            ]
+            ],
+            "result": "Recurso leído"
           }
         },
         "list_deadlines": {
@@ -399,14 +405,16 @@
             "phrase": [
               "checked the deadlines",
               "checked the deadlines {n} times"
-            ]
+            ],
+            "result": "Deadlines read"
           },
           "es": {
             "label": "Mirando las fechas de entrega",
             "phrase": [
               "miró las fechas de entrega",
               "miró las fechas de entrega {n} veces"
-            ]
+            ],
+            "result": "Fechas de entrega leídas"
           }
         },
         "list_pending": {
@@ -415,14 +423,16 @@
             "phrase": [
               "checked what was left",
               "checked what was left {n} times"
-            ]
+            ],
+            "result": "What's left read"
           },
           "es": {
             "label": "Mirando lo que te queda",
             "phrase": [
               "miró lo que te quedaba",
               "miró lo que te quedaba {n} veces"
-            ]
+            ],
+            "result": "Lo pendiente, leído"
           }
         },
         "get_my_grades": {
@@ -431,14 +441,16 @@
             "phrase": [
               "read your grades",
               "read your grades {n} times"
-            ]
+            ],
+            "result": "Grades read"
           },
           "es": {
             "label": "Leyendo tus notas",
             "phrase": [
               "leyó tus notas",
               "leyó tus notas {n} veces"
-            ]
+            ],
+            "result": "Notas leídas"
           }
         },
         "get_assignment": {
@@ -447,14 +459,16 @@
             "phrase": [
               "read an assignment",
               "read {n} assignments"
-            ]
+            ],
+            "result": "Assignment read"
           },
           "es": {
             "label": "Leyendo una tarea",
             "phrase": [
               "leyó una tarea",
               "leyó {n} tareas"
-            ]
+            ],
+            "result": "Tarea leída"
           }
         },
         "save_submission": {
@@ -463,14 +477,16 @@
             "phrase": [
               "saved a submission",
               "saved {n} submissions"
-            ]
+            ],
+            "result": "Draft saved, not sent yet"
           },
           "es": {
             "label": "Guardando tu entrega",
             "phrase": [
               "guardó una entrega",
               "guardó {n} entregas"
-            ]
+            ],
+            "result": "Borrador guardado, aún sin enviar"
           }
         },
         "submit_assignment": {
@@ -479,14 +495,16 @@
             "phrase": [
               "submitted an assignment",
               "submitted {n} assignments"
-            ]
+            ],
+            "result": "Sent for grading"
           },
           "es": {
             "label": "Enviando tu tarea",
             "phrase": [
               "envió una tarea",
               "envió {n} tareas"
-            ]
+            ],
+            "result": "Enviada para calificar"
           }
         },
         "get_quiz_info": {
@@ -495,14 +513,16 @@
             "phrase": [
               "read a quiz",
               "read {n} quizzes"
-            ]
+            ],
+            "result": "Quiz read"
           },
           "es": {
             "label": "Leyendo un cuestionario",
             "phrase": [
               "leyó un cuestionario",
               "leyó {n} cuestionarios"
-            ]
+            ],
+            "result": "Cuestionario leído"
           }
         },
         "start_quiz_attempt": {
@@ -511,14 +531,16 @@
             "phrase": [
               "started an attempt",
               "started {n} attempts"
-            ]
+            ],
+            "result": "Attempt started"
           },
           "es": {
             "label": "Empezando un intento",
             "phrase": [
               "empezó un intento",
               "empezó {n} intentos"
-            ]
+            ],
+            "result": "Intento empezado"
           }
         },
         "answer_quiz_questions": {
@@ -527,14 +549,16 @@
             "phrase": [
               "saved quiz answers",
               "saved quiz answers {n} times"
-            ]
+            ],
+            "result": "Answers saved, attempt still open"
           },
           "es": {
             "label": "Guardando respuestas",
             "phrase": [
               "guardó respuestas",
               "guardó respuestas {n} veces"
-            ]
+            ],
+            "result": "Respuestas guardadas, el intento sigue abierto"
           }
         },
         "finish_quiz_attempt": {
@@ -543,14 +567,16 @@
             "phrase": [
               "submitted an attempt",
               "submitted {n} attempts"
-            ]
+            ],
+            "result": "Attempt submitted"
           },
           "es": {
             "label": "Enviando un intento",
             "phrase": [
               "envió un intento",
               "envió {n} intentos"
-            ]
+            ],
+            "result": "Intento enviado"
           }
         },
         "get_attempt_review": {
@@ -559,14 +585,16 @@
             "phrase": [
               "reviewed an attempt",
               "reviewed {n} attempts"
-            ]
+            ],
+            "result": "Attempt review read"
           },
           "es": {
             "label": "Revisando un intento",
             "phrase": [
               "revisó un intento",
               "revisó {n} intentos"
-            ]
+            ],
+            "result": "Revisión del intento leída"
           }
         },
         "list_discussions": {
@@ -575,14 +603,16 @@
             "phrase": [
               "read a forum",
               "read forums {n} times"
-            ]
+            ],
+            "result": "Forum read"
           },
           "es": {
             "label": "Leyendo un foro",
             "phrase": [
               "leyó un foro",
               "leyó foros {n} veces"
-            ]
+            ],
+            "result": "Foro leído"
           }
         },
         "create_discussion": {
@@ -591,14 +621,16 @@
             "phrase": [
               "posted in the forum",
               "posted in forums {n} times"
-            ]
+            ],
+            "result": "Posted: the forum's members see it"
           },
           "es": {
             "label": "Publicando en el foro",
             "phrase": [
               "publicó en el foro",
               "publicó en foros {n} veces"
-            ]
+            ],
+            "result": "Publicado: lo ven los participantes del foro"
           }
         },
         "reply_to_post": {
@@ -607,14 +639,16 @@
             "phrase": [
               "replied in the forum",
               "replied in forums {n} times"
-            ]
+            ],
+            "result": "Reply posted: the forum's members see it"
           },
           "es": {
             "label": "Respondiendo en el foro",
             "phrase": [
               "respondió en el foro",
               "respondió en foros {n} veces"
-            ]
+            ],
+            "result": "Respuesta publicada: la ven los participantes del foro"
           }
         },
         "answer_choice": {
@@ -623,14 +657,16 @@
             "phrase": [
               "answered a choice",
               "answered {n} choices"
-            ]
+            ],
+            "result": "Answer saved"
           },
           "es": {
             "label": "Respondiendo una consulta",
             "phrase": [
               "respondió una consulta",
               "respondió {n} consultas"
-            ]
+            ],
+            "result": "Respuesta guardada"
           }
         },
         "submit_survey": {
@@ -639,14 +675,16 @@
             "phrase": [
               "answered a survey",
               "answered {n} surveys"
-            ]
+            ],
+            "result": "Survey sent"
           },
           "es": {
             "label": "Respondiendo una encuesta",
             "phrase": [
               "respondió una encuesta",
               "respondió {n} encuestas"
-            ]
+            ],
+            "result": "Encuesta enviada"
           }
         },
         "answer_lesson_page": {
@@ -655,14 +693,16 @@
             "phrase": [
               "went on in a lesson",
               "went on in lessons {n} times"
-            ]
+            ],
+            "result": "Answer saved in the lesson"
           },
           "es": {
             "label": "Avanzando en una lección",
             "phrase": [
               "avanzó en una lección",
               "avanzó en lecciones {n} veces"
-            ]
+            ],
+            "result": "Respuesta guardada en la lección"
           }
         },
         "open_scorm": {
@@ -671,14 +711,16 @@
             "phrase": [
               "opened a SCORM package",
               "opened {n} SCORM packages"
-            ]
+            ],
+            "result": "SCORM package opened"
           },
           "es": {
             "label": "Abriendo un paquete SCORM",
             "phrase": [
               "abrió un paquete SCORM",
               "abrió {n} paquetes SCORM"
-            ]
+            ],
+            "result": "Paquete SCORM abierto"
           }
         },
         "set_completion": {
@@ -687,14 +729,16 @@
             "phrase": [
               "marked an activity",
               "marked {n} activities"
-            ]
+            ],
+            "result": "Completion saved"
           },
           "es": {
             "label": "Marcando una actividad como hecha",
             "phrase": [
               "marcó una actividad",
               "marcó {n} actividades"
-            ]
+            ],
+            "result": "Finalización guardada"
           }
         },
         "list_sites": {
@@ -703,14 +747,16 @@
             "phrase": [
               "listed your sites",
               "listed your sites {n} times"
-            ]
+            ],
+            "result": "Sites listed"
           },
           "es": {
             "label": "Listando tus aulas Moodle",
             "phrase": [
               "listó tus aulas",
               "listó tus aulas {n} veces"
-            ]
+            ],
+            "result": "Aulas listadas"
           }
         },
         "use_site": {
@@ -719,14 +765,16 @@
             "phrase": [
               "switched sites",
               "switched sites {n} times"
-            ]
+            ],
+            "result": "Site switched"
           },
           "es": {
             "label": "Cambiando al aula {name}",
             "phrase": [
               "cambió de aula",
               "cambió de aula {n} veces"
-            ]
+            ],
+            "result": "Aula cambiada"
           }
         },
         "login": {
@@ -735,14 +783,16 @@
             "phrase": [
               "waited for the login",
               "waited for logins {n} times"
-            ]
+            ],
+            "result": "Logged in to Moodle"
           },
           "es": {
             "label": "Esperando a que entres en Moodle",
             "phrase": [
               "esperó a que entraras",
               "esperó a que entraras {n} veces"
-            ]
+            ],
+            "result": "Has entrado en Moodle"
           }
         },
         "save_workshop_submission": {
@@ -751,14 +801,16 @@
             "phrase": [
               "saved a workshop submission",
               "saved workshop submissions {n} times"
-            ]
+            ],
+            "result": "Workshop submission saved"
           },
           "es": {
             "label": "Guardando la entrega del taller",
             "phrase": [
               "guardó una entrega de taller",
               "guardó entregas de taller {n} veces"
-            ]
+            ],
+            "result": "Entrega del taller guardada"
           }
         },
         "add_glossary_entry": {
@@ -767,14 +819,16 @@
             "phrase": [
               "added a glossary entry",
               "added {n} glossary entries"
-            ]
+            ],
+            "result": "Entry added: the course sees it"
           },
           "es": {
             "label": "Añadiendo una entrada al glosario",
             "phrase": [
               "añadió una entrada al glosario",
               "añadió {n} entradas al glosario"
-            ]
+            ],
+            "result": "Entrada añadida: la ve el curso"
           }
         },
         "edit_wiki_page": {
@@ -783,14 +837,16 @@
             "phrase": [
               "edited a wiki page",
               "edited wiki pages {n} times"
-            ]
+            ],
+            "result": "Wiki page saved: the course sees it"
           },
           "es": {
             "label": "Editando una página de la wiki",
             "phrase": [
               "editó una página de la wiki",
               "editó páginas de la wiki {n} veces"
-            ]
+            ],
+            "result": "Página de la wiki guardada: la ve el curso"
           }
         },
         "add_database_entry": {
@@ -799,14 +855,16 @@
             "phrase": [
               "added a database entry",
               "added {n} database entries"
-            ]
+            ],
+            "result": "Entry added"
           },
           "es": {
             "label": "Añadiendo una entrada a la base de datos",
             "phrase": [
               "añadió una entrada a la base de datos",
               "añadió {n} entradas a la base de datos"
-            ]
+            ],
+            "result": "Entrada añadida"
           }
         }
       }

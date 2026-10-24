@@ -12,7 +12,7 @@
       "name": "moodle-teacher",
       "source": "./extensions/moodle-teacher",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
-      "version": "0.3.3",
+      "version": "0.3.4",
       "category": "education",
       "tags": [
         "moodle",
@@ -26,7 +26,7 @@
       "name": "moodle-student",
       "source": "./extensions/moodle-student",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "category": "education",
       "tags": [
         "moodle",
@@ -65,7 +65,7 @@
       "name": "docker-lab",
       "source": "./extensions/docker-lab",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "category": "development",
       "tags": [
         "docker",
@@ -81,7 +81,7 @@
       "name": "canva",
       "source": "./extensions/canva",
       "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "category": "design",
       "tags": [
         "canva",

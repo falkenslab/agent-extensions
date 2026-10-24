@@ -1,6 +1,6 @@
 {
   "name": "docker-lab",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
   "author": {
     "name": "Falken's Lab",
@@ -279,14 +279,16 @@
             "phrase": [
               "read its settings",
               "read its settings {n} times"
-            ]
+            ],
+            "result": "Settings read"
           },
           "es": {
             "label": "Leyendo los ajustes de docker-mcp",
             "phrase": [
               "leyó sus ajustes",
               "leyó sus ajustes {n} veces"
-            ]
+            ],
+            "result": "Ajustes leídos"
           }
         },
         "check_requirements": {
@@ -295,14 +297,16 @@
             "phrase": [
               "checked Docker",
               "checked Docker {n} times"
-            ]
+            ],
+            "result": "Requirements checked"
           },
           "es": {
             "label": "Comprobando que Docker está instalado",
             "phrase": [
               "comprobó Docker",
               "comprobó Docker {n} veces"
-            ]
+            ],
+            "result": "Requisitos comprobados"
           }
         },
         "docker_info": {
@@ -311,14 +315,16 @@
             "phrase": [
               "read Docker's information",
               "read Docker's information {n} times"
-            ]
+            ],
+            "result": "Docker's information read"
           },
           "es": {
             "label": "Leyendo la información de Docker",
             "phrase": [
               "leyó la información de Docker",
               "leyó la información de Docker {n} veces"
-            ]
+            ],
+            "result": "Información de Docker leída"
           }
         },
         "disk_usage": {
@@ -327,14 +333,16 @@
             "phrase": [
               "measured the disk usage",
               "measured the disk usage {n} times"
-            ]
+            ],
+            "result": "Disk use measured"
           },
           "es": {
             "label": "Midiendo el disco que usa Docker",
             "phrase": [
               "midió el disco",
               "midió el disco {n} veces"
-            ]
+            ],
+            "result": "Uso del disco medido"
           }
         },
         "prune": {
@@ -343,14 +351,16 @@
             "phrase": [
               "cleaned up Docker",
               "cleaned up Docker {n} times"
-            ]
+            ],
+            "result": "Cleaned up"
           },
           "es": {
             "label": "Limpiando Docker",
             "phrase": [
               "limpió Docker",
               "limpió Docker {n} veces"
-            ]
+            ],
+            "result": "Limpieza hecha"
           }
         },
         "list_containers": {
@@ -359,14 +369,16 @@
             "phrase": [
               "listed the containers",
               "listed the containers {n} times"
-            ]
+            ],
+            "result": "Containers listed"
           },
           "es": {
             "label": "Listando los contenedores",
             "phrase": [
               "listó los contenedores",
               "listó los contenedores {n} veces"
-            ]
+            ],
+            "result": "Contenedores listados"
           }
         },
         "inspect_container": {
@@ -375,14 +387,16 @@
             "phrase": [
               "inspected a container",
               "inspected {n} containers"
-            ]
+            ],
+            "result": "Container inspected"
           },
           "es": {
             "label": "Inspeccionando {container}",
             "phrase": [
               "inspeccionó un contenedor",
               "inspeccionó {n} contenedores"
-            ]
+            ],
+            "result": "Contenedor inspeccionado"
           }
         },
         "container_logs": {
@@ -391,14 +405,16 @@
             "phrase": [
               "read a container's logs",
               "read logs {n} times"
-            ]
+            ],
+            "result": "Logs read"
           },
           "es": {
             "label": "Leyendo los logs de {container}",
             "phrase": [
               "leyó los logs de un contenedor",
               "leyó logs {n} veces"
-            ]
+            ],
+            "result": "Logs leídos"
           }
         },
         "container_stats": {
@@ -407,14 +423,16 @@
             "phrase": [
               "measured the containers",
               "measured the containers {n} times"
-            ]
+            ],
+            "result": "Use measured"
           },
           "es": {
             "label": "Midiendo lo que consumen los contenedores",
             "phrase": [
               "midió los contenedores",
               "midió los contenedores {n} veces"
-            ]
+            ],
+            "result": "Consumo medido"
           }
         },
         "container_processes": {
@@ -423,14 +441,16 @@
             "phrase": [
               "listed a container's processes",
               "listed processes {n} times"
-            ]
+            ],
+            "result": "Processes listed"
           },
           "es": {
             "label": "Listando los procesos de {container}",
             "phrase": [
               "listó los procesos de un contenedor",
               "listó procesos {n} veces"
-            ]
+            ],
+            "result": "Procesos listados"
           }
         },
         "run_container": {
@@ -439,14 +459,16 @@
             "phrase": [
               "ran a container",
               "ran {n} containers"
-            ]
+            ],
+            "result": "Container run"
           },
           "es": {
             "label": "Arrancando {image}",
             "phrase": [
               "arrancó un contenedor",
               "arrancó {n} contenedores"
-            ]
+            ],
+            "result": "Contenedor ejecutado"
           }
         },
         "start_container": {
@@ -455,14 +477,16 @@
             "phrase": [
               "started a container",
               "started {n} containers"
-            ]
+            ],
+            "result": "Container started"
           },
           "es": {
             "label": "Arrancando {container}",
             "phrase": [
               "arrancó un contenedor",
               "arrancó {n} contenedores"
-            ]
+            ],
+            "result": "Contenedor arrancado"
           }
         },
         "stop_container": {
@@ -471,14 +495,16 @@
             "phrase": [
               "stopped a container",
               "stopped {n} containers"
-            ]
+            ],
+            "result": "Container stopped"
           },
           "es": {
             "label": "Parando {container}",
             "phrase": [
               "paró un contenedor",
               "paró {n} contenedores"
-            ]
+            ],
+            "result": "Contenedor parado"
           }
         },
         "restart_container": {
@@ -487,14 +513,16 @@
             "phrase": [
               "restarted a container",
               "restarted {n} containers"
-            ]
+            ],
+            "result": "Container restarted"
           },
           "es": {
             "label": "Reiniciando {container}",
             "phrase": [
               "reinició un contenedor",
               "reinició {n} contenedores"
-            ]
+            ],
+            "result": "Contenedor reiniciado"
           }
         },
         "remove_container": {
@@ -503,14 +531,16 @@
             "phrase": [
               "removed a container",
               "removed {n} containers"
-            ]
+            ],
+            "result": "Container removed"
           },
           "es": {
             "label": "Eliminando {container}",
             "phrase": [
               "eliminó un contenedor",
               "eliminó {n} contenedores"
-            ]
+            ],
+            "result": "Contenedor eliminado"
           }
         },
         "exec_in_container": {
@@ -519,14 +549,16 @@
             "phrase": [
               "ran a command in a container",
               "ran {n} commands in containers"
-            ]
+            ],
+            "result": "Command run"
           },
           "es": {
             "label": "Ejecutando una orden en {container}",
             "phrase": [
               "ejecutó una orden en un contenedor",
               "ejecutó {n} órdenes en contenedores"
-            ]
+            ],
+            "result": "Orden ejecutada"
           }
         },
         "copy_to_container": {
@@ -535,14 +567,16 @@
             "phrase": [
               "copied files into a container",
               "copied files in {n} times"
-            ]
+            ],
+            "result": "Files copied in"
           },
           "es": {
             "label": "Copiando archivos a {container}",
             "phrase": [
               "copió archivos a un contenedor",
               "copió archivos {n} veces"
-            ]
+            ],
+            "result": "Archivos copiados dentro"
           }
         },
         "copy_from_container": {
@@ -551,14 +585,16 @@
             "phrase": [
               "copied files out of a container",
               "copied files out {n} times"
-            ]
+            ],
+            "result": "Files copied out"
           },
           "es": {
             "label": "Copiando archivos de {container}",
             "phrase": [
               "copió archivos de un contenedor",
               "copió archivos {n} veces"
-            ]
+            ],
+            "result": "Archivos copiados fuera"
           }
         },
         "list_images": {
@@ -567,14 +603,16 @@
             "phrase": [
               "listed the images",
               "listed the images {n} times"
-            ]
+            ],
+            "result": "Images listed"
           },
           "es": {
             "label": "Listando las imágenes",
             "phrase": [
               "listó las imágenes",
               "listó las imágenes {n} veces"
-            ]
+            ],
+            "result": "Imágenes listadas"
           }
         },
         "inspect_image": {
@@ -583,14 +621,16 @@
             "phrase": [
               "inspected an image",
               "inspected {n} images"
-            ]
+            ],
+            "result": "Image inspected"
           },
           "es": {
             "label": "Inspeccionando {image}",
             "phrase": [
               "inspeccionó una imagen",
               "inspeccionó {n} imágenes"
-            ]
+            ],
+            "result": "Imagen inspeccionada"
           }
         },
         "pull_image": {
@@ -599,14 +639,16 @@
             "phrase": [
               "pulled an image",
               "pulled {n} images"
-            ]
+            ],
+            "result": "Image downloaded"
           },
           "es": {
             "label": "Descargando {image}",
             "phrase": [
               "descargó una imagen",
               "descargó {n} imágenes"
-            ]
+            ],
+            "result": "Imagen descargada"
           }
         },
         "build_image": {
@@ -615,14 +657,16 @@
             "phrase": [
               "built an image",
               "built {n} images"
-            ]
+            ],
+            "result": "Image built"
           },
           "es": {
             "label": "Construyendo {tag}",
             "phrase": [
               "construyó una imagen",
               "construyó {n} imágenes"
-            ]
+            ],
+            "result": "Imagen construida"
           }
         },
         "tag_image": {
@@ -631,14 +675,16 @@
             "phrase": [
               "tagged an image",
               "tagged {n} images"
-            ]
+            ],
+            "result": "Image tagged"
           },
           "es": {
             "label": "Etiquetando {image}",
             "phrase": [
               "etiquetó una imagen",
               "etiquetó {n} imágenes"
-            ]
+            ],
+            "result": "Imagen etiquetada"
           }
         },
         "push_image": {
@@ -647,14 +693,16 @@
             "phrase": [
               "pushed an image",
               "pushed {n} images"
-            ]
+            ],
+            "result": "Image pushed to its registry"
           },
           "es": {
             "label": "Subiendo {image}",
             "phrase": [
               "subió una imagen",
               "subió {n} imágenes"
-            ]
+            ],
+            "result": "Imagen subida a su registro"
           }
         },
         "remove_image": {
@@ -663,14 +711,16 @@
             "phrase": [
               "removed an image",
               "removed {n} images"
-            ]
+            ],
+            "result": "Image removed"
           },
           "es": {
             "label": "Eliminando {image}",
             "phrase": [
               "eliminó una imagen",
               "eliminó {n} imágenes"
-            ]
+            ],
+            "result": "Imagen eliminada"
           }
         },
         "list_volumes": {
@@ -679,14 +729,16 @@
             "phrase": [
               "listed the volumes",
               "listed the volumes {n} times"
-            ]
+            ],
+            "result": "Volumes listed"
           },
           "es": {
             "label": "Listando los volúmenes",
             "phrase": [
               "listó los volúmenes",
               "listó los volúmenes {n} veces"
-            ]
+            ],
+            "result": "Volúmenes listados"
           }
         },
         "inspect_volume": {
@@ -695,14 +747,16 @@
             "phrase": [
               "inspected a volume",
               "inspected {n} volumes"
-            ]
+            ],
+            "result": "Volume inspected"
           },
           "es": {
             "label": "Inspeccionando {volume}",
             "phrase": [
               "inspeccionó un volumen",
               "inspeccionó {n} volúmenes"
-            ]
+            ],
+            "result": "Volumen inspeccionado"
           }
         },
         "create_volume": {
@@ -711,14 +765,16 @@
             "phrase": [
               "created a volume",
               "created {n} volumes"
-            ]
+            ],
+            "result": "Volume created"
           },
           "es": {
             "label": "Creando el volumen {name}",
             "phrase": [
               "creó un volumen",
               "creó {n} volúmenes"
-            ]
+            ],
+            "result": "Volumen creado"
           }
         },
         "remove_volume": {
@@ -727,14 +783,16 @@
             "phrase": [
               "removed a volume",
               "removed {n} volumes"
-            ]
+            ],
+            "result": "Volume removed, with its data"
           },
           "es": {
             "label": "Eliminando {volume}",
             "phrase": [
               "eliminó un volumen",
               "eliminó {n} volúmenes"
-            ]
+            ],
+            "result": "Volumen eliminado, con sus datos"
           }
         },
         "list_networks": {
@@ -743,14 +801,16 @@
             "phrase": [
               "listed the networks",
               "listed the networks {n} times"
-            ]
+            ],
+            "result": "Networks listed"
           },
           "es": {
             "label": "Listando las redes",
             "phrase": [
               "listó las redes",
               "listó las redes {n} veces"
-            ]
+            ],
+            "result": "Redes listadas"
           }
         },
         "inspect_network": {
@@ -759,14 +819,16 @@
             "phrase": [
               "inspected a network",
               "inspected {n} networks"
-            ]
+            ],
+            "result": "Network inspected"
           },
           "es": {
             "label": "Inspeccionando {network}",
             "phrase": [
               "inspeccionó una red",
               "inspeccionó {n} redes"
-            ]
+            ],
+            "result": "Red inspeccionada"
           }
         },
         "create_network": {
@@ -775,14 +837,16 @@
             "phrase": [
               "created a network",
               "created {n} networks"
-            ]
+            ],
+            "result": "Network created"
           },
           "es": {
             "label": "Creando la red {name}",
             "phrase": [
               "creó una red",
               "creó {n} redes"
-            ]
+            ],
+            "result": "Red creada"
           }
         },
         "remove_network": {
@@ -791,14 +855,16 @@
             "phrase": [
               "removed a network",
               "removed {n} networks"
-            ]
+            ],
+            "result": "Network removed"
           },
           "es": {
             "label": "Eliminando {network}",
             "phrase": [
               "eliminó una red",
               "eliminó {n} redes"
-            ]
+            ],
+            "result": "Red eliminada"
           }
         },
         "compose_ps": {
@@ -807,14 +873,16 @@
             "phrase": [
               "read a Compose project",
               "read Compose projects {n} times"
-            ]
+            ],
+            "result": "Compose project read"
           },
           "es": {
             "label": "Leyendo un proyecto de Compose",
             "phrase": [
               "leyó un proyecto de Compose",
               "leyó proyectos de Compose {n} veces"
-            ]
+            ],
+            "result": "Proyecto de Compose leído"
           }
         },
         "compose_logs": {
@@ -823,14 +891,16 @@
             "phrase": [
               "read a project's logs",
               "read projects' logs {n} times"
-            ]
+            ],
+            "result": "Logs read"
           },
           "es": {
             "label": "Leyendo los logs de un proyecto de Compose",
             "phrase": [
               "leyó los logs de un proyecto",
               "leyó logs de proyectos {n} veces"
-            ]
+            ],
+            "result": "Logs leídos"
           }
         },
         "compose_build": {
@@ -839,14 +909,16 @@
             "phrase": [
               "built a Compose project",
               "built Compose projects {n} times"
-            ]
+            ],
+            "result": "Compose project built"
           },
           "es": {
             "label": "Construyendo un proyecto de Compose",
             "phrase": [
               "construyó un proyecto de Compose",
               "construyó proyectos de Compose {n} veces"
-            ]
+            ],
+            "result": "Proyecto de Compose construido"
           }
         },
         "compose_up": {
@@ -855,14 +927,16 @@
             "phrase": [
               "started a Compose project",
               "started Compose projects {n} times"
-            ]
+            ],
+            "result": "Compose project started"
           },
           "es": {
             "label": "Arrancando un proyecto de Compose",
             "phrase": [
               "arrancó un proyecto de Compose",
               "arrancó proyectos de Compose {n} veces"
-            ]
+            ],
+            "result": "Proyecto de Compose arrancado"
           }
         },
         "compose_down": {
@@ -871,14 +945,16 @@
             "phrase": [
               "stopped a Compose project",
               "stopped Compose projects {n} times"
-            ]
+            ],
+            "result": "Compose project stopped"
           },
           "es": {
             "label": "Parando un proyecto de Compose",
             "phrase": [
               "paró un proyecto de Compose",
               "paró proyectos de Compose {n} veces"
-            ]
+            ],
+            "result": "Proyecto de Compose parado"
           }
         },
         "compose_exec": {
@@ -887,14 +963,16 @@
             "phrase": [
               "ran a command in a service",
               "ran {n} commands in services"
-            ]
+            ],
+            "result": "Command run"
           },
           "es": {
             "label": "Ejecutando una orden en {service}",
             "phrase": [
               "ejecutó una orden en un servicio",
               "ejecutó {n} órdenes en servicios"
-            ]
+            ],
+            "result": "Orden ejecutada"
           }
         },
         "list_labs": {
@@ -903,14 +981,16 @@
             "phrase": [
               "listed the labs",
               "listed the labs {n} times"
-            ]
+            ],
+            "result": "Labs listed"
           },
           "es": {
             "label": "Listando los laboratorios",
             "phrase": [
               "listó los laboratorios",
               "listó los laboratorios {n} veces"
-            ]
+            ],
+            "result": "Laboratorios listados"
           }
         },
         "lab_status": {
@@ -919,14 +999,16 @@
             "phrase": [
               "read a lab's status",
               "read labs' status {n} times"
-            ]
+            ],
+            "result": "Lab read"
           },
           "es": {
             "label": "Leyendo el laboratorio {lab}",
             "phrase": [
               "leyó el estado de un laboratorio",
               "leyó el estado de laboratorios {n} veces"
-            ]
+            ],
+            "result": "Laboratorio leído"
           }
         },
         "lab_logs": {
@@ -935,14 +1017,16 @@
             "phrase": [
               "read a lab's logs",
               "read labs' logs {n} times"
-            ]
+            ],
+            "result": "Logs read"
           },
           "es": {
             "label": "Leyendo los logs del laboratorio {lab}",
             "phrase": [
               "leyó los logs de un laboratorio",
               "leyó logs de laboratorios {n} veces"
-            ]
+            ],
+            "result": "Logs leídos"
           }
         },
         "lab_up": {
@@ -951,14 +1035,16 @@
             "phrase": [
               "started a lab",
               "started {n} labs"
-            ]
+            ],
+            "result": "Lab started"
           },
           "es": {
             "label": "Arrancando el laboratorio {lab}",
             "phrase": [
               "arrancó un laboratorio",
               "arrancó {n} laboratorios"
-            ]
+            ],
+            "result": "Laboratorio arrancado"
           }
         },
         "lab_exec": {
@@ -967,14 +1053,16 @@
             "phrase": [
               "ran a command in a lab",
               "ran {n} commands in labs"
-            ]
+            ],
+            "result": "Command run in the lab"
           },
           "es": {
             "label": "Ejecutando una orden en el laboratorio {lab}",
             "phrase": [
               "ejecutó una orden en un laboratorio",
               "ejecutó {n} órdenes en laboratorios"
-            ]
+            ],
+            "result": "Orden ejecutada en el laboratorio"
           }
         },
         "lab_check": {
@@ -983,14 +1071,16 @@
             "phrase": [
               "checked a lab",
               "checked labs {n} times"
-            ]
+            ],
+            "result": "Lab's check run"
           },
           "es": {
             "label": "Comprobando el laboratorio {lab}",
             "phrase": [
               "comprobó un laboratorio",
               "comprobó laboratorios {n} veces"
-            ]
+            ],
+            "result": "Comprobación del laboratorio hecha"
           }
         },
         "lab_reset": {
@@ -999,14 +1089,16 @@
             "phrase": [
               "reset a lab",
               "reset labs {n} times"
-            ]
+            ],
+            "result": "Lab reset to a clean start"
           },
           "es": {
             "label": "Reiniciando el laboratorio {lab}",
             "phrase": [
               "reinició un laboratorio",
               "reinició laboratorios {n} veces"
-            ]
+            ],
+            "result": "Laboratorio reiniciado desde cero"
           }
         },
         "lab_down": {
@@ -1015,14 +1107,16 @@
             "phrase": [
               "stopped a lab",
               "stopped {n} labs"
-            ]
+            ],
+            "result": "Lab stopped, its folder kept"
           },
           "es": {
             "label": "Parando el laboratorio {lab}",
             "phrase": [
               "paró un laboratorio",
               "paró {n} laboratorios"
-            ]
+            ],
+            "result": "Laboratorio parado, su carpeta se queda"
           }
         }
       }

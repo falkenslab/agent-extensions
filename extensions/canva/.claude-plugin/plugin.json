@@ -1,6 +1,6 @@
 {
   "name": "canva",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
   "author": {
     "name": "Falken's Lab",
@@ -240,14 +240,16 @@
             "phrase": [
               "searched designs",
               "searched designs {n} times"
-            ]
+            ],
+            "result": "Designs searched"
           },
           "es": {
             "label": "Buscando tus diseños de Canva",
             "phrase": [
               "buscó diseños",
               "buscó diseños {n} veces"
-            ]
+            ],
+            "result": "Diseños buscados"
           }
         },
         "read-design": {
@@ -256,14 +258,16 @@
             "phrase": [
               "read a design",
               "read {n} designs"
-            ]
+            ],
+            "result": "Design read"
           },
           "es": {
             "label": "Leyendo un diseño",
             "phrase": [
               "leyó un diseño",
               "leyó {n} diseños"
-            ]
+            ],
+            "result": "Diseño leído"
           }
         },
         "search-folders": {
@@ -272,14 +276,16 @@
             "phrase": [
               "searched folders",
               "searched folders {n} times"
-            ]
+            ],
+            "result": "Folders searched"
           },
           "es": {
             "label": "Buscando tus carpetas de Canva",
             "phrase": [
               "buscó carpetas",
               "buscó carpetas {n} veces"
-            ]
+            ],
+            "result": "Carpetas buscadas"
           }
         },
         "list-folder-items": {
@@ -288,14 +294,16 @@
             "phrase": [
               "looked in a folder",
               "looked in {n} folders"
-            ]
+            ],
+            "result": "Folder read"
           },
           "es": {
             "label": "Mirando una carpeta",
             "phrase": [
               "miró una carpeta",
               "miró {n} carpetas"
-            ]
+            ],
+            "result": "Carpeta leída"
           }
         },
         "resolve-shortlink": {
@@ -304,14 +312,16 @@
             "phrase": [
               "opened a Canva link",
               "opened {n} Canva links"
-            ]
+            ],
+            "result": "Link opened"
           },
           "es": {
             "label": "Abriendo un enlace de Canva",
             "phrase": [
               "abrió un enlace de Canva",
               "abrió {n} enlaces de Canva"
-            ]
+            ],
+            "result": "Enlace abierto"
           }
         },
         "help": {
@@ -320,14 +330,16 @@
             "phrase": [
               "asked Canva's help",
               "asked Canva's help {n} times"
-            ]
+            ],
+            "result": "Canva's help read"
           },
           "es": {
             "label": "Consultando la ayuda de Canva",
             "phrase": [
               "consultó la ayuda de Canva",
               "consultó la ayuda de Canva {n} veces"
-            ]
+            ],
+            "result": "Ayuda de Canva leída"
           }
         },
         "create-design": {
@@ -336,14 +348,16 @@
             "phrase": [
               "created a design",
               "created {n} designs"
-            ]
+            ],
+            "result": "Design on its way in Canva"
           },
           "es": {
             "label": "Creando un diseño",
             "phrase": [
               "creó un diseño",
               "creó {n} diseños"
-            ]
+            ],
+            "result": "Diseño en marcha en Canva"
           }
         },
         "get-create-design-async-job": {
@@ -352,14 +366,16 @@
             "phrase": [
               "waited for a design",
               "waited for designs {n} times"
-            ]
+            ],
+            "result": "Design's progress checked"
           },
           "es": {
             "label": "Esperando un diseño",
             "phrase": [
               "esperó un diseño",
               "esperó diseños {n} veces"
-            ]
+            ],
+            "result": "Progreso del diseño consultado"
           }
         },
         "generate-design": {
@@ -368,14 +384,16 @@
             "phrase": [
               "generated proposals",
               "generated proposals {n} times"
-            ]
+            ],
+            "result": "Proposals ready, none saved yet"
           },
           "es": {
             "label": "Generando propuestas de diseño",
             "phrase": [
               "generó propuestas",
               "generó propuestas {n} veces"
-            ]
+            ],
+            "result": "Propuestas listas, aún sin guardar"
           }
         },
         "request-outline-review": {
@@ -384,14 +402,16 @@
             "phrase": [
               "showed an outline",
               "showed {n} outlines"
-            ]
+            ],
+            "result": "Outline shown"
           },
           "es": {
             "label": "Enseñándote un esquema",
             "phrase": [
               "enseñó un esquema",
               "enseñó {n} esquemas"
-            ]
+            ],
+            "result": "Esquema mostrado"
           }
         },
         "generate-design-structured": {
@@ -400,14 +420,16 @@
             "phrase": [
               "generated a presentation",
               "generated {n} presentations"
-            ]
+            ],
+            "result": "Presentation on its way in Canva"
           },
           "es": {
             "label": "Generando una presentación desde su esquema",
             "phrase": [
               "generó una presentación",
               "generó {n} presentaciones"
-            ]
+            ],
+            "result": "Presentación en marcha en Canva"
           }
         },
         "create-design-from-candidate": {
@@ -416,14 +438,16 @@
             "phrase": [
               "kept a proposal",
               "kept {n} proposals"
-            ]
+            ],
+            "result": "Design saved in your account"
           },
           "es": {
             "label": "Convirtiendo una propuesta en diseño",
             "phrase": [
               "se quedó una propuesta",
               "se quedó {n} propuestas"
-            ]
+            ],
+            "result": "Diseño guardado en tu cuenta"
           }
         },
         "edit-design": {
@@ -432,14 +456,16 @@
             "phrase": [
               "edited a design",
               "edited designs {n} times"
-            ]
+            ],
+            "result": "Design edited"
           },
           "es": {
             "label": "Editando un diseño",
             "phrase": [
               "editó un diseño",
               "editó diseños {n} veces"
-            ]
+            ],
+            "result": "Diseño editado"
           }
         },
         "copy-design": {
@@ -448,14 +474,16 @@
             "phrase": [
               "copied a design",
               "copied {n} designs"
-            ]
+            ],
+            "result": "Copy made in your account"
           },
           "es": {
             "label": "Copiando un diseño",
             "phrase": [
               "copió un diseño",
               "copió {n} diseños"
-            ]
+            ],
+            "result": "Copia hecha en tu cuenta"
           }
         },
         "resize-design": {
@@ -464,14 +492,16 @@
             "phrase": [
               "resized a design",
               "resized {n} designs"
-            ]
+            ],
+            "result": "Resized copy made in your account"
           },
           "es": {
             "label": "Cambiando el tamaño de un diseño",
             "phrase": [
               "cambió el tamaño de un diseño",
               "cambió el tamaño de {n} diseños"
-            ]
+            ],
+            "result": "Copia con otro tamaño hecha en tu cuenta"
           }
         },
         "merge-designs": {
@@ -480,14 +510,16 @@
             "phrase": [
               "merged designs",
               "merged designs {n} times"
-            ]
+            ],
+            "result": "Designs merged"
           },
           "es": {
             "label": "Uniendo o moviendo páginas",
             "phrase": [
               "unió diseños",
               "unió diseños {n} veces"
-            ]
+            ],
+            "result": "Diseños unidos"
           }
         },
         "import-design-from-url": {
@@ -496,14 +528,16 @@
             "phrase": [
               "imported a file",
               "imported {n} files"
-            ]
+            ],
+            "result": "File imported as a design"
           },
           "es": {
             "label": "Importando un archivo como diseño",
             "phrase": [
               "importó un archivo",
               "importó {n} archivos"
-            ]
+            ],
+            "result": "Archivo importado como diseño"
           }
         },
         "create-folder": {
@@ -512,14 +546,16 @@
             "phrase": [
               "created a folder",
               "created {n} folders"
-            ]
+            ],
+            "result": "Folder created"
           },
           "es": {
             "label": "Creando una carpeta",
             "phrase": [
               "creó una carpeta",
               "creó {n} carpetas"
-            ]
+            ],
+            "result": "Carpeta creada"
           }
         },
         "move-item-to-folder": {
@@ -528,14 +564,16 @@
             "phrase": [
               "moved an item",
               "moved {n} items"
-            ]
+            ],
+            "result": "Moved"
           },
           "es": {
             "label": "Moviendo a una carpeta",
             "phrase": [
               "movió un elemento",
               "movió {n} elementos"
-            ]
+            ],
+            "result": "Movido"
           }
         },
         "list-comments": {
@@ -544,14 +582,16 @@
             "phrase": [
               "read comments",
               "read comments {n} times"
-            ]
+            ],
+            "result": "Comments read"
           },
           "es": {
             "label": "Leyendo los comentarios de un diseño",
             "phrase": [
               "leyó comentarios",
               "leyó comentarios {n} veces"
-            ]
+            ],
+            "result": "Comentarios leídos"
           }
         },
         "list-replies": {
@@ -560,14 +600,16 @@
             "phrase": [
               "read replies",
               "read replies {n} times"
-            ]
+            ],
+            "result": "Replies read"
           },
           "es": {
             "label": "Leyendo las respuestas a un comentario",
             "phrase": [
               "leyó respuestas",
               "leyó respuestas {n} veces"
-            ]
+            ],
+            "result": "Respuestas leídas"
           }
         },
         "comment-on-design": {
@@ -576,14 +618,16 @@
             "phrase": [
               "commented on a design",
               "commented {n} times"
-            ]
+            ],
+            "result": "Comment posted: whoever has access sees it"
           },
           "es": {
             "label": "Comentando un diseño",
             "phrase": [
               "comentó un diseño",
               "comentó {n} veces"
-            ]
+            ],
+            "result": "Comentario publicado: lo ve quien tiene acceso"
           }
         },
         "reply-to-comment": {
@@ -592,14 +636,16 @@
             "phrase": [
               "replied to a comment",
               "replied {n} times"
-            ]
+            ],
+            "result": "Reply posted: whoever has access sees it"
           },
           "es": {
             "label": "Respondiendo a un comentario",
             "phrase": [
               "respondió a un comentario",
               "respondió {n} veces"
-            ]
+            ],
+            "result": "Respuesta publicada: la ve quien tiene acceso"
           }
         },
         "get-assets": {
@@ -608,14 +654,16 @@
             "phrase": [
               "looked at images",
               "looked at images {n} times"
-            ]
+            ],
+            "result": "Images read"
           },
           "es": {
             "label": "Mirando las imágenes de un diseño",
             "phrase": [
               "miró imágenes",
               "miró imágenes {n} veces"
-            ]
+            ],
+            "result": "Imágenes leídas"
           }
         },
         "generate-image": {
@@ -624,14 +672,16 @@
             "phrase": [
               "generated an image",
               "generated {n} images"
-            ]
+            ],
+            "result": "Image on its way"
           },
           "es": {
             "label": "Generando una imagen",
             "phrase": [
               "generó una imagen",
               "generó {n} imágenes"
-            ]
+            ],
+            "result": "Imagen en marcha"
           }
         },
         "get-generate-image-job": {
@@ -640,14 +690,16 @@
             "phrase": [
               "waited for an image",
               "waited for images {n} times"
-            ]
+            ],
+            "result": "Image's progress checked"
           },
           "es": {
             "label": "Esperando una imagen",
             "phrase": [
               "esperó una imagen",
               "esperó imágenes {n} veces"
-            ]
+            ],
+            "result": "Progreso de la imagen consultado"
           }
         },
         "remove-background": {
@@ -656,14 +708,16 @@
             "phrase": [
               "removed a background",
               "removed {n} backgrounds"
-            ]
+            ],
+            "result": "New image without its background"
           },
           "es": {
             "label": "Quitando el fondo de una imagen",
             "phrase": [
               "quitó un fondo",
               "quitó {n} fondos"
-            ]
+            ],
+            "result": "Nueva imagen sin fondo"
           }
         },
         "separate-image-layers": {
@@ -672,14 +726,16 @@
             "phrase": [
               "separated an image",
               "separated {n} images"
-            ]
+            ],
+            "result": "Layers on their way"
           },
           "es": {
             "label": "Separando una imagen en capas",
             "phrase": [
               "separó una imagen",
               "separó {n} imágenes"
-            ]
+            ],
+            "result": "Capas en marcha"
           }
         },
         "get-separate-image-layers-job": {
@@ -688,14 +744,16 @@
             "phrase": [
               "waited for layers",
               "waited for layers {n} times"
-            ]
+            ],
+            "result": "Layers' progress checked"
           },
           "es": {
             "label": "Esperando las capas",
             "phrase": [
               "esperó las capas",
               "esperó capas {n} veces"
-            ]
+            ],
+            "result": "Progreso de las capas consultado"
           }
         },
         "create-upload-url": {
@@ -704,14 +762,16 @@
             "phrase": [
               "prepared an upload",
               "prepared {n} uploads"
-            ]
+            ],
+            "result": "Upload prepared"
           },
           "es": {
             "label": "Preparando una subida a Canva",
             "phrase": [
               "preparó una subida",
               "preparó {n} subidas"
-            ]
+            ],
+            "result": "Subida preparada"
           }
         },
         "upload-asset-from-url": {
@@ -720,14 +780,16 @@
             "phrase": [
               "uploaded a file",
               "uploaded {n} files"
-            ]
+            ],
+            "result": "Uploaded to Canva"
           },
           "es": {
             "label": "Subiendo a Canva desde un enlace",
             "phrase": [
               "subió un archivo",
               "subió {n} archivos"
-            ]
+            ],
+            "result": "Subido a Canva"
           }
         },
         "import-claude-motion-from-url": {
@@ -736,14 +798,16 @@
             "phrase": [
               "imported a video",
               "imported {n} videos"
-            ]
+            ],
+            "result": "Video import on its way"
           },
           "es": {
             "label": "Importando un vídeo de Claude Motion",
             "phrase": [
               "importó un vídeo",
               "importó {n} vídeos"
-            ]
+            ],
+            "result": "Importación del vídeo en marcha"
           }
         },
         "get-motion-import-job-status": {
@@ -752,14 +816,16 @@
             "phrase": [
               "waited for a video",
               "waited for videos {n} times"
-            ]
+            ],
+            "result": "Video import's progress checked"
           },
           "es": {
             "label": "Esperando la importación de un vídeo",
             "phrase": [
               "esperó un vídeo",
               "esperó vídeos {n} veces"
-            ]
+            ],
+            "result": "Progreso de la importación consultado"
           }
         },
         "list-brand-kits": {
@@ -768,14 +834,16 @@
             "phrase": [
               "looked at brand kits",
               "looked at brand kits {n} times"
-            ]
+            ],
+            "result": "Brand kits read"
           },
           "es": {
             "label": "Mirando tus kits de marca",
             "phrase": [
               "miró los kits de marca",
               "miró los kits de marca {n} veces"
-            ]
+            ],
+            "result": "Kits de marca leídos"
           }
         },
         "search-brand-templates": {
@@ -784,14 +852,16 @@
             "phrase": [
               "searched brand templates",
               "searched brand templates {n} times"
-            ]
+            ],
+            "result": "Brand templates searched"
           },
           "es": {
             "label": "Buscando plantillas de marca",
             "phrase": [
               "buscó plantillas de marca",
               "buscó plantillas de marca {n} veces"
-            ]
+            ],
+            "result": "Plantillas de marca buscadas"
           }
         },
         "get-brand-template-dataset": {
@@ -800,14 +870,16 @@
             "phrase": [
               "read a template's fields",
               "read {n} templates' fields"
-            ]
+            ],
+            "result": "Template's fields read"
           },
           "es": {
             "label": "Leyendo los campos de una plantilla",
             "phrase": [
               "leyó los campos de una plantilla",
               "leyó los campos de {n} plantillas"
-            ]
+            ],
+            "result": "Campos de la plantilla leídos"
           }
         },
         "get-design-dataset": {
@@ -816,14 +888,16 @@
             "phrase": [
               "read a design's fields",
               "read {n} designs' fields"
-            ]
+            ],
+            "result": "Design's fields read"
           },
           "es": {
             "label": "Leyendo los campos de un diseño",
             "phrase": [
               "leyó los campos de un diseño",
               "leyó los campos de {n} diseños"
-            ]
+            ],
+            "result": "Campos del diseño leídos"
           }
         },
         "create-design-from-brand-template": {
@@ -832,14 +906,16 @@
             "phrase": [
               "created from a template",
               "created {n} from templates"
-            ]
+            ],
+            "result": "Design created from the template"
           },
           "es": {
             "label": "Creando un diseño desde una plantilla de marca",
             "phrase": [
               "creó desde una plantilla",
               "creó {n} desde plantillas"
-            ]
+            ],
+            "result": "Diseño creado desde la plantilla"
           }
         },
         "create-brand-template-draft": {
@@ -848,14 +924,16 @@
             "phrase": [
               "drafted a template",
               "drafted {n} templates"
-            ]
+            ],
+            "result": "Template draft created"
           },
           "es": {
             "label": "Preparando una plantilla de marca",
             "phrase": [
               "preparó una plantilla",
               "preparó {n} plantillas"
-            ]
+            ],
+            "result": "Borrador de plantilla creado"
           }
         },
         "publish-brand-template": {
@@ -864,14 +942,16 @@
             "phrase": [
               "published a template",
               "published {n} templates"
-            ]
+            ],
+            "result": "Template published for your team"
           },
           "es": {
             "label": "Publicando una plantilla de marca",
             "phrase": [
               "publicó una plantilla",
               "publicó {n} plantillas"
-            ]
+            ],
+            "result": "Plantilla publicada para tu equipo"
           }
         },
         "get-export-formats": {
@@ -880,14 +960,16 @@
             "phrase": [
               "checked formats",
               "checked formats {n} times"
-            ]
+            ],
+            "result": "Export formats read"
           },
           "es": {
             "label": "Mirando los formatos de exportación",
             "phrase": [
               "miró los formatos",
               "miró los formatos {n} veces"
-            ]
+            ],
+            "result": "Formatos de exportación leídos"
           }
         },
         "export-design": {
@@ -896,14 +978,16 @@
             "phrase": [
               "exported a design",
               "exported {n} designs"
-            ]
+            ],
+            "result": "Exported: its download link expires soon"
           },
           "es": {
             "label": "Exportando un diseño",
             "phrase": [
               "exportó un diseño",
               "exportó {n} diseños"
-            ]
+            ],
+            "result": "Exportado: su enlace de descarga caduca pronto"
           }
         }
       }
