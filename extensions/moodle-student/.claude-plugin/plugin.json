@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -865,6 +865,654 @@
               "añadió {n} entradas a la base de datos"
             ],
             "result": "Entrada añadida"
+          }
+        },
+        "configure": {
+          "en": {
+            "label": "Changing moodle-mcp's settings for this session",
+            "phrase": [
+              "changed its settings",
+              "changed its settings {n} times"
+            ],
+            "result": "Settings changed for this session"
+          },
+          "es": {
+            "label": "Cambiando los ajustes de moodle-mcp para esta sesión",
+            "phrase": [
+              "cambió sus ajustes",
+              "cambió sus ajustes {n} veces"
+            ],
+            "result": "Ajustes cambiados para esta sesión"
+          }
+        },
+        "logout": {
+          "en": {
+            "label": "Logging out of Moodle",
+            "phrase": [
+              "logged out",
+              "logged out {n} times"
+            ],
+            "result": "Logged out of Moodle"
+          },
+          "es": {
+            "label": "Cerrando la sesión de Moodle",
+            "phrase": [
+              "cerró la sesión",
+              "cerró la sesión {n} veces"
+            ],
+            "result": "Sesión de Moodle cerrada"
+          }
+        },
+        "get_me": {
+          "en": {
+            "label": "Checking who you are in Moodle",
+            "phrase": [
+              "checked who you are",
+              "checked who you are {n} times"
+            ],
+            "result": "Your account read"
+          },
+          "es": {
+            "label": "Comprobando quién eres en Moodle",
+            "phrase": [
+              "comprobó quién eres",
+              "comprobó quién eres {n} veces"
+            ],
+            "result": "Tu cuenta, leída"
+          }
+        },
+        "get_site_info": {
+          "en": {
+            "label": "Reading the Moodle site's information",
+            "phrase": [
+              "read the site's information",
+              "read the site's information {n} times"
+            ],
+            "result": "Site's information read"
+          },
+          "es": {
+            "label": "Leyendo la información del sitio Moodle",
+            "phrase": [
+              "leyó la información del sitio",
+              "leyó la información del sitio {n} veces"
+            ],
+            "result": "Información del sitio leída"
+          }
+        },
+        "list_participants": {
+          "en": {
+            "label": "Listing a course's participants",
+            "phrase": [
+              "listed the participants",
+              "listed the participants {n} times"
+            ],
+            "result": "Participants listed"
+          },
+          "es": {
+            "label": "Listando los participantes de un curso",
+            "phrase": [
+              "listó los participantes",
+              "listó los participantes {n} veces"
+            ],
+            "result": "Participantes listados"
+          }
+        },
+        "get_discussion": {
+          "en": {
+            "label": "Reading a forum discussion",
+            "phrase": [
+              "read a discussion",
+              "read {n} discussions"
+            ],
+            "result": "Discussion read"
+          },
+          "es": {
+            "label": "Leyendo un debate del foro",
+            "phrase": [
+              "leyó un debate",
+              "leyó {n} debates"
+            ],
+            "result": "Debate leído"
+          }
+        },
+        "download_file": {
+          "en": {
+            "label": "Downloading a file from Moodle",
+            "phrase": [
+              "downloaded a file",
+              "downloaded {n} files"
+            ],
+            "result": "File saved on this computer"
+          },
+          "es": {
+            "label": "Descargando un archivo de Moodle",
+            "phrase": [
+              "descargó un archivo",
+              "descargó {n} archivos"
+            ],
+            "result": "Archivo guardado en este ordenador"
+          }
+        },
+        "get_survey": {
+          "en": {
+            "label": "Reading a survey's questions",
+            "phrase": [
+              "read a survey",
+              "read {n} surveys"
+            ],
+            "result": "Survey read"
+          },
+          "es": {
+            "label": "Leyendo las preguntas de una encuesta",
+            "phrase": [
+              "leyó una encuesta",
+              "leyó {n} encuestas"
+            ],
+            "result": "Encuesta leída"
+          }
+        },
+        "get_choice": {
+          "en": {
+            "label": "Reading a choice",
+            "phrase": [
+              "read a choice",
+              "read {n} choices"
+            ],
+            "result": "Choice read"
+          },
+          "es": {
+            "label": "Leyendo una consulta",
+            "phrase": [
+              "leyó una consulta",
+              "leyó {n} consultas"
+            ],
+            "result": "Consulta leída"
+          }
+        },
+        "get_lesson_page": {
+          "en": {
+            "label": "Reading the lesson's current page",
+            "phrase": [
+              "read a lesson page",
+              "read {n} lesson pages"
+            ],
+            "result": "Lesson page read"
+          },
+          "es": {
+            "label": "Leyendo la página actual de la lección",
+            "phrase": [
+              "leyó una página de la lección",
+              "leyó {n} páginas de la lección"
+            ],
+            "result": "Página de la lección leída"
+          }
+        },
+        "get_h5p_activity": {
+          "en": {
+            "label": "Reading an H5P activity",
+            "phrase": [
+              "read an H5P activity",
+              "read {n} H5P activities"
+            ],
+            "result": "H5P activity read"
+          },
+          "es": {
+            "label": "Leyendo una actividad H5P",
+            "phrase": [
+              "leyó una actividad H5P",
+              "leyó {n} actividades H5P"
+            ],
+            "result": "Actividad H5P leída"
+          }
+        },
+        "get_scorm": {
+          "en": {
+            "label": "Reading a SCORM activity",
+            "phrase": [
+              "read a SCORM activity",
+              "read {n} SCORM activities"
+            ],
+            "result": "SCORM activity read"
+          },
+          "es": {
+            "label": "Leyendo una actividad SCORM",
+            "phrase": [
+              "leyó una actividad SCORM",
+              "leyó {n} actividades SCORM"
+            ],
+            "result": "Actividad SCORM leída"
+          }
+        },
+        "get_activities_overview": {
+          "en": {
+            "label": "Reading a course's activities overview",
+            "phrase": [
+              "read the overview",
+              "read the overview {n} times"
+            ],
+            "result": "Overview read"
+          },
+          "es": {
+            "label": "Leyendo la vista general de actividades",
+            "phrase": [
+              "leyó la vista general",
+              "leyó la vista general {n} veces"
+            ],
+            "result": "Vista general leída"
+          }
+        },
+        "get_course_updates": {
+          "en": {
+            "label": "Reading what changed in a course",
+            "phrase": [
+              "read what changed",
+              "read what changed {n} times"
+            ],
+            "result": "Changes read"
+          },
+          "es": {
+            "label": "Leyendo lo que ha cambiado en un curso",
+            "phrase": [
+              "leyó lo que cambió",
+              "leyó lo que cambió {n} veces"
+            ],
+            "result": "Cambios leídos"
+          }
+        },
+        "get_quiz_attempt": {
+          "en": {
+            "label": "Reading an attempt's questions",
+            "phrase": [
+              "read an attempt",
+              "read {n} attempts"
+            ],
+            "result": "Attempt's questions read"
+          },
+          "es": {
+            "label": "Leyendo las preguntas de un intento",
+            "phrase": [
+              "leyó un intento",
+              "leyó {n} intentos"
+            ],
+            "result": "Preguntas del intento leídas"
+          }
+        },
+        "set_discussion_subscription": {
+          "en": {
+            "label": "Changing a discussion subscription",
+            "phrase": [
+              "changed a subscription",
+              "changed {n} subscriptions"
+            ],
+            "result": "Subscription changed"
+          },
+          "es": {
+            "label": "Cambiando la suscripción a un debate",
+            "phrase": [
+              "cambió una suscripción",
+              "cambió {n} suscripciones"
+            ],
+            "result": "Suscripción cambiada"
+          }
+        },
+        "edit_post": {
+          "en": {
+            "label": "Editing a forum post",
+            "phrase": [
+              "edited a post",
+              "edited {n} posts"
+            ],
+            "result": "Post saved: the forum's members see it"
+          },
+          "es": {
+            "label": "Editando un mensaje del foro",
+            "phrase": [
+              "editó un mensaje",
+              "editó {n} mensajes"
+            ],
+            "result": "Mensaje guardado: lo ven los participantes del foro"
+          }
+        },
+        "delete_post": {
+          "en": {
+            "label": "Deleting a forum post",
+            "phrase": [
+              "deleted a post",
+              "deleted {n} posts"
+            ],
+            "result": "Post deleted"
+          },
+          "es": {
+            "label": "Eliminando un mensaje del foro",
+            "phrase": [
+              "eliminó un mensaje",
+              "eliminó {n} mensajes"
+            ],
+            "result": "Mensaje eliminado"
+          }
+        },
+        "rate": {
+          "en": {
+            "label": "Rating a post, entry or record",
+            "phrase": [
+              "rated",
+              "rated {n} times"
+            ],
+            "result": "Rating saved"
+          },
+          "es": {
+            "label": "Valorando un mensaje, entrada o registro",
+            "phrase": [
+              "valoró",
+              "valoró {n} veces"
+            ],
+            "result": "Valoración guardada"
+          }
+        },
+        "assess_workshop_submission": {
+          "en": {
+            "label": "Assessing a classmate's workshop work",
+            "phrase": [
+              "assessed a submission",
+              "assessed {n} submissions"
+            ],
+            "result": "Assessment saved"
+          },
+          "es": {
+            "label": "Evaluando la entrega de un compañero en el taller",
+            "phrase": [
+              "evaluó una entrega",
+              "evaluó {n} entregas"
+            ],
+            "result": "Evaluación guardada"
+          }
+        },
+        "get_workshop_submission": {
+          "en": {
+            "label": "Reading a workshop submission",
+            "phrase": [
+              "read a workshop submission",
+              "read {n} workshop submissions"
+            ],
+            "result": "Submission read"
+          },
+          "es": {
+            "label": "Leyendo una entrega del taller",
+            "phrase": [
+              "leyó una entrega del taller",
+              "leyó {n} entregas del taller"
+            ],
+            "result": "Entrega leída"
+          }
+        },
+        "list_notifications": {
+          "en": {
+            "label": "Reading your notifications",
+            "phrase": [
+              "read your notifications",
+              "read your notifications {n} times"
+            ],
+            "result": "Notifications read"
+          },
+          "es": {
+            "label": "Leyendo tus notificaciones",
+            "phrase": [
+              "leyó tus notificaciones",
+              "leyó tus notificaciones {n} veces"
+            ],
+            "result": "Notificaciones leídas"
+          }
+        },
+        "list_conversations": {
+          "en": {
+            "label": "Listing your conversations",
+            "phrase": [
+              "listed your conversations",
+              "listed your conversations {n} times"
+            ],
+            "result": "Conversations listed"
+          },
+          "es": {
+            "label": "Listando tus conversaciones",
+            "phrase": [
+              "listó tus conversaciones",
+              "listó tus conversaciones {n} veces"
+            ],
+            "result": "Conversaciones listadas"
+          }
+        },
+        "get_conversation": {
+          "en": {
+            "label": "Reading a conversation",
+            "phrase": [
+              "read a conversation",
+              "read {n} conversations"
+            ],
+            "result": "Conversation read"
+          },
+          "es": {
+            "label": "Leyendo una conversación",
+            "phrase": [
+              "leyó una conversación",
+              "leyó {n} conversaciones"
+            ],
+            "result": "Conversación leída"
+          }
+        },
+        "send_message": {
+          "en": {
+            "label": "Sending a private message",
+            "phrase": [
+              "sent a message",
+              "sent {n} messages"
+            ],
+            "result": "Message sent"
+          },
+          "es": {
+            "label": "Enviando un mensaje privado",
+            "phrase": [
+              "envió un mensaje",
+              "envió {n} mensajes"
+            ],
+            "result": "Mensaje enviado"
+          }
+        },
+        "list_database_entries": {
+          "en": {
+            "label": "Reading a database's entries",
+            "phrase": [
+              "read a database",
+              "read {n} databases"
+            ],
+            "result": "Entries read"
+          },
+          "es": {
+            "label": "Leyendo las entradas de una base de datos",
+            "phrase": [
+              "leyó una base de datos",
+              "leyó {n} bases de datos"
+            ],
+            "result": "Entradas leídas"
+          }
+        },
+        "list_glossary_entries": {
+          "en": {
+            "label": "Reading a glossary",
+            "phrase": [
+              "read a glossary",
+              "read {n} glossaries"
+            ],
+            "result": "Glossary read"
+          },
+          "es": {
+            "label": "Leyendo un glosario",
+            "phrase": [
+              "leyó un glosario",
+              "leyó {n} glosarios"
+            ],
+            "result": "Glosario leído"
+          }
+        },
+        "list_wiki_pages": {
+          "en": {
+            "label": "Listing a wiki's pages",
+            "phrase": [
+              "listed a wiki",
+              "listed {n} wikis"
+            ],
+            "result": "Wiki's pages listed"
+          },
+          "es": {
+            "label": "Listando las páginas de una wiki",
+            "phrase": [
+              "listó una wiki",
+              "listó {n} wikis"
+            ],
+            "result": "Páginas de la wiki listadas"
+          }
+        },
+        "get_wiki_page": {
+          "en": {
+            "label": "Reading a wiki page",
+            "phrase": [
+              "read a wiki page",
+              "read {n} wiki pages"
+            ],
+            "result": "Wiki page read"
+          },
+          "es": {
+            "label": "Leyendo una página de la wiki",
+            "phrase": [
+              "leyó una página de la wiki",
+              "leyó {n} páginas de la wiki"
+            ],
+            "result": "Página de la wiki leída"
+          }
+        },
+        "create_wiki_page": {
+          "en": {
+            "label": "Creating the wiki page \"{title}\"",
+            "phrase": [
+              "created a wiki page",
+              "created {n} wiki pages"
+            ],
+            "result": "Page created: the course sees it"
+          },
+          "es": {
+            "label": "Creando la página de wiki «{title}»",
+            "phrase": [
+              "creó una página de wiki",
+              "creó {n} páginas de wiki"
+            ],
+            "result": "Página creada: la ve el curso"
+          }
+        },
+        "list_badges": {
+          "en": {
+            "label": "Listing a course's badges",
+            "phrase": [
+              "listed the badges",
+              "listed the badges {n} times"
+            ],
+            "result": "Badges listed"
+          },
+          "es": {
+            "label": "Listando las insignias de un curso",
+            "phrase": [
+              "listó las insignias",
+              "listó las insignias {n} veces"
+            ],
+            "result": "Insignias listadas"
+          }
+        },
+        "list_events": {
+          "en": {
+            "label": "Reading the calendar",
+            "phrase": [
+              "read the calendar",
+              "read the calendar {n} times"
+            ],
+            "result": "Calendar read"
+          },
+          "es": {
+            "label": "Leyendo el calendario",
+            "phrase": [
+              "leyó el calendario",
+              "leyó el calendario {n} veces"
+            ],
+            "result": "Calendario leído"
+          }
+        },
+        "show_browser": {
+          "en": {
+            "label": "Showing or hiding the browser",
+            "phrase": [
+              "showed or hid the browser",
+              "showed or hid the browser {n} times"
+            ],
+            "result": "Browser shown or hidden"
+          },
+          "es": {
+            "label": "Mostrando u ocultando el navegador",
+            "phrase": [
+              "mostró u ocultó el navegador",
+              "mostró u ocultó el navegador {n} veces"
+            ],
+            "result": "Navegador mostrado u ocultado"
+          }
+        },
+        "server_info": {
+          "en": {
+            "label": "Reading moodle-mcp's settings",
+            "phrase": [
+              "read its settings",
+              "read its settings {n} times"
+            ],
+            "result": "Settings read"
+          },
+          "es": {
+            "label": "Leyendo los ajustes de moodle-mcp",
+            "phrase": [
+              "leyó sus ajustes",
+              "leyó sus ajustes {n} veces"
+            ],
+            "result": "Ajustes leídos"
+          }
+        },
+        "add_site": {
+          "en": {
+            "label": "Adding a Moodle site",
+            "phrase": [
+              "added a site",
+              "added {n} sites"
+            ],
+            "result": "Site added, not active yet"
+          },
+          "es": {
+            "label": "Añadiendo un aula Moodle",
+            "phrase": [
+              "añadió un aula",
+              "añadió {n} aulas"
+            ],
+            "result": "Aula añadida, aún no activa"
+          }
+        },
+        "remove_site": {
+          "en": {
+            "label": "Removing the site {name}",
+            "phrase": [
+              "removed a site",
+              "removed {n} sites"
+            ],
+            "result": "Site removed, with its session"
+          },
+          "es": {
+            "label": "Quitando el aula {name}",
+            "phrase": [
+              "quitó un aula",
+              "quitó {n} aulas"
+            ],
+            "result": "Aula quitada, con su sesión"
           }
         }
       }

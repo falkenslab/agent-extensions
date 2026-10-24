@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -1064,6 +1064,1698 @@
               "asignó revisiones {n} veces"
             ],
             "result": "Revisiones asignadas"
+          }
+        },
+        "configure": {
+          "en": {
+            "label": "Changing moodle-mcp's settings for this session",
+            "phrase": [
+              "changed its settings",
+              "changed its settings {n} times"
+            ],
+            "result": "Settings changed for this session"
+          },
+          "es": {
+            "label": "Cambiando los ajustes de moodle-mcp para esta sesión",
+            "phrase": [
+              "cambió sus ajustes",
+              "cambió sus ajustes {n} veces"
+            ],
+            "result": "Ajustes cambiados para esta sesión"
+          }
+        },
+        "logout": {
+          "en": {
+            "label": "Logging out of Moodle",
+            "phrase": [
+              "logged out",
+              "logged out {n} times"
+            ],
+            "result": "Logged out of Moodle"
+          },
+          "es": {
+            "label": "Cerrando la sesión de Moodle",
+            "phrase": [
+              "cerró la sesión",
+              "cerró la sesión {n} veces"
+            ],
+            "result": "Sesión de Moodle cerrada"
+          }
+        },
+        "get_me": {
+          "en": {
+            "label": "Checking who you are in Moodle",
+            "phrase": [
+              "checked who you are",
+              "checked who you are {n} times"
+            ],
+            "result": "Your account read"
+          },
+          "es": {
+            "label": "Comprobando quién eres en Moodle",
+            "phrase": [
+              "comprobó quién eres",
+              "comprobó quién eres {n} veces"
+            ],
+            "result": "Tu cuenta, leída"
+          }
+        },
+        "get_site_info": {
+          "en": {
+            "label": "Reading the Moodle site's information",
+            "phrase": [
+              "read the site's information",
+              "read the site's information {n} times"
+            ],
+            "result": "Site's information read"
+          },
+          "es": {
+            "label": "Leyendo la información del sitio Moodle",
+            "phrase": [
+              "leyó la información del sitio",
+              "leyó la información del sitio {n} veces"
+            ],
+            "result": "Información del sitio leída"
+          }
+        },
+        "get_activity_content": {
+          "en": {
+            "label": "Reading an activity's content",
+            "phrase": [
+              "read an activity",
+              "read {n} activities"
+            ],
+            "result": "Activity's content read"
+          },
+          "es": {
+            "label": "Leyendo el contenido de una actividad",
+            "phrase": [
+              "leyó una actividad",
+              "leyó {n} actividades"
+            ],
+            "result": "Contenido de la actividad leído"
+          }
+        },
+        "list_participants": {
+          "en": {
+            "label": "Listing a course's participants",
+            "phrase": [
+              "listed the participants",
+              "listed the participants {n} times"
+            ],
+            "result": "Participants listed"
+          },
+          "es": {
+            "label": "Listando los participantes de un curso",
+            "phrase": [
+              "listó los participantes",
+              "listó los participantes {n} veces"
+            ],
+            "result": "Participantes listados"
+          }
+        },
+        "set_group_members": {
+          "en": {
+            "label": "Changing a group's members",
+            "phrase": [
+              "changed a group",
+              "changed {n} groups"
+            ],
+            "result": "Group's members changed"
+          },
+          "es": {
+            "label": "Cambiando los miembros de un grupo",
+            "phrase": [
+              "cambió un grupo",
+              "cambió {n} grupos"
+            ],
+            "result": "Miembros del grupo cambiados"
+          }
+        },
+        "create_group": {
+          "en": {
+            "label": "Creating the group {name}",
+            "phrase": [
+              "created a group",
+              "created {n} groups"
+            ],
+            "result": "Group created, still empty"
+          },
+          "es": {
+            "label": "Creando el grupo {name}",
+            "phrase": [
+              "creó un grupo",
+              "creó {n} grupos"
+            ],
+            "result": "Grupo creado, aún vacío"
+          }
+        },
+        "create_grouping": {
+          "en": {
+            "label": "Creating the grouping {name}",
+            "phrase": [
+              "created a grouping",
+              "created {n} groupings"
+            ],
+            "result": "Grouping created"
+          },
+          "es": {
+            "label": "Creando el agrupamiento {name}",
+            "phrase": [
+              "creó un agrupamiento",
+              "creó {n} agrupamientos"
+            ],
+            "result": "Agrupamiento creado"
+          }
+        },
+        "set_grouping_groups": {
+          "en": {
+            "label": "Setting a grouping's groups",
+            "phrase": [
+              "set a grouping's groups",
+              "set {n} groupings' groups"
+            ],
+            "result": "Grouping's groups set"
+          },
+          "es": {
+            "label": "Fijando los grupos de un agrupamiento",
+            "phrase": [
+              "fijó los grupos de un agrupamiento",
+              "fijó los grupos de {n} agrupamientos"
+            ],
+            "result": "Grupos del agrupamiento fijados"
+          }
+        },
+        "get_grader_report": {
+          "en": {
+            "label": "Reading a course's grades",
+            "phrase": [
+              "read the grades",
+              "read the grades {n} times"
+            ],
+            "result": "Grades read"
+          },
+          "es": {
+            "label": "Leyendo las calificaciones de un curso",
+            "phrase": [
+              "leyó las calificaciones",
+              "leyó las calificaciones {n} veces"
+            ],
+            "result": "Calificaciones leídas"
+          }
+        },
+        "get_completion_report": {
+          "en": {
+            "label": "Reading a course's activity completion",
+            "phrase": [
+              "read the completion",
+              "read the completion {n} times"
+            ],
+            "result": "Completion read"
+          },
+          "es": {
+            "label": "Leyendo la finalización de actividades de un curso",
+            "phrase": [
+              "leyó la finalización",
+              "leyó la finalización {n} veces"
+            ],
+            "result": "Finalización leída"
+          }
+        },
+        "get_activity_report": {
+          "en": {
+            "label": "Reading a course's activity views",
+            "phrase": [
+              "read the views",
+              "read the views {n} times"
+            ],
+            "result": "Views read"
+          },
+          "es": {
+            "label": "Leyendo las visualizaciones de un curso",
+            "phrase": [
+              "leyó las visualizaciones",
+              "leyó las visualizaciones {n} veces"
+            ],
+            "result": "Visualizaciones leídas"
+          }
+        },
+        "get_participation_report": {
+          "en": {
+            "label": "Reading who took part in an activity",
+            "phrase": [
+              "read who took part",
+              "read who took part {n} times"
+            ],
+            "result": "Participation read"
+          },
+          "es": {
+            "label": "Leyendo quién participó en una actividad",
+            "phrase": [
+              "leyó quién participó",
+              "leyó quién participó {n} veces"
+            ],
+            "result": "Participación leída"
+          }
+        },
+        "get_course_logs": {
+          "en": {
+            "label": "Reading a course's logs",
+            "phrase": [
+              "read the logs",
+              "read the logs {n} times"
+            ],
+            "result": "Logs read"
+          },
+          "es": {
+            "label": "Leyendo los registros de un curso",
+            "phrase": [
+              "leyó los registros",
+              "leyó los registros {n} veces"
+            ],
+            "result": "Registros leídos"
+          }
+        },
+        "set_grade": {
+          "en": {
+            "label": "Setting a grade in the gradebook",
+            "phrase": [
+              "set a grade",
+              "set {n} grades"
+            ],
+            "result": "Grade saved"
+          },
+          "es": {
+            "label": "Poniendo una nota en el calificador",
+            "phrase": [
+              "puso una nota",
+              "puso {n} notas"
+            ],
+            "result": "Nota guardada"
+          }
+        },
+        "export_grades": {
+          "en": {
+            "label": "Exporting a course's grades",
+            "phrase": [
+              "exported the grades",
+              "exported the grades {n} times"
+            ],
+            "result": "Grades exported on this computer"
+          },
+          "es": {
+            "label": "Exportando las calificaciones de un curso",
+            "phrase": [
+              "exportó las calificaciones",
+              "exportó las calificaciones {n} veces"
+            ],
+            "result": "Calificaciones exportadas en este ordenador"
+          }
+        },
+        "override_completion": {
+          "en": {
+            "label": "Setting an activity's completion for someone",
+            "phrase": [
+              "set a completion",
+              "set {n} completions"
+            ],
+            "result": "Completion set"
+          },
+          "es": {
+            "label": "Marcando la finalización de una actividad para alguien",
+            "phrase": [
+              "marcó una finalización",
+              "marcó {n} finalizaciones"
+            ],
+            "result": "Finalización marcada"
+          }
+        },
+        "list_assignments": {
+          "en": {
+            "label": "Listing a course's assignments",
+            "phrase": [
+              "listed the assignments",
+              "listed the assignments {n} times"
+            ],
+            "result": "Assignments listed"
+          },
+          "es": {
+            "label": "Listando las tareas de un curso",
+            "phrase": [
+              "listó las tareas",
+              "listó las tareas {n} veces"
+            ],
+            "result": "Tareas listadas"
+          }
+        },
+        "get_discussion": {
+          "en": {
+            "label": "Reading a forum discussion",
+            "phrase": [
+              "read a discussion",
+              "read {n} discussions"
+            ],
+            "result": "Discussion read"
+          },
+          "es": {
+            "label": "Leyendo un debate del foro",
+            "phrase": [
+              "leyó un debate",
+              "leyó {n} debates"
+            ],
+            "result": "Debate leído"
+          }
+        },
+        "download_file": {
+          "en": {
+            "label": "Downloading a file from Moodle",
+            "phrase": [
+              "downloaded a file",
+              "downloaded {n} files"
+            ],
+            "result": "File saved on this computer"
+          },
+          "es": {
+            "label": "Descargando un archivo de Moodle",
+            "phrase": [
+              "descargó un archivo",
+              "descargó {n} archivos"
+            ],
+            "result": "Archivo guardado en este ordenador"
+          }
+        },
+        "get_h5p_activity": {
+          "en": {
+            "label": "Reading an H5P activity",
+            "phrase": [
+              "read an H5P activity",
+              "read {n} H5P activities"
+            ],
+            "result": "H5P activity read"
+          },
+          "es": {
+            "label": "Leyendo una actividad H5P",
+            "phrase": [
+              "leyó una actividad H5P",
+              "leyó {n} actividades H5P"
+            ],
+            "result": "Actividad H5P leída"
+          }
+        },
+        "get_scorm": {
+          "en": {
+            "label": "Reading a SCORM activity",
+            "phrase": [
+              "read a SCORM activity",
+              "read {n} SCORM activities"
+            ],
+            "result": "SCORM activity read"
+          },
+          "es": {
+            "label": "Leyendo una actividad SCORM",
+            "phrase": [
+              "leyó una actividad SCORM",
+              "leyó {n} actividades SCORM"
+            ],
+            "result": "Actividad SCORM leída"
+          }
+        },
+        "get_activities_overview": {
+          "en": {
+            "label": "Reading a course's activities overview",
+            "phrase": [
+              "read the overview",
+              "read the overview {n} times"
+            ],
+            "result": "Overview read"
+          },
+          "es": {
+            "label": "Leyendo la vista general de actividades",
+            "phrase": [
+              "leyó la vista general",
+              "leyó la vista general {n} veces"
+            ],
+            "result": "Vista general leída"
+          }
+        },
+        "get_course_updates": {
+          "en": {
+            "label": "Reading what changed in a course",
+            "phrase": [
+              "read what changed",
+              "read what changed {n} times"
+            ],
+            "result": "Changes read"
+          },
+          "es": {
+            "label": "Leyendo lo que ha cambiado en un curso",
+            "phrase": [
+              "leyó lo que cambió",
+              "leyó lo que cambió {n} veces"
+            ],
+            "result": "Cambios leídos"
+          }
+        },
+        "get_attempt_review": {
+          "en": {
+            "label": "Reviewing an attempt",
+            "phrase": [
+              "reviewed an attempt",
+              "reviewed {n} attempts"
+            ],
+            "result": "Attempt review read"
+          },
+          "es": {
+            "label": "Revisando un intento",
+            "phrase": [
+              "revisó un intento",
+              "revisó {n} intentos"
+            ],
+            "result": "Revisión del intento leída"
+          }
+        },
+        "get_quiz_results": {
+          "en": {
+            "label": "Reading a quiz's results",
+            "phrase": [
+              "read a quiz's results",
+              "read {n} quizzes' results"
+            ],
+            "result": "Results read"
+          },
+          "es": {
+            "label": "Leyendo los resultados de un cuestionario",
+            "phrase": [
+              "leyó los resultados de un cuestionario",
+              "leyó los resultados de {n} cuestionarios"
+            ],
+            "result": "Resultados leídos"
+          }
+        },
+        "set_quiz_override": {
+          "en": {
+            "label": "Setting a quiz exception for someone",
+            "phrase": [
+              "set a quiz exception",
+              "set {n} quiz exceptions"
+            ],
+            "result": "Quiz exception set"
+          },
+          "es": {
+            "label": "Poniendo una excepción de cuestionario a alguien",
+            "phrase": [
+              "puso una excepción",
+              "puso {n} excepciones"
+            ],
+            "result": "Excepción del cuestionario puesta"
+          }
+        },
+        "list_questions_to_grade": {
+          "en": {
+            "label": "Listing the questions to grade by hand",
+            "phrase": [
+              "listed questions to grade",
+              "listed questions to grade {n} times"
+            ],
+            "result": "Questions to grade listed"
+          },
+          "es": {
+            "label": "Listando las preguntas por calificar a mano",
+            "phrase": [
+              "listó preguntas por calificar",
+              "listó preguntas por calificar {n} veces"
+            ],
+            "result": "Preguntas por calificar listadas"
+          }
+        },
+        "grade_quiz_question": {
+          "en": {
+            "label": "Grading a quiz question by hand",
+            "phrase": [
+              "graded a question",
+              "graded {n} questions"
+            ],
+            "result": "Mark saved"
+          },
+          "es": {
+            "label": "Calificando a mano una pregunta",
+            "phrase": [
+              "calificó una pregunta",
+              "calificó {n} preguntas"
+            ],
+            "result": "Puntuación guardada"
+          }
+        },
+        "grant_extension": {
+          "en": {
+            "label": "Granting an assignment extension",
+            "phrase": [
+              "granted an extension",
+              "granted {n} extensions"
+            ],
+            "result": "Extension granted"
+          },
+          "es": {
+            "label": "Concediendo una prórroga",
+            "phrase": [
+              "concedió una prórroga",
+              "concedió {n} prórrogas"
+            ],
+            "result": "Prórroga concedida"
+          }
+        },
+        "set_workflow_state": {
+          "en": {
+            "label": "Changing the marking workflow state",
+            "phrase": [
+              "changed a marking state",
+              "changed {n} marking states"
+            ],
+            "result": "Marking state changed"
+          },
+          "es": {
+            "label": "Cambiando el estado del flujo de calificación",
+            "phrase": [
+              "cambió un estado de calificación",
+              "cambió {n} estados de calificación"
+            ],
+            "result": "Estado de calificación cambiado"
+          }
+        },
+        "allocate_marker": {
+          "en": {
+            "label": "Allocating a marker",
+            "phrase": [
+              "allocated a marker",
+              "allocated markers {n} times"
+            ],
+            "result": "Marker allocated"
+          },
+          "es": {
+            "label": "Asignando un evaluador",
+            "phrase": [
+              "asignó un evaluador",
+              "asignó evaluadores {n} veces"
+            ],
+            "result": "Evaluador asignado"
+          }
+        },
+        "create_discussion": {
+          "en": {
+            "label": "Starting the discussion \"{subject}\"",
+            "phrase": [
+              "started a discussion",
+              "started {n} discussions"
+            ],
+            "result": "Posted: the forum's members see it"
+          },
+          "es": {
+            "label": "Abriendo el debate «{subject}»",
+            "phrase": [
+              "abrió un debate",
+              "abrió {n} debates"
+            ],
+            "result": "Publicado: lo ven los participantes del foro"
+          }
+        },
+        "set_discussion_state": {
+          "en": {
+            "label": "Pinning or locking a discussion",
+            "phrase": [
+              "pinned or locked a discussion",
+              "pinned or locked {n} discussions"
+            ],
+            "result": "Discussion changed"
+          },
+          "es": {
+            "label": "Fijando o bloqueando un debate",
+            "phrase": [
+              "fijó o bloqueó un debate",
+              "fijó o bloqueó {n} debates"
+            ],
+            "result": "Debate cambiado"
+          }
+        },
+        "set_discussion_subscription": {
+          "en": {
+            "label": "Changing a discussion subscription",
+            "phrase": [
+              "changed a subscription",
+              "changed {n} subscriptions"
+            ],
+            "result": "Subscription changed"
+          },
+          "es": {
+            "label": "Cambiando la suscripción a un debate",
+            "phrase": [
+              "cambió una suscripción",
+              "cambió {n} suscripciones"
+            ],
+            "result": "Suscripción cambiada"
+          }
+        },
+        "edit_post": {
+          "en": {
+            "label": "Editing a forum post",
+            "phrase": [
+              "edited a post",
+              "edited {n} posts"
+            ],
+            "result": "Post saved: the forum's members see it"
+          },
+          "es": {
+            "label": "Editando un mensaje del foro",
+            "phrase": [
+              "editó un mensaje",
+              "editó {n} mensajes"
+            ],
+            "result": "Mensaje guardado: lo ven los participantes del foro"
+          }
+        },
+        "delete_post": {
+          "en": {
+            "label": "Deleting a forum post",
+            "phrase": [
+              "deleted a post",
+              "deleted {n} posts"
+            ],
+            "result": "Post deleted"
+          },
+          "es": {
+            "label": "Eliminando un mensaje del foro",
+            "phrase": [
+              "eliminó un mensaje",
+              "eliminó {n} mensajes"
+            ],
+            "result": "Mensaje eliminado"
+          }
+        },
+        "get_forum_grades": {
+          "en": {
+            "label": "Reading a forum's grades",
+            "phrase": [
+              "read a forum's grades",
+              "read {n} forums' grades"
+            ],
+            "result": "Forum grades read"
+          },
+          "es": {
+            "label": "Leyendo las notas de un foro",
+            "phrase": [
+              "leyó las notas de un foro",
+              "leyó las notas de {n} foros"
+            ],
+            "result": "Notas del foro leídas"
+          }
+        },
+        "grade_forum_user": {
+          "en": {
+            "label": "Grading someone's forum work",
+            "phrase": [
+              "graded forum work",
+              "graded forum work {n} times"
+            ],
+            "result": "Forum grade saved"
+          },
+          "es": {
+            "label": "Calificando la participación en un foro",
+            "phrase": [
+              "calificó una participación",
+              "calificó {n} participaciones"
+            ],
+            "result": "Nota del foro guardada"
+          }
+        },
+        "rate": {
+          "en": {
+            "label": "Rating a post, entry or record",
+            "phrase": [
+              "rated",
+              "rated {n} times"
+            ],
+            "result": "Rating saved"
+          },
+          "es": {
+            "label": "Valorando un mensaje, entrada o registro",
+            "phrase": [
+              "valoró",
+              "valoró {n} veces"
+            ],
+            "result": "Valoración guardada"
+          }
+        },
+        "get_workshop": {
+          "en": {
+            "label": "Reading a workshop",
+            "phrase": [
+              "read a workshop",
+              "read {n} workshops"
+            ],
+            "result": "Workshop read"
+          },
+          "es": {
+            "label": "Leyendo un taller",
+            "phrase": [
+              "leyó un taller",
+              "leyó {n} talleres"
+            ],
+            "result": "Taller leído"
+          }
+        },
+        "set_workshop_phase": {
+          "en": {
+            "label": "Switching a workshop's phase",
+            "phrase": [
+              "switched a phase",
+              "switched phases {n} times"
+            ],
+            "result": "Phase switched"
+          },
+          "es": {
+            "label": "Cambiando la fase de un taller",
+            "phrase": [
+              "cambió una fase",
+              "cambió de fase {n} veces"
+            ],
+            "result": "Fase cambiada"
+          }
+        },
+        "get_workshop_allocation": {
+          "en": {
+            "label": "Reading who assesses whom",
+            "phrase": [
+              "read the allocation",
+              "read the allocation {n} times"
+            ],
+            "result": "Allocation read"
+          },
+          "es": {
+            "label": "Leyendo quién evalúa a quién",
+            "phrase": [
+              "leyó la asignación",
+              "leyó la asignación {n} veces"
+            ],
+            "result": "Asignación leída"
+          }
+        },
+        "allocate_workshop_reviewer": {
+          "en": {
+            "label": "Allocating a reviewer",
+            "phrase": [
+              "allocated a reviewer",
+              "allocated {n} reviewers"
+            ],
+            "result": "Reviewer allocated"
+          },
+          "es": {
+            "label": "Asignando un revisor",
+            "phrase": [
+              "asignó un revisor",
+              "asignó {n} revisores"
+            ],
+            "result": "Revisor asignado"
+          }
+        },
+        "schedule_workshop_allocation": {
+          "en": {
+            "label": "Scheduling a workshop's allocation",
+            "phrase": [
+              "scheduled an allocation",
+              "scheduled {n} allocations"
+            ],
+            "result": "Allocation scheduled"
+          },
+          "es": {
+            "label": "Programando la asignación de un taller",
+            "phrase": [
+              "programó una asignación",
+              "programó {n} asignaciones"
+            ],
+            "result": "Asignación programada"
+          }
+        },
+        "send_message": {
+          "en": {
+            "label": "Sending a private message",
+            "phrase": [
+              "sent a message",
+              "sent {n} messages"
+            ],
+            "result": "Message sent"
+          },
+          "es": {
+            "label": "Enviando un mensaje privado",
+            "phrase": [
+              "envió un mensaje",
+              "envió {n} mensajes"
+            ],
+            "result": "Mensaje enviado"
+          }
+        },
+        "message_participants": {
+          "en": {
+            "label": "Messaging several participants",
+            "phrase": [
+              "messaged participants",
+              "messaged participants {n} times"
+            ],
+            "result": "Messages sent"
+          },
+          "es": {
+            "label": "Enviando un mensaje a varios participantes",
+            "phrase": [
+              "escribió a participantes",
+              "escribió a participantes {n} veces"
+            ],
+            "result": "Mensajes enviados"
+          }
+        },
+        "create_activity": {
+          "en": {
+            "label": "Creating an activity",
+            "phrase": [
+              "created an activity",
+              "created {n} activities"
+            ],
+            "result": "Created, hidden from students"
+          },
+          "es": {
+            "label": "Creando una actividad",
+            "phrase": [
+              "creó una actividad",
+              "creó {n} actividades"
+            ],
+            "result": "Creada, oculta para el alumnado"
+          }
+        },
+        "update_activity": {
+          "en": {
+            "label": "Changing an activity",
+            "phrase": [
+              "changed an activity",
+              "changed {n} activities"
+            ],
+            "result": "Activity saved"
+          },
+          "es": {
+            "label": "Cambiando una actividad",
+            "phrase": [
+              "cambió una actividad",
+              "cambió {n} actividades"
+            ],
+            "result": "Actividad guardada"
+          }
+        },
+        "get_activity_settings": {
+          "en": {
+            "label": "Reading an activity's settings",
+            "phrase": [
+              "read an activity's settings",
+              "read {n} activities' settings"
+            ],
+            "result": "Settings read"
+          },
+          "es": {
+            "label": "Leyendo los ajustes de una actividad",
+            "phrase": [
+              "leyó los ajustes de una actividad",
+              "leyó los ajustes de {n} actividades"
+            ],
+            "result": "Ajustes leídos"
+          }
+        },
+        "edit_activity": {
+          "en": {
+            "label": "Moving, renaming, showing or hiding an activity",
+            "phrase": [
+              "edited an activity",
+              "edited {n} activities"
+            ],
+            "result": "Activity saved"
+          },
+          "es": {
+            "label": "Moviendo, renombrando, mostrando u ocultando una actividad",
+            "phrase": [
+              "editó una actividad",
+              "editó {n} actividades"
+            ],
+            "result": "Actividad guardada"
+          }
+        },
+        "list_book_chapters": {
+          "en": {
+            "label": "Listing a book's chapters",
+            "phrase": [
+              "listed a book's chapters",
+              "listed {n} books' chapters"
+            ],
+            "result": "Chapters listed"
+          },
+          "es": {
+            "label": "Listando los capítulos de un libro",
+            "phrase": [
+              "listó los capítulos de un libro",
+              "listó los capítulos de {n} libros"
+            ],
+            "result": "Capítulos listados"
+          }
+        },
+        "edit_book_chapter": {
+          "en": {
+            "label": "Changing a book's chapter",
+            "phrase": [
+              "changed a chapter",
+              "changed {n} chapters"
+            ],
+            "result": "Chapter saved"
+          },
+          "es": {
+            "label": "Cambiando un capítulo del libro",
+            "phrase": [
+              "cambió un capítulo",
+              "cambió {n} capítulos"
+            ],
+            "result": "Capítulo guardado"
+          }
+        },
+        "move_book_chapter": {
+          "en": {
+            "label": "Moving a book's chapter",
+            "phrase": [
+              "moved a chapter",
+              "moved {n} chapters"
+            ],
+            "result": "Chapter moved"
+          },
+          "es": {
+            "label": "Moviendo un capítulo del libro",
+            "phrase": [
+              "movió un capítulo",
+              "movió {n} capítulos"
+            ],
+            "result": "Capítulo movido"
+          }
+        },
+        "get_lesson_pages": {
+          "en": {
+            "label": "Reading a lesson's pages",
+            "phrase": [
+              "read a lesson",
+              "read {n} lessons"
+            ],
+            "result": "Lesson's pages read"
+          },
+          "es": {
+            "label": "Leyendo las páginas de una lección",
+            "phrase": [
+              "leyó una lección",
+              "leyó {n} lecciones"
+            ],
+            "result": "Páginas de la lección leídas"
+          }
+        },
+        "edit_lesson_page": {
+          "en": {
+            "label": "Changing a lesson's page",
+            "phrase": [
+              "changed a lesson page",
+              "changed {n} lesson pages"
+            ],
+            "result": "Page saved"
+          },
+          "es": {
+            "label": "Cambiando una página de la lección",
+            "phrase": [
+              "cambió una página",
+              "cambió {n} páginas"
+            ],
+            "result": "Página guardada"
+          }
+        },
+        "add_database_field": {
+          "en": {
+            "label": "Adding the field {name} to a database",
+            "phrase": [
+              "added a field",
+              "added {n} fields"
+            ],
+            "result": "Field added"
+          },
+          "es": {
+            "label": "Añadiendo el campo {name} a una base de datos",
+            "phrase": [
+              "añadió un campo",
+              "añadió {n} campos"
+            ],
+            "result": "Campo añadido"
+          }
+        },
+        "set_database_template": {
+          "en": {
+            "label": "Saving a database's template",
+            "phrase": [
+              "saved a template",
+              "saved {n} templates"
+            ],
+            "result": "Template saved"
+          },
+          "es": {
+            "label": "Guardando una plantilla de la base de datos",
+            "phrase": [
+              "guardó una plantilla",
+              "guardó {n} plantillas"
+            ],
+            "result": "Plantilla guardada"
+          }
+        },
+        "list_database_presets": {
+          "en": {
+            "label": "Listing a database's presets",
+            "phrase": [
+              "listed the presets",
+              "listed the presets {n} times"
+            ],
+            "result": "Presets listed"
+          },
+          "es": {
+            "label": "Listando los preajustes de una base de datos",
+            "phrase": [
+              "listó los preajustes",
+              "listó los preajustes {n} veces"
+            ],
+            "result": "Preajustes listados"
+          }
+        },
+        "apply_database_preset": {
+          "en": {
+            "label": "Giving a database a preset",
+            "phrase": [
+              "applied a preset",
+              "applied {n} presets"
+            ],
+            "result": "Preset applied"
+          },
+          "es": {
+            "label": "Aplicando un preajuste a una base de datos",
+            "phrase": [
+              "aplicó un preajuste",
+              "aplicó {n} preajustes"
+            ],
+            "result": "Preajuste aplicado"
+          }
+        },
+        "add_glossary_entry": {
+          "en": {
+            "label": "Adding \"{concept}\" to a glossary",
+            "phrase": [
+              "added a glossary entry",
+              "added {n} glossary entries"
+            ],
+            "result": "Entry added: the course sees it"
+          },
+          "es": {
+            "label": "Añadiendo «{concept}» a un glosario",
+            "phrase": [
+              "añadió una entrada al glosario",
+              "añadió {n} entradas al glosario"
+            ],
+            "result": "Entrada añadida: la ve el curso"
+          }
+        },
+        "create_wiki_page": {
+          "en": {
+            "label": "Creating the wiki page \"{title}\"",
+            "phrase": [
+              "created a wiki page",
+              "created {n} wiki pages"
+            ],
+            "result": "Page created: the course sees it"
+          },
+          "es": {
+            "label": "Creando la página de wiki «{title}»",
+            "phrase": [
+              "creó una página de wiki",
+              "creó {n} páginas de wiki"
+            ],
+            "result": "Página creada: la ve el curso"
+          }
+        },
+        "add_feedback_item": {
+          "en": {
+            "label": "Adding a question to a feedback",
+            "phrase": [
+              "added a feedback question",
+              "added {n} feedback questions"
+            ],
+            "result": "Question added"
+          },
+          "es": {
+            "label": "Añadiendo una pregunta a un feedback",
+            "phrase": [
+              "añadió una pregunta al feedback",
+              "añadió {n} preguntas al feedback"
+            ],
+            "result": "Pregunta añadida"
+          }
+        },
+        "set_badge_criteria": {
+          "en": {
+            "label": "Setting what earns a badge",
+            "phrase": [
+              "set a badge's criteria",
+              "set {n} badges' criteria"
+            ],
+            "result": "Criteria saved"
+          },
+          "es": {
+            "label": "Fijando qué otorga una insignia",
+            "phrase": [
+              "fijó los criterios de una insignia",
+              "fijó los criterios de {n} insignias"
+            ],
+            "result": "Criterios guardados"
+          }
+        },
+        "set_badge_enabled": {
+          "en": {
+            "label": "Enabling or disabling a badge",
+            "phrase": [
+              "enabled or disabled a badge",
+              "enabled or disabled {n} badges"
+            ],
+            "result": "Badge changed"
+          },
+          "es": {
+            "label": "Activando o desactivando una insignia",
+            "phrase": [
+              "activó o desactivó una insignia",
+              "activó o desactivó {n} insignias"
+            ],
+            "result": "Insignia cambiada"
+          }
+        },
+        "award_badge": {
+          "en": {
+            "label": "Awarding a badge",
+            "phrase": [
+              "awarded a badge",
+              "awarded {n} badges"
+            ],
+            "result": "Badge awarded"
+          },
+          "es": {
+            "label": "Concediendo una insignia",
+            "phrase": [
+              "concedió una insignia",
+              "concedió {n} insignias"
+            ],
+            "result": "Insignia concedida"
+          }
+        },
+        "add_section": {
+          "en": {
+            "label": "Adding a section",
+            "phrase": [
+              "added a section",
+              "added {n} sections"
+            ],
+            "result": "Section added"
+          },
+          "es": {
+            "label": "Añadiendo una sección",
+            "phrase": [
+              "añadió una sección",
+              "añadió {n} secciones"
+            ],
+            "result": "Sección añadida"
+          }
+        },
+        "edit_section": {
+          "en": {
+            "label": "Changing a section",
+            "phrase": [
+              "changed a section",
+              "changed {n} sections"
+            ],
+            "result": "Section saved"
+          },
+          "es": {
+            "label": "Cambiando una sección",
+            "phrase": [
+              "cambió una sección",
+              "cambió {n} secciones"
+            ],
+            "result": "Sección guardada"
+          }
+        },
+        "update_course": {
+          "en": {
+            "label": "Changing a course's settings",
+            "phrase": [
+              "changed a course",
+              "changed {n} courses"
+            ],
+            "result": "Course saved"
+          },
+          "es": {
+            "label": "Cambiando la configuración de un curso",
+            "phrase": [
+              "cambió un curso",
+              "cambió {n} cursos"
+            ],
+            "result": "Curso guardado"
+          }
+        },
+        "copy_course": {
+          "en": {
+            "label": "Copying a course",
+            "phrase": [
+              "copied a course",
+              "copied {n} courses"
+            ],
+            "result": "Copy created, without users"
+          },
+          "es": {
+            "label": "Copiando un curso",
+            "phrase": [
+              "copió un curso",
+              "copió {n} cursos"
+            ],
+            "result": "Copia creada, sin usuarios"
+          }
+        },
+        "import_activities": {
+          "en": {
+            "label": "Importing activities from another course",
+            "phrase": [
+              "imported activities",
+              "imported activities {n} times"
+            ],
+            "result": "Activities imported"
+          },
+          "es": {
+            "label": "Importando actividades de otro curso",
+            "phrase": [
+              "importó actividades",
+              "importó actividades {n} veces"
+            ],
+            "result": "Actividades importadas"
+          }
+        },
+        "reset_course": {
+          "en": {
+            "label": "Resetting a course",
+            "phrase": [
+              "reset a course",
+              "reset {n} courses"
+            ],
+            "result": "Course reset"
+          },
+          "es": {
+            "label": "Reiniciando un curso",
+            "phrase": [
+              "reinició un curso",
+              "reinició {n} cursos"
+            ],
+            "result": "Curso reiniciado"
+          }
+        },
+        "list_question_banks": {
+          "en": {
+            "label": "Listing a course's question banks",
+            "phrase": [
+              "listed the banks",
+              "listed the banks {n} times"
+            ],
+            "result": "Question banks listed"
+          },
+          "es": {
+            "label": "Listando los bancos de preguntas",
+            "phrase": [
+              "listó los bancos",
+              "listó los bancos {n} veces"
+            ],
+            "result": "Bancos de preguntas listados"
+          }
+        },
+        "import_questions": {
+          "en": {
+            "label": "Importing questions into a bank",
+            "phrase": [
+              "imported questions",
+              "imported questions {n} times"
+            ],
+            "result": "Questions imported"
+          },
+          "es": {
+            "label": "Importando preguntas a un banco",
+            "phrase": [
+              "importó preguntas",
+              "importó preguntas {n} veces"
+            ],
+            "result": "Preguntas importadas"
+          }
+        },
+        "create_question": {
+          "en": {
+            "label": "Creating the question \"{name}\"",
+            "phrase": [
+              "created a question",
+              "created {n} questions"
+            ],
+            "result": "Question created in the bank"
+          },
+          "es": {
+            "label": "Creando la pregunta «{name}»",
+            "phrase": [
+              "creó una pregunta",
+              "creó {n} preguntas"
+            ],
+            "result": "Pregunta creada en el banco"
+          }
+        },
+        "update_question": {
+          "en": {
+            "label": "Changing a question",
+            "phrase": [
+              "changed a question",
+              "changed {n} questions"
+            ],
+            "result": "Question saved, as a new version"
+          },
+          "es": {
+            "label": "Cambiando una pregunta",
+            "phrase": [
+              "cambió una pregunta",
+              "cambió {n} preguntas"
+            ],
+            "result": "Pregunta guardada, como versión nueva"
+          }
+        },
+        "set_question_status": {
+          "en": {
+            "label": "Setting a question ready or draft",
+            "phrase": [
+              "set a question's status",
+              "set {n} questions' status"
+            ],
+            "result": "Status saved"
+          },
+          "es": {
+            "label": "Marcando una pregunta como lista o borrador",
+            "phrase": [
+              "marcó una pregunta",
+              "marcó {n} preguntas"
+            ],
+            "result": "Estado guardado"
+          }
+        },
+        "add_question_category": {
+          "en": {
+            "label": "Adding the category {name} to a bank",
+            "phrase": [
+              "added a category",
+              "added {n} categories"
+            ],
+            "result": "Category added"
+          },
+          "es": {
+            "label": "Añadiendo la categoría {name} a un banco",
+            "phrase": [
+              "añadió una categoría",
+              "añadió {n} categorías"
+            ],
+            "result": "Categoría añadida"
+          }
+        },
+        "get_quiz_structure": {
+          "en": {
+            "label": "Reading a quiz's questions",
+            "phrase": [
+              "read a quiz",
+              "read {n} quizzes"
+            ],
+            "result": "Quiz's questions read"
+          },
+          "es": {
+            "label": "Leyendo las preguntas de un cuestionario",
+            "phrase": [
+              "leyó un cuestionario",
+              "leyó {n} cuestionarios"
+            ],
+            "result": "Preguntas del cuestionario leídas"
+          }
+        },
+        "edit_quiz_slot": {
+          "en": {
+            "label": "Changing a quiz question's mark or place",
+            "phrase": [
+              "changed a quiz question",
+              "changed {n} quiz questions"
+            ],
+            "result": "Quiz saved"
+          },
+          "es": {
+            "label": "Cambiando la puntuación o el lugar de una pregunta",
+            "phrase": [
+              "cambió una pregunta del cuestionario",
+              "cambió {n} preguntas del cuestionario"
+            ],
+            "result": "Cuestionario guardado"
+          }
+        },
+        "set_quiz_pages": {
+          "en": {
+            "label": "Setting a quiz's pages",
+            "phrase": [
+              "set a quiz's pages",
+              "set {n} quizzes' pages"
+            ],
+            "result": "Pages saved"
+          },
+          "es": {
+            "label": "Fijando las páginas de un cuestionario",
+            "phrase": [
+              "fijó las páginas de un cuestionario",
+              "fijó las páginas de {n} cuestionarios"
+            ],
+            "result": "Páginas guardadas"
+          }
+        },
+        "add_quiz_section": {
+          "en": {
+            "label": "Adding the section \"{heading}\" to a quiz",
+            "phrase": [
+              "added a quiz section",
+              "added {n} quiz sections"
+            ],
+            "result": "Section added"
+          },
+          "es": {
+            "label": "Añadiendo la sección «{heading}» a un cuestionario",
+            "phrase": [
+              "añadió una sección al cuestionario",
+              "añadió {n} secciones al cuestionario"
+            ],
+            "result": "Sección añadida"
+          }
+        },
+        "get_gradebook_setup": {
+          "en": {
+            "label": "Reading the gradebook's setup",
+            "phrase": [
+              "read the gradebook",
+              "read the gradebook {n} times"
+            ],
+            "result": "Gradebook setup read"
+          },
+          "es": {
+            "label": "Leyendo la configuración del calificador",
+            "phrase": [
+              "leyó el calificador",
+              "leyó el calificador {n} veces"
+            ],
+            "result": "Configuración del calificador leída"
+          }
+        },
+        "update_grade_item": {
+          "en": {
+            "label": "Changing a grade item",
+            "phrase": [
+              "changed a grade item",
+              "changed {n} grade items"
+            ],
+            "result": "Grade item saved"
+          },
+          "es": {
+            "label": "Cambiando un elemento de calificación",
+            "phrase": [
+              "cambió un elemento de calificación",
+              "cambió {n} elementos de calificación"
+            ],
+            "result": "Elemento de calificación guardado"
+          }
+        },
+        "add_grade_category": {
+          "en": {
+            "label": "Adding the grade category {name}",
+            "phrase": [
+              "added a grade category",
+              "added {n} grade categories"
+            ],
+            "result": "Category added"
+          },
+          "es": {
+            "label": "Añadiendo la categoría de calificación {name}",
+            "phrase": [
+              "añadió una categoría de calificación",
+              "añadió {n} categorías de calificación"
+            ],
+            "result": "Categoría añadida"
+          }
+        },
+        "add_grade_item": {
+          "en": {
+            "label": "Adding the grade item {name}",
+            "phrase": [
+              "added a grade item",
+              "added {n} grade items"
+            ],
+            "result": "Grade item added"
+          },
+          "es": {
+            "label": "Añadiendo el elemento de calificación {name}",
+            "phrase": [
+              "añadió un elemento de calificación",
+              "añadió {n} elementos de calificación"
+            ],
+            "result": "Elemento de calificación añadido"
+          }
+        },
+        "update_grade_category": {
+          "en": {
+            "label": "Changing a grade category",
+            "phrase": [
+              "changed a grade category",
+              "changed {n} grade categories"
+            ],
+            "result": "Category saved"
+          },
+          "es": {
+            "label": "Cambiando una categoría de calificación",
+            "phrase": [
+              "cambió una categoría de calificación",
+              "cambió {n} categorías de calificación"
+            ],
+            "result": "Categoría guardada"
+          }
+        },
+        "delete_grade_category": {
+          "en": {
+            "label": "Deleting a grade category",
+            "phrase": [
+              "deleted a grade category",
+              "deleted {n} grade categories"
+            ],
+            "result": "Category deleted, its items moved up"
+          },
+          "es": {
+            "label": "Eliminando una categoría de calificación",
+            "phrase": [
+              "eliminó una categoría de calificación",
+              "eliminó {n} categorías de calificación"
+            ],
+            "result": "Categoría eliminada, sus elementos suben un nivel"
+          }
+        },
+        "delete_grade_item": {
+          "en": {
+            "label": "Deleting a grade item",
+            "phrase": [
+              "deleted a grade item",
+              "deleted {n} grade items"
+            ],
+            "result": "Grade item deleted, with its grades"
+          },
+          "es": {
+            "label": "Eliminando un elemento de calificación",
+            "phrase": [
+              "eliminó un elemento de calificación",
+              "eliminó {n} elementos de calificación"
+            ],
+            "result": "Elemento eliminado, con sus notas"
+          }
+        },
+        "show_browser": {
+          "en": {
+            "label": "Showing or hiding the browser",
+            "phrase": [
+              "showed or hid the browser",
+              "showed or hid the browser {n} times"
+            ],
+            "result": "Browser shown or hidden"
+          },
+          "es": {
+            "label": "Mostrando u ocultando el navegador",
+            "phrase": [
+              "mostró u ocultó el navegador",
+              "mostró u ocultó el navegador {n} veces"
+            ],
+            "result": "Navegador mostrado u ocultado"
+          }
+        },
+        "server_info": {
+          "en": {
+            "label": "Reading moodle-mcp's settings",
+            "phrase": [
+              "read its settings",
+              "read its settings {n} times"
+            ],
+            "result": "Settings read"
+          },
+          "es": {
+            "label": "Leyendo los ajustes de moodle-mcp",
+            "phrase": [
+              "leyó sus ajustes",
+              "leyó sus ajustes {n} veces"
+            ],
+            "result": "Ajustes leídos"
+          }
+        },
+        "add_site": {
+          "en": {
+            "label": "Adding a Moodle site",
+            "phrase": [
+              "added a site",
+              "added {n} sites"
+            ],
+            "result": "Site added, not active yet"
+          },
+          "es": {
+            "label": "Añadiendo un aula Moodle",
+            "phrase": [
+              "añadió un aula",
+              "añadió {n} aulas"
+            ],
+            "result": "Aula añadida, aún no activa"
+          }
+        },
+        "remove_site": {
+          "en": {
+            "label": "Removing the site {name}",
+            "phrase": [
+              "removed a site",
+              "removed {n} sites"
+            ],
+            "result": "Site removed, with its session"
+          },
+          "es": {
+            "label": "Quitando el aula {name}",
+            "phrase": [
+              "quitó un aula",
+              "quitó {n} aulas"
+            ],
+            "result": "Aula quitada, con su sesión"
           }
         }
       }
