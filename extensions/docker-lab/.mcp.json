@@ -4,7 +4,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@falkenslab/docker-mcp@0.1.0"
+        "@falkenslab/docker-mcp@0.2.0"
       ],
       "env": {
         "DOCKER_MCP_MODE": "${user_config.mode}",

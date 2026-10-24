@@ -22,7 +22,7 @@ Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkensl
 
 - 🧪 **Nada instalado ni nada ajeno en tu ordenador.** Lo que hay que probar se ejecuta en un laboratorio: sin internet, sin montar el equipo, con límites de CPU y memoria, y se borra con una llamada.
 - 🎚️ **Tú decides hasta dónde llega.** `read` solo mira, `lab` solo ejecuta laboratorios, `full` hace todo lo que hace Docker; una herramienta fuera del modo no existe para el agente.
-- 🛡️ **Pregunta antes de lo peligroso.** Eliminar cualquier cosa espera a tu sí, y un contenedor privilegiado o el socket de Docker necesitan tu permiso explícito.
+- 🛡️ **Lo peligroso lo confirmas tú, no la IA.** Antes de eliminar algo, hacer limpieza, reiniciar un laboratorio o arrancar un contenedor privilegiado o con el socket de Docker, docker-mcp te lo pregunta él mismo, en tu app, y la IA no puede saltarse la pregunta.
 - ✅ **Comprobado ejecutando, no leyendo.** Si algo funciona se responde con las órdenes ejecutadas, sus códigos de salida y su salida, y un laboratorio puede llevar su propia comprobación.
 - 🔧 **Explica, nunca instala.** Sin Docker, o con Docker parado, dice cómo instalarlo o arrancarlo.
 - 🤖 **Para docentes y estudiantes.** Laboratorios para prácticas que se comprueban solas; instalada en modo `lab`, el agente de un alumno tiene los laboratorios y nada más.
@@ -82,7 +82,7 @@ Cámbialos después con `my-agent extension config docker-lab`, en el chat con `
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `npx -y @falkenslab/docker-mcp@0.1.0`, sus 47 herramientas acotadas por tu modo y tus áreas |
+| 🔌 Servidor | `npx -y @falkenslab/docker-mcp@0.2.0`, sus 47 herramientas acotadas por tu modo y tus áreas |
 | 🧪 `try-in-a-lab` | Probar una herramienta, un servicio o código ajeno en un laboratorio desechable: la imagen, el laboratorio, el informe y la limpieza |
 | 🏗️ `build-a-lab` | Un laboratorio reproducible de uno o varios servicios: su fichero de Compose y su comprobación, las reglas de seguridad, arrancarlo, reiniciarlo y pararlo |
 | ✅ `verify-by-running` | Si un código, unas instrucciones, un enunciado y su solución o una entrega funcionan, con un veredicto y sus pruebas, y escribir la comprobación de un laboratorio |

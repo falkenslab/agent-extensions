@@ -1,6 +1,6 @@
 {
   "name": "docker-lab",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
   "author": {
     "name": "Falken's Lab",
@@ -261,6 +261,15 @@
             "url": "https://docs.docker.com/get-started/get-docker/"
           }
         }
+      ],
+      "serverConfirmTools": [
+        "remove_container",
+        "remove_image",
+        "remove_volume",
+        "remove_network",
+        "prune",
+        "lab_reset",
+        "lab_down"
       ],
       "help": "Docker, through docker-mcp, in the mode chosen when it was installed (read, lab or full): isolated labs to run and try software without touching the computer, verifying by running, and managing containers, images, volumes, networks and Compose; my docker-lab:* skills say how.",
       "labels": {

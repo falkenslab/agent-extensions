@@ -22,7 +22,7 @@ This extension gives an agent built on [agent-kit](https://github.com/falkenslab
 
 - 🧪 **Nothing installed, nothing untrusted on your computer.** What needs trying runs in a lab: no internet, no host mounts, limits on CPU and memory, gone in one call.
 - 🎚️ **You choose how far it goes.** `read` only looks, `lab` only runs labs, `full` does everything Docker does; a tool outside the mode doesn't exist for the agent.
-- 🛡️ **Asks before the dangerous.** Removing anything waits for your yes, and a privileged container or the Docker socket needs your explicit agreement.
+- 🛡️ **You confirm the dangerous, not the AI.** Before removing anything, cleaning up, resetting a lab or starting a privileged container or one with the Docker socket, docker-mcp asks you itself, in your app, and the AI can't skip the question.
 - ✅ **Verified by running, not by reading.** Whether something works is answered with the commands run, their exit codes and their output, and a lab can carry its own check.
 - 🔧 **Explains, never installs.** Without Docker, or with it stopped, it says how to install or start it.
 - 🤖 **For teachers and students.** Labs for practices that check themselves; installed in `lab` mode, a student's agent gets the labs and nothing else.
@@ -82,7 +82,7 @@ Change them later with `my-agent extension config docker-lab`, in the chat with 
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `npx -y @falkenslab/docker-mcp@0.1.0`, its 47 tools narrowed by your mode and areas |
+| 🔌 Server | `npx -y @falkenslab/docker-mcp@0.2.0`, its 47 tools narrowed by your mode and areas |
 | 🧪 `try-in-a-lab` | Trying a tool, a service or someone's code in a disposable lab: the image, the lab, the report, the clean-up |
 | 🏗️ `build-a-lab` | A reproducible lab of one or more services: its compose file and check, the safety policy, starting, resetting and stopping it |
 | ✅ `verify-by-running` | Whether code, instructions, a statement and its solution or a submission work, with a verdict and its evidence, and writing a lab's check |
