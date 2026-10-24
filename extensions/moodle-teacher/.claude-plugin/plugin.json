@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -154,6 +154,30 @@
         "browser_wait",
         "server_info",
         "list_sites"
+      ],
+      "serverConfirmTools": [
+        "delete_activity",
+        "delete_section",
+        "reset_course",
+        "unenrol_user",
+        "delete_questions",
+        "delete_question_category",
+        "delete_grade_category",
+        "delete_grade_item",
+        "delete_post",
+        "delete_database_entry",
+        "delete_database_field",
+        "apply_database_preset",
+        "delete_glossary_entry",
+        "delete_group",
+        "delete_grouping",
+        "delete_event",
+        "delete_book_chapter",
+        "delete_lesson_page",
+        "delete_feedback_item",
+        "delete_feedback_template",
+        "delete_workshop_example",
+        "remove_site"
       ],
       "capabilities": [
         {

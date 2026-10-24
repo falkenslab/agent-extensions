@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -120,6 +120,12 @@
         "browser_wait",
         "server_info",
         "list_sites"
+      ],
+      "serverConfirmTools": [
+        "delete_post",
+        "delete_database_entry",
+        "delete_glossary_entry",
+        "remove_site"
       ],
       "capabilities": [
         {
