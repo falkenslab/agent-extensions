@@ -1171,6 +1171,117 @@
       "kit": ">=0.23.0"
     },
     {
+      "name": "h5p",
+      "version": "0.1.0",
+      "description": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
+      "descriptions": {
+        "en": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
+        "es": "Contenido interactivo H5P para tu agente: opción múltiple, verdadero o falso, rellenar huecos, arrastrar palabras, tarjetas, conjuntos de preguntas y presentaciones, como paquetes .h5p solo con el contenido, en tu ordenador y comprobados antes de escribirlos, a través de h5p-mcp."
+      },
+      "category": "education",
+      "topics": [
+        "h5p",
+        "interactive",
+        "quizzes",
+        "flashcards",
+        "presentations",
+        "self-assessment",
+        "mcp",
+        "miyagi",
+        "padawan",
+        "teaching",
+        "learning",
+        "education"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/h5p",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/h5p/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/h5p/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/h5p/README.es.md"
+      },
+      "install": {
+        "claudeCode": "claude plugin install h5p@falkenslab",
+        "agentKit": "extension add h5p@falkenslab"
+      },
+      "capabilities": [
+        {
+          "id": "h5p-authoring",
+          "skills": [
+            "h5p-packages"
+          ],
+          "tools": [
+            "list_h5p_types",
+            "build_h5p",
+            "read_h5p",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Interactive H5P content",
+              "description": "Questions, gap texts, cards, question sets and slides as .h5p packages ready to upload, checked first and in your language, with a preview to review them."
+            },
+            "es": {
+              "label": "Contenido interactivo H5P",
+              "description": "Preguntas, textos con huecos, tarjetas, conjuntos de preguntas y diapositivas como paquetes .h5p listos para subir, comprobados antes y en tu idioma, con una vista previa para revisarlos."
+            }
+          }
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/h5p/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/h5p/assets/banner.svg",
+      "servers": [
+        {
+          "name": "h5p",
+          "kind": "package",
+          "package": "@falkenslab/h5p-mcp",
+          "version": "0.1.0",
+          "url": "https://www.npmjs.com/package/@falkenslab/h5p-mcp"
+        }
+      ],
+      "skills": [
+        {
+          "name": "h5p-packages",
+          "description": "Build interactive H5P content as a package with h5p-mcp - multiple choice, true/false, fill in the blanks, drag the words, Dialog Cards, Flashcards, a Question Set or a Course Presentation - in the shape each type's fields take, checked before it's written, in the content's language, with a preview to review before uploading; and read an existing .h5p to review or change it. Use when the person asks for an H5P activity or package, an interactive exercise or self-check that a site such as Moodle plays, or to look inside or edit an .h5p file."
+        }
+      ],
+      "tools": [
+        {
+          "name": "build_h5p",
+          "labels": {
+            "en": "Building the H5P package \"{title}\"",
+            "es": "Creando el paquete H5P «{title}»"
+          }
+        },
+        {
+          "name": "list_h5p_types",
+          "labels": {
+            "en": "Looking at the H5P content types",
+            "es": "Mirando los tipos de contenido H5P"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "read_h5p",
+          "labels": {
+            "en": "Reading an H5P package",
+            "es": "Leyendo un paquete H5P"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "server_info",
+          "labels": {
+            "en": "Reading h5p-mcp's settings",
+            "es": "Leyendo los ajustes de h5p-mcp"
+          },
+          "readOnly": true
+        }
+      ],
+      "kit": ">=0.22.0"
+    },
+    {
       "name": "moodle-student",
       "version": "0.3.1",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",

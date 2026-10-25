@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="h5p extension logo: an interactive card with a question and three answers, one ticked">
+  <rect x="14" y="14" width="92" height="92" rx="18" fill="#ffffff" stroke="#2e3a8c" stroke-width="5"/>
+  <rect x="28" y="28" width="64" height="9" rx="4.5" fill="#2e3a8c"/>
+  <rect x="28" y="48" width="12" height="12" rx="3.5" fill="#ff6b57"/>
+  <path d="M30.6 54.2l2.7 2.7 4.6-5.2" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="46" y="50.5" width="40" height="7" rx="3.5" fill="#6272de"/>
+  <rect x="28" y="67" width="12" height="12" rx="3.5" fill="none" stroke="#6272de" stroke-width="2.6"/>
+  <rect x="46" y="69.5" width="32" height="7" rx="3.5" fill="#b9c1f2"/>
+  <rect x="28" y="86" width="12" height="12" rx="3.5" fill="none" stroke="#6272de" stroke-width="2.6"/>
+  <rect x="46" y="88.5" width="36" height="7" rx="3.5" fill="#b9c1f2"/>
+</svg>

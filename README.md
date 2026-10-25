@@ -46,7 +46,7 @@ codex plugin add moodle-ui-kit@falkenslab
 
 An agent whose own marketplace this is (its `officialMarketplace`) offers them in its chat's catalog, without the first command.
 
-Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` works fully, and `docker-lab` too, in `full` mode; `moodle-teacher` and `moodle-student` too, asking for your Moodle site in the chat (enable only one of them: both name their server `moodle`, and Codex keeps one per name); `weather` loads its skill but not its server, which runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand); `canva`, whose server is Canva's remote one behind its sign-in, isn't checked there yet.
+Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` and `h5p` work fully, and `docker-lab` too, in `full` mode; `moodle-teacher` and `moodle-student` too, asking for your Moodle site in the chat (enable only one of them: both name their server `moodle`, and Codex keeps one per name); `weather` loads its skill but not its server, which runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand); `canva`, whose server is Canva's remote one behind its sign-in, isn't checked there yet.
 
 ## 🧩 The extensions
 
@@ -57,6 +57,7 @@ Codex installs them too, with their skills and servers, but it has no plugin set
 | 🎨 [moodle-ui-kit](extensions/moodle-ui-kit/) | A clean visual style for what your agent publishes in Moodle, with inline styles that work on any site; based on [noeper](https://github.com/noeper)'s [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit) |
 | 🐳 [docker-lab](extensions/docker-lab/) | Runs and tries software (tools, services, someone's code) in isolated Docker labs without touching your computer, verifies by running, and manages your Docker, through [docker-mcp](https://github.com/falkenslab/docker-mcp) |
 | 🖌️ [canva](extensions/canva/) | Makes, edits and exports your Canva designs (presentations, posters, worksheets, images, brand kits) through [Canva's official remote MCP server](https://www.canva.dev/docs/mcp/), signed in with your Canva account; not made by Canva |
+| 🧩 [h5p](extensions/h5p/) | Interactive H5P content (multiple choice, true/false, fill in the blanks, drag the words, cards, question sets, course presentations) as content-only `.h5p` packages, checked before they're written, through [h5p-mcp](https://github.com/falkenslab/h5p-mcp); moodle-teacher uploads them |
 | ☀️ [weather](extensions/weather/) | The weather in your city, for an agent that plans with you; also agent-kit's example of an extension with its own MCP server, built step by step in [its tutorial](https://falkenslab.github.io/agent-kit/docs/extensions/writing) |
 
 ## 🧭 The catalog

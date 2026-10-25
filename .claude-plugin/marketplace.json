@@ -91,6 +91,21 @@
         "miyagi",
         "padawan"
       ]
+    },
+    {
+      "name": "h5p",
+      "source": "./extensions/h5p",
+      "description": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
+      "version": "0.1.0",
+      "category": "education",
+      "tags": [
+        "h5p",
+        "interactive",
+        "teaching",
+        "learning",
+        "miyagi",
+        "padawan"
+      ]
     }
   ]
 }
