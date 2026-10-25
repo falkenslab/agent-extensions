@@ -216,11 +216,360 @@
         "mcp.canva.com"
       ],
       "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/canva/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/canva/assets/banner.svg"
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/canva/assets/banner.svg",
+      "servers": [
+        {
+          "name": "canva",
+          "kind": "remote",
+          "transport": "http",
+          "host": "mcp.canva.com"
+        }
+      ],
+      "skills": [
+        {
+          "name": "brand",
+          "description": "Brand kits and brand templates in Canva through Canva's official MCP server - the person's or their school's colours, fonts and templates, a design from a brand template and its fillable fields, drafting and publishing a template - and what to offer on a Canva plan without them. Use when the person wants a design in their own or their school's style, or asks about brand kits or templates."
+        },
+        {
+          "name": "designs",
+          "description": "Work the person's Canva designs through Canva's official MCP server - finding them, creating one from a description, a copy, another size or a file, editing texts, images and pages, folders and comments - knowing what needs the person's yes and what their Canva plan allows. Use whenever the person asks for a presentation, poster, infographic, worksheet or any other Canva design, or to find, change or comment on one."
+        },
+        {
+          "name": "export",
+          "description": "Export the person's Canva designs through Canva's official MCP server - which format for which use (PDF to print, PNG or JPG for images, PPTX for slides, MP4 or GIF for video, CSV for data), the Free plan's quality, premium elements, and that the download link expires. Use when the person wants a design as a file, to print, to put in a course or to send."
+        },
+        {
+          "name": "images",
+          "description": "Images for the person's Canva designs through Canva's official MCP server - generating or editing one from a description, removing a background, separating a flat image into editable layers, uploading the person's files to Canva and reading a design's images - with what needs their yes and what never to upload. Use when the person asks for a picture, an illustration, a background removed or a file of theirs in a Canva design."
+        },
+        {
+          "name": "what-goes-to-canva",
+          "description": "What may and may not be sent to Canva through its MCP server - everything sent leaves this computer for Canva's servers and the person's account, so students' and other people's personal data (names, class lists, grades, photos, certificates) never goes without the person's explicit yes. Use before any Canva call that carries names, a list of people, grades, photos of people or a document about someone, and whenever the person asks to make certificates, class lists, seating plans or anything with other people's data in Canva."
+        }
+      ],
+      "tools": [
+        {
+          "name": "comment-on-design",
+          "labels": {
+            "en": "Commenting on a design",
+            "es": "Comentando un diseño"
+          },
+          "confirm": "always"
+        },
+        {
+          "name": "copy-design",
+          "labels": {
+            "en": "Copying a design",
+            "es": "Copiando un diseño"
+          }
+        },
+        {
+          "name": "create-brand-template-draft",
+          "labels": {
+            "en": "Drafting a brand template",
+            "es": "Preparando una plantilla de marca"
+          }
+        },
+        {
+          "name": "create-design",
+          "labels": {
+            "en": "Creating a design",
+            "es": "Creando un diseño"
+          }
+        },
+        {
+          "name": "create-design-from-brand-template",
+          "labels": {
+            "en": "Creating a design from a brand template",
+            "es": "Creando un diseño desde una plantilla de marca"
+          }
+        },
+        {
+          "name": "create-design-from-candidate",
+          "labels": {
+            "en": "Turning a proposal into a design",
+            "es": "Convirtiendo una propuesta en diseño"
+          }
+        },
+        {
+          "name": "create-folder",
+          "labels": {
+            "en": "Creating a folder",
+            "es": "Creando una carpeta"
+          }
+        },
+        {
+          "name": "create-upload-url",
+          "labels": {
+            "en": "Preparing an upload to Canva",
+            "es": "Preparando una subida a Canva"
+          }
+        },
+        {
+          "name": "edit-design",
+          "labels": {
+            "en": "Editing a design",
+            "es": "Editando un diseño"
+          }
+        },
+        {
+          "name": "export-design",
+          "labels": {
+            "en": "Exporting a design",
+            "es": "Exportando un diseño"
+          }
+        },
+        {
+          "name": "generate-design",
+          "labels": {
+            "en": "Generating design proposals",
+            "es": "Generando propuestas de diseño"
+          }
+        },
+        {
+          "name": "generate-design-structured",
+          "labels": {
+            "en": "Generating a presentation from its outline",
+            "es": "Generando una presentación desde su esquema"
+          }
+        },
+        {
+          "name": "generate-image",
+          "labels": {
+            "en": "Generating an image",
+            "es": "Generando una imagen"
+          }
+        },
+        {
+          "name": "get-assets",
+          "labels": {
+            "en": "Looking at a design's images",
+            "es": "Mirando las imágenes de un diseño"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get-brand-template-dataset",
+          "labels": {
+            "en": "Reading a template's fields",
+            "es": "Leyendo los campos de una plantilla"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get-create-design-async-job",
+          "labels": {
+            "en": "Waiting for a design",
+            "es": "Esperando un diseño"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get-design-dataset",
+          "labels": {
+            "en": "Reading a design's fields",
+            "es": "Leyendo los campos de un diseño"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get-export-formats",
+          "labels": {
+            "en": "Checking export formats",
+            "es": "Mirando los formatos de exportación"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get-generate-image-job",
+          "labels": {
+            "en": "Waiting for an image",
+            "es": "Esperando una imagen"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get-motion-import-job-status",
+          "labels": {
+            "en": "Waiting for a video import",
+            "es": "Esperando la importación de un vídeo"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get-separate-image-layers-job",
+          "labels": {
+            "en": "Waiting for the layers",
+            "es": "Esperando las capas"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "help",
+          "labels": {
+            "en": "Asking Canva's Help Center",
+            "es": "Consultando la ayuda de Canva"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "import-claude-motion-from-url",
+          "labels": {
+            "en": "Importing a Claude Motion video",
+            "es": "Importando un vídeo de Claude Motion"
+          }
+        },
+        {
+          "name": "import-design-from-url",
+          "labels": {
+            "en": "Importing a file as a design",
+            "es": "Importando un archivo como diseño"
+          }
+        },
+        {
+          "name": "list-brand-kits",
+          "labels": {
+            "en": "Looking at your brand kits",
+            "es": "Mirando tus kits de marca"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list-comments",
+          "labels": {
+            "en": "Reading a design's comments",
+            "es": "Leyendo los comentarios de un diseño"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list-folder-items",
+          "labels": {
+            "en": "Looking in a folder",
+            "es": "Mirando una carpeta"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list-replies",
+          "labels": {
+            "en": "Reading a comment's replies",
+            "es": "Leyendo las respuestas a un comentario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "merge-designs",
+          "labels": {
+            "en": "Merging or moving pages",
+            "es": "Uniendo o moviendo páginas"
+          },
+          "confirm": "always"
+        },
+        {
+          "name": "move-item-to-folder",
+          "labels": {
+            "en": "Moving to a folder",
+            "es": "Moviendo a una carpeta"
+          }
+        },
+        {
+          "name": "publish-brand-template",
+          "labels": {
+            "en": "Publishing a brand template",
+            "es": "Publicando una plantilla de marca"
+          },
+          "confirm": "always"
+        },
+        {
+          "name": "read-design",
+          "labels": {
+            "en": "Reading a design",
+            "es": "Leyendo un diseño"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "remove-background",
+          "labels": {
+            "en": "Removing an image's background",
+            "es": "Quitando el fondo de una imagen"
+          }
+        },
+        {
+          "name": "reply-to-comment",
+          "labels": {
+            "en": "Replying to a comment",
+            "es": "Respondiendo a un comentario"
+          },
+          "confirm": "always"
+        },
+        {
+          "name": "request-outline-review",
+          "labels": {
+            "en": "Showing you an outline",
+            "es": "Enseñándote un esquema"
+          }
+        },
+        {
+          "name": "resize-design",
+          "labels": {
+            "en": "Resizing a design",
+            "es": "Cambiando el tamaño de un diseño"
+          }
+        },
+        {
+          "name": "resolve-shortlink",
+          "labels": {
+            "en": "Opening a Canva link",
+            "es": "Abriendo un enlace de Canva"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "search-brand-templates",
+          "labels": {
+            "en": "Searching brand templates",
+            "es": "Buscando plantillas de marca"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "search-designs",
+          "labels": {
+            "en": "Searching your Canva designs",
+            "es": "Buscando tus diseños de Canva"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "search-folders",
+          "labels": {
+            "en": "Searching your Canva folders",
+            "es": "Buscando tus carpetas de Canva"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "separate-image-layers",
+          "labels": {
+            "en": "Separating an image into layers",
+            "es": "Separando una imagen en capas"
+          }
+        },
+        {
+          "name": "upload-asset-from-url",
+          "labels": {
+            "en": "Uploading to Canva from a link",
+            "es": "Subiendo a Canva desde un enlace"
+          }
+        }
+      ],
+      "kit": ">=0.27.0"
     },
     {
       "name": "docker-lab",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
       "descriptions": {
         "en": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
@@ -433,7 +782,393 @@
         }
       ],
       "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/docker-lab/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/docker-lab/assets/banner.svg"
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/docker-lab/assets/banner.svg",
+      "servers": [
+        {
+          "name": "docker",
+          "kind": "package",
+          "package": "@falkenslab/docker-mcp",
+          "version": "0.2.0",
+          "url": "https://www.npmjs.com/package/@falkenslab/docker-mcp"
+        }
+      ],
+      "skills": [
+        {
+          "name": "build-a-lab",
+          "description": "Build a reproducible docker-mcp lab - a folder with a compose.yaml of one or more services that passes the labs' safety policy, the files it works on, and a lab.json check that says whether it works - and run it through its life: start, work inside, reset, stop. Use when an environment with several services is needed (a web app with its database, a practice for a course, a setup to reproduce a problem), or to start, reset or stop an existing lab."
+        },
+        {
+          "name": "try-in-a-lab",
+          "description": "Try a tool, a service or a piece of code in a disposable docker-mcp lab instead of installing or running it on the person's computer - pick a pinned image, write a minimal lab, run it under the labs' safety policy, report what happened with evidence, and clean up. Use whenever something needs running or trying (a program, a database, a command-line tool, a script, someone's code) and it isn't installed, or shouldn't run on the real machine."
+        },
+        {
+          "name": "use-docker",
+          "description": "Work the person's Docker with docker-mcp - containers, images, volumes, networks, Compose projects, disk usage and clean-ups - knowing what its mode allows, what to confirm first, the dangerous options that need an explicit yes, and how to explain a missing or stopped Docker. Use whenever the person asks for anything about their Docker that isn't trying something in a lab."
+        },
+        {
+          "name": "verify-by-running",
+          "description": "Verify that something works by running it in a docker-mcp lab rather than by reading it - code, a script, a set of instructions followed step by step, a statement and its solution, or someone's submission - and give a clear verdict with evidence; write lab.json checks that say what failed. Use whenever anyone asks whether something works, before trusting or handing out instructions or code, or to write or improve a lab's check."
+        }
+      ],
+      "tools": [
+        {
+          "name": "build_image",
+          "labels": {
+            "en": "Building {tag}",
+            "es": "Construyendo {tag}"
+          }
+        },
+        {
+          "name": "check_requirements",
+          "labels": {
+            "en": "Checking Docker is installed",
+            "es": "Comprobando que Docker está instalado"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "compose_build",
+          "labels": {
+            "en": "Building a Compose project",
+            "es": "Construyendo un proyecto de Compose"
+          }
+        },
+        {
+          "name": "compose_down",
+          "labels": {
+            "en": "Stopping a Compose project",
+            "es": "Parando un proyecto de Compose"
+          }
+        },
+        {
+          "name": "compose_exec",
+          "labels": {
+            "en": "Running a command in {service}",
+            "es": "Ejecutando una orden en {service}"
+          }
+        },
+        {
+          "name": "compose_logs",
+          "labels": {
+            "en": "Reading a Compose project's logs",
+            "es": "Leyendo los logs de un proyecto de Compose"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "compose_ps",
+          "labels": {
+            "en": "Reading a Compose project",
+            "es": "Leyendo un proyecto de Compose"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "compose_up",
+          "labels": {
+            "en": "Starting a Compose project",
+            "es": "Arrancando un proyecto de Compose"
+          }
+        },
+        {
+          "name": "container_logs",
+          "labels": {
+            "en": "Reading {container}'s logs",
+            "es": "Leyendo los logs de {container}"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "container_processes",
+          "labels": {
+            "en": "Listing {container}'s processes",
+            "es": "Listando los procesos de {container}"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "container_stats",
+          "labels": {
+            "en": "Measuring the containers' usage",
+            "es": "Midiendo lo que consumen los contenedores"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "copy_from_container",
+          "labels": {
+            "en": "Copying files out of {container}",
+            "es": "Copiando archivos de {container}"
+          }
+        },
+        {
+          "name": "copy_to_container",
+          "labels": {
+            "en": "Copying files into {container}",
+            "es": "Copiando archivos a {container}"
+          }
+        },
+        {
+          "name": "create_network",
+          "labels": {
+            "en": "Creating the network {name}",
+            "es": "Creando la red {name}"
+          }
+        },
+        {
+          "name": "create_volume",
+          "labels": {
+            "en": "Creating the volume {name}",
+            "es": "Creando el volumen {name}"
+          }
+        },
+        {
+          "name": "disk_usage",
+          "labels": {
+            "en": "Measuring Docker's disk usage",
+            "es": "Midiendo el disco que usa Docker"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "docker_info",
+          "labels": {
+            "en": "Reading Docker's information",
+            "es": "Leyendo la información de Docker"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "exec_in_container",
+          "labels": {
+            "en": "Running a command in {container}",
+            "es": "Ejecutando una orden en {container}"
+          }
+        },
+        {
+          "name": "inspect_container",
+          "labels": {
+            "en": "Inspecting {container}",
+            "es": "Inspeccionando {container}"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "inspect_image",
+          "labels": {
+            "en": "Inspecting {image}",
+            "es": "Inspeccionando {image}"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "inspect_network",
+          "labels": {
+            "en": "Inspecting {network}",
+            "es": "Inspeccionando {network}"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "inspect_volume",
+          "labels": {
+            "en": "Inspecting {volume}",
+            "es": "Inspeccionando {volume}"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "lab_check",
+          "labels": {
+            "en": "Checking the lab {lab}",
+            "es": "Comprobando el laboratorio {lab}"
+          }
+        },
+        {
+          "name": "lab_down",
+          "labels": {
+            "en": "Stopping the lab {lab}",
+            "es": "Parando el laboratorio {lab}"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "lab_exec",
+          "labels": {
+            "en": "Running a command in the lab {lab}",
+            "es": "Ejecutando una orden en el laboratorio {lab}"
+          }
+        },
+        {
+          "name": "lab_logs",
+          "labels": {
+            "en": "Reading the lab {lab}'s logs",
+            "es": "Leyendo los logs del laboratorio {lab}"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "lab_reset",
+          "labels": {
+            "en": "Resetting the lab {lab}",
+            "es": "Reiniciando el laboratorio {lab}"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "lab_status",
+          "labels": {
+            "en": "Reading the lab {lab}",
+            "es": "Leyendo el laboratorio {lab}"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "lab_up",
+          "labels": {
+            "en": "Starting the lab {lab}",
+            "es": "Arrancando el laboratorio {lab}"
+          }
+        },
+        {
+          "name": "list_containers",
+          "labels": {
+            "en": "Listing containers",
+            "es": "Listando los contenedores"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_images",
+          "labels": {
+            "en": "Listing images",
+            "es": "Listando las imágenes"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_labs",
+          "labels": {
+            "en": "Listing the labs",
+            "es": "Listando los laboratorios"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_networks",
+          "labels": {
+            "en": "Listing networks",
+            "es": "Listando las redes"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_volumes",
+          "labels": {
+            "en": "Listing volumes",
+            "es": "Listando los volúmenes"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "prune",
+          "labels": {
+            "en": "Cleaning up Docker",
+            "es": "Limpiando Docker"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "pull_image",
+          "labels": {
+            "en": "Pulling {image}",
+            "es": "Descargando {image}"
+          }
+        },
+        {
+          "name": "push_image",
+          "labels": {
+            "en": "Pushing {image}",
+            "es": "Subiendo {image}"
+          }
+        },
+        {
+          "name": "remove_container",
+          "labels": {
+            "en": "Removing {container}",
+            "es": "Eliminando {container}"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "remove_image",
+          "labels": {
+            "en": "Removing {image}",
+            "es": "Eliminando {image}"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "remove_network",
+          "labels": {
+            "en": "Removing {network}",
+            "es": "Eliminando {network}"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "remove_volume",
+          "labels": {
+            "en": "Removing {volume}",
+            "es": "Eliminando {volume}"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "restart_container",
+          "labels": {
+            "en": "Restarting {container}",
+            "es": "Reiniciando {container}"
+          }
+        },
+        {
+          "name": "run_container",
+          "labels": {
+            "en": "Running {image}",
+            "es": "Arrancando {image}"
+          }
+        },
+        {
+          "name": "server_info",
+          "labels": {
+            "en": "Reading docker-mcp's settings",
+            "es": "Leyendo los ajustes de docker-mcp"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "start_container",
+          "labels": {
+            "en": "Starting {container}",
+            "es": "Arrancando {container}"
+          }
+        },
+        {
+          "name": "stop_container",
+          "labels": {
+            "en": "Stopping {container}",
+            "es": "Parando {container}"
+          }
+        },
+        {
+          "name": "tag_image",
+          "labels": {
+            "en": "Tagging {image}",
+            "es": "Etiquetando {image}"
+          }
+        }
+      ],
+      "kit": ">=0.23.0"
     },
     {
       "name": "moodle-student",
@@ -696,7 +1431,686 @@
         }
       ],
       "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-student/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-student/assets/banner.svg"
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-student/assets/banner.svg",
+      "servers": [
+        {
+          "name": "moodle",
+          "kind": "package",
+          "package": "@falkenslab/moodle-mcp",
+          "version": "0.5.0",
+          "url": "https://www.npmjs.com/package/@falkenslab/moodle-mcp"
+        }
+      ],
+      "skills": [
+        {
+          "name": "forums",
+          "description": "Take part in a Moodle course's forums as a student with moodle-mcp - read threads whole, check a question hasn't been asked already, find the right forum, post or reply exactly once with the person's yes, edit within the allowed time, subscriptions and ratings, and write to the teacher privately. Use whenever the person reads, asks, replies or posts in a Moodle forum, or wants to write to their teacher."
+        },
+        {
+          "name": "grades-and-feedback",
+          "description": "Read a student's grades and feedback in Moodle with moodle-mcp - the grade report with weights and contributions, each assignment's grade, comments and feedback files, each quiz attempt's review, and what's still to be graded - and explain where the person stands. Use when the person asks how they're doing, what they got, what the teacher said, or how much an activity counts."
+        },
+        {
+          "name": "hand-in-an-assignment",
+          "description": "Hand in a Moodle assignment as a student with moodle-mcp - read what it asks and accepts, download its files, save the submission (online text or files), check it, and submit it for good only with the person's yes, including the submission statement, drafts, resubmissions and group work. Use whenever the person works on, saves, changes or submits an assignment, or asks whether it was received."
+        },
+        {
+          "name": "other-activities",
+          "description": "Do Moodle's other activities as a student with moodle-mcp - choices (polls), surveys and feedback, lessons page by page, SCORM packages, H5P, a workshop (submitting and assessing classmates), glossary, wiki and database entries, badges, and marking activities as done - knowing which answers are final and checking what Moodle recorded. Use whenever the person answers a choice or survey, goes through a lesson, plays a SCORM or H5P activity, works in a workshop, writes in a glossary, wiki or database, or marks an activity complete."
+        },
+        {
+          "name": "plan-my-work",
+          "description": "Find what a student has left in their Moodle courses with moodle-mcp - pending activities, deadlines and cut-offs, overdue work, what unlocks what, grades so far - and order it into a realistic plan by date and by dependency. Use when the person asks what they have to do, what's due, where they stand in a course, or what to do next."
+        },
+        {
+          "name": "read-a-course",
+          "description": "Read a Moodle course as a student with moodle-mcp - its sections, resources and activities, what's open or locked and why, what counts as done, the files and texts to study, and what changed lately - instead of guessing from names or from memory. Use before working on a course, and whenever unsure what a course holds, what an activity asks or why something can't be opened."
+        },
+        {
+          "name": "several-sites",
+          "description": "Work with several Moodle sites through moodle-mcp as a student - which one is active, adding and switching sites, and keeping courses, ids and aliases apart per site. Use when the person mentions another Moodle (their school's and their university's, a training platform), or asks to add or switch sites."
+        },
+        {
+          "name": "take-a-quiz",
+          "description": "Take a Moodle quiz as a student with moodle-mcp - read its rules first (attempts, time limit, grading, dates), start an attempt only with the person's yes, answer each question type in the fields Moodle expects, check every answer, submit for good with their yes, and learn from the review. Use whenever the person attempts, continues, submits or reviews a quiz."
+        },
+        {
+          "name": "week",
+          "description": "What a student has to do this week in their Moodle courses - deadlines including overdue ones still accepted, what is left and what is locked, unread notifications - in a short list by day, only reading. Use when the person asks what they have to do or hand in this week (or in the next days)."
+        }
+      ],
+      "tools": [
+        {
+          "name": "add_database_entry",
+          "labels": {
+            "en": "Adding a database entry",
+            "es": "Añadiendo una entrada a la base de datos"
+          }
+        },
+        {
+          "name": "add_glossary_entry",
+          "labels": {
+            "en": "Adding a glossary entry",
+            "es": "Añadiendo una entrada al glosario"
+          }
+        },
+        {
+          "name": "add_site",
+          "labels": {
+            "en": "Adding a Moodle site",
+            "es": "Añadiendo un aula Moodle"
+          }
+        },
+        {
+          "name": "answer_choice",
+          "labels": {
+            "en": "Answering a choice",
+            "es": "Respondiendo una consulta"
+          }
+        },
+        {
+          "name": "answer_lesson_page",
+          "labels": {
+            "en": "Going on in a lesson",
+            "es": "Avanzando en una lección"
+          }
+        },
+        {
+          "name": "answer_quiz_questions",
+          "labels": {
+            "en": "Saving quiz answers",
+            "es": "Guardando respuestas"
+          }
+        },
+        {
+          "name": "assess_workshop_example",
+          "labels": {
+            "en": "Assessing a workshop's example",
+            "es": "Evaluando un ejemplo del taller"
+          }
+        },
+        {
+          "name": "assess_workshop_submission",
+          "labels": {
+            "en": "Assessing a classmate's workshop work",
+            "es": "Evaluando la entrega de un compañero en el taller"
+          }
+        },
+        {
+          "name": "browser_click",
+          "labels": {
+            "en": "Clicking in the browser",
+            "es": "Haciendo clic en el navegador"
+          }
+        },
+        {
+          "name": "browser_navigate",
+          "labels": {
+            "en": "Opening {url} in the browser",
+            "es": "Abriendo {url} en el navegador"
+          }
+        },
+        {
+          "name": "browser_select",
+          "labels": {
+            "en": "Choosing an option in the browser",
+            "es": "Eligiendo una opción en el navegador"
+          }
+        },
+        {
+          "name": "browser_snapshot",
+          "labels": {
+            "en": "Reading the browser's page",
+            "es": "Leyendo la página del navegador"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "browser_type",
+          "labels": {
+            "en": "Typing in the browser",
+            "es": "Escribiendo en el navegador"
+          }
+        },
+        {
+          "name": "browser_upload",
+          "labels": {
+            "en": "Choosing files in the browser",
+            "es": "Eligiendo archivos en el navegador"
+          }
+        },
+        {
+          "name": "browser_wait",
+          "labels": {
+            "en": "Waiting for the page",
+            "es": "Esperando a la página"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "configure",
+          "labels": {
+            "en": "Changing moodle-mcp's settings for this session",
+            "es": "Cambiando los ajustes de moodle-mcp para esta sesión"
+          }
+        },
+        {
+          "name": "create_discussion",
+          "labels": {
+            "en": "Posting in the forum",
+            "es": "Publicando en el foro"
+          }
+        },
+        {
+          "name": "create_wiki_page",
+          "labels": {
+            "en": "Creating the wiki page \"{title}\"",
+            "es": "Creando la página de wiki «{title}»"
+          }
+        },
+        {
+          "name": "delete_database_entry",
+          "labels": {
+            "en": "Deleting a database entry",
+            "es": "Eliminando una entrada de la base de datos"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_glossary_entry",
+          "labels": {
+            "en": "Deleting a glossary entry",
+            "es": "Eliminando una entrada del glosario"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_post",
+          "labels": {
+            "en": "Deleting a forum post",
+            "es": "Eliminando un mensaje del foro"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "download_file",
+          "labels": {
+            "en": "Downloading a file from Moodle",
+            "es": "Descargando un archivo de Moodle"
+          }
+        },
+        {
+          "name": "edit_database_entry",
+          "labels": {
+            "en": "Changing a database entry",
+            "es": "Cambiando una entrada de la base de datos"
+          }
+        },
+        {
+          "name": "edit_glossary_entry",
+          "labels": {
+            "en": "Changing a glossary entry",
+            "es": "Cambiando una entrada del glosario"
+          }
+        },
+        {
+          "name": "edit_post",
+          "labels": {
+            "en": "Editing a forum post",
+            "es": "Editando un mensaje del foro"
+          }
+        },
+        {
+          "name": "edit_wiki_page",
+          "labels": {
+            "en": "Editing a wiki page",
+            "es": "Editando una página de la wiki"
+          }
+        },
+        {
+          "name": "finish_quiz_attempt",
+          "labels": {
+            "en": "Submitting a quiz attempt",
+            "es": "Enviando un intento"
+          }
+        },
+        {
+          "name": "get_activities_overview",
+          "labels": {
+            "en": "Reading a course's activities overview",
+            "es": "Leyendo la vista general de actividades"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_activity_content",
+          "labels": {
+            "en": "Reading a resource",
+            "es": "Leyendo un recurso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_assignment",
+          "labels": {
+            "en": "Reading an assignment",
+            "es": "Leyendo una tarea"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_attempt_review",
+          "labels": {
+            "en": "Reviewing an attempt",
+            "es": "Revisando un intento"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_choice",
+          "labels": {
+            "en": "Reading a choice",
+            "es": "Leyendo una consulta"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_conversation",
+          "labels": {
+            "en": "Reading a conversation",
+            "es": "Leyendo una conversación"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_course_structure",
+          "labels": {
+            "en": "Reading a course's structure",
+            "es": "Leyendo la estructura de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_course_updates",
+          "labels": {
+            "en": "Reading what changed in a course",
+            "es": "Leyendo lo que ha cambiado en un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_discussion",
+          "labels": {
+            "en": "Reading a forum discussion",
+            "es": "Leyendo un debate del foro"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_event",
+          "labels": {
+            "en": "Reading a calendar event",
+            "es": "Leyendo un evento del calendario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_h5p_activity",
+          "labels": {
+            "en": "Reading an H5P activity",
+            "es": "Leyendo una actividad H5P"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_lesson_page",
+          "labels": {
+            "en": "Reading the lesson's current page",
+            "es": "Leyendo la página actual de la lección"
+          }
+        },
+        {
+          "name": "get_me",
+          "labels": {
+            "en": "Checking who you are in Moodle",
+            "es": "Comprobando quién eres en Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_my_grades",
+          "labels": {
+            "en": "Reading your grades",
+            "es": "Leyendo tus notas"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_quiz_attempt",
+          "labels": {
+            "en": "Reading an attempt's questions",
+            "es": "Leyendo las preguntas de un intento"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_quiz_info",
+          "labels": {
+            "en": "Reading a quiz",
+            "es": "Leyendo un cuestionario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_scorm",
+          "labels": {
+            "en": "Reading a SCORM activity",
+            "es": "Leyendo una actividad SCORM"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_site_info",
+          "labels": {
+            "en": "Reading the Moodle site's information",
+            "es": "Leyendo la información del sitio Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_survey",
+          "labels": {
+            "en": "Reading a survey's questions",
+            "es": "Leyendo las preguntas de una encuesta"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_wiki_page",
+          "labels": {
+            "en": "Reading a wiki page",
+            "es": "Leyendo una página de la wiki"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_workshop_submission",
+          "labels": {
+            "en": "Reading a workshop submission",
+            "es": "Leyendo una entrega del taller"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_assignments",
+          "labels": {
+            "en": "Listing a course's assignments",
+            "es": "Listando las tareas de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_badges",
+          "labels": {
+            "en": "Listing a course's badges",
+            "es": "Listando las insignias de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_conversations",
+          "labels": {
+            "en": "Listing your conversations",
+            "es": "Listando tus conversaciones"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_courses",
+          "labels": {
+            "en": "Listing courses",
+            "es": "Listando los cursos"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_database_entries",
+          "labels": {
+            "en": "Reading a database's entries",
+            "es": "Leyendo las entradas de una base de datos"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_deadlines",
+          "labels": {
+            "en": "Checking deadlines",
+            "es": "Mirando las fechas de entrega"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_discussions",
+          "labels": {
+            "en": "Reading a forum",
+            "es": "Leyendo un foro"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_events",
+          "labels": {
+            "en": "Reading the calendar",
+            "es": "Leyendo el calendario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_glossary_categories",
+          "labels": {
+            "en": "Listing a glossary's categories",
+            "es": "Listando las categorías del glosario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_glossary_entries",
+          "labels": {
+            "en": "Reading a glossary",
+            "es": "Leyendo un glosario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_groups",
+          "labels": {
+            "en": "Listing a course's groups",
+            "es": "Listando los grupos de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_notifications",
+          "labels": {
+            "en": "Reading your notifications",
+            "es": "Leyendo tus notificaciones"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_participants",
+          "labels": {
+            "en": "Listing a course's participants",
+            "es": "Listando los participantes de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_pending",
+          "labels": {
+            "en": "Checking what you have left",
+            "es": "Mirando lo que te queda"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_sites",
+          "labels": {
+            "en": "Listing your Moodle sites",
+            "es": "Listando tus aulas Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_wiki_pages",
+          "labels": {
+            "en": "Listing a wiki's pages",
+            "es": "Listando las páginas de una wiki"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "login",
+          "labels": {
+            "en": "Waiting for you to log in to Moodle",
+            "es": "Esperando a que entres en Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "logout",
+          "labels": {
+            "en": "Logging out of Moodle",
+            "es": "Cerrando la sesión de Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "mark_notifications_read",
+          "labels": {
+            "en": "Marking your notifications read",
+            "es": "Marcando tus notificaciones como leídas"
+          }
+        },
+        {
+          "name": "open_scorm",
+          "labels": {
+            "en": "Opening a SCORM package",
+            "es": "Abriendo un paquete SCORM"
+          }
+        },
+        {
+          "name": "rate",
+          "labels": {
+            "en": "Rating a post, entry or record",
+            "es": "Valorando un mensaje, entrada o registro"
+          }
+        },
+        {
+          "name": "remove_site",
+          "labels": {
+            "en": "Removing the site {name}",
+            "es": "Quitando el aula {name}"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "reply_to_post",
+          "labels": {
+            "en": "Replying in the forum",
+            "es": "Respondiendo en el foro"
+          }
+        },
+        {
+          "name": "save_submission",
+          "labels": {
+            "en": "Saving your submission",
+            "es": "Guardando tu entrega"
+          }
+        },
+        {
+          "name": "save_workshop_submission",
+          "labels": {
+            "en": "Saving the workshop submission",
+            "es": "Guardando la entrega del taller"
+          }
+        },
+        {
+          "name": "send_message",
+          "labels": {
+            "en": "Sending a private message",
+            "es": "Enviando un mensaje privado"
+          }
+        },
+        {
+          "name": "server_info",
+          "labels": {
+            "en": "Reading moodle-mcp's settings",
+            "es": "Leyendo los ajustes de moodle-mcp"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "set_completion",
+          "labels": {
+            "en": "Marking an activity as done",
+            "es": "Marcando una actividad como hecha"
+          }
+        },
+        {
+          "name": "set_discussion_subscription",
+          "labels": {
+            "en": "Changing a discussion subscription",
+            "es": "Cambiando la suscripción a un debate"
+          }
+        },
+        {
+          "name": "show_browser",
+          "labels": {
+            "en": "Showing or hiding the browser",
+            "es": "Mostrando u ocultando el navegador"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "start_quiz_attempt",
+          "labels": {
+            "en": "Starting a quiz attempt",
+            "es": "Empezando un intento"
+          }
+        },
+        {
+          "name": "submit_assignment",
+          "labels": {
+            "en": "Submitting your assignment",
+            "es": "Enviando tu tarea"
+          }
+        },
+        {
+          "name": "submit_survey",
+          "labels": {
+            "en": "Answering a survey",
+            "es": "Respondiendo una encuesta"
+          }
+        },
+        {
+          "name": "use_site",
+          "labels": {
+            "en": "Switching to site {name}",
+            "es": "Cambiando al aula {name}"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "validate_html",
+          "labels": {
+            "en": "Checking the HTML",
+            "es": "Comprobando el HTML"
+          },
+          "readOnly": true
+        }
+      ],
+      "kit": ">=0.22.0"
     },
     {
       "name": "moodle-teacher",
@@ -1281,7 +2695,1729 @@
         }
       ],
       "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-teacher/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-teacher/assets/banner.svg"
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-teacher/assets/banner.svg",
+      "servers": [
+        {
+          "name": "moodle",
+          "kind": "package",
+          "package": "@falkenslab/moodle-mcp",
+          "version": "0.5.0",
+          "url": "https://www.npmjs.com/package/@falkenslab/moodle-mcp"
+        }
+      ],
+      "skills": [
+        {
+          "name": "assignments",
+          "description": "Create or reconfigure a Moodle assignment with moodle-mcp so its statement, its submission settings and its grading agree - submission types, files and formats, dates and cut-off, groups, attempts, feedback types, grade, marking workflow, rubric - and change one safely once students have submitted. Use whenever an assignment is created or its settings change."
+        },
+        {
+          "name": "class-progress",
+          "description": "Read how a Moodle class is doing with moodle-mcp - completion, grades, submissions, quiz results, who hasn't accessed the course, participation and views - telling what Moodle says from what it doesn't, and write to the students concerned with the person's yes. Use when the person asks who's falling behind, how a group or an activity is going, or for a progress report."
+        },
+        {
+          "name": "copy-and-restore",
+          "description": "Reuse Moodle course content with moodle-mcp - copy a course, import activities from another course, back up to a .mbz and restore it, read or anonymize a .mbz on this computer, and check the result. Use when the person asks to reuse last year's course, copy activities, back up or restore a course, look inside or share a backup file, or prepare a course for a new term."
+        },
+        {
+          "name": "course-check",
+          "description": "Check a Moodle course for what's broken or inconsistent in Moodle itself with moodle-mcp - restrictions pointing nowhere, dates out of order or from last year, empty or forgotten hidden sections, quizzes that show answers during the attempt, assignments that can't take what they ask or save feedback, missing rubrics, gradebook weights, completion - and prepare a course for a new term. Use when the person asks to review, audit or tidy a course, or to get it ready for a new edition."
+        },
+        {
+          "name": "course-content",
+          "description": "Put learning content into a Moodle course with moodle-mcp - choose the resource (page, book, file, folder, URL, text and media area, section summary), write it as HTML Moodle keeps, embed images and upload files, and edit existing content without breaking it. Use whenever notes, documents, links or section texts go into Moodle or change there; activities have their own skills."
+        },
+        {
+          "name": "forums",
+          "description": "Work a Moodle course's forums with moodle-mcp - find what's unanswered, read whole threads, reply or post announcements exactly once, edit or delete a post, pin and lock discussions, subscriptions, ratings and messages to several participants. Use whenever reading, answering or posting in a Moodle forum, or writing to the class."
+        },
+        {
+          "name": "gradebook",
+          "description": "Set up and check a Moodle course's gradebook with moodle-mcp so the final grade is computed as the person's grading scheme says - categories, aggregation, weights, each activity's maximum grade, manual grade items, overrides, and the grader report - decided before the first graded activity rather than repaired after the last. Use when a course's weights or grading scheme are set up, changed or checked, when graded activities are created, or when grades are exported."
+        },
+        {
+          "name": "grading",
+          "description": "Grade in Moodle with moodle-mcp - assignment submissions with their rubric, marking guide or simple grade, quiz questions graded by hand, whole-forum grades - proposing first and saving only what the person approves, with feedback that's really saved, group submissions, missing work, extensions and the marking workflow. Use when the person asks to grade, mark or give feedback on an assignment, a quiz's essays or a graded forum."
+        },
+        {
+          "name": "other-activities",
+          "description": "Set up Moodle's other activities with moodle-mcp so they behave as intended - workshop (peer assessment) and its phases, lesson, glossary, wiki, database, forum types and whole-forum grading, choice, feedback survey, H5P, SCORM - and the pieces that connect activities - completion, access restrictions, groups and groupings, badges. Use when a course needs something other than a resource, an assignment or a quiz, or when activities must unlock, track or group."
+        },
+        {
+          "name": "participants-and-groups",
+          "description": "Manage who is in a Moodle course and how they're grouped, with moodle-mcp - enrolment methods (manual, self enrolment with a key, guest access), enrolling and unenrolling people, their roles, groups and groupings, creating groups automatically or from a CSV, and what each change does in Moodle. Use when the person asks to enrol or remove someone, give a role, open the course with a key, or make, fill or change groups."
+        },
+        {
+          "name": "publishing",
+          "description": "Put new content in a Moodle course safely with moodle-mcp - hidden first, checked, then shown with the person's yes - and change what students already see in place; one approval per new item, read back after every write. Use whenever something new goes into a course (a section, a resource, an activity, questions, a rubric) or something visible changes."
+        },
+        {
+          "name": "quizzes",
+          "description": "Build or change a Moodle quiz with moodle-mcp - its settings for what it's for (dates, time limit, attempts, grading method, question behaviour, review options), questions in a bank (imported as GIFT or Moodle XML, or one by one), fixed or random slots, order, pages, marks and the total - and change one safely once it has attempts. Use whenever a quiz or its questions are created or modified, or a question bank is turned into a test."
+        },
+        {
+          "name": "read-a-course",
+          "description": "Read a Moodle course's real state with moodle-mcp before acting on it - what the person can do there, its sections and activities, restrictions and completion, dates, the gradebook and what changed lately - instead of guessing from names or from memory. Use before any complex task in a course (grading, building, auditing, reporting), and whenever unsure what a course holds or allows."
+        },
+        {
+          "name": "scorm",
+          "description": "Turn a web activity (an HTML game, a simulation, an interactive exercise) into a SCORM 1.2 package Moodle tracks - completion and a score in the gradebook - and upload, set up and test it with moodle-mcp. Use when the person wants an HTML activity graded or tracked in Moodle, or asks for SCORM."
+        },
+        {
+          "name": "several-sites",
+          "description": "Work with several Moodle sites through moodle-mcp - which one is active, adding and switching sites, and copying course content from one site to another with copy_between_sites. Use when the person mentions another Moodle (their school's and their university's, last year's site), asks to add a site, or to bring content from one site to another."
+        },
+        {
+          "name": "to-grade",
+          "description": "What is waiting to be graded in one Moodle course or in all the person teaches - submissions not graded yet, quiz questions graded by hand, whole-forum grades - as a table with how long the oldest has waited, only reading, then offering to start. Use when the person asks what they have to grade or correct."
+        },
+        {
+          "name": "week",
+          "description": "What this week holds in the Moodle courses the person teaches - the dates coming up, what is waiting to be graded, and unread notifications - in a short list by day, only reading. Use when the person asks what is due or pending this week (or in the next days), or invokes it to start the week."
+        }
+      ],
+      "tools": [
+        {
+          "name": "add_book_chapter",
+          "labels": {
+            "en": "Adding a book chapter",
+            "es": "Añadiendo un capítulo al libro"
+          }
+        },
+        {
+          "name": "add_database_entry",
+          "labels": {
+            "en": "Adding an entry to a database",
+            "es": "Añadiendo una entrada a la base de datos"
+          }
+        },
+        {
+          "name": "add_database_field",
+          "labels": {
+            "en": "Adding the field {name} to a database",
+            "es": "Añadiendo el campo {name} a una base de datos"
+          }
+        },
+        {
+          "name": "add_feedback_item",
+          "labels": {
+            "en": "Adding a question to a feedback",
+            "es": "Añadiendo una pregunta a un feedback"
+          }
+        },
+        {
+          "name": "add_glossary_category",
+          "labels": {
+            "en": "Adding the category {name} to a glossary",
+            "es": "Añadiendo la categoría {name} al glosario"
+          }
+        },
+        {
+          "name": "add_glossary_entry",
+          "labels": {
+            "en": "Adding \"{concept}\" to a glossary",
+            "es": "Añadiendo «{concept}» a un glosario"
+          }
+        },
+        {
+          "name": "add_grade_category",
+          "labels": {
+            "en": "Adding the grade category {name}",
+            "es": "Añadiendo la categoría de calificación {name}"
+          }
+        },
+        {
+          "name": "add_grade_item",
+          "labels": {
+            "en": "Adding the grade item {name}",
+            "es": "Añadiendo el elemento de calificación {name}"
+          }
+        },
+        {
+          "name": "add_lesson_page",
+          "labels": {
+            "en": "Adding a lesson page",
+            "es": "Añadiendo una página a la lección"
+          }
+        },
+        {
+          "name": "add_question_category",
+          "labels": {
+            "en": "Adding the category {name} to a bank",
+            "es": "Añadiendo la categoría {name} a un banco"
+          }
+        },
+        {
+          "name": "add_questions_to_quiz",
+          "labels": {
+            "en": "Adding questions to a quiz",
+            "es": "Añadiendo preguntas a un cuestionario"
+          }
+        },
+        {
+          "name": "add_quiz_section",
+          "labels": {
+            "en": "Adding the section \"{heading}\" to a quiz",
+            "es": "Añadiendo la sección «{heading}» a un cuestionario"
+          }
+        },
+        {
+          "name": "add_scale",
+          "labels": {
+            "en": "Adding the scale {name}",
+            "es": "Añadiendo la escala {name}"
+          }
+        },
+        {
+          "name": "add_section",
+          "labels": {
+            "en": "Adding a section",
+            "es": "Añadiendo una sección"
+          }
+        },
+        {
+          "name": "add_site",
+          "labels": {
+            "en": "Adding a Moodle site",
+            "es": "Añadiendo un aula Moodle"
+          }
+        },
+        {
+          "name": "add_workshop_example",
+          "labels": {
+            "en": "Adding the example \"{title}\" to a workshop",
+            "es": "Añadiendo el ejemplo «{title}» a un taller"
+          }
+        },
+        {
+          "name": "allocate_marker",
+          "labels": {
+            "en": "Allocating a marker",
+            "es": "Asignando un evaluador"
+          }
+        },
+        {
+          "name": "allocate_workshop_randomly",
+          "labels": {
+            "en": "Allocating the workshop's reviews",
+            "es": "Asignando las revisiones del taller"
+          }
+        },
+        {
+          "name": "allocate_workshop_reviewer",
+          "labels": {
+            "en": "Allocating a reviewer",
+            "es": "Asignando un revisor"
+          }
+        },
+        {
+          "name": "anonymize_backup",
+          "labels": {
+            "en": "Anonymizing a backup file",
+            "es": "Anonimizando una copia de seguridad"
+          }
+        },
+        {
+          "name": "apply_database_preset",
+          "labels": {
+            "en": "Giving a database a preset",
+            "es": "Aplicando un preajuste a una base de datos"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "assess_workshop_example",
+          "labels": {
+            "en": "Assessing a workshop's example",
+            "es": "Evaluando un ejemplo del taller"
+          }
+        },
+        {
+          "name": "assess_workshop_submission",
+          "labels": {
+            "en": "Assessing a workshop submission",
+            "es": "Evaluando una entrega del taller"
+          }
+        },
+        {
+          "name": "auto_create_groups",
+          "labels": {
+            "en": "Creating groups automatically",
+            "es": "Creando grupos automáticamente"
+          }
+        },
+        {
+          "name": "award_badge",
+          "labels": {
+            "en": "Awarding a badge",
+            "es": "Concediendo una insignia"
+          }
+        },
+        {
+          "name": "backup_course",
+          "labels": {
+            "en": "Backing up a course",
+            "es": "Haciendo copia de seguridad de un curso"
+          }
+        },
+        {
+          "name": "browser_click",
+          "labels": {
+            "en": "Clicking in the browser",
+            "es": "Haciendo clic en el navegador"
+          }
+        },
+        {
+          "name": "browser_navigate",
+          "labels": {
+            "en": "Opening {url} in the browser",
+            "es": "Abriendo {url} en el navegador"
+          }
+        },
+        {
+          "name": "browser_select",
+          "labels": {
+            "en": "Choosing an option in the browser",
+            "es": "Eligiendo una opción en el navegador"
+          }
+        },
+        {
+          "name": "browser_snapshot",
+          "labels": {
+            "en": "Reading the browser's page",
+            "es": "Leyendo la página del navegador"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "browser_type",
+          "labels": {
+            "en": "Typing in the browser",
+            "es": "Escribiendo en el navegador"
+          }
+        },
+        {
+          "name": "browser_upload",
+          "labels": {
+            "en": "Choosing files in the browser",
+            "es": "Eligiendo archivos en el navegador"
+          }
+        },
+        {
+          "name": "browser_wait",
+          "labels": {
+            "en": "Waiting for the page",
+            "es": "Esperando a la página"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "calculate_workshop_grades",
+          "labels": {
+            "en": "Calculating a workshop's grades",
+            "es": "Calculando las notas de un taller"
+          }
+        },
+        {
+          "name": "configure",
+          "labels": {
+            "en": "Changing moodle-mcp's settings for this session",
+            "es": "Cambiando los ajustes de moodle-mcp para esta sesión"
+          }
+        },
+        {
+          "name": "copy_between_sites",
+          "labels": {
+            "en": "Copying from {fromSite} to {toSite}",
+            "es": "Copiando de {fromSite} a {toSite}"
+          }
+        },
+        {
+          "name": "copy_course",
+          "labels": {
+            "en": "Copying a course",
+            "es": "Copiando un curso"
+          }
+        },
+        {
+          "name": "create_activity",
+          "labels": {
+            "en": "Creating an activity",
+            "es": "Creando una actividad"
+          }
+        },
+        {
+          "name": "create_badge",
+          "labels": {
+            "en": "Creating a badge",
+            "es": "Creando una insignia"
+          }
+        },
+        {
+          "name": "create_discussion",
+          "labels": {
+            "en": "Starting the discussion \"{subject}\"",
+            "es": "Abriendo el debate «{subject}»"
+          }
+        },
+        {
+          "name": "create_event",
+          "labels": {
+            "en": "Creating the event \"{name}\"",
+            "es": "Creando el evento «{name}»"
+          }
+        },
+        {
+          "name": "create_group",
+          "labels": {
+            "en": "Creating the group {name}",
+            "es": "Creando el grupo {name}"
+          }
+        },
+        {
+          "name": "create_grouping",
+          "labels": {
+            "en": "Creating the grouping {name}",
+            "es": "Creando el agrupamiento {name}"
+          }
+        },
+        {
+          "name": "create_question",
+          "labels": {
+            "en": "Creating the question \"{name}\"",
+            "es": "Creando la pregunta «{name}»"
+          }
+        },
+        {
+          "name": "create_wiki_page",
+          "labels": {
+            "en": "Creating the wiki page \"{title}\"",
+            "es": "Creando la página de wiki «{title}»"
+          }
+        },
+        {
+          "name": "delete_activity",
+          "labels": {
+            "en": "Deleting an activity",
+            "es": "Eliminando una actividad"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_book_chapter",
+          "labels": {
+            "en": "Deleting a book's chapter",
+            "es": "Eliminando un capítulo del libro"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_database_entry",
+          "labels": {
+            "en": "Deleting a database entry",
+            "es": "Eliminando una entrada de la base de datos"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_database_field",
+          "labels": {
+            "en": "Deleting a database's field",
+            "es": "Eliminando un campo de la base de datos"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_event",
+          "labels": {
+            "en": "Deleting a calendar event",
+            "es": "Eliminando un evento del calendario"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_feedback_item",
+          "labels": {
+            "en": "Deleting a feedback's question",
+            "es": "Eliminando una pregunta del feedback"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_feedback_template",
+          "labels": {
+            "en": "Deleting a feedback template",
+            "es": "Eliminando una plantilla de feedback"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_glossary_entry",
+          "labels": {
+            "en": "Deleting a glossary entry",
+            "es": "Eliminando una entrada del glosario"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_grade_category",
+          "labels": {
+            "en": "Deleting a grade category",
+            "es": "Eliminando una categoría de calificación"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_grade_item",
+          "labels": {
+            "en": "Deleting a grade item",
+            "es": "Eliminando un elemento de calificación"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_group",
+          "labels": {
+            "en": "Deleting a group",
+            "es": "Eliminando un grupo"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_grouping",
+          "labels": {
+            "en": "Deleting a grouping",
+            "es": "Eliminando un agrupamiento"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_lesson_page",
+          "labels": {
+            "en": "Deleting a lesson's page",
+            "es": "Eliminando una página de la lección"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_post",
+          "labels": {
+            "en": "Deleting a forum post",
+            "es": "Eliminando un mensaje del foro"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_question_category",
+          "labels": {
+            "en": "Deleting a question category",
+            "es": "Eliminando una categoría de preguntas"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_questions",
+          "labels": {
+            "en": "Deleting questions from a bank",
+            "es": "Eliminando preguntas de un banco"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_section",
+          "labels": {
+            "en": "Deleting a section",
+            "es": "Eliminando una sección"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_workshop_example",
+          "labels": {
+            "en": "Deleting a workshop's example",
+            "es": "Eliminando un ejemplo del taller"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "download_file",
+          "labels": {
+            "en": "Downloading a file from Moodle",
+            "es": "Descargando un archivo de Moodle"
+          }
+        },
+        {
+          "name": "duplicate_activity",
+          "labels": {
+            "en": "Duplicating an activity",
+            "es": "Duplicando una actividad"
+          }
+        },
+        {
+          "name": "edit_activity",
+          "labels": {
+            "en": "Moving, renaming, showing or hiding an activity",
+            "es": "Moviendo, renombrando, mostrando u ocultando una actividad"
+          }
+        },
+        {
+          "name": "edit_book_chapter",
+          "labels": {
+            "en": "Changing a book's chapter",
+            "es": "Cambiando un capítulo del libro"
+          }
+        },
+        {
+          "name": "edit_database_entry",
+          "labels": {
+            "en": "Changing a database entry",
+            "es": "Cambiando una entrada de la base de datos"
+          }
+        },
+        {
+          "name": "edit_database_field",
+          "labels": {
+            "en": "Changing a database's field",
+            "es": "Cambiando un campo de la base de datos"
+          }
+        },
+        {
+          "name": "edit_feedback_item",
+          "labels": {
+            "en": "Changing a feedback's question",
+            "es": "Cambiando una pregunta del feedback"
+          }
+        },
+        {
+          "name": "edit_glossary_entry",
+          "labels": {
+            "en": "Changing a glossary entry",
+            "es": "Cambiando una entrada del glosario"
+          }
+        },
+        {
+          "name": "edit_lesson_page",
+          "labels": {
+            "en": "Changing a lesson's page",
+            "es": "Cambiando una página de la lección"
+          }
+        },
+        {
+          "name": "edit_post",
+          "labels": {
+            "en": "Editing a forum post",
+            "es": "Editando un mensaje del foro"
+          }
+        },
+        {
+          "name": "edit_question_category",
+          "labels": {
+            "en": "Renaming or moving a question category",
+            "es": "Renombrando o moviendo una categoría de preguntas"
+          }
+        },
+        {
+          "name": "edit_quiz_slot",
+          "labels": {
+            "en": "Changing a quiz question's mark or place",
+            "es": "Cambiando la puntuación o el lugar de una pregunta"
+          }
+        },
+        {
+          "name": "edit_scale",
+          "labels": {
+            "en": "Changing a scale",
+            "es": "Cambiando una escala"
+          }
+        },
+        {
+          "name": "edit_section",
+          "labels": {
+            "en": "Changing a section",
+            "es": "Cambiando una sección"
+          }
+        },
+        {
+          "name": "edit_wiki_page",
+          "labels": {
+            "en": "Editing a wiki page",
+            "es": "Editando una página de la wiki"
+          }
+        },
+        {
+          "name": "edit_workshop_example",
+          "labels": {
+            "en": "Changing a workshop's example",
+            "es": "Cambiando un ejemplo del taller"
+          }
+        },
+        {
+          "name": "enrol_users",
+          "labels": {
+            "en": "Enrolling people in a course",
+            "es": "Matriculando a personas en un curso"
+          }
+        },
+        {
+          "name": "export_database_entries",
+          "labels": {
+            "en": "Exporting a database's entries",
+            "es": "Exportando las entradas de una base de datos"
+          }
+        },
+        {
+          "name": "export_glossary",
+          "labels": {
+            "en": "Exporting a glossary",
+            "es": "Exportando un glosario"
+          }
+        },
+        {
+          "name": "export_grades",
+          "labels": {
+            "en": "Exporting a course's grades",
+            "es": "Exportando las calificaciones de un curso"
+          }
+        },
+        {
+          "name": "export_questions",
+          "labels": {
+            "en": "Exporting questions",
+            "es": "Exportando preguntas"
+          }
+        },
+        {
+          "name": "get_activities_overview",
+          "labels": {
+            "en": "Reading a course's activities overview",
+            "es": "Leyendo la vista general de actividades"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_activity_content",
+          "labels": {
+            "en": "Reading an activity's content",
+            "es": "Leyendo el contenido de una actividad"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_activity_report",
+          "labels": {
+            "en": "Reading a course's activity views",
+            "es": "Leyendo las visualizaciones de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_activity_settings",
+          "labels": {
+            "en": "Reading an activity's settings",
+            "es": "Leyendo los ajustes de una actividad"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_attempt_review",
+          "labels": {
+            "en": "Reviewing an attempt",
+            "es": "Revisando un intento"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_choice",
+          "labels": {
+            "en": "Reading a choice",
+            "es": "Leyendo una consulta"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_choice_results",
+          "labels": {
+            "en": "Reading a choice's results",
+            "es": "Leyendo los resultados de una consulta"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_completion_report",
+          "labels": {
+            "en": "Reading a course's activity completion",
+            "es": "Leyendo la finalización de actividades de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_conversation",
+          "labels": {
+            "en": "Reading a conversation",
+            "es": "Leyendo una conversación"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_course_completion_criteria",
+          "labels": {
+            "en": "Reading what completes a course",
+            "es": "Leyendo qué completa un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_course_completion_status",
+          "labels": {
+            "en": "Reading who has completed a course",
+            "es": "Leyendo quién ha completado el curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_course_logs",
+          "labels": {
+            "en": "Reading a course's logs",
+            "es": "Leyendo los registros de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_course_structure",
+          "labels": {
+            "en": "Reading a course's structure",
+            "es": "Leyendo la estructura de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_course_updates",
+          "labels": {
+            "en": "Reading what changed in a course",
+            "es": "Leyendo lo que ha cambiado en un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_database_fields",
+          "labels": {
+            "en": "Reading a database's fields",
+            "es": "Leyendo los campos de una base de datos"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_database_templates",
+          "labels": {
+            "en": "Reading a database's templates",
+            "es": "Leyendo las plantillas de una base de datos"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_discussion",
+          "labels": {
+            "en": "Reading a forum discussion",
+            "es": "Leyendo un debate del foro"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_event",
+          "labels": {
+            "en": "Reading a calendar event",
+            "es": "Leyendo un evento del calendario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_feedback_items",
+          "labels": {
+            "en": "Reading a feedback's questions",
+            "es": "Leyendo las preguntas de un feedback"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_forum_grades",
+          "labels": {
+            "en": "Reading a forum's grades",
+            "es": "Leyendo las notas de un foro"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_grade_letters",
+          "labels": {
+            "en": "Reading the grade letters",
+            "es": "Leyendo las letras de calificación"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_gradebook_setup",
+          "labels": {
+            "en": "Reading the gradebook's setup",
+            "es": "Leyendo la configuración del calificador"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_grader_report",
+          "labels": {
+            "en": "Reading a course's grades",
+            "es": "Leyendo las calificaciones de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_h5p_activity",
+          "labels": {
+            "en": "Reading an H5P activity",
+            "es": "Leyendo una actividad H5P"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_lesson_pages",
+          "labels": {
+            "en": "Reading a lesson's pages",
+            "es": "Leyendo las páginas de una lección"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_me",
+          "labels": {
+            "en": "Checking who you are in Moodle",
+            "es": "Comprobando quién eres en Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_participation_report",
+          "labels": {
+            "en": "Reading who took part in an activity",
+            "es": "Leyendo quién participó en una actividad"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_quiz_info",
+          "labels": {
+            "en": "Reading a quiz",
+            "es": "Leyendo un cuestionario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_quiz_results",
+          "labels": {
+            "en": "Reading a quiz's results",
+            "es": "Leyendo los resultados de un cuestionario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_quiz_statistics",
+          "labels": {
+            "en": "Reading a quiz's statistics",
+            "es": "Leyendo las estadísticas de un cuestionario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_quiz_structure",
+          "labels": {
+            "en": "Reading a quiz's questions",
+            "es": "Leyendo las preguntas de un cuestionario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_rubric",
+          "labels": {
+            "en": "Reading the rubric",
+            "es": "Leyendo la rúbrica"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_scorm",
+          "labels": {
+            "en": "Reading a SCORM activity",
+            "es": "Leyendo una actividad SCORM"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_site_info",
+          "labels": {
+            "en": "Reading the Moodle site's information",
+            "es": "Leyendo la información del sitio Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_submissions",
+          "labels": {
+            "en": "Reading submissions",
+            "es": "Leyendo las entregas"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_survey_results",
+          "labels": {
+            "en": "Reading a survey's results",
+            "es": "Leyendo los resultados de una encuesta"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_wiki_page",
+          "labels": {
+            "en": "Reading a wiki page",
+            "es": "Leyendo una página de la wiki"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_workshop",
+          "labels": {
+            "en": "Reading a workshop",
+            "es": "Leyendo un taller"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_workshop_allocation",
+          "labels": {
+            "en": "Reading who assesses whom",
+            "es": "Leyendo quién evalúa a quién"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_workshop_submission",
+          "labels": {
+            "en": "Reading a workshop submission",
+            "es": "Leyendo una entrega del taller"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "grade_forum_user",
+          "labels": {
+            "en": "Grading someone's forum work",
+            "es": "Calificando la participación en un foro"
+          }
+        },
+        {
+          "name": "grade_quiz_question",
+          "labels": {
+            "en": "Grading a quiz question by hand",
+            "es": "Calificando a mano una pregunta"
+          }
+        },
+        {
+          "name": "grade_submission",
+          "labels": {
+            "en": "Grading a submission",
+            "es": "Calificando una entrega"
+          }
+        },
+        {
+          "name": "grant_extension",
+          "labels": {
+            "en": "Granting an assignment extension",
+            "es": "Concediendo una prórroga"
+          }
+        },
+        {
+          "name": "import_activities",
+          "labels": {
+            "en": "Importing activities from another course",
+            "es": "Importando actividades de otro curso"
+          }
+        },
+        {
+          "name": "import_database_entries",
+          "labels": {
+            "en": "Importing entries into a database",
+            "es": "Importando entradas a una base de datos"
+          }
+        },
+        {
+          "name": "import_glossary",
+          "labels": {
+            "en": "Importing entries into a glossary",
+            "es": "Importando entradas a un glosario"
+          }
+        },
+        {
+          "name": "import_grades",
+          "labels": {
+            "en": "Importing grades from a CSV file",
+            "es": "Importando notas desde un CSV"
+          }
+        },
+        {
+          "name": "import_groups",
+          "labels": {
+            "en": "Importing groups from a CSV file",
+            "es": "Importando grupos desde un CSV"
+          }
+        },
+        {
+          "name": "import_questions",
+          "labels": {
+            "en": "Importing questions into a bank",
+            "es": "Importando preguntas a un banco"
+          }
+        },
+        {
+          "name": "list_assignments",
+          "labels": {
+            "en": "Listing a course's assignments",
+            "es": "Listando las tareas de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_badges",
+          "labels": {
+            "en": "Listing a course's badges",
+            "es": "Listando las insignias de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_book_chapters",
+          "labels": {
+            "en": "Listing a book's chapters",
+            "es": "Listando los capítulos de un libro"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_conversations",
+          "labels": {
+            "en": "Listing your conversations",
+            "es": "Listando tus conversaciones"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_courses",
+          "labels": {
+            "en": "Listing courses",
+            "es": "Listando los cursos"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_database_entries",
+          "labels": {
+            "en": "Reading a database's entries",
+            "es": "Leyendo las entradas de una base de datos"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_database_presets",
+          "labels": {
+            "en": "Listing a database's presets",
+            "es": "Listando los preajustes de una base de datos"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_deadlines",
+          "labels": {
+            "en": "Checking deadlines",
+            "es": "Mirando las fechas de entrega"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_discussions",
+          "labels": {
+            "en": "Reading a forum",
+            "es": "Leyendo un foro"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_enrolment_methods",
+          "labels": {
+            "en": "Reading a course's enrolment methods",
+            "es": "Leyendo los métodos de matriculación"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_events",
+          "labels": {
+            "en": "Reading the calendar",
+            "es": "Leyendo el calendario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_feedback_templates",
+          "labels": {
+            "en": "Listing the feedback templates",
+            "es": "Listando las plantillas de feedback"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_glossary_categories",
+          "labels": {
+            "en": "Listing a glossary's categories",
+            "es": "Listando las categorías del glosario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_glossary_entries",
+          "labels": {
+            "en": "Reading a glossary",
+            "es": "Leyendo un glosario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_groupings",
+          "labels": {
+            "en": "Listing a course's groupings",
+            "es": "Listando los agrupamientos de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_groups",
+          "labels": {
+            "en": "Listing a course's groups",
+            "es": "Listando los grupos de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_notifications",
+          "labels": {
+            "en": "Reading your notifications",
+            "es": "Leyendo tus notificaciones"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_participants",
+          "labels": {
+            "en": "Listing a course's participants",
+            "es": "Listando los participantes de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_potential_users",
+          "labels": {
+            "en": "Finding people to enrol",
+            "es": "Buscando a quién matricular"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_question_banks",
+          "labels": {
+            "en": "Listing a course's question banks",
+            "es": "Listando los bancos de preguntas"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_question_categories",
+          "labels": {
+            "en": "Listing a bank's categories",
+            "es": "Listando las categorías de un banco"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_question_types",
+          "labels": {
+            "en": "Looking at the site's question types",
+            "es": "Mirando los tipos de pregunta del sitio"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_questions",
+          "labels": {
+            "en": "Reading a question bank",
+            "es": "Leyendo un banco de preguntas"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_questions_to_grade",
+          "labels": {
+            "en": "Listing the questions to grade by hand",
+            "es": "Listando las preguntas por calificar a mano"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_scales",
+          "labels": {
+            "en": "Listing a course's scales",
+            "es": "Listando las escalas de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_sites",
+          "labels": {
+            "en": "Listing your Moodle sites",
+            "es": "Listando tus aulas Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_wiki_pages",
+          "labels": {
+            "en": "Listing a wiki's pages",
+            "es": "Listando las páginas de una wiki"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_workshop_examples",
+          "labels": {
+            "en": "Listing a workshop's examples",
+            "es": "Listando los ejemplos de un taller"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "login",
+          "labels": {
+            "en": "Waiting for you to log in to Moodle",
+            "es": "Esperando a que entres en Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "logout",
+          "labels": {
+            "en": "Logging out of Moodle",
+            "es": "Cerrando la sesión de Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "mark_course_complete",
+          "labels": {
+            "en": "Marking someone's course complete",
+            "es": "Marcando el curso como completado para alguien"
+          }
+        },
+        {
+          "name": "mark_notifications_read",
+          "labels": {
+            "en": "Marking your notifications read",
+            "es": "Marcando tus notificaciones como leídas"
+          }
+        },
+        {
+          "name": "message_participants",
+          "labels": {
+            "en": "Messaging several participants",
+            "es": "Enviando un mensaje a varios participantes"
+          }
+        },
+        {
+          "name": "move_book_chapter",
+          "labels": {
+            "en": "Moving a book's chapter",
+            "es": "Moviendo un capítulo del libro"
+          }
+        },
+        {
+          "name": "move_feedback_item",
+          "labels": {
+            "en": "Moving a feedback's question",
+            "es": "Moviendo una pregunta del feedback"
+          }
+        },
+        {
+          "name": "move_lesson_page",
+          "labels": {
+            "en": "Moving a lesson's page",
+            "es": "Moviendo una página de la lección"
+          }
+        },
+        {
+          "name": "move_questions",
+          "labels": {
+            "en": "Moving questions to another category",
+            "es": "Moviendo preguntas a otra categoría"
+          }
+        },
+        {
+          "name": "override_completion",
+          "labels": {
+            "en": "Setting an activity's completion for someone",
+            "es": "Marcando la finalización de una actividad para alguien"
+          }
+        },
+        {
+          "name": "override_workshop_grade",
+          "labels": {
+            "en": "Overriding a workshop grade",
+            "es": "Cambiando a mano una nota del taller"
+          }
+        },
+        {
+          "name": "rate",
+          "labels": {
+            "en": "Rating a post, entry or record",
+            "es": "Valorando un mensaje, entrada o registro"
+          }
+        },
+        {
+          "name": "read_backup",
+          "labels": {
+            "en": "Reading a backup file",
+            "es": "Leyendo una copia de seguridad"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "remove_quiz_slot",
+          "labels": {
+            "en": "Removing a question from a quiz",
+            "es": "Quitando una pregunta del cuestionario"
+          }
+        },
+        {
+          "name": "remove_site",
+          "labels": {
+            "en": "Removing the site {name}",
+            "es": "Quitando el aula {name}"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "remove_workshop_reviewer",
+          "labels": {
+            "en": "Removing a workshop reviewer",
+            "es": "Quitando un revisor del taller"
+          }
+        },
+        {
+          "name": "reply_to_post",
+          "labels": {
+            "en": "Replying in the forum",
+            "es": "Respondiendo en el foro"
+          }
+        },
+        {
+          "name": "reset_course",
+          "labels": {
+            "en": "Resetting a course",
+            "es": "Reiniciando un curso"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "restore_course",
+          "labels": {
+            "en": "Restoring a backup",
+            "es": "Restaurando una copia"
+          }
+        },
+        {
+          "name": "save_feedback_template",
+          "labels": {
+            "en": "Saving the template {name}",
+            "es": "Guardando la plantilla {name}"
+          }
+        },
+        {
+          "name": "save_workshop_submission",
+          "labels": {
+            "en": "Saving a workshop submission",
+            "es": "Guardando una entrega del taller"
+          }
+        },
+        {
+          "name": "schedule_workshop_allocation",
+          "labels": {
+            "en": "Scheduling a workshop's allocation",
+            "es": "Programando la asignación de un taller"
+          }
+        },
+        {
+          "name": "send_message",
+          "labels": {
+            "en": "Sending a private message",
+            "es": "Enviando un mensaje privado"
+          }
+        },
+        {
+          "name": "server_info",
+          "labels": {
+            "en": "Reading moodle-mcp's settings",
+            "es": "Leyendo los ajustes de moodle-mcp"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "set_badge_criteria",
+          "labels": {
+            "en": "Setting what earns a badge",
+            "es": "Fijando qué otorga una insignia"
+          }
+        },
+        {
+          "name": "set_badge_enabled",
+          "labels": {
+            "en": "Enabling or disabling a badge",
+            "es": "Activando o desactivando una insignia"
+          }
+        },
+        {
+          "name": "set_book_chapter_visibility",
+          "labels": {
+            "en": "Showing or hiding a book's chapter",
+            "es": "Mostrando u ocultando un capítulo del libro"
+          }
+        },
+        {
+          "name": "set_course_completion_criteria",
+          "labels": {
+            "en": "Setting what completes a course",
+            "es": "Fijando qué completa un curso"
+          }
+        },
+        {
+          "name": "set_database_entry_approved",
+          "labels": {
+            "en": "Approving a database entry",
+            "es": "Aprobando una entrada de la base de datos"
+          }
+        },
+        {
+          "name": "set_database_template",
+          "labels": {
+            "en": "Saving a database's template",
+            "es": "Guardando una plantilla de la base de datos"
+          }
+        },
+        {
+          "name": "set_discussion_state",
+          "labels": {
+            "en": "Pinning or locking a discussion",
+            "es": "Fijando o bloqueando un debate"
+          }
+        },
+        {
+          "name": "set_discussion_subscription",
+          "labels": {
+            "en": "Changing a discussion subscription",
+            "es": "Cambiando la suscripción a un debate"
+          }
+        },
+        {
+          "name": "set_enrolment_method",
+          "labels": {
+            "en": "Changing an enrolment method",
+            "es": "Cambiando un método de matriculación"
+          }
+        },
+        {
+          "name": "set_glossary_entry_approved",
+          "labels": {
+            "en": "Approving a glossary entry",
+            "es": "Aprobando una entrada del glosario"
+          }
+        },
+        {
+          "name": "set_grade",
+          "labels": {
+            "en": "Setting a grade in the gradebook",
+            "es": "Poniendo una nota en el calificador"
+          }
+        },
+        {
+          "name": "set_grade_letters",
+          "labels": {
+            "en": "Setting the grade letters",
+            "es": "Fijando las letras de calificación"
+          }
+        },
+        {
+          "name": "set_group_members",
+          "labels": {
+            "en": "Changing a group's members",
+            "es": "Cambiando los miembros de un grupo"
+          }
+        },
+        {
+          "name": "set_grouping_groups",
+          "labels": {
+            "en": "Setting a grouping's groups",
+            "es": "Fijando los grupos de un agrupamiento"
+          }
+        },
+        {
+          "name": "set_question_status",
+          "labels": {
+            "en": "Setting a question ready or draft",
+            "es": "Marcando una pregunta como lista o borrador"
+          }
+        },
+        {
+          "name": "set_quiz_override",
+          "labels": {
+            "en": "Setting a quiz exception for someone",
+            "es": "Poniendo una excepción de cuestionario a alguien"
+          }
+        },
+        {
+          "name": "set_quiz_pages",
+          "labels": {
+            "en": "Setting a quiz's pages",
+            "es": "Fijando las páginas de un cuestionario"
+          }
+        },
+        {
+          "name": "set_rubric",
+          "labels": {
+            "en": "Defining the rubric",
+            "es": "Definiendo la rúbrica"
+          }
+        },
+        {
+          "name": "set_user_roles",
+          "labels": {
+            "en": "Setting someone's roles in a course",
+            "es": "Fijando los roles de alguien en un curso"
+          }
+        },
+        {
+          "name": "set_workflow_state",
+          "labels": {
+            "en": "Changing the marking workflow state",
+            "es": "Cambiando el estado del flujo de calificación"
+          }
+        },
+        {
+          "name": "set_workshop_phase",
+          "labels": {
+            "en": "Switching a workshop's phase",
+            "es": "Cambiando la fase de un taller"
+          }
+        },
+        {
+          "name": "show_browser",
+          "labels": {
+            "en": "Showing or hiding the browser",
+            "es": "Mostrando u ocultando el navegador"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "unenrol_user",
+          "labels": {
+            "en": "Unenrolling someone from a course",
+            "es": "Desmatriculando a alguien de un curso"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "update_activity",
+          "labels": {
+            "en": "Changing an activity",
+            "es": "Cambiando una actividad"
+          }
+        },
+        {
+          "name": "update_course",
+          "labels": {
+            "en": "Changing a course's settings",
+            "es": "Cambiando la configuración de un curso"
+          }
+        },
+        {
+          "name": "update_event",
+          "labels": {
+            "en": "Changing a calendar event",
+            "es": "Cambiando un evento del calendario"
+          }
+        },
+        {
+          "name": "update_grade_category",
+          "labels": {
+            "en": "Changing a grade category",
+            "es": "Cambiando una categoría de calificación"
+          }
+        },
+        {
+          "name": "update_grade_item",
+          "labels": {
+            "en": "Changing a grade item",
+            "es": "Cambiando un elemento de calificación"
+          }
+        },
+        {
+          "name": "update_group",
+          "labels": {
+            "en": "Changing a group",
+            "es": "Cambiando un grupo"
+          }
+        },
+        {
+          "name": "update_question",
+          "labels": {
+            "en": "Changing a question",
+            "es": "Cambiando una pregunta"
+          }
+        },
+        {
+          "name": "use_feedback_template",
+          "labels": {
+            "en": "Using a template in a feedback",
+            "es": "Usando una plantilla en un feedback"
+          }
+        },
+        {
+          "name": "use_site",
+          "labels": {
+            "en": "Switching to site {name}",
+            "es": "Cambiando al aula {name}"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "validate_gift",
+          "labels": {
+            "en": "Checking GIFT questions",
+            "es": "Comprobando preguntas GIFT"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "validate_html",
+          "labels": {
+            "en": "Checking the HTML",
+            "es": "Comprobando el HTML"
+          },
+          "readOnly": true
+        }
+      ],
+      "kit": ">=0.22.0"
     },
     {
       "name": "moodle-ui-kit",
@@ -1332,7 +4468,14 @@
         }
       ],
       "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-ui-kit/assets/logo.svg",
-      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-ui-kit/assets/banner.svg"
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/moodle-ui-kit/assets/banner.svg",
+      "skills": [
+        {
+          "name": "style-content",
+          "description": "Give what's published in Moodle a clean visual style with moodle-ui-kit's templates - an assignment's statement (goal, statement, deliverable), code blocks, a solution with its explanation, a quiz question's text and its feedback - all with inline styles, so it works on Moodle sites that strip CSS. Use when writing an assignment, a page, a label, a quiz question or feedback for Moodle and the person wants this style, or the course has no style of its own to follow."
+        }
+      ],
+      "kit": ">=0.22.0"
     },
     {
       "name": "weather",
@@ -1382,7 +4525,36 @@
           }
         }
       ],
-      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/weather/assets/logo.svg"
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/weather/assets/logo.svg",
+      "servers": [
+        {
+          "name": "weather",
+          "kind": "bundled",
+          "command": "node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+        }
+      ],
+      "skills": [
+        {
+          "name": "plan-the-day",
+          "description": "Plan the person's day or week around the weather - check the forecast first, then suggest when to do what. Use when they ask what to do today, when to go out, or to plan outdoor activities."
+        }
+      ],
+      "commands": [
+        {
+          "name": "today",
+          "description": "Today's weather in your city, in two lines"
+        }
+      ],
+      "tools": [
+        {
+          "name": "forecast",
+          "labels": {
+            "en": "Checking the weather in {city}",
+            "es": "Mirando el tiempo en {city}"
+          }
+        }
+      ],
+      "kit": ">=0.22.0"
     }
   ]
 }
