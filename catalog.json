@@ -1172,7 +1172,7 @@
     },
     {
       "name": "h5p",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
       "descriptions": {
         "en": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
@@ -1283,7 +1283,7 @@
     },
     {
       "name": "moodle-student",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
@@ -1548,7 +1548,7 @@
           "name": "moodle",
           "kind": "package",
           "package": "@falkenslab/moodle-mcp",
-          "version": "0.5.0",
+          "version": "0.6.0",
           "url": "https://www.npmjs.com/package/@falkenslab/moodle-mcp"
         }
       ],
@@ -2225,7 +2225,7 @@
     },
     {
       "name": "moodle-teacher",
-      "version": "0.4.1",
+      "version": "0.5.0",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
@@ -2440,6 +2440,7 @@
             "set_badge_enabled",
             "award_badge",
             "get_h5p_activity",
+            "list_h5p_content_types",
             "get_choice",
             "get_choice_results",
             "get_survey_results",
@@ -2812,7 +2813,7 @@
           "name": "moodle",
           "kind": "package",
           "package": "@falkenslab/moodle-mcp",
-          "version": "0.5.0",
+          "version": "0.6.0",
           "url": "https://www.npmjs.com/package/@falkenslab/moodle-mcp"
         }
       ],
@@ -4011,6 +4012,14 @@
           "labels": {
             "en": "Listing a course's groups",
             "es": "Listando los grupos de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_h5p_content_types",
+          "labels": {
+            "en": "Checking the site's H5P content types",
+            "es": "Mirando los tipos H5P del sitio"
           },
           "readOnly": true
         },

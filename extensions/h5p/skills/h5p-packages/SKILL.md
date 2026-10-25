@@ -5,7 +5,7 @@ description: Build interactive H5P content as a package with h5p-mcp - multiple 
 
 # H5P packages
 
-h5p-mcp writes content-only `.h5p` packages on this computer: the content, never H5P's code. It uploads nothing. A package plays only on a site that has its content type installed at the version `list_h5p_types` gives (in Moodle, an administrator installs content types); say so when you hand one over.
+h5p-mcp writes content-only `.h5p` packages on this computer: the content, never H5P's code. It uploads nothing. A package plays only on a site that has its content type installed at the version `list_h5p_types` gives (in Moodle, an administrator installs content types). When it's for a Moodle course and moodle-teacher is there, check first with its `list_h5p_content_types` that the site runs that type at that version, and pick another type or say so if it doesn't; otherwise say it when you hand the package over.
 
 ## Which type
 

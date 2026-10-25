@@ -1,6 +1,6 @@
 {
   "name": "h5p",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
   "author": {
     "name": "Falken's Lab",
@@ -66,20 +66,76 @@
       "help": "Interactive H5P content through h5p-mcp: I build content-only .h5p packages (multiple choice, true/false, fill in the blanks, drag the words, Dialog Cards, Flashcards, Question Set, Course Presentation) on this computer, checked before they're written and in the content's language, with a preview, and read existing ones; my h5p:h5p-packages skill holds how. I upload nothing: in Moodle, moodle-teacher does, and a package plays only where the site has its content type installed.",
       "labels": {
         "list_h5p_types": {
-          "en": { "label": "Looking at the H5P content types", "phrase": ["looked at the H5P types", "looked at the H5P types {n} times"], "result": "H5P types read" },
-          "es": { "label": "Mirando los tipos de contenido H5P", "phrase": ["miró los tipos H5P", "miró los tipos H5P {n} veces"], "result": "Tipos H5P leídos" }
+          "en": {
+            "label": "Looking at the H5P content types",
+            "phrase": [
+              "looked at the H5P types",
+              "looked at the H5P types {n} times"
+            ],
+            "result": "H5P types read"
+          },
+          "es": {
+            "label": "Mirando los tipos de contenido H5P",
+            "phrase": [
+              "miró los tipos H5P",
+              "miró los tipos H5P {n} veces"
+            ],
+            "result": "Tipos H5P leídos"
+          }
         },
         "build_h5p": {
-          "en": { "label": "Building the H5P package \"{title}\"", "phrase": ["built an H5P package", "built {n} H5P packages"], "result": "Package and preview saved on this computer" },
-          "es": { "label": "Creando el paquete H5P «{title}»", "phrase": ["creó un paquete H5P", "creó {n} paquetes H5P"], "result": "Paquete y vista previa guardados en este ordenador" }
+          "en": {
+            "label": "Building the H5P package \"{title}\"",
+            "phrase": [
+              "built an H5P package",
+              "built {n} H5P packages"
+            ],
+            "result": "Package and preview saved on this computer"
+          },
+          "es": {
+            "label": "Creando el paquete H5P «{title}»",
+            "phrase": [
+              "creó un paquete H5P",
+              "creó {n} paquetes H5P"
+            ],
+            "result": "Paquete y vista previa guardados en este ordenador"
+          }
         },
         "read_h5p": {
-          "en": { "label": "Reading an H5P package", "phrase": ["read an H5P package", "read {n} H5P packages"], "result": "Package read" },
-          "es": { "label": "Leyendo un paquete H5P", "phrase": ["leyó un paquete H5P", "leyó {n} paquetes H5P"], "result": "Paquete leído" }
+          "en": {
+            "label": "Reading an H5P package",
+            "phrase": [
+              "read an H5P package",
+              "read {n} H5P packages"
+            ],
+            "result": "Package read"
+          },
+          "es": {
+            "label": "Leyendo un paquete H5P",
+            "phrase": [
+              "leyó un paquete H5P",
+              "leyó {n} paquetes H5P"
+            ],
+            "result": "Paquete leído"
+          }
         },
         "server_info": {
-          "en": { "label": "Reading h5p-mcp's settings", "phrase": ["read its settings", "read its settings {n} times"], "result": "Settings read" },
-          "es": { "label": "Leyendo los ajustes de h5p-mcp", "phrase": ["leyó sus ajustes", "leyó sus ajustes {n} veces"], "result": "Ajustes leídos" }
+          "en": {
+            "label": "Reading h5p-mcp's settings",
+            "phrase": [
+              "read its settings",
+              "read its settings {n} times"
+            ],
+            "result": "Settings read"
+          },
+          "es": {
+            "label": "Leyendo los ajustes de h5p-mcp",
+            "phrase": [
+              "leyó sus ajustes",
+              "leyó sus ajustes {n} veces"
+            ],
+            "result": "Ajustes leídos"
+          }
         }
       }
     }

@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -153,7 +153,8 @@
         "browser_snapshot",
         "browser_wait",
         "server_info",
-        "list_sites"
+        "list_sites",
+        "list_h5p_content_types"
       ],
       "serverConfirmTools": [
         "delete_activity",
@@ -366,6 +367,7 @@
             "set_badge_enabled",
             "award_badge",
             "get_h5p_activity",
+            "list_h5p_content_types",
             "get_choice",
             "get_choice_results",
             "get_survey_results",
@@ -4691,6 +4693,24 @@
               "esperó {n} veces"
             ],
             "result": "Espera terminada"
+          }
+        },
+        "list_h5p_content_types": {
+          "en": {
+            "label": "Checking the site's H5P content types",
+            "phrase": [
+              "checked the H5P types",
+              "checked the H5P types {n} times"
+            ],
+            "result": "H5P content types read"
+          },
+          "es": {
+            "label": "Mirando los tipos H5P del sitio",
+            "phrase": [
+              "miró los tipos H5P",
+              "miró los tipos H5P {n} veces"
+            ],
+            "result": "Tipos H5P del sitio leídos"
           }
         }
       }

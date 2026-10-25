@@ -78,7 +78,7 @@ Cámbialos después con `my-agent extension config moodle-teacher`, en el chat c
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.5.0`, con tus ajustes |
+| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.6.0`, con tus ajustes |
 | 🔎 `read-a-course` | Lo que la persona puede hacer en un curso, su estructura, restricciones, finalización y fechas |
 | 🫥 `publishing` | Lo nuevo, primero oculto, comprobado y luego visible; una aprobación por cada cosa |
 | 📄 `course-content` | Páginas, libros con sus capítulos, archivos, carpetas, enlaces y textos de sección, en un HTML comprobado antes de llegar a Moodle, y el calendario del curso |
