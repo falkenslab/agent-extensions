@@ -7,7 +7,9 @@
 // Errors: a tool named by a capability, a label, readOnlyTools, confirmTools, serverConfirmTools, a skill
 // or a command that its servers don't have; a read-only tool missing from readOnlyTools (once a manifest
 // lists it, the kit stops reading readOnlyHint); a destructive tool in readOnlyTools; a capability's skill
-// with no folder; a tool without a label in an extension that labels its tools. Warnings: an extension that labels none.
+// with no folder; a tool without a label in an extension that labels its tools; a README quoting another
+// version of a pinned server, or whose "What's inside" table leaves out a skill, a command or a subagent, or
+// names one that isn't there. Warnings: an extension that labels none.
 //
 // Usage: node scripts/check-tools.mjs [extension…]   (no dependencies; Node 22)
 import { spawn } from "node:child_process";
@@ -102,7 +104,7 @@ for (const entry of marketplace.plugins) {
   const local = Object.entries(servers).filter(([, server]) => server.type !== "http" && server.type !== "sse");
   if (!local.length) {
     console.log(Object.keys(servers).length ? "  remote server only: not checked against its tools" : "  no MCP server");
-    checked.push({ entry, dir, rel, manifest, kit, tools: null });
+    checked.push({ entry, dir, rel, manifest, kit, servers, tools: null });
     continue;
   }
   const tools = [];
@@ -114,14 +116,60 @@ for (const entry of marketplace.plugins) {
     }
   }
   console.log(`  ${tools.length} tools from ${local.map(([name]) => name).join(", ")}`);
-  checked.push({ entry, dir, rel, manifest, kit, tools, packages: new Set(local.map(([, server]) => packageOf(server))) });
+  checked.push({ entry, dir, rel, manifest, kit, servers, tools, packages: new Set(local.map(([, server]) => packageOf(server))) });
+}
+
+/** The folder names of an extension's skills and the file names of its commands and subagents. */
+function partsOf(dir) {
+  const names = (folder, pick) => (existsSync(path.join(dir, folder)) ? readdirSync(path.join(dir, folder), { withFileTypes: true }).flatMap(pick) : []);
+  return {
+    skills: names("skills", (item) => (item.isDirectory() && existsSync(path.join(dir, "skills", item.name, "SKILL.md")) ? [item.name] : [])),
+    commands: names("commands", (item) => (item.isFile() && item.name.endsWith(".md") ? [item.name.slice(0, -3)] : [])),
+    agents: names("agents", (item) => (item.isFile() && item.name.endsWith(".md") ? [item.name.slice(0, -3)] : [])),
+  };
+}
+
+/**
+ * Its READMEs (README.md and README.<lang>.md): every pinned server version they quote is the one its
+ * .mcp.json runs, and their "What's inside" table (the section whose heading starts with 🧰) lists
+ * every skill, command and subagent, by name in backticks; any other name there is one of its tools or
+ * a file its skills bring (moodle-ui-kit's templates), so a skill that's gone doesn't stay listed.
+ */
+function checkReadmes(dir, rel, servers, tools) {
+  const pinned = Object.values(servers).flatMap((server) => (server.args ?? []).filter((arg) => /^@[^/]+\/[^@]+@\d/.test(arg)).map((arg) => { const at = arg.lastIndexOf("@"); return [arg.slice(0, at), arg.slice(at + 1)]; }));
+  const { skills, commands, agents } = partsOf(dir);
+  const parts = new Set([...skills, ...commands, ...agents]);
+  const filesIn = (folder) => readdirSync(folder, { withFileTypes: true }).flatMap((item) => (item.isDirectory() ? filesIn(path.join(folder, item.name)) : [item.name.replace(/\.[^.]+$/, "")]));
+  const known = new Set([...parts, ...(tools ?? []).map((t) => t.name), ...(existsSync(path.join(dir, "skills")) ? filesIn(path.join(dir, "skills")) : [])]);
+  for (const readme of readdirSync(dir).filter((f) => /^README(\.[a-z]{2})?\.md$/.test(f))) {
+    const text = readFileSync(path.join(dir, readme), "utf8");
+    for (const [pkg, version] of pinned) {
+      for (const [, quoted] of text.matchAll(new RegExp(`${pkg.replace(/[.*+?^${}()|[\]\\/]/g, "\\$&")}@(\\d+\\.\\d+\\.\\d+)`, "g"))) {
+        if (quoted !== version) error(rel(readme), `quotes ${pkg}@${quoted}, but .mcp.json runs ${pkg}@${version}`);
+      }
+    }
+    const lines = text.split("\n");
+    const start = lines.findIndex((line) => line.startsWith("## 🧰"));
+    if (start < 0) {
+      if (parts.size) error(rel(readme), `has no "What's inside" section (## 🧰) listing its skills`);
+      continue;
+    }
+    const end = lines.findIndex((line, i) => i > start && line.startsWith("## "));
+    const listed = new Set();
+    for (const line of lines.slice(start + 1, end < 0 ? undefined : end)) {
+      const first = line.startsWith("|") ? line.split("|")[1] : "";
+      for (const [, name] of first.matchAll(/`\/?(?:[a-z0-9-]+:)?([a-z0-9]+(?:-[a-z0-9]+)*)`/g)) listed.add(name);
+    }
+    for (const part of parts) if (!listed.has(part)) error(rel(readme), `its "What's inside" table leaves out ${part}`);
+    for (const name of listed) if (!known.has(name)) error(rel(readme), `its "What's inside" table names ${name}, which isn't one of its skills, commands, subagents, tools or files`);
+  }
 }
 
 const everyTool = new Set(checked.flatMap((c) => (c.tools ?? []).map((t) => t.name)));
 /** Which packages have a tool, for a skill naming another role's tool of its own server. */
 const toolPackages = new Map();
 for (const c of checked) for (const t of c.tools ?? []) for (const p of c.packages) toolPackages.set(t.name, new Set([...(toolPackages.get(t.name) ?? []), p]));
-for (const { entry, dir, rel, kit, tools, packages } of checked) {
+for (const { entry, dir, rel, kit, servers, tools, packages } of checked) {
   const file = rel(".claude-plugin/plugin.json");
   const header = () => console.log(`\n${entry.name}: checks`);
   header();
@@ -130,6 +178,7 @@ for (const { entry, dir, rel, kit, tools, packages } of checked) {
   for (const capability of kit.capabilities ?? []) {
     for (const skill of capability.skills ?? []) if (!existsSync(path.join(dir, "skills", skill, "SKILL.md"))) error(file, `capability ${capability.id} names skill ${skill}, which has no skills/${skill}/SKILL.md`);
   }
+  checkReadmes(dir, rel, servers, tools);
   if (!tools) {
     if (errors + warnings === before) console.log("  ok");
     continue;
