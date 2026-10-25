@@ -526,12 +526,15 @@ function openDetails(extension) {
   openExtension = extension;
   const dialog = $("details");
   dialog.innerHTML = "";
+  // What scrolls is a box inside the dialog, so the dialog's rounded corners clip its scrollbar too.
+  const scroller = document.createElement("div");
+  scroller.className = "scroll";
   if (extension.banner) {
     const banner = document.createElement("img");
     banner.className = "banner";
     banner.alt = "";
     banner.src = asset(extension.banner);
-    dialog.append(banner);
+    scroller.append(banner);
   }
   const body = document.createElement("div");
   body.className = "body";
@@ -561,7 +564,8 @@ function openDetails(extension) {
   body.append(howto);
   const sheet = techSheet(extension);
   if (sheet) body.append(sheet);
-  dialog.append(body);
+  scroller.append(body);
+  dialog.append(scroller);
   if (!dialog.open) dialog.showModal();
   Promise.all([settingsOf(extension), examplesOf(extension)]).then(([settings, examples]) => {
     if (openExtension !== extension || !howto.isConnected) return;
