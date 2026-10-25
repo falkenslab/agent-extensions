@@ -5,6 +5,8 @@ description: Manage who is in a Moodle course and how they're grouped, with mood
 
 # Participants and groups
 
+These tools change who is in a course: an agent may leave them all out on purpose (miyagi leaves enrolment and groups to the teacher), and then they aren't there. Say so, and say the person does it in Moodle; never look for a way around it, such as the browser.
+
 People come as aliases when moodle-mcp pseudonymizes (the default): pass them back as they came (`users`, `user`, `add`, `remove`), never ask for or guess real names or emails. With names shown, the tools take user ids instead (`userIds`, `userId`, `addIds`, `removeIds`). Role ids come from `list_participants`' roles; never assume `5` is students on every site.
 
 ## Who is in the course

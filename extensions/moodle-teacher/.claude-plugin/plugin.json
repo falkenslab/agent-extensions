@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -731,7 +731,7 @@
           }
         }
       ],
-      "help": "Moodle as a teacher, through moodle-mcp: building your courses (content, assignments, quizzes, forums, other activities, the gradebook, the calendar), who is in them and their groups, grading, following the class, checking a course and what completes it, and copying between your sites; my moodle-teacher:* skills hold how to do each well in Moodle, and my week and to-grade skills are quick looks at what's pending.",
+      "help": "Moodle as a teacher, through moodle-mcp: building your courses (content, assignments, quizzes, forums, other activities, the gradebook, the calendar), who is in them and their groups, grading, following the class, checking a course and what completes it, and copying between your sites; my moodle-teacher:* skills hold how to do each well in Moodle, and my week and to-grade skills are quick looks at what's pending. A tool my skills name may be off in a session: the courses setting (classrooms) turns off messages, notifications, the browser tools and add_site, and an agent may leave others out (miyagi leaves enrolment, groups, messages and resetting or copying courses to the teacher); when one is missing, say so plainly and never look for a way around it.",
       "labels": {
         "list_courses": {
           "en": {

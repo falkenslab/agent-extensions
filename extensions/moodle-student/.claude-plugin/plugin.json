@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -357,7 +357,7 @@
           }
         }
       ],
-      "help": "Moodle as a student, through moodle-mcp: what you have left and when, handing in assignments, quizzes, forums, the other activities, your grades and feedback, and your several sites; my moodle-student:* skills hold how to do each well in Moodle, and my week skill is a quick look at what's due.",
+      "help": "Moodle as a student, through moodle-mcp: what you have left and when, handing in assignments, quizzes, forums, the other activities, your grades and feedback, and your several sites; my moodle-student:* skills hold how to do each well in Moodle, and my week skill is a quick look at what's due. A tool my skills name may be off in a session: the courses setting (classrooms) turns off messages, notifications, opening a SCORM package, the browser tools and add_site, and an agent may leave others out; when one is missing, say so plainly and never look for a way around it.",
       "labels": {
         "list_courses": {
           "en": {
