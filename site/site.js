@@ -59,6 +59,22 @@ const TEXTS = {
     useAgent: "Open your agent's chat and ask, in your own words:",
     noExamples: "Its README has examples of what to ask.",
     remote: (hosts) => `Nothing to install: it works on ${hosts}, where what your agent sends it goes.`,
+    sheet: "Technical sheet",
+    sheetServers: "MCP servers",
+    sheetNoServer: "No MCP server: its skills only.",
+    sheetBundled: "bundled with the extension",
+    sheetRemote: (transport, host) => `remote (${transport}) at ${host}`,
+    sheetCompat: "Works with",
+    sheetKit: (range) => `agent-kit ${range}`,
+    sheetNeeds: (r) => `${r.name}${r.version?.min ? ` ${r.version.min} or later` : ""}, installed apart`,
+    sheetSkills: "Skills",
+    sheetCommands: "Commands",
+    sheetAgents: "Subagents",
+    sheetTools: (n) => `Tools (${n})`,
+    sheetOther: "Other tools",
+    markRead: "Only reads",
+    markAlways: "Always asks for your yes",
+    markServer: "Its server asks for your yes",
     signInClaude: "Sign in with your account: run `/mcp` in Claude Code, pick its server and follow the link.",
     signInCodex: "It signs in to its server with your account; not checked in Codex yet.",
     signInAgent: (name) => `Sign in with your account from the chat: \`/extensions sign-in ${name}\` gives you the link to open. A new session doesn't ask again.`,
@@ -115,6 +131,22 @@ const TEXTS = {
     useAgent: "Abre el chat de tu agente y pide, con tus palabras:",
     noExamples: "Su README tiene ejemplos de qué pedirle.",
     remote: (hosts) => `Nada que instalar: funciona en ${hosts}, adonde va lo que tu agente le envía.`,
+    sheet: "Ficha técnica",
+    sheetServers: "Servidores MCP",
+    sheetNoServer: "Sin servidor MCP: solo sus skills.",
+    sheetBundled: "incluido en la extensión",
+    sheetRemote: (transport, host) => `remoto (${transport}) en ${host}`,
+    sheetCompat: "Funciona con",
+    sheetKit: (range) => `agent-kit ${range}`,
+    sheetNeeds: (r) => `${r.name}${r.version?.min ? ` ${r.version.min} o posterior` : ""}, instalado aparte`,
+    sheetSkills: "Skills",
+    sheetCommands: "Comandos",
+    sheetAgents: "Subagentes",
+    sheetTools: (n) => `Herramientas (${n})`,
+    sheetOther: "Otras herramientas",
+    markRead: "Solo lee",
+    markAlways: "Siempre pide tu sí",
+    markServer: "Su servidor pide tu sí",
     signInClaude: "Inicia sesión con tu cuenta: ejecuta `/mcp` en Claude Code, elige su servidor y sigue el enlace.",
     signInCodex: "Inicia sesión en su servidor con tu cuenta; aún no está probada en Codex.",
     signInAgent: (name) => `Inicia sesión con tu cuenta desde el chat: \`/extensions sign-in ${name}\` te da el enlace que abrir. Una sesión nueva no lo vuelve a pedir.`,
@@ -446,6 +478,50 @@ function howTo(extension, key, data) {
   steps.append(step(t("use"), ...use));
   return [steps];
 }
+// The technical sheet, folded under "Install and use it": what the extension holds, from catalog.json
+// (agent-kit-catalog 0.7: servers, skills, commands, agents, tools, kit).
+const firstSentence = (text) => (text ?? "").split(/(?<=[.!?])\s+(?=Use\b|Úsala\b)/)[0];
+function techSheet(extension) {
+  const { servers = [], skills = [], commands = [], agents = [], tools = [] } = extension;
+  if (!servers.length && !skills.length && !commands.length && !agents.length && !tools.length) return null;
+  const sheet = document.createElement("details");
+  sheet.className = "sheet";
+  const part = (title, html) => `<h4>${escape(title)}</h4>${html}`;
+  const list = (items) => `<ul>${items.join("")}</ul>`;
+  const named = (name, description) => `<li><code>${escape(name)}</code>${description ? `<span>${escape(firstSentence(description))}</span>` : ""}</li>`;
+  const serverLine = (s) => {
+    const what = s.kind === "package" ? `<a href="${escape(s.url)}" target="_blank" rel="noopener"><code>${escape(s.package)}@${escape(s.version)}</code></a>`
+      : s.kind === "bundled" ? escape(t("sheetBundled"))
+      : s.kind === "remote" ? escape(t("sheetRemote")(s.transport, s.host))
+      : `<code>${escape(s.command)}</code>`;
+    return `<li><code>${escape(s.name)}</code><span>${what}</span></li>`;
+  };
+  let html = part(t("sheetServers"), servers.length ? list(servers.map(serverLine)) : `<p>${escape(t("sheetNoServer"))}</p>`);
+  const compat = [extension.kit ? `<li>${escape(t("sheetKit")(extension.kit))}</li>` : "", ...(extension.requirements ?? []).map((r) => `<li>${escape(t("sheetNeeds")(r))}</li>`)].filter(Boolean);
+  if (compat.length) html += part(t("sheetCompat"), list(compat));
+  // Many skills fold, as the tools' groups do.
+  const skillList = list(skills.map((s) => named(s.name, s.description)));
+  if (skills.length) html += skills.length > 5 ? `<details class="group"><summary>${escape(t("sheetSkills"))} <span class="n">${skills.length}</span></summary><div class="tools">${skillList}</div></details>` : part(t("sheetSkills"), skillList);
+  if (commands.length) html += part(t("sheetCommands"), list(commands.map((c) => named(`/${extension.name}:${c.name}`, c.description))));
+  if (agents.length) html += part(t("sheetAgents"), list(agents.map((a) => named(a.name, a.description))));
+  if (tools.length) {
+    const byName = new Map(tools.map((tool) => [tool.name, tool]));
+    const groups = (extension.capabilities ?? []).map((c) => [(c.texts?.[lang] ?? c.texts?.en ?? { label: c.id }).label, (c.tools ?? []).filter((name) => byName.has(name))]);
+    const grouped = new Set(groups.flatMap(([, names]) => names));
+    const others = tools.map((tool) => tool.name).filter((name) => !grouped.has(name));
+    if (others.length) groups.push([t("sheetOther"), others]);
+    const mark = (tool) => [tool.readOnly && ["👁️", t("markRead")], tool.confirm === "always" && ["✋", t("markAlways")], tool.confirm === "server" && ["🛡️", t("markServer")]].filter(Boolean).map(([icon, title]) => `<span class="mark" title="${escape(title)}" aria-label="${escape(title)}">${icon}</span>`).join("");
+    const toolLine = (name) => {
+      const tool = byName.get(name);
+      const label = (tool.labels?.[lang] ?? tool.labels?.en ?? name).replace(/\{\w+\}/g, "…");
+      return `<li>${escape(label)}${mark(tool)}<code>${escape(name)}</code></li>`;
+    };
+    const legend = `<p class="legend">${[["👁️", "markRead"], ["✋", "markAlways"], ["🛡️", "markServer"]].map(([icon, key]) => `${icon} ${escape(t(key))}`).join(" · ")}</p>`;
+    html += part(t("sheetTools")(tools.length), legend + groups.filter(([, names]) => names.length).map(([label, names]) => `<details class="group"><summary>${escape(label)} <span class="n">${names.length}</span></summary><ul class="tools">${names.map(toolLine).join("")}</ul></details>`).join(""));
+  }
+  sheet.innerHTML = `<summary>${escape(t("sheet"))}</summary><div class="content">${html}</div>`;
+  return sheet;
+}
 function openDetails(extension) {
   openExtension = extension;
   const dialog = $("details");
@@ -483,6 +559,8 @@ function openDetails(extension) {
   const draw = () => howto.replaceChildren(clientTabs((key) => howTo(extension, key, data)));
   draw();
   body.append(howto);
+  const sheet = techSheet(extension);
+  if (sheet) body.append(sheet);
   dialog.append(body);
   if (!dialog.open) dialog.showModal();
   Promise.all([settingsOf(extension), examplesOf(extension)]).then(([settings, examples]) => {

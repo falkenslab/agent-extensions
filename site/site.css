@@ -152,6 +152,29 @@ dialog .links svg { width: 20px; height: 20px; }
 .step .content { display: grid; gap: 8px; min-width: 0; justify-items: start; }
 .step p { margin: 0; color: var(--text-2); font-size: 14.5px; }
 .step p code, .settings code, .prompt code { font-family: var(--mono); font-size: 13px; background: var(--code); border: 1px solid var(--line); border-radius: 5px; padding: 0 5px; }
+/* The technical sheet, folded under "Install and use it". */
+.sheet { border: 1px solid var(--line); border-radius: 14px; background: var(--bg-2); }
+.sheet > summary { cursor: pointer; padding: 12px 18px; font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; }
+.sheet > summary:hover { color: var(--accent-hover); }
+.sheet .content { padding: 0 18px 18px; display: grid; gap: 4px; }
+.sheet h4 { margin: 12px 0 6px; font-size: 14px; font-weight: 700; }
+.sheet p { margin: 0; font-size: 14px; color: var(--text-2); }
+.sheet ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.sheet li { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font-size: 14px; min-width: 0; overflow-wrap: anywhere; }
+.sheet li > span { display: block; color: var(--text-2); font-size: 13px; margin-top: 2px; }
+.sheet code { font-family: var(--mono); font-size: 12.5px; }
+.sheet li > code:first-child { font-weight: 700; color: var(--text); }
+.sheet a { text-decoration: none; }
+.sheet .legend { font-size: 12.5px; color: var(--dim); margin-bottom: 6px; }
+.sheet .group { border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+.sheet .group + .group { margin-top: 6px; }
+.sheet .group > summary { cursor: pointer; padding: 8px 12px; font-size: 14px; font-weight: 600; }
+.sheet .group .n { color: var(--dim); font-weight: 500; font-size: 13px; margin-left: 4px; }
+.sheet .tools { padding: 0 10px 10px; gap: 4px; }
+.sheet .tools li { background: var(--bg-2); padding: 6px 10px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.sheet .tools li code { margin-left: auto; color: var(--dim); font-size: 12px; }
+.sheet .mark { font-size: 13px; cursor: help; }
+
 .need { font-size: 14px; color: var(--text); background: var(--accent-soft); border-radius: 10px; padding: 8px 12px; }
 .settings { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; width: 100%; }
 .settings li { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font-size: 14px; }
