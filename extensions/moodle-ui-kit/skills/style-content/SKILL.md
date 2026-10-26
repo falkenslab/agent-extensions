@@ -5,7 +5,7 @@ description: Give what's published in Moodle a clean visual style with moodle-ui
 
 # Styling content for Moodle
 
-Five templates, adapted from noeper's [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit) (CC0): every style is inline, because many Moodle sites (regional education departments' among them) don't allow CSS or theme changes in statements and questions.
+Five templates, adapted from [@noeper](https://github.com/noeper)'s [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit) (CC0): every style is inline, because many Moodle sites (regional education departments' among them) don't allow CSS or theme changes in statements and questions.
 
 ## When
 

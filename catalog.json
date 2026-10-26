@@ -4541,11 +4541,11 @@
     },
     {
       "name": "moodle-ui-kit",
-      "version": "0.2.0",
-      "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
+      "version": "0.1.6",
+      "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on @noeper's moodle-ui-kit.",
       "descriptions": {
-        "en": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on noeper's moodle-ui-kit.",
-        "es": "Un estilo visual limpio para lo que tu agente publica en Moodle: enunciados de tareas, bloques de código, soluciones, preguntas de cuestionario y retroalimentación, con estilos en línea que funcionan en cualquier sitio Moodle. Basado en el moodle-ui-kit de noeper."
+        "en": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on @noeper's moodle-ui-kit.",
+        "es": "Un estilo visual limpio para lo que tu agente publica en Moodle: enunciados de tareas, bloques de código, soluciones, preguntas de cuestionario y retroalimentación, con estilos en línea que funcionan en cualquier sitio Moodle. Basado en el moodle-ui-kit de @noeper."
       },
       "category": "education",
       "topics": [
@@ -4578,11 +4578,11 @@
           "texts": {
             "en": {
               "label": "A visual style for Moodle",
-              "description": "Assignment statements, code blocks, solutions, quiz questions and feedback with inline styles, from noeper's moodle-ui-kit."
+              "description": "Assignment statements, code blocks, solutions, quiz questions and feedback with inline styles, from @noeper's moodle-ui-kit."
             },
             "es": {
               "label": "Un estilo visual para Moodle",
-              "description": "Enunciados de tareas, bloques de código, soluciones, preguntas y retroalimentación con estilos inline, del moodle-ui-kit de noeper."
+              "description": "Enunciados de tareas, bloques de código, soluciones, preguntas y retroalimentación con estilos inline, del moodle-ui-kit de @noeper."
             }
           }
         }

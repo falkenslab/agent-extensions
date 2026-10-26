@@ -12,11 +12,11 @@ Enunciados, código, soluciones y preguntas de cuestionario con estilos inline, 
 ![Moodle 4.5 y 5.x](https://img.shields.io/badge/Moodle-4.5%20%7C%205.x-f98012?logo=moodle&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
-**[🧩 Basado en moodle-ui-kit, de noeper](https://github.com/noeper/moodle-ui-kit)** · [🇬🇧 Read in English](README.md)
+**🧩 Basado en [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), de [@noeper](https://github.com/noeper)** · [🇬🇧 Read in English](README.md)
 
 </div>
 
-Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), o a Claude Code, un estilo visual para Moodle: el enunciado de una tarea con su objetivo y su entregable, bloques de código para copiar, una solución con su explicación, el texto de una pregunta de cuestionario y su retroalimentación. Está basada en [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), el kit que [noeper](https://github.com/noeper) hizo para la docencia en Formación Profesional: todos los estilos son inline, porque muchos sitios Moodle (entre ellos los de las consejerías de educación) no permiten CSS ni cambiar el tema en los enunciados y las preguntas. El agente rellena las plantillas y las publica con [moodle-teacher](../moodle-teacher/README.es.md), primero ocultas y comprobadas; un curso con estilo propio lo conserva.
+Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), o a Claude Code, un estilo visual para Moodle: el enunciado de una tarea con su objetivo y su entregable, bloques de código para copiar, una solución con su explicación, el texto de una pregunta de cuestionario y su retroalimentación. Está basada en [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), el kit que [@noeper](https://github.com/noeper) hizo para la docencia en Formación Profesional: todos los estilos son inline, porque muchos sitios Moodle (entre ellos los de las consejerías de educación) no permiten CSS ni cambiar el tema en los enunciados y las preguntas. El agente rellena las plantillas y las publica con [moodle-teacher](../moodle-teacher/README.es.md), primero ocultas y comprobadas; un curso con estilo propio lo conserva.
 
 ## ✨ Por qué esta extensión
 
@@ -75,17 +75,17 @@ Un cuestionario que un agente creó con moodle-teacher y esta extensión, en la 
 | ❓ `question` | El texto de una pregunta de cuestionario, sobre fondo blanco |
 | 🟢 `question-feedback` | La retroalimentación de una respuesta o de una pregunta |
 
-Las cinco plantillas son las de noeper, adaptadas: encabezados reales en lugar de párrafos en negrita, etiquetas en el idioma del curso y un gris más oscuro en los rótulos pequeños para que se lean bien.
+Las cinco plantillas son las de [@noeper](https://github.com/noeper), adaptadas: encabezados reales en lugar de párrafos en negrita, etiquetas en el idioma del curso y un gris más oscuro en los rótulos pequeños para que se lean bien.
 
 También es un **estilo** para los agentes que escriben sus materiales en Markdown y los exportan con código, como miyagi: `style/` tiene una plantilla por tipo (`page`, `assignment`, `code`, `question`, `feedback`) con `{{marcadores}}` que rellena el exportador (`{{title}}`, `{{body}}`, `{{code}}`, `{{language}}`, `{{label:copy}}`, `{{label:feedback}}`…). Ahí los emojis quedan ocultos para los lectores de pantalla y ninguna plantilla fija una fuente ni un fondo sobre el tema del curso. En miyagi se elige pidiéndolo («usa el estilo moodle-ui-kit»).
 
-## 🙏 Basado en moodle-ui-kit
+## 🙏 Basado en [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit)
 
-Las plantillas vienen de [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), de [noeper](https://github.com/noeper), publicado con licencia CC0 1.0 (uso libre, como quieras). Su [demo](https://noeper.github.io/moodle-ui-kit/) las muestra tal como un docente las copia a mano en Moodle; esta extensión permite que lo haga un agente.
+Las plantillas vienen de [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), de [@noeper](https://github.com/noeper), publicado con licencia CC0 1.0 (uso libre, como quieras). Su [demo](https://noeper.github.io/moodle-ui-kit/) las muestra tal como un docente las copia a mano en Moodle; esta extensión permite que lo haga un agente.
 
 ## 📚 Documentación
 
-- **[moodle-ui-kit de noeper](https://github.com/noeper/moodle-ui-kit)**: el kit original en el que se basa esta extensión.
+- **[moodle-ui-kit](https://github.com/noeper/moodle-ui-kit)**, de [@noeper](https://github.com/noeper): el kit original en el que se basa esta extensión.
 - **[Documentación de moodle-mcp](https://falkenslab.github.io/moodle-mcp/es/)**: el servidor que publica el contenido (a través de moodle-teacher).
 - **[Installing extensions](https://falkenslab.github.io/agent-kit/docs/extensions/installing)** (en inglés): en un agente hecho con agent-kit.
 
