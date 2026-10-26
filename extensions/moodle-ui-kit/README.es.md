@@ -77,6 +77,8 @@ Un cuestionario que un agente creó con moodle-teacher y esta extensión, en la 
 
 Las cinco plantillas son las de noeper, adaptadas: encabezados reales en lugar de párrafos en negrita, etiquetas en el idioma del curso y un gris más oscuro en los rótulos pequeños para que se lean bien.
 
+También es un **estilo** para los agentes que escriben sus materiales en Markdown y los exportan con código, como miyagi: `style/` tiene una plantilla por tipo (`page`, `assignment`, `code`, `question`, `feedback`) con `{{marcadores}}` que rellena el exportador (`{{title}}`, `{{body}}`, `{{code}}`, `{{language}}`, `{{label:copy}}`, `{{label:feedback}}`…). Ahí los emojis quedan ocultos para los lectores de pantalla y ninguna plantilla fija una fuente ni un fondo sobre el tema del curso. En miyagi se elige pidiéndolo («usa el estilo moodle-ui-kit»).
+
 ## 🙏 Basado en moodle-ui-kit
 
 Las plantillas vienen de [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), de [noeper](https://github.com/noeper), publicado con licencia CC0 1.0 (uso libre, como quieras). Su [demo](https://noeper.github.io/moodle-ui-kit/) las muestra tal como un docente las copia a mano en Moodle; esta extensión permite que lo haga un agente.
@@ -89,7 +91,7 @@ Las plantillas vienen de [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit
 
 ## 🛠️ Desarrollo
 
-La extensión es un plugin de Claude Code sin servidor: `.claude-plugin/plugin.json` (los datos de agent-kit en `metadata["agent-kit"]`) y `skills/style-content/`, con las plantillas en su carpeta `templates/`. Para probar un cambio, enlázala en un agente (`my-agent extension add ./extensions/moodle-ui-kit --link`) y compruébala con `claude plugin validate --strict extensions/moodle-ui-kit`. Cómo la ejecuta agent-kit: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
+La extensión es un plugin de Claude Code sin servidor: `.claude-plugin/plugin.json` (los datos de agent-kit en `metadata["agent-kit"]`) y `skills/style-content/`, con las plantillas en su carpeta `templates/`, más `style/` con el mismo aspecto como plantillas que rellena un exportador. Para probar un cambio, enlázala en un agente (`my-agent extension add ./extensions/moodle-ui-kit --link`) y compruébala con `claude plugin validate --strict extensions/moodle-ui-kit`. Cómo la ejecuta agent-kit: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
 
 <div align="center">
 

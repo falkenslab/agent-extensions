@@ -77,6 +77,8 @@ A quiz an agent built with moodle-teacher and this extension, in Moodle's own pr
 
 The five templates are noeper's, adapted: real headings instead of bold paragraphs, labels in the course's language, and a darker grey for the small captions so they read well.
 
+It's also a **style** for agents that write their materials in Markdown and export them by code, like miyagi: `style/` has one template per kind (`page`, `assignment`, `code`, `question`, `feedback`) with `{{placeholders}}` the exporter fills (`{{title}}`, `{{body}}`, `{{code}}`, `{{language}}`, `{{label:copy}}`, `{{label:feedback}}`…). There the emojis are hidden from screen readers and no template sets a font or a background over the course's theme. In miyagi, choose it by asking for it ("usa el estilo moodle-ui-kit").
+
 ## 🙏 Based on moodle-ui-kit
 
 The templates come from [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), by [noeper](https://github.com/noeper), released under CC0 1.0 (free to use however you like). Its [demo](https://noeper.github.io/moodle-ui-kit/) shows them as a teacher copies them into Moodle by hand; this extension lets an agent do it.
@@ -89,7 +91,7 @@ The templates come from [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit)
 
 ## 🛠️ Developing
 
-The extension is a Claude Code plugin with no server: `.claude-plugin/plugin.json` (agent-kit's data in `metadata["agent-kit"]`) and `skills/style-content/`, with the templates in its `templates/` folder. To try a change, link it into an agent (`my-agent extension add ./extensions/moodle-ui-kit --link`), and check it with `claude plugin validate --strict extensions/moodle-ui-kit`. How agent-kit runs it: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
+The extension is a Claude Code plugin with no server: `.claude-plugin/plugin.json` (agent-kit's data in `metadata["agent-kit"]`) and `skills/style-content/`, with the templates in its `templates/` folder, plus `style/` with the same look as templates an exporter fills. To try a change, link it into an agent (`my-agent extension add ./extensions/moodle-ui-kit --link`), and check it with `claude plugin validate --strict extensions/moodle-ui-kit`. How agent-kit runs it: [Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing).
 
 <div align="center">
 
