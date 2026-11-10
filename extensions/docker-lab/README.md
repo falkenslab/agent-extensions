@@ -82,7 +82,7 @@ Change them later with `my-agent extension config docker-lab`, in the chat with 
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `npx -y @falkenslab/docker-mcp@0.2.0`, its 47 tools narrowed by your mode and areas |
+| 🔌 Server | `npx -y @falkenslab/docker-mcp@0.3.0`, its 47 tools narrowed by your mode and areas |
 | 🧪 `try-in-a-lab` | Trying a tool, a service or someone's code in a disposable lab: the image, the lab, the report, the clean-up |
 | 🏗️ `build-a-lab` | A reproducible lab of one or more services: its compose file and check, the safety policy, starting, resetting and stopping it |
 | ✅ `verify-by-running` | Whether code, instructions, a statement and its solution or a submission work, with a verdict and its evidence, and writing a lab's check |

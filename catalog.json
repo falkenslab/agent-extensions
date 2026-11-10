@@ -569,7 +569,7 @@
     },
     {
       "name": "docker-lab",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
       "descriptions": {
         "en": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
@@ -788,7 +788,7 @@
           "name": "docker",
           "kind": "package",
           "package": "@falkenslab/docker-mcp",
-          "version": "0.2.0",
+          "version": "0.3.0",
           "url": "https://www.npmjs.com/package/@falkenslab/docker-mcp"
         }
       ],
