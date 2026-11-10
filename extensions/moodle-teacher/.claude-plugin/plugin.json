@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -178,7 +178,8 @@
         "delete_feedback_item",
         "delete_feedback_template",
         "delete_workshop_example",
-        "remove_site"
+        "remove_site",
+        "save_submission_files"
       ],
       "capabilities": [
         {
@@ -469,6 +470,7 @@
           "tools": [
             "get_rubric",
             "get_submissions",
+            "save_submission_files",
             "grade_submission",
             "grant_extension",
             "set_workflow_state",
@@ -805,6 +807,24 @@
               "leyó entregas {n} veces"
             ],
             "result": "Entregas leídas"
+          }
+        },
+        "save_submission_files": {
+          "en": {
+            "label": "Saving an assignment's submitted files",
+            "phrase": [
+              "saved an assignment's submitted files",
+              "saved {n} assignments' submitted files"
+            ],
+            "result": "Submitted files saved on this computer"
+          },
+          "es": {
+            "label": "Guardando los archivos entregados en una tarea",
+            "phrase": [
+              "guardó los archivos entregados en una tarea",
+              "guardó los archivos entregados en {n} tareas"
+            ],
+            "result": "Archivos entregados guardados en este ordenador"
           }
         },
         "get_rubric": {
