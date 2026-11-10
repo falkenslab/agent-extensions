@@ -12,7 +12,9 @@
         "MOODLE_MCP_HEADLESS": "${user_config.headless}",
         "MOODLE_MCP_ROLE": "teacher",
         "MOODLE_MCP_ACCESS": "${user_config.access}",
-        "MOODLE_MCP_STUDENT_DATA": "${user_config.student_data}"
+        "MOODLE_MCP_STUDENT_DATA": "${user_config.student_data}",
+        "MOODLE_MCP_CHANNEL": "${user_config.browser}",
+        "MOODLE_MCP_SWITCH_AFTER_CRASHES": "${user_config.switch_after_crashes}"
       }
     }
   }

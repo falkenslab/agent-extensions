@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -57,6 +57,18 @@
         "clear"
       ],
       "default": "pseudonymize"
+    },
+    "browser": {
+      "type": "string",
+      "title": "Browser",
+      "description": "Which browser the agent uses for Moodle: msedge, chrome, chromium or firefox (Playwright's own, downloaded the first time). Empty: Edge, else Chrome, whichever is installed.",
+      "default": ""
+    },
+    "switch_after_crashes": {
+      "type": "string",
+      "title": "Change browser after crashes",
+      "description": "After this many browser crashes in a session, the next launch prefers another installed browser, on the same profile. Not when a browser is chosen above. Empty: never.",
+      "default": ""
     }
   },
   "metadata": {

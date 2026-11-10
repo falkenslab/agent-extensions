@@ -54,6 +54,8 @@ Codex también la instala (`codex plugin marketplace add falkenslab/agent-extens
 | `headless` | El navegador trabaja sin verse (se abre una ventana para entrar, o si pides mirar) | sí |
 | `access` | `read`: solo mirar, sin cambiar nada | `write` |
 | `student_data` | `pseudonymize` (alias), `block` (nada) o `clear` (nombres: solo para una IA que funcione en tu propio ordenador) | `pseudonymize` |
+| `browser` | `msedge`, `chrome`, `chromium` o `firefox` (el de Playwright, descargado); para cuando el que elige se cae una y otra vez | Edge, si no Chrome |
+| `switch_after_crashes` | Tras ese número de caídas en una sesión, prueba otro navegador instalado | nunca |
 
 Cámbialos después con `my-agent extension config moodle-teacher`, en el chat con `/extensions config moodle-teacher`, en los ajustes de extensiones de un agente de escritorio o en el `/plugin` de Claude Code. Los sitios que añadas luego pidiéndolo («añade el Moodle de mi universidad») los guarda moodle-mcp, aparte de estos.
 
