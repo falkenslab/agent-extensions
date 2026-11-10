@@ -12,7 +12,7 @@ What the content says is the person's (or comes from wherever the agent's teachi
 | Content | Moodle resource | How |
 | --- | --- | --- |
 | Notes of reasonable length | Page (`page`) | `create_activity` with `content` (HTML) |
-| Long notes in parts | Book (`book`) | `create_activity` creates it empty, then `add_book_chapter` per chapter (HTML `content`, images in `embed`, `subchapter` for a part of the one before); `list_book_chapters` reads them back |
+| Long notes in parts | Book (`book`) | `create_activity` creates it empty, then `add_book_chapter` per chapter (HTML `content`, images in `embed`, `subchapter` for a part of the one before); `list_book_chapters` reads them back. The book numbers its chapters itself (its default numbering): titles without "1.", or they read "1. 1. …" |
 | A document to download (a syllabus, a template, notes as PDF) | File (`resource`), or folder (`folder`) for several | `create_activity` with `files` (absolute local paths; the first is a file resource's main one) |
 | An external reference | URL (`url`) | `create_activity` with `url`, and a `description` saying what to look at and why |
 | A short note between activities on the course page | Text and media area (`label`) | `create_activity` with `content`; no `name` needed |
