@@ -17,6 +17,7 @@ Moodle's current state is the truth: never infer a course's structure, restricti
 
 - `get_course_structure` gives sections and activities with ids, types, visibility and restrictions; `details: true` adds each activity's dates and restriction text as the course page shows them (slower: use it when dates matter).
 - Read section names and summaries first: they often say the section's goal and the order to follow.
+- **The course format** (topics, weeks, or a plugin's: tabs with `onetopic`, tiles with `tiles`, collapsible with `topcoll`, `grid`) is a course setting, `format` in `update_course`'s `settings`. The settings form only accepts the formats the site has installed, so setting one, with the person's yes, is also how to find out it's there; don't tell them it's missing before trying. Changing it keeps the sections and their activities.
 - **Resource or activity.** A page, file, folder, URL, book or label is content to read; an assignment, quiz, forum, workshop or choice expects something from students and is often graded. Don't treat one as the other.
 - **Hidden and stealth.** Hidden activities are invisible to students; stealth ones are off the course page but open by link. A hidden activity may be a draft waiting for the person's yes: don't show it without asking.
 - `get_activity_settings` reads every setting of one activity (dates, submission types, grade, completion, restrictions) with each field's form name: the names `update_activity` takes. `get_activity_content` reads a page's, book's or label's text, or a resource's files.
