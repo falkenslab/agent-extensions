@@ -57,6 +57,8 @@ Codex también la instala (`codex plugin marketplace add falkenslab/agent-extens
 | `browser` | `msedge`, `chrome`, `chromium` o `firefox` (el de Playwright, descargado); para cuando el que elige se cae una y otra vez | Edge, si no Chrome |
 | `switch_after_crashes` | Tras ese número de caídas en una sesión, prueba otro navegador instalado | nunca |
 
+Use el navegador que use, con ventana o sin ella, cada petición dice venir de Google Chrome en Windows (`MOODLE_MCP_USER_AGENT`, fijado en la extensión), como el navegador de un alumno, nunca `HeadlessChrome`.
+
 Cámbialos después con `my-agent extension config moodle-student`, en el chat con `/extensions config moodle-student`, en los ajustes de extensiones de un agente de escritorio o en el `/plugin` de Claude Code.
 
 ## 💬 Qué puedes pedirle
@@ -80,7 +82,7 @@ Cámbialos después con `my-agent extension config moodle-student`, en el chat c
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.9.0`, con las herramientas de alumno y tus ajustes |
+| 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.10.0`, con las herramientas de alumno y tus ajustes |
 | 🔎 `read-a-course` | Secciones, recursos y actividades, qué está bloqueado y por qué, qué cuenta como hecho |
 | 🗓️ `plan-my-work` | Lo que queda, las fechas de entrega y de corte, qué desbloquea qué, en un orden realista |
 | 📤 `hand-in-an-assignment` | Qué admite, guardar, comprobar y enviar definitivamente, la declaración de autoría |

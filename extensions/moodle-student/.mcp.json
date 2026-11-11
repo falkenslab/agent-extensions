@@ -4,7 +4,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@falkenslab/moodle-mcp@0.9.0"
+        "@falkenslab/moodle-mcp@0.10.0"
       ],
       "env": {
         "MOODLE_MCP_SITES": "${user_config.sites}",
@@ -14,7 +14,8 @@
         "MOODLE_MCP_ACCESS": "${user_config.access}",
         "MOODLE_MCP_STUDENT_DATA": "${user_config.student_data}",
         "MOODLE_MCP_CHANNEL": "${user_config.browser}",
-        "MOODLE_MCP_SWITCH_AFTER_CRASHES": "${user_config.switch_after_crashes}"
+        "MOODLE_MCP_SWITCH_AFTER_CRASHES": "${user_config.switch_after_crashes}",
+        "MOODLE_MCP_USER_AGENT": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36"
       }
     }
   }

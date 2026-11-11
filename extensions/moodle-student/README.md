@@ -57,6 +57,8 @@ Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions
 | `browser` | `msedge`, `chrome`, `chromium` or `firefox` (Playwright's, downloaded); for when the one it picks keeps crashing | Edge, else Chrome |
 | `switch_after_crashes` | After that many crashes in a session, it tries another installed browser | never |
 
+Whatever browser it uses, with a window or without, every request says it comes from Google Chrome on Windows (`MOODLE_MCP_USER_AGENT`, fixed in the extension), as a student's browser does, never `HeadlessChrome`.
+
 Change them later with `my-agent extension config moodle-student`, in the chat with `/extensions config moodle-student`, from a desktop agent's extension settings, or in Claude Code's `/plugin`.
 
 ## 💬 What you can ask
@@ -80,7 +82,7 @@ Change them later with `my-agent extension config moodle-student`, in the chat w
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.9.0`, a student's tools, with your settings |
+| 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.10.0`, a student's tools, with your settings |
 | 🔎 `read-a-course` | Sections, resources and activities, what's locked and why, what counts as done |
 | 🗓️ `plan-my-work` | What's left, deadlines and cut-offs, what unlocks what, in a realistic order |
 | 📤 `hand-in-an-assignment` | What it accepts, saving, checking and submitting for good, the statement |

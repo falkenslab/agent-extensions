@@ -17,9 +17,9 @@ How to answer each question is the person's (or comes from wherever the agent's 
 
 ## 2. Answering
 
-1. `start_quiz_attempt` (after the person's yes) returns the attempt id and its questions, with each one's fields and options. `get_quiz_attempt` reads them again, page by page, with the answers saved so far.
+1. `start_quiz_attempt` (after the person's yes) returns the attempt id and the page it opens on: `page`, `pages` (how many there are) and that page's `questions`, with each one's fields and options. The attempt goes page by page, as a person takes it: Moodle logs every page read, so read each one once. `get_quiz_attempt` with `page` (from 0) reads one page with the answers saved so far; without it, the page the attempt is on.
 2. Read each question whole: context text, images and tables above the options often decide the answer.
-3. `answer_quiz_questions` saves answers by slot and field name: an option's **value** for choices and selects (not its label), `"1"` or `"0"` for checkboxes, text for text fields. It doesn't finish the attempt; it returns what was saved: check it.
+3. `answer_quiz_questions` saves answers by slot and field name: an option's **value** for choices and selects (not its label), `"1"` or `"0"` for checkboxes, text for text fields. It doesn't finish the attempt; it returns the next page to answer, or, after the last one, the `summary`: each question's `slot`, `state` and `status`.
 
 | Question type | In Moodle |
 | --- | --- |
@@ -32,7 +32,7 @@ How to answer each question is the person's (or comes from wherever the agent's 
 
 ## 3. Submitting
 
-1. **Check every answer** with `get_quiz_attempt`: no question left blank unless it's optional, each answer the intended one.
+1. **Check every answer** in the `summary` that `answer_quiz_questions` returns after the last page: no question left blank unless it's optional. Go back with `get_quiz_attempt` (`page`) only to a page whose question isn't answered or must change, not to read them all again.
 2. **Ask the person**: after `finish_quiz_attempt` no answer can change.
 3. `finish_quiz_attempt` returns the review when the quiz shows it.
 
