@@ -9,12 +9,12 @@ Check the type is offered first (`get_site_info` with `courseId`), create it hid
 
 ## Workshop: peer assessment
 
-- **Phases**: setup, submission, assessment, grading evaluation, closed. The dates ("open for submissions from", "open for assessment from" and their deadlines) are what open and close each phase for students; with them set, `set_workshop_phase` switching early is harmless, without them it's the only switch. Moodle allocates nothing and computes no grades on its own when the phase changes.
+- **Phases**: setup, submission, assessment, grading evaluation, closed. The dates ("open for submissions from", "open for assessment from" and their deadlines) are what open and close each phase for students; with them set, `set_workshop_phase` switching early is harmless, without them it's the only switch. Moodle allocates nothing and computes no grades on its own when the phase changes. Changing the phase changes what students can do: `set_workshop_phase` only with the person's yes.
 - **Two grades**: one for the submission (from the assessments it received), one for the quality of each student's assessments.
 - **Assessment form**: its strategy (accumulative, comments, number of errors, rubric) is the workshop's setting (`update_activity`); `get_workshop_assessment_form` reads the form and `set_workshop_assessment_form` replaces its aspects, assertions or criteria in order. A rubric's levels take grades from 0 to 100; accumulative takes whole points only, so scale criteria that use halves (×2), the workshop normalizes it. Once there are assessments it's refused unless `evenIfAssessed`, which the server confirms with the person: grades already given stay as they were. Self-assessment is an option.
 - **Allocation**: `allocate_workshop_randomly` (reviews per submission or per reviewer, keeping the current ones, with or without self-assessment, excluding peers of the same group if asked), `schedule_workshop_allocation` to have Moodle do it when the submissions deadline passes (it never runs without one), or by hand with `allocate_workshop_reviewer`. `get_workshop_allocation` shows who reviews what; read it after allocating, and report the problems Moodle lists (not enough reviewers). Allocating gives students work: confirm first.
 - **Teams reviewing teams**: "Separate groups" allocates reviewers from the same group, the opposite of peer review between teams. Use "Visible groups" with "Prevent reviews by peers from the same group".
-- `get_workshop` shows the phase, submissions and assessments; `assess_workshop_submission` assesses as the person.
+- `get_workshop` shows the phase, submissions and assessments; `assess_workshop_submission` assesses as the person: only the assessment they approved.
 
 ## Book, lesson, glossary, wiki, database, feedback
 
@@ -24,7 +24,7 @@ Check the type is offered first (`get_site_info` with `courseId`), create it hid
 - **Lesson**: add every page first with `add_lesson_page` (content pages with their buttons, question pages with answers, responses, scores and jumps, clusters and branch ends), then set the jumps that point forward with `edit_lesson_page`, since a jump to a page that doesn't exist yet is refused. `get_lesson_pages` reads the whole lesson: walk every path with it, since a branch with no end blocks the student.
 - **Glossary**: entries approved before they show (`set_glossary_entry_approved`), auto-linking of terms across the course; `add_glossary_entry`, categories, and `import_glossary` and `export_glossary` to reuse one.
 - **Wiki**: collaborative (one per group with group mode) or individual; `create_wiki_page` and `edit_wiki_page` to seed it.
-- **Database**: fields first (`add_database_field`, or a preset: `list_database_presets`, then `apply_database_preset`, which deletes fields it doesn't have, with their content), then its templates (`set_database_template`: list, single, add form, search; `[[field]]` and `##tag##`), before opening it to students. `list_database_entries` and `set_database_entry_approved` once they post.
+- **Database**: fields first (`add_database_field`, or a preset: `list_database_presets`, then `apply_database_preset`, which deletes fields it doesn't have, with their content; the server asks the person first), then its templates (`set_database_template`: list, single, add form, search; `[[field]]` and `##tag##`), before opening it to students. `list_database_entries` and `set_database_entry_approved` once they post.
 - **Feedback**: its questions with `add_feedback_item`, `edit_feedback_item` and `move_feedback_item`, or a saved template (`list_feedback_templates`, `use_feedback_template`).
 
 ## Forums as activities

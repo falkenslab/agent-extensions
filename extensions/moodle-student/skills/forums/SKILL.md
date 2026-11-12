@@ -27,7 +27,7 @@ What to say is the person's (or comes from the agent's study knowledge); this sk
 ## After posting
 
 - `edit_post` changes the person's own post, only within the site's editing time (usually 30 minutes); after that, a correction is a new reply.
-- `delete_post` deletes it (and its replies): only the person's own, while Moodle allows it.
+- `delete_post` deletes it (and its replies): only the person's own, while Moodle allows it. The server asks the person first.
 - `set_discussion_subscription`: whether Moodle emails the person new posts in a thread, useful to know when the question is answered.
 - `rate`: a rating on a post, when the forum uses ratings.
 

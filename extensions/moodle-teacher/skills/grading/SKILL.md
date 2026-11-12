@@ -22,7 +22,7 @@ The person grades; you prepare. Nothing is saved without their yes, submission b
 - **Students see grades at once** unless the assignment uses the marking workflow: `notify: false` only skips the notification. Say so before saving.
 - **Group submissions**: `applyToGroup: true` gives the whole group the same grade and feedback; grade once, not member by member.
 - **No submission after the deadline**: `grade_submission` works without one. Whether it's a 0 or left alone is the person's policy: ask, and don't leave it silently ungraded (it looks like "not reviewed yet").
-- **Late work and extensions**: `get_submissions` shows the dates; `grant_extension` gives more time. Penalties are the person's decision: point them out, never apply them on your own.
+- **Late work and extensions**: `get_submissions` shows the dates; `grant_extension` gives more time, with the person's yes. Penalties are the person's decision: point them out, never apply them on your own.
 - **A rubric's levels are fixed points**; a marking guide takes any score up to each criterion's maximum. When a level covers a range in the person's criteria, agree the rule the first time it applies and keep it for every submission.
 - **Feedback files** (an annotated PDF): `feedbackFiles`, as an extra to the written feedback, never instead of it.
 - **Marking workflow**: with it on, grades stay hidden until released. `workflowState` in `grade_submission`, or `set_workflow_state` for several at once; "released" shows students their grades: only when the person says. `allocate_marker` for several markers.

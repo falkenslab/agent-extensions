@@ -12,7 +12,7 @@ moodle-mcp knows several sites; one is active, and every tool works on it.
 - `list_sites` lists them: name, address, which one is active, and where each came from (the extension's settings, or added later).
 - When the person means another site, `use_site` with its name, and say which site you're on now. Don't switch without saying it: a course id means another course on another site.
 - `add_site` adds one (its address; any page of it works): the person is asked for it in a form when the app can show one. The first time on a site, `login` opens a window where they log in themselves.
-- `remove_site` forgets a site added later, with its signed-in session. Sites from the extension's settings are changed there, not here.
+- `remove_site` forgets a site added later, with its signed-in session; the server asks the person first. Sites from the extension's settings are changed there, not here.
 
 ## Copying between sites
 

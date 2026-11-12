@@ -68,7 +68,7 @@ An **Offline Quiz** (a plugin, printed and answered on paper) takes its question
 
 ## 4. Changing a quiz with attempts
 
-Look first: `get_quiz_results`. With no attempts, anything can change. With attempts, Moodle refuses to add or remove questions and to reorder them; marks can change (it regrades). Never change what a question asks or which answer is right after students were graded on it: propose a new question, or a manual regrade the person decides. Individual extra time or attempts: `set_quiz_override`.
+Look first: `get_quiz_results`. With no attempts, anything can change. With attempts, Moodle refuses to add or remove questions and to reorder them; marks can change (it regrades). Never change what a question asks or which answer is right after students were graded on it: propose a new question, or a manual regrade the person decides. Individual extra time or attempts: `set_quiz_override`, with the person's yes.
 
 ## 5. Preview
 

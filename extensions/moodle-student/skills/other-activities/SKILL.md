@@ -17,11 +17,11 @@ Read each one before acting (its own `get_*` tool), say what's final, and act on
 
 ## Lesson
 
-`get_lesson_page` reads the page the person is on (starting the lesson the first time): a content page with its buttons, a question with its fields, or the end with the score. `answer_lesson_page` presses a button (by label or position) or answers a question's fields. Answers count toward the lesson's grade and can't be taken back: each question page's answer is the person's decision. Reaching the end ends the attempt.
+`get_lesson_page` reads the page the person is on (the first time, it starts the lesson, which may count as an attempt: say so and wait for their yes): a content page with its buttons, a question with its fields, or the end with the score. `answer_lesson_page` presses a button (by label or position) or answers a question's fields. Answers count toward the lesson's grade and can't be taken back: each question page's answer is the person's decision. Reaching the end ends the attempt.
 
 ## SCORM and H5P
 
-- **SCORM**: `get_scorm` (attempts allowed and made, grading, each part's status and score), then `open_scorm` opens it in Moodle's player (it starts an attempt) and the `browser_*` tools work inside it. Afterwards `get_scorm` again: only what Moodle recorded counts, never assume it.
+- **SCORM**: `get_scorm` (attempts allowed and made, grading, each part's status and score), then `open_scorm` opens it in Moodle's player; it starts an attempt, which may be one of few allowed, so only with the person's yes and the `browser_*` tools work inside it. Afterwards `get_scorm` again: only what Moodle recorded counts, never assume it.
 - **H5P**: `get_h5p_activity` gives its type and the person's attempts and scores; the content runs in a player, so solving it needs the `browser_*` tools, after saying so.
 
 ## Workshop: submitting, and assessing classmates
@@ -36,7 +36,7 @@ What the person writes here, the rest of the course reads, under their name: sho
 
 - **Glossary**: `list_glossary_entries` first, so a concept isn't added twice; `add_glossary_entry` with the concept, its definition (HTML) and aliases. Where the glossary asks for approval, it shows once a teacher approves it.
 - **Wiki**: `list_wiki_pages` and `get_wiki_page` to read it; `create_wiki_page` (a subwiki's first page must have the wiki's first page title; `[[Title]]` links to another page) and `edit_wiki_page`, the whole page or one section, as a new version. Editing refuses while someone else has the page open: try later. In a collaborative wiki, change only what the person means to.
-- **Database**: `list_database_entries` shows the entries and the fields' names; `add_database_entry` with a value per field, and local files for file and picture fields; `edit_database_entry` and `delete_database_entry` for the person's own.
+- **Database**: `list_database_entries` shows the entries and the fields' names; `add_database_entry` with a value per field, and local files for file and picture fields; `edit_database_entry` and `delete_database_entry` for the person's own (the server asks before deleting).
 
 ## Badges
 
@@ -44,4 +44,4 @@ What the person writes here, the rest of the course reads, under their name: sho
 
 ## Marking as done
 
-`set_completion` marks an activity with manual completion done (or not done), as its button does. Activities that complete on their own (viewing, submitting, a grade) can't be marked: Moodle says so. Mark only what the person has really done.
+`set_completion` marks an activity with manual completion done (or not done), as its button does. Activities that complete on their own (viewing, submitting, a grade) can't be marked: Moodle says so. Mark only what the person has really done, and with their yes.
