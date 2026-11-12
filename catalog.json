@@ -8,6 +8,214 @@
   },
   "extensions": [
     {
+      "name": "anki",
+      "version": "0.1.0",
+      "description": "Anki decks: flashcards (question and answer, both ways, or fill the gap) with tags, images and audio as an .apkg; exported again, it updates the cards instead of duplicating them.",
+      "descriptions": {
+        "en": "Anki decks: flashcards (question and answer, both ways, or fill the gap) with tags, images and audio as an .apkg; exported again, it updates the cards instead of duplicating them.",
+        "es": "Mazos de Anki desde tu agente: tarjetas (pregunta y respuesta, en los dos sentidos o rellenar el hueco) con etiquetas, imágenes y audio, escritas como un .apkg en tu ordenador que Anki, AnkiDroid y AnkiMobile importan; si se exporta otra vez, actualiza las tarjetas en vez de duplicarlas, y la exportación de un mazo que ya existe puede recibir más."
+      },
+      "category": "education",
+      "topics": [
+        "anki",
+        "flashcards",
+        "apkg",
+        "decks",
+        "cloze",
+        "study",
+        "mcp",
+        "padawan",
+        "miyagi",
+        "learning",
+        "teaching",
+        "education"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/anki",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/anki/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/anki/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/anki/README.es.md"
+      },
+      "install": {
+        "claudeCode": "claude plugin install anki@falkenslab",
+        "agentKit": "extension add anki@falkenslab"
+      },
+      "capabilities": [
+        {
+          "id": "anki-export",
+          "skills": [
+            "anki-decks"
+          ],
+          "tools": [
+            "write_deck",
+            "add_to_deck",
+            "read_deck",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Anki decks",
+              "description": "Flashcards as an Anki deck ready to import: question and answer, both ways or fill the gap, with tags, images and audio. Exported again, it updates the cards instead of duplicating them, and an existing deck's export can take more."
+            },
+            "es": {
+              "label": "Mazos de Anki",
+              "description": "Tarjetas como un mazo de Anki listo para importar: pregunta y respuesta, en los dos sentidos o rellenar el hueco, con etiquetas, imágenes y audio. Si se exporta otra vez, actualiza las tarjetas en vez de duplicarlas, y la exportación de un mazo que ya existe puede recibir más."
+            }
+          }
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/anki/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/anki/assets/banner.svg",
+      "servers": [
+        {
+          "name": "anki",
+          "kind": "bundled",
+          "command": "node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+        }
+      ],
+      "skills": [
+        {
+          "name": "anki-decks",
+          "description": "Write Anki flashcard decks as .apkg files with the anki server - basic, both-ways and cloze cards, one fact each, with tags, images and audio, subdecks with ::, saved on this computer for the person to import into Anki, AnkiDroid or AnkiMobile - and re-export or add to a deck so its notes update instead of duplicating; read an existing .apkg. Use when the person asks for Anki cards or a deck, flashcards to import into Anki, an .apkg, or to look inside or extend one."
+        }
+      ],
+      "tools": [
+        {
+          "name": "add_to_deck",
+          "labels": {
+            "en": "Adding cards to an Anki deck",
+            "es": "Añadiendo tarjetas a un mazo de Anki"
+          }
+        },
+        {
+          "name": "read_deck",
+          "labels": {
+            "en": "Reading an Anki deck",
+            "es": "Leyendo un mazo de Anki"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "server_info",
+          "labels": {
+            "en": "Reading the anki server's settings",
+            "es": "Leyendo los ajustes del servidor anki"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "write_deck",
+          "labels": {
+            "en": "Writing the Anki deck \"{deck}\"",
+            "es": "Creando el mazo de Anki «{deck}»"
+          }
+        }
+      ],
+      "kit": ">=0.22.0"
+    },
+    {
+      "name": "calendar",
+      "version": "0.1.0",
+      "description": "Calendar files: events, deadlines and plans as an .ics file that Google Calendar, Outlook and Apple Calendar import, with time zones, all-day events, repetitions and reminders.",
+      "descriptions": {
+        "en": "Calendar files: events, deadlines and plans as an .ics file that Google Calendar, Outlook and Apple Calendar import, with time zones, all-day events, repetitions and reminders.",
+        "es": "Archivos de calendario para tu agente: eventos, entregas y planes como un archivo .ics (iCalendar) que importan Google Calendar, Outlook y Calendario de Apple, con tu zona horaria, eventos de todo el día, repeticiones y avisos, escritos en tu ordenador y leídos de vuelta."
+      },
+      "category": "education",
+      "topics": [
+        "calendar",
+        "ics",
+        "icalendar",
+        "events",
+        "reminders",
+        "mcp",
+        "miyagi",
+        "padawan",
+        "planning",
+        "teaching",
+        "learning",
+        "education"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/calendar",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/calendar/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/calendar/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/calendar/README.es.md"
+      },
+      "install": {
+        "claudeCode": "claude plugin install calendar@falkenslab",
+        "agentKit": "extension add calendar@falkenslab"
+      },
+      "capabilities": [
+        {
+          "id": "calendar-export",
+          "skills": [
+            "calendar-files"
+          ],
+          "tools": [
+            "write_ics",
+            "read_ics",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Calendar files",
+              "description": "Your dates, deadlines and plans as an .ics file to import into Google Calendar, Outlook or Apple Calendar, in your time zone, with repetitions and reminders; and what an .ics file holds, read back."
+            },
+            "es": {
+              "label": "Archivos de calendario",
+              "description": "Tus fechas, entregas y planes como un archivo .ics para importar en Google Calendar, Outlook o Calendario de Apple, en tu zona horaria, con repeticiones y avisos; y lo que tiene un archivo .ics, leído de vuelta."
+            }
+          }
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/calendar/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/calendar/assets/banner.svg",
+      "servers": [
+        {
+          "name": "calendar",
+          "kind": "bundled",
+          "command": "node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+        }
+      ],
+      "skills": [
+        {
+          "name": "calendar-files",
+          "description": "Write events as an iCalendar (.ics) file with the calendar server - timed events in the person's time zone, all-day events, repetitions with exceptions, reminders - that Google Calendar, Outlook or Apple Calendar import; read an .ics back to check it or to show what one holds; and tell the person how to import it. Use when the person asks to put dates, deadlines, sessions or a plan into their calendar, for an .ics or iCalendar file, or to look inside one."
+        }
+      ],
+      "tools": [
+        {
+          "name": "read_ics",
+          "labels": {
+            "en": "Reading a calendar file",
+            "es": "Leyendo un archivo de calendario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "server_info",
+          "labels": {
+            "en": "Reading the calendar server's version",
+            "es": "Leyendo la versión del servidor de calendario"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "write_ics",
+          "labels": {
+            "en": "Writing a calendar file",
+            "es": "Escribiendo un archivo de calendario"
+          }
+        }
+      ],
+      "kit": ">=0.22.0"
+    },
+    {
       "name": "canva",
       "version": "0.2.3",
       "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
@@ -1179,6 +1387,113 @@
         }
       ],
       "kit": ">=0.23.0"
+    },
+    {
+      "name": "documents",
+      "version": "0.1.0",
+      "description": "Word documents in your school's template: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, then read back to check it.",
+      "descriptions": {
+        "en": "Word documents in your school's template: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, then read back to check it.",
+        "es": "Documentos Word con la plantilla de tu centro para tu agente: un .docx escrito desde Markdown con los estilos de la plantilla, conservando su encabezado, su pie y su logo y rellenando sus campos, en tu ordenador, y leído después para comprobarlo."
+      },
+      "category": "education",
+      "topics": [
+        "documents",
+        "docx",
+        "word",
+        "templates",
+        "reports",
+        "office",
+        "mcp",
+        "miyagi",
+        "teaching",
+        "education"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/documents",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/documents/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/documents/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/documents/README.es.md"
+      },
+      "install": {
+        "claudeCode": "claude plugin install documents@falkenslab",
+        "agentKit": "extension add documents@falkenslab"
+      },
+      "capabilities": [
+        {
+          "id": "documents-write",
+          "skills": [
+            "docx-from-template"
+          ],
+          "tools": [
+            "read_template",
+            "write_docx",
+            "read_docx",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Word documents from your template",
+              "description": "Reports and documents as a .docx in your school's template: its headings, lists, tables and fonts, its header, footer and logo, and its fields filled in, ready to open and review in Word or LibreOffice."
+            },
+            "es": {
+              "label": "Documentos Word con tu plantilla",
+              "description": "Informes y documentos como un .docx con la plantilla de tu centro: sus títulos, listas, tablas y letras, su encabezado, su pie y su logo, y sus campos rellenos, listos para abrirlos y revisarlos en Word o LibreOffice."
+            }
+          }
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/documents/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/documents/assets/banner.svg",
+      "servers": [
+        {
+          "name": "documents",
+          "kind": "bundled",
+          "command": "node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+        }
+      ],
+      "skills": [
+        {
+          "name": "docx-from-template",
+          "description": "Write a Word document (.docx) in the person's template with the documents server - read the template's styles, placeholders and content marker first, write the content as Markdown that maps onto those styles, fill the placeholders, size the images, save it where it belongs without overwriting, and read it back to check it before the person opens it in Word or LibreOffice. Use when the person asks for a .docx, a Word document, or a document in their school's (or company's) template, or when another skill needs a document written in a template."
+        }
+      ],
+      "tools": [
+        {
+          "name": "read_docx",
+          "labels": {
+            "en": "Reading a Word document",
+            "es": "Leyendo un documento de Word"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "read_template",
+          "labels": {
+            "en": "Reading the Word template",
+            "es": "Leyendo la plantilla de Word"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "server_info",
+          "labels": {
+            "en": "Reading the documents server's details",
+            "es": "Leyendo los datos del servidor de documentos"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "write_docx",
+          "labels": {
+            "en": "Writing the Word document",
+            "es": "Escribiendo el documento de Word"
+          }
+        }
+      ],
+      "kit": ">=0.22.0"
     },
     {
       "name": "h5p",

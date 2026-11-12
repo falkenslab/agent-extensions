@@ -51,6 +51,52 @@
       ]
     },
     {
+      "name": "documents",
+      "source": "./extensions/documents",
+      "description": "Word documents in your school's template: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, then read back to check it.",
+      "version": "0.1.0",
+      "category": "education",
+      "tags": [
+        "documents",
+        "docx",
+        "word",
+        "templates",
+        "teaching",
+        "miyagi"
+      ]
+    },
+    {
+      "name": "calendar",
+      "source": "./extensions/calendar",
+      "description": "Calendar files: events, deadlines and plans as an .ics file that Google Calendar, Outlook and Apple Calendar import, with time zones, all-day events, repetitions and reminders.",
+      "version": "0.1.0",
+      "category": "education",
+      "tags": [
+        "calendar",
+        "ics",
+        "planning",
+        "teaching",
+        "learning",
+        "miyagi",
+        "padawan"
+      ]
+    },
+    {
+      "name": "anki",
+      "source": "./extensions/anki",
+      "description": "Anki decks: flashcards (question and answer, both ways, or fill the gap) with tags, images and audio as an .apkg; exported again, it updates the cards instead of duplicating them.",
+      "version": "0.1.0",
+      "category": "education",
+      "tags": [
+        "anki",
+        "flashcards",
+        "learning",
+        "teaching",
+        "padawan",
+        "miyagi"
+      ]
+    },
+    {
       "name": "weather",
       "source": "./extensions/weather",
       "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
