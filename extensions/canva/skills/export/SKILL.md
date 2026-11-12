@@ -12,10 +12,10 @@ description: Export the person's Canva designs through Canva's official MCP serv
    - **PPTX** for slides the person will edit in PowerPoint or Google Slides (some effects and fonts change on the way);
    - **MP4** for a video or an animated presentation, **GIF** for a short loop;
    - **CSV** for a design's data.
-3. **`export-design`** doesn't change the design: it generates a file and gives a download link. Exporting needs no yes, but say what will be exported (which pages, which format).
+3. **`export-design`** doesn't change the design: it generates a file and gives a download link. It only reads, so it doesn't wait for a yes; say what will be exported (which pages, which format).
 
 ## After exporting
 
-- **The download link expires**: download the file right away, to where the person said, and give them the file's path, not only the link. To publish it elsewhere (a course in Moodle with moodle-teacher, an email), use that file.
+- **The download link expires**: Canva's server doesn't download it. With a tool of your own that saves a URL to a file, save it right away where the person said and give them the path; without one, give them the link and say it expires soon. To publish it elsewhere (a course in Moodle with moodle-teacher, an email), use that file.
 - **On a Free plan** the export is standard quality; Pro and above get Pro quality.
 - **`license_required`** means the design has premium elements the plan doesn't cover: say which, and offer to replace them with free ones (`edit-design`, see `designs`) before exporting again.

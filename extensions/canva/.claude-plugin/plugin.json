@@ -1,6 +1,6 @@
 {
   "name": "canva",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
   "author": {
     "name": "Falken's Lab",
@@ -224,7 +224,8 @@
         "get-create-design-async-job",
         "get-generate-image-job",
         "get-separate-image-layers-job",
-        "get-motion-import-job-status"
+        "get-motion-import-job-status",
+        "export-design"
       ],
       "confirmTools": [
         "merge-designs",

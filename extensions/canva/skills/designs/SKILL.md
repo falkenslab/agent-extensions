@@ -24,7 +24,7 @@ Asking which format, style or option they want is never that yes, nor is the per
 ## Finding
 
 - **A design**: `search-designs` (theirs and the ones shared with them); `search-folders` and `list-folder-items` to look in a folder. A `canva.link` link the person pastes goes through `resolve-shortlink` first.
-- **What it holds**: `read-design` gives its texts, pages, thumbnails, presenter notes and data. Read it before editing, exporting or describing it, never guess its content. Don't open an editing session from it (`open_transaction`) just to look.
+- **What it holds**: `read-design` gives its texts, pages, thumbnails, presenter notes and data. Read it before editing, exporting or describing it, never guess its content. Don't start an edit (`edit-design`) just to look.
 - **How do I… in Canva**: `help` answers from Canva's Help Center; use it rather than guessing how a Canva feature works.
 
 ## Creating
@@ -40,6 +40,7 @@ Asking which format, style or option they want is never that yes, nor is the per
 - **`edit-design`** changes texts, images, shapes, pages and notes, and saves or discards the changes. Read the design first, say exactly what will change (which page, which text, from what to what), and save only after the person's yes; when unsure, discard.
 - **`merge-designs`** joins designs and inserts, moves or deletes pages. Deleting pages is permanent: name the pages and ask first.
 - **Folders**: `create-folder` and `move-item-to-folder` to keep their designs tidy, when they ask.
+- **Sharing**: no tool shares a design or changes who can see it. The person does it in Canva (Share), or shares the exported file.
 
 ## Comments
 
