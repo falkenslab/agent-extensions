@@ -33,9 +33,9 @@ Then `list_labs` shows it with its check.
 
 1. **`lab_up`**, after telling the person what it will run (its services and images). If refused, fix each problem listed; never look for a way around the policy.
 2. **`lab_status`** for its services and their state; **`lab_logs`** (a `service`, a `tail`) when one isn't up.
-3. **`lab_exec`** to work inside a service, the command as a list (`["sh", "-c", "…"]`): a command that only reads needs no confirmation, one that changes the lab does. What changes inside a container is lost on a reset; what changes in the lab's folder stays.
+3. **`lab_exec`** to work inside a service, the command as a list (`["sh", "-c", "…"]`): say what the command does before calling it; the session asks before each one (it can't tell a command that only reads), so don't add a question of your own. What changes inside a container is lost on a reset; what changes in the lab's folder stays.
 4. **`lab_check`** to see whether it works (`verify-by-running`).
 5. **`lab_reset`** back to a clean start when something is broken: its containers and volumes go, its folder's files stay. docker-mcp asks the person itself first: say what will be lost before calling it.
 6. **`lab_down`** when done, to free the computer: the same loss as a reset, and the same question from docker-mcp.
 
-In lab mode these tools are all there is: if the person asks for something else with Docker, say that the extension is in lab mode and which mode would allow it.
+In lab mode only labs run, and the read tools (`list_containers`, `container_logs`, `list_images`, `docker_info`…) see only the labs' containers: if the person asks for something else with Docker, say that the extension is in lab mode and which mode would allow it.

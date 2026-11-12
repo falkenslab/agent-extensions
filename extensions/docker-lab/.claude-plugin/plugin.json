@@ -1,6 +1,6 @@
 {
   "name": "docker-lab",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
   "author": {
     "name": "Falken's Lab",
@@ -112,7 +112,7 @@
             },
             "es": {
               "label": "Contenedores",
-              "description": "Arrancar, inspeccionar, seguir, medir y limpiar contenedores, preguntando antes de lo peligroso."
+              "description": "Arrancar, inspeccionar, ver los registros, medir y limpiar contenedores, preguntando antes de lo peligroso."
             }
           }
         },
@@ -207,7 +207,8 @@
             "lab_up",
             "lab_exec",
             "lab_reset",
-            "lab_down"
+            "lab_down",
+            "lab_check"
           ],
           "texts": {
             "en": {
@@ -216,7 +217,7 @@
             },
             "es": {
               "label": "Laboratorio de software",
-              "description": "Ejecutar y probar herramientas, servicios y código ajeno en laboratorios aislados, sin instalar nada en tu ordenador: sin internet, sin montar el equipo, con límites."
+              "description": "Ejecutar y probar herramientas, servicios y código ajeno en laboratorios aislados, sin instalar nada en tu ordenador: sin internet, sin acceso a tus carpetas, con límites."
             }
           }
         },
@@ -257,9 +258,17 @@
           },
           "install": {
             "windows": "winget install Docker.DockerDesktop",
-            "macos": "brew install --cask docker",
+            "macos": "brew install --cask docker-desktop",
             "url": "https://docs.docker.com/get-started/get-docker/"
-          }
+          },
+          "for": [
+            "docker-containers",
+            "docker-images",
+            "docker-compose",
+            "docker-system",
+            "sandbox",
+            "run-and-verify"
+          ]
         }
       ],
       "readOnlyTools": [

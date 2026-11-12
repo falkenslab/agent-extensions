@@ -17,7 +17,7 @@ Reading code or instructions says what they should do; running them says what th
 ## How
 
 1. Put what's verified in the lab's folder: the code, the starting files, the solution, each in its own subfolder so runs don't mix.
-2. **`lab_up`** after the person's yes, then run each step with **`lab_exec`** (a `timeoutSeconds` that fits), or **`lab_check`** when the lab has a check.
+2. **`lab_up`** (say what it starts and let the session's question be the yes), then run each step with **`lab_exec`** (a `timeoutSeconds` that fits), or **`lab_check`** when the lab has a check.
 3. Watch the services too: `lab_status` and `lab_logs` say whether a failure is the thing verified or the lab around it.
 
 ## The verdict
