@@ -1,6 +1,6 @@
 ---
 name: course-content
-description: Put learning content into a Moodle course with moodle-mcp - choose the resource (page, book, file, folder, URL, text and media area, section summary), write it as HTML Moodle keeps, embed images and upload files, and edit existing content without breaking it. Use whenever notes, documents, links or section texts go into Moodle or change there; activities have their own skills.
+description: Put learning content into a Moodle course with moodle-mcp - choose the resource (page, book, file, folder, URL, text and media area, section summary), write it as HTML Moodle keeps, embed images and upload files, edit or duplicate existing content without breaking it, and the course calendar's events. Use whenever notes, documents, links or section texts go into Moodle or change there, or a course event is added, changed or listed; activities have their own skills.
 ---
 
 # Content in Moodle
@@ -34,6 +34,8 @@ Check the type is offered in this course first (`get_site_info` with `courseId`)
 1. Read it first: `get_activity_content` for the text, `get_activity_settings` for the rest (a resource's or folder's files are listed there by path).
 2. Change only what's needed: `update_activity` changes only what you give (`content`, `description`, `name`, `url`, `files` to add, remove or replace). Keep the person's wording when a correction does.
 3. Read it back and say what changed and why.
+
+To start from an existing resource or activity, `duplicate_activity` copies it right after itself, with its settings and content but no participants' data, and returns the copy's id; it changes the course, so with the person's yes. Rename the copy and edit it as above; a copy of a visible activity may be visible: check and hide it while it's a draft (see `publishing`).
 
 ## The course calendar
 

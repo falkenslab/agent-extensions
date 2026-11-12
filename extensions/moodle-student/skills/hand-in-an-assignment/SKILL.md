@@ -18,7 +18,7 @@ What the work says is the person's (or comes from wherever the agent's study kno
 
 ## 2. Saving
 
-`save_submission` with `onlineText` (HTML; it **replaces** what was there, so send the whole text) and/or `files` (absolute local paths; they're added to what's there). Saving changes the submission: confirm with the person first. It returns the assignment as Moodle now has it: check the text and the files are there.
+`save_submission` with `onlineText` (HTML; it **replaces** what was there, so send the whole text; check it first with `validate_html`, which reports tags left open and what Moodle's cleaning will remove) and/or `files` (absolute local paths; they're added to what's there). Saving changes the submission: confirm with the person first. It returns the assignment as Moodle now has it: check the text and the files are there.
 
 If the assignment doesn't ask students to click submit, saving **is** handing it in: the teacher can see it and grade it from then on. Say so before saving.
 
@@ -33,6 +33,6 @@ When the assignment asks students to submit:
 
 ## Afterwards
 
-- Grade and feedback come back in `get_assignment` (and in `get_my_grades`); feedback files with `download_file`.
+- Grade and feedback come back in `get_assignment` (and in `get_my_grades`); feedback files with `download_file`, which only takes them with names in clear (see `read-a-course`): otherwise the person opens them in Moodle.
 - A reopened submission (resubmission after feedback) is saved and submitted again the same way; the earlier one stays as a previous attempt.
 - More time is the teacher's to grant: suggest writing to them (`send_message`) instead of looking for a way around a closed assignment.

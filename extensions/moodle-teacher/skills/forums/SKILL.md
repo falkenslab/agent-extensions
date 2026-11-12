@@ -1,6 +1,6 @@
 ---
 name: forums
-description: Work a Moodle course's forums with moodle-mcp - find what's unanswered, read whole threads, reply or post announcements exactly once, edit or delete a post, pin and lock discussions, subscriptions, ratings and messages to several participants. Use whenever reading, answering or posting in a Moodle forum, or writing to the class.
+description: Work a Moodle course's forums and messages with moodle-mcp - find what's unanswered, read whole threads, reply or post announcements exactly once, edit or delete a post, pin and lock discussions, subscriptions, ratings, private messages to a student and their replies, and messages to several participants. Use whenever reading, answering or posting in a Moodle forum, writing to a student or to the class, or reading Moodle messages.
 ---
 
 # Forums in Moodle
@@ -22,7 +22,13 @@ Whether to step in and what to say is the person's call (or comes from the agent
 
 ## Announcements
 
-An announcement reaches everyone, usually by email too. It goes in the course's announcements forum; if the course has none, say so and offer to bring it back rather than posting in a discussion forum: it's the course's own news forum, which Moodle creates when the course's "Number of announcements" is above 0 (`update_course` with `settings: {"newsitems": 5}`). `create_activity` can't make one: its forum comes out as a general one where students can post. One subject each; a deadline or a change in the first sentence. For one student's situation, a private message (`send_message`, its text approved by the person), not an announcement. `message_participants` writes to several at once (by role, by group, or those inactive since a date); confirm the recipients and the text.
+An announcement reaches everyone, usually by email too. It goes in the course's announcements forum; if the course has none, say so and offer to bring it back rather than posting in a discussion forum: it's the course's own news forum, which Moodle creates when the course's "Number of announcements" is above 0 (`update_course` with `settings: {"newsitems": 5}`). `create_activity` can't make one: its forum comes out as a general one where students can post.
+
+## Private messages
+
+- `send_message` writes to one person privately, its text and recipient approved by the person; no aliases in the text. `message_participants` writes to several at once (by role, by group, or those inactive since a date); confirm the recipients and the text.
+- `list_conversations` lists the person's conversations, latest first, with their members (aliases while the server pseudonymizes), unread count and last message; `get_conversation` reads one, a page at a time from the newest. Read the conversation before replying in it.
+- Check before any retry, as with posts: `get_conversation` shows whether a message that failed was sent.
 
 ## Moderating
 
@@ -35,4 +41,4 @@ An announcement reaches everyone, usually by email too. It goes in the course's 
 ## Good practice
 
 - Plain HTML in messages: paragraphs, lists, `<pre><code>` for code. Moodle shows it as written.
-- Several threads circling the same question point at the course, not at the students: tell the person, without names.
+- When several threads ask the same question, tell the person which, without names.

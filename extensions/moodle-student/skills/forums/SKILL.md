@@ -20,7 +20,7 @@ What to say is the person's (or comes from the agent's study knowledge); this sk
 
 ## Posting, once
 
-1. **The text first, approved**: show the person exactly what will be posted and where (which forum, or which post it answers).
+1. **The text first, approved**: show the person exactly what will be posted and where (which forum, or which post it answers). Check its HTML with `validate_html` (with the same `embed`) before posting.
 2. **Post it**: `create_discussion` (a new thread) or `reply_to_post` (to a post, by its id). Images in `embed`, files in `files`.
 3. **Check before any retry**: the tool returns the new post's id. If it fails or times out, `get_discussion` first, and retry once only if the post isn't there.
 

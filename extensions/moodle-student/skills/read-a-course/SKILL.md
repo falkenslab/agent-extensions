@@ -7,6 +7,16 @@ description: Read a Moodle course as a student with moodle-mcp - its sections, r
 
 Moodle's current state is the truth: never infer what a course holds, when something opens or what counts as done from an activity's name or from memory. Read what the task needs, and stop there.
 
+## Getting started and recovering
+
+- **The session**: when a tool reports a missing or expired session, call `login`: it opens a window at the site's login page where the person logs in themselves (the server never sees their password), and returns who is logged in. `logout` ends Moodle's session so another account can log in, only when the person asks.
+- **Watching**: `show_browser` shows the browser so the person can watch the tools work, and hides it again; only when they ask.
+- **Diagnosing**: `server_info` gives the server's version and its effective configuration (the active site, the role, read-only access, the student data level, the browser) and where each setting came from. When a tool or a setting seems missing, read it there before anything else, and tell the person what limits it: widening it is theirs, in the extension's settings.
+- **After a crash or a lost call**: when a write fails, times out or the browser crashes, read back whether it landed (the submission, the answer, the post) before retrying, and retry once only if it isn't there. The `browser` setting chooses the browser, and `switch_after_crashes` has the server move to another installed browser after that many crashes in a session: suggest them to the person when the browser keeps crashing.
+- **No tool for the task**: the `browser_*` tools work in Moodle's pages as the person. Use them only where no moodle-mcp tool covers the task (a SCORM or H5P player, a page no tool reads), after saying which task and getting the person's yes, and read the result back with the regular tools. Never to get around a restriction, a closed activity, what the server refuses or what pseudonymization hides.
+
+**Other people's data.** The `student_data` setting decides how classmates and teachers reach the agent: `pseudonymize` (the default) gives each person a stable alias (`A-…`) per site, redacts their names in texts, and takes aliases back in tools; `block` removes the tools on others' data; `clear` gives names, only for a model that runs on the person's own computer. The agent can tighten it with `configure`, never loosen it. Aliases belong to a site: the same alias on two sites isn't the same person; never try to find out who one is. What can't be pseudonymized only works with names in clear: `download_file` of a file that belongs to someone's work (a submission's or feedback file, the person's own included, a forum attachment, a database or glossary entry's file), and browser screenshots; the `browser_*` tools also refuse pages that list people while the server pseudonymizes. Teachers' files (a resource, a folder, an assignment's brief) always download. The person's own name stays visible.
+
 ## The course
 
 - `list_courses` gives the person's courses (`classification`: in progress, future, past) and, where Moodle tracks it, their progress.
@@ -27,7 +37,7 @@ Moodle's current state is the truth: never infer what a course holds, when somet
 
 ## What changed
 
-`get_course_updates` (since a date) shows what's new in the course's activities; `list_notifications` what Moodle told the person. Useful at the start of a session.
+`get_course_updates` (since a date) shows what's new in the course's activities; `list_notifications` what Moodle told the person. Useful at the start of a session. `mark_notifications_read` marks them all read, only when the person asks.
 
 ## Good practice
 

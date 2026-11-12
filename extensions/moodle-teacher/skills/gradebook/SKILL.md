@@ -1,6 +1,6 @@
 ---
 name: gradebook
-description: Set up and check a Moodle course's gradebook with moodle-mcp so the final grade is computed as the person's grading scheme says - categories, aggregation, weights, each activity's maximum grade, manual grade items, overrides, and the grader report - decided before the first graded activity rather than repaired after the last. Use when a course's weights or grading scheme are set up, changed or checked, when graded activities are created, or when grades are exported.
+description: Set up and check a Moodle course's gradebook with moodle-mcp so the final grade is computed as the person's grading scheme says - categories, aggregation, weights, each activity's maximum grade, manual grade items, overrides, scales and grade letters, and the grader report - decided before the first graded activity rather than repaired after the last. Use when a course's weights or grading scheme are set up, changed or checked, when graded activities are created, or when grades are exported or imported from a spreadsheet.
 ---
 
 # The gradebook
@@ -37,5 +37,16 @@ The person's grading scheme (a 10 % quiz, a 40 % project, units by weight) is on
 
 - `set_grade` sets a manual item's grade, or **overrides** an activity's or a category's; an overridden grade no longer follows the activity until `override: false`. Prefer grading in the activity (see `grading`).
 - `excluded` leaves a grade out of the totals (an excused absence), when the person says.
-- `export_grades` saves a spreadsheet, CSV or XML; it names every participant, so it's only available with student data in clear.
-- Deleting a category moves its items to the parent and loses its total's grades; a manual item's deletion loses its grades. Both can't be undone.
+- `export_grades` saves a spreadsheet, CSV or XML; it names every participant, so it only works with names in clear.
+- `import_grades` brings grades from a local CSV, as Moodle's CSV import does: `mapFrom` is the column that identifies each person and `mapTo` what it holds (user id, username, ID number or email), `items` which grade item (from `get_gradebook_setup`) each other column goes into, `feedback` which item's feedback. Always `preview: true` first and show the person how Moodle reads the file; then import on their yes, since students see the grades. Moodle imports all or nothing. The file identifies people, so it only works with names in clear; otherwise grades go one by one with `set_grade`.
+
+## Scales and grade letters
+
+- `list_scales`: the course's scales and the site's standard ones, with their values and whether something grades with them. `add_scale` adds one (values from the lowest to the highest, no commas in them); `edit_scale` changes its name, values or description, but a scale something grades with keeps its values. Both with the person's yes.
+- `get_grade_letters`: the course's letters from the highest boundary down (its own, or the site's). `set_grade_letters` sets the course's own, each from its minimum percent; `useDefaults` goes back to the site's. It changes how grades show to students: with the person's yes.
+
+## Deleting
+
+- `delete_grade_category` moves what the category held into its parent and deletes its total's grades; the course's own category can't go.
+- `delete_grade_item` deletes a manual item with every grade in it; an activity's item goes only with its activity.
+- Neither can be undone: say what goes before calling it, and the server asks the person itself.

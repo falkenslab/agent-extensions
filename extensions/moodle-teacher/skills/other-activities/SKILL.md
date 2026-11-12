@@ -1,63 +1,75 @@
 ---
 name: other-activities
-description: Set up Moodle's other activities with moodle-mcp so they behave as intended - workshop (peer assessment), its phases and its assessment form, lesson, glossary, wiki, database, forum types and whole-forum grading, choice, feedback survey, questionnaire, board, attendance, H5P, SCORM - and the pieces that connect activities - completion, access restrictions, groups and groupings, badges. Use when a course needs something other than a resource, an assignment or a quiz, or when activities must unlock, track or group.
+description: Build Moodle's other activities with moodle-mcp and fill their insides - book chapters, lesson pages and jumps, glossary entries and categories, wiki pages, database fields, templates and entries, feedback and questionnaire questions, choice options and results, board columns, H5P packages, and forum types as activities. Use when a course needs one of these activities or its contents change; workshops, attendance and assignments, quizzes and SCORM have their own skills.
 ---
 
-# Other activities, and what connects them
+# Other activities
 
-Check the type is offered first (`get_site_info` with `courseId`), create it hidden (`create_activity`), learn its form's field names from `get_activity_settings` on one like it, and follow the `publishing` skill. Every activity's description says what to do, how, by when and how it's assessed.
+Check the type is offered first (`get_site_info` with `courseId`), create it hidden (`create_activity`), learn its form's field names from `get_activity_settings` on one like it, and follow the `publishing` skill. `create_activity` creates these activities empty; their insides have their own tools below. Build them hidden, read them back with the tool named for each, and show them with the person's yes. Workshops are the `workshop` skill, attendance the `attendance` skill, and what connects activities (completion, restrictions, groupings, badges) the `completion-and-restrictions` skill.
 
-## Workshop: peer assessment
+## Book
 
-- **Phases**: setup, submission, assessment, grading evaluation, closed. The dates ("open for submissions from", "open for assessment from" and their deadlines) are what open and close each phase for students; with them set, `set_workshop_phase` switching early is harmless, without them it's the only switch. Moodle allocates nothing and computes no grades on its own when the phase changes. Changing the phase changes what students can do: `set_workshop_phase` only with the person's yes.
-- **Two grades**: one for the submission (from the assessments it received), one for the quality of each student's assessments.
-- **Assessment form**: its strategy (accumulative, comments, number of errors, rubric) is the workshop's setting (`update_activity`); `get_workshop_assessment_form` reads the form and `set_workshop_assessment_form` replaces its aspects, assertions or criteria in order. A rubric's levels take grades from 0 to 100; accumulative takes whole points only, so scale criteria that use halves (×2), the workshop normalizes it. Once there are assessments it's refused unless `evenIfAssessed`, which the server confirms with the person: grades already given stay as they were. Self-assessment is an option.
-- **Allocation**: `allocate_workshop_randomly` (reviews per submission or per reviewer, keeping the current ones, with or without self-assessment, excluding peers of the same group if asked), `schedule_workshop_allocation` to have Moodle do it when the submissions deadline passes (it never runs without one), or by hand with `allocate_workshop_reviewer`. `get_workshop_allocation` shows who reviews what; read it after allocating, and report the problems Moodle lists (not enough reviewers). Allocating gives students work: confirm first.
-- **Teams reviewing teams**: "Separate groups" allocates reviewers from the same group, the opposite of peer review between teams. Use "Visible groups" with "Prevent reviews by peers from the same group".
-- `get_workshop` shows the phase, submissions and assessments; `assess_workshop_submission` assesses as the person: only the assessment they approved.
+- `add_book_chapter` (title, HTML content with its images in `embed`, subchapter or not, hidden while not ready), `edit_book_chapter`, `move_book_chapter`, `set_book_chapter_visibility`.
+- `delete_book_chapter` deletes a chapter with its files, and a chapter's subchapters with it: say what goes, and the server asks the person itself.
+- `list_book_chapters` reads them back in order. The book numbers its chapters itself: titles without "1.".
 
-## Book, lesson, glossary, wiki, database, feedback
+## Lesson
 
-`create_activity` creates them empty; their insides have their own tools. Plan them with the person, build them hidden, and read them back before showing them.
+- Add every page first with `add_lesson_page` (content pages with their buttons, question pages with answers, responses, scores and jumps, clusters and branch ends), then set the jumps that point forward with `edit_lesson_page`, since a jump to a page that doesn't exist yet is refused.
+- `move_lesson_page` moves a page after another (0: first): jumps by page id still lead to the same pages; "next page" and "previous page" follow the new order.
+- `delete_lesson_page` deletes a page and leaves other pages' jumps to it as Moodle leaves them; the server asks the person itself. Check those jumps afterwards.
+- `get_lesson_pages` reads the whole lesson back: walk every path with it, since a branch with no end blocks the student.
 
-- **Book**: `add_book_chapter` (title, HTML content with its images in `embed`, subchapter or not, hidden while not ready), `edit_book_chapter`, `move_book_chapter`, `set_book_chapter_visibility`; `list_book_chapters` reads them in order.
-- **Lesson**: add every page first with `add_lesson_page` (content pages with their buttons, question pages with answers, responses, scores and jumps, clusters and branch ends), then set the jumps that point forward with `edit_lesson_page`, since a jump to a page that doesn't exist yet is refused. `get_lesson_pages` reads the whole lesson: walk every path with it, since a branch with no end blocks the student.
-- **Glossary**: entries approved before they show (`set_glossary_entry_approved`), auto-linking of terms across the course; `add_glossary_entry`, categories, and `import_glossary` and `export_glossary` to reuse one.
-- **Wiki**: collaborative (one per group with group mode) or individual; `create_wiki_page` and `edit_wiki_page` to seed it.
-- **Database**: fields first (`add_database_field`, or a preset: `list_database_presets`, then `apply_database_preset`, which deletes fields it doesn't have, with their content; the server asks the person first), then its templates (`set_database_template`: list, single, add form, search; `[[field]]` and `##tag##`), before opening it to students. `list_database_entries` and `set_database_entry_approved` once they post.
-- **Feedback**: its questions with `add_feedback_item`, `edit_feedback_item` and `move_feedback_item`, or a saved template (`list_feedback_templates`, `use_feedback_template`).
+## Glossary
+
+- Entries: `add_glossary_entry`, `edit_glossary_entry`, `delete_glossary_entry` (the server asks the person itself); where the glossary needs approval, they show once approved (`set_glossary_entry_approved`). `list_glossary_entries` reads them back (`pending` for those waiting for approval).
+- Categories: `list_glossary_categories` gives their ids, which entries take; `add_glossary_category` adds one (with `autoLink`, Moodle links its name across the course).
+- Reuse: `export_glossary` saves the approved entries as Moodle's XML, which `import_glossary` brings into another glossary as the person's own entries. The export holds what participants wrote as is: only with names in clear.
+- Auto-linking of entries across the course is a glossary setting (`update_activity`).
+
+## Wiki
+
+Collaborative (one per group with group mode) or individual, a setting of the wiki. `create_wiki_page` and `edit_wiki_page` seed it (`[[Title]]` links to another page; a subwiki's first page has the wiki's first page title); `list_wiki_pages` and `get_wiki_page` read it back.
+
+## Database
+
+- **Fields first**: `add_database_field`, `edit_database_field` (its type can't change; renaming renames its tag in the templates), `delete_database_field` (what every entry has in it goes too; the server asks the person itself). Or a preset: `list_database_presets`, then `apply_database_preset`, which deletes the fields it doesn't have, with their content; the server asks the person first. `get_database_fields` reads them back.
+- **Then its templates**: `set_database_template` (list, single, add form, search; `[[field]]` and `##tag##`), before opening it to students. `get_database_templates` reads what was saved, or Moodle's default.
+- **Entries**: `list_database_entries`, `add_database_entry`, `edit_database_entry`, `delete_database_entry` (the server asks the person itself), and `set_database_entry_approved` where it needs approval.
+- **Import and export**: `import_database_entries` adds entries from a local CSV with the fields' names as headers, with the person's yes; `export_database_entries` saves them to a CSV, which holds what participants wrote as is: only with names in clear.
+
+## Feedback
+
+- Questions: `add_feedback_item`, `edit_feedback_item`, `move_feedback_item`, `delete_feedback_item` (with the answers given to it; the server asks the person itself). `get_feedback_items` reads them back in order.
+- Templates: `list_feedback_templates` and `use_feedback_template` to start from one; `save_feedback_template` saves this one's questions as a template (the course's, or public with a manager's rights), with the person's yes; `delete_feedback_template` deletes one, and the server asks the person itself.
+- "Anonymous" is a setting: with it, the responses (`get_survey_results`) don't say who gave them.
+
+## Choice
+
+One question with options (`update_activity` with the fields from `get_activity_settings`). "Allow choice to be updated" lets students change their answer; a limit per option closes it once that many chose it; publishing results decides what students see of each other's answers. `get_choice` reads it, and `get_choice_results` the responses (see `class-progress`).
+
+## Questionnaire and board
+
+Two activities that come from plugins: they exist only where the site has them installed (`create_activity` says so when it isn't).
+
+- **Questionnaire**: like feedback, with more question types. `get_questionnaire_questions` reads them; `add_questionnaire_questions` adds after those there, in order: yes/no, text, essay, radio, check, drop, rate, date, numeric, label, and `pagebreak` between pages. Once someone has answered, adding is refused unless `evenWithResponses` (the server asks the person): their responses stay without the new questions.
+- **Board**: notes in columns. A new board comes with three columns all titled "Heading": right after `create_activity`, `set_board_columns` with the person's titles. `add_board_column`, `edit_board_column` and `remove_board_column` for one; renaming keeps a column's notes, and a column with notes is removed only with `deleteNotes`, which the server confirms: its notes, comments and ratings go for good. `get_board_columns` reads them back, with how many notes each has.
+
+## H5P
+
+An `.h5p` package (the person's, or one another extension built for them) becomes an H5P activity with `create_activity`, `type: "h5pactivity"` and the package as the only path in `files`, hidden as always; its settings (attempts tracked, grade, which attempt counts) come from `get_activity_settings` on one like it. A package without its libraries plays only where the site has its content type: `list_h5p_content_types` (with the course) lists the ones it can run, each with its main library and version, and whether the person may install new ones; check it before a package is built, and its main library and version against the package's. Once created, `get_h5p_activity` says the content type Moodle read, and opening it shows whether it plays. If the site lacks the type, say so and that an administrator installs it (Moodle also downloads them); never look for a way around it.
 
 ## Forums as activities
 
-| Forum type | For |
+| Forum type | What Moodle does |
 | --- | --- |
-| Standard forum for general use | Open discussion, questions |
-| Q and A forum | Everyone posts before seeing the others' answers |
-| Each person posts one discussion | Everyone presents their work, others comment |
-| A single simple discussion | One focused debate |
+| Standard forum for general use | Anyone starts discussions and replies |
+| Q and A forum | A student sees the others' replies only after posting their own |
+| Each person posts one discussion | Each student starts exactly one discussion; anyone replies |
+| A single simple discussion | One discussion, set by the teacher; students only reply |
 
-Graded participation: "Whole forum grading" (points or a scale), graded with `grade_forum_user` (see `grading`). Group mode for team forums. Running a forum day to day is the `forums` skill.
+Graded participation is "Whole forum grading" (points or a scale), graded with `grade_forum_user` (see `grading`); group mode gives each group its own discussions. Running a forum day to day is the `forums` skill.
 
-## Choice, feedback, H5P, SCORM
+## SCORM
 
-- **Choice**: one question with a purpose (sides for a debate, a project topic); "allow choice to be updated" if they may change their mind; a limit per option to balance groups.
-- **Feedback** (survey): no right answers; "anonymous" when honesty matters more than follow-up.
-- **H5P**: an `.h5p` package (the person's, or one another extension built for them) becomes an H5P activity with `create_activity`, `type: "h5pactivity"` and the package as the only path in `files`, hidden as always; its settings (attempts tracked, grade, which attempt counts) come from `get_activity_settings` on one like it. A package without its libraries plays only where the site has its content type: **`list_h5p_content_types`** (with the course) lists the ones it can run, each with its main library and version, and whether the person may install new ones; check it before a package is built, and its main library and version against the package's. Once created, `get_h5p_activity` says the content type Moodle read, and opening it shows whether it plays. If the site lacks the type, say so and that an administrator installs it (Moodle also downloads them); never look for a way around it.
-- **SCORM**: the `scorm` skill.
-
-## Questionnaire, board, attendance
-
-Three activities that come from plugins: they exist only where the site has them installed (`create_activity` says so when it hasn't).
-
-- **Questionnaire**: like feedback, with more question types. `get_questionnaire_questions` reads them; `add_questionnaire_questions` adds after those there, in order: yes/no, text, essay, radio, check, drop, rate, date, numeric, label, and `pagebreak` between pages. Once someone has answered, adding is refused unless `evenWithResponses` (the server asks the person): their responses stay without the new questions.
-- **Board**: notes in columns. A new board comes with three columns all titled "Heading": right after `create_activity`, `set_board_columns` with the person's titles. `add_board_column`, `edit_board_column` and `remove_board_column` for one; renaming keeps a column's notes, and a column with notes is removed only with `deleteNotes`, which the server confirms: its notes, comments and ratings go for good.
-- **Attendance**: sessions, then attendance taken in each. `add_attendance_sessions` adds one, or a weekly series on given weekdays until a date (`repeatOn`, `repeatUntil`, `repeatEveryWeeks`), one per group with `groupIds`; `list_attendance_sessions`, `edit_attendance_session`, and `delete_attendance_session`, which the server confirms. To take it: `get_session_attendance` gives the session's statuses and who's in it, `take_attendance` sets a status per student (and remarks) and leaves the rest as they were; every mark is checked before any is saved. Students appear as aliases while the server pseudonymizes, and remarks that name one are refused. `get_attendance_report` gives each student's counts and percentage over the sessions taken, which is what Moodle grades. Taking attendance is the person's: never mark anyone without their word for each.
-
-## What connects activities
-
-- **Completion** (`completion` in `create_activity` and `update_activity`): `manual`, or `conditions` (view, receive a grade, a passing grade, submit). The course must track completion: if it doesn't, `update_course` turns it on, with the person's yes.
-- **Restrictions** (`restrictions`): conditions by `date`, by another activity's `completion` or `grade` (percent), by `group`; `match` all or any; `hidden` while unmet, or shown greyed with the conditions. Say in the section summary what unlocks what, or students think content is missing. `edit_section` restricts a whole section.
-- **Groups and groupings**: create them before the activities that use them (`create_group`, `set_group_members`, `create_grouping`, `set_grouping_groups`). Separate groups hide other teams' work; visible groups show it.
-- **Badges**: draft with the person what it certifies and its criterion, then `create_badge` (name, plain-text description and a local PNG, JPEG or GIF image of 256 KB at most; it starts disabled), `set_badge_criteria` (activities completed, the course completed with a minimum grade, or awarded by hand by some roles) and, last, `set_badge_enabled`. Enabling it awards it at once to everyone who already meets it, and they're told; criteria can't change after that while anyone has it, so check them first. `award_badge` awards a manual one.
-
-After setting them up, walk every path with the person: what a locked activity says, each branch, each phase.
+The `scorm` skill.

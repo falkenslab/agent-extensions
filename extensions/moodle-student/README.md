@@ -84,14 +84,14 @@ Change them later with `my-agent extension config moodle-student`, in the chat w
 | --- | --- |
 | 🔌 Server | `npx -y @falkenslab/moodle-mcp@0.11.0`, a student's tools, with your settings |
 | 🔎 `read-a-course` | Sections, resources and activities, what's locked and why, what counts as done |
-| 🗓️ `plan-my-work` | What's left, deadlines and cut-offs, what unlocks what, in a realistic order |
+| 🗓️ `plan-my-work` | Everything left, deadlines and cut-offs, what unlocks what, in order of dates and dependencies |
 | 📤 `hand-in-an-assignment` | What it accepts, saving, checking and submitting for good, the statement |
 | 📝 `take-a-quiz` | Rules before starting, answering each question type, submitting, the review |
 | 💬 `forums` | Reading threads, asking where it belongs, posting exactly once, writing to the teacher |
 | 🧩 `other-activities` | Choices, surveys, lessons, SCORM, H5P, workshops (submitting and assessing peers), glossary, wiki and database entries, badges and manual completion |
 | 📊 `grades-and-feedback` | The grade report, each activity's feedback, and what's still to be graded |
 | 🌐 `several-sites` | Adding and switching sites, kept apart |
-| 📅 `week` | What you have to do this week, in order (in Claude Code, also `/moodle-student:week`) |
+| 📅 `week` | A quick look at what you have to do this week (in Claude Code, also `/moodle-student:week`) |
 
 ## 📚 Documentation
 

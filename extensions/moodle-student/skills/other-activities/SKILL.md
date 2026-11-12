@@ -26,7 +26,7 @@ Read each one before acting (its own `get_*` tool), say what's final, and act on
 
 ## Workshop: submitting, and assessing classmates
 
-In the submission phase, `save_workshop_submission` adds or changes the person's work (a title, HTML text with images in `embed`, attached files), within the workshop's dates; `get_workshop_submission` reads it back. Reviewers will read it: confirm first.
+In the submission phase, `save_workshop_submission` adds or changes the person's work (a title, HTML text with images in `embed`, attached files), within the workshop's dates; check the HTML first with `validate_html` (with the same `embed`), and `get_workshop_submission` reads it back. Reviewers will read it: confirm first.
 
 In the assessment phase, `assess_workshop_submission` assesses an allocated classmate's work through the workshop's form: a grade and comment per criterion, in the form's order, and overall feedback. The author reads it: confirm the assessment with the person. Feedback has no aliases in it.
 
@@ -34,7 +34,7 @@ In the assessment phase, `assess_workshop_submission` assesses an allocated clas
 
 What the person writes here, the rest of the course reads, under their name: show it and confirm before saving.
 
-- **Glossary**: `list_glossary_entries` first, so a concept isn't added twice; `add_glossary_entry` with the concept, its definition (HTML) and aliases. Where the glossary asks for approval, it shows once a teacher approves it.
+- **Glossary**: `list_glossary_entries` first, so a concept isn't added twice; `add_glossary_entry` with the concept, its definition (HTML) and aliases, and categories from `list_glossary_categories`. Where the glossary asks for approval, it shows once a teacher approves it. `edit_glossary_entry` changes the person's own entry (only what's given) and `delete_glossary_entry` deletes it with its files (the server asks the person first), both only while the site's editing time lasts.
 - **Wiki**: `list_wiki_pages` and `get_wiki_page` to read it; `create_wiki_page` (a subwiki's first page must have the wiki's first page title; `[[Title]]` links to another page) and `edit_wiki_page`, the whole page or one section, as a new version. Editing refuses while someone else has the page open: try later. In a collaborative wiki, change only what the person means to.
 - **Database**: `list_database_entries` shows the entries and the fields' names; `add_database_entry` with a value per field, and local files for file and picture fields; `edit_database_entry` and `delete_database_entry` for the person's own (the server asks before deleting).
 

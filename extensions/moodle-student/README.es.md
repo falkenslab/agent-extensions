@@ -84,14 +84,14 @@ Cámbialos después con `my-agent extension config moodle-student`, en el chat c
 | --- | --- |
 | 🔌 Servidor | `npx -y @falkenslab/moodle-mcp@0.11.0`, con las herramientas de alumno y tus ajustes |
 | 🔎 `read-a-course` | Secciones, recursos y actividades, qué está bloqueado y por qué, qué cuenta como hecho |
-| 🗓️ `plan-my-work` | Lo que queda, las fechas de entrega y de corte, qué desbloquea qué, en un orden realista |
+| 🗓️ `plan-my-work` | Todo lo que queda, las fechas de entrega y de corte, qué desbloquea qué, en orden de fechas y dependencias |
 | 📤 `hand-in-an-assignment` | Qué admite, guardar, comprobar y enviar definitivamente, la declaración de autoría |
 | 📝 `take-a-quiz` | Las reglas antes de empezar, responder cada tipo de pregunta, enviar, la revisión |
 | 💬 `forums` | Leer los hilos, preguntar donde corresponde, publicar una sola vez, escribir al docente |
 | 🧩 `other-activities` | Consultas, encuestas, lecciones, SCORM, H5P, talleres (entregar y evaluar a compañeros), entradas de glosario, wiki y base de datos, insignias y finalización manual |
 | 📊 `grades-and-feedback` | El informe de calificaciones, la retroalimentación de cada actividad y lo que falta por corregir |
-| 🌐 `several-sites` | Añadir sitios y cambiar de uno a otro, por separado |
-| 📅 `week` | Lo que tienes que hacer esta semana, en orden (en Claude Code, también `/moodle-student:week`) |
+| 🌐 `several-sites` | Añadir sitios y cambiar de uno a otro, cada uno con sus cursos aparte |
+| 📅 `week` | Un vistazo rápido a lo que tienes que hacer esta semana (en Claude Code, también `/moodle-student:week`) |
 
 ## 📚 Documentación
 

@@ -86,11 +86,14 @@ Cámbialos después con `my-agent extension config moodle-teacher`, en el chat c
 | 📄 `course-content` | Páginas, libros con sus capítulos, archivos, carpetas, enlaces y textos de sección, en un HTML comprobado antes de llegar a Moodle, y el calendario del curso |
 | 📤 `assignments` | Ajustes de entrega que encajan con el enunciado, fechas, grupos, retroalimentación, y su rúbrica o guía de calificación |
 | 📝 `quizzes` | Ajustes según el propósito del cuestionario, GIFT comprobado antes de importarlo, bancos exportados para reutilizarlos, orden y total |
-| 🧩 `other-activities` | Taller y su asignación, páginas y saltos de lección, base de datos, glosario, wiki, encuesta, foros, consulta, H5P; finalización, restricciones, grupos e insignias |
-| 💬 `forums` | Leer los hilos, publicar una sola vez, avisos y moderación |
+| 🧩 `other-activities` | Capítulos de libro, páginas y saltos de lección, glosario, wiki, base de datos, feedback, encuesta, consulta, tablero, H5P y tipos de foro |
+| 🤝 `workshop` | Evaluación entre pares: fases, formulario de evaluación, ejemplos, asignación, y calcular y modificar calificaciones |
+| 🙋 `attendance` | Sesiones de asistencia del curso o de cada grupo, pasar lista y el informe |
+| 🔗 `completion-and-restrictions` | Finalización de actividades, restricciones de acceso, agrupamientos e insignias |
+| 💬 `forums` | Leer los hilos, publicar una sola vez, avisos, moderación y mensajes privados |
 | ✅ `grading` | Tareas con su rúbrica, preguntas de ensayo y foros calificados, con propuestas antes |
 | 🧮 `gradebook` | Categorías, agregación y pesos que calculan el sistema de calificación |
-| 📈 `class-progress` | Finalización, notas, entregas y actividad, y escribir a quien se queda atrás |
+| 📈 `class-progress` | Finalización, notas, entregas, estadísticas de cuestionarios, resultados de encuestas y consultas, asistencia y actividad, y escribir a quien se queda atrás |
 | 👥 `participants-and-groups` | Matricular a personas y sus roles, cómo se entra en el curso, y crear y llenar grupos |
 | 🩺 `course-check` | Lo que está roto o desfasado en un curso, prepararlo para una nueva edición y qué lo completa |
 | 🎮 `scorm` | Una actividad HTML empaquetada como SCORM, subida y probada para que Moodle la registre |

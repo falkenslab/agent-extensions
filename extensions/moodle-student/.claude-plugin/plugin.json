@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -188,11 +188,11 @@
           "texts": {
             "en": {
               "label": "Planning your work",
-              "description": "What's left, deadlines and cut-offs, and what unlocks what, in a realistic order."
+              "description": "What's left, deadlines and cut-offs, and what unlocks what, in order of dates and dependencies."
             },
             "es": {
               "label": "Organizar tu trabajo",
-              "description": "Lo que queda, las fechas de entrega y de corte, y qué desbloquea qué, en un orden realista."
+              "description": "Lo que queda, las fechas de entrega y de corte, y qué desbloquea qué, en orden de fechas y dependencias."
             }
           }
         },
@@ -308,7 +308,8 @@
             "delete_database_entry",
             "edit_glossary_entry",
             "delete_glossary_entry",
-            "list_glossary_categories"
+            "list_glossary_categories",
+            "validate_html"
           ],
           "texts": {
             "en": {
@@ -364,7 +365,7 @@
             },
             "es": {
               "label": "Varios sitios Moodle",
-              "description": "Añadir sitios y cambiar de uno a otro, por separado."
+              "description": "Añadir sitios y cambiar de uno a otro, cada uno con sus cursos aparte."
             }
           }
         }

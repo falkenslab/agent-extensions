@@ -5,7 +5,7 @@ description: Manage who is in a Moodle course and how they're grouped, with mood
 
 # Participants and groups
 
-These tools change who is in a course: an agent may leave them all out on purpose (miyagi leaves enrolment, roles and deleting groups to the teacher, and makes groups only with their approval), and then they aren't there. Say so, and say the person does it in Moodle; never look for a way around it, such as the browser.
+These tools change who is in a course: an agent may leave them all out on purpose (miyagi leaves enrolment, roles and deleting groups to the teacher, and makes groups only with their approval), and then they aren't there. Say so, and say the person does it in Moodle; never look for a way around it: the `browser_*` tools are never for what's left out on purpose (see `read-a-course`).
 
 People come as aliases when moodle-mcp pseudonymizes (the default): pass them back as they came (`users`, `user`, `add`, `remove`), never ask for or guess real names or emails. With names shown, the tools take user ids instead (`userIds`, `userId`, `addIds`, `removeIds`). Role ids come from `list_participants`' roles; never assume `5` is students on every site.
 
@@ -40,4 +40,4 @@ People come as aliases when moodle-mcp pseudonymizes (the default): pass them ba
 
 ## What groups do in Moodle
 
-Groups don't change anything by themselves: an activity uses them through its group mode (no groups, separate groups, visible groups) and, optionally, a grouping it's limited to, and access restrictions can show an activity only to one group. Those are settings of the activity or of the course: learn their field names with `get_activity_settings` on one like it, and change them with `update_activity` or `update_course` (see `other-activities` and `publishing`).
+Groups don't change anything by themselves: an activity uses them through its group mode (no groups, separate groups, visible groups) and, optionally, a grouping it's limited to, and access restrictions can show an activity only to one group. Those are settings of the activity or of the course: learn their field names with `get_activity_settings` on one like it, and change them with `update_activity` or `update_course` (see `completion-and-restrictions` and `publishing`).

@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -360,18 +360,14 @@
         {
           "id": "lms-activities",
           "skills": [
-            "other-activities"
+            "other-activities",
+            "workshop"
           ],
           "tools": [
             "create_activity",
             "update_activity",
             "get_workshop",
             "set_workshop_phase",
-            "create_group",
-            "set_group_members",
-            "create_grouping",
-            "set_grouping_groups",
-            "update_course",
             "get_workshop_allocation",
             "allocate_workshop_randomly",
             "schedule_workshop_allocation",
@@ -386,10 +382,6 @@
             "add_glossary_entry",
             "create_wiki_page",
             "add_feedback_item",
-            "create_badge",
-            "set_badge_criteria",
-            "set_badge_enabled",
-            "award_badge",
             "get_h5p_activity",
             "list_h5p_content_types",
             "get_choice",
@@ -438,7 +430,6 @@
             "use_feedback_template",
             "save_feedback_template",
             "delete_feedback_template",
-            "list_badges",
             "get_workshop_assessment_form",
             "set_workshop_assessment_form",
             "get_board_columns",
@@ -452,11 +443,11 @@
           "texts": {
             "en": {
               "label": "Other activities",
-              "description": "Workshops with their allocation, lessons with their pages and jumps, databases, glossaries, wikis, feedback, forums, choices and H5P, with completion, restrictions, groups and badges."
+              "description": "Workshops with their phases, allocation and grades, lessons with their pages and jumps, books, databases, glossaries, wikis, feedback and questionnaires, choices, boards, attendance, forums and H5P."
             },
             "es": {
               "label": "Otras actividades",
-              "description": "Talleres con su asignación, lecciones con sus páginas y saltos, bases de datos, glosarios, wikis, encuestas, foros, consultas y H5P, con finalización, restricciones, grupos e insignias."
+              "description": "Talleres con sus fases, su asignación y sus calificaciones, lecciones con sus páginas y saltos, libros, bases de datos, glosarios, wikis, feedback y encuestas, consultas, tableros, asistencia, foros y H5P."
             }
           }
         },
@@ -485,11 +476,11 @@
           "texts": {
             "en": {
               "label": "Running the forums",
-              "description": "Reading threads, replying and announcing exactly once, and moderating."
+              "description": "Reading threads, replying and announcing exactly once, moderating, and private messages."
             },
             "es": {
               "label": "Llevar los foros",
-              "description": "Leer los hilos, responder y publicar avisos una sola vez, y moderar."
+              "description": "Leer los hilos, responder y publicar avisos una sola vez, moderar, y los mensajes privados."
             }
           }
         },
@@ -576,7 +567,10 @@
             "message_participants",
             "override_completion",
             "list_deadlines",
-            "get_attendance_report"
+            "get_attendance_report",
+            "get_quiz_statistics",
+            "get_choice_results",
+            "get_survey_results"
           ],
           "texts": {
             "en": {
@@ -724,7 +718,7 @@
         {
           "id": "lms-attendance",
           "skills": [
-            "other-activities"
+            "attendance"
           ],
           "tools": [
             "list_attendance_sessions",
@@ -772,6 +766,7 @@
         {
           "id": "lms-course-completion",
           "skills": [
+            "completion-and-restrictions",
             "course-check",
             "class-progress"
           ],
@@ -779,16 +774,26 @@
             "get_course_completion_criteria",
             "set_course_completion_criteria",
             "get_course_completion_status",
-            "mark_course_complete"
+            "mark_course_complete",
+            "update_activity",
+            "edit_section",
+            "update_course",
+            "get_completion_report",
+            "override_completion",
+            "list_badges",
+            "create_badge",
+            "set_badge_criteria",
+            "set_badge_enabled",
+            "award_badge"
           ],
           "texts": {
             "en": {
-              "label": "Course completion",
-              "description": "What completes the course, who has completed it, and marking it by hand."
+              "label": "Completion and restrictions",
+              "description": "What completes each activity and the course, what unlocks what, badges, who has completed it, and marking it by hand."
             },
             "es": {
-              "label": "Finalización del curso",
-              "description": "Qué completa el curso, quién lo ha completado y marcarlo a mano."
+              "label": "Finalización y restricciones",
+              "description": "Qué completa cada actividad y el curso, qué desbloquea qué, las insignias, quién lo ha completado y marcarlo a mano."
             }
           }
         }
