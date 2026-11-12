@@ -29,6 +29,8 @@ docker-mcp has no tool to write files: write them with your own file tools if yo
 
 Then `list_labs` shows it with its check.
 
+To hand a lab to a class, give them its folder, zipped: anyone with Docker and docker-mcp unzips it into their labs folder and starts it. In Moodle, moodle-teacher can upload the zip when it's installed; otherwise the person shares it their own way.
+
 ## Its life
 
 1. **`lab_up`**, after telling the person what it will run (its services and images). If refused, fix each problem listed; never look for a way around the policy.

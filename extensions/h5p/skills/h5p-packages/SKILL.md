@@ -30,9 +30,14 @@ Images, audio and video aren't supported yet: say so instead of promising them.
 
 - **`build_h5p`** with the type, a title, the language, the content and the folder (`destDir`, absolute, existing). It checks first, with the rules a site applies on deploying it: when it's refused nothing is written, and the error lists what to fix. Fix exactly that and build again; don't drop fields to make it pass.
 - It writes `<name>.h5p` and, unless `preview` is false, `<name>.preview.html`. Tell the person where both are, and offer the preview to review the questions and the right answers before it goes anywhere.
+- **Its `warnings`**: relay each one to the person in plain words, such as a type with no translation for the language whose buttons and messages stay in English. They don't stop the package; the person decides whether it's good enough or another type or language suits better.
 - **Overwriting** an existing package (`overwrite: true`) only after the person says so.
 - **Uploading** is another extension's: in Moodle, moodle-teacher's `create_activity` with `type: "h5pactivity"` and the package as its file (see its `other-activities` skill). Its `get_h5p_activity` then says the content type Moodle read; if the site lacks the type, say so: the administrator installs it.
 
 ## Reading one
 
 `read_h5p` gives a package's type and version, title, language and content in the shape `build_h5p` takes; `supported` says whether this server builds that type at that version. To change one, read it, change the content, and build it again under a new name or, with the person's yes, over it. A package that brings its libraries is read too (its content only).
+
+## When something fails
+
+`server_info` gives the server's name, version and data folder: quote them when the person reports a problem with a package or a tool, so the version that built it is known.

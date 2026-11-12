@@ -12,7 +12,7 @@
       "name": "moodle-teacher",
       "source": "./extensions/moodle-teacher",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
-      "version": "0.7.2",
+      "version": "0.8.0",
       "category": "education",
       "tags": [
         "moodle",
@@ -26,7 +26,7 @@
       "name": "moodle-student",
       "source": "./extensions/moodle-student",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "category": "education",
       "tags": [
         "moodle",
@@ -40,7 +40,7 @@
       "name": "moodle-ui-kit",
       "source": "./extensions/moodle-ui-kit",
       "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on @noeper's moodle-ui-kit.",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "category": "education",
       "tags": [
         "moodle",
@@ -111,7 +111,7 @@
       "name": "docker-lab",
       "source": "./extensions/docker-lab",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "category": "development",
       "tags": [
         "docker",
@@ -142,7 +142,7 @@
       "name": "h5p",
       "source": "./extensions/h5p",
       "description": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "education",
       "tags": [
         "h5p",

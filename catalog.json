@@ -778,7 +778,7 @@
     },
     {
       "name": "docker-lab",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
       "descriptions": {
         "en": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
@@ -1497,7 +1497,7 @@
     },
     {
       "name": "h5p",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
       "descriptions": {
         "en": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
@@ -1608,7 +1608,7 @@
     },
     {
       "name": "moodle-student",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
@@ -1685,11 +1685,11 @@
           "texts": {
             "en": {
               "label": "Planning your work",
-              "description": "What's left, deadlines and cut-offs, and what unlocks what, in a realistic order."
+              "description": "What's left, deadlines and cut-offs, and what unlocks what, in order of dates and dependencies."
             },
             "es": {
               "label": "Organizar tu trabajo",
-              "description": "Lo que queda, las fechas de entrega y de corte, y qué desbloquea qué, en un orden realista."
+              "description": "Lo que queda, las fechas de entrega y de corte, y qué desbloquea qué, en orden de fechas y dependencias."
             }
           }
         },
@@ -1805,7 +1805,8 @@
             "delete_database_entry",
             "edit_glossary_entry",
             "delete_glossary_entry",
-            "list_glossary_categories"
+            "list_glossary_categories",
+            "validate_html"
           ],
           "texts": {
             "en": {
@@ -1861,7 +1862,7 @@
             },
             "es": {
               "label": "Varios sitios Moodle",
-              "description": "Añadir sitios y cambiar de uno a otro, por separado."
+              "description": "Añadir sitios y cambiar de uno a otro, cada uno con sus cursos aparte."
             }
           }
         }
@@ -1896,7 +1897,7 @@
         },
         {
           "name": "plan-my-work",
-          "description": "Find what a student has left in their Moodle courses with moodle-mcp - pending activities, deadlines and cut-offs, overdue work, what unlocks what, grades so far - and order it into a realistic plan by date and by dependency. Use when the person asks what they have to do, what's due, where they stand in a course, or what to do next."
+          "description": "Lay out everything a student has left in their Moodle courses with moodle-mcp - pending activities per course, due and cut-off dates, overdue work still accepted, what unlocks what through restrictions, and how much each counts - ordered by date and by dependency, beyond this week. Use when the person asks what they have left in a course or overall, what to do next, what unlocks what, or where they stand in a course."
         },
         {
           "name": "read-a-course",
@@ -1912,7 +1913,7 @@
         },
         {
           "name": "week",
-          "description": "What a student has to do this week in their Moodle courses - deadlines including overdue ones still accepted, what is left and what is locked, unread notifications - in a short list by day, only reading. Use when the person asks what they have to do or hand in this week (or in the next days)."
+          "description": "A quick look at what a student has this week in their Moodle courses - deadlines in the next days including overdue ones still accepted, what is locked, unread notifications - in a short list by day, only reading. Use when the person asks what they have to do or hand in this week, today or in the next few days."
         }
       ],
       "tools": [
@@ -2550,7 +2551,7 @@
     },
     {
       "name": "moodle-teacher",
-      "version": "0.7.2",
+      "version": "0.8.0",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
@@ -2737,18 +2738,14 @@
         {
           "id": "lms-activities",
           "skills": [
-            "other-activities"
+            "other-activities",
+            "workshop"
           ],
           "tools": [
             "create_activity",
             "update_activity",
             "get_workshop",
             "set_workshop_phase",
-            "create_group",
-            "set_group_members",
-            "create_grouping",
-            "set_grouping_groups",
-            "update_course",
             "get_workshop_allocation",
             "allocate_workshop_randomly",
             "schedule_workshop_allocation",
@@ -2763,10 +2760,6 @@
             "add_glossary_entry",
             "create_wiki_page",
             "add_feedback_item",
-            "create_badge",
-            "set_badge_criteria",
-            "set_badge_enabled",
-            "award_badge",
             "get_h5p_activity",
             "list_h5p_content_types",
             "get_choice",
@@ -2815,7 +2808,6 @@
             "use_feedback_template",
             "save_feedback_template",
             "delete_feedback_template",
-            "list_badges",
             "get_workshop_assessment_form",
             "set_workshop_assessment_form",
             "get_board_columns",
@@ -2829,11 +2821,11 @@
           "texts": {
             "en": {
               "label": "Other activities",
-              "description": "Workshops with their allocation, lessons with their pages and jumps, databases, glossaries, wikis, feedback, forums, choices and H5P, with completion, restrictions, groups and badges."
+              "description": "Workshops with their phases, allocation and grades, lessons with their pages and jumps, books, databases, glossaries, wikis, feedback and questionnaires, choices, boards, attendance, forums and H5P."
             },
             "es": {
               "label": "Otras actividades",
-              "description": "Talleres con su asignación, lecciones con sus páginas y saltos, bases de datos, glosarios, wikis, encuestas, foros, consultas y H5P, con finalización, restricciones, grupos e insignias."
+              "description": "Talleres con sus fases, su asignación y sus calificaciones, lecciones con sus páginas y saltos, libros, bases de datos, glosarios, wikis, feedback y encuestas, consultas, tableros, asistencia, foros y H5P."
             }
           }
         },
@@ -2862,11 +2854,11 @@
           "texts": {
             "en": {
               "label": "Running the forums",
-              "description": "Reading threads, replying and announcing exactly once, and moderating."
+              "description": "Reading threads, replying and announcing exactly once, moderating, and private messages."
             },
             "es": {
               "label": "Llevar los foros",
-              "description": "Leer los hilos, responder y publicar avisos una sola vez, y moderar."
+              "description": "Leer los hilos, responder y publicar avisos una sola vez, moderar, y los mensajes privados."
             }
           }
         },
@@ -2953,7 +2945,10 @@
             "message_participants",
             "override_completion",
             "list_deadlines",
-            "get_attendance_report"
+            "get_attendance_report",
+            "get_quiz_statistics",
+            "get_choice_results",
+            "get_survey_results"
           ],
           "texts": {
             "en": {
@@ -3101,7 +3096,7 @@
         {
           "id": "lms-attendance",
           "skills": [
-            "other-activities"
+            "attendance"
           ],
           "tools": [
             "list_attendance_sessions",
@@ -3149,6 +3144,7 @@
         {
           "id": "lms-course-completion",
           "skills": [
+            "completion-and-restrictions",
             "course-check",
             "class-progress"
           ],
@@ -3156,16 +3152,26 @@
             "get_course_completion_criteria",
             "set_course_completion_criteria",
             "get_course_completion_status",
-            "mark_course_complete"
+            "mark_course_complete",
+            "update_activity",
+            "edit_section",
+            "update_course",
+            "get_completion_report",
+            "override_completion",
+            "list_badges",
+            "create_badge",
+            "set_badge_criteria",
+            "set_badge_enabled",
+            "award_badge"
           ],
           "texts": {
             "en": {
-              "label": "Course completion",
-              "description": "What completes the course, who has completed it, and marking it by hand."
+              "label": "Completion and restrictions",
+              "description": "What completes each activity and the course, what unlocks what, badges, who has completed it, and marking it by hand."
             },
             "es": {
-              "label": "Finalización del curso",
-              "description": "Qué completa el curso, quién lo ha completado y marcarlo a mano."
+              "label": "Finalización y restricciones",
+              "description": "Qué completa cada actividad y el curso, qué desbloquea qué, las insignias, quién lo ha completado y marcarlo a mano."
             }
           }
         }
@@ -3187,8 +3193,16 @@
           "description": "Create or reconfigure a Moodle assignment with moodle-mcp so its statement, its submission settings and its grading agree - submission types, files and formats, dates and cut-off, groups, attempts, feedback types, grade, marking workflow, rubric - and change one safely once students have submitted. Use whenever an assignment is created or its settings change."
         },
         {
+          "name": "attendance",
+          "description": "Take attendance in Moodle with moodle-mcp through an Attendance activity - its sessions (one, a weekly series, one per group), taking the roll call for a session with each student's status and remarks, and the attendance report with absences and percentages. Use when the person asks to take attendance, pass the register or roll call, add class sessions, or see who has missed classes."
+        },
+        {
           "name": "class-progress",
-          "description": "Read how a Moodle class is doing with moodle-mcp - completion, grades, submissions, quiz results, who hasn't accessed the course, participation and views - telling what Moodle says from what it doesn't, and write to the students concerned with the person's yes. Use when the person asks who's falling behind, how a group or an activity is going, or for a progress report."
+          "description": "Read how a Moodle class is doing with moodle-mcp - completion, grades, submissions, quiz results and question statistics, choice and survey results, attendance, who hasn't accessed the course, participation and views - telling what Moodle says from what it doesn't, and write to the students concerned with the person's yes. Use when the person asks who's falling behind, how a group, an activity or a quiz's questions went, what a survey or choice got, who missed classes, or for a progress report."
+        },
+        {
+          "name": "completion-and-restrictions",
+          "description": "Connect a Moodle course's activities with moodle-mcp - activity completion conditions, access restrictions (by date, by another activity's completion or grade, by group) on activities and sections, groupings an activity is limited to, a student's completion overridden by hand, and badges with their criteria. Use when activities must unlock one another, be tracked as done, open only to a group, or award a badge."
         },
         {
           "name": "copy-and-restore",
@@ -3200,15 +3214,15 @@
         },
         {
           "name": "course-content",
-          "description": "Put learning content into a Moodle course with moodle-mcp - choose the resource (page, book, file, folder, URL, text and media area, section summary), write it as HTML Moodle keeps, embed images and upload files, and edit existing content without breaking it. Use whenever notes, documents, links or section texts go into Moodle or change there; activities have their own skills."
+          "description": "Put learning content into a Moodle course with moodle-mcp - choose the resource (page, book, file, folder, URL, text and media area, section summary), write it as HTML Moodle keeps, embed images and upload files, edit or duplicate existing content without breaking it, and the course calendar's events. Use whenever notes, documents, links or section texts go into Moodle or change there, or a course event is added, changed or listed; activities have their own skills."
         },
         {
           "name": "forums",
-          "description": "Work a Moodle course's forums with moodle-mcp - find what's unanswered, read whole threads, reply or post announcements exactly once, edit or delete a post, pin and lock discussions, subscriptions, ratings and messages to several participants. Use whenever reading, answering or posting in a Moodle forum, or writing to the class."
+          "description": "Work a Moodle course's forums and messages with moodle-mcp - find what's unanswered, read whole threads, reply or post announcements exactly once, edit or delete a post, pin and lock discussions, subscriptions, ratings, private messages to a student and their replies, and messages to several participants. Use whenever reading, answering or posting in a Moodle forum, writing to a student or to the class, or reading Moodle messages."
         },
         {
           "name": "gradebook",
-          "description": "Set up and check a Moodle course's gradebook with moodle-mcp so the final grade is computed as the person's grading scheme says - categories, aggregation, weights, each activity's maximum grade, manual grade items, overrides, and the grader report - decided before the first graded activity rather than repaired after the last. Use when a course's weights or grading scheme are set up, changed or checked, when graded activities are created, or when grades are exported."
+          "description": "Set up and check a Moodle course's gradebook with moodle-mcp so the final grade is computed as the person's grading scheme says - categories, aggregation, weights, each activity's maximum grade, manual grade items, overrides, scales and grade letters, and the grader report - decided before the first graded activity rather than repaired after the last. Use when a course's weights or grading scheme are set up, changed or checked, when graded activities are created, or when grades are exported or imported from a spreadsheet."
         },
         {
           "name": "grading",
@@ -3216,7 +3230,7 @@
         },
         {
           "name": "other-activities",
-          "description": "Set up Moodle's other activities with moodle-mcp so they behave as intended - workshop (peer assessment), its phases and its assessment form, lesson, glossary, wiki, database, forum types and whole-forum grading, choice, feedback survey, questionnaire, board, attendance, H5P, SCORM - and the pieces that connect activities - completion, access restrictions, groups and groupings, badges. Use when a course needs something other than a resource, an assignment or a quiz, or when activities must unlock, track or group."
+          "description": "Build Moodle's other activities with moodle-mcp and fill their insides - book chapters, lesson pages and jumps, glossary entries and categories, wiki pages, database fields, templates and entries, feedback and questionnaire questions, choice options and results, board columns, H5P packages, and forum types as activities. Use when a course needs one of these activities or its contents change; workshops, attendance and assignments, quizzes and SCORM have their own skills."
         },
         {
           "name": "participants-and-groups",
@@ -3248,7 +3262,11 @@
         },
         {
           "name": "week",
-          "description": "What this week holds in the Moodle courses the person teaches - the dates coming up, what is waiting to be graded, and unread notifications - in a short list by day, only reading. Use when the person asks what is due or pending this week (or in the next days), or invokes it to start the week."
+          "description": "What this week holds in the Moodle courses the person teaches - the dates coming up, what is waiting to be graded, and unread notifications and messages - in a short list by day, only reading. Use when the person asks what is due or pending this week (or in the next days), or invokes it to start the week."
+        },
+        {
+          "name": "workshop",
+          "description": "Run a Moodle workshop (peer assessment) with moodle-mcp - its setup and phases, the assessment form, example submissions with their reference assessment, allocating reviewers, and the grading evaluation phase that calculates and overrides grades. Use whenever a workshop is created, configured, allocated, switched to another phase or graded."
         }
       ],
       "tools": [
@@ -5054,7 +5072,7 @@
     },
     {
       "name": "moodle-ui-kit",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on @noeper's moodle-ui-kit.",
       "descriptions": {
         "en": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on @noeper's moodle-ui-kit.",
@@ -5095,7 +5113,7 @@
             },
             "es": {
               "label": "Un estilo visual para Moodle",
-              "description": "Enunciados de tareas, bloques de código, soluciones, preguntas y retroalimentación con estilos inline, del moodle-ui-kit de @noeper."
+              "description": "Enunciados de tareas, bloques de código, soluciones, preguntas y retroalimentación con estilos en línea, del moodle-ui-kit de @noeper."
             }
           }
         }

@@ -1,6 +1,6 @@
 {
   "name": "h5p",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
   "author": {
     "name": "Falken's Lab",

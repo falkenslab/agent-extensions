@@ -56,7 +56,7 @@ It has no settings of its own, so it works the same in Codex.
 
 ## 📸 See it at work
 
-A quiz an agent built with moodle-teacher and this extension, in Moodle's own preview: each question's text in its white box, and the feedback with its green label.
+A quiz an agent built with moodle-teacher and this extension, in Moodle's own preview: each question's text in its box, and the feedback with its green label.
 
 <div align="center">
 
@@ -72,12 +72,13 @@ A quiz an agent built with moodle-teacher and this extension, in Moodle's own pr
 | 🧠 `activity` | An assignment's statement: title, goal, statement, deliverable |
 | 💻 `code` | A block of code or commands to copy |
 | ✅ `feedback` | A solution with its explanation and code |
-| ❓ `question` | A quiz question's text, on a white background |
+| 📄 `page` | A page's or label's content that isn't an exercise |
+| ❓ `question` | A quiz question's text, in a bordered box |
 | 🟢 `question-feedback` | A quiz answer's or question's feedback |
 
-The five templates are [@noeper](https://github.com/noeper)'s, adapted: real headings instead of bold paragraphs, labels in the course's language, and a darker grey for the small captions so they read well.
+The templates are [@noeper](https://github.com/noeper)'s, adapted: real headings instead of bold paragraphs, labels in the course's language, a darker grey for the small captions so they read well, decorative emojis hidden from screen readers, and no font or background set over the course's theme (only the colored title bars and the code blocks keep theirs), plus a plain `page` box.
 
-It's also a **style** for agents that write their materials in Markdown and export them by code, like miyagi: `style/` has one template per kind (`page`, `assignment`, `code`, `question`, `feedback`) with `{{placeholders}}` the exporter fills (`{{title}}`, `{{body}}`, `{{code}}`, `{{language}}`, `{{label:copy}}`, `{{label:feedback}}`…). There the emojis are hidden from screen readers and no template sets a font or a background over the course's theme. In miyagi, choose it by asking for it ("usa el estilo moodle-ui-kit").
+It's also a **style** for agents that write their materials in Markdown and export them by code, like miyagi: `style/` has one template per kind (`page`, `assignment`, `code`, `question`, `feedback`) with `{{placeholders}}` the exporter fills (`{{title}}`, `{{body}}`, `{{code}}`, `{{language}}`, `{{label:copy}}`, `{{label:feedback}}`…). Both sets make the same choices: the emojis are hidden from screen readers and no template sets a font or a background over the course's theme. In miyagi, choose it by asking for it ("usa el estilo moodle-ui-kit").
 
 ## 🙏 Based on [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit)
 

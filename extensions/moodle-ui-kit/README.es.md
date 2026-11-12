@@ -5,7 +5,7 @@
 # moodle-ui-kit
 
 **Un estilo visual cuidado para lo que tu agente de IA publica en Moodle.**<br/>
-Enunciados, código, soluciones y preguntas de cuestionario con estilos inline, para que se vean bien incluso en sitios que eliminan el CSS.
+Enunciados, código, soluciones y preguntas de cuestionario con estilos en línea, para que se vean bien incluso en sitios que eliminan el CSS.
 
 ![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)
 ![agent-kit extension](https://img.shields.io/badge/agent--kit-extension-0b0b0b)
@@ -16,14 +16,14 @@ Enunciados, código, soluciones y preguntas de cuestionario con estilos inline, 
 
 </div>
 
-Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), o a Claude Code, un estilo visual para Moodle: el enunciado de una tarea con su objetivo y su entregable, bloques de código para copiar, una solución con su explicación, el texto de una pregunta de cuestionario y su retroalimentación. Está basada en [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), el kit que [@noeper](https://github.com/noeper) hizo para la docencia en Formación Profesional: todos los estilos son inline, porque muchos sitios Moodle (entre ellos los de las consejerías de educación) no permiten CSS ni cambiar el tema en los enunciados y las preguntas. El agente rellena las plantillas y las publica con [moodle-teacher](../moodle-teacher/README.es.md), primero ocultas y comprobadas; un curso con estilo propio lo conserva.
+Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), o a Claude Code, un estilo visual para Moodle: el enunciado de una tarea con su objetivo y su entregable, bloques de código para copiar, una solución con su explicación, el texto de una pregunta de cuestionario y su retroalimentación. Está basada en [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit), el kit que [@noeper](https://github.com/noeper) hizo para la docencia en Formación Profesional: todos los estilos van en línea, porque muchos sitios Moodle (entre ellos los de las consejerías de educación) no permiten CSS ni cambiar el tema en los enunciados y las preguntas. El agente rellena las plantillas y las publica con [moodle-teacher](../moodle-teacher/README.es.md), primero ocultas y comprobadas; un curso con estilo propio lo conserva.
 
 ## ✨ Por qué esta extensión
 
 - 🎨 **Un curso cuidado desde la primera actividad.** Un curso vacío no tiene estilo que copiar; estas plantillas le dan uno.
-- 🧱 **Solo estilos inline.** Sin CSS, sin clases, sin cambiar el tema: funciona en los sitios que los eliminan.
+- 🧱 **Solo estilos en línea.** Sin CSS, sin clases, sin cambiar el tema: funciona en los sitios que los eliminan.
 - ♿ **Accesible.** Encabezados reales y en orden, contraste legible y etiquetas que dicen lo mismo que los emojis que las decoran.
-- ❓ **Preguntas que se importan bien.** Las preguntas con estilo entran en Moodle XML o una a una, nunca en GIFT, cuyos caracteres especiales aparecen por todas partes en los estilos inline.
+- ❓ **Preguntas que se importan bien.** Las preguntas con estilo entran en Moodle XML o una a una, nunca en GIFT, cuyos caracteres especiales aparecen por todas partes en los estilos en línea.
 - 🌍 **En el idioma del curso.** Las etiquetas (Objetivo, Enunciado, Entregable…) se escriben en el idioma que usa el curso.
 
 ## 🚀 Empezar
@@ -56,7 +56,7 @@ No tiene ajustes propios, así que funciona igual en Codex.
 
 ## 📸 Así se ve
 
-Un cuestionario que un agente creó con moodle-teacher y esta extensión, en la vista previa de Moodle: el texto de cada pregunta en su recuadro blanco, y la retroalimentación con su etiqueta verde.
+Un cuestionario que un agente creó con moodle-teacher y esta extensión, en la vista previa de Moodle: el texto de cada pregunta en su recuadro, y la retroalimentación con su etiqueta verde.
 
 <div align="center">
 
@@ -72,12 +72,13 @@ Un cuestionario que un agente creó con moodle-teacher y esta extensión, en la 
 | 🧠 `activity` | El enunciado de una tarea: título, objetivo, enunciado, entregable |
 | 💻 `code` | Un bloque de código o de comandos para copiar |
 | ✅ `feedback` | Una solución con su explicación y su código |
-| ❓ `question` | El texto de una pregunta de cuestionario, sobre fondo blanco |
+| 📄 `page` | El contenido de una página o de una etiqueta que no es un ejercicio |
+| ❓ `question` | El texto de una pregunta de cuestionario, en un recuadro con borde |
 | 🟢 `question-feedback` | La retroalimentación de una respuesta o de una pregunta |
 
-Las cinco plantillas son las de [@noeper](https://github.com/noeper), adaptadas: encabezados reales en lugar de párrafos en negrita, etiquetas en el idioma del curso y un gris más oscuro en los rótulos pequeños para que se lean bien.
+Las plantillas son las de [@noeper](https://github.com/noeper), adaptadas: encabezados reales en lugar de párrafos en negrita, etiquetas en el idioma del curso, un gris más oscuro en los rótulos pequeños para que se lean bien, emojis decorativos ocultos para los lectores de pantalla y ninguna fuente ni fondo fijados sobre el tema del curso (solo las barras de título de color y los bloques de código conservan el suyo), más un recuadro sencillo `page`.
 
-También es un **estilo** para los agentes que escriben sus materiales en Markdown y los exportan con código, como miyagi: `style/` tiene una plantilla por tipo (`page`, `assignment`, `code`, `question`, `feedback`) con `{{marcadores}}` que rellena el exportador (`{{title}}`, `{{body}}`, `{{code}}`, `{{language}}`, `{{label:copy}}`, `{{label:feedback}}`…). Ahí los emojis quedan ocultos para los lectores de pantalla y ninguna plantilla fija una fuente ni un fondo sobre el tema del curso. En miyagi se elige pidiéndolo («usa el estilo moodle-ui-kit»).
+También es un **estilo** para los agentes que escriben sus materiales en Markdown y los exportan con código, como miyagi: `style/` tiene una plantilla por tipo (`page`, `assignment`, `code`, `question`, `feedback`) con `{{marcadores}}` que rellena el exportador (`{{title}}`, `{{body}}`, `{{code}}`, `{{language}}`, `{{label:copy}}`, `{{label:feedback}}`…). Los dos conjuntos siguen los mismos criterios: los emojis quedan ocultos para los lectores de pantalla y ninguna plantilla fija una fuente ni un fondo sobre el tema del curso. En miyagi se elige pidiéndolo («usa el estilo moodle-ui-kit»).
 
 ## 🙏 Basado en [moodle-ui-kit](https://github.com/noeper/moodle-ui-kit)
 
