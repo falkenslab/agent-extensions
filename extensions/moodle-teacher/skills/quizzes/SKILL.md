@@ -64,6 +64,8 @@ After importing, read the result: every question created, none missing. If one c
 - Adding several at once may not keep their order: check `get_quiz_structure` and fix it with `edit_quiz_slot` (`moveAfter`), unless shuffling is intended.
 - Pages: `set_quiz_pages`; headed parts: `add_quiz_section` (optionally shuffled). Marks per slot: `edit_quiz_slot` (`maxMark`). The total of marks comes from the slots; the quiz's maximum grade scales it: check both are what the person expects, and not zero.
 
+An **Offline Quiz** (a plugin, printed and answered on paper) takes its questions by group: `get_offline_quiz_groups`, then `add_questions_to_offline_quiz` with bank question ids, at the end or on a page. `create_offline_quiz_forms` makes each group's question, answer and correction forms (PDF by default), and the server confirms it: from then on its questions can't change. Its links are saved with `download_file`.
+
 ## 4. Changing a quiz with attempts
 
 Look first: `get_quiz_results`. With no attempts, anything can change. With attempts, Moodle refuses to add or remove questions and to reorder them; marks can change (it regrades). Never change what a question asks or which answer is right after students were graded on it: propose a new question, or a manual regrade the person decides. Individual extra time or attempts: `set_quiz_override`.

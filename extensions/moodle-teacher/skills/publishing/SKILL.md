@@ -9,7 +9,7 @@ Every write in Moodle is a publication: students may see it, and Moodle may tell
 
 ## Something new: hidden first
 
-1. **Create it hidden.** `create_activity` creates hidden by default (`visibility: "hidden"`); `add_section` then `edit_section` with `visible: false` for a new section. Say in the approval that it goes up **hidden, to be checked**.
+1. **Create it hidden.** `create_activity` creates hidden by default (`visibility: "hidden"`); `add_section` with `visible: false` for a new section (Moodle can't add one already hidden: it's hidden right after, so students may glimpse it empty and unnamed for that moment). Say in the approval that it goes up **hidden, to be checked**.
 2. **Don't notify.** Activity forms have a "Send content change notification" box: leave it off for a draft (read its field with `get_activity_settings`).
 3. **Read it back.** Every write returns what Moodle saved (the course structure, the activity, the grade): check it says what you meant. `get_activity_settings` for the settings (a checkbox's state is its `checked`, not its `value`), `get_activity_content` for a page's text, `get_quiz_structure` for a quiz's questions.
 4. **Have it tried.** Ask the person to open it in Moodle as a student would (a quiz's "Preview", "Switch role to... Student", every link and interactive part, on a phone width), since moodle-mcp works as them and can't see it as a student. Fix what they find, each fix with its approval.

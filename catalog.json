@@ -1283,7 +1283,7 @@
     },
     {
       "name": "moodle-student",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
@@ -1548,7 +1548,7 @@
           "name": "moodle",
           "kind": "package",
           "package": "@falkenslab/moodle-mcp",
-          "version": "0.10.0",
+          "version": "0.11.0",
           "url": "https://www.npmjs.com/package/@falkenslab/moodle-mcp"
         }
       ],
@@ -2225,7 +2225,7 @@
     },
     {
       "name": "moodle-teacher",
-      "version": "0.6.6",
+      "version": "0.7.0",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
@@ -2393,7 +2393,10 @@
             "edit_question_category",
             "delete_question_category",
             "move_questions",
-            "remove_quiz_slot"
+            "remove_quiz_slot",
+            "get_offline_quiz_groups",
+            "add_questions_to_offline_quiz",
+            "create_offline_quiz_forms"
           ],
           "texts": {
             "en": {
@@ -2487,7 +2490,16 @@
             "use_feedback_template",
             "save_feedback_template",
             "delete_feedback_template",
-            "list_badges"
+            "list_badges",
+            "get_workshop_assessment_form",
+            "set_workshop_assessment_form",
+            "get_board_columns",
+            "set_board_columns",
+            "add_board_column",
+            "edit_board_column",
+            "remove_board_column",
+            "get_questionnaire_questions",
+            "add_questionnaire_questions"
           ],
           "texts": {
             "en": {
@@ -2761,6 +2773,31 @@
           }
         },
         {
+          "id": "lms-attendance",
+          "skills": [
+            "other-activities"
+          ],
+          "tools": [
+            "list_attendance_sessions",
+            "add_attendance_sessions",
+            "edit_attendance_session",
+            "delete_attendance_session",
+            "get_session_attendance",
+            "take_attendance",
+            "get_attendance_report"
+          ],
+          "texts": {
+            "en": {
+              "label": "Attendance",
+              "description": "Attendance sessions for the course or each group, taking attendance in class, and the attendance report."
+            },
+            "es": {
+              "label": "Asistencia",
+              "description": "Sesiones de asistencia del curso o de cada grupo, pasar lista en clase y el informe de asistencia."
+            }
+          }
+        },
+        {
           "id": "lms-calendar",
           "skills": [
             "course-content"
@@ -2814,7 +2851,7 @@
           "name": "moodle",
           "kind": "package",
           "package": "@falkenslab/moodle-mcp",
-          "version": "0.10.0",
+          "version": "0.11.0",
           "url": "https://www.npmjs.com/package/@falkenslab/moodle-mcp"
         }
       ],
@@ -2853,7 +2890,7 @@
         },
         {
           "name": "other-activities",
-          "description": "Set up Moodle's other activities with moodle-mcp so they behave as intended - workshop (peer assessment) and its phases, lesson, glossary, wiki, database, forum types and whole-forum grading, choice, feedback survey, H5P, SCORM - and the pieces that connect activities - completion, access restrictions, groups and groupings, badges. Use when a course needs something other than a resource, an assignment or a quiz, or when activities must unlock, track or group."
+          "description": "Set up Moodle's other activities with moodle-mcp so they behave as intended - workshop (peer assessment), its phases and its assessment form, lesson, glossary, wiki, database, forum types and whole-forum grading, choice, feedback survey, questionnaire, board, attendance, H5P, SCORM - and the pieces that connect activities - completion, access restrictions, groups and groupings, badges. Use when a course needs something other than a resource, an assignment or a quiz, or when activities must unlock, track or group."
         },
         {
           "name": "participants-and-groups",
@@ -2889,6 +2926,20 @@
         }
       ],
       "tools": [
+        {
+          "name": "add_attendance_sessions",
+          "labels": {
+            "en": "Adding attendance sessions",
+            "es": "Añadiendo sesiones de asistencia"
+          }
+        },
+        {
+          "name": "add_board_column",
+          "labels": {
+            "en": "Adding a board column",
+            "es": "Añadiendo una columna al tablero"
+          }
+        },
         {
           "name": "add_book_chapter",
           "labels": {
@@ -2957,6 +3008,20 @@
           "labels": {
             "en": "Adding the category {name} to a bank",
             "es": "Añadiendo la categoría {name} a un banco"
+          }
+        },
+        {
+          "name": "add_questionnaire_questions",
+          "labels": {
+            "en": "Adding questions to a questionnaire",
+            "es": "Añadiendo preguntas a una encuesta"
+          }
+        },
+        {
+          "name": "add_questions_to_offline_quiz",
+          "labels": {
+            "en": "Adding questions to an offline quiz",
+            "es": "Añadiendo preguntas a un cuestionario offline"
           }
         },
         {
@@ -3194,6 +3259,14 @@
           }
         },
         {
+          "name": "create_offline_quiz_forms",
+          "labels": {
+            "en": "Creating an offline quiz's forms",
+            "es": "Creando las hojas de un cuestionario offline"
+          },
+          "confirm": "server"
+        },
+        {
           "name": "create_question",
           "labels": {
             "en": "Creating the question \"{name}\"",
@@ -3212,6 +3285,14 @@
           "labels": {
             "en": "Deleting an activity",
             "es": "Eliminando una actividad"
+          },
+          "confirm": "server"
+        },
+        {
+          "name": "delete_attendance_session",
+          "labels": {
+            "en": "Deleting an attendance session",
+            "es": "Eliminando una sesión de asistencia"
           },
           "confirm": "server"
         },
@@ -3370,6 +3451,20 @@
           "labels": {
             "en": "Moving, renaming, showing or hiding an activity",
             "es": "Moviendo, renombrando, mostrando u ocultando una actividad"
+          }
+        },
+        {
+          "name": "edit_attendance_session",
+          "labels": {
+            "en": "Editing an attendance session",
+            "es": "Editando una sesión de asistencia"
+          }
+        },
+        {
+          "name": "edit_board_column",
+          "labels": {
+            "en": "Editing a board column",
+            "es": "Editando una columna del tablero"
           }
         },
         {
@@ -3535,6 +3630,22 @@
           "labels": {
             "en": "Reviewing an attempt",
             "es": "Revisando un intento"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_attendance_report",
+          "labels": {
+            "en": "Reading the attendance report",
+            "es": "Leyendo el informe de asistencia"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_board_columns",
+          "labels": {
+            "en": "Reading a board's columns",
+            "es": "Leyendo las columnas de un tablero"
           },
           "readOnly": true
         },
@@ -3707,10 +3818,25 @@
           "readOnly": true
         },
         {
+          "name": "get_offline_quiz_groups",
+          "labels": {
+            "en": "Reading an offline quiz's groups",
+            "es": "Leyendo los grupos de un cuestionario offline"
+          }
+        },
+        {
           "name": "get_participation_report",
           "labels": {
             "en": "Reading who took part in an activity",
             "es": "Leyendo quién participó en una actividad"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_questionnaire_questions",
+          "labels": {
+            "en": "Reading a questionnaire's questions",
+            "es": "Leyendo las preguntas de una encuesta"
           },
           "readOnly": true
         },
@@ -3763,6 +3889,14 @@
           "readOnly": true
         },
         {
+          "name": "get_session_attendance",
+          "labels": {
+            "en": "Reading a session's attendance",
+            "es": "Leyendo la asistencia de una sesión"
+          },
+          "readOnly": true
+        },
+        {
           "name": "get_site_info",
           "labels": {
             "en": "Reading the Moodle site's information",
@@ -3807,6 +3941,14 @@
           "labels": {
             "en": "Reading who assesses whom",
             "es": "Leyendo quién evalúa a quién"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_workshop_assessment_form",
+          "labels": {
+            "en": "Reading a workshop's assessment form",
+            "es": "Leyendo el formulario de evaluación de un taller"
           },
           "readOnly": true
         },
@@ -3893,6 +4035,14 @@
           "labels": {
             "en": "Listing a course's assignments",
             "es": "Listando las tareas de un curso"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "list_attendance_sessions",
+          "labels": {
+            "en": "Listing the attendance sessions",
+            "es": "Listando las sesiones de asistencia"
           },
           "readOnly": true
         },
@@ -4215,6 +4365,13 @@
           "readOnly": true
         },
         {
+          "name": "remove_board_column",
+          "labels": {
+            "en": "Removing a board column",
+            "es": "Quitando una columna del tablero"
+          }
+        },
+        {
           "name": "remove_quiz_slot",
           "labels": {
             "en": "Removing a question from a quiz",
@@ -4314,6 +4471,13 @@
           "labels": {
             "en": "Enabling or disabling a badge",
             "es": "Activando o desactivando una insignia"
+          }
+        },
+        {
+          "name": "set_board_columns",
+          "labels": {
+            "en": "Setting a board's columns",
+            "es": "Configurando las columnas de un tablero"
           }
         },
         {
@@ -4443,6 +4607,13 @@
           }
         },
         {
+          "name": "set_workshop_assessment_form",
+          "labels": {
+            "en": "Setting a workshop's assessment form",
+            "es": "Configurando el formulario de evaluación de un taller"
+          }
+        },
+        {
           "name": "set_workshop_phase",
           "labels": {
             "en": "Switching a workshop's phase",
@@ -4456,6 +4627,13 @@
             "es": "Mostrando u ocultando el navegador"
           },
           "readOnly": true
+        },
+        {
+          "name": "take_attendance",
+          "labels": {
+            "en": "Taking attendance",
+            "es": "Pasando lista"
+          }
         },
         {
           "name": "unenrol_user",

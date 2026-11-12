@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.6.6",
+  "version": "0.7.0",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -166,7 +166,13 @@
         "browser_wait",
         "server_info",
         "list_sites",
-        "list_h5p_content_types"
+        "list_h5p_content_types",
+        "get_workshop_assessment_form",
+        "list_attendance_sessions",
+        "get_session_attendance",
+        "get_attendance_report",
+        "get_board_columns",
+        "get_questionnaire_questions"
       ],
       "serverConfirmTools": [
         "delete_activity",
@@ -191,7 +197,9 @@
         "delete_feedback_template",
         "delete_workshop_example",
         "remove_site",
-        "save_submission_files"
+        "save_submission_files",
+        "delete_attendance_session",
+        "create_offline_quiz_forms"
       ],
       "capabilities": [
         {
@@ -333,7 +341,10 @@
             "edit_question_category",
             "delete_question_category",
             "move_questions",
-            "remove_quiz_slot"
+            "remove_quiz_slot",
+            "get_offline_quiz_groups",
+            "add_questions_to_offline_quiz",
+            "create_offline_quiz_forms"
           ],
           "texts": {
             "en": {
@@ -427,7 +438,16 @@
             "use_feedback_template",
             "save_feedback_template",
             "delete_feedback_template",
-            "list_badges"
+            "list_badges",
+            "get_workshop_assessment_form",
+            "set_workshop_assessment_form",
+            "get_board_columns",
+            "set_board_columns",
+            "add_board_column",
+            "edit_board_column",
+            "remove_board_column",
+            "get_questionnaire_questions",
+            "add_questionnaire_questions"
           ],
           "texts": {
             "en": {
@@ -697,6 +717,31 @@
             "es": {
               "label": "Participantes y grupos",
               "description": "Matricular a personas y sus roles, cómo se entra en el curso, y crear y llenar grupos."
+            }
+          }
+        },
+        {
+          "id": "lms-attendance",
+          "skills": [
+            "other-activities"
+          ],
+          "tools": [
+            "list_attendance_sessions",
+            "add_attendance_sessions",
+            "edit_attendance_session",
+            "delete_attendance_session",
+            "get_session_attendance",
+            "take_attendance",
+            "get_attendance_report"
+          ],
+          "texts": {
+            "en": {
+              "label": "Attendance",
+              "description": "Attendance sessions for the course or each group, taking attendance in class, and the attendance report."
+            },
+            "es": {
+              "label": "Asistencia",
+              "description": "Sesiones de asistencia del curso o de cada grupo, pasar lista en clase y el informe de asistencia."
             }
           }
         },
@@ -4743,6 +4788,348 @@
               "miró los tipos H5P {n} veces"
             ],
             "result": "Tipos H5P del sitio leídos"
+          }
+        },
+        "list_attendance_sessions": {
+          "en": {
+            "label": "Listing the attendance sessions",
+            "phrase": [
+              "listed the attendance sessions",
+              "listed the attendance sessions {n} times"
+            ],
+            "result": "Attendance sessions listed"
+          },
+          "es": {
+            "label": "Listando las sesiones de asistencia",
+            "phrase": [
+              "listó las sesiones de asistencia",
+              "listó las sesiones de asistencia {n} veces"
+            ],
+            "result": "Sesiones de asistencia listadas"
+          }
+        },
+        "add_attendance_sessions": {
+          "en": {
+            "label": "Adding attendance sessions",
+            "phrase": [
+              "added attendance sessions",
+              "added attendance sessions {n} times"
+            ],
+            "result": "Attendance sessions added"
+          },
+          "es": {
+            "label": "Añadiendo sesiones de asistencia",
+            "phrase": [
+              "añadió sesiones de asistencia",
+              "añadió sesiones de asistencia {n} veces"
+            ],
+            "result": "Sesiones de asistencia añadidas"
+          }
+        },
+        "edit_attendance_session": {
+          "en": {
+            "label": "Editing an attendance session",
+            "phrase": [
+              "edited an attendance session",
+              "edited {n} attendance sessions"
+            ],
+            "result": "Attendance session edited"
+          },
+          "es": {
+            "label": "Editando una sesión de asistencia",
+            "phrase": [
+              "editó una sesión de asistencia",
+              "editó {n} sesiones de asistencia"
+            ],
+            "result": "Sesión de asistencia editada"
+          }
+        },
+        "delete_attendance_session": {
+          "en": {
+            "label": "Deleting an attendance session",
+            "phrase": [
+              "deleted an attendance session",
+              "deleted {n} attendance sessions"
+            ],
+            "result": "Attendance session deleted"
+          },
+          "es": {
+            "label": "Eliminando una sesión de asistencia",
+            "phrase": [
+              "eliminó una sesión de asistencia",
+              "eliminó {n} sesiones de asistencia"
+            ],
+            "result": "Sesión de asistencia eliminada"
+          }
+        },
+        "get_session_attendance": {
+          "en": {
+            "label": "Reading a session's attendance",
+            "phrase": [
+              "read a session's attendance",
+              "read {n} sessions' attendance"
+            ],
+            "result": "Attendance read"
+          },
+          "es": {
+            "label": "Leyendo la asistencia de una sesión",
+            "phrase": [
+              "leyó la asistencia de una sesión",
+              "leyó la asistencia de {n} sesiones"
+            ],
+            "result": "Asistencia leída"
+          }
+        },
+        "take_attendance": {
+          "en": {
+            "label": "Taking attendance",
+            "phrase": [
+              "took attendance",
+              "took attendance {n} times"
+            ],
+            "result": "Attendance taken"
+          },
+          "es": {
+            "label": "Pasando lista",
+            "phrase": [
+              "pasó lista",
+              "pasó lista {n} veces"
+            ],
+            "result": "Asistencia registrada"
+          }
+        },
+        "get_attendance_report": {
+          "en": {
+            "label": "Reading the attendance report",
+            "phrase": [
+              "read the attendance report",
+              "read the attendance report {n} times"
+            ],
+            "result": "Attendance report read"
+          },
+          "es": {
+            "label": "Leyendo el informe de asistencia",
+            "phrase": [
+              "leyó el informe de asistencia",
+              "leyó el informe de asistencia {n} veces"
+            ],
+            "result": "Informe de asistencia leído"
+          }
+        },
+        "get_workshop_assessment_form": {
+          "en": {
+            "label": "Reading a workshop's assessment form",
+            "phrase": [
+              "read a workshop's assessment form",
+              "read {n} workshops' assessment forms"
+            ],
+            "result": "Assessment form read"
+          },
+          "es": {
+            "label": "Leyendo el formulario de evaluación de un taller",
+            "phrase": [
+              "leyó el formulario de evaluación de un taller",
+              "leyó los formularios de evaluación de {n} talleres"
+            ],
+            "result": "Formulario de evaluación leído"
+          }
+        },
+        "set_workshop_assessment_form": {
+          "en": {
+            "label": "Setting a workshop's assessment form",
+            "phrase": [
+              "set a workshop's assessment form",
+              "set {n} workshops' assessment forms"
+            ],
+            "result": "Assessment form saved"
+          },
+          "es": {
+            "label": "Configurando el formulario de evaluación de un taller",
+            "phrase": [
+              "configuró el formulario de evaluación de un taller",
+              "configuró los formularios de evaluación de {n} talleres"
+            ],
+            "result": "Formulario de evaluación guardado"
+          }
+        },
+        "get_board_columns": {
+          "en": {
+            "label": "Reading a board's columns",
+            "phrase": [
+              "read a board's columns",
+              "read {n} boards' columns"
+            ],
+            "result": "Board columns read"
+          },
+          "es": {
+            "label": "Leyendo las columnas de un tablero",
+            "phrase": [
+              "leyó las columnas de un tablero",
+              "leyó las columnas de {n} tableros"
+            ],
+            "result": "Columnas del tablero leídas"
+          }
+        },
+        "set_board_columns": {
+          "en": {
+            "label": "Setting a board's columns",
+            "phrase": [
+              "set a board's columns",
+              "set {n} boards' columns"
+            ],
+            "result": "Board columns set"
+          },
+          "es": {
+            "label": "Configurando las columnas de un tablero",
+            "phrase": [
+              "configuró las columnas de un tablero",
+              "configuró las columnas de {n} tableros"
+            ],
+            "result": "Columnas del tablero configuradas"
+          }
+        },
+        "add_board_column": {
+          "en": {
+            "label": "Adding a board column",
+            "phrase": [
+              "added a board column",
+              "added {n} board columns"
+            ],
+            "result": "Board column added"
+          },
+          "es": {
+            "label": "Añadiendo una columna al tablero",
+            "phrase": [
+              "añadió una columna al tablero",
+              "añadió {n} columnas al tablero"
+            ],
+            "result": "Columna añadida"
+          }
+        },
+        "edit_board_column": {
+          "en": {
+            "label": "Editing a board column",
+            "phrase": [
+              "edited a board column",
+              "edited {n} board columns"
+            ],
+            "result": "Board column edited"
+          },
+          "es": {
+            "label": "Editando una columna del tablero",
+            "phrase": [
+              "editó una columna del tablero",
+              "editó {n} columnas del tablero"
+            ],
+            "result": "Columna editada"
+          }
+        },
+        "remove_board_column": {
+          "en": {
+            "label": "Removing a board column",
+            "phrase": [
+              "removed a board column",
+              "removed {n} board columns"
+            ],
+            "result": "Board column removed"
+          },
+          "es": {
+            "label": "Quitando una columna del tablero",
+            "phrase": [
+              "quitó una columna del tablero",
+              "quitó {n} columnas del tablero"
+            ],
+            "result": "Columna quitada"
+          }
+        },
+        "get_questionnaire_questions": {
+          "en": {
+            "label": "Reading a questionnaire's questions",
+            "phrase": [
+              "read a questionnaire's questions",
+              "read {n} questionnaires' questions"
+            ],
+            "result": "Questionnaire questions read"
+          },
+          "es": {
+            "label": "Leyendo las preguntas de una encuesta",
+            "phrase": [
+              "leyó las preguntas de una encuesta",
+              "leyó las preguntas de {n} encuestas"
+            ],
+            "result": "Preguntas de la encuesta leídas"
+          }
+        },
+        "add_questionnaire_questions": {
+          "en": {
+            "label": "Adding questions to a questionnaire",
+            "phrase": [
+              "added questions to a questionnaire",
+              "added questions to {n} questionnaires"
+            ],
+            "result": "Questionnaire questions added"
+          },
+          "es": {
+            "label": "Añadiendo preguntas a una encuesta",
+            "phrase": [
+              "añadió preguntas a una encuesta",
+              "añadió preguntas a {n} encuestas"
+            ],
+            "result": "Preguntas añadidas a la encuesta"
+          }
+        },
+        "get_offline_quiz_groups": {
+          "en": {
+            "label": "Reading an offline quiz's groups",
+            "phrase": [
+              "read an offline quiz's groups",
+              "read {n} offline quizzes' groups"
+            ],
+            "result": "Offline quiz groups read"
+          },
+          "es": {
+            "label": "Leyendo los grupos de un cuestionario offline",
+            "phrase": [
+              "leyó los grupos de un cuestionario offline",
+              "leyó los grupos de {n} cuestionarios offline"
+            ],
+            "result": "Grupos del cuestionario offline leídos"
+          }
+        },
+        "add_questions_to_offline_quiz": {
+          "en": {
+            "label": "Adding questions to an offline quiz",
+            "phrase": [
+              "added questions to an offline quiz",
+              "added questions to {n} offline quizzes"
+            ],
+            "result": "Questions added to the offline quiz"
+          },
+          "es": {
+            "label": "Añadiendo preguntas a un cuestionario offline",
+            "phrase": [
+              "añadió preguntas a un cuestionario offline",
+              "añadió preguntas a {n} cuestionarios offline"
+            ],
+            "result": "Preguntas añadidas al cuestionario offline"
+          }
+        },
+        "create_offline_quiz_forms": {
+          "en": {
+            "label": "Creating an offline quiz's forms",
+            "phrase": [
+              "created an offline quiz's forms",
+              "created {n} offline quizzes' forms"
+            ],
+            "result": "Offline quiz forms created"
+          },
+          "es": {
+            "label": "Creando las hojas de un cuestionario offline",
+            "phrase": [
+              "creó las hojas de un cuestionario offline",
+              "creó las hojas de {n} cuestionarios offline"
+            ],
+            "result": "Hojas del cuestionario offline creadas"
           }
         }
       }
