@@ -1,0 +1,122 @@
+{
+  "name": "calendar",
+  "version": "0.1.0",
+  "description": "Calendar files for your agent: events, deadlines and plans as an .ics file (iCalendar) that Google Calendar, Outlook and Apple Calendar import, with your time zone, all-day events, repetitions and reminders, written on your computer and read back.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/calendar",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "calendar",
+    "ics",
+    "icalendar",
+    "events",
+    "reminders",
+    "mcp",
+    "miyagi",
+    "padawan"
+  ],
+  "metadata": {
+    "agent-kit": {
+      "kit": ">=0.22.0",
+      "description": {
+        "es": "Archivos de calendario para tu agente: eventos, entregas y planes como un archivo .ics (iCalendar) que importan Google Calendar, Outlook y Calendario de Apple, con tu zona horaria, eventos de todo el día, repeticiones y avisos, escritos en tu ordenador y leídos de vuelta."
+      },
+      "catalog": {
+        "logo": "assets/logo.svg",
+        "banner": "assets/banner.svg"
+      },
+      "provides": [
+        "calendar"
+      ],
+      "requires": [],
+      "capabilities": [
+        {
+          "id": "calendar-export",
+          "skills": [
+            "calendar-files"
+          ],
+          "tools": [
+            "write_ics",
+            "read_ics",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Calendar files",
+              "description": "Your dates, deadlines and plans as an .ics file to import into Google Calendar, Outlook or Apple Calendar, in your time zone, with repetitions and reminders; and what an .ics file holds, read back."
+            },
+            "es": {
+              "label": "Archivos de calendario",
+              "description": "Tus fechas, entregas y planes como un archivo .ics para importar en Google Calendar, Outlook o Calendario de Apple, en tu zona horaria, con repeticiones y avisos; y lo que tiene un archivo .ics, leído de vuelta."
+            }
+          }
+        }
+      ],
+      "readOnlyTools": [
+        "read_ics",
+        "server_info"
+      ],
+      "help": "Calendar files: I write events as an .ics file on this computer (in your time zone, all-day or timed, repeating, with reminders) that Google Calendar, Outlook or Apple Calendar import, and read an .ics to show what it holds; my calendar:calendar-files skill holds how. I don't touch your calendar app: you import the file.",
+      "labels": {
+        "write_ics": {
+          "en": {
+            "label": "Writing a calendar file",
+            "phrase": [
+              "wrote a calendar file",
+              "wrote {n} calendar files"
+            ],
+            "result": "Calendar file saved on this computer"
+          },
+          "es": {
+            "label": "Escribiendo un archivo de calendario",
+            "phrase": [
+              "escribió un archivo de calendario",
+              "escribió {n} archivos de calendario"
+            ],
+            "result": "Archivo de calendario guardado en este ordenador"
+          }
+        },
+        "read_ics": {
+          "en": {
+            "label": "Reading a calendar file",
+            "phrase": [
+              "read a calendar file",
+              "read {n} calendar files"
+            ],
+            "result": "Calendar file read"
+          },
+          "es": {
+            "label": "Leyendo un archivo de calendario",
+            "phrase": [
+              "leyó un archivo de calendario",
+              "leyó {n} archivos de calendario"
+            ],
+            "result": "Archivo de calendario leído"
+          }
+        },
+        "server_info": {
+          "en": {
+            "label": "Reading the calendar server's version",
+            "phrase": [
+              "read its version",
+              "read its version {n} times"
+            ],
+            "result": "Version read"
+          },
+          "es": {
+            "label": "Leyendo la versión del servidor de calendario",
+            "phrase": [
+              "leyó su versión",
+              "leyó su versión {n} veces"
+            ],
+            "result": "Versión leída"
+          }
+        }
+      }
+    }
+  }
+}
