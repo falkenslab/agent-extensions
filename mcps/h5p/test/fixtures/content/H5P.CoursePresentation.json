@@ -1,0 +1,8 @@
+{
+  "presentation": {
+    "slides": [
+      { "elements": [{ "x": 5, "y": 5, "width": 90, "height": 30, "action": { "library": "H5P.AdvancedText", "params": { "text": "<h2>El átomo</h2><p>Protones, neutrones y electrones.</p>" } } }] },
+      { "elements": [{ "x": 5, "y": 5, "width": 90, "height": 80, "action": { "library": "H5P.MultiChoice", "params": { "question": "¿Qué partícula tiene carga negativa?", "answers": [{ "text": "El electrón", "correct": true }, { "text": "El protón", "correct": false }] } } }] }
+    ]
+  }
+}

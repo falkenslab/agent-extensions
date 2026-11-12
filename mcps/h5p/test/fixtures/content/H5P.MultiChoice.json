@@ -1,0 +1,8 @@
+{
+  "question": "¿Qué etiqueta de HTML5 marca el contenido principal de una página?",
+  "answers": [
+    { "text": "&lt;main&gt;", "correct": true, "tipsAndFeedback": { "chosenFeedback": "Sí: solo hay un &lt;main&gt; por página." } },
+    { "text": "&lt;section&gt;", "correct": false },
+    { "text": "&lt;body&gt;", "correct": false }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "introPage": { "showIntroPage": true, "title": "Repaso", "introduction": "Cinco minutos de repaso." },
+  "questions": [
+    { "library": "H5P.MultiChoice 1.16", "params": { "question": "¿Cuánto es 2 + 2?", "answers": [{ "text": "4", "correct": true }, { "text": "5", "correct": false }] } },
+    { "library": "H5P.TrueFalse", "params": { "question": "El sol es una estrella.", "correct": "true" } },
+    { "library": "H5P.Blanks", "params": { "questions": ["El agua es *H2O*."] } }
+  ]
+}

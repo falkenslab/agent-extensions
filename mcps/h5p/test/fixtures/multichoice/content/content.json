@@ -1,0 +1,46 @@
+{
+  "question": "<p>¿Qué etiqueta de HTML5 marca el contenido principal de una página?</p>",
+  "answers": [
+    {
+      "correct": true,
+      "text": "<div>&lt;main&gt;</div>",
+      "tipsAndFeedback": {
+        "tip": "",
+        "chosenFeedback": "<div>Sí: solo hay un &lt;main&gt; por página.</div>",
+        "notChosenFeedback": ""
+      }
+    },
+    {
+      "correct": false,
+      "text": "<div>&lt;section&gt;</div>",
+      "tipsAndFeedback": {
+        "tip": "",
+        "chosenFeedback": "<div>&lt;section&gt; agrupa un tema, no el contenido principal.</div>",
+        "notChosenFeedback": ""
+      }
+    },
+    {
+      "correct": false,
+      "text": "<div>&lt;body&gt;</div>",
+      "tipsAndFeedback": {
+        "tip": "",
+        "chosenFeedback": "<div>&lt;body&gt; lo contiene todo, también la cabecera y el pie.</div>",
+        "notChosenFeedback": ""
+      }
+    }
+  ],
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "enableCheckButton": true,
+    "type": "auto",
+    "singlePoint": false,
+    "randomAnswers": true,
+    "showSolutionsRequiresInput": true,
+    "confirmCheckDialog": false,
+    "confirmRetryDialog": false,
+    "autoCheck": false,
+    "passPercentage": 100,
+    "showScorePoints": true
+  }
+}

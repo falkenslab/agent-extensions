@@ -12,11 +12,11 @@ Multiple choice, true/false, fill in the blanks, drag the words, cards, question
 [![npm](https://img.shields.io/npm/v/@falkenslab/h5p-mcp?label=h5p-mcp&color=cb3837&logo=npm)](https://www.npmjs.com/package/@falkenslab/h5p-mcp)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
-**[📖 h5p-mcp's documentation](https://falkenslab.github.io/h5p-mcp/)** · [🇪🇸 Leer en español](README.es.md)
+**[📖 h5p-mcp](../../mcps/h5p/)** · [🇪🇸 Leer en español](README.es.md)
 
 </div>
 
-This extension gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit), Claude Code or Codex the [h5p-mcp](https://github.com/falkenslab/h5p-mcp) server and what to do with it: turning the questions, gap texts, cards or slides it writes with you into an `.h5p` package on your computer, checked against its content type before it's written, in your language, with a preview to review it; and reading an existing package to review or change it. The packages carry only their content, not H5P's code, so they're small and play on any site that has the content type, such as a Moodle with its H5P activity. It uploads nothing: in Moodle, the [moodle-teacher](../moodle-teacher/) extension does. It knows H5P, not teaching: an agent that knows how to teach, like [miyagi](https://github.com/falkenslab/miyagi), installs it to make a class's self-checks. It runs h5p-mcp from npm, at a fixed version.
+This extension gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit), Claude Code or Codex the [h5p-mcp](../../mcps/h5p/) server and what to do with it: turning the questions, gap texts, cards or slides it writes with you into an `.h5p` package on your computer, checked against its content type before it's written, in your language, with a preview to review it; and reading an existing package to review or change it. The packages carry only their content, not H5P's code, so they're small and play on any site that has the content type, such as a Moodle with its H5P activity. It uploads nothing: in Moodle, the [moodle-teacher](../moodle-teacher/) extension does. It knows H5P, not teaching: an agent that knows how to teach, like [miyagi](https://github.com/falkenslab/miyagi), installs it to make a class's self-checks. It runs h5p-mcp from npm, at a fixed version.
 
 ## ✨ Why this extension
 
@@ -60,9 +60,7 @@ It needs no settings. Then ask: "Make me a five-question multiple choice on the 
 
 ## 📚 Documentation
 
-- **[h5p-mcp's documentation](https://falkenslab.github.io/h5p-mcp/)**: the server and its settings.
-- **[Building packages](https://falkenslab.github.io/h5p-mcp/packages)**: the content types, what is checked, languages and what isn't supported yet.
-- **[h5p-mcp's tools](https://falkenslab.github.io/h5p-mcp/reference/tools)**: every tool, with the description the agent reads.
+- **[h5p-mcp](../../mcps/h5p/)**: the server, in this repository: its content types and tools, content-only packages, and how to develop it.
 
 ## 🛠️ Developing
 

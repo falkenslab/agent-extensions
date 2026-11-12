@@ -12,11 +12,11 @@ Opción múltiple, verdadero o falso, rellenar huecos, arrastrar palabras, tarje
 [![npm](https://img.shields.io/npm/v/@falkenslab/h5p-mcp?label=h5p-mcp&color=cb3837&logo=npm)](https://www.npmjs.com/package/@falkenslab/h5p-mcp)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](../../LICENSE)
 
-**[📖 Documentación de h5p-mcp](https://falkenslab.github.io/h5p-mcp/es/)** · [🇬🇧 Read in English](README.md)
+**[📖 h5p-mcp](../../mcps/h5p/)** · [🇬🇧 Read in English](README.md)
 
 </div>
 
-Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), a Claude Code o a Codex el servidor [h5p-mcp](https://github.com/falkenslab/h5p-mcp) y lo que hay que saber para usarlo: convertir las preguntas, los textos con huecos, las tarjetas o las diapositivas que escribe contigo en un paquete `.h5p` en tu ordenador, comprobado según su tipo de contenido antes de escribirlo, en tu idioma y con una vista previa para revisarlo; y leer un paquete que ya existe para revisarlo o cambiarlo. Los paquetes llevan solo su contenido, no el código de H5P, así que pesan poco y se reproducen en cualquier sitio que tenga ese tipo de contenido, como un Moodle con su actividad H5P. No sube nada: en Moodle lo hace la extensión [moodle-teacher](../moodle-teacher/). Sabe de H5P, no de enseñar: un agente que sabe enseñar, como [miyagi](https://github.com/falkenslab/miyagi), la instala para preparar las autoevaluaciones de una clase. Ejecuta h5p-mcp desde npm, a una versión fija.
+Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), a Claude Code o a Codex el servidor [h5p-mcp](../../mcps/h5p/) y lo que hay que saber para usarlo: convertir las preguntas, los textos con huecos, las tarjetas o las diapositivas que escribe contigo en un paquete `.h5p` en tu ordenador, comprobado según su tipo de contenido antes de escribirlo, en tu idioma y con una vista previa para revisarlo; y leer un paquete que ya existe para revisarlo o cambiarlo. Los paquetes llevan solo su contenido, no el código de H5P, así que pesan poco y se reproducen en cualquier sitio que tenga ese tipo de contenido, como un Moodle con su actividad H5P. No sube nada: en Moodle lo hace la extensión [moodle-teacher](../moodle-teacher/). Sabe de H5P, no de enseñar: un agente que sabe enseñar, como [miyagi](https://github.com/falkenslab/miyagi), la instala para preparar las autoevaluaciones de una clase. Ejecuta h5p-mcp desde npm, a una versión fija.
 
 ## ✨ Por qué esta extensión
 
@@ -60,9 +60,7 @@ No necesita ajustes. Luego pide: «Hazme cinco preguntas de opción múltiple so
 
 ## 📚 Documentación
 
-- **[Documentación de h5p-mcp](https://falkenslab.github.io/h5p-mcp/es/)**: el servidor y sus ajustes.
-- **[Crear paquetes](https://falkenslab.github.io/h5p-mcp/es/packages)**: los tipos de contenido, qué se comprueba, los idiomas y lo que aún no se admite.
-- **[Herramientas de h5p-mcp](https://falkenslab.github.io/h5p-mcp/es/reference/tools)**: cada herramienta, con la descripción que lee el agente.
+- **[h5p-mcp](../../mcps/h5p/)**: el servidor, en este repositorio (en inglés): sus tipos de contenido y herramientas, los paquetes solo con contenido y cómo desarrollarlo.
 
 ## 🛠️ Desarrollo
 

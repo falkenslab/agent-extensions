@@ -26,7 +26,7 @@ jobs:
         run: |
           for dir in mcps/*/; do
             echo "::group::$dir"
-            (cd "$dir" && npm ci --no-audit --no-fund && npm run build && npm test)
+            (cd "$dir" && npm ci --no-audit --no-fund && npm run --if-present typecheck && npm run --if-present lint && npm run build && npm test && npm run --if-present check)
             echo "::endgroup::"
           done
           git diff --exit-code -- extensions/*/dist/

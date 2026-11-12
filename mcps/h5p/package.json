@@ -1,0 +1,57 @@
+{
+  "name": "@falkenslab/h5p-mcp",
+  "version": "0.1.0",
+  "description": "Content-only H5P packages for AI agents: built, validated and read locally.",
+  "license": "MIT",
+  "author": "Falken's Lab",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falkenslab/agent-extensions.git",
+    "directory": "mcps/h5p"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/mcps/h5p",
+  "bugs": {
+    "url": "https://github.com/falkenslab/agent-extensions/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "agent-kit",
+    "h5p"
+  ],
+  "type": "module",
+  "bin": {
+    "h5p-mcp": "dist/server.mjs"
+  },
+  "files": [
+    "dist/server.mjs"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "node scripts/test.mjs",
+    "check": "node scripts/check-tools.mjs",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/server.mjs",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm test && npm run build && npm run check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@types/node": "^20.19.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.12.0",
+    "fflate": "^0.8.2",
+    "globals": "^17.13.0",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.1",
+    "zod": "^4.6.5"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Prueba de opción múltiple",
+  "language": "es",
+  "mainLibrary": "H5P.MultiChoice",
+  "embedTypes": [
+    "iframe"
+  ],
+  "license": "U",
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.MultiChoice",
+      "majorVersion": 1,
+      "minorVersion": 16
+    }
+  ]
+}

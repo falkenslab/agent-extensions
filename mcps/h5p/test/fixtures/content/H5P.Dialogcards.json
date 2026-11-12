@@ -1,0 +1,1 @@
+{ "title": "Vocabulario", "dialogs": [{ "text": "perro", "answer": "dog" }, { "text": "gato", "answer": "cat", "tips": { "front": "Maúlla" } }] }
