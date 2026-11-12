@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Falken's Lab's marketplace (`falkenslab`) of extensions. Each extension folder is both a Claude Code plugin, unchanged, and an extension for agents built on [agent-kit](https://github.com/falkenslab/agent-kit). There is no application code: the repository is JSON manifests, Markdown skills and commands, SVG assets, the `weather` example server, a static catalog page and `scripts/check-tools.mjs`.
+Falken's Lab's marketplace (`falkenslab`) of extensions. Each extension folder is both a Claude Code plugin, unchanged, and an extension for agents built on [agent-kit](https://github.com/falkenslab/agent-kit). Besides JSON manifests, Markdown skills and commands, SVG assets, a static catalog page and `scripts/check-tools.mjs`, it holds the `weather` example server (inside its extension) and, in `mcps/`, the servers of the file-format extensions (`anki`, `calendar`, `documents`), each published to npm on its own.
 
 ## Commands
 
@@ -16,6 +16,7 @@ Node 22, no dependencies, no `npm install` at the root.
 - `node scripts/check-tools.mjs [extension…]` starts each local MCP server at its pinned version (only `tools/list`: no Moodle or Docker needed) and fails if a capability, a label, `readOnlyTools`, `confirmTools`, `serverConfirmTools`, a skill or a command names a tool its server doesn't have in that role, if `readOnlyTools` leaves out a tool the server marks read-only, if a tool has no label (in an extension that labels its tools), or if a README quotes another version of a pinned server or its "What's inside" table (`## 🧰`) leaves out or invents a skill, a command or a subagent. CI runs it; run it after bumping a server.
 - `claude plugin validate --strict .` validates the marketplace; `claude plugin validate --strict extensions/moodle-teacher` validates one extension. Strict means warnings fail. `userConfig` with `options` needs Claude Code 2.1.271 or later.
 - `extensions/weather/` builds its own MCP server: `npm install` and `npm run build` in `extensions/weather/` write its `dist/server.mjs`, which is committed (agent-kit installs files and never runs `npm install`); its `node_modules/` stays out. Rebuild it after any change to `weather/src/`.
+- `mcps/<name>/` is a server published to npm as `@falkenslab/<name>-mcp` (only its `dist/server.mjs` goes in the package): `npm install`, `npm run build` and `npm test` there. Its build also copies `dist/server.mjs` into `extensions/<name>/dist/`, committed, which the extension runs until its `.mcp.json` moves to `npx -y @falkenslab/<name>-mcp@<version>` (then that copy goes). CI builds and tests each one and fails if the committed copy is stale. A version goes up together in `package.json`, the server's `VERSION` constant and the extension's `plugin.json`; `npm publish` (the owner's) builds and tests first. Code that only builds or tests a server lives there, never in the extension, since agent-kit installs an extension's whole folder.
 - To try an extension in an agent: `my-agent extension add ./extensions/moodle-teacher --link`.
 - To preview the site, serve the repository root over HTTP and open `site/index.html` or `site/catalog.html` (they fetch `catalog.json` or `../catalog.json`).
 

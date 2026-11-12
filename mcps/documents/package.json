@@ -1,0 +1,47 @@
+{
+  "name": "@falkenslab/documents-mcp",
+  "version": "0.1.0",
+  "description": "An MCP server that writes a .docx in a Word template from Markdown, in the template's own styles, and reads one back. The server of Falken's Lab's documents extension.",
+  "keywords": [
+    "mcp",
+    "docx",
+    "word",
+    "templates"
+  ],
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/mcps/documents",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falkenslab/agent-extensions.git",
+    "directory": "mcps/documents"
+  },
+  "bugs": "https://github.com/falkenslab/agent-extensions/issues",
+  "license": "MIT",
+  "author": "Falken's Lab",
+  "type": "module",
+  "bin": {
+    "documents-mcp": "dist/server.mjs"
+  },
+  "files": [
+    "dist/server.mjs"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "esbuild src/server.mjs --bundle --minify --platform=node --format=esm --target=node20 --outfile=dist/server.mjs \"--banner:js=#!/usr/bin/env node\"",
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "prepublishOnly": "npm run build && npm test",
+    "postbuild": "node -e \"require('fs').mkdirSync('../../extensions/documents/dist',{recursive:true});require('fs').copyFileSync('dist/server.mjs','../../extensions/documents/dist/server.mjs')\""
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@xmldom/xmldom": "^0.9.12",
+    "esbuild": "^0.28.2",
+    "fflate": "^0.8.3",
+    "marked": "^18.2.0",
+    "zod": "^4.6.7"
+  }
+}

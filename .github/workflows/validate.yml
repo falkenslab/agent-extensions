@@ -20,6 +20,16 @@ jobs:
         run: claude plugin validate --strict .
       # Every tool a manifest, a skill or a command names exists in its pinned server and role; readOnlyTools
       # keeps up with the server's readOnlyHint. Starts each local server for its tools/list only.
+      # The servers in mcps/, published to npm one by one: built and tested, and each extension still carries
+      # the build its .mcp.json runs (dist/server.mjs, copied by the build until it runs from npm).
+      - name: The servers in mcps/
+        run: |
+          for dir in mcps/*/; do
+            echo "::group::$dir"
+            (cd "$dir" && npm ci --no-audit --no-fund && npm run build && npm test)
+            echo "::endgroup::"
+          done
+          git diff --exit-code -- extensions/*/dist/
       - name: The tools they name
         run: node scripts/check-tools.mjs
       - name: Each extension

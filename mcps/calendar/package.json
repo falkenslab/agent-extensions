@@ -1,0 +1,45 @@
+{
+  "name": "@falkenslab/calendar-mcp",
+  "version": "0.1.0",
+  "description": "An MCP server that writes and reads iCalendar (.ics) files: timed events in a time zone, all-day events, repetitions and reminders. The server of Falken's Lab's calendar extension.",
+  "keywords": [
+    "mcp",
+    "ics",
+    "icalendar",
+    "calendar"
+  ],
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/mcps/calendar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falkenslab/agent-extensions.git",
+    "directory": "mcps/calendar"
+  },
+  "bugs": "https://github.com/falkenslab/agent-extensions/issues",
+  "license": "MIT",
+  "author": "Falken's Lab",
+  "type": "module",
+  "bin": {
+    "calendar-mcp": "dist/server.mjs"
+  },
+  "files": [
+    "dist/server.mjs"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "esbuild src/server.mjs --bundle --minify --platform=node --format=esm --target=node20 --outfile=dist/server.mjs \"--banner:js=#!/usr/bin/env node\"",
+    "test": "node --test \"test/*.test.mjs\"",
+    "prepublishOnly": "npm run build && npm test",
+    "postbuild": "node -e \"require('fs').mkdirSync('../../extensions/calendar/dist',{recursive:true});require('fs').copyFileSync('dist/server.mjs','../../extensions/calendar/dist/server.mjs')\""
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "esbuild": "^0.28.2",
+    "ical.js": "^2.2.1",
+    "zod": "^4.6.7"
+  }
+}

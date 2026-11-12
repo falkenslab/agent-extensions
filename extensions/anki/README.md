@@ -65,7 +65,7 @@ It needs no settings. Then ask: "Make me an Anki deck with the twenty irregular 
 
 ## 🛠️ Developing
 
-The extension is a Claude Code plugin: `.claude-plugin/plugin.json` (agent-kit's data in `metadata["agent-kit"]`), `.mcp.json`, `skills/` and its server in `src/`, bundled with esbuild into `dist/server.mjs`, which is committed (agent-kit installs files and never runs `npm install`). After a change to `src/`, run `npm install`, `npm run build` and `npm test` in `extensions/anki/`. It writes Anki's legacy collection (`collection.anki2`, schema 11) with [sql.js](https://github.com/sql-js/sql.js) and zips it with [fflate](https://github.com/101arrowz/fflate). To try a change, link it into an agent instead of installing it (`my-agent extension add ./extensions/anki --link`), and check it with `claude plugin validate --strict extensions/anki`.
+The server's code is in [`mcps/anki/`](../../mcps/anki/), which goes to npm as `@falkenslab/anki-mcp`; there `npm install`, `npm run build` and `npm test` build and test it, and the build copies it into this extension's `dist/server.mjs`, which is committed until the extension runs it from npm. To try a change, link the extension into an agent (`my-agent extension add ./extensions/anki --link`) and check it with `claude plugin validate --strict extensions/anki`.
 
 <div align="center">
 

@@ -1,0 +1,46 @@
+{
+  "name": "@falkenslab/anki-mcp",
+  "version": "0.1.0",
+  "description": "An MCP server that writes and reads Anki decks (.apkg): basic, both-ways and cloze cards with tags and media, updated instead of duplicated when exported again. The server of Falken's Lab's anki extension.",
+  "keywords": [
+    "mcp",
+    "anki",
+    "apkg",
+    "flashcards"
+  ],
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/mcps/anki",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falkenslab/agent-extensions.git",
+    "directory": "mcps/anki"
+  },
+  "bugs": "https://github.com/falkenslab/agent-extensions/issues",
+  "license": "MIT",
+  "author": "Falken's Lab",
+  "type": "module",
+  "bin": {
+    "anki-mcp": "dist/server.mjs"
+  },
+  "files": [
+    "dist/server.mjs"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test \"test/*.test.mjs\"",
+    "prepublishOnly": "npm run build && npm test",
+    "postbuild": "node -e \"require('fs').mkdirSync('../../extensions/anki/dist',{recursive:true});require('fs').copyFileSync('dist/server.mjs','../../extensions/anki/dist/server.mjs')\""
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "esbuild": "^0.28.2",
+    "fflate": "^0.8.3",
+    "sql.js": "^1.16.0",
+    "zod": "^4.6.7"
+  }
+}

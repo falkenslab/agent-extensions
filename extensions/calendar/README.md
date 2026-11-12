@@ -66,7 +66,7 @@ It needs no settings. Then ask: "Put my essay deadlines in a calendar file, with
 
 ## 🛠️ Developing
 
-The server's source is `src/` (`server.mjs`, the tools; `ics.mjs`, writing; `parse.mjs`, reading; `tz.mjs`, time zones from the platform's own data); `npm install`, `npm run build` then `npm test` write `dist/server.mjs`, which is committed, and test it, checking the files with [ical.js](https://github.com/kewisch/ical.js) (`package.json`, `src/` and `test/` are only for building it). Try a change linked into an agent: `my-agent extension add ./extensions/calendar --link`, and check it with `claude plugin validate --strict extensions/calendar`.
+The server's code is in [`mcps/calendar/`](../../mcps/calendar/), which goes to npm as `@falkenslab/calendar-mcp`; there `npm install`, `npm run build` and `npm test` build and test it, and the build copies it into this extension's `dist/server.mjs`, which is committed until the extension runs it from npm. To try a change, link the extension into an agent (`my-agent extension add ./extensions/calendar --link`) and check it with `claude plugin validate --strict extensions/calendar`.
 
 <div align="center">
 

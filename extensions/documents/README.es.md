@@ -65,7 +65,7 @@ No necesita ajustes. Luego pide: «Escribe la memoria del departamento como .doc
 
 ## 🛠️ Desarrollo
 
-El código del servidor está en `src/` (`server.mjs` con las herramientas, `docx.mjs`, `markdown.mjs` y `styles.mjs`), hecho con el SDK de MCP, [marked](https://marked.js.org) para el Markdown, [fflate](https://github.com/101arrowz/fflate) para el zip y [xmldom](https://github.com/xmldom/xmldom) para el XML. `npm install` y luego `npm run build` escriben `dist/server.mjs` (unos 920 KB, un solo archivo), que se sube al repositorio: el kit instala archivos y nunca ejecuta `npm install`, y `node_modules/` se queda fuera. `npm test` escribe documentos con una plantilla creada en la prueba (estilos en español, un encabezado con logo, campos partidos, un marcador `{{content}}`), comprueba cada parte y cada estilo, los convierte a PDF si LibreOffice está instalado y lista las herramientas del servidor ya construido. Para probar un cambio, enlaza la extensión en un agente (`my-agent extension add ./extensions/documents --link`) y compruébala con `claude plugin validate --strict extensions/documents`.
+El código del servidor está en [`mcps/documents/`](../../mcps/documents/), que se publica en npm como `@falkenslab/documents-mcp`; allí `npm install`, `npm run build` y `npm test` lo construyen y lo prueban, y la build lo copia en el `dist/server.mjs` de esta extensión, que se guarda en el repositorio hasta que la extensión lo ejecute desde npm. Para probar un cambio, enlaza la extensión en un agente (`my-agent extension add ./extensions/documents --link`) y compruébala con `claude plugin validate --strict extensions/documents`.
 
 <div align="center">
 

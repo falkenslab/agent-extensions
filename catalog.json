@@ -78,7 +78,7 @@
       "skills": [
         {
           "name": "anki-decks",
-          "description": "Write Anki flashcard decks as .apkg files with the anki server - basic, both-ways and cloze cards, one fact each, with tags, images and audio, subdecks with ::, saved on this computer for the person to import into Anki, AnkiDroid or AnkiMobile - and re-export or add to a deck so its notes update instead of duplicating; read an existing .apkg. Use when the person asks for Anki cards or a deck, flashcards to import into Anki, an .apkg, or to look inside or extend one."
+          "description": "Write Anki flashcard decks as .apkg files with the anki server - basic, both-ways and cloze cards, with tags, images and audio, subdecks with ::, saved on this computer for the person to import into Anki, AnkiDroid or AnkiMobile - and re-export or add to a deck so its notes update instead of duplicating; read an existing .apkg. Use when the person asks for Anki cards or a deck, flashcards to import into Anki, an .apkg, or to look inside or extend one."
         }
       ],
       "tools": [

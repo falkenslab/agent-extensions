@@ -66,7 +66,7 @@ No necesita ajustes. Luego pide: «Pon mis entregas del ensayo en un archivo de 
 
 ## 🛠️ Desarrollo
 
-El código del servidor está en `src/` (`server.mjs`, las herramientas; `ics.mjs`, la escritura; `parse.mjs`, la lectura; `tz.mjs`, las zonas horarias con los datos de la propia plataforma); `npm install`, `npm run build` y `npm test` escriben `dist/server.mjs`, que se guarda en el repositorio, y lo prueban, comprobando los archivos con [ical.js](https://github.com/kewisch/ical.js) (`package.json`, `src/` y `test/` solo sirven para construirlo). Para probar un cambio, enlázala en un agente (`my-agent extension add ./extensions/calendar --link`) y compruébala con `claude plugin validate --strict extensions/calendar`.
+El código del servidor está en [`mcps/calendar/`](../../mcps/calendar/), que se publica en npm como `@falkenslab/calendar-mcp`; allí `npm install`, `npm run build` y `npm test` lo construyen y lo prueban, y la build lo copia en el `dist/server.mjs` de esta extensión, que se guarda en el repositorio hasta que la extensión lo ejecute desde npm. Para probar un cambio, enlaza la extensión en un agente (`my-agent extension add ./extensions/calendar --link`) y compruébala con `claude plugin validate --strict extensions/calendar`.
 
 <div align="center">
 

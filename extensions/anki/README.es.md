@@ -65,7 +65,7 @@ No necesita ajustes. Luego pide: «Hazme un mazo de Anki con los veinte verbos i
 
 ## 🛠️ Desarrollo
 
-La extensión es un plugin de Claude Code: `.claude-plugin/plugin.json` (los datos de agent-kit en `metadata["agent-kit"]`), `.mcp.json`, `skills/` y su servidor en `src/`, empaquetado con esbuild en `dist/server.mjs`, que se sube al repositorio (agent-kit instala archivos y nunca ejecuta `npm install`). Tras un cambio en `src/`, ejecuta `npm install`, `npm run build` y `npm test` en `extensions/anki/`. Escribe la colección antigua de Anki (`collection.anki2`, esquema 11) con [sql.js](https://github.com/sql-js/sql.js) y la comprime con [fflate](https://github.com/101arrowz/fflate). Para probar un cambio, enlázala en un agente en vez de instalarla (`my-agent extension add ./extensions/anki --link`) y compruébala con `claude plugin validate --strict extensions/anki`.
+El código del servidor está en [`mcps/anki/`](../../mcps/anki/), que se publica en npm como `@falkenslab/anki-mcp`; allí `npm install`, `npm run build` y `npm test` lo construyen y lo prueban, y la build lo copia en el `dist/server.mjs` de esta extensión, que se guarda en el repositorio hasta que la extensión lo ejecute desde npm. Para probar un cambio, enlaza la extensión en un agente (`my-agent extension add ./extensions/anki --link`) y compruébala con `claude plugin validate --strict extensions/anki`.
 
 <div align="center">
 

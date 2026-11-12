@@ -65,7 +65,7 @@ It needs no settings. Then ask: "Write the department report as a .docx with the
 
 ## 🛠️ Developing
 
-The server's source is `src/` (`server.mjs` with the tools, `docx.mjs`, `markdown.mjs` and `styles.mjs`), built on the MCP SDK, [marked](https://marked.js.org) for the Markdown, [fflate](https://github.com/101arrowz/fflate) for the zip and [xmldom](https://github.com/xmldom/xmldom) for the XML. `npm install` then `npm run build` writes `dist/server.mjs` (about 920 KB, one file), which is committed: the kit installs files and never runs `npm install`, and `node_modules/` stays out. `npm test` writes documents from a template built in the test (localized styles, a header with a logo, split placeholders, a `{{content}}` marker), checks every part and style, converts them to PDF when LibreOffice is installed, and lists the built server's tools. To try a change, link the extension into an agent (`my-agent extension add ./extensions/documents --link`) and check it with `claude plugin validate --strict extensions/documents`.
+The server's code is in [`mcps/documents/`](../../mcps/documents/), which goes to npm as `@falkenslab/documents-mcp`; there `npm install`, `npm run build` and `npm test` build and test it, and the build copies it into this extension's `dist/server.mjs`, which is committed until the extension runs it from npm. To try a change, link the extension into an agent (`my-agent extension add ./extensions/documents --link`) and check it with `claude plugin validate --strict extensions/documents`.
 
 <div align="center">
 
