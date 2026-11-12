@@ -1,0 +1,142 @@
+{
+  "name": "anki",
+  "version": "0.1.0",
+  "description": "Anki decks from your agent: flashcards (question and answer, both ways, or fill the gap) with tags, images and audio, written as an .apkg on your computer that Anki, AnkiDroid and AnkiMobile import; exported again, it updates the cards instead of duplicating them, and an existing deck's export can take more.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/anki",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "anki",
+    "flashcards",
+    "apkg",
+    "decks",
+    "cloze",
+    "study",
+    "mcp",
+    "padawan",
+    "miyagi"
+  ],
+  "metadata": {
+    "agent-kit": {
+      "kit": ">=0.22.0",
+      "description": {
+        "es": "Mazos de Anki desde tu agente: tarjetas (pregunta y respuesta, en los dos sentidos o rellenar el hueco) con etiquetas, imágenes y audio, escritas como un .apkg en tu ordenador que Anki, AnkiDroid y AnkiMobile importan; si se exporta otra vez, actualiza las tarjetas en vez de duplicarlas, y la exportación de un mazo que ya existe puede recibir más."
+      },
+      "catalog": {
+        "logo": "assets/logo.svg",
+        "banner": "assets/banner.svg"
+      },
+      "provides": [
+        "anki"
+      ],
+      "requires": [],
+      "capabilities": [
+        {
+          "id": "anki-export",
+          "skills": [
+            "anki-decks"
+          ],
+          "tools": [
+            "write_deck",
+            "add_to_deck",
+            "read_deck",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Anki decks",
+              "description": "Flashcards as an Anki deck ready to import: question and answer, both ways or fill the gap, with tags, images and audio. Exported again, it updates the cards instead of duplicating them, and an existing deck's export can take more."
+            },
+            "es": {
+              "label": "Mazos de Anki",
+              "description": "Tarjetas como un mazo de Anki listo para importar: pregunta y respuesta, en los dos sentidos o rellenar el hueco, con etiquetas, imágenes y audio. Si se exporta otra vez, actualiza las tarjetas en vez de duplicarlas, y la exportación de un mazo que ya existe puede recibir más."
+            }
+          }
+        }
+      ],
+      "readOnlyTools": [
+        "read_deck",
+        "server_info"
+      ],
+      "help": "Anki decks: I write flashcards (basic, both ways or cloze, with tags, images and audio) as an .apkg on this computer, add cards to an existing .apkg, and read one; the person imports the file into Anki, AnkiDroid or AnkiMobile, and exporting the same deck again updates its cards. My anki:anki-decks skill holds how. What to review and when is the person's or their study agent's.",
+      "labels": {
+        "write_deck": {
+          "en": {
+            "label": "Writing the Anki deck \"{deck}\"",
+            "phrase": [
+              "wrote an Anki deck",
+              "wrote {n} Anki decks"
+            ],
+            "result": "Deck saved on this computer"
+          },
+          "es": {
+            "label": "Creando el mazo de Anki «{deck}»",
+            "phrase": [
+              "creó un mazo de Anki",
+              "creó {n} mazos de Anki"
+            ],
+            "result": "Mazo guardado en este ordenador"
+          }
+        },
+        "add_to_deck": {
+          "en": {
+            "label": "Adding cards to an Anki deck",
+            "phrase": [
+              "added cards to an Anki deck",
+              "added cards to Anki decks {n} times"
+            ],
+            "result": "New package saved on this computer"
+          },
+          "es": {
+            "label": "Añadiendo tarjetas a un mazo de Anki",
+            "phrase": [
+              "añadió tarjetas a un mazo de Anki",
+              "añadió tarjetas a mazos de Anki {n} veces"
+            ],
+            "result": "Paquete nuevo guardado en este ordenador"
+          }
+        },
+        "read_deck": {
+          "en": {
+            "label": "Reading an Anki deck",
+            "phrase": [
+              "read an Anki deck",
+              "read {n} Anki decks"
+            ],
+            "result": "Deck read"
+          },
+          "es": {
+            "label": "Leyendo un mazo de Anki",
+            "phrase": [
+              "leyó un mazo de Anki",
+              "leyó {n} mazos de Anki"
+            ],
+            "result": "Mazo leído"
+          }
+        },
+        "server_info": {
+          "en": {
+            "label": "Reading the anki server's settings",
+            "phrase": [
+              "read its settings",
+              "read its settings {n} times"
+            ],
+            "result": "Settings read"
+          },
+          "es": {
+            "label": "Leyendo los ajustes del servidor anki",
+            "phrase": [
+              "leyó sus ajustes",
+              "leyó sus ajustes {n} veces"
+            ],
+            "result": "Ajustes leídos"
+          }
+        }
+      }
+    }
+  }
+}

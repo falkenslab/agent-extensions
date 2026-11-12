@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="anki extension logo: two flashcards, the front one with a question, a dividing line and its answer">
+  <rect x="34" y="16" width="64" height="84" rx="12" fill="#bfe6df" stroke="#0f5c55" stroke-width="5" transform="rotate(10 66 58)"/>
+  <rect x="22" y="22" width="64" height="84" rx="12" fill="#ffffff" stroke="#0f5c55" stroke-width="5" transform="rotate(-6 54 64)"/>
+  <g transform="rotate(-6 54 64)">
+    <rect x="33" y="36" width="42" height="9" rx="4.5" fill="#0f5c55"/>
+    <rect x="33" y="51" width="30" height="7" rx="3.5" fill="#0f5c55" opacity="0.55"/>
+    <rect x="31" y="66" width="46" height="4" rx="2" fill="#ff6b57"/>
+    <rect x="33" y="78" width="38" height="7" rx="3.5" fill="#2a9d8f"/>
+    <rect x="33" y="90" width="26" height="7" rx="3.5" fill="#8fd0c6"/>
+  </g>
+</svg>
