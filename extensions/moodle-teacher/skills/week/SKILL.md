@@ -1,6 +1,10 @@
 ---
 name: week
 description: What this week holds in the Moodle courses the person teaches - the dates coming up, what is waiting to be graded, and unread notifications and messages - in a short list by day, only reading. Use when the person asks what is due or pending this week (or in the next days), or invokes it to start the week.
+label: es=Esta semana | en=This week | fr=Cette semaine | de=Diese Woche
+icon: 📅
+group: day
+needs-classroom: true
 ---
 
 Look at the Moodle courses the person teaches on the active site and tell them what this week holds, within the days the person asks about (the next 7 if they don't say):

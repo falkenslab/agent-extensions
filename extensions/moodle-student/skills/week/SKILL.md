@@ -1,6 +1,10 @@
 ---
 name: week
 description: A quick look at what a student has this week in their Moodle courses - deadlines in the next days including overdue ones still accepted, what is locked, unread notifications - in a short list by day, only reading. Use when the person asks what they have to do or hand in this week, today or in the next few days.
+label: es=Esta semana | en=This week | fr=Cette semaine | de=Diese Woche
+icon: 📅
+group: day
+needs-classroom: true
 ---
 
 Look at the person's Moodle courses on the active site and tell them what they have to do within the days the person asks about (the next 7 if they don't say):

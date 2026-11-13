@@ -1,6 +1,10 @@
 ---
 name: to-grade
 description: What is waiting to be graded in one Moodle course or in all the person teaches - submissions not graded yet, quiz questions graded by hand, whole-forum grades - as a table with how long the oldest has waited, only reading, then offering to start. Use when the person asks what they have to grade or correct.
+label: es=Ver qué hay por corregir | en=See what is to grade | fr=Voir ce qu'il reste à corriger | de=Sehen, was zu bewerten ist
+icon: 📥
+group: day
+needs-classroom: true
 ---
 
 List what's waiting for the person to grade on the active Moodle site, in the course the person names (or in every course they teach, if they name none). In each course:
