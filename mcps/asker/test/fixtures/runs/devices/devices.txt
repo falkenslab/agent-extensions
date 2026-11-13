@@ -1,0 +1,59 @@
+Asker    : version 2.10.0
+Filename : devices.txt
+Datetime : 2026-11-13 13:38:21 +0000
+
+------
+router
+* Network device that forwards packets between different networks using IP addresses
+* Device that keeps a table of routes to choose where each packet goes next
+
++-------------------+-----------------------------------------+
+| attribute         | value                                   |
++-------------------+-----------------------------------------+
+| OSI layer         | Network layer                           |
+| Addresses it uses | IP addresses                            |
+| Typical place     | Between a home network and the internet |
+| Main table        | Routing table                           |
++-------------------+-----------------------------------------+
++--------------------------------------+
+| Steps to forward a packet            |
++--------------------------------------+
+| Receive the packet                   |
+| Read the destination address         |
+| Look up the routing table            |
+| Send it through the chosen interface |
++--------------------------------------+
+------
+switch
+* Network device that connects devices in the same network and sends each frame only to the port where its destination is
+
++-------------------+--------------------------+
+| attribute         | value                    |
++-------------------+--------------------------+
+| OSI layer         | Data link layer          |
+| Addresses it uses | MAC addresses            |
+| Typical place     | Inside an office network |
+| Main table        | MAC address table        |
++-------------------+--------------------------+
++------------------+
+| commands         |
++------------------+
+| show interface 1 |
+| show interface 2 |
+| show interface 3 |
++------------------+
+---
+hub
+* Old network device that repeats every signal it receives to all its ports
+
++----------------------+
+| features             |
++----------------------+
+| Repeats signals      |
+| Shares bandwidth     |
+| Has no address table |
++----------------------+
+--------
+firewall
+* Device or program that allows or blocks network traffic following a set of rules
+

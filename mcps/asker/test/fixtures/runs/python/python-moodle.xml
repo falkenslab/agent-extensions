@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!--
+==================================================
+ asker    : version 2.10.0
+ Filename : python-moodle.xml
+ Datetime : 2026-11-13 13:38:09 +0000
+==================================================
+-->
+
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-1-code1uncomment</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: !/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Comment symbol removed]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-2-code1uncomment</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Comment symbol removed]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-3-code1comment</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: # names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Comment symbol added]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-4-code1comment</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: # for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Comment symbol added]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-5-code1comment</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5: #     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Comment symbol added]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-6-code1comment</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: # print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Comment symbol added]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-10-code1ok</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4:  </br> 5: for name in names:</br> 6:     print("Hello, " + name)</br> 7: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Code is OK]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-11-code1ok</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     </br> 6:     print("Hello, " + name)</br> 7: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Code is OK]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-13-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '#' must be '#!']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>1</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-14-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ['Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ''' must be '"']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-15-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print('Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ''' must be '"']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-16-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print('Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ''' must be '"']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-17-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = [ Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ' ' must be '"']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>3</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-18-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print( Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ' ' must be '"']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-19-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print( Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ' ' must be '"']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>6</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-20-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana"; "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '; ' must be ', ']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>3</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-21-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello; " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '; ' must be ', ']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-22-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana". "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '. ' must be ', ']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-23-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello. " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '. ' must be ', ']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-24-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana"  "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ' ' must be ',']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>3</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-25-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello  " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ' ' must be ',']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-26-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana". "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '.' must be ',']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-27-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello. " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '.' must be ',']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-28-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana"; "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ';' must be ',']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>3</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-29-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello; " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ';' must be ',']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-30-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print["Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '[' must be '(']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-31-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print["Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '[' must be '(']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>6</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-32-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print\{"Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '\{' must be '(']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-33-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print\{"Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '\{' must be '(']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>6</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-34-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print)"Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ')' must be '(']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-35-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print)"Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ')' must be '(']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-36-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name]</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ']' must be ')']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-37-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done"]</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ']' must be ')']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-38-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name\}</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '\}' must be ')']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-39-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done"\}</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '\}' must be ')']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>6</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-40-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name(</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '(' must be ')']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-41-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done"(</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: '(' must be ')']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>6</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-42-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names == ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ' == ' must be ' = ']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>greet.py-43-code1syntaxerror</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " - name)</br> 6: print("Done")</br></pre><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Syntax error: ' - ' must be ' + ']]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>greet.py-44-code1variable</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre> 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: for name in names:</br> 4: names = ["Ana", "Luis", "Marta"]</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br></pre><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Variable error! Swapped lines 3 with 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>3</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+</quiz>

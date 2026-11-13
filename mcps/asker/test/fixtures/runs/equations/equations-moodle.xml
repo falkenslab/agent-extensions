@@ -1,0 +1,5327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!--
+==================================================
+ asker    : version 2.10.0
+ Filename : equations-moodle.xml
+ Datetime : 2026-11-13 13:38:13 +0000
+==================================================
+-->
+
+
+  <question type="truefalse">
+    <name>
+      <text>we1-1-01pa1true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 3 + 2</p><p><b>Answer:</b> 5</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-2-02pa1false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 3 + 2</p><p><b>Answer:</b> 10</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-3-03pa2-choice-none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 3 + 2</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 5.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[8]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[24]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-4-04pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 3 + 2</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 5.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[8]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[24]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-5-05pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 3 + 2</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 5.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[8]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>we1-6-06pa2short</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 3 + 2</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 5.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-7-01pa1true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 3 - 2</p><p><b>Answer:</b> 1</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-8-02pa1false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 3 - 2</p><p><b>Answer:</b> 4</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-9-03pa2-choice-none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 3 - 2</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 1.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-10-04pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 3 - 2</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 1.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>1</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-11-05pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 3 - 2</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 1.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>1</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>we1-12-06pa2short</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 3 - 2</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 1.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-13-01pa1true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 7 + 3</p><p><b>Answer:</b> 10</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-14-02pa1false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 7 + 3</p><p><b>Answer:</b> 5</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-15-03pa2-choice-none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 7 + 3</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 10.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[24]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[8]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-16-04pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 7 + 3</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 10.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>10</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[24]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[8]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-17-05pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 7 + 3</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 10.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>10</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[24]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>we1-18-06pa2short</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 7 + 3</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 10.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-19-01pa1true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 7 - 3</p><p><b>Answer:</b> 4</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-20-02pa1false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 7 - 3</p><p><b>Answer:</b> 1</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-21-03pa2-choice-none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 7 - 3</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 4.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-22-04pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 7 - 3</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 4.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>4</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-23-05pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 7 - 3</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 4.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>4</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>we1-24-06pa2short</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 7 - 3</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 4.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-25-01pa1true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 13 + 11</p><p><b>Answer:</b> 24</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-26-02pa1false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 13 + 11</p><p><b>Answer:</b> 5</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-27-03pa2-choice-none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 13 + 11</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 24.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[8]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-28-04pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 13 + 11</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 24.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>24</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[8]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-29-05pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 13 + 11</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 24.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>24</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>we1-30-06pa2short</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 13 + 11</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 24.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[24]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-31-01pa1true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 13 - 11</p><p><b>Answer:</b> 2</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-32-02pa1false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 13 - 11</p><p><b>Answer:</b> 1</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-33-03pa2-choice-none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 13 - 11</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 2.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-34-04pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 13 - 11</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 2.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>2</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-35-05pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 13 - 11</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 2.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>2</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>we1-36-06pa2short</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 13 - 11</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 2.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-37-01pa1true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 4 + 4</p><p><b>Answer:</b> 8</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-38-02pa1false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 4 + 4</p><p><b>Answer:</b> 5</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-39-03pa2-choice-none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 4 + 4</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 8.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[24]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-40-04pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 4 + 4</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 8.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>8</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[24]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-41-05pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 4 + 4</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 8.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>8</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>we1-42-06pa2short</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the sum 4 + 4</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 8.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[8]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-43-01pa1true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 4 - 4</p><p><b>Answer:</b> 0</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>we1-44-02pa1false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 4 - 4</p><p><b>Answer:</b> 1</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-45-03pa2-choice-none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 4 - 4</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 0.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-46-04pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 4 - 4</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 0.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>0</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>we1-47-05pa2choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 4 - 4</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 0.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>0</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>we1-48-06pa2short</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>We are going to perform calculations with integers.</p><p><b>Question:</b> Calculate the subtraction 4 - 4</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Correct answer is 0.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-1-07ps3short-ok</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: x = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="ordering">
+    <name>
+      <text>first2-2-08ps6ordering</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <layouttype>VERTICAL</layouttype>
+    <selecttype>ALL</selecttype>
+    <selectcount>0</selectcount>
+    <gradingtype>ABSOLUTE_POSITION</gradingtype>
+    <showgrading>SHOW</showgrading>
+    <numberingstyle>none</numberingstyle>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    
+    <answer fraction="1" format="moodle_auto_format">
+      <text>2x - 4 = 6</text>
+    </answer>
+    
+    <answer fraction="2" format="moodle_auto_format">
+      <text>2x = 6 + 4</text>
+    </answer>
+    
+    <answer fraction="3" format="moodle_auto_format">
+      <text>2x = 10</text>
+    </answer>
+    
+    <answer fraction="4" format="moodle_auto_format">
+      <text>x = 10 / 2</text>
+    </answer>
+    
+    <answer fraction="5" format="moodle_auto_format">
+      <text>x = 5</text>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-3-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: ?? ? ? ? ?
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: x = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2x - 4 = 6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-4-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2x - 4 = 6
+ 2: ?? ? ? ? ?
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: x = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2x = 6 + 4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-5-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: ?? ? ??
+ 4: x = 10 / 2
+ 5: x = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2x = 10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-6-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: ? ? ?? ? ?
+ 5: x = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[x = 10 / 2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-7-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: ? ? ?
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[x = 5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-8-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x = 6 + 4
+ 2: 2x - 4 = 6
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: x = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 2]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-9-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x = 10
+ 2: 2x = 6 + 4
+ 3: 2x - 4 = 6
+ 4: x = 10 / 2
+ 5: x = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 3]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-10-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: x = 10 / 2
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: 2x - 4 = 6
+ 5: x = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-11-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: x = 5
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: 2x - 4 = 6
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-12-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x - 4 = 6
+ 2: 2x = 10
+ 3: 2x = 6 + 4
+ 4: x = 10 / 2
+ 5: x = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 3]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-13-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x - 4 = 6
+ 2: x = 10 / 2
+ 3: 2x = 10
+ 4: 2x = 6 + 4
+ 5: x = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-14-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x - 4 = 6
+ 2: x = 5
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: 2x = 6 + 4
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-15-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: x = 10 / 2
+ 4: 2x = 10
+ 5: x = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 3 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-16-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: x = 5
+ 4: x = 10 / 2
+ 5: 2x = 10
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 3 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-17-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: x = 5
+ 5: x = 10 / 2
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 4 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>first2-18-11ps5match</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x - 4 = 6
+ 2: ?
+ 3: ?
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[2x = 10]]></text>
+      <answer>
+        <text><![CDATA[3]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[x = 10 / 2]]></text>
+      <answer>
+        <text><![CDATA[4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2x = 6 + 4]]></text>
+      <answer>
+        <text><![CDATA[2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[x = 5]]></text>
+      <answer>
+        <text><![CDATA[5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer>
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="ddmatch">
+    <name>
+      <text>first2-19-12ps5ddmatch</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2x - 4 = 6
+ 2: ?
+ 3: ?
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer format="html">
+        <text><![CDATA[2x = 10]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer format="html">
+        <text><![CDATA[x = 10 / 2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer format="html">
+        <text><![CDATA[2x = 6 + 4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[5]]></text>
+      <answer format="html">
+        <text><![CDATA[x = 5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer format="html">
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>first2-20-11ps5match</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: ?
+ 3: 2x = 10
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[x = 10 / 2]]></text>
+      <answer>
+        <text><![CDATA[4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2x = 6 + 4]]></text>
+      <answer>
+        <text><![CDATA[2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[x = 5]]></text>
+      <answer>
+        <text><![CDATA[5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2x - 4 = 6]]></text>
+      <answer>
+        <text><![CDATA[1]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer>
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="ddmatch">
+    <name>
+      <text>first2-21-12ps5ddmatch</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2x - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: ?
+ 3: 2x = 10
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer format="html">
+        <text><![CDATA[x = 10 / 2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer format="html">
+        <text><![CDATA[2x = 6 + 4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[5]]></text>
+      <answer format="html">
+        <text><![CDATA[x = 5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer format="html">
+        <text><![CDATA[2x - 4 = 6]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer format="html">
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-22-07ps3short-ok</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: y = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="ordering">
+    <name>
+      <text>first2-23-08ps6ordering</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <layouttype>VERTICAL</layouttype>
+    <selecttype>ALL</selecttype>
+    <selectcount>0</selectcount>
+    <gradingtype>ABSOLUTE_POSITION</gradingtype>
+    <showgrading>SHOW</showgrading>
+    <numberingstyle>none</numberingstyle>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    
+    <answer fraction="1" format="moodle_auto_format">
+      <text>2y - 4 = 6</text>
+    </answer>
+    
+    <answer fraction="2" format="moodle_auto_format">
+      <text>2y = 6 + 4</text>
+    </answer>
+    
+    <answer fraction="3" format="moodle_auto_format">
+      <text>2y = 10</text>
+    </answer>
+    
+    <answer fraction="4" format="moodle_auto_format">
+      <text>y = 10 / 2</text>
+    </answer>
+    
+    <answer fraction="5" format="moodle_auto_format">
+      <text>y = 5</text>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-24-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: ?? ? ? ? ?
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: y = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2y - 4 = 6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-25-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2y - 4 = 6
+ 2: ?? ? ? ? ?
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: y = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2y = 6 + 4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-26-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: ?? ? ??
+ 4: y = 10 / 2
+ 5: y = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2y = 10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-27-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: ? ? ?? ? ?
+ 5: y = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[y = 10 / 2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-28-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: ? ? ?
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[y = 5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-29-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2y = 6 + 4
+ 2: 2y - 4 = 6
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: y = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 2]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-30-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2y = 10
+ 2: 2y = 6 + 4
+ 3: 2y - 4 = 6
+ 4: y = 10 / 2
+ 5: y = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 3]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-31-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: y = 10 / 2
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: 2y - 4 = 6
+ 5: y = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-32-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: y = 5
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: 2y - 4 = 6
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-33-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2y - 4 = 6
+ 2: 2y = 10
+ 3: 2y = 6 + 4
+ 4: y = 10 / 2
+ 5: y = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 3]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-34-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2y - 4 = 6
+ 2: y = 10 / 2
+ 3: 2y = 10
+ 4: 2y = 6 + 4
+ 5: y = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-35-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2y - 4 = 6
+ 2: y = 5
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: 2y = 6 + 4
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-36-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: y = 10 / 2
+ 4: 2y = 10
+ 5: y = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 3 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-37-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: y = 5
+ 4: y = 10 / 2
+ 5: 2y = 10
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 3 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-38-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: y = 5
+ 5: y = 10 / 2
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 4 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>first2-39-11ps5match</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: ?
+ 3: ?
+ 4: y = 10 / 2
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[2y = 10]]></text>
+      <answer>
+        <text><![CDATA[3]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2y = 6 + 4]]></text>
+      <answer>
+        <text><![CDATA[2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[y = 5]]></text>
+      <answer>
+        <text><![CDATA[5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2y - 4 = 6]]></text>
+      <answer>
+        <text><![CDATA[1]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer>
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="ddmatch">
+    <name>
+      <text>first2-40-12ps5ddmatch</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: ?
+ 3: ?
+ 4: y = 10 / 2
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer format="html">
+        <text><![CDATA[2y = 10]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer format="html">
+        <text><![CDATA[2y = 6 + 4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[5]]></text>
+      <answer format="html">
+        <text><![CDATA[y = 5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer format="html">
+        <text><![CDATA[2y - 4 = 6]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer format="html">
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>first2-41-11ps5match</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: ?
+ 3: 2y = 10
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[2y = 6 + 4]]></text>
+      <answer>
+        <text><![CDATA[2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[y = 5]]></text>
+      <answer>
+        <text><![CDATA[5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2y - 4 = 6]]></text>
+      <answer>
+        <text><![CDATA[1]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[y = 10 / 2]]></text>
+      <answer>
+        <text><![CDATA[4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer>
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="ddmatch">
+    <name>
+      <text>first2-42-12ps5ddmatch</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2y - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: ?
+ 3: 2y = 10
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer format="html">
+        <text><![CDATA[2y = 6 + 4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[5]]></text>
+      <answer format="html">
+        <text><![CDATA[y = 5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer format="html">
+        <text><![CDATA[2y - 4 = 6]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer format="html">
+        <text><![CDATA[y = 10 / 2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer format="html">
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-43-07ps3short-ok</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: z = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="ordering">
+    <name>
+      <text>first2-44-08ps6ordering</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <layouttype>VERTICAL</layouttype>
+    <selecttype>ALL</selecttype>
+    <selectcount>0</selectcount>
+    <gradingtype>ABSOLUTE_POSITION</gradingtype>
+    <showgrading>SHOW</showgrading>
+    <numberingstyle>none</numberingstyle>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    
+    <answer fraction="1" format="moodle_auto_format">
+      <text>2z - 4 = 6</text>
+    </answer>
+    
+    <answer fraction="2" format="moodle_auto_format">
+      <text>2z = 6 + 4</text>
+    </answer>
+    
+    <answer fraction="3" format="moodle_auto_format">
+      <text>2z = 10</text>
+    </answer>
+    
+    <answer fraction="4" format="moodle_auto_format">
+      <text>z = 10 / 2</text>
+    </answer>
+    
+    <answer fraction="5" format="moodle_auto_format">
+      <text>z = 5</text>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-45-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: ?? ? ? ? ?
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: z = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2z - 4 = 6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-46-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2z - 4 = 6
+ 2: ?? ? ? ? ?
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: z = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2z = 6 + 4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-47-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: ?? ? ??
+ 4: z = 10 / 2
+ 5: z = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2z = 10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-48-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: ? ? ?? ? ?
+ 5: z = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[z = 10 / 2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-49-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: ? ? ?
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[z = 5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-50-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2z = 6 + 4
+ 2: 2z - 4 = 6
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: z = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 2]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-51-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2z = 10
+ 2: 2z = 6 + 4
+ 3: 2z - 4 = 6
+ 4: z = 10 / 2
+ 5: z = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 3]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-52-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: z = 10 / 2
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: 2z - 4 = 6
+ 5: z = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-53-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: z = 5
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: 2z - 4 = 6
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-54-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2z - 4 = 6
+ 2: 2z = 10
+ 3: 2z = 6 + 4
+ 4: z = 10 / 2
+ 5: z = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 3]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-55-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2z - 4 = 6
+ 2: z = 10 / 2
+ 3: 2z = 10
+ 4: 2z = 6 + 4
+ 5: z = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-56-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2z - 4 = 6
+ 2: z = 5
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: 2z = 6 + 4
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-57-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: z = 10 / 2
+ 4: 2z = 10
+ 5: z = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 3 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-58-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: z = 5
+ 4: z = 10 / 2
+ 5: 2z = 10
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 3 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-59-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: z = 5
+ 5: z = 10 / 2
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 4 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>first2-60-11ps5match</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: ?
+ 3: ?
+ 4: z = 10 / 2
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[2z = 6 + 4]]></text>
+      <answer>
+        <text><![CDATA[2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[z = 5]]></text>
+      <answer>
+        <text><![CDATA[5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2z - 4 = 6]]></text>
+      <answer>
+        <text><![CDATA[1]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2z = 10]]></text>
+      <answer>
+        <text><![CDATA[3]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer>
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="ddmatch">
+    <name>
+      <text>first2-61-12ps5ddmatch</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: ?
+ 3: ?
+ 4: z = 10 / 2
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer format="html">
+        <text><![CDATA[2z = 6 + 4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[5]]></text>
+      <answer format="html">
+        <text><![CDATA[z = 5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer format="html">
+        <text><![CDATA[2z - 4 = 6]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer format="html">
+        <text><![CDATA[2z = 10]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer format="html">
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>first2-62-11ps5match</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: 2z = 6 + 4
+ 3: ?
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[z = 5]]></text>
+      <answer>
+        <text><![CDATA[5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2z - 4 = 6]]></text>
+      <answer>
+        <text><![CDATA[1]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2z = 10]]></text>
+      <answer>
+        <text><![CDATA[3]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[z = 10 / 2]]></text>
+      <answer>
+        <text><![CDATA[4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer>
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="ddmatch">
+    <name>
+      <text>first2-63-12ps5ddmatch</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2z - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: 2z = 6 + 4
+ 3: ?
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <subquestion format="html">
+      <text><![CDATA[5]]></text>
+      <answer format="html">
+        <text><![CDATA[z = 5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer format="html">
+        <text><![CDATA[2z - 4 = 6]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer format="html">
+        <text><![CDATA[2z = 10]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer format="html">
+        <text><![CDATA[z = 10 / 2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer format="html">
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-64-07ps3short-ok</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: t = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[0]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="ordering">
+    <name>
+      <text>first2-65-08ps6ordering</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <layouttype>VERTICAL</layouttype>
+    <selecttype>ALL</selecttype>
+    <selectcount>0</selectcount>
+    <gradingtype>ABSOLUTE_POSITION</gradingtype>
+    <showgrading>SHOW</showgrading>
+    <numberingstyle>none</numberingstyle>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    
+    <answer fraction="1" format="moodle_auto_format">
+      <text>2t - 4 = 6</text>
+    </answer>
+    
+    <answer fraction="2" format="moodle_auto_format">
+      <text>2t = 6 + 4</text>
+    </answer>
+    
+    <answer fraction="3" format="moodle_auto_format">
+      <text>2t = 10</text>
+    </answer>
+    
+    <answer fraction="4" format="moodle_auto_format">
+      <text>t = 10 / 2</text>
+    </answer>
+    
+    <answer fraction="5" format="moodle_auto_format">
+      <text>t = 5</text>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-66-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: ?? ? ? ? ?
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: t = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2t - 4 = 6]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-67-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2t - 4 = 6
+ 2: ?? ? ? ? ?
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: t = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2t = 6 + 4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-68-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: ?? ? ??
+ 4: t = 10 / 2
+ 5: t = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2t = 10]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-69-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: ? ? ?? ? ?
+ 5: t = 5
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[t = 10 / 2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-70-09ps7short-hide</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b ></p><pre> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: ? ? ?
+</pre><br/><i>(Note: Each ? represents a letter/symbol, and each * represents one or more words.)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[t = 5]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-71-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t = 6 + 4
+ 2: 2t - 4 = 6
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: t = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 2]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-72-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t = 10
+ 2: 2t = 6 + 4
+ 3: 2t - 4 = 6
+ 4: t = 10 / 2
+ 5: t = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 3]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-73-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: t = 10 / 2
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: 2t - 4 = 6
+ 5: t = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-74-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: t = 5
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: 2t - 4 = 6
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 1 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[1]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-75-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t - 4 = 6
+ 2: 2t = 10
+ 3: 2t = 6 + 4
+ 4: t = 10 / 2
+ 5: t = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 3]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-76-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t - 4 = 6
+ 2: t = 10 / 2
+ 3: 2t = 10
+ 4: 2t = 6 + 4
+ 5: t = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-77-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t - 4 = 6
+ 2: t = 5
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: 2t = 6 + 4
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 2 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[2]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-78-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: t = 10 / 2
+ 4: 2t = 10
+ 5: t = 5
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 3 by step 4]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-79-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: t = 5
+ 4: t = 10 / 2
+ 5: 2t = 10
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 3 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>first2-80-10ps3short-error</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: t = 5
+ 5: t = 10 / 2
+</pre><br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Change step 4 by step 5]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[4]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>first2-81-11ps5match</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: ?
+ 3: 2t = 10
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[2t - 4 = 6]]></text>
+      <answer>
+        <text><![CDATA[1]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2t = 6 + 4]]></text>
+      <answer>
+        <text><![CDATA[2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[t = 10 / 2]]></text>
+      <answer>
+        <text><![CDATA[4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[t = 5]]></text>
+      <answer>
+        <text><![CDATA[5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer>
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="ddmatch">
+    <name>
+      <text>first2-82-12ps5ddmatch</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: ?
+ 2: ?
+ 3: 2t = 10
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer format="html">
+        <text><![CDATA[2t - 4 = 6]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer format="html">
+        <text><![CDATA[2t = 6 + 4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer format="html">
+        <text><![CDATA[t = 10 / 2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[5]]></text>
+      <answer format="html">
+        <text><![CDATA[t = 5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer format="html">
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>first2-83-11ps5match</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t - 4 = 6
+ 2: ?
+ 3: ?
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[2t = 6 + 4]]></text>
+      <answer>
+        <text><![CDATA[2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[t = 10 / 2]]></text>
+      <answer>
+        <text><![CDATA[4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[t = 5]]></text>
+      <answer>
+        <text><![CDATA[5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2t = 10]]></text>
+      <answer>
+        <text><![CDATA[3]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer>
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="ddmatch">
+    <name>
+      <text>first2-84-12ps5ddmatch</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>First degree equations</p><p><b>Question:</b> Solve the equation 2t - 4 = 6</p><p><b>Answer:</b></p><pre> 1: 2t - 4 = 6
+ 2: ?
+ 3: ?
+ 4: ?
+ 5: ?
+</pre><br/><i>(Place each step in its correct position within the sequence)</i>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer format="html">
+        <text><![CDATA[2t = 6 + 4]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer format="html">
+        <text><![CDATA[t = 10 / 2]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[5]]></text>
+      <answer format="html">
+        <text><![CDATA[t = 5]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer format="html">
+        <text><![CDATA[2t = 10]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[]]></text>
+      <answer format="html">
+        <text><![CDATA[Error]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+</quiz>

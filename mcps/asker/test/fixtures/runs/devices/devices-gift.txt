@@ -1,0 +1,1014 @@
+// ==================================================
+// asker    : version 2.10.0
+// Filename : devices-gift.txt
+// Datetime : 2026-11-13 13:38:21 +0000
+// ==================================================
+
+
+// ==================================================
+// Concept name: router
+// ==================================================
+::router-1-d1choose::[html]Definition\: <i>Network device that forwards packets between different networks using IP addresses</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%None correct
+  ~%-25%hub
+  ~%-25%switch
+  =router
+}
+
+::router-2-d1none-misspelled::[html]Definition\: <i>Network device that forwards packets between different networks using IP addresses</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%routar
+  ~%-25%hub
+  =None correct
+  ~%-25%switch
+  ####Option misspelled!\: router
+}
+
+::router-3-d1none::[html]Definition\: <i>Network device that forwards packets between different networks using IP addresses</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%firewall
+  ~%-25%switch
+  =None correct
+  ~%-25%hub
+}
+
+::router-4-d2def-misspelled::[html]Definition of <b>router</b>\:<br/> <i>Networek device that forwards packets between different networks using IP addresses</i><br/>
+{
+  ~%-33.33333%False
+  ~%-33.33333%True
+  =Misspelling
+  ####Definition text misspelled!\: Network device that forwards packets between different networks using IP addresses
+}
+
+::router-5-d2name-misspelled::[html]Definition of <b>reouter</b>\:<br/> <i>Network device that forwards packets between different networks using IP addresses</i><br/>
+{
+  ~%-33.33333%True
+  =Misspelling
+  ~%-33.33333%False
+  ####Concept name misspelled!\: router
+}
+
+::router-6-d2true-misspelled::[html]Definition of <b>router</b>\:<br/> <i>Network device that forwards packets between different networks using IP addresses</i><br/>
+{
+  =True
+  ~%-33.33333%False
+  ~%-33.33333%Misspelling
+}
+
+::router-7-d2true::[html]Definition of <b>router</b>\:<br/> <i>Network device that forwards packets between different networks using IP addresses</i><br/>
+{TRUE####}
+
+::router-8-d2false-misspelled::[html]Definition of <b>switch</b>\:<br/> <i>Network device that forwards packets between different networks using IP addresses</i><br/>
+{
+  ~%-33.33333%True
+  =False
+  ~%-33.33333%Misspelling
+}
+
+::router-9-d2false::[html]Definition of <b>switch</b>\:<br/> <i>Network device that forwards packets between different networks using IP addresses</i><br/>
+{FALSE####}
+
+::router-10-d3hidden::[html]Definition of <b>[*]</b>\:<br/> <i>Network device that forwards packets between different networks using IP addresses</i><br/><p>Note\: Every ? symbol represents one letter, and * severals.</p>
+{
+  =%100%router#
+}
+
+::router-11-d4filtered::[html]Definition of <b>router</b>\:<br/> <i>[1] device that forwards [2] between [3] [4] using IP addresses.</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> network
+  =2 -> packets
+  =3 -> different
+  =4 -> networks
+}
+
+::router-12-d4filtered::[html]Definition of <b>router</b>\:<br/> <i>Network device that forwards [1] between different [2] using [3] [4].</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> packets
+  =2 -> networks
+  =3 -> ip
+  =4 -> addresses
+}
+
+::router-13-d1choose::[html]Definition\: <i>Device that keeps a table of routes to choose where each packet goes next</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%hub
+  =router
+  ~%-25%None correct
+  ~%-25%switch
+}
+
+::router-14-d1none-misspelled::[html]Definition\: <i>Device that keeps a table of routes to choose where each packet goes next</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%hub
+  =None correct
+  ~%-25%switch
+  ~%-25%rovter
+  ####Option misspelled!\: router
+}
+
+::router-15-d1none::[html]Definition\: <i>Device that keeps a table of routes to choose where each packet goes next</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%switch
+  ~%-25%hub
+  =None correct
+  ~%-25%firewall
+}
+
+::router-16-d2def-misspelled::[html]Definition of <b>router</b>\:<br/> <i>Device that keeps a table of routes to choose where each packet goes mext</i><br/>
+{
+  ~%-33.33333%True
+  ~%-33.33333%False
+  =Misspelling
+  ####Definition text misspelled!\: Device that keeps a table of routes to choose where each packet goes next
+}
+
+::router-17-d2name-misspelled::[html]Definition of <b>reouter</b>\:<br/> <i>Device that keeps a table of routes to choose where each packet goes next</i><br/>
+{
+  =Misspelling
+  ~%-33.33333%False
+  ~%-33.33333%True
+  ####Concept name misspelled!\: router
+}
+
+::router-18-d2true-misspelled::[html]Definition of <b>router</b>\:<br/> <i>Device that keeps a table of routes to choose where each packet goes next</i><br/>
+{
+  ~%-33.33333%False
+  =True
+  ~%-33.33333%Misspelling
+}
+
+::router-19-d2true::[html]Definition of <b>router</b>\:<br/> <i>Device that keeps a table of routes to choose where each packet goes next</i><br/>
+{TRUE####}
+
+::router-20-d2false-misspelled::[html]Definition of <b>switch</b>\:<br/> <i>Device that keeps a table of routes to choose where each packet goes next</i><br/>
+{
+  ~%-33.33333%Misspelling
+  =False
+  ~%-33.33333%True
+}
+
+::router-21-d2false::[html]Definition of <b>switch</b>\:<br/> <i>Device that keeps a table of routes to choose where each packet goes next</i><br/>
+{FALSE####}
+
+::router-22-d3hidden::[html]Definition of <b>[*]</b>\:<br/> <i>Device that keeps a table of routes to choose where each packet goes next</i><br/><p>Note\: Every ? symbol represents one letter, and * severals.</p>
+{
+  =%100%router#
+}
+
+::router-23-d4filtered::[html]Definition of <b>router</b>\:<br/> <i>Device that keeps a table of [1] to [2] where each [3] goes [4].</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> routes
+  =2 -> choose
+  =3 -> packet
+  =4 -> next
+}
+
+::router-24-d4filtered::[html]Definition of <b>router</b>\:<br/> <i>Device [1] keeps a [2] of routes to [3] where [4] packet goes next.</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> that
+  =2 -> table
+  =3 -> choose
+  =4 -> each
+}
+
+::router-25-b1match4x4-$attribute$value::[html]Related with concept <b>router</b>, associate every "Attribute" with their "Value".<br/>
+{
+  =OSI layer -> Network layer
+  =Typical place -> Between a home network and the internet
+  =Main table -> Routing table
+  =Addresses it uses -> IP addresses
+}
+
+::router-26-b1ddmatch4x4-$attribute$value::[html]Related with concept <b>router</b>, associate every "Attribute" with their "Value".<br/>
+// WARNING: can't export ddmatch questions to this format::router-27-b1match4x5-$attribute$value::[html]Related with concept <b>router</b>, associate every "Attribute" with their "Value".<br/>
+{
+  =Main table -> Routing table
+  =Typical place -> Between a home network and the internet
+  = -> Data link layer
+  =Addresses it uses -> IP addresses
+  =OSI layer -> Network layer
+}
+
+::router-28-b1match4x4_1misspelled-$attribute$value::[html]Related with concept <b>router</b>, associate every "Attribute" with their "Value".<br/>
+{
+  =Addresses it uses -> IP addresses
+  =Typical place -> Between a home network and the internet
+  =Main table -> Routing table
+  =OSI llayer -> Misspelling
+}
+
+::router-29-b1ddmatch4x4_1misspelled-$attribute$value::[html]Related with concept <b>router</b>, associate every "Attribute" with their "Value".<br/>
+// WARNING: can't export ddmatch questions to this format::router-30-b1match4x5_1misspelled_1error-$attribute$value::[html]Related with concept <b>router</b>, associate every "Attribute" with their "Value".<br/>
+{
+  =Maim table -> Misspelling
+  =OSI layer -> Network layer
+  = -> Data link layer
+  =Addresses it uses -> IP addresses
+  =Typical place -> Between a home network and the internet
+}
+
+::router-31-b1match4x4_1error-$attribute$value::[html]Related with concept <b>router</b>, associate every "Attribute" with their "Value".<br/>
+{
+  =Addresses it uses -> IP addresses
+  =OSI layer -> Network layer
+  =OSI layer -> Error
+  =Typical place -> Between a home network and the internet
+}
+
+::router-32-b1ddmatch4x4_1error-$attribute$value::[html]Related with concept <b>router</b>, associate every "Attribute" with their "Value".<br/>
+// WARNING: can't export ddmatch questions to this format::router-33-b1match4x5_1error_1misspelled-$attribute$value::[html]Related with concept <b>router</b>, associate every "Attribute" with their "Value".<br/>
+{
+  =OSI layer -> Error
+  = -> Network llayer
+  =Typical place -> Between a home network and the internet
+  =Addresses it uses -> IP addresses
+  =OSI layer -> Network layer
+}
+
+::router-71-f1short4-$steps to forward a packet::[html]The next items are "Steps to forward a packet" from <b>[*]</b> concept\:<br/><ul><li>Read the destination address</li><li>Send it through the chosen interface</li><li>Receive the packet</li><li>Look up the routing table</li></ul>
+{
+  =%100%router#
+}
+
+::router-72-f1name-misspelled4-$steps to forward a packet::[html]The next items are "Steps to forward a packet" from <b>rowter</b> concept\:<br/><ul><li>Look oop the routing table</li><li>Read the destination address</li><li>Send it through the chosen interface</li><li>Receive the packet</li></ul>
+{
+  ~%-33.33333%True
+  =Misspelling
+  ~%-33.33333%False
+  ####Concept name router misspelled!
+}
+
+::router-73-f1true-misspelled4-$steps to forward a packet::[html]The next items are "Steps to forward a packet" from <b>router</b> concept\:<br/><ul><li>Reseive the packet</li><li>Send it through the chosen interface</li><li>Read the destination address</li><li>Look up the routing table</li></ul>
+{
+  ~%-33.33333%True
+  =Misspelling
+  ~%-33.33333%False
+  ####Text Receive the packet misspelled!
+}
+
+::router-68-s1sequence-$steps to forward a packet::[html]About <b>router</b> concept, sort every "Steps to forward a packet", so It is true that "In the order a router follows them".<br/>
+{
+  =Look up the routing table -> 3º
+  =Receive the packet -> 1º
+  = -> Error
+  =Read the destination address -> 2º
+  =Send it through the chosen interface -> 4º
+}
+
+::router-69-s1sequence-$steps to forward a packet::[html]About <b>router</b> concept, sort every "Steps to forward a packet", so It is true that "In the order a router follows them".<br/>
+{>0 ALL VERTICAL ABSOLUTE_POSITION SHOW none
+Receive the packet
+Read the destination address
+Look up the routing table
+Send it through the chosen interface
+}
+
+::router-34-t1table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: [*]<br/>Value\: "Network layer"<br/>Choose the right answer.<br/>
+{
+  =OSI layer
+  ~%-25%Typical place
+  ~%-25%Addresses it uses
+  ~%-25%None correct
+}
+
+::router-35-t2table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: [*]<br/>Value\: "Network layer"<br/>Choose the right answer.<br/>
+{
+  ~%-25%Addresses it uses
+  ~%-25%Typical place
+  =None correct
+  ~%-25%Main table
+}
+
+::router-36-t3table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: "OSI layer"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  =Network layer
+  ~%-25%IP addresses
+  ~%-25%Data link layer
+  ~%-25%None correct
+}
+
+::router-37-t4table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: "OSI layer"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%Data link layer
+  =None correct
+  ~%-25%IP addresses
+  ~%-25%Inside an office network
+}
+
+::router-38t5table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "OSI layer"</li><li>Value\: "Network layer"</li></ul>
+{TRUE####}
+
+::router-39-t6table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "OSI layer"</li><li>Value\: "Data link layer"</li></ul>
+{FALSE####}
+
+::router-40t7table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: "Network layer"</li></ul>
+{FALSE####}
+
+::router-41t9table-$attribute$value::[html]<b>Concept router</b><br/>Complete the next association\:<br/><ul><li>Value\: "Network layer"</li><li>Attribute\: [??? ?????]</li></ul>Write 2 words.<br/>
+{
+  =%100%OSI layer#
+}
+
+::router-42t9table-$attribute$value::[html]<b>Concept router</b><br/>Complete the next association\:<br/><ul><li>Attribute\: "OSI layer"</li><li>Value\: [??????? ?????]</li></ul>Write 2 words.<br/>
+{
+  =%100%Network layer#
+}
+
+::router-43-t1table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: [*]<br/>Value\: "IP addresses"<br/>Choose the right answer.<br/>
+{
+  ~%-25%None correct
+  ~%-25%OSI layer
+  ~%-25%Typical place
+  =Addresses it uses
+}
+
+::router-44-t2table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: [*]<br/>Value\: "IP addresses"<br/>Choose the right answer.<br/>
+{
+  ~%-25%Main table
+  ~%-25%OSI layer
+  ~%-25%Typical place
+  =None correct
+}
+
+::router-45-t3table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: "Addresses it uses"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  =IP addresses
+  ~%-25%MAC addresses
+  ~%-25%Data link layer
+  ~%-25%None correct
+}
+
+::router-46-t4table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: "Addresses it uses"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%Data link layer
+  =None correct
+  ~%-25%MAC addresses
+  ~%-25%Between a home network and the internet
+}
+
+::router-47t5table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: "IP addresses"</li></ul>
+{TRUE####}
+
+::router-48-t6table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: "MAC addresses"</li></ul>
+{FALSE####}
+
+::router-49t7table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "OSI layer"</li><li>Value\: "IP addresses"</li></ul>
+{FALSE####}
+
+::router-50t9table-$attribute$value::[html]<b>Concept router</b><br/>Complete the next association\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: [?? ?????????]</li></ul>Write 2 words.<br/>
+{
+  =%100%IP addresses#
+}
+
+::router-51-t1table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: [*]<br/>Value\: "Between a home network and the internet"<br/>Choose the right answer.<br/>
+{
+  ~%-25%None correct
+  ~%-25%Addresses it uses
+  ~%-25%OSI layer
+  =Typical place
+}
+
+::router-52-t2table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: [*]<br/>Value\: "Between a home network and the internet"<br/>Choose the right answer.<br/>
+{
+  ~%-25%OSI layer
+  ~%-25%Addresses it uses
+  =None correct
+  ~%-25%Main table
+}
+
+::router-53-t3table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: "Typical place"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%MAC addresses
+  ~%-25%Inside an office network
+  ~%-25%None correct
+  =Between a home network and the internet
+}
+
+::router-54-t4table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: "Typical place"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%MAC addresses
+  ~%-25%Inside an office network
+  ~%-25%IP addresses
+  =None correct
+}
+
+::router-55t5table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Typical place"</li><li>Value\: "Between a home network and the internet"</li></ul>
+{TRUE####}
+
+::router-56-t6table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Typical place"</li><li>Value\: "Inside an office network"</li></ul>
+{FALSE####}
+
+::router-57t7table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: "Between a home network and the internet"</li></ul>
+{FALSE####}
+
+::router-58t9table-$attribute$value::[html]<b>Concept router</b><br/>Complete the next association\:<br/><ul><li>Value\: "Between a home network and the internet"</li><li>Attribute\: [??????? ?????]</li></ul>Write 2 words.<br/>
+{
+  =%100%Typical place#
+}
+
+::router-59-t1table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: [*]<br/>Value\: "Routing table"<br/>Choose the right answer.<br/>
+{
+  ~%-25%None correct
+  ~%-25%Typical place
+  ~%-25%OSI layer
+  =Main table
+}
+
+::router-60-t2table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: [*]<br/>Value\: "Routing table"<br/>Choose the right answer.<br/>
+{
+  ~%-25%OSI layer
+  ~%-25%Typical place
+  ~%-25%Addresses it uses
+  =None correct
+}
+
+::router-61-t3table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: "Main table"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%Inside an office network
+  =Routing table
+  ~%-25%None correct
+  ~%-25%MAC address table
+}
+
+::router-62-t4table-$attribute$value::[html]<b>Concept router</b><br/>Attribute\: "Main table"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%MAC address table
+  ~%-25%Inside an office network
+  ~%-25%Data link layer
+  =None correct
+}
+
+::router-63t5table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Main table"</li><li>Value\: "Routing table"</li></ul>
+{TRUE####}
+
+::router-64-t6table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Main table"</li><li>Value\: "MAC address table"</li></ul>
+{FALSE####}
+
+::router-65t7table-$attribute$value::[html]<b>Concept router</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Typical place"</li><li>Value\: "Routing table"</li></ul>
+{FALSE####}
+
+::router-66t9table-$attribute$value::[html]<b>Concept router</b><br/>Complete the next association\:<br/><ul><li>Value\: "Routing table"</li><li>Attribute\: [???? ?????]</li></ul>Write 2 words.<br/>
+{
+  =%100%Main table#
+}
+
+::router-67t9table-$attribute$value::[html]<b>Concept router</b><br/>Complete the next association\:<br/><ul><li>Attribute\: "Main table"</li><li>Value\: [??????? ?????]</li></ul>Write 2 words.<br/>
+{
+  =%100%Routing table#
+}
+
+
+// ==================================================
+// Concept name: switch
+// ==================================================
+::switch-1-d1choose::[html]Definition\: <i>Network device that connects devices in the same network and sends each frame only to the port where its destination is</i><br/>Choose the best association for the previous definition.<br/>
+{
+  =switch
+  ~%-25%router
+  ~%-25%None correct
+  ~%-25%hub
+}
+
+::switch-2-d1none-misspelled::[html]Definition\: <i>Network device that connects devices in the same network and sends each frame only to the port where its destination is</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%router
+  ~%-25%hub
+  ~%-25%suitch
+  =None correct
+  ####Option misspelled!\: switch
+}
+
+::switch-3-d1none::[html]Definition\: <i>Network device that connects devices in the same network and sends each frame only to the port where its destination is</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%router
+  ~%-25%hub
+  ~%-25%firewall
+  =None correct
+}
+
+::switch-4-d2def-misspelled::[html]Definition of <b>switch</b>\:<br/> <i>Network device that connects devices in the same network and sends each frame oniy to the port where its destination is</i><br/>
+{
+  ~%-33.33333%False
+  ~%-33.33333%True
+  =Misspelling
+  ####Definition text misspelled!\: Network device that connects devices in the same network and sends each frame only to the port where its destination is
+}
+
+::switch-5-d2name-misspelled::[html]Definition of <b>sswitch</b>\:<br/> <i>Network device that connects devices in the same network and sends each frame only to the port where its destination is</i><br/>
+{
+  =Misspelling
+  ~%-33.33333%True
+  ~%-33.33333%False
+  ####Concept name misspelled!\: switch
+}
+
+::switch-6-d2true-misspelled::[html]Definition of <b>switch</b>\:<br/> <i>Network device that connects devices in the same network and sends each frame only to the port where its destination is</i><br/>
+{
+  ~%-33.33333%Misspelling
+  ~%-33.33333%False
+  =True
+}
+
+::switch-7-d2true::[html]Definition of <b>switch</b>\:<br/> <i>Network device that connects devices in the same network and sends each frame only to the port where its destination is</i><br/>
+{TRUE####}
+
+::switch-8-d2false-misspelled::[html]Definition of <b>hub</b>\:<br/> <i>Network device that connects devices in the same network and sends each frame only to the port where its destination is</i><br/>
+{
+  ~%-33.33333%Misspelling
+  =False
+  ~%-33.33333%True
+}
+
+::switch-9-d2false::[html]Definition of <b>hub</b>\:<br/> <i>Network device that connects devices in the same network and sends each frame only to the port where its destination is</i><br/>
+{FALSE####}
+
+::switch-10-d3hidden::[html]Definition of <b>[*]</b>\:<br/> <i>Network device that connects devices in the same network and sends each frame only to the port where its destination is</i><br/><p>Note\: Every ? symbol represents one letter, and * severals.</p>
+{
+  =%100%switch#
+}
+
+::switch-11-d4filtered::[html]Definition of <b>switch</b>\:<br/> <i>[1] device that connects devices in the [2] network and sends each frame [3] to the [4] where its destination is.</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> network
+  =2 -> same
+  =3 -> only
+  =4 -> port
+}
+
+::switch-12-d4filtered::[html]Definition of <b>switch</b>\:<br/> <i>[1] [2] that connects devices in the same network and sends each frame [3] to the port where its [4] is.</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> network
+  =2 -> device
+  =3 -> only
+  =4 -> destination
+}
+
+::switch-13-d4filtered::[html]Definition of <b>switch</b>\:<br/> <i>Network device that connects devices in the same [1] and sends [2] frame only to the port where its [3] [4].</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> network
+  =2 -> each
+  =3 -> destination
+  =4 -> is
+}
+
+::switch-14-b1match4x4-$attribute$value::[html]Related with concept <b>switch</b>, associate every "Attribute" with their "Value".<br/>
+{
+  =Main table -> MAC address table
+  =Typical place -> Inside an office network
+  =OSI layer -> Data link layer
+  =Addresses it uses -> MAC addresses
+}
+
+::switch-15-b1ddmatch4x4-$attribute$value::[html]Related with concept <b>switch</b>, associate every "Attribute" with their "Value".<br/>
+// WARNING: can't export ddmatch questions to this format::switch-16-b1match4x5-$attribute$value::[html]Related with concept <b>switch</b>, associate every "Attribute" with their "Value".<br/>
+{
+  = -> Network layer
+  =Typical place -> Inside an office network
+  =OSI layer -> Data link layer
+  =Addresses it uses -> MAC addresses
+  =Main table -> MAC address table
+}
+
+::switch-17-b1match4x4_1misspelled-$attribute$value::[html]Related with concept <b>switch</b>, associate every "Attribute" with their "Value".<br/>
+{
+  =Addresses it uses -> MAC addresses
+  =Typica1 place -> Misspelling
+  =Main table -> MAC address table
+  =OSI layer -> Data link layer
+}
+
+::switch-18-b1ddmatch4x4_1misspelled-$attribute$value::[html]Related with concept <b>switch</b>, associate every "Attribute" with their "Value".<br/>
+// WARNING: can't export ddmatch questions to this format::switch-19-b1match4x5_1misspelled_1error-$attribute$value::[html]Related with concept <b>switch</b>, associate every "Attribute" with their "Value".<br/>
+{
+  = -> Network layer
+  =Main table -> MAC address table
+  =Tvpical place -> Misspelling
+  =Addresses it uses -> MAC addresses
+  =OSI layer -> Data link layer
+}
+
+::switch-20-b1match4x4_1error-$attribute$value::[html]Related with concept <b>switch</b>, associate every "Attribute" with their "Value".<br/>
+{
+  =Typical place -> Inside an office network
+  =Addresses it uses -> MAC addresses
+  =OSI layer -> Error
+  =OSI layer -> Data link layer
+}
+
+::switch-21-b1ddmatch4x4_1error-$attribute$value::[html]Related with concept <b>switch</b>, associate every "Attribute" with their "Value".<br/>
+// WARNING: can't export ddmatch questions to this format::switch-22-b1match4x5_1error_1misspelled-$attribute$value::[html]Related with concept <b>switch</b>, associate every "Attribute" with their "Value".<br/>
+{
+  =Typical place -> Inside an office network
+  =OSI layer -> Error
+  =Addresses it uses -> MAC addresses
+  = -> Data link layere
+  =OSI layer -> Data link layer
+}
+
+::switch-56-f1short3-$commands::[html]The next items are "Commands" from <b>[*]</b> concept\:<br/><ul><li>show interface 1</li><li>show interface 3</li><li>show interface 2</li></ul>
+{
+  =%100%switch#
+}
+
+::switch-57-f1name-misspelled3-$commands::[html]The next items are "Commands" from <b>sswitch</b> concept\:<br/><ul><li>show intereface 1</li><li>show interface 3</li><li>show interface 2</li></ul>
+{
+  =Misspelling
+  ~%-33.33333%False
+  ~%-33.33333%True
+  ####Concept name switch misspelled!
+}
+
+::switch-58-f1true-misspelled3-$commands::[html]The next items are "Commands" from <b>switch</b> concept\:<br/><ul><li>show interfase 1</li><li>show interface 3</li><li>show interface 2</li></ul>
+{
+  ~%-33.33333%False
+  ~%-33.33333%True
+  =Misspelling
+  ####Text show interface 1 misspelled!
+}
+
+::switch-23-t1table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: [*]<br/>Value\: "Data link layer"<br/>Choose the right answer.<br/>
+{
+  =OSI layer
+  ~%-25%None correct
+  ~%-25%Addresses it uses
+  ~%-25%Typical place
+}
+
+::switch-24-t2table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: [*]<br/>Value\: "Data link layer"<br/>Choose the right answer.<br/>
+{
+  ~%-25%Typical place
+  ~%-25%Addresses it uses
+  =None correct
+  ~%-25%Main table
+}
+
+::switch-25-t3table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: "OSI layer"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%Network layer
+  ~%-25%None correct
+  ~%-25%MAC addresses
+  =Data link layer
+}
+
+::switch-26-t4table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: "OSI layer"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%MAC addresses
+  ~%-25%Between a home network and the internet
+  =None correct
+  ~%-25%Network layer
+}
+
+::switch-27t5table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "OSI layer"</li><li>Value\: "Data link layer"</li></ul>
+{TRUE####}
+
+::switch-28-t6table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "OSI layer"</li><li>Value\: "Network layer"</li></ul>
+{FALSE####}
+
+::switch-29t7table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: "Data link layer"</li></ul>
+{FALSE####}
+
+::switch-30t9table-$attribute$value::[html]<b>Concept switch</b><br/>Complete the next association\:<br/><ul><li>Value\: "Data link layer"</li><li>Attribute\: [??? ?????]</li></ul>Write 2 words.<br/>
+{
+  =%100%OSI layer#
+}
+
+::switch-31-t1table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: [*]<br/>Value\: "MAC addresses"<br/>Choose the right answer.<br/>
+{
+  ~%-25%None correct
+  ~%-25%Main table
+  =Addresses it uses
+  ~%-25%OSI layer
+}
+
+::switch-32-t2table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: [*]<br/>Value\: "MAC addresses"<br/>Choose the right answer.<br/>
+{
+  ~%-25%Main table
+  ~%-25%Typical place
+  ~%-25%OSI layer
+  =None correct
+}
+
+::switch-33-t3table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: "Addresses it uses"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%MAC address table
+  =MAC addresses
+  ~%-25%IP addresses
+  ~%-25%None correct
+}
+
+::switch-34-t4table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: "Addresses it uses"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%IP addresses
+  =None correct
+  ~%-25%Network layer
+  ~%-25%MAC address table
+}
+
+::switch-35t5table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: "MAC addresses"</li></ul>
+{TRUE####}
+
+::switch-36-t6table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: "IP addresses"</li></ul>
+{FALSE####}
+
+::switch-37t7table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Main table"</li><li>Value\: "MAC addresses"</li></ul>
+{FALSE####}
+
+::switch-38t9table-$attribute$value::[html]<b>Concept switch</b><br/>Complete the next association\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: [??? ?????????]</li></ul>Write 2 words.<br/>
+{
+  =%100%MAC addresses#
+}
+
+::switch-39-t1table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: [*]<br/>Value\: "Inside an office network"<br/>Choose the right answer.<br/>
+{
+  ~%-25%OSI layer
+  ~%-25%None correct
+  =Typical place
+  ~%-25%Addresses it uses
+}
+
+::switch-40-t2table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: [*]<br/>Value\: "Inside an office network"<br/>Choose the right answer.<br/>
+{
+  ~%-25%Addresses it uses
+  ~%-25%Main table
+  =None correct
+  ~%-25%OSI layer
+}
+
+::switch-41-t3table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: "Typical place"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%IP addresses
+  =Inside an office network
+  ~%-25%Between a home network and the internet
+  ~%-25%None correct
+}
+
+::switch-42-t4table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: "Typical place"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%Between a home network and the internet
+  ~%-25%MAC addresses
+  =None correct
+  ~%-25%IP addresses
+}
+
+::switch-43t5table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Typical place"</li><li>Value\: "Inside an office network"</li></ul>
+{TRUE####}
+
+::switch-44-t6table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Typical place"</li><li>Value\: "Between a home network and the internet"</li></ul>
+{FALSE####}
+
+::switch-45t7table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: "Inside an office network"</li></ul>
+{FALSE####}
+
+::switch-46t9table-$attribute$value::[html]<b>Concept switch</b><br/>Complete the next association\:<br/><ul><li>Value\: "Inside an office network"</li><li>Attribute\: [??????? ?????]</li></ul>Write 2 words.<br/>
+{
+  =%100%Typical place#
+}
+
+::switch-47-t1table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: [*]<br/>Value\: "MAC address table"<br/>Choose the right answer.<br/>
+{
+  ~%-25%Typical place
+  =Main table
+  ~%-25%Addresses it uses
+  ~%-25%None correct
+}
+
+::switch-48-t2table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: [*]<br/>Value\: "MAC address table"<br/>Choose the right answer.<br/>
+{
+  =None correct
+  ~%-25%OSI layer
+  ~%-25%Typical place
+  ~%-25%Addresses it uses
+}
+
+::switch-49-t3table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: "Main table"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  ~%-25%MAC addresses
+  =MAC address table
+  ~%-25%None correct
+  ~%-25%Routing table
+}
+
+::switch-50-t4table-$attribute$value::[html]<b>Concept switch</b><br/>Attribute\: "Main table"<br/>Value\: [*]<br/>Choose the right answer.<br/>
+{
+  =None correct
+  ~%-25%MAC addresses
+  ~%-25%Routing table
+  ~%-25%IP addresses
+}
+
+::switch-51t5table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Main table"</li><li>Value\: "MAC address table"</li></ul>
+{TRUE####}
+
+::switch-52-t6table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Main table"</li><li>Value\: "Routing table"</li></ul>
+{FALSE####}
+
+::switch-53t7table-$attribute$value::[html]<b>Concept switch</b><br/>The next association is right\:<br/><ul><li>Attribute\: "Addresses it uses"</li><li>Value\: "MAC address table"</li></ul>
+{FALSE####}
+
+::switch-54t9table-$attribute$value::[html]<b>Concept switch</b><br/>Complete the next association\:<br/><ul><li>Value\: "MAC address table"</li><li>Attribute\: [???? ?????]</li></ul>Write 2 words.<br/>
+{
+  =%100%Main table#
+}
+
+
+// ==================================================
+// Concept name: hub
+// ==================================================
+::hub-1-d1choose::[html]Definition\: <i>Old network device that repeats every signal it receives to all its ports</i><br/>Choose the best association for the previous definition.<br/>
+{
+  =hub
+  ~%-25%router
+  ~%-25%None correct
+  ~%-25%switch
+}
+
+::hub-2-d1none-misspelled::[html]Definition\: <i>Old network device that repeats every signal it receives to all its ports</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%hvb
+  ~%-25%switch
+  =None correct
+  ~%-25%router
+  ####Option misspelled!\: hub
+}
+
+::hub-3-d1none::[html]Definition\: <i>Old network device that repeats every signal it receives to all its ports</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%switch
+  ~%-25%router
+  ~%-25%firewall
+  =None correct
+}
+
+::hub-4-d2def-misspelled::[html]Definition of <b>hub</b>\:<br/> <i>Old network device that repeats every signal it receives to a11 its ports</i><br/>
+{
+  ~%-33.33333%False
+  =Misspelling
+  ~%-33.33333%True
+  ####Definition text misspelled!\: Old network device that repeats every signal it receives to all its ports
+}
+
+::hub-5-d2name-misspelled::[html]Definition of <b>huv</b>\:<br/> <i>Old network device that repeats every signal it receives to all its ports</i><br/>
+{
+  =Misspelling
+  ~%-33.33333%False
+  ~%-33.33333%True
+  ####Concept name misspelled!\: hub
+}
+
+::hub-6-d2true-misspelled::[html]Definition of <b>hub</b>\:<br/> <i>Old network device that repeats every signal it receives to all its ports</i><br/>
+{
+  =True
+  ~%-33.33333%False
+  ~%-33.33333%Misspelling
+}
+
+::hub-7-d2true::[html]Definition of <b>hub</b>\:<br/> <i>Old network device that repeats every signal it receives to all its ports</i><br/>
+{TRUE####}
+
+::hub-8-d2false-misspelled::[html]Definition of <b>switch</b>\:<br/> <i>Old network device that repeats every signal it receives to all its ports</i><br/>
+{
+  =False
+  ~%-33.33333%True
+  ~%-33.33333%Misspelling
+}
+
+::hub-9-d2false::[html]Definition of <b>switch</b>\:<br/> <i>Old network device that repeats every signal it receives to all its ports</i><br/>
+{FALSE####}
+
+::hub-10-d3hidden::[html]Definition of <b>[*]</b>\:<br/> <i>Old network device that repeats every signal it receives to all its ports</i><br/><p>Note\: Every ? symbol represents one letter, and * severals.</p>
+{
+  =%100%hub#
+}
+
+::hub-11-d4filtered::[html]Definition of <b>hub</b>\:<br/> <i>Old [1] device that [2] every [3] it receives to all its [4].</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> network
+  =2 -> repeats
+  =3 -> signal
+  =4 -> ports
+}
+
+::hub-12-d4filtered::[html]Definition of <b>hub</b>\:<br/> <i>Old network device [1] repeats every [2] it [3] to all its [4].</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> that
+  =2 -> signal
+  =3 -> receives
+  =4 -> ports
+}
+
+::hub-14-f1short3-$features::[html]The next items are "Features" from <b>[*]</b> concept\:<br/><ul><li>Shares bandwidth</li><li>Repeats signals</li><li>Has no address table</li></ul>
+{
+  =%100%hub#
+}
+
+::hub-15-f1name-misspelled3-$features::[html]The next items are "Features" from <b>hwb</b> concept\:<br/><ul><li>Has mo address table</li><li>Shares bandwidth</li><li>Repeats signals</li></ul>
+{
+  ~%-33.33333%True
+  ~%-33.33333%False
+  =Misspelling
+  ####Concept name hub misspelled!
+}
+
+::hub-16-f1true-misspelled3-$features::[html]The next items are "Features" from <b>hub</b> concept\:<br/><ul><li>Shares banduidth</li><li>Has no address table</li><li>Repeats signals</li></ul>
+{
+  =Misspelling
+  ~%-33.33333%False
+  ~%-33.33333%True
+  ####Text Shares bandwidth misspelled!
+}
+
+
+// ==================================================
+// Concept name: firewall
+// ==================================================
+::firewall-1-d1choose::[html]Definition\: <i>Device or program that allows or blocks network traffic following a set of rules</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%hub
+  ~%-25%None correct
+  =firewall
+  ~%-25%router
+}
+
+::firewall-2-d1none-misspelled::[html]Definition\: <i>Device or program that allows or blocks network traffic following a set of rules</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%hub
+  =None correct
+  ~%-25%firewell
+  ~%-25%router
+  ####Option misspelled!\: firewall
+}
+
+::firewall-3-d1none::[html]Definition\: <i>Device or program that allows or blocks network traffic following a set of rules</i><br/>Choose the best association for the previous definition.<br/>
+{
+  =None correct
+  ~%-25%router
+  ~%-25%hub
+  ~%-25%switch
+}
+
+::firewall-4-d2def-misspelled::[html]Definition of <b>firewall</b>\:<br/> <i>Device or program that a1lows or blocks network traffic following a set of rules</i><br/>
+{
+  ~%-33.33333%True
+  ~%-33.33333%False
+  =Misspelling
+  ####Definition text misspelled!\: Device or program that allows or blocks network traffic following a set of rules
+}
+
+::firewall-5-d2name-misspelled::[html]Definition of <b>firevall</b>\:<br/> <i>Device or program that allows or blocks network traffic following a set of rules</i><br/>
+{
+  ~%-33.33333%True
+  ~%-33.33333%False
+  =Misspelling
+  ####Concept name misspelled!\: firewall
+}
+
+::firewall-6-d2true-misspelled::[html]Definition of <b>firewall</b>\:<br/> <i>Device or program that allows or blocks network traffic following a set of rules</i><br/>
+{
+  =True
+  ~%-33.33333%False
+  ~%-33.33333%Misspelling
+}
+
+::firewall-7-d2true::[html]Definition of <b>firewall</b>\:<br/> <i>Device or program that allows or blocks network traffic following a set of rules</i><br/>
+{TRUE####}
+
+::firewall-8-d2false-misspelled::[html]Definition of <b>router</b>\:<br/> <i>Device or program that allows or blocks network traffic following a set of rules</i><br/>
+{
+  =False
+  ~%-33.33333%True
+  ~%-33.33333%Misspelling
+}
+
+::firewall-9-d2false::[html]Definition of <b>router</b>\:<br/> <i>Device or program that allows or blocks network traffic following a set of rules</i><br/>
+{FALSE####}
+
+::firewall-10-d3hidden::[html]Definition of <b>[*]</b>\:<br/> <i>Device or program that allows or blocks network traffic following a set of rules</i><br/><p>Note\: Every ? symbol represents one letter, and * severals.</p>
+{
+  =%100%firewall#
+}
+
+::firewall-11-d4filtered::[html]Definition of <b>firewall</b>\:<br/> <i>Device [1] program [2] allows [3] blocks [4] traffic following a set of rules.</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> or
+  =2 -> that
+  =3 -> or
+  =4 -> network
+}
+
+::firewall-12-d4filtered::[html]Definition of <b>firewall</b>\:<br/> <i>[1] [2] [3] that allows [4] blocks network traffic following a set of rules.</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> device
+  =2 -> or
+  =3 -> program
+  =4 -> or
+}
+
+::firewall-13-d4filtered::[html]Definition of <b>firewall</b>\:<br/> <i>Device or program [1] [2] or [3] network traffic following a [4] of rules.</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> that
+  =2 -> allows
+  =3 -> blocks
+  =4 -> set
+}
+

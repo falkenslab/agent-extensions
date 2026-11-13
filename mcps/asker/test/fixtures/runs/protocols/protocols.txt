@@ -1,0 +1,16 @@
+Asker    : version 2.10.0
+Filename : protocols.txt
+Datetime : 2026-11-13 13:38:23 +0000
+
+----
+HTTP
+* Application protocol that web browsers use to ask servers for pages
+
+---
+DNS
+* Protocol that turns domain names into IP addresses
+
+----
+DHCP
+* Protocol that gives each device an IP address and its network settings automatically
+

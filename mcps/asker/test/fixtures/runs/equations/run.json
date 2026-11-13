@@ -1,0 +1,6 @@
+{
+  "input": "test/fixtures/inputs/maths/equations.haml",
+  "code": 0,
+  "stdout": "==> Loading <root>\\test\\fixtures\\inputs\\maths/equations.haml\n\n[INFO] Showing PROBLEMs statistics\n+-----------+--------------------------+-----------+---------+---------+----+----+\n| Problem   | Desc                     | Questions | Entries | xFactor | a  | s  |\n+-----------+--------------------------+-----------+---------+---------+----+----+\n| we1       | We are going to perform  | 48        | 6       | 8.0     | 48 | 0  |\n| first2    | First degree equations   | 84        | 9       | 9.33    | 0  | 84 |\n+-----------+--------------------------+-----------+---------+---------+----+----+\n| TOTAL = 2 |                          | 132       | 15      | 8.8     | 48 | 84 |\n+-----------+--------------------------+-----------+---------+---------+----+----+\n",
+  "stderr": ""
+}

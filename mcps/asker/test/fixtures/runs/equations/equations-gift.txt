@@ -1,0 +1,1203 @@
+// ==================================================
+// asker    : version 2.10.0
+// Filename : equations-gift.txt
+// Datetime : 2026-11-13 13:38:13 +0000
+// ==================================================
+
+
+// ==================================================
+// Problem: we1 (48 questions)
+// ==================================================
+::we1-1-01pa1true::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 3 + 2</p><p><b>Answer\:</b> 5</p>
+{TRUE####}
+
+::we1-2-02pa1false::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 3 + 2</p><p><b>Answer\:</b> 10</p>
+{FALSE####}
+
+::we1-3-03pa2-choice-none::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 3 + 2</p>
+{
+  =None correct
+  ~%-25%10
+  ~%-25%8
+  ~%-25%24
+  ####Correct answer is 5.
+}
+
+::we1-4-04pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 3 + 2</p>
+{
+  ~%-25%10
+  ~%-25%24
+  =5
+  ~%-25%8
+  ####Correct answer is 5.
+}
+
+::we1-5-05pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 3 + 2</p>
+{
+  ~%-25%10
+  ~%-25%8
+  ~%-25%None correct
+  =5
+  ####Correct answer is 5.
+}
+
+::we1-6-06pa2short::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 3 + 2</p>
+{
+  =%100%5#
+  ####Correct answer is 5.
+}
+
+::we1-7-01pa1true::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 3 - 2</p><p><b>Answer\:</b> 1</p>
+{TRUE####}
+
+::we1-8-02pa1false::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 3 - 2</p><p><b>Answer\:</b> 4</p>
+{FALSE####}
+
+::we1-9-03pa2-choice-none::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 3 - 2</p>
+{
+  ~%-25%2
+  =None correct
+  ~%-25%4
+  ~%-25%0
+  ####Correct answer is 1.
+}
+
+::we1-10-04pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 3 - 2</p>
+{
+  ~%-25%0
+  =1
+  ~%-25%4
+  ~%-25%2
+  ####Correct answer is 1.
+}
+
+::we1-11-05pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 3 - 2</p>
+{
+  ~%-25%0
+  =1
+  ~%-25%2
+  ~%-25%None correct
+  ####Correct answer is 1.
+}
+
+::we1-12-06pa2short::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 3 - 2</p>
+{
+  =%100%1#
+  ####Correct answer is 1.
+}
+
+::we1-13-01pa1true::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 7 + 3</p><p><b>Answer\:</b> 10</p>
+{TRUE####}
+
+::we1-14-02pa1false::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 7 + 3</p><p><b>Answer\:</b> 5</p>
+{FALSE####}
+
+::we1-15-03pa2-choice-none::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 7 + 3</p>
+{
+  =None correct
+  ~%-25%8
+  ~%-25%24
+  ~%-25%5
+  ####Correct answer is 10.
+}
+
+::we1-16-04pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 7 + 3</p>
+{
+  ~%-25%8
+  ~%-25%5
+  ~%-25%24
+  =10
+  ####Correct answer is 10.
+}
+
+::we1-17-05pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 7 + 3</p>
+{
+  =10
+  ~%-25%None correct
+  ~%-25%5
+  ~%-25%24
+  ####Correct answer is 10.
+}
+
+::we1-18-06pa2short::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 7 + 3</p>
+{
+  =%100%10#
+  ####Correct answer is 10.
+}
+
+::we1-19-01pa1true::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 7 - 3</p><p><b>Answer\:</b> 4</p>
+{TRUE####}
+
+::we1-20-02pa1false::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 7 - 3</p><p><b>Answer\:</b> 1</p>
+{FALSE####}
+
+::we1-21-03pa2-choice-none::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 7 - 3</p>
+{
+  ~%-25%0
+  =None correct
+  ~%-25%1
+  ~%-25%2
+  ####Correct answer is 4.
+}
+
+::we1-22-04pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 7 - 3</p>
+{
+  =4
+  ~%-25%1
+  ~%-25%2
+  ~%-25%0
+  ####Correct answer is 4.
+}
+
+::we1-23-05pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 7 - 3</p>
+{
+  ~%-25%1
+  ~%-25%None correct
+  ~%-25%2
+  =4
+  ####Correct answer is 4.
+}
+
+::we1-24-06pa2short::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 7 - 3</p>
+{
+  =%100%4#
+  ####Correct answer is 4.
+}
+
+::we1-25-01pa1true::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 13 + 11</p><p><b>Answer\:</b> 24</p>
+{TRUE####}
+
+::we1-26-02pa1false::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 13 + 11</p><p><b>Answer\:</b> 5</p>
+{FALSE####}
+
+::we1-27-03pa2-choice-none::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 13 + 11</p>
+{
+  ~%-25%10
+  =None correct
+  ~%-25%8
+  ~%-25%5
+  ####Correct answer is 24.
+}
+
+::we1-28-04pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 13 + 11</p>
+{
+  ~%-25%5
+  ~%-25%10
+  ~%-25%8
+  =24
+  ####Correct answer is 24.
+}
+
+::we1-29-05pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 13 + 11</p>
+{
+  =24
+  ~%-25%10
+  ~%-25%None correct
+  ~%-25%5
+  ####Correct answer is 24.
+}
+
+::we1-30-06pa2short::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 13 + 11</p>
+{
+  =%100%24#
+  ####Correct answer is 24.
+}
+
+::we1-31-01pa1true::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 13 - 11</p><p><b>Answer\:</b> 2</p>
+{TRUE####}
+
+::we1-32-02pa1false::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 13 - 11</p><p><b>Answer\:</b> 1</p>
+{FALSE####}
+
+::we1-33-03pa2-choice-none::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 13 - 11</p>
+{
+  ~%-25%1
+  ~%-25%4
+  =None correct
+  ~%-25%0
+  ####Correct answer is 2.
+}
+
+::we1-34-04pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 13 - 11</p>
+{
+  ~%-25%1
+  ~%-25%4
+  ~%-25%0
+  =2
+  ####Correct answer is 2.
+}
+
+::we1-35-05pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 13 - 11</p>
+{
+  ~%-25%1
+  ~%-25%None correct
+  =2
+  ~%-25%4
+  ####Correct answer is 2.
+}
+
+::we1-36-06pa2short::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 13 - 11</p>
+{
+  =%100%2#
+  ####Correct answer is 2.
+}
+
+::we1-37-01pa1true::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 4 + 4</p><p><b>Answer\:</b> 8</p>
+{TRUE####}
+
+::we1-38-02pa1false::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 4 + 4</p><p><b>Answer\:</b> 5</p>
+{FALSE####}
+
+::we1-39-03pa2-choice-none::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 4 + 4</p>
+{
+  ~%-25%10
+  ~%-25%5
+  =None correct
+  ~%-25%24
+  ####Correct answer is 8.
+}
+
+::we1-40-04pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 4 + 4</p>
+{
+  ~%-25%5
+  ~%-25%10
+  ~%-25%24
+  =8
+  ####Correct answer is 8.
+}
+
+::we1-41-05pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 4 + 4</p>
+{
+  ~%-25%10
+  =8
+  ~%-25%None correct
+  ~%-25%5
+  ####Correct answer is 8.
+}
+
+::we1-42-06pa2short::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the sum 4 + 4</p>
+{
+  =%100%8#
+  ####Correct answer is 8.
+}
+
+::we1-43-01pa1true::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 4 - 4</p><p><b>Answer\:</b> 0</p>
+{TRUE####}
+
+::we1-44-02pa1false::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 4 - 4</p><p><b>Answer\:</b> 1</p>
+{FALSE####}
+
+::we1-45-03pa2-choice-none::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 4 - 4</p>
+{
+  =None correct
+  ~%-25%2
+  ~%-25%4
+  ~%-25%1
+  ####Correct answer is 0.
+}
+
+::we1-46-04pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 4 - 4</p>
+{
+  ~%-25%1
+  ~%-25%2
+  ~%-25%4
+  =0
+  ####Correct answer is 0.
+}
+
+::we1-47-05pa2choice::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 4 - 4</p>
+{
+  ~%-25%2
+  ~%-25%4
+  ~%-25%None correct
+  =0
+  ####Correct answer is 0.
+}
+
+::we1-48-06pa2short::[html]<p>We are going to perform calculations with integers.</p><p><b>Question\:</b> Calculate the subtraction 4 - 4</p>
+{
+  =%100%0#
+  ####Correct answer is 0.
+}
+
+
+// ==================================================
+// Problem: first2 (84 questions)
+// ==================================================
+::first2-1-07ps3short-ok::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: x = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%0#
+}
+
+::first2-2-08ps6ordering::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><br/><i>(Place each step in its correct position within the sequence)</i>
+{>0 ALL VERTICAL ABSOLUTE_POSITION SHOW none
+2x - 4 = 6
+2x = 6 + 4
+2x = 10
+x = 10 / 2
+x = 5
+}
+
+::first2-3-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b ></p> 1: ?? ? ? ? ?
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: x = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2x - 4 = 6#
+}
+
+::first2-4-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2x - 4 = 6
+ 2: ?? ? ? ? ?
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: x = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2x = 6 + 4#
+}
+
+::first2-5-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: ?? ? ??
+ 4: x = 10 / 2
+ 5: x = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2x = 10#
+}
+
+::first2-6-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: ? ? ?? ? ?
+ 5: x = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%x = 10 / 2#
+}
+
+::first2-7-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: ? ? ?
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%x = 5#
+}
+
+::first2-8-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x = 6 + 4
+ 2: 2x - 4 = 6
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: x = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 2
+}
+
+::first2-9-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x = 10
+ 2: 2x = 6 + 4
+ 3: 2x - 4 = 6
+ 4: x = 10 / 2
+ 5: x = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 3
+}
+
+::first2-10-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: x = 10 / 2
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: 2x - 4 = 6
+ 5: x = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 4
+}
+
+::first2-11-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: x = 5
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: 2x - 4 = 6
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 5
+}
+
+::first2-12-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x - 4 = 6
+ 2: 2x = 10
+ 3: 2x = 6 + 4
+ 4: x = 10 / 2
+ 5: x = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 3
+}
+
+::first2-13-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x - 4 = 6
+ 2: x = 10 / 2
+ 3: 2x = 10
+ 4: 2x = 6 + 4
+ 5: x = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 4
+}
+
+::first2-14-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x - 4 = 6
+ 2: x = 5
+ 3: 2x = 10
+ 4: x = 10 / 2
+ 5: 2x = 6 + 4
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 5
+}
+
+::first2-15-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: x = 10 / 2
+ 4: 2x = 10
+ 5: x = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%3#
+  ####Change step 3 by step 4
+}
+
+::first2-16-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: x = 5
+ 4: x = 10 / 2
+ 5: 2x = 10
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%3#
+  ####Change step 3 by step 5
+}
+
+::first2-17-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x - 4 = 6
+ 2: 2x = 6 + 4
+ 3: 2x = 10
+ 4: x = 5
+ 5: x = 10 / 2
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%4#
+  ####Change step 4 by step 5
+}
+
+::first2-18-11ps5match::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x - 4 = 6
+ 2: ?
+ 3: ?
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+{
+  =2x \= 10 -> 3
+  =2x \= 6 + 4 -> 2
+  =x \= 10 / 2 -> 4
+  =x \= 5 -> 5
+  = -> Error
+}
+
+::first2-19-12ps5ddmatch::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2x - 4 = 6
+ 2: ?
+ 3: ?
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+// WARNING: can't export ddmatch questions to this format::first2-20-11ps5match::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: ?
+ 3: 2x = 10
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+{
+  =2x - 4 \= 6 -> 1
+  = -> Error
+  =x \= 5 -> 5
+  =2x \= 6 + 4 -> 2
+  =x \= 10 / 2 -> 4
+}
+
+::first2-21-12ps5ddmatch::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2x - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: ?
+ 3: 2x = 10
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+// WARNING: can't export ddmatch questions to this format::first2-22-07ps3short-ok::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: y = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%0#
+}
+
+::first2-23-08ps6ordering::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><br/><i>(Place each step in its correct position within the sequence)</i>
+{>0 ALL VERTICAL ABSOLUTE_POSITION SHOW none
+2y - 4 = 6
+2y = 6 + 4
+2y = 10
+y = 10 / 2
+y = 5
+}
+
+::first2-24-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b ></p> 1: ?? ? ? ? ?
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: y = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2y - 4 = 6#
+}
+
+::first2-25-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2y - 4 = 6
+ 2: ?? ? ? ? ?
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: y = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2y = 6 + 4#
+}
+
+::first2-26-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: ?? ? ??
+ 4: y = 10 / 2
+ 5: y = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2y = 10#
+}
+
+::first2-27-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: ? ? ?? ? ?
+ 5: y = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%y = 10 / 2#
+}
+
+::first2-28-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: ? ? ?
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%y = 5#
+}
+
+::first2-29-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2y = 6 + 4
+ 2: 2y - 4 = 6
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: y = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 2
+}
+
+::first2-30-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2y = 10
+ 2: 2y = 6 + 4
+ 3: 2y - 4 = 6
+ 4: y = 10 / 2
+ 5: y = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 3
+}
+
+::first2-31-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: y = 10 / 2
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: 2y - 4 = 6
+ 5: y = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 4
+}
+
+::first2-32-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: y = 5
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: 2y - 4 = 6
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 5
+}
+
+::first2-33-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2y - 4 = 6
+ 2: 2y = 10
+ 3: 2y = 6 + 4
+ 4: y = 10 / 2
+ 5: y = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 3
+}
+
+::first2-34-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2y - 4 = 6
+ 2: y = 10 / 2
+ 3: 2y = 10
+ 4: 2y = 6 + 4
+ 5: y = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 4
+}
+
+::first2-35-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2y - 4 = 6
+ 2: y = 5
+ 3: 2y = 10
+ 4: y = 10 / 2
+ 5: 2y = 6 + 4
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 5
+}
+
+::first2-36-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: y = 10 / 2
+ 4: 2y = 10
+ 5: y = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%3#
+  ####Change step 3 by step 4
+}
+
+::first2-37-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: y = 5
+ 4: y = 10 / 2
+ 5: 2y = 10
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%3#
+  ####Change step 3 by step 5
+}
+
+::first2-38-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2y - 4 = 6
+ 2: 2y = 6 + 4
+ 3: 2y = 10
+ 4: y = 5
+ 5: y = 10 / 2
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%4#
+  ####Change step 4 by step 5
+}
+
+::first2-39-11ps5match::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: ?
+ 3: ?
+ 4: y = 10 / 2
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+{
+  =y \= 5 -> 5
+  =2y \= 10 -> 3
+  = -> Error
+  =2y - 4 \= 6 -> 1
+  =2y \= 6 + 4 -> 2
+}
+
+::first2-40-12ps5ddmatch::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: ?
+ 3: ?
+ 4: y = 10 / 2
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+// WARNING: can't export ddmatch questions to this format::first2-41-11ps5match::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: ?
+ 3: 2y = 10
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+{
+  =y \= 5 -> 5
+  = -> Error
+  =2y - 4 \= 6 -> 1
+  =2y \= 6 + 4 -> 2
+  =y \= 10 / 2 -> 4
+}
+
+::first2-42-12ps5ddmatch::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2y - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: ?
+ 3: 2y = 10
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+// WARNING: can't export ddmatch questions to this format::first2-43-07ps3short-ok::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: z = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%0#
+}
+
+::first2-44-08ps6ordering::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><br/><i>(Place each step in its correct position within the sequence)</i>
+{>0 ALL VERTICAL ABSOLUTE_POSITION SHOW none
+2z - 4 = 6
+2z = 6 + 4
+2z = 10
+z = 10 / 2
+z = 5
+}
+
+::first2-45-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b ></p> 1: ?? ? ? ? ?
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: z = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2z - 4 = 6#
+}
+
+::first2-46-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2z - 4 = 6
+ 2: ?? ? ? ? ?
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: z = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2z = 6 + 4#
+}
+
+::first2-47-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: ?? ? ??
+ 4: z = 10 / 2
+ 5: z = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2z = 10#
+}
+
+::first2-48-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: ? ? ?? ? ?
+ 5: z = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%z = 10 / 2#
+}
+
+::first2-49-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: ? ? ?
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%z = 5#
+}
+
+::first2-50-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2z = 6 + 4
+ 2: 2z - 4 = 6
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: z = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 2
+}
+
+::first2-51-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2z = 10
+ 2: 2z = 6 + 4
+ 3: 2z - 4 = 6
+ 4: z = 10 / 2
+ 5: z = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 3
+}
+
+::first2-52-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: z = 10 / 2
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: 2z - 4 = 6
+ 5: z = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 4
+}
+
+::first2-53-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: z = 5
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: 2z - 4 = 6
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 5
+}
+
+::first2-54-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2z - 4 = 6
+ 2: 2z = 10
+ 3: 2z = 6 + 4
+ 4: z = 10 / 2
+ 5: z = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 3
+}
+
+::first2-55-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2z - 4 = 6
+ 2: z = 10 / 2
+ 3: 2z = 10
+ 4: 2z = 6 + 4
+ 5: z = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 4
+}
+
+::first2-56-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2z - 4 = 6
+ 2: z = 5
+ 3: 2z = 10
+ 4: z = 10 / 2
+ 5: 2z = 6 + 4
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 5
+}
+
+::first2-57-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: z = 10 / 2
+ 4: 2z = 10
+ 5: z = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%3#
+  ####Change step 3 by step 4
+}
+
+::first2-58-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: z = 5
+ 4: z = 10 / 2
+ 5: 2z = 10
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%3#
+  ####Change step 3 by step 5
+}
+
+::first2-59-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2z - 4 = 6
+ 2: 2z = 6 + 4
+ 3: 2z = 10
+ 4: z = 5
+ 5: z = 10 / 2
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%4#
+  ####Change step 4 by step 5
+}
+
+::first2-60-11ps5match::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: ?
+ 3: ?
+ 4: z = 10 / 2
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+{
+  =2z \= 10 -> 3
+  =z \= 5 -> 5
+  = -> Error
+  =2z \= 6 + 4 -> 2
+  =2z - 4 \= 6 -> 1
+}
+
+::first2-61-12ps5ddmatch::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: ?
+ 3: ?
+ 4: z = 10 / 2
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+// WARNING: can't export ddmatch questions to this format::first2-62-11ps5match::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: 2z = 6 + 4
+ 3: ?
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+{
+  =2z \= 10 -> 3
+  =2z - 4 \= 6 -> 1
+  =z \= 5 -> 5
+  = -> Error
+  =z \= 10 / 2 -> 4
+}
+
+::first2-63-12ps5ddmatch::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2z - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: 2z = 6 + 4
+ 3: ?
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+// WARNING: can't export ddmatch questions to this format::first2-64-07ps3short-ok::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: t = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%0#
+}
+
+::first2-65-08ps6ordering::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><br/><i>(Place each step in its correct position within the sequence)</i>
+{>0 ALL VERTICAL ABSOLUTE_POSITION SHOW none
+2t - 4 = 6
+2t = 6 + 4
+2t = 10
+t = 10 / 2
+t = 5
+}
+
+::first2-66-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b ></p> 1: ?? ? ? ? ?
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: t = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2t - 4 = 6#
+}
+
+::first2-67-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2t - 4 = 6
+ 2: ?? ? ? ? ?
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: t = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2t = 6 + 4#
+}
+
+::first2-68-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: ?? ? ??
+ 4: t = 10 / 2
+ 5: t = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%2t = 10#
+}
+
+::first2-69-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: ? ? ?? ? ?
+ 5: t = 5
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%t = 10 / 2#
+}
+
+::first2-70-09ps7short-hide::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b ></p> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: ? ? ?
+<br/><i>(Note\: Each ? represents a letter/symbol, and each * represents one or more words.)</i>
+{
+  =%100%t = 5#
+}
+
+::first2-71-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t = 6 + 4
+ 2: 2t - 4 = 6
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: t = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 2
+}
+
+::first2-72-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t = 10
+ 2: 2t = 6 + 4
+ 3: 2t - 4 = 6
+ 4: t = 10 / 2
+ 5: t = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 3
+}
+
+::first2-73-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: t = 10 / 2
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: 2t - 4 = 6
+ 5: t = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 4
+}
+
+::first2-74-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: t = 5
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: 2t - 4 = 6
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%1#
+  ####Change step 1 by step 5
+}
+
+::first2-75-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t - 4 = 6
+ 2: 2t = 10
+ 3: 2t = 6 + 4
+ 4: t = 10 / 2
+ 5: t = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 3
+}
+
+::first2-76-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t - 4 = 6
+ 2: t = 10 / 2
+ 3: 2t = 10
+ 4: 2t = 6 + 4
+ 5: t = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 4
+}
+
+::first2-77-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t - 4 = 6
+ 2: t = 5
+ 3: 2t = 10
+ 4: t = 10 / 2
+ 5: 2t = 6 + 4
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%2#
+  ####Change step 2 by step 5
+}
+
+::first2-78-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: t = 10 / 2
+ 4: 2t = 10
+ 5: t = 5
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%3#
+  ####Change step 3 by step 4
+}
+
+::first2-79-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: t = 5
+ 4: t = 10 / 2
+ 5: 2t = 10
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%3#
+  ####Change step 3 by step 5
+}
+
+::first2-80-10ps3short-error::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t - 4 = 6
+ 2: 2t = 6 + 4
+ 3: 2t = 10
+ 4: t = 5
+ 5: t = 10 / 2
+<br/><i>(Write the number of the first wrong line. Write 0 if there is no fail)</i>
+{
+  =%100%4#
+  ####Change step 4 by step 5
+}
+
+::first2-81-11ps5match::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: ?
+ 3: 2t = 10
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+{
+  =2t - 4 \= 6 -> 1
+  = -> Error
+  =2t \= 6 + 4 -> 2
+  =t \= 5 -> 5
+  =t \= 10 / 2 -> 4
+}
+
+::first2-82-12ps5ddmatch::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: ?
+ 2: ?
+ 3: 2t = 10
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+// WARNING: can't export ddmatch questions to this format::first2-83-11ps5match::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t - 4 = 6
+ 2: ?
+ 3: ?
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+{
+  =2t \= 6 + 4 -> 2
+  =t \= 5 -> 5
+  = -> Error
+  =2t \= 10 -> 3
+  =t \= 10 / 2 -> 4
+}
+
+::first2-84-12ps5ddmatch::[html]<p>First degree equations</p><p><b>Question\:</b> Solve the equation 2t - 4 \= 6</p><p><b>Answer\:</b></p> 1: 2t - 4 = 6
+ 2: ?
+ 3: ?
+ 4: ?
+ 5: ?
+<br/><i>(Place each step in its correct position within the sequence)</i>
+// WARNING: can't export ddmatch questions to this format

@@ -1,0 +1,310 @@
+// ==================================================
+// asker    : version 2.10.0
+// Filename : python-gift.txt
+// Datetime : 2026-11-13 13:38:09 +0000
+// ==================================================
+
+
+// ==================================================
+// Code python: files/greet.py (40)
+// ==================================================
+::greet.py-1-code1uncomment::[html] 1: !/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%1#
+  ####Comment symbol removed
+}
+
+::greet.py-2-code1uncomment::[html] 1: #!/usr/bin/python</br> 2: Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%2#
+  ####Comment symbol removed
+}
+
+::greet.py-3-code1comment::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: # names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%3#
+  ####Comment symbol added
+}
+
+::greet.py-4-code1comment::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: # for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%4#
+  ####Comment symbol added
+}
+
+::greet.py-5-code1comment::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5: #     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%5#
+  ####Comment symbol added
+}
+
+::greet.py-6-code1comment::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: # print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%6#
+  ####Comment symbol added
+}
+
+::greet.py-10-code1ok::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4:  </br> 5: for name in names:</br> 6:     print("Hello, " + name)</br> 7: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%0#
+  ####Code is OK
+}
+
+::greet.py-11-code1ok::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     </br> 6:     print("Hello, " + name)</br> 7: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%0#
+  ####Code is OK
+}
+
+::greet.py-13-code1syntaxerror::[html] 1: #/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%4
+  ~%-25%5
+  ~%-25%2
+  =1
+  ####Syntax error\: '\#' must be '\#!'
+}
+
+::greet.py-14-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ['Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%3#
+  ####Syntax error\: ''' must be '"'
+}
+
+::greet.py-15-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print('Hello, " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%1
+  ~%-25%6
+  =5
+  ~%-25%3
+  ####Syntax error\: ''' must be '"'
+}
+
+::greet.py-16-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print('Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%6#
+  ####Syntax error\: ''' must be '"'
+}
+
+::greet.py-17-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = [ Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  =3
+  ~%-25%6
+  ~%-25%1
+  ~%-25%2
+  ####Syntax error\: ' ' must be '"'
+}
+
+::greet.py-18-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print( Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%5#
+  ####Syntax error\: ' ' must be '"'
+}
+
+::greet.py-19-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print( Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%3
+  ~%-25%4
+  =6
+  ~%-25%1
+  ####Syntax error\: ' ' must be '"'
+}
+
+::greet.py-20-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana"; "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%1
+  ~%-25%4
+  =3
+  ~%-25%6
+  ####Syntax error\: '; ' must be ', '
+}
+
+::greet.py-21-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello; " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  =5
+  ~%-25%4
+  ~%-25%2
+  ~%-25%6
+  ####Syntax error\: '; ' must be ', '
+}
+
+::greet.py-22-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana". "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%3#
+  ####Syntax error\: '. ' must be ', '
+}
+
+::greet.py-23-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello. " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%3
+  ~%-25%6
+  =5
+  ~%-25%4
+  ####Syntax error\: '. ' must be ', '
+}
+
+::greet.py-24-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana"  "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%5
+  ~%-25%4
+  =3
+  ~%-25%6
+  ####Syntax error\: ' ' must be ','
+}
+
+::greet.py-25-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello  " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%5#
+  ####Syntax error\: ' ' must be ','
+}
+
+::greet.py-26-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana". "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%3#
+  ####Syntax error\: '.' must be ','
+}
+
+::greet.py-27-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello. " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  =5
+  ~%-25%1
+  ~%-25%6
+  ~%-25%3
+  ####Syntax error\: '.' must be ','
+}
+
+::greet.py-28-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana"; "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  =3
+  ~%-25%4
+  ~%-25%1
+  ~%-25%2
+  ####Syntax error\: ';' must be ','
+}
+
+::greet.py-29-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello; " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%5#
+  ####Syntax error\: ';' must be ','
+}
+
+::greet.py-30-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print["Hello, " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%4
+  =5
+  ~%-25%2
+  ~%-25%1
+  ####Syntax error\: '[' must be '('
+}
+
+::greet.py-31-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print["Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%2
+  ~%-25%5
+  ~%-25%4
+  =6
+  ####Syntax error\: '[' must be '('
+}
+
+::greet.py-32-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print\{"Hello, " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  =5
+  ~%-25%1
+  ~%-25%6
+  ~%-25%3
+  ####Syntax error\: '\\{' must be '('
+}
+
+::greet.py-33-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print\{"Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%1
+  ~%-25%4
+  ~%-25%3
+  =6
+  ####Syntax error\: '\\{' must be '('
+}
+
+::greet.py-34-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print)"Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%5#
+  ####Syntax error\: ')' must be '('
+}
+
+::greet.py-35-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print)"Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%6#
+  ####Syntax error\: ')' must be '('
+}
+
+::greet.py-36-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name]</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%4
+  ~%-25%3
+  =5
+  ~%-25%6
+  ####Syntax error\: ']' must be ')'
+}
+
+::greet.py-37-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done"]</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%6#
+  ####Syntax error\: ']' must be ')'
+}
+
+::greet.py-38-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name\}</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%3
+  =5
+  ~%-25%2
+  ~%-25%1
+  ####Syntax error\: '\\}' must be ')'
+}
+
+::greet.py-39-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done"\}</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%2
+  =6
+  ~%-25%4
+  ~%-25%3
+  ####Syntax error\: '\\}' must be ')'
+}
+
+::greet.py-40-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name(</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  =5
+  ~%-25%4
+  ~%-25%3
+  ~%-25%1
+  ####Syntax error\: '(' must be ')'
+}
+
+::greet.py-41-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done"(</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  =6
+  ~%-25%5
+  ~%-25%4
+  ~%-25%2
+  ####Syntax error\: '(' must be ')'
+}
+
+::greet.py-42-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names == ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%3#
+  ####Syntax error\: ' \=\= ' must be ' \= '
+}
+
+::greet.py-43-code1syntaxerror::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: names = ["Ana", "Luis", "Marta"]</br> 4: for name in names:</br> 5:     print("Hello, " - name)</br> 6: print("Done")</br><br/><p>Escribir el número de línea donde está el primer error. Escribir 0 si no hay ningún error.</p>
+{
+  =%100%5#
+  ####Syntax error\: ' - ' must be ' + '
+}
+
+::greet.py-44-code1variable::[html] 1: #!/usr/bin/python</br> 2: # Greets every name in a list</br> 3: for name in names:</br> 4: names = ["Ana", "Luis", "Marta"]</br> 5:     print("Hello, " + name)</br> 6: print("Done")</br><br/><p>Elegir el número de línea donde está el primer error. Elegir 0 si no hay ningún error.</p>
+{
+  ~%-25%6
+  =3
+  ~%-25%5
+  ~%-25%1
+  ####Variable error! Swapped lines 3 with 4
+}
+

@@ -1,0 +1,6 @@
+{
+  "input": "test/fixtures/inputs/broken-syntax/syntax.haml",
+  "code": 1,
+  "stdout": "==> Loading <root>\\test\\fixtures\\inputs\\broken-syntax/syntax.haml\n",
+  "stderr": "[ERROR] HamlLoader: Can't load file (<root>\\test\\fixtures\\inputs\\broken-syntax/syntax.haml)\n[ERROR]           : Inconsistent indentation: 3 spaces used for indentation, but the rest of the document was indented using 2 spaces.\n"
+}

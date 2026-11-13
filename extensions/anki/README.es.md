@@ -15,7 +15,7 @@ Tarjetas en un sentido, en los dos o con huecos que rellenar, con etiquetas, im�
 
 </div>
 
-Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit) o a Claude Code su propio servidor MCP, pequeño, y lo que hay que saber para usarlo: convertir las tarjetas que escribe contigo en un mazo de Anki, un archivo `.apkg` en tu ordenador que [Anki](https://apps.ankiweb.net), AnkiDroid y AnkiMobile importan; añadir tarjetas a la exportación de un mazo; y leer un `.apkg` para revisarlo o ampliarlo. Si exportas otra vez el mismo mazo, sus tarjetas se actualizan en Anki en vez de duplicarse, y conservas tu progreso en ellas. No sube ni sincroniza nada: el archivo lo importas tú. Sabe del formato de Anki, no de cómo estudiar: un agente que sí sabe, como [padawan](https://github.com/falkenslab/padawan) para el repaso de un estudiante o [miyagi](https://github.com/falkenslab/miyagi) para dar un mazo a una clase, la instala. Su servidor viene empaquetado en la extensión, en un solo archivo, sin nada que instalar.
+Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit) o a Claude Code su propio servidor MCP, pequeño, y lo que hay que saber para usarlo: convertir las tarjetas que escribe contigo en un mazo de Anki, un archivo `.apkg` en tu ordenador que [Anki](https://apps.ankiweb.net), AnkiDroid y AnkiMobile importan; añadir tarjetas a la exportación de un mazo; y leer un `.apkg` para revisarlo o ampliarlo. Si exportas otra vez el mismo mazo, sus tarjetas se actualizan en Anki en vez de duplicarse, y conservas tu progreso en ellas. No sube ni sincroniza nada: el archivo lo importas tú. Sabe del formato de Anki, no de cómo estudiar: un agente que sí sabe, como [padawan](https://github.com/falkenslab/padawan) para el repaso de un estudiante o [miyagi](https://github.com/falkenslab/miyagi) para dar un mazo a una clase, la instala. Su servidor se ejecuta desde npm con `npx`, en un solo archivo, sin nada más que instalar.
 
 ## ✨ Por qué esta extensión
 
@@ -24,7 +24,7 @@ Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkensl
 - ➕ **Añadir a un mazo.** El `.apkg` de un mazo con más tarjetas, conservando sus notas, sus ids y sus archivos.
 - 🖼️ **Imágenes y audio.** Archivos de tu ordenador, referenciados en las tarjetas y metidos en el mazo.
 - ✅ **Comprobado antes de escribirlo.** Un cloze sin hueco, una imagen que falta, un anverso repetido o un script en un campo se rechaza diciendo qué corregir; no se escribe encima de nada sin tu sí.
-- 🪶 **Nada que instalar.** Un solo servidor empaquetado, sin código nativo ni red: funciona sin conexión.
+- 🪶 **Nada que instalar.** Un solo archivo de servidor, ejecutado con `npx`: sin código nativo ni red: funciona sin conexión.
 
 ## 🚀 Empezar
 

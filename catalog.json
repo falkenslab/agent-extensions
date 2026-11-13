@@ -118,6 +118,223 @@
       "kit": ">=0.22.0"
     },
     {
+      "name": "asker",
+      "version": "0.1.0",
+      "description": "Quiz questions from your own definitions with Asker: a definitions file written from your notes and checked, questions generated as Moodle XML or GIFT, and reviewed with you before moodle-teacher imports them.",
+      "descriptions": {
+        "en": "Quiz questions from your own definitions with Asker: a definitions file written from your notes and checked, questions generated as Moodle XML or GIFT, and reviewed with you before moodle-teacher imports them.",
+        "es": "Preguntas de examen a partir de tus propias definiciones con Asker: tu agente redacta el archivo de definiciones a partir de tus apuntes y lo comprueba, Asker genera las preguntas (verdadero o falso, opción múltiple, respuesta corta, emparejamiento, ordenación) en Moodle XML o GIFT, y tú las revisas, dejando fuera las que no quieras, antes de que moodle-teacher importe el resto."
+      },
+      "category": "education",
+      "topics": [
+        "asker",
+        "questions",
+        "quiz",
+        "question-bank",
+        "gift",
+        "moodle-xml",
+        "mcp",
+        "miyagi",
+        "teaching",
+        "education"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/asker",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/asker/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/asker/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/asker/README.es.md"
+      },
+      "install": {
+        "claudeCode": "claude plugin install asker@falkenslab",
+        "agentKit": "extension add asker@falkenslab"
+      },
+      "capabilities": [
+        {
+          "id": "question-generation",
+          "skills": [
+            "asker-inputs",
+            "asker-questions",
+            "asker-troubleshooting"
+          ],
+          "tools": [
+            "asker_input_reference",
+            "check_input",
+            "generate_questions",
+            "read_questions",
+            "exclude_questions",
+            "check_requirements",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Questions from your definitions",
+              "description": "A definitions file written from your notes and checked, quiz questions generated from it with Asker as Moodle XML or GIFT, and a review with you that leaves out the ones you don't want before they're imported."
+            },
+            "es": {
+              "label": "Preguntas a partir de tus definiciones",
+              "description": "Un archivo de definiciones escrito a partir de tus apuntes y comprobado, preguntas de examen generadas con Asker en Moodle XML o GIFT, y una revisión contigo que deja fuera las que no quieras antes de importarlas."
+            }
+          }
+        }
+      ],
+      "requirements": [
+        {
+          "name": "Ruby",
+          "program": "ruby",
+          "version": {
+            "args": [
+              "--version"
+            ],
+            "min": "3.0.0"
+          },
+          "install": {
+            "windows": "winget install RubyInstallerTeam.Ruby.3.4",
+            "macos": "brew install ruby",
+            "linux": "sudo apt install ruby",
+            "url": "https://www.ruby-lang.org/en/documentation/installation/"
+          },
+          "for": [
+            "question-generation"
+          ]
+        },
+        {
+          "name": "Asker",
+          "program": "asker",
+          "version": {
+            "args": [
+              "version"
+            ],
+            "min": "2.10.0"
+          },
+          "install": {
+            "windows": "gem install asker-tool --no-document",
+            "macos": "gem install asker-tool --no-document",
+            "linux": "gem install --user-install asker-tool --no-document",
+            "url": "https://github.com/teuton-software/asker/blob/master/docs/install/README.md"
+          },
+          "for": [
+            "question-generation"
+          ]
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/asker/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/asker/assets/banner.svg",
+      "servers": [
+        {
+          "name": "asker",
+          "kind": "package",
+          "package": "@falkenslab/asker-mcp",
+          "version": "0.1.0",
+          "url": "https://www.npmjs.com/package/@falkenslab/asker-mcp"
+        }
+      ],
+      "skills": [
+        {
+          "name": "asker-inputs",
+          "description": "Write, refine or fix an Asker definitions file (.haml or .xml) with the asker server - concepts with names, tags and definitions, tables, sequences, templates, files, problems and code - drafted only from the person's notes, reviewed by them, refined the way Asker's author does, and checked with check_input until Asker reads it. Use when the person wants questions made with Asker from their notes, has an Asker input to write, extend or fix, or asks how to write one well."
+        },
+        {
+          "name": "asker-questions",
+          "description": "Generate quiz questions from a checked Asker definitions file with the asker server - Moodle XML or GIFT, which question types and templates, the question bank category, penalties - then review every question with the person, write a copy without the ones they leave out, and hand it to moodle-teacher's import_questions. Use when the person asks to generate questions with Asker, to review or filter Asker's questions, or to get them into a Moodle question bank."
+        },
+        {
+          "name": "asker-troubleshooting",
+          "description": "Diagnose and fix what goes wrong with Asker through the asker server - Ruby or the asker-tool gem missing or not found, a definitions file Asker won't read (spaces, tabs, invisible characters, a byte-order mark, an empty %def, a %map without lang, XML that isn't well formed), another file in the folder stopping it, images or links that don't show, questions missing from GIFT, and Moodle refusing a question type. Use when check_input or generate_questions fails, when the questions or images don't look right, or when Asker won't start."
+        }
+      ],
+      "commands": [
+        {
+          "name": "check",
+          "description": "Check an Asker definitions file and say what to fix, line by line (only reads)"
+        },
+        {
+          "name": "generate",
+          "description": "Generate questions from an Asker definitions file, then review them with you"
+        },
+        {
+          "name": "new",
+          "description": "Write a new Asker definitions file from your notes, check it, and show it to you"
+        },
+        {
+          "name": "review",
+          "description": "Review Asker's generated questions with you, and write a copy without the ones you leave out"
+        },
+        {
+          "name": "setup",
+          "description": "Check that Ruby and Asker are installed, and say how to install what's missing"
+        }
+      ],
+      "agents": [
+        {
+          "name": "input-reviewer",
+          "description": "Reviews an Asker definitions file (.haml or .xml) against Asker's rules and its author's practices, and against the person's notes when given, then returns what to fix, line by line, without changing anything. Use for a long or new definitions file before generating questions, or when a file gives fewer questions than expected."
+        },
+        {
+          "name": "question-reviewer",
+          "description": "Goes through the questions Asker generated in a Moodle XML file, page by page, and returns the ones it would leave out or have the person look at, each with its name and the reason, without changing anything. Use when a generated file has too many questions to review one by one in the conversation, before exclude_questions and an import."
+        }
+      ],
+      "tools": [
+        {
+          "name": "asker_input_reference",
+          "labels": {
+            "en": "Reading Asker's input language",
+            "es": "Leyendo el lenguaje de entrada de Asker"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "check_input",
+          "labels": {
+            "en": "Checking an Asker definitions file",
+            "es": "Comprobando un archivo de definiciones de Asker"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "check_requirements",
+          "labels": {
+            "en": "Checking Ruby and Asker",
+            "es": "Comprobando Ruby y Asker"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "exclude_questions",
+          "labels": {
+            "en": "Leaving questions out of a file",
+            "es": "Dejando preguntas fuera de un archivo"
+          }
+        },
+        {
+          "name": "generate_questions",
+          "labels": {
+            "en": "Generating questions with Asker",
+            "es": "Generando preguntas con Asker"
+          }
+        },
+        {
+          "name": "read_questions",
+          "labels": {
+            "en": "Reading generated questions",
+            "es": "Leyendo las preguntas generadas"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "server_info",
+          "labels": {
+            "en": "Reading the asker server's settings",
+            "es": "Leyendo los ajustes del servidor asker"
+          },
+          "readOnly": true
+        }
+      ],
+      "kit": ">=0.22.0"
+    },
+    {
       "name": "calendar",
       "version": "0.1.1",
       "description": "Calendar files: events, deadlines and plans as an .ics file that Google Calendar, Outlook and Apple Calendar import, with time zones, all-day events, repetitions and reminders.",
@@ -1394,7 +1611,7 @@
     },
     {
       "name": "documents",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Word documents in your school's template: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, then read back to check it.",
       "descriptions": {
         "en": "Word documents in your school's template: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, then read back to check it.",
@@ -1614,7 +1831,7 @@
     },
     {
       "name": "moodle-student",
-      "version": "0.4.4",
+      "version": "0.4.5",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
@@ -1880,7 +2097,7 @@
           "name": "moodle",
           "kind": "package",
           "package": "@falkenslab/moodle-mcp",
-          "version": "0.11.0",
+          "version": "0.11.1",
           "url": "https://www.npmjs.com/package/@falkenslab/moodle-mcp"
         }
       ],
@@ -2557,7 +2774,7 @@
     },
     {
       "name": "moodle-teacher",
-      "version": "0.8.1",
+      "version": "0.8.2",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
@@ -3189,7 +3406,7 @@
           "name": "moodle",
           "kind": "package",
           "package": "@falkenslab/moodle-mcp",
-          "version": "0.11.0",
+          "version": "0.11.1",
           "url": "https://www.npmjs.com/package/@falkenslab/moodle-mcp"
         }
       ],

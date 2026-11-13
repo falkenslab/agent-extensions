@@ -1,0 +1,60 @@
+{
+  "name": "@falkenslab/asker-mcp",
+  "version": "0.1.0",
+  "description": "Asker for AI agents: a definitions file checked, questions generated from it as Moodle XML or GIFT, read back for review and filtered before importing.",
+  "license": "MIT",
+  "author": "Falken's Lab",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falkenslab/agent-extensions.git",
+    "directory": "mcps/asker"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/mcps/asker",
+  "bugs": {
+    "url": "https://github.com/falkenslab/agent-extensions/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "agent-kit",
+    "asker",
+    "moodle",
+    "gift",
+    "questions"
+  ],
+  "type": "module",
+  "bin": {
+    "asker-mcp": "dist/server.mjs"
+  },
+  "files": [
+    "dist/server.mjs"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "node scripts/test.mjs",
+    "check": "node scripts/check-tools.mjs",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/server.mjs",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm test && npm run build && npm run check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@types/node": "^20.19.0",
+    "@xmldom/xmldom": "^0.9.12",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.12.0",
+    "globals": "^17.13.0",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.1",
+    "zod": "^4.6.5"
+  }
+}

@@ -15,7 +15,7 @@ A .docx from Markdown in the template's own styles, with its header, footer and 
 
 </div>
 
-This extension gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit), Claude Code or Codex its own small MCP server and what to do with it: turning what it writes with you (a report, a department document, a teaching plan) into a `.docx` in the template your school asks for. The template stays whole, with its styles, page setup, header, footer and logo; the content goes in its body, or where the template marks `{{content}}`, with each heading, list and table in the template's own styles and its `{{fields}}` filled in. The agent reads the template first, and the document back after writing it, before you open it in Word or LibreOffice. It writes nothing over an existing file without your yes, and uploads or sends nothing. It knows Word's format, not what a report should say: an agent that knows how to teach, like [miyagi](https://github.com/falkenslab/miyagi), installs it to write the course's reports in the school's template. Its server is bundled in the extension, in pure JavaScript.
+This extension gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit), Claude Code or Codex its own small MCP server and what to do with it: turning what it writes with you (a report, a department document, a teaching plan) into a `.docx` in the template your school asks for. The template stays whole, with its styles, page setup, header, footer and logo; the content goes in its body, or where the template marks `{{content}}`, with each heading, list and table in the template's own styles and its `{{fields}}` filled in. The agent reads the template first, and the document back after writing it, before you open it in Word or LibreOffice. It writes nothing over an existing file without your yes, and uploads or sends nothing. It knows Word's format, not what a report should say: an agent that knows how to teach, like [miyagi](https://github.com/falkenslab/miyagi), installs it to write the course's reports in the school's template. Its server runs from npm with `npx`, in pure JavaScript.
 
 ## ✨ Why this extension
 
@@ -24,7 +24,7 @@ This extension gives an agent built on [agent-kit](https://github.com/falkenslab
 - 🧩 **Fields filled in.** `{{course}}`, `{{date}}` or `{{teacher}}` in the body, header or footer get their values, even when Word split them inside.
 - 📍 **Around what must stay.** With a `{{content}}` paragraph, the template's cover and signature block stay before and after the document.
 - 🔍 **Checked before you open it.** The agent reads the result back: each paragraph's style, the fields left empty, styles missing.
-- 🪶 **Nothing to install.** One bundled server, run with Node.js; nothing on the network.
+- 🪶 **Nothing to install.** One server file, run with `npx`; nothing on the network.
 
 ## 🚀 Quick start
 
@@ -59,7 +59,7 @@ It needs no settings. Then ask: "Write the department report as a .docx with the
 
 ## 📚 Documentation
 
-- **[Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**: how agent-kit runs an extension with its own bundled server, like this one.
+- **[Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**: how agent-kit runs an extension with its own server.
 - **[The extensions reference](https://falkenslab.github.io/agent-kit/docs/extensions/reference)**: every field of the manifest and of `metadata["agent-kit"]`.
 - **[Office Open XML](https://learn.microsoft.com/office/open-xml/word/overview)**: the format of a `.docx`.
 

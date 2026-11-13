@@ -1,6 +1,6 @@
 {
   "name": "documents",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Word documents in your school's template for your agent: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, on your computer, then read back to check it.",
   "author": {
     "name": "Falken's Lab",
@@ -62,7 +62,7 @@
         "read_docx",
         "server_info"
       ],
-      "help": "Word documents through my own bundled server: I write a .docx from your template (a .docx or .dotx with your school's styles, header, footer and logo) and Markdown, filling its {{placeholders}}, read a template's styles first and the document back to check it; my documents:docx-from-template skill holds how. Without a template I use a clean A4 one. I never overwrite a file without your yes, and I upload or send nothing.",
+      "help": "Word documents through my own server: I write a .docx from your template (a .docx or .dotx with your school's styles, header, footer and logo) and Markdown, filling its {{placeholders}}, read a template's styles first and the document back to check it; my documents:docx-from-template skill holds how. Without a template I use a clean A4 one. I never overwrite a file without your yes, and I upload or send nothing.",
       "labels": {
         "read_template": {
           "en": {

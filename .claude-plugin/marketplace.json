@@ -12,7 +12,7 @@
       "name": "moodle-teacher",
       "source": "./extensions/moodle-teacher",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
-      "version": "0.8.1",
+      "version": "0.8.2",
       "category": "education",
       "tags": [
         "moodle",
@@ -26,7 +26,7 @@
       "name": "moodle-student",
       "source": "./extensions/moodle-student",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
-      "version": "0.4.4",
+      "version": "0.4.5",
       "category": "education",
       "tags": [
         "moodle",
@@ -54,7 +54,7 @@
       "name": "documents",
       "source": "./extensions/documents",
       "description": "Word documents in your school's template: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, then read back to check it.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "education",
       "tags": [
         "documents",
@@ -93,6 +93,20 @@
         "learning",
         "teaching",
         "padawan",
+        "miyagi"
+      ]
+    },
+    {
+      "name": "asker",
+      "source": "./extensions/asker",
+      "description": "Quiz questions from your own definitions with Asker: a definitions file written from your notes and checked, questions generated as Moodle XML or GIFT, and reviewed with you before moodle-teacher imports them.",
+      "version": "0.1.0",
+      "category": "education",
+      "tags": [
+        "asker",
+        "questions",
+        "quiz",
+        "teaching",
         "miyagi"
       ]
     },

@@ -1,0 +1,17 @@
+<map lang='en' context='computer networks, protocols' version='1'>
+  <concept>
+    <names>HTTP</names>
+    <tags>protocol, web, application, port, 80</tags>
+    <def>Application protocol that web browsers use to ask servers for pages</def>
+  </concept>
+  <concept>
+    <names>DNS</names>
+    <tags>protocol, names, domain, resolve, port, 53</tags>
+    <def>Protocol that turns domain names into IP addresses</def>
+  </concept>
+  <concept>
+    <names>DHCP</names>
+    <tags>protocol, address, lease, automatic, configuration</tags>
+    <def>Protocol that gives each device an IP address and its network settings automatically</def>
+  </concept>
+</map>

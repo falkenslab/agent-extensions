@@ -1,0 +1,6 @@
+{
+  "input": "test/fixtures/inputs/code/python.haml",
+  "code": 0,
+  "stdout": "==> Loading <root>\\test\\fixtures\\inputs\\code/python.haml\n\n[INFO] Showing CODEs statistics\n+-----------+--------+-----------+-------+---------+\n| Filename  | Type   | Questions | Lines | xFactor |\n+-----------+--------+-----------+-------+---------+\n| greet.py  | python | 40        | 6     | 6.67    |\n+-----------+--------+-----------+-------+---------+\n| TOTAL = 1 |        | 40        | 6     | 6.67    |\n+-----------+--------+-----------+-------+---------+\n",
+  "stderr": ""
+}

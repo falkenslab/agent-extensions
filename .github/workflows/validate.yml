@@ -18,11 +18,17 @@ jobs:
         run: npx -y @falkenslab/agent-kit-catalog@0.7.0 --check
       - name: The marketplace
         run: claude plugin validate --strict .
-      # Every tool a manifest, a skill or a command names exists in its pinned server and role; readOnlyTools
-      # keeps up with the server's readOnlyHint. Starts each local server for its tools/list only.
+      # Ruby and Asker, so asker's tests run with the real Asker too (mcps/asker), not only its fake.
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+      - name: Asker
+        run: gem install asker-tool -v 2.10.0 --no-document
       # The servers in mcps/, published to npm one by one: built and tested. A server not yet on npm has its
       # build copy dist/server.mjs into its extension, which must then be committed up to date.
       - name: The servers in mcps/
+        env:
+          ASKER_MCP_REAL_TESTS: required
         run: |
           for dir in mcps/*/; do
             echo "::group::$dir"
@@ -30,6 +36,8 @@ jobs:
             echo "::endgroup::"
           done
           git diff --exit-code -- extensions/*/dist/
+      # Every tool a manifest, a skill or a command names exists in its pinned server and role; readOnlyTools
+      # keeps up with the server's readOnlyHint. Starts each local server for its tools/list only.
       - name: The tools they name
         run: node scripts/check-tools.mjs
       - name: Each extension

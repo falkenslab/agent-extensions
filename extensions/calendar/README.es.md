@@ -25,7 +25,7 @@ Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkensl
 - 🔔 **Avisos.** Los minutos, las horas o los días antes que quieras.
 - ✅ **Comprobado antes de escribirlo.** Un fin antes de su inicio, una zona desconocida o una fecha imposible se rechazan, todos los problemas a la vez, y un archivo que ya existe nunca se reemplaza si no lo dices.
 - 👀 **Se puede leer de vuelta.** Los eventos de cualquier archivo `.ics`, con las repeticiones en palabras, para revisar lo que vas a importar.
-- 🪶 **Nada que instalar.** Un solo servidor empaquetado que se ejecuta con Node; sin cuenta y sin red.
+- 🪶 **Nada que instalar.** Un solo archivo de servidor, ejecutado con `npx`; sin cuenta y sin red.
 
 ## 🚀 Empezar
 
@@ -60,7 +60,7 @@ No necesita ajustes. Luego pide: «Pon mis entregas del ensayo en un archivo de 
 
 ## 📚 Documentación
 
-- **[Escribir una extensión instalable](https://falkenslab.github.io/agent-kit/es/docs/extensions/writing)**: cómo ejecuta agent-kit una extensión con su propio servidor empaquetado, como esta.
+- **[Escribir una extensión instalable](https://falkenslab.github.io/agent-kit/es/docs/extensions/writing)**: cómo ejecuta agent-kit una extensión con su propio servidor.
 - **[La referencia de extensiones](https://falkenslab.github.io/agent-kit/es/docs/extensions/reference)**: cada campo del manifiesto y de `metadata["agent-kit"]`.
 - **[RFC 5545](https://www.rfc-editor.org/rfc/rfc5545)**: el formato iCalendar que siguen los archivos.
 

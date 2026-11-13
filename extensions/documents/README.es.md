@@ -15,7 +15,7 @@ Un .docx desde Markdown con los estilos de la plantilla, conservando su encabeza
 
 </div>
 
-Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), a Claude Code o a Codex su propio servidor MCP, pequeño, y lo que hay que saber para usarlo: convertir lo que escribe contigo (una memoria, un documento del departamento, una programación) en un `.docx` con la plantilla que pide tu centro. La plantilla se queda entera, con sus estilos, su configuración de página, su encabezado, su pie y su logo; el contenido va en su cuerpo, o donde la plantilla marca `{{content}}`, con cada título, lista y tabla en los estilos de la propia plantilla y sus `{{campos}}` rellenos. El agente lee primero la plantilla, y el documento después de escribirlo, antes de que lo abras en Word o LibreOffice. No escribe sobre un archivo que ya existe sin tu permiso, y no sube ni envía nada. Sabe del formato de Word, no de lo que debe decir un informe: un agente que sabe enseñar, como [miyagi](https://github.com/falkenslab/miyagi), la instala para escribir los informes del curso con la plantilla del centro. Su servidor va empaquetado en la extensión, en JavaScript puro.
+Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkenslab/agent-kit), a Claude Code o a Codex su propio servidor MCP, pequeño, y lo que hay que saber para usarlo: convertir lo que escribe contigo (una memoria, un documento del departamento, una programación) en un `.docx` con la plantilla que pide tu centro. La plantilla se queda entera, con sus estilos, su configuración de página, su encabezado, su pie y su logo; el contenido va en su cuerpo, o donde la plantilla marca `{{content}}`, con cada título, lista y tabla en los estilos de la propia plantilla y sus `{{campos}}` rellenos. El agente lee primero la plantilla, y el documento después de escribirlo, antes de que lo abras en Word o LibreOffice. No escribe sobre un archivo que ya existe sin tu permiso, y no sube ni envía nada. Sabe del formato de Word, no de lo que debe decir un informe: un agente que sabe enseñar, como [miyagi](https://github.com/falkenslab/miyagi), la instala para escribir los informes del curso con la plantilla del centro. Su servidor se ejecuta desde npm con `npx`, en JavaScript puro.
 
 ## ✨ Por qué esta extensión
 
@@ -24,7 +24,7 @@ Esta extensión da a un agente hecho con [agent-kit](https://github.com/falkensl
 - 🧩 **Campos rellenos.** `{{curso}}`, `{{fecha}}` o `{{profesor}}` en el cuerpo, el encabezado o el pie reciben su valor, aunque Word los haya partido por dentro.
 - 📍 **Alrededor de lo que debe quedarse.** Con un párrafo `{{content}}`, la portada y el bloque de firma de la plantilla se quedan antes y después del documento.
 - 🔍 **Comprobado antes de que lo abras.** El agente lee el resultado: el estilo de cada párrafo, los campos sin rellenar, los estilos que faltan.
-- 🪶 **Nada que instalar.** Un solo servidor empaquetado que se ejecuta con Node.js; nada por la red.
+- 🪶 **Nada que instalar.** Un solo archivo de servidor, ejecutado con `npx`; nada por la red.
 
 ## 🚀 Empezar
 
@@ -59,7 +59,7 @@ No necesita ajustes. Luego pide: «Escribe la memoria del departamento como .doc
 
 ## 📚 Documentación
 
-- **[Escribir una extensión instalable](https://falkenslab.github.io/agent-kit/es/docs/extensions/writing)**: cómo ejecuta agent-kit una extensión con su propio servidor empaquetado, como esta.
+- **[Escribir una extensión instalable](https://falkenslab.github.io/agent-kit/es/docs/extensions/writing)**: cómo ejecuta agent-kit una extensión con su propio servidor.
 - **[Referencia de las extensiones](https://falkenslab.github.io/agent-kit/es/docs/extensions/reference)**: cada campo del manifiesto y de `metadata["agent-kit"]`.
 - **[Office Open XML](https://learn.microsoft.com/es-es/office/open-xml/word/overview)**: el formato de un `.docx`.
 

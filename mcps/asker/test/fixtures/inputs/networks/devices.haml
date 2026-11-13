@@ -1,0 +1,60 @@
+%map{ lang: 'en', context: 'computer networks, devices', version: '1'}
+
+  %concept
+    %names router
+    %tags network, device, packets, routes, ip, layer3
+    %def Network device that forwards packets between different networks using IP addresses
+    %def Device that keeps a table of routes to choose where each packet goes next
+    %table{ fields: 'attribute, value' }
+      %row
+        %col OSI layer
+        %col Network layer
+      %row
+        %col Addresses it uses
+        %col IP addresses
+      %row
+        %col Typical place
+        %col Between a home network and the internet
+      %row
+        %col Main table
+        %col Routing table
+    %table{ fields: 'Steps to forward a packet', sequence: 'In the order a router follows them' }
+      %row Receive the packet
+      %row Read the destination address
+      %row Look up the routing table
+      %row Send it through the chosen interface
+
+  %concept
+    %names switch
+    %tags network, device, frames, mac, ports, layer2
+    %def Network device that connects devices in the same network and sends each frame only to the port where its destination is
+    %table{ fields: 'attribute, value' }
+      %row
+        %col OSI layer
+        %col Data link layer
+      %row
+        %col Addresses it uses
+        %col MAC addresses
+      %row
+        %col Typical place
+        %col Inside an office network
+      %row
+        %col Main table
+        %col MAC address table
+    %table{ fields: 'commands' }
+      %template{ PORT: '1,2,3' }
+        %row show interface PORT
+
+  %concept
+    %names hub
+    %tags network, device, ports, repeater, layer1
+    %def Old network device that repeats every signal it receives to all its ports
+    %table{ fields: 'features' }
+      %row Repeats signals
+      %row Shares bandwidth
+      %row Has no address table
+
+  %concept
+    %names firewall
+    %tags network, security, rules, filter, traffic
+    %def Device or program that allows or blocks network traffic following a set of rules

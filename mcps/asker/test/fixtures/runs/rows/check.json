@@ -1,0 +1,6 @@
+{
+  "input": "test/fixtures/inputs/broken-rows/rows.haml",
+  "code": 0,
+  "stdout": "Syntax OK!\n",
+  "stderr": ""
+}

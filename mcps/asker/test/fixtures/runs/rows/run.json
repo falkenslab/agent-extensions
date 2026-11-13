@@ -1,0 +1,6 @@
+{
+  "input": "test/fixtures/inputs/broken-rows/rows.haml",
+  "code": 1,
+  "stdout": "==> Loading <root>\\test\\fixtures\\inputs\\broken-rows/rows.haml\n",
+  "stderr": "[ERROR] Row: columns size != table.fields.size (<row>\n<col>one</col>\n</row>)\n"
+}

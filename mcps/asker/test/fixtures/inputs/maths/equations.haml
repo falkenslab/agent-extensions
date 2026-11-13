@@ -1,0 +1,30 @@
+%map{ lang: 'en', context: 'maths, integers, equations', version: '1'}
+
+  %problem
+    %cases{ varnames: 'N1, N2'}
+      %case 3, 2
+      %case 7, 3
+      %case 13, 11
+      %case 4, 4
+    %desc We are going to perform calculations with integers.
+    %ask
+      %text Calculate the sum N1 + N2
+      %answer{type: 'formula'} N1 + N2
+    %ask
+      %text Calculate the subtraction N1 - N2
+      %answer{type: 'formula'} N1 - N2
+
+  %problem
+    %cases{ varnames: 'X'}
+      %case x
+      %case y
+      %case z
+      %case t
+    %desc First degree equations
+    %ask
+      %text Solve the equation 2X - 4 = 6
+      %step 2X - 4 = 6
+      %step 2X = 6 + 4
+      %step 2X = 10
+      %step X = 10 / 2
+      %step X = 5

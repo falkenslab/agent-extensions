@@ -1,0 +1,14 @@
+Asker    : version 2.10.0
+Filename : python.txt
+Datetime : 2026-11-13 13:38:09 +0000
+
+-----------------------
+files/greet.py (python)
+
+0 | #!/usr/bin/python
+1 | # Greets every name in a list
+2 | names = ["Ana", "Luis", "Marta"]
+3 | for name in names:
+4 |     print("Hello, " + name)
+5 | print("Done")
+

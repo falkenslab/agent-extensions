@@ -1,0 +1,1636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!--
+==================================================
+ asker    : version 2.10.0
+ Filename : protocols-moodle.xml
+ Datetime : 2026-11-13 13:38:23 +0000
+==================================================
+-->
+
+
+  <question type="multichoice">
+    <name>
+      <text>HTTP-1-d1choose</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Application protocol that web browsers use to ask servers for pages</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>HTTP</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DNS]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DHCP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>HTTP-2-d1none-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Application protocol that web browsers use to ask servers for pages</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Option misspelled!: HTTP]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[THTP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DNS]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DHCP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>HTTP-3-d1none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Application protocol that web browsers use to ask servers for pages</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DNS]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DHCP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[firewall]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>HTTP-4-d2def-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>HTTP</b>:<br/> <i>Application protocol that web browsers wse to ask servers for pages</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Definition text misspelled!: Application protocol that web browsers use to ask servers for pages]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Misspelling</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>HTTP-5-d2name-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>HTTPs</b>:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Concept name misspelled!: HTTP]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Misspelling</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>HTTP-6-d2true-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>HTTP</b>:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>True</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Misspelling]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>HTTP-7-d2true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>HTTP</b>:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>HTTP-8-d2false-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DNS</b>:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>False</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Misspelling]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>HTTP-9-d2false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DNS</b>:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>HTTP-10-d3hidden</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>[*]</b>:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/><p>Note: Every ? symbol represents one letter, and * severals.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[HTTP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>HTTP-11-d4filtered</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>HTTP</b>:<br/> <i>Application [1] that web [2] use to [3] [4] for pages.</i><br/><br/>(Put every word into the right position)]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer>
+        <text><![CDATA[protocol]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer>
+        <text><![CDATA[browsers]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer>
+        <text><![CDATA[ask]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer>
+        <text><![CDATA[servers]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>HTTP-12-d4filtered</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>HTTP</b>:<br/> <i>[1] protocol that [2] [3] use to [4] servers for pages.</i><br/><br/>(Put every word into the right position)]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer>
+        <text><![CDATA[application]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer>
+        <text><![CDATA[web]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer>
+        <text><![CDATA[browsers]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer>
+        <text><![CDATA[ask]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DNS-1-d1choose</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Protocol that turns domain names into IP addresses</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>DNS</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[HTTP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DHCP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DNS-2-d1none-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Protocol that turns domain names into IP addresses</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Option misspelled!: DNS]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[NDS]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[HTTP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DHCP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DNS-3-d1none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Protocol that turns domain names into IP addresses</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[HTTP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DHCP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[firewall]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DNS-4-d2def-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DNS</b>:<br/> <i>Protoco1 that turns domain names into IP addresses</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Definition text misspelled!: Protocol that turns domain names into IP addresses]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Misspelling</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DNS-5-d2name-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>NDS</b>:<br/> <i>Protocol that turns domain names into IP addresses</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Concept name misspelled!: DNS]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Misspelling</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DNS-6-d2true-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DNS</b>:<br/> <i>Protocol that turns domain names into IP addresses</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>True</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Misspelling]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>DNS-7-d2true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DNS</b>:<br/> <i>Protocol that turns domain names into IP addresses</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DNS-8-d2false-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>HTTP</b>:<br/> <i>Protocol that turns domain names into IP addresses</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>False</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Misspelling]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>DNS-9-d2false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>HTTP</b>:<br/> <i>Protocol that turns domain names into IP addresses</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>DNS-10-d3hidden</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>[*]</b>:<br/> <i>Protocol that turns domain names into IP addresses</i><br/><p>Note: Every ? symbol represents one letter, and * severals.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[DNS]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>DNS-11-d4filtered</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DNS</b>:<br/> <i>[1] that [2] [3] names into IP [4].</i><br/><br/>(Put every word into the right position)]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer>
+        <text><![CDATA[protocol]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer>
+        <text><![CDATA[turns]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer>
+        <text><![CDATA[domain]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer>
+        <text><![CDATA[addresses]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DHCP-1-d1choose</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>DHCP</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[HTTP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DNS]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DHCP-2-d1none-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Option misspelled!: DHCP]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[HDCP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[HTTP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DNS]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DHCP-3-d1none</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[HTTP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[DNS]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[firewall]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DHCP-4-d2def-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DHCP</b>:<br/> <i>Protocol that gives each device an IP address and its networq settings automatically</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Definition text misspelled!: Protocol that gives each device an IP address and its network settings automatically]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Misspelling</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DHCP-5-d2name-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DCHP</b>:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Concept name misspelled!: DHCP]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Misspelling</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DHCP-6-d2true-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DHCP</b>:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>True</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Misspelling]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>DHCP-7-d2true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DHCP</b>:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>DHCP-8-d2false-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>HTTP</b>:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>False</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Misspelling]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>DHCP-9-d2false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>HTTP</b>:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>DHCP-10-d3hidden</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>[*]</b>:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/><p>Note: Every ? symbol represents one letter, and * severals.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[DHCP]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>DHCP-11-d4filtered</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DHCP</b>:<br/> <i>[1] that gives each device an IP [2] and its network [3] [4].</i><br/><br/>(Put every word into the right position)]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer>
+        <text><![CDATA[protocol]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer>
+        <text><![CDATA[address]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer>
+        <text><![CDATA[settings]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer>
+        <text><![CDATA[automatically]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>DHCP-12-d4filtered</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>DHCP</b>:<br/> <i>Protocol [1] gives each [2] an IP address and its [3] [4] automatically.</i><br/><br/>(Put every word into the right position)]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer>
+        <text><![CDATA[that]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer>
+        <text><![CDATA[device]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer>
+        <text><![CDATA[network]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer>
+        <text><![CDATA[settings]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+</quiz>

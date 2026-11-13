@@ -1,0 +1,182 @@
+// ==================================================
+// asker    : version 2.10.0
+// Filename : painters-gift.txt
+// Datetime : 2026-11-13 13:38:17 +0000
+// ==================================================
+
+
+// ==================================================
+// Concept name: Joan Miro
+// ==================================================
+::Joan Miro-1-i1choice::[html]I try to apply colours like words that shape poems.
+<br/>Choose the best association for the previous file.<br/>
+{
+  ~%-25%None correct
+  ~%-25%Frida Kahlo
+  ~%-25%Claude Monet
+  =Joan Miro
+}
+
+::Joan Miro-2-i1misspelling::[html]I try to apply colours like words that shape poems.
+<br/>Choose the best association for the previous file.<br/>
+{
+  ~%-25%Claude Monet
+  ~%-25%Frida Kahlo
+  =None correct
+  ~%-25%Joam Miro
+}
+
+::Joan Miro-3-i2true::[html]I try to apply colours like words that shape poems.
+<br/>The previous file corresponds to <b>Joan Miro</b>.
+{TRUE####}
+
+::Joan Miro-4-i2false::[html]I try to apply colours like words that shape poems.
+<br/>The previous file corresponds to <b>Frida Kahlo</b>.
+{FALSE####}
+
+::Joan Miro-5-i3short::[html]I try to apply colours like words that shape poems.
+<br/>Write the best answer ???? ????, for the previous file.<br/>
+{
+  =%100%Joan Miro#
+}
+
+
+// ==================================================
+// Concept name: Frida Kahlo
+// ==================================================
+::Frida Kahlo-1-d1choose::[html]Definition\: <i>Mexican painter known for her self-portraits</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%Claude Monet
+  ~%-25%Joan Miro
+  ~%-25%None correct
+  =Frida Kahlo
+}
+
+::Frida Kahlo-2-d1none-misspelled::[html]Definition\: <i>Mexican painter known for her self-portraits</i><br/>Choose the best association for the previous definition.<br/>
+{
+  =None correct
+  ~%-25%Joan Miro
+  ~%-25%Fryda Kahlo
+  ~%-25%Claude Monet
+  ####Option misspelled!\: Frida Kahlo
+}
+
+::Frida Kahlo-3-d2def-misspelled::[html]Definition of <b>Frida Kahlo</b>\:<br/> <i>Mexicam painter known for her self-portraits</i><br/>
+{
+  =Misspelling
+  ~%-33.33333%True
+  ~%-33.33333%False
+  ####Definition text misspelled!\: Mexican painter known for her self-portraits
+}
+
+::Frida Kahlo-4-d2name-misspelled::[html]Definition of <b>Fritha Kahlo</b>\:<br/> <i>Mexican painter known for her self-portraits</i><br/>
+{
+  ~%-33.33333%True
+  =Misspelling
+  ~%-33.33333%False
+  ####Concept name misspelled!\: Frida Kahlo
+}
+
+::Frida Kahlo-5-d2true-misspelled::[html]Definition of <b>Frida Kahlo</b>\:<br/> <i>Mexican painter known for her self-portraits</i><br/>
+{
+  ~%-33.33333%Misspelling
+  =True
+  ~%-33.33333%False
+}
+
+::Frida Kahlo-6-d2true::[html]Definition of <b>Frida Kahlo</b>\:<br/> <i>Mexican painter known for her self-portraits</i><br/>
+{TRUE####}
+
+::Frida Kahlo-7-d2false-misspelled::[html]Definition of <b>Joan Miro</b>\:<br/> <i>Mexican painter known for her self-portraits</i><br/>
+{
+  ~%-33.33333%True
+  =False
+  ~%-33.33333%Misspelling
+}
+
+::Frida Kahlo-8-d2false::[html]Definition of <b>Joan Miro</b>\:<br/> <i>Mexican painter known for her self-portraits</i><br/>
+{FALSE####}
+
+::Frida Kahlo-9-d3hidden::[html]Definition of <b>????? ?????</b>\:<br/> <i>Mexican painter known for her self-portraits</i><br/><p>Note\: Every ? symbol represents one letter, and * severals.</p>
+{
+  =%100%Frida Kahlo#
+}
+
+::Frida Kahlo-10-d4filtered::[html]Definition of <b>Frida Kahlo</b>\:<br/> <i>[1] painter [2] [3] her [4].</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> mexican
+  =2 -> known
+  =3 -> for
+  =4 -> self-portraits
+}
+
+
+// ==================================================
+// Concept name: Claude Monet
+// ==================================================
+::Claude Monet-1-d1choose::[html]Definition\: <i>French painter who founded impressionism</i><br/>Choose the best association for the previous definition.<br/>
+{
+  =Claude Monet
+  ~%-25%Joan Miro
+  ~%-25%Frida Kahlo
+  ~%-25%None correct
+}
+
+::Claude Monet-2-d1none-misspelled::[html]Definition\: <i>French painter who founded impressionism</i><br/>Choose the best association for the previous definition.<br/>
+{
+  =None correct
+  ~%-25%Frida Kahlo
+  ~%-25%Claude Momet
+  ~%-25%Joan Miro
+  ####Option misspelled!\: Claude Monet
+}
+
+::Claude Monet-3-d2def-misspelled::[html]Definition of <b>Claude Monet</b>\:<br/> <i>Freench painter who founded impressionism</i><br/>
+{
+  ~%-33.33333%False
+  =Misspelling
+  ~%-33.33333%True
+  ####Definition text misspelled!\: French painter who founded impressionism
+}
+
+::Claude Monet-4-d2name-misspelled::[html]Definition of <b>Claoode Monet</b>\:<br/> <i>French painter who founded impressionism</i><br/>
+{
+  ~%-33.33333%False
+  ~%-33.33333%True
+  =Misspelling
+  ####Concept name misspelled!\: Claude Monet
+}
+
+::Claude Monet-5-d2true-misspelled::[html]Definition of <b>Claude Monet</b>\:<br/> <i>French painter who founded impressionism</i><br/>
+{
+  ~%-33.33333%False
+  ~%-33.33333%Misspelling
+  =True
+}
+
+::Claude Monet-6-d2true::[html]Definition of <b>Claude Monet</b>\:<br/> <i>French painter who founded impressionism</i><br/>
+{TRUE####}
+
+::Claude Monet-7-d2false-misspelled::[html]Definition of <b>Joan Miro</b>\:<br/> <i>French painter who founded impressionism</i><br/>
+{
+  ~%-33.33333%Misspelling
+  =False
+  ~%-33.33333%True
+}
+
+::Claude Monet-8-d2false::[html]Definition of <b>Joan Miro</b>\:<br/> <i>French painter who founded impressionism</i><br/>
+{FALSE####}
+
+::Claude Monet-9-d3hidden::[html]Definition of <b>?????? ?????</b>\:<br/> <i>French painter who founded impressionism</i><br/><p>Note\: Every ? symbol represents one letter, and * severals.</p>
+{
+  =%100%Claude Monet#
+}
+
+::Claude Monet-10-d4filtered::[html]Definition of <b>Claude Monet</b>\:<br/> <i>[1] [2] who [3] [4].</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> french
+  =2 -> painter
+  =3 -> founded
+  =4 -> impressionism
+}
+

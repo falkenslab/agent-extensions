@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!--
+==================================================
+ asker    : version 2.10.0
+ Filename : painters-moodle.xml
+ Datetime : 2026-11-13 13:38:17 +0000
+==================================================
+-->
+
+
+  <question type="multichoice">
+    <name>
+      <text>Joan Miro-1-i1choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre>I try to apply colours like words that shape poems.
+</pre><br/>Choose the best association for the previous file.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Joan Miro</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Frida Kahlo]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Claude Monet]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Joan Miro-2-i1misspelling</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre>I try to apply colours like words that shape poems.
+</pre><br/>Choose the best association for the previous file.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Joam Miro]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Frida Kahlo]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Claude Monet]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>Joan Miro-3-i2true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre>I try to apply colours like words that shape poems.
+</pre><br/>The previous file corresponds to <b>Joan Miro</b>.]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>Joan Miro-4-i2false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre>I try to apply colours like words that shape poems.
+</pre><br/>The previous file corresponds to <b>Frida Kahlo</b>.]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>Joan Miro-5-i3short</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<pre>I try to apply colours like words that shape poems.
+</pre><br/>Write the best answer ???? ????, for the previous file.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[Joan Miro]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Joan Miro-6-i1choice</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<img src="@@PLUGINFILE@@/dot.png" alt="imagen" class="img-responsive atto_image_button_text-bottom"><br/>Choose the best association for the previous file.<br/>]]></text>
+      
+        <file name="dot.png" path="/" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8DwHwAFBQIAX8jx0gAAAABJRU5ErkJggg==</file>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Joan Miro</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Frida Kahlo]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Claude Monet]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Joan Miro-7-i1misspelling</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<img src="@@PLUGINFILE@@/dot.png" alt="imagen" class="img-responsive atto_image_button_text-bottom"><br/>Choose the best association for the previous file.<br/>]]></text>
+      
+        <file name="dot.png" path="/" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8DwHwAFBQIAX8jx0gAAAABJRU5ErkJggg==</file>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Jooon Miro]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Frida Kahlo]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Claude Monet]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>Joan Miro-8-i2true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<img src="@@PLUGINFILE@@/dot.png" alt="imagen" class="img-responsive atto_image_button_text-bottom"><br/>The previous file corresponds to <b>Joan Miro</b>.]]></text>
+      
+        <file name="dot.png" path="/" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8DwHwAFBQIAX8jx0gAAAABJRU5ErkJggg==</file>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>Joan Miro-9-i2false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<img src="@@PLUGINFILE@@/dot.png" alt="imagen" class="img-responsive atto_image_button_text-bottom"><br/>The previous file corresponds to <b>Frida Kahlo</b>.]]></text>
+      
+        <file name="dot.png" path="/" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8DwHwAFBQIAX8jx0gAAAABJRU5ErkJggg==</file>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>Joan Miro-10-i3short</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<img src="@@PLUGINFILE@@/dot.png" alt="imagen" class="img-responsive atto_image_button_text-bottom"><br/>Write the best answer ???? ????, for the previous file.<br/>]]></text>
+      
+        <file name="dot.png" path="/" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8DwHwAFBQIAX8jx0gAAAABJRU5ErkJggg==</file>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[Joan Miro]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Frida Kahlo-1-d1choose</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Mexican painter known for her self-portraits</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Frida Kahlo</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Joan Miro]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Claude Monet]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Frida Kahlo-2-d1none-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>Mexican painter known for her self-portraits</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Option misspelled!: Frida Kahlo]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Fryda Kahlo]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Joan Miro]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Claude Monet]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Frida Kahlo-3-d2def-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Frida Kahlo</b>:<br/> <i>Mexicam painter known for her self-portraits</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Definition text misspelled!: Mexican painter known for her self-portraits]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Misspelling</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Frida Kahlo-4-d2name-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Fritha Kahlo</b>:<br/> <i>Mexican painter known for her self-portraits</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Concept name misspelled!: Frida Kahlo]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Misspelling</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Frida Kahlo-5-d2true-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Frida Kahlo</b>:<br/> <i>Mexican painter known for her self-portraits</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>True</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Misspelling]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>Frida Kahlo-6-d2true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Frida Kahlo</b>:<br/> <i>Mexican painter known for her self-portraits</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Frida Kahlo-7-d2false-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Joan Miro</b>:<br/> <i>Mexican painter known for her self-portraits</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>False</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Misspelling]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>Frida Kahlo-8-d2false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Joan Miro</b>:<br/> <i>Mexican painter known for her self-portraits</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>Frida Kahlo-9-d3hidden</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>????? ?????</b>:<br/> <i>Mexican painter known for her self-portraits</i><br/><p>Note: Every ? symbol represents one letter, and * severals.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[Frida Kahlo]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>Frida Kahlo-10-d4filtered</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Frida Kahlo</b>:<br/> <i>[1] painter [2] [3] her [4].</i><br/><br/>(Put every word into the right position)]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer>
+        <text><![CDATA[mexican]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer>
+        <text><![CDATA[known]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer>
+        <text><![CDATA[for]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer>
+        <text><![CDATA[self-portraits]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Claude Monet-1-d1choose</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>French painter who founded impressionism</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Claude Monet</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[None correct]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Joan Miro]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Frida Kahlo]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Claude Monet-2-d1none-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition: <i>French painter who founded impressionism</i><br/>Choose the best association for the previous definition.<br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Option misspelled!: Claude Monet]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>None correct</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Claude Momet]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Joan Miro]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-25" format="html">
+      <text><![CDATA[Frida Kahlo]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Claude Monet-3-d2def-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Claude Monet</b>:<br/> <i>Freench painter who founded impressionism</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Definition text misspelled!: French painter who founded impressionism]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Misspelling</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Claude Monet-4-d2name-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Claoode Monet</b>:<br/> <i>French painter who founded impressionism</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Concept name misspelled!: Claude Monet]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Misspelling</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Claude Monet-5-d2true-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Claude Monet</b>:<br/> <i>French painter who founded impressionism</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>True</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Misspelling]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[False]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>Claude Monet-6-d2true</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Claude Monet</b>:<br/> <i>French painter who founded impressionism</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Claude Monet-7-d2false-misspelled</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Joan Miro</b>:<br/> <i>French painter who founded impressionism</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>False</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Misspelling]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[True]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="truefalse">
+    <name>
+      <text>Claude Monet-8-d2false</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Joan Miro</b>:<br/> <i>French painter who founded impressionism</i><br/>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>Claude Monet-9-d3hidden</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>?????? ?????</b>:<br/> <i>French painter who founded impressionism</i><br/><p>Note: Every ? symbol represents one letter, and * severals.</p>]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    
+    
+    <answer fraction="100" format="moodle_auto_format">
+      <text><![CDATA[Claude Monet]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    
+  </question>
+
+  <question type="matching">
+    <name>
+      <text>Claude Monet-10-d4filtered</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Definition of <b>Claude Monet</b>:<br/> <i>[1] [2] who [3] [4].</i><br/><br/>(Put every word into the right position)]]></text>
+      
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    
+    <subquestion format="html">
+      <text><![CDATA[1]]></text>
+      <answer>
+        <text><![CDATA[french]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[2]]></text>
+      <answer>
+        <text><![CDATA[painter]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[3]]></text>
+      <answer>
+        <text><![CDATA[founded]]></text>
+      </answer>
+    </subquestion>
+    
+    <subquestion format="html">
+      <text><![CDATA[4]]></text>
+      <answer>
+        <text><![CDATA[impressionism]]></text>
+      </answer>
+    </subquestion>
+    
+  </question>
+</quiz>

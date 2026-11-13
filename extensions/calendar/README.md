@@ -25,7 +25,7 @@ This extension gives an agent built on [agent-kit](https://github.com/falkenslab
 - 🔔 **Reminders.** As many minutes, hours or days before as you want.
 - ✅ **Checked before it's written.** An end before its start, an unknown zone or an impossible date is refused, every problem at once, and an existing file is never replaced unless you say so.
 - 👀 **Read back.** Any `.ics` file's events, repetitions in words, to check what you're about to import.
-- 🪶 **Nothing to install.** One bundled server, run with Node; no account, no network.
+- 🪶 **Nothing to install.** One server file, run with `npx`; no account, no network.
 
 ## 🚀 Quick start
 
@@ -60,7 +60,7 @@ It needs no settings. Then ask: "Put my essay deadlines in a calendar file, with
 
 ## 📚 Documentation
 
-- **[Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**: how agent-kit runs an extension with its own bundled server, like this one.
+- **[Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**: how agent-kit runs an extension with its own server.
 - **[The extensions reference](https://falkenslab.github.io/agent-kit/docs/extensions/reference)**: every field of the manifest and of `metadata["agent-kit"]`.
 - **[RFC 5545](https://www.rfc-editor.org/rfc/rfc5545)**: the iCalendar format the files follow.
 

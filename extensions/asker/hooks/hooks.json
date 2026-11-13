@@ -1,0 +1,17 @@
+{
+  "description": "After a .haml (or an Asker .xml) is written or edited, a quick look for what Asker trips on, with a reminder to run check_input.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/after-edit.mjs\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

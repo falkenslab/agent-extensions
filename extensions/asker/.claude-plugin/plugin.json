@@ -1,0 +1,243 @@
+{
+  "name": "asker",
+  "version": "0.1.0",
+  "description": "Quiz questions from your own definitions with Asker: your agent drafts the definitions file from your notes and checks it, Asker generates the questions (true or false, multiple choice, short answer, matching, ordering) as Moodle XML or GIFT, and you review them, leaving out the ones you don't want, before moodle-teacher imports the rest.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/asker",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "asker",
+    "questions",
+    "quiz",
+    "question-bank",
+    "gift",
+    "moodle-xml",
+    "mcp",
+    "miyagi"
+  ],
+  "metadata": {
+    "agent-kit": {
+      "kit": ">=0.22.0",
+      "description": {
+        "es": "Preguntas de examen a partir de tus propias definiciones con Asker: tu agente redacta el archivo de definiciones a partir de tus apuntes y lo comprueba, Asker genera las preguntas (verdadero o falso, opción múltiple, respuesta corta, emparejamiento, ordenación) en Moodle XML o GIFT, y tú las revisas, dejando fuera las que no quieras, antes de que moodle-teacher importe el resto."
+      },
+      "catalog": {
+        "logo": "assets/logo.svg",
+        "banner": "assets/banner.svg"
+      },
+      "provides": [
+        "asker"
+      ],
+      "requires": [],
+      "capabilities": [
+        {
+          "id": "question-generation",
+          "skills": [
+            "asker-inputs",
+            "asker-questions",
+            "asker-troubleshooting"
+          ],
+          "tools": [
+            "asker_input_reference",
+            "check_input",
+            "generate_questions",
+            "read_questions",
+            "exclude_questions",
+            "check_requirements",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Questions from your definitions",
+              "description": "A definitions file written from your notes and checked, quiz questions generated from it with Asker as Moodle XML or GIFT, and a review with you that leaves out the ones you don't want before they're imported."
+            },
+            "es": {
+              "label": "Preguntas a partir de tus definiciones",
+              "description": "Un archivo de definiciones escrito a partir de tus apuntes y comprobado, preguntas de examen generadas con Asker en Moodle XML o GIFT, y una revisión contigo que deja fuera las que no quieras antes de importarlas."
+            }
+          }
+        }
+      ],
+      "requirements": [
+        {
+          "name": "Ruby",
+          "program": "ruby",
+          "version": {
+            "args": [
+              "--version"
+            ],
+            "min": "3.0.0"
+          },
+          "install": {
+            "windows": "winget install RubyInstallerTeam.Ruby.3.4",
+            "macos": "brew install ruby",
+            "linux": "sudo apt install ruby",
+            "url": "https://www.ruby-lang.org/en/documentation/installation/"
+          },
+          "for": [
+            "question-generation"
+          ]
+        },
+        {
+          "name": "Asker",
+          "program": "asker",
+          "version": {
+            "args": [
+              "version"
+            ],
+            "min": "2.10.0"
+          },
+          "install": {
+            "windows": "gem install asker-tool --no-document",
+            "macos": "gem install asker-tool --no-document",
+            "linux": "gem install --user-install asker-tool --no-document",
+            "url": "https://github.com/teuton-software/asker/blob/master/docs/install/README.md"
+          },
+          "for": [
+            "question-generation"
+          ]
+        }
+      ],
+      "readOnlyTools": [
+        "asker_input_reference",
+        "check_input",
+        "read_questions",
+        "check_requirements",
+        "server_info"
+      ],
+      "help": "Asker: I draft a definitions file from the person's notes and check it, generate quiz questions from it with Asker (Moodle XML or GIFT) into a folder on this computer, read them back for review and write a copy without the ones the person leaves out, ready for moodle-teacher's import. My skills asker:asker-inputs, asker:asker-questions and asker:asker-troubleshooting hold how; the commands /asker:setup, /asker:new, /asker:check, /asker:generate and /asker:review run each step, and the subagents asker:input-reviewer and asker:question-reviewer review a long file or many questions. Asker needs Ruby and the asker-tool gem; check_requirements says how to install them.",
+      "labels": {
+        "asker_input_reference": {
+          "en": {
+            "label": "Reading Asker's input language",
+            "phrase": [
+              "read Asker's input language",
+              "read Asker's input language {n} times"
+            ],
+            "result": "Reference read"
+          },
+          "es": {
+            "label": "Leyendo el lenguaje de entrada de Asker",
+            "phrase": [
+              "leyó el lenguaje de entrada de Asker",
+              "leyó el lenguaje de entrada de Asker {n} veces"
+            ],
+            "result": "Referencia leída"
+          }
+        },
+        "check_input": {
+          "en": {
+            "label": "Checking an Asker definitions file",
+            "phrase": [
+              "checked a definitions file",
+              "checked definitions files {n} times"
+            ],
+            "result": "File checked"
+          },
+          "es": {
+            "label": "Comprobando un archivo de definiciones de Asker",
+            "phrase": [
+              "comprobó un archivo de definiciones",
+              "comprobó archivos de definiciones {n} veces"
+            ],
+            "result": "Archivo comprobado"
+          }
+        },
+        "generate_questions": {
+          "en": {
+            "label": "Generating questions with Asker",
+            "phrase": [
+              "generated questions with Asker",
+              "generated questions with Asker {n} times"
+            ],
+            "result": "Questions saved on this computer"
+          },
+          "es": {
+            "label": "Generando preguntas con Asker",
+            "phrase": [
+              "generó preguntas con Asker",
+              "generó preguntas con Asker {n} veces"
+            ],
+            "result": "Preguntas guardadas en este ordenador"
+          }
+        },
+        "read_questions": {
+          "en": {
+            "label": "Reading generated questions",
+            "phrase": [
+              "read the generated questions",
+              "read generated questions {n} times"
+            ],
+            "result": "Questions read"
+          },
+          "es": {
+            "label": "Leyendo las preguntas generadas",
+            "phrase": [
+              "leyó las preguntas generadas",
+              "leyó preguntas generadas {n} veces"
+            ],
+            "result": "Preguntas leídas"
+          }
+        },
+        "exclude_questions": {
+          "en": {
+            "label": "Leaving questions out of a file",
+            "phrase": [
+              "left questions out of a file",
+              "left questions out of files {n} times"
+            ],
+            "result": "Copy saved on this computer"
+          },
+          "es": {
+            "label": "Dejando preguntas fuera de un archivo",
+            "phrase": [
+              "dejó preguntas fuera de un archivo",
+              "dejó preguntas fuera de archivos {n} veces"
+            ],
+            "result": "Copia guardada en este ordenador"
+          }
+        },
+        "check_requirements": {
+          "en": {
+            "label": "Checking Ruby and Asker",
+            "phrase": [
+              "checked Ruby and Asker",
+              "checked Ruby and Asker {n} times"
+            ],
+            "result": "Requirements checked"
+          },
+          "es": {
+            "label": "Comprobando Ruby y Asker",
+            "phrase": [
+              "comprobó Ruby y Asker",
+              "comprobó Ruby y Asker {n} veces"
+            ],
+            "result": "Requisitos comprobados"
+          }
+        },
+        "server_info": {
+          "en": {
+            "label": "Reading the asker server's settings",
+            "phrase": [
+              "read its settings",
+              "read its settings {n} times"
+            ],
+            "result": "Settings read"
+          },
+          "es": {
+            "label": "Leyendo los ajustes del servidor asker",
+            "phrase": [
+              "leyó sus ajustes",
+              "leyó sus ajustes {n} veces"
+            ],
+            "result": "Ajustes leídos"
+          }
+        }
+      }
+    }
+  }
+}

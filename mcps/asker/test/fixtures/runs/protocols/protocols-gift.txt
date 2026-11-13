@@ -1,0 +1,256 @@
+// ==================================================
+// asker    : version 2.10.0
+// Filename : protocols-gift.txt
+// Datetime : 2026-11-13 13:38:23 +0000
+// ==================================================
+
+
+// ==================================================
+// Concept name: HTTP
+// ==================================================
+::HTTP-1-d1choose::[html]Definition\: <i>Application protocol that web browsers use to ask servers for pages</i><br/>Choose the best association for the previous definition.<br/>
+{
+  =HTTP
+  ~%-25%DHCP
+  ~%-25%None correct
+  ~%-25%DNS
+}
+
+::HTTP-2-d1none-misspelled::[html]Definition\: <i>Application protocol that web browsers use to ask servers for pages</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%DNS
+  ~%-25%THTP
+  =None correct
+  ~%-25%DHCP
+  ####Option misspelled!\: HTTP
+}
+
+::HTTP-3-d1none::[html]Definition\: <i>Application protocol that web browsers use to ask servers for pages</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%firewall
+  ~%-25%DNS
+  ~%-25%DHCP
+  =None correct
+}
+
+::HTTP-4-d2def-misspelled::[html]Definition of <b>HTTP</b>\:<br/> <i>Application protocol that web browsers wse to ask servers for pages</i><br/>
+{
+  ~%-33.33333%True
+  ~%-33.33333%False
+  =Misspelling
+  ####Definition text misspelled!\: Application protocol that web browsers use to ask servers for pages
+}
+
+::HTTP-5-d2name-misspelled::[html]Definition of <b>HTTPs</b>\:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/>
+{
+  =Misspelling
+  ~%-33.33333%True
+  ~%-33.33333%False
+  ####Concept name misspelled!\: HTTP
+}
+
+::HTTP-6-d2true-misspelled::[html]Definition of <b>HTTP</b>\:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/>
+{
+  =True
+  ~%-33.33333%Misspelling
+  ~%-33.33333%False
+}
+
+::HTTP-7-d2true::[html]Definition of <b>HTTP</b>\:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/>
+{TRUE####}
+
+::HTTP-8-d2false-misspelled::[html]Definition of <b>DNS</b>\:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/>
+{
+  ~%-33.33333%Misspelling
+  =False
+  ~%-33.33333%True
+}
+
+::HTTP-9-d2false::[html]Definition of <b>DNS</b>\:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/>
+{FALSE####}
+
+::HTTP-10-d3hidden::[html]Definition of <b>[*]</b>\:<br/> <i>Application protocol that web browsers use to ask servers for pages</i><br/><p>Note\: Every ? symbol represents one letter, and * severals.</p>
+{
+  =%100%HTTP#
+}
+
+::HTTP-11-d4filtered::[html]Definition of <b>HTTP</b>\:<br/> <i>Application [1] that web [2] use to [3] [4] for pages.</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> protocol
+  =2 -> browsers
+  =3 -> ask
+  =4 -> servers
+}
+
+::HTTP-12-d4filtered::[html]Definition of <b>HTTP</b>\:<br/> <i>[1] protocol that [2] [3] use to [4] servers for pages.</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> application
+  =2 -> web
+  =3 -> browsers
+  =4 -> ask
+}
+
+
+// ==================================================
+// Concept name: DNS
+// ==================================================
+::DNS-1-d1choose::[html]Definition\: <i>Protocol that turns domain names into IP addresses</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%DHCP
+  ~%-25%HTTP
+  ~%-25%None correct
+  =DNS
+}
+
+::DNS-2-d1none-misspelled::[html]Definition\: <i>Protocol that turns domain names into IP addresses</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%NDS
+  ~%-25%HTTP
+  ~%-25%DHCP
+  =None correct
+  ####Option misspelled!\: DNS
+}
+
+::DNS-3-d1none::[html]Definition\: <i>Protocol that turns domain names into IP addresses</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%HTTP
+  ~%-25%firewall
+  =None correct
+  ~%-25%DHCP
+}
+
+::DNS-4-d2def-misspelled::[html]Definition of <b>DNS</b>\:<br/> <i>Protoco1 that turns domain names into IP addresses</i><br/>
+{
+  ~%-33.33333%True
+  =Misspelling
+  ~%-33.33333%False
+  ####Definition text misspelled!\: Protocol that turns domain names into IP addresses
+}
+
+::DNS-5-d2name-misspelled::[html]Definition of <b>NDS</b>\:<br/> <i>Protocol that turns domain names into IP addresses</i><br/>
+{
+  ~%-33.33333%False
+  =Misspelling
+  ~%-33.33333%True
+  ####Concept name misspelled!\: DNS
+}
+
+::DNS-6-d2true-misspelled::[html]Definition of <b>DNS</b>\:<br/> <i>Protocol that turns domain names into IP addresses</i><br/>
+{
+  =True
+  ~%-33.33333%False
+  ~%-33.33333%Misspelling
+}
+
+::DNS-7-d2true::[html]Definition of <b>DNS</b>\:<br/> <i>Protocol that turns domain names into IP addresses</i><br/>
+{TRUE####}
+
+::DNS-8-d2false-misspelled::[html]Definition of <b>HTTP</b>\:<br/> <i>Protocol that turns domain names into IP addresses</i><br/>
+{
+  ~%-33.33333%True
+  ~%-33.33333%Misspelling
+  =False
+}
+
+::DNS-9-d2false::[html]Definition of <b>HTTP</b>\:<br/> <i>Protocol that turns domain names into IP addresses</i><br/>
+{FALSE####}
+
+::DNS-10-d3hidden::[html]Definition of <b>[*]</b>\:<br/> <i>Protocol that turns domain names into IP addresses</i><br/><p>Note\: Every ? symbol represents one letter, and * severals.</p>
+{
+  =%100%DNS#
+}
+
+::DNS-11-d4filtered::[html]Definition of <b>DNS</b>\:<br/> <i>[1] that [2] [3] names into IP [4].</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> protocol
+  =2 -> turns
+  =3 -> domain
+  =4 -> addresses
+}
+
+
+// ==================================================
+// Concept name: DHCP
+// ==================================================
+::DHCP-1-d1choose::[html]Definition\: <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%DNS
+  ~%-25%None correct
+  ~%-25%HTTP
+  =DHCP
+}
+
+::DHCP-2-d1none-misspelled::[html]Definition\: <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%HDCP
+  ~%-25%DNS
+  ~%-25%HTTP
+  =None correct
+  ####Option misspelled!\: DHCP
+}
+
+::DHCP-3-d1none::[html]Definition\: <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>Choose the best association for the previous definition.<br/>
+{
+  ~%-25%firewall
+  =None correct
+  ~%-25%DNS
+  ~%-25%HTTP
+}
+
+::DHCP-4-d2def-misspelled::[html]Definition of <b>DHCP</b>\:<br/> <i>Protocol that gives each device an IP address and its networq settings automatically</i><br/>
+{
+  ~%-33.33333%False
+  =Misspelling
+  ~%-33.33333%True
+  ####Definition text misspelled!\: Protocol that gives each device an IP address and its network settings automatically
+}
+
+::DHCP-5-d2name-misspelled::[html]Definition of <b>DCHP</b>\:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>
+{
+  ~%-33.33333%True
+  ~%-33.33333%False
+  =Misspelling
+  ####Concept name misspelled!\: DHCP
+}
+
+::DHCP-6-d2true-misspelled::[html]Definition of <b>DHCP</b>\:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>
+{
+  ~%-33.33333%Misspelling
+  ~%-33.33333%False
+  =True
+}
+
+::DHCP-7-d2true::[html]Definition of <b>DHCP</b>\:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>
+{TRUE####}
+
+::DHCP-8-d2false-misspelled::[html]Definition of <b>HTTP</b>\:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>
+{
+  =False
+  ~%-33.33333%Misspelling
+  ~%-33.33333%True
+}
+
+::DHCP-9-d2false::[html]Definition of <b>HTTP</b>\:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/>
+{FALSE####}
+
+::DHCP-10-d3hidden::[html]Definition of <b>[*]</b>\:<br/> <i>Protocol that gives each device an IP address and its network settings automatically</i><br/><p>Note\: Every ? symbol represents one letter, and * severals.</p>
+{
+  =%100%DHCP#
+}
+
+::DHCP-11-d4filtered::[html]Definition of <b>DHCP</b>\:<br/> <i>[1] that gives each device an IP [2] and its network [3] [4].</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> protocol
+  =2 -> address
+  =3 -> settings
+  =4 -> automatically
+}
+
+::DHCP-12-d4filtered::[html]Definition of <b>DHCP</b>\:<br/> <i>Protocol [1] gives each [2] an IP address and its [3] [4] automatically.</i><br/><br/>(Put every word into the right position)
+{
+  =1 -> that
+  =2 -> device
+  =3 -> network
+  =4 -> settings
+}
+

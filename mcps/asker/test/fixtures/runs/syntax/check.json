@@ -1,0 +1,6 @@
+{
+  "input": "test/fixtures/inputs/broken-syntax/syntax.haml",
+  "code": 1,
+  "stdout": "",
+  "stderr": " 006 :       Write 4 spaces before %def. =>     %deff Something with a typo in its k\n 007 :       Write 4 spaces before %def. =>    %def Wrong indentation\n\nRevise 2 syntax warning or error/s\n"
+}

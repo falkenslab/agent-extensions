@@ -15,7 +15,7 @@ Flashcards one way, both ways or with gaps to fill, with tags, images and audio,
 
 </div>
 
-This extension gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit) or Claude Code its own small MCP server and what to do with it: turning the cards it writes with you into an Anki deck, an `.apkg` file on your computer that [Anki](https://apps.ankiweb.net), AnkiDroid and AnkiMobile import; adding cards to a deck's export; and reading an `.apkg` to review or extend it. Exporting the same deck again updates its cards in Anki instead of duplicating them, and keeps your progress on them. It uploads and syncs nothing: you import the file. It knows Anki's format, not how to study: an agent that does, like [padawan](https://github.com/falkenslab/padawan) for a student's own review or [miyagi](https://github.com/falkenslab/miyagi) to hand a class a deck, installs it. Its server comes bundled in the extension, as one file, with nothing to install.
+This extension gives an agent built on [agent-kit](https://github.com/falkenslab/agent-kit) or Claude Code its own small MCP server and what to do with it: turning the cards it writes with you into an Anki deck, an `.apkg` file on your computer that [Anki](https://apps.ankiweb.net), AnkiDroid and AnkiMobile import; adding cards to a deck's export; and reading an `.apkg` to review or extend it. Exporting the same deck again updates its cards in Anki instead of duplicating them, and keeps your progress on them. It uploads and syncs nothing: you import the file. It knows Anki's format, not how to study: an agent that does, like [padawan](https://github.com/falkenslab/padawan) for a student's own review or [miyagi](https://github.com/falkenslab/miyagi) to hand a class a deck, installs it. Its server runs from npm with `npx`, as one file, with nothing else to install.
 
 ## ✨ Why this extension
 
@@ -24,7 +24,7 @@ This extension gives an agent built on [agent-kit](https://github.com/falkenslab
 - ➕ **Add to a deck.** A deck's `.apkg` with more cards, keeping its notes, ids and media.
 - 🖼️ **Images and audio.** Files from your computer, referenced in the cards, packed into the deck.
 - ✅ **Checked before it's written.** A cloze without a gap, a missing image, a duplicate front or a script in a field is refused with what to fix; nothing is written over without your yes.
-- 🪶 **Nothing to install.** One bundled server, no native code and no network: it works offline.
+- 🪶 **Nothing to install.** One server file, run with `npx`: no native code and no network: it works offline.
 
 ## 🚀 Quick start
 

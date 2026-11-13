@@ -1,0 +1,6 @@
+{
+  "input": "test/fixtures/inputs/networks/devices.haml",
+  "code": 0,
+  "stdout": "Syntax OK!\n",
+  "stderr": ""
+}
