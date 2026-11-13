@@ -40,7 +40,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install anki@falkenslab
 ```
 
-No necesita ajustes. Luego pide: «Hazme un mazo de Anki con los veinte verbos irregulares que hemos visto, en mi carpeta de Descargas». Importa el archivo en Anki con Archivo > Importar, o abriéndolo en el móvil. Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add anki@falkenslab`), pero allí se carga su skill y su servidor no arranca: Codex no expande `${CLAUDE_PLUGIN_ROOT}`, la carpeta de la extensión, en `.mcp.json`.
+No necesita ajustes. Luego pide: «Hazme un mazo de Anki con los veinte verbos irregulares que hemos visto, en mi carpeta de Descargas». Importa el archivo en Anki con Archivo > Importar, o abriéndolo en el móvil. Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add anki@falkenslab`), y allí funciona igual, skill y servidor.
 
 ## 💬 Qué puedes pedir
 
@@ -55,7 +55,7 @@ No necesita ajustes. Luego pide: «Hazme un mazo de Anki con los veinte verbos i
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs`, empaquetado (unos 1,7 MB): `write_deck`, `add_to_deck`, `read_deck`, `server_info` |
+| 🔌 Servidor | `npx -y @falkenslab/anki-mcp@0.1.0` (un archivo, unos 1,7 MB): `write_deck`, `add_to_deck`, `read_deck`, `server_info` |
 | 🧩 `anki-decks` | Qué tipo de nota para cada cosa, el HTML de los campos, la sintaxis cloze, etiquetas, archivos, nombres de mazo y submazos, exportar otra vez para actualizar, añadir a un mazo, dónde guardarlo y cómo importarlo |
 
 ## 📚 Documentación
@@ -65,7 +65,7 @@ No necesita ajustes. Luego pide: «Hazme un mazo de Anki con los veinte verbos i
 
 ## 🛠️ Desarrollo
 
-El código del servidor está en [`mcps/anki/`](../../mcps/anki/), que se publica en npm como `@falkenslab/anki-mcp`; allí `npm install`, `npm run build` y `npm test` lo construyen y lo prueban, y la build lo copia en el `dist/server.mjs` de esta extensión, que se guarda en el repositorio hasta que la extensión lo ejecute desde npm. Para probar un cambio, enlaza la extensión en un agente (`my-agent extension add ./extensions/anki --link`) y compruébala con `claude plugin validate --strict extensions/anki`.
+El código del servidor está en [`mcps/anki/`](../../mcps/anki/), publicado en npm como `@falkenslab/anki-mcp`; allí `npm install`, `npm run build` y `npm test` lo construyen y lo prueban. La extensión ejecuta una versión publicada, fijada en `.mcp.json`: un servidor nuevo se publica primero y luego se fija aquí. Para probar un cambio, enlaza la extensión en un agente (`my-agent extension add ./extensions/anki --link`) y compruébala con `claude plugin validate --strict extensions/anki`.
 
 <div align="center">
 

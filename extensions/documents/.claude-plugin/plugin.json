@@ -1,6 +1,6 @@
 {
   "name": "documents",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Word documents in your school's template for your agent: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, on your computer, then read back to check it.",
   "author": {
     "name": "Falken's Lab",

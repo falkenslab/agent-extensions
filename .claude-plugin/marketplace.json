@@ -54,7 +54,7 @@
       "name": "documents",
       "source": "./extensions/documents",
       "description": "Word documents in your school's template: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, then read back to check it.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "education",
       "tags": [
         "documents",
@@ -69,7 +69,7 @@
       "name": "calendar",
       "source": "./extensions/calendar",
       "description": "Calendar files: events, deadlines and plans as an .ics file that Google Calendar, Outlook and Apple Calendar import, with time zones, all-day events, repetitions and reminders.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "education",
       "tags": [
         "calendar",
@@ -85,7 +85,7 @@
       "name": "anki",
       "source": "./extensions/anki",
       "description": "Anki decks: flashcards (question and answer, both ways, or fill the gap) with tags, images and audio as an .apkg; exported again, it updates the cards instead of duplicating them.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "education",
       "tags": [
         "anki",

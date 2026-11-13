@@ -1,6 +1,6 @@
 {
   "name": "calendar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Calendar files for your agent: events, deadlines and plans as an .ics file (iCalendar) that Google Calendar, Outlook and Apple Calendar import, with your time zone, all-day events, repetitions and reminders, written on your computer and read back.",
   "author": {
     "name": "Falken's Lab",

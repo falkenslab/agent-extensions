@@ -10,7 +10,7 @@ An MCP server that writes a `.docx` in a Word template from Markdown, in the tem
 
 `src/server.mjs` holds the tools, with `docx.mjs`, `markdown.mjs` and `styles.mjs`, built on [marked](https://marked.js.org) for the Markdown, [fflate](https://github.com/101arrowz/fflate) for the zip and [xmldom](https://github.com/xmldom/xmldom) for the XML. `npm test` writes documents from a template built in the test (localized styles, a header with a logo, split placeholders, a `{{content}}` marker), checks every part and style, converts them to PDF when LibreOffice is installed, and lists the built server's tools.
 
-In this folder, `npm install`, `npm run build` (one file, `dist/server.mjs`, with esbuild) and `npm test`. Until the extension runs the server from npm, the build also copies it into [`extensions/documents/dist/`](../../extensions/documents/dist/), which is committed. `npm publish` builds and tests it first; the version goes up together in `package.json`, the server's `VERSION` and the extension's `plugin.json`.
+In this folder, `npm install`, `npm run build` (one file, `dist/server.mjs`, with esbuild) and `npm test`. `npm publish` builds and tests it first; the version goes up together in `package.json` and the server's `VERSION`, and the extension pins it in its `.mcp.json` once it's on npm.
 
 <div align="center">
 

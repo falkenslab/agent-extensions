@@ -40,7 +40,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install anki@falkenslab
 ```
 
-It needs no settings. Then ask: "Make me an Anki deck with the twenty irregular verbs we went through, in my Downloads folder." Import the file in Anki with File > Import, or by opening it on your phone. Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add anki@falkenslab`), but there its skill loads and its server doesn't start: Codex doesn't expand `${CLAUDE_PLUGIN_ROOT}`, the extension's folder, in `.mcp.json`.
+It needs no settings. Then ask: "Make me an Anki deck with the twenty irregular verbs we went through, in my Downloads folder." Import the file in Anki with File > Import, or by opening it on your phone. Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add anki@falkenslab`), and there it works the same, skill and server.
 
 ## 💬 What you can ask
 
@@ -55,7 +55,7 @@ It needs no settings. Then ask: "Make me an Anki deck with the twenty irregular 
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs`, bundled (about 1.7 MB): `write_deck`, `add_to_deck`, `read_deck`, `server_info` |
+| 🔌 Server | `npx -y @falkenslab/anki-mcp@0.1.0` (one file, about 1.7 MB): `write_deck`, `add_to_deck`, `read_deck`, `server_info` |
 | 🧩 `anki-decks` | Which note type when, the HTML fields take, cloze syntax, tags, media, deck names and subdecks, exporting again to update, adding to a deck, where to save it and how to import it |
 
 ## 📚 Documentation
@@ -65,7 +65,7 @@ It needs no settings. Then ask: "Make me an Anki deck with the twenty irregular 
 
 ## 🛠️ Developing
 
-The server's code is in [`mcps/anki/`](../../mcps/anki/), which goes to npm as `@falkenslab/anki-mcp`; there `npm install`, `npm run build` and `npm test` build and test it, and the build copies it into this extension's `dist/server.mjs`, which is committed until the extension runs it from npm. To try a change, link the extension into an agent (`my-agent extension add ./extensions/anki --link`) and check it with `claude plugin validate --strict extensions/anki`.
+The server's code is in [`mcps/anki/`](../../mcps/anki/), published to npm as `@falkenslab/anki-mcp`; there `npm install`, `npm run build` and `npm test` build and test it. The extension runs a published version, pinned in `.mcp.json`: a new server is published first, then pinned here. To try a change, link the extension into an agent (`my-agent extension add ./extensions/anki --link`) and check it with `claude plugin validate --strict extensions/anki`.
 
 <div align="center">
 

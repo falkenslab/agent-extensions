@@ -33,8 +33,7 @@
   "scripts": {
     "build": "esbuild src/server.mjs --bundle --minify --platform=node --format=esm --target=node20 --outfile=dist/server.mjs \"--banner:js=#!/usr/bin/env node\"",
     "test": "node --test \"test/**/*.test.mjs\"",
-    "prepublishOnly": "npm run build && npm test",
-    "postbuild": "node -e \"require('fs').mkdirSync('../../extensions/documents/dist',{recursive:true});require('fs').copyFileSync('dist/server.mjs','../../extensions/documents/dist/server.mjs')\""
+    "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",

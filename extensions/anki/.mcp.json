@@ -1,9 +1,10 @@
 {
   "mcpServers": {
     "anki": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+        "-y",
+        "@falkenslab/anki-mcp@0.1.0"
       ]
     }
   }

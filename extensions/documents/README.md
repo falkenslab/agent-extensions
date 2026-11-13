@@ -40,7 +40,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install documents@falkenslab
 ```
 
-It needs no settings. Then ask: "Write the department report as a .docx with the template in my Documents folder." Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add documents@falkenslab`), but there only its skill loads: its server runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`), which Codex doesn't expand in `.mcp.json`.
+It needs no settings. Then ask: "Write the department report as a .docx with the template in my Documents folder." Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add documents@falkenslab`), and there it works the same, skill and server.
 
 ## 💬 What you can ask
 
@@ -54,7 +54,7 @@ It needs no settings. Then ask: "Write the department report as a .docx with the
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `dist/server.mjs`, bundled in the extension: `read_template`, `write_docx`, `read_docx`, `server_info` |
+| 🔌 Server | `npx -y @falkenslab/documents-mcp@0.1.0`: `read_template`, `write_docx`, `read_docx`, `server_info` |
 | 🧩 `docx-from-template` | Reading the template first, writing the Markdown for its styles, placeholders and images, saving without overwriting, and checking the result before the person reviews it |
 
 ## 📚 Documentation
@@ -65,7 +65,7 @@ It needs no settings. Then ask: "Write the department report as a .docx with the
 
 ## 🛠️ Developing
 
-The server's code is in [`mcps/documents/`](../../mcps/documents/), which goes to npm as `@falkenslab/documents-mcp`; there `npm install`, `npm run build` and `npm test` build and test it, and the build copies it into this extension's `dist/server.mjs`, which is committed until the extension runs it from npm. To try a change, link the extension into an agent (`my-agent extension add ./extensions/documents --link`) and check it with `claude plugin validate --strict extensions/documents`.
+The server's code is in [`mcps/documents/`](../../mcps/documents/), published to npm as `@falkenslab/documents-mcp`; there `npm install`, `npm run build` and `npm test` build and test it. The extension runs a published version, pinned in `.mcp.json`: a new server is published first, then pinned here. To try a change, link the extension into an agent (`my-agent extension add ./extensions/documents --link`) and check it with `claude plugin validate --strict extensions/documents`.
 
 <div align="center">
 

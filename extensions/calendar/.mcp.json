@@ -1,9 +1,10 @@
 {
   "mcpServers": {
     "calendar": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+        "-y",
+        "@falkenslab/calendar-mcp@0.1.0"
       ]
     }
   }

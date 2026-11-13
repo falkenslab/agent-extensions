@@ -33,8 +33,7 @@
   "scripts": {
     "build": "node build.mjs",
     "test": "node --test \"test/*.test.mjs\"",
-    "prepublishOnly": "npm run build && npm test",
-    "postbuild": "node -e \"require('fs').mkdirSync('../../extensions/anki/dist',{recursive:true});require('fs').copyFileSync('dist/server.mjs','../../extensions/anki/dist/server.mjs')\""
+    "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",

@@ -41,7 +41,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install calendar@falkenslab
 ```
 
-No necesita ajustes. Luego pide: «Pon mis entregas del ensayo en un archivo de calendario, con un aviso el día antes». Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add calendar@falkenslab`) y carga su skill, pero no arranca su servidor: Codex no expande `${CLAUDE_PLUGIN_ROOT}`, la carpeta de la extensión, en `.mcp.json`.
+No necesita ajustes. Luego pide: «Pon mis entregas del ensayo en un archivo de calendario, con un aviso el día antes». Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add calendar@falkenslab`) y allí funciona igual, skill y servidor.
 
 ## 💬 Qué puedes pedir
 
@@ -55,7 +55,7 @@ No necesita ajustes. Luego pide: «Pon mis entregas del ensayo en un archivo de 
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs`, empaquetado: `write_ics`, `read_ics`, `server_info` |
+| 🔌 Servidor | `npx -y @falkenslab/calendar-mcp@0.1.0`: `write_ics`, `read_ics`, `server_info` |
 | 📅 `calendar-files` | La zona horaria de la persona, todo el día o a una hora, repeticiones o eventos sueltos, avisos, dónde guardarlo, leer el archivo de vuelta e importarlo en Google Calendar, Outlook o Calendario de Apple |
 
 ## 📚 Documentación
@@ -66,7 +66,7 @@ No necesita ajustes. Luego pide: «Pon mis entregas del ensayo en un archivo de 
 
 ## 🛠️ Desarrollo
 
-El código del servidor está en [`mcps/calendar/`](../../mcps/calendar/), que se publica en npm como `@falkenslab/calendar-mcp`; allí `npm install`, `npm run build` y `npm test` lo construyen y lo prueban, y la build lo copia en el `dist/server.mjs` de esta extensión, que se guarda en el repositorio hasta que la extensión lo ejecute desde npm. Para probar un cambio, enlaza la extensión en un agente (`my-agent extension add ./extensions/calendar --link`) y compruébala con `claude plugin validate --strict extensions/calendar`.
+El código del servidor está en [`mcps/calendar/`](../../mcps/calendar/), publicado en npm como `@falkenslab/calendar-mcp`; allí `npm install`, `npm run build` y `npm test` lo construyen y lo prueban. La extensión ejecuta una versión publicada, fijada en `.mcp.json`: un servidor nuevo se publica primero y luego se fija aquí. Para probar un cambio, enlaza la extensión en un agente (`my-agent extension add ./extensions/calendar --link`) y compruébala con `claude plugin validate --strict extensions/calendar`.
 
 <div align="center">
 

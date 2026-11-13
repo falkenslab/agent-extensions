@@ -40,7 +40,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install documents@falkenslab
 ```
 
-No necesita ajustes. Luego pide: «Escribe la memoria del departamento como .docx con la plantilla que tengo en Documentos». Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add documents@falkenslab`), pero allí solo carga su skill: su servidor se ejecuta desde la carpeta de la extensión (`${CLAUDE_PLUGIN_ROOT}`), que Codex no expande en `.mcp.json`.
+No necesita ajustes. Luego pide: «Escribe la memoria del departamento como .docx con la plantilla que tengo en Documentos». Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add documents@falkenslab`) y allí funciona igual, skill y servidor.
 
 ## 💬 Qué puedes pedir
 
@@ -54,7 +54,7 @@ No necesita ajustes. Luego pide: «Escribe la memoria del departamento como .doc
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `dist/server.mjs`, empaquetado en la extensión: `read_template`, `write_docx`, `read_docx`, `server_info` |
+| 🔌 Servidor | `npx -y @falkenslab/documents-mcp@0.1.0`: `read_template`, `write_docx`, `read_docx`, `server_info` |
 | 🧩 `docx-from-template` | Leer primero la plantilla, escribir el Markdown para sus estilos, los campos y las imágenes, guardar sin sobrescribir y comprobar el resultado antes de que lo revise la persona |
 
 ## 📚 Documentación
@@ -65,7 +65,7 @@ No necesita ajustes. Luego pide: «Escribe la memoria del departamento como .doc
 
 ## 🛠️ Desarrollo
 
-El código del servidor está en [`mcps/documents/`](../../mcps/documents/), que se publica en npm como `@falkenslab/documents-mcp`; allí `npm install`, `npm run build` y `npm test` lo construyen y lo prueban, y la build lo copia en el `dist/server.mjs` de esta extensión, que se guarda en el repositorio hasta que la extensión lo ejecute desde npm. Para probar un cambio, enlaza la extensión en un agente (`my-agent extension add ./extensions/documents --link`) y compruébala con `claude plugin validate --strict extensions/documents`.
+El código del servidor está en [`mcps/documents/`](../../mcps/documents/), publicado en npm como `@falkenslab/documents-mcp`; allí `npm install`, `npm run build` y `npm test` lo construyen y lo prueban. La extensión ejecuta una versión publicada, fijada en `.mcp.json`: un servidor nuevo se publica primero y luego se fija aquí. Para probar un cambio, enlaza la extensión en un agente (`my-agent extension add ./extensions/documents --link`) y compruébala con `claude plugin validate --strict extensions/documents`.
 
 <div align="center">
 

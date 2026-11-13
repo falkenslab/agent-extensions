@@ -10,7 +10,7 @@ An MCP server that writes and reads Anki decks (`.apkg`): basic, both-ways and c
 
 It writes Anki's legacy collection (`collection.anki2`, schema 11), which every Anki version imports, with [sql.js](https://github.com/sql-js/sql.js) (its WebAssembly inlined in the bundle, about 1.7 MB) and zips it with [fflate](https://github.com/101arrowz/fflate). `npm test` writes decks and reads them back with sql.js, with media and cloze, and lists the built server's tools.
 
-In this folder, `npm install`, `npm run build` (one file, `dist/server.mjs`, with esbuild) and `npm test`. Until the extension runs the server from npm, the build also copies it into [`extensions/anki/dist/`](../../extensions/anki/dist/), which is committed. `npm publish` builds and tests it first; the version goes up together in `package.json`, the server's `VERSION` and the extension's `plugin.json`.
+In this folder, `npm install`, `npm run build` (one file, `dist/server.mjs`, with esbuild) and `npm test`. `npm publish` builds and tests it first; the version goes up together in `package.json` and the server's `VERSION`, and the extension pins it in its `.mcp.json` once it's on npm.
 
 <div align="center">
 

@@ -41,7 +41,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install calendar@falkenslab
 ```
 
-It needs no settings. Then ask: "Put my essay deadlines in a calendar file, with a reminder the day before." Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add calendar@falkenslab`), and its skill loads, but its server doesn't start: Codex doesn't expand `${CLAUDE_PLUGIN_ROOT}`, the extension's folder, in `.mcp.json`.
+It needs no settings. Then ask: "Put my essay deadlines in a calendar file, with a reminder the day before." Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add calendar@falkenslab`), and there it works the same, skill and server.
 
 ## 💬 What you can ask
 
@@ -55,7 +55,7 @@ It needs no settings. Then ask: "Put my essay deadlines in a calendar file, with
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs`, bundled: `write_ics`, `read_ics`, `server_info` |
+| 🔌 Server | `npx -y @falkenslab/calendar-mcp@0.1.0`: `write_ics`, `read_ics`, `server_info` |
 | 📅 `calendar-files` | The person's time zone, all-day or timed, repetitions or separate events, reminders, where to save, reading the file back, and importing it into Google Calendar, Outlook or Apple Calendar |
 
 ## 📚 Documentation
@@ -66,7 +66,7 @@ It needs no settings. Then ask: "Put my essay deadlines in a calendar file, with
 
 ## 🛠️ Developing
 
-The server's code is in [`mcps/calendar/`](../../mcps/calendar/), which goes to npm as `@falkenslab/calendar-mcp`; there `npm install`, `npm run build` and `npm test` build and test it, and the build copies it into this extension's `dist/server.mjs`, which is committed until the extension runs it from npm. To try a change, link the extension into an agent (`my-agent extension add ./extensions/calendar --link`) and check it with `claude plugin validate --strict extensions/calendar`.
+The server's code is in [`mcps/calendar/`](../../mcps/calendar/), published to npm as `@falkenslab/calendar-mcp`; there `npm install`, `npm run build` and `npm test` build and test it. The extension runs a published version, pinned in `.mcp.json`: a new server is published first, then pinned here. To try a change, link the extension into an agent (`my-agent extension add ./extensions/calendar --link`) and check it with `claude plugin validate --strict extensions/calendar`.
 
 <div align="center">
 

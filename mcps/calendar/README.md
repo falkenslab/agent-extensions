@@ -10,7 +10,7 @@ An MCP server that writes and reads iCalendar (`.ics`) files: timed events in a 
 
 `src/server.mjs` holds the tools, `ics.mjs` the writing, `parse.mjs` the reading and `tz.mjs` the time zones, from the platform's own data. `npm test` checks the files with [ical.js](https://github.com/kewisch/ical.js) (time zones, repetitions across clock changes, all-day ends) and lists the built server's tools.
 
-In this folder, `npm install`, `npm run build` (one file, `dist/server.mjs`, with esbuild) and `npm test`. Until the extension runs the server from npm, the build also copies it into [`extensions/calendar/dist/`](../../extensions/calendar/dist/), which is committed. `npm publish` builds and tests it first; the version goes up together in `package.json`, the server's `VERSION` and the extension's `plugin.json`.
+In this folder, `npm install`, `npm run build` (one file, `dist/server.mjs`, with esbuild) and `npm test`. `npm publish` builds and tests it first; the version goes up together in `package.json` and the server's `VERSION`, and the extension pins it in its `.mcp.json` once it's on npm.
 
 <div align="center">
 

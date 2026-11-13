@@ -9,7 +9,7 @@
   "extensions": [
     {
       "name": "anki",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Anki decks: flashcards (question and answer, both ways, or fill the gap) with tags, images and audio as an .apkg; exported again, it updates the cards instead of duplicating them.",
       "descriptions": {
         "en": "Anki decks: flashcards (question and answer, both ways, or fill the gap) with tags, images and audio as an .apkg; exported again, it updates the cards instead of duplicating them.",
@@ -71,8 +71,10 @@
       "servers": [
         {
           "name": "anki",
-          "kind": "bundled",
-          "command": "node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+          "kind": "package",
+          "package": "@falkenslab/anki-mcp",
+          "version": "0.1.0",
+          "url": "https://www.npmjs.com/package/@falkenslab/anki-mcp"
         }
       ],
       "skills": [
@@ -117,7 +119,7 @@
     },
     {
       "name": "calendar",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Calendar files: events, deadlines and plans as an .ics file that Google Calendar, Outlook and Apple Calendar import, with time zones, all-day events, repetitions and reminders.",
       "descriptions": {
         "en": "Calendar files: events, deadlines and plans as an .ics file that Google Calendar, Outlook and Apple Calendar import, with time zones, all-day events, repetitions and reminders.",
@@ -178,8 +180,10 @@
       "servers": [
         {
           "name": "calendar",
-          "kind": "bundled",
-          "command": "node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+          "kind": "package",
+          "package": "@falkenslab/calendar-mcp",
+          "version": "0.1.0",
+          "url": "https://www.npmjs.com/package/@falkenslab/calendar-mcp"
         }
       ],
       "skills": [
@@ -1390,7 +1394,7 @@
     },
     {
       "name": "documents",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Word documents in your school's template: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, then read back to check it.",
       "descriptions": {
         "en": "Word documents in your school's template: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, then read back to check it.",
@@ -1450,8 +1454,10 @@
       "servers": [
         {
           "name": "documents",
-          "kind": "bundled",
-          "command": "node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+          "kind": "package",
+          "package": "@falkenslab/documents-mcp",
+          "version": "0.1.0",
+          "url": "https://www.npmjs.com/package/@falkenslab/documents-mcp"
         }
       ],
       "skills": [

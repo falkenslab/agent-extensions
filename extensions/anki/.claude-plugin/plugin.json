@@ -1,6 +1,6 @@
 {
   "name": "anki",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Anki decks from your agent: flashcards (question and answer, both ways, or fill the gap) with tags, images and audio, written as an .apkg on your computer that Anki, AnkiDroid and AnkiMobile import; exported again, it updates the cards instead of duplicating them, and an existing deck's export can take more.",
   "author": {
     "name": "Falken's Lab",
