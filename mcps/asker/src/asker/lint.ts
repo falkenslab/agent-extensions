@@ -173,7 +173,7 @@ export function explain(messages: string[]): string[] {
 
 /** Asker's error with the neighbour it comes from said, when it's about another file in the folder. */
 export function attribute(error: string, input: string): string {
-  const name = path.basename(input);
+  const name = path.basename(input.replace(/\\/g, "/"));
   const mentioned = /\(([^()]*\.(?:haml|xml))\)/i.exec(error)?.[1];
   if (!mentioned) return error;
   const other = path.basename(mentioned.replace(/\\/g, "/"));
