@@ -114,8 +114,9 @@ export async function checkInput(file: string): Promise<CheckResult> {
       syntax = parseCheck(`${checked.stdout}\n${checked.stderr}`);
       if (!syntax.ok && !syntax.errors.length && !syntax.total) syntax.errors.push({ line: 0, message: firstLine(checked) || "Asker couldn't check it", source: "" });
     }
-    // asker check is stricter than Asker's loader (it refuses %tags and %def in a %code, which Asker
-    // uses): the trial run always goes ahead, and says whether Asker really reads the file.
+    // asker check also flags lines Asker loads past and ignores (%tags and %def in a %code, which mean
+    // nothing there, as Asker's author confirmed in teuton-software/asker#30): the trial run always goes
+    // ahead, and says whether Asker reads the file; the flagged lines still need fixing.
     const syntaxExplained = syntax && !syntax.ok ? explain(syntax.errors.map((e) => e.message)) : [];
     const run = await runAsker([file], { cwd: folder, timeoutMs: 600_000 });
     const said = `${run.stdout}\n${run.stderr}`;
@@ -135,7 +136,7 @@ export async function checkInput(file: string): Promise<CheckResult> {
       return { ok: false, ...(syntax ? { syntax } : {}), errors: [...errors, `Asker's Moodle XML can't be read: ${error instanceof Error ? error.message : String(error)}`], explained: explain(errors), ...ran };
     }
     const { all, groups } = countQuestions(read.filter((q) => q.type !== "ddmatch"));
-    const lenient = syntax && !syntax.ok ? ["asker check complains about the lines in syntax, but Asker reads the file and makes its questions: its checker doesn't know every keyword Asker uses (%tags and %def in a %code, for one). Fix them if they're real mistakes."] : [];
+    const lenient = syntax && !syntax.ok ? ["Asker reads the file and makes its questions, but asker check flags the lines in syntax: Asker ignores them as they are (%tags and %def in a %code, for one, mean nothing there). Fix or remove them so the file says only what Asker uses."] : [];
     return { ok: errors.length === 0, ...(syntax ? { syntax } : {}), errors, explained: [...new Set([...(errors.length ? [...syntaxExplained, ...explain(errors)] : []), ...lenient])], ...ran, wouldGenerate: { total: all.total, groups } };
   });
 }

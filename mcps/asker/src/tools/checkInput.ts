@@ -22,7 +22,7 @@ export const registerCheckInput: RegisterTool = (server) => {
             total: z.number().optional().describe("How many errors in all: Asker shows at most 10"),
           })
           .optional()
-          .describe("asker check's verdict (HAML only), each complaint with its line; it's stricter than Asker itself, so ok says whether Asker really reads the file"),
+          .describe("asker check's verdict (HAML only), each complaint with its line; it also flags lines Asker ignores while loading, so ok says whether Asker reads the file, and these still need fixing"),
         errors: z.array(z.string()),
         warnings: z.array(z.string()),
         wouldGenerate: z.object({ total: z.number(), groups: z.array(groupSchema) }).optional().describe("What generate_questions would make, with every question type"),

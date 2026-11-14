@@ -24,7 +24,7 @@ Start from what the server says, never from a guess: `check_requirements` and `s
 - **"columns size != table.fields.size"**: a `%row` with more or fewer `%col` than the table's fields.
 - **XML that isn't well formed**: the hint gives the line; a closing tag that doesn't match is the usual cause.
 - **An empty file**, or one without `%map` on its first line: Asker can't start reading it.
-- **asker check complains but Asker reads the file**: Asker's checker is stricter than Asker (it refuses `%tags` and `%def` in a `%code`); `check_input` says when that's the case. Fix the lines only if they're real mistakes.
+- **asker check complains but Asker reads the file**: Asker skips lines that mean nothing where they are (`%tags` and `%def` in a `%code`, for one) and generates anyway, while its checker flags them. Fix or remove them: they have no effect as they are.
 
 ## Another file in the folder
 

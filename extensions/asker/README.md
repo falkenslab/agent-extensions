@@ -80,7 +80,7 @@ From Asker's documentation and its author's tutorials, which the skills follow:
 ## 📚 Documentation
 
 - **[Asker's documentation](https://github.com/teuton-software/asker/tree/master/docs)**: its input language, its question templates, and tutorials in Spanish.
-- **[dvarrui/asker-inputs](https://github.com/dvarrui/asker-inputs)**: many real definitions files by subject, and solved problems.
+- **[dvarrui/asker-inputs](https://github.com/dvarrui/asker-inputs)**: its author's own definitions files by subject, from many years: examples of use, not Asker's reference, and some are out of date.
 - **[Writing an installable extension](https://falkenslab.github.io/agent-kit/docs/extensions/writing)**: how agent-kit runs an extension and checks what it requires.
 
 ## 🛠️ Developing

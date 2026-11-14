@@ -61,7 +61,7 @@ Asker generates many questions from a definitions file with fixed templates: the
 
 Found testing every input in [dvarrui/asker-inputs](https://github.com/dvarrui/asker-inputs) through the built server, and importing into [moodle-sandbox](https://github.com/falkenslab/moodle-sandbox)'s Moodle 5.2 with moodle-driver (what moodle-teacher's `import_questions` runs):
 
-- **`asker check` is stricter than Asker**: it refuses `%tags` and `%def` in a `%code`, which Asker reads (60 of the 129 inputs). `check_input` always makes a trial run, and its `ok` says whether Asker really reads the file.
+- **`asker check` flags lines Asker ignores**: `%tags` and `%def` in a `%code` mean nothing there (60 of the 129 inputs have them); Asker skips them and generates, while `asker check` refuses the file. `check_input` always makes a trial run: its `ok` says whether Asker reads the file, and `syntax` the lines to fix anyway ([teuton-software/asker#30](https://github.com/teuton-software/asker/issues/30)).
 - **Ordering questions don't import into Moodle 4.4 and later**: Asker writes them without `<shownumcorrect/>`, and Moodle's ordering type then fails to save them ("Error writing to database"). The server adds it.
 - **Unescaped text**: Asker writes an answer like `mysql -u root < data.sql` into a `<text>` without CDATA, which leaves the XML unreadable. The server escapes `<`, `>` and `&` there, with the same text.
 - **GIFT**: Asker can't write drag-and-drop matching there, and its warning comments out the next question's first line; it also skips questions with embedded files. The server removes the broken blocks, restores the next question, and says what GIFT lacks.

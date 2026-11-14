@@ -80,7 +80,7 @@ De la documentación de Asker y de los tutoriales de su autor, que siguen las sk
 ## 📚 Documentación
 
 - **[La documentación de Asker](https://github.com/teuton-software/asker/tree/master/docs)**: su lenguaje de entrada, sus plantillas de preguntas y tutoriales en español.
-- **[dvarrui/asker-inputs](https://github.com/dvarrui/asker-inputs)**: muchos archivos de definiciones reales por materia, y problemas resueltos.
+- **[dvarrui/asker-inputs](https://github.com/dvarrui/asker-inputs)**: los archivos de definiciones de su autor, por materia y de muchos años: ejemplos de uso, no la referencia de Asker, y algunos están desfasados.
 - **[Escribir una extensión instalable](https://falkenslab.github.io/agent-kit/es/docs/extensions/writing)**: cómo ejecuta agent-kit una extensión y comprueba lo que necesita.
 
 ## 🛠️ Desarrollo

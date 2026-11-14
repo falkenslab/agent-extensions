@@ -136,6 +136,8 @@ const CODE = `# Asker input: code (experimental in Asker)
     %path files/string.py
 \`\`\`
 - **%type**: python, ruby, javascript or sql. **%path**: relative to the input's folder.
+- No %tags or %def in a %code: they mean nothing there, Asker skips them and asker check flags them.
+- Experimental in Asker: it may change or go, so keep code files few and simple.
 - Its questions go under the file's name. Short programs with real, readable lines work best.`;
 
 const QUESTIONS = `# What Asker makes

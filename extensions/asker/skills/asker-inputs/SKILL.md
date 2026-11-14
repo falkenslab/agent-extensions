@@ -32,7 +32,7 @@ Asker makes many quiz questions from a definitions file, the same way every time
 - **`%template`**: rows repeated with each value of a variable, to write less.
 - **`%def{ type: 'file'}`**: an image, audio, video or text file that identifies the concept, by a path relative to the file's folder, or a link that ends in the file's own name (`.png`, `.jpg`, `.mp3`…). A share page (Google Drive, OneDrive) isn't the file. An image must show this concept, not a general picture: highlight the part it's about.
 - **`%problem`**: for practical subjects (calculations, procedures), a statement (`%desc`) with questions (`%ask`) that have an `%answer` (or a formula) or the `%step`s to it, and `%cases` (four or more) that run it again with other values.
-- **`%code`**: a program file (Python, Ruby, JavaScript, SQL); experimental in Asker.
+- **`%code`**: a program file (Python, Ruby, JavaScript, SQL), with only `%type` and `%path`, never `%tags` or `%def`; experimental in Asker, so it may change.
 - **Text students see** (names, definitions, tables, files) has the language's accents and spelling; **tags and context** either all with accents or all without, since Asker compares words as written. Plain text for formulas: Moodle may not render `$…$` LaTeX.
 
 ## Drafting from notes with the person
@@ -45,10 +45,10 @@ Asker makes many quiz questions from a definitions file, the same way every time
 
 - **`check_input`** with the file's absolute path, after writing it and after every change. It gives:
   - `hints`: what stands out before Asker runs (invisible characters, tabs, odd indentation, an empty `%def`, a file or link that won't load, a `%map` without `lang`), each with its line;
-  - `syntax`: Asker's own checker, which is stricter than Asker (it refuses `%tags` and `%def` in a `%code`, which Asker reads);
+  - `syntax`: Asker's own checker, which also flags lines Asker skips (`%tags` and `%def` in a `%code` mean nothing there): fix those too;
   - `errors` and `explained`: what Asker says loading it, and in plain words, including errors in the other files of the folder;
   - `wouldGenerate`: the questions per concept, problem or code file, and `withoutQuestions`, those that would make none.
-- Fix what it says and check again until `ok` is true. Spaces are the usual cause: HAML counts them (0 before `%map`, 2 before `%concept`, 4 before its keywords, 6 before `%row`, 8 or 10 before `%col`), with no tabs and no invisible characters; retyping the line fixes an invisible one.
+- Fix what it says and check again until `ok` is true and `syntax` has no complaints. Spaces are the usual cause: HAML counts them (0 before `%map`, 2 before `%concept`, 4 before its keywords, 6 before `%row`, 8 or 10 before `%col`), with no tabs and no invisible characters; retyping the line fixes an invisible one.
 - **Refine with the counts**: a concept with few questions needs more definitions or a table, from the person; a concept with none needs a definition or a table, or more concepts to compare with. Say so and ask; never make content up to raise the numbers.
 - For a long file, the `input-reviewer` subagent reads it against these rules and the person's notes and returns what to fix, without changing it.
 
