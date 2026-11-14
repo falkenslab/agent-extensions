@@ -43,7 +43,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install asker@falkenslab
 ```
 
-It needs no settings; restart the app if Ruby was installed while it was open (`/asker:setup` checks). Then ask: "Make questions with Asker from my notes on network devices, in my Documents/asker folder." Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add asker@falkenslab`), and there its skills and server work the same; it has no commands, subagents or hooks.
+It needs no settings; restart the app if Ruby was installed while it was open (the agent checks it with `check_requirements`). Then ask: "Make questions with Asker from my notes on network devices, in my Documents/asker folder." Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add asker@falkenslab`), and there its skills and server work the same; it has no subagents or hooks.
 
 ## 💬 What you can ask
 
@@ -59,13 +59,8 @@ It needs no settings; restart the app if Ruby was installed while it was open (`
 | --- | --- |
 | 🔌 Server | `npx -y @falkenslab/asker-mcp@0.1.0`: `asker_input_reference`, `check_input`, `generate_questions`, `read_questions`, `exclude_questions`, `check_requirements`, `server_info` |
 | 🧩 `asker-inputs` | Writing a definitions file from the person's notes as Asker reads it and as its author advises (unambiguous definitions, real names, tables that may be shared, true sequences, problems for practical subjects), and checking and refining it |
-| 🧩 `asker-questions` | Generating with the right options and output folder, reviewing every question with the person by group and template, leaving out the rejected ones, and importing the rest with moodle-teacher |
+| 🧩 `asker-questions` | Generating with the right options and output folder, reviewing every question with the person by group and template, leaving out the rejected ones, and importing the rest with moodle-teacher; in miyagi, the button "Questions with Asker" |
 | 🧩 `asker-troubleshooting` | What goes wrong and how to fix it: installing, files Asker won't read, other files in the folder, images and links, questions missing or refused |
-| ⌨️ `/asker:setup` | Checks Ruby and Asker, and gives the install commands for what's missing (only reads) |
-| ⌨️ `/asker:new` | Writes a new definitions file from the person's notes, checks it and shows it |
-| ⌨️ `/asker:check` | Checks a definitions file and says what to fix, line by line (only reads) |
-| ⌨️ `/asker:generate` | Generates the questions with the options agreed, then offers the review |
-| ⌨️ `/asker:review` | Reviews a generated file with the person and writes a copy without the rejected questions |
 | 🤖 `input-reviewer` | Subagent: reviews a definitions file against Asker's rules and the person's notes, and returns what to fix (changes nothing) |
 | 🤖 `question-reviewer` | Subagent: goes through a generated file and returns the questions to leave out or look at, with the reason (changes nothing) |
 | 🪝 Hook | In Claude Code, after a `.haml` is written or edited: a quick look for tabs, invisible characters, odd indentation and empty definitions, and a reminder to run `check_input` |

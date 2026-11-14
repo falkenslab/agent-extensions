@@ -22,6 +22,8 @@ The computer the agent works on is the person's real machine: nothing gets insta
 4. **`lab_up`**, after telling the person what it will run (the image, what's mounted, whether it has internet). If the policy refuses it, fix what the message lists; never look for a way around it.
 5. **Try it** with `lab_exec`, the command as a list (`["sh", "-c", "…"]` for a shell line) and a `timeoutSeconds` that fits, so nothing runs for ever. A service: try it from another service of the lab, or from inside its own container, by service name.
 6. **Report** what happened: the image, each command, its exit code and the relevant output quoted literally, and anything you couldn't try and why.
+When the try has many steps or long output, the `lab-runner` subagent can do steps 3 to 6 after the person's yes to step 4, and return only the report.
+
 7. **Clean up**: `lab_down` when the try is over (its containers and volumes go; its folder stays), and offer to delete the lab's folder if it was only for this. In full mode, an image you pulled for the try (check `list_images` before `lab_up`, which pulls them) can go too, with the person's yes; an image they already had stays.
 
 ## Rules

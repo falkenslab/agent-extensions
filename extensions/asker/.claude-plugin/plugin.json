@@ -109,7 +109,7 @@
         "check_requirements",
         "server_info"
       ],
-      "help": "Asker: I draft a definitions file from the person's notes and check it, generate quiz questions from it with Asker (Moodle XML or GIFT) into a folder on this computer, read them back for review and write a copy without the ones the person leaves out, ready for moodle-teacher's import. My skills asker:asker-inputs, asker:asker-questions and asker:asker-troubleshooting hold how; the commands /asker:setup, /asker:new, /asker:check, /asker:generate and /asker:review run each step, and the subagents asker:input-reviewer and asker:question-reviewer review a long file or many questions. Asker needs Ruby and the asker-tool gem; check_requirements says how to install them.",
+      "help": "Asker: I draft a definitions file from the person's notes and check it, generate quiz questions from it with Asker (Moodle XML or GIFT) into a folder on this computer, read them back for review and write a copy without the ones the person leaves out, ready for moodle-teacher's import. My skills asker:asker-inputs, asker:asker-questions and asker:asker-troubleshooting hold how, and the subagents asker:input-reviewer and asker:question-reviewer review a long file or many questions. Asker needs Ruby and the asker-tool gem; check_requirements says how to install them.",
       "labels": {
         "asker_input_reference": {
           "en": {

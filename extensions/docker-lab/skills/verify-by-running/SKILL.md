@@ -20,6 +20,8 @@ Reading code or instructions says what they should do; running them says what th
 2. **`lab_up`** (say what it starts and let the session's question be the yes), then run each step with **`lab_exec`** (a `timeoutSeconds` that fits), or **`lab_check`** when the lab has a check.
 3. Watch the services too: `lab_status` and `lab_logs` say whether a failure is the thing verified or the lab around it.
 
+When the runs or the logs will be long, the `lab-runner` subagent can do steps 1 to 3 once the person has said yes to what runs, and return only the verdict and its evidence.
+
 ## The verdict
 
 End with **works** or **doesn't work**, then the evidence:

@@ -64,6 +64,7 @@ Aún no está probada en Codex.
 | 🏷️ `brand` | Kits y plantillas de marca, y qué ofrecer en un plan sin ellos |
 | 📤 `export` | Qué formato para cada uso, la calidad del plan Free, los elementos premium y guardar el archivo antes de que caduque el enlace |
 | 🕶️ `what-goes-to-canva` | Lo que nunca va a Canva sin tu sí: los datos personales de otras personas |
+| 🪝 Hook | En Claude Code, antes de que una herramienta envíe algo a Canva: un recordatorio de lo que puede ir |
 
 ## 📚 Documentación
 

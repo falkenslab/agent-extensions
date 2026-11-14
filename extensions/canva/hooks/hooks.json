@@ -1,0 +1,17 @@
+{
+  "description": "Before a Canva tool sends content to Canva, a reminder of what may go there: no other people's personal data without the person's explicit yes.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__.*canva.*__(create-design|generate-design|generate-design-structured|create-design-from-candidate|edit-design|import-design-from-url|upload-asset-from-url|create-upload-url|generate-image|comment-on-design|reply-to-comment|create-design-from-brand-template|create-brand-template-draft)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/before-send.mjs\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

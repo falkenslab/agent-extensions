@@ -1,6 +1,10 @@
 ---
 name: course-check
 description: Check a Moodle course for what's broken or inconsistent in Moodle itself with moodle-mcp - restrictions pointing nowhere, dates out of order or from last year, empty or forgotten hidden sections, quizzes that show answers during the attempt, assignments that can't take what they ask or save feedback, missing rubrics, gradebook weights, completion - and prepare a course for a new term. Use when the person asks to review, audit or tidy a course, or to get it ready for a new edition.
+label: es=Revisar el aula | en=Check the course | fr=Vérifier le cours | de=Kurs prüfen
+icon: 🩺
+group: classroom
+needs-classroom: true
 ---
 
 # Checking a course in Moodle
@@ -9,7 +13,7 @@ These are the checks only Moodle can answer. Whether the course teaches well is 
 
 ## Read it once
 
-`get_course_structure` with `details: true` (dates and restriction texts), `get_gradebook_setup`, and `get_activity_settings` for the activities the checks below need. For a large course, a sample per section and every graded activity.
+`get_course_structure` with `details: true` (dates and restriction texts), `get_gradebook_setup`, and `get_activity_settings` for the activities the checks below need. For a large course, a sample per section and every graded activity; or hand the whole reading to the `course-auditor` subagent, which only reads and returns the report by impact.
 
 ## What to check
 

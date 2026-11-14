@@ -43,7 +43,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install asker@falkenslab
 ```
 
-No necesita ajustes; reinicia la aplicación si instalaste Ruby con ella abierta (`/asker:setup` lo comprueba). Luego pide: «Haz preguntas con Asker a partir de mis apuntes sobre dispositivos de red, en mi carpeta Documentos/asker». Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add asker@falkenslab`), y allí funcionan igual sus skills y su servidor; no tiene comandos, subagentes ni hooks.
+No necesita ajustes; reinicia la aplicación si instalaste Ruby con ella abierta (el agente lo comprueba con `check_requirements`). Luego pide: «Haz preguntas con Asker a partir de mis apuntes sobre dispositivos de red, en mi carpeta Documentos/asker». Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add asker@falkenslab`), y allí funcionan igual sus skills y su servidor; no tiene subagentes ni hooks.
 
 ## 💬 Qué puedes pedir
 
@@ -59,13 +59,8 @@ No necesita ajustes; reinicia la aplicación si instalaste Ruby con ella abierta
 | --- | --- |
 | 🔌 Servidor | `npx -y @falkenslab/asker-mcp@0.1.0`: `asker_input_reference`, `check_input`, `generate_questions`, `read_questions`, `exclude_questions`, `check_requirements`, `server_info` |
 | 🧩 `asker-inputs` | Escribir un archivo de definiciones a partir de los apuntes de la persona tal como lo lee Asker y como aconseja su autor (definiciones inequívocas, nombres de verdad, tablas que se pueden compartir, secuencias reales, problemas para las materias prácticas), y comprobarlo y pulirlo |
-| 🧩 `asker-questions` | Generar con las opciones y la carpeta de salida adecuadas, revisar cada pregunta con la persona por grupo y plantilla, dejar fuera las rechazadas e importar el resto con moodle-teacher |
+| 🧩 `asker-questions` | Generar con las opciones y la carpeta de salida adecuadas, revisar cada pregunta con la persona por grupo y plantilla, dejar fuera las rechazadas e importar el resto con moodle-teacher; en miyagi, el botón «Preguntas con Asker» |
 | 🧩 `asker-troubleshooting` | Qué sale mal y cómo arreglarlo: la instalación, archivos que Asker no lee, otros archivos en la carpeta, imágenes y enlaces, preguntas que faltan o se rechazan |
-| ⌨️ `/asker:setup` | Comprueba Ruby y Asker, y da los comandos para instalar lo que falte (solo lee) |
-| ⌨️ `/asker:new` | Escribe un archivo de definiciones nuevo a partir de los apuntes de la persona, lo comprueba y se lo enseña |
-| ⌨️ `/asker:check` | Comprueba un archivo de definiciones y dice qué arreglar, línea a línea (solo lee) |
-| ⌨️ `/asker:generate` | Genera las preguntas con las opciones acordadas y ofrece revisarlas |
-| ⌨️ `/asker:review` | Revisa con la persona un archivo generado y escribe una copia sin las preguntas rechazadas |
 | 🤖 `input-reviewer` | Subagente: revisa un archivo de definiciones según las reglas de Asker y los apuntes de la persona, y devuelve qué arreglar (no cambia nada) |
 | 🤖 `question-reviewer` | Subagente: repasa un archivo generado y devuelve las preguntas que dejar fuera o mirar, con el motivo (no cambia nada) |
 | 🪝 Hook | En Claude Code, después de escribir o editar un `.haml`: un vistazo rápido a tabuladores, caracteres invisibles, sangrías impares y definiciones vacías, y un recordatorio de pasar `check_input` |

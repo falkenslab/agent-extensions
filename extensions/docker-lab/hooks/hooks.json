@@ -1,0 +1,17 @@
+{
+  "description": "Before a shell command that runs docker, a reminder that docker-mcp's tools (and the mode the person chose) are the way to use Docker here.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/before-docker.mjs\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

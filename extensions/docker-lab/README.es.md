@@ -86,7 +86,9 @@ Cámbialos después con `my-agent extension config docker-lab`, en el chat con `
 | 🧪 `try-in-a-lab` | Probar una herramienta, un servicio o código ajeno en un laboratorio desechable: la imagen, el laboratorio, el informe y la limpieza |
 | 🏗️ `build-a-lab` | Un laboratorio reproducible de uno o varios servicios: su fichero de Compose y su comprobación, las reglas de seguridad, arrancarlo, reiniciarlo y pararlo |
 | ✅ `verify-by-running` | Si un código, unas instrucciones, un enunciado y su solución o una entrega funcionan, con un veredicto y sus pruebas, y escribir la comprobación de un laboratorio |
+| 🤖 `lab-runner` | Subagente: hace una prueba o una verificación en un laboratorio y devuelve el veredicto con sus pruebas, no los logs enteros |
 | 🐳 `use-docker` | Tu Docker: contenedores, imágenes, volúmenes, redes, Compose y limpieza, qué confirmar, las opciones peligrosas y qué hacer si falta Docker |
+| 🪝 Hook | En Claude Code, antes de que un comando de la terminal ejecute `docker`: un recordatorio de usar las herramientas de docker-mcp, que respetan tu modo y la política de los laboratorios |
 
 ## 📚 Documentación
 

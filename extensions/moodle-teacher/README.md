@@ -93,14 +93,16 @@ Change them later with `my-agent extension config moodle-teacher`, in the chat w
 | 💬 `forums` | Reading threads, posting exactly once, announcements, moderation and private messages |
 | ✅ `grading` | Assignments with their rubric, quiz essays and graded forums, proposals first |
 | 🧮 `gradebook` | Categories, aggregation and weights that compute the grading scheme |
-| 📈 `class-progress` | Completion, grades, submissions, quiz statistics, survey and choice results, attendance and activity, and writing to who's behind |
-| 🩺 `course-check` | What's broken or stale in a course, getting it ready for a new term, and what completes it |
+| 📈 `class-progress` | Completion, grades, submissions, quiz statistics, survey and choice results, attendance and activity, and writing to who's behind (in miyagi, the button "How the class is doing") |
+| 🩺 `course-check` | What's broken or stale in a course, getting it ready for a new term, and what completes it (in miyagi, the button "Check the course") |
 | 👥 `participants-and-groups` | Enrolling people and their roles, how the course lets people in, and making and filling groups |
 | 🎮 `scorm` | An HTML activity packaged as SCORM, uploaded and tested so Moodle records it |
 | 📦 `copy-and-restore` | Copying, importing, backing up and restoring courses, and checking the result |
 | 🌐 `several-sites` | Adding and switching sites, and copying between them |
 | 📅 `week` | What's due this week and what's waiting for you (in Claude Code, also `/moodle-teacher:week`) |
 | 🗂️ `to-grade` | What's waiting to be graded, course by course (in Claude Code, also `/moodle-teacher:to-grade`) |
+| 🤖 `course-auditor` | Subagent: reads a whole course and returns what's broken by impact, for `course-check` (changes nothing) |
+| 🤖 `class-reporter` | Subagent: reads the class's reports and returns counts, patterns and aliases, for `class-progress` (changes nothing, writes to no one) |
 
 ## 📚 Documentation
 

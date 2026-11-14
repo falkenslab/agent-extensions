@@ -1,6 +1,9 @@
 ---
 name: asker-questions
 description: Generate quiz questions from a checked Asker definitions file with the asker server - Moodle XML or GIFT, which question types and templates, the question bank category, penalties - then review every question with the person, write a copy without the ones they leave out, and hand it to moodle-teacher's import_questions. Use when the person asks to generate questions with Asker, to review or filter Asker's questions, or to get them into a Moodle question bank.
+label: es=Preguntas con Asker | en=Questions with Asker | fr=Questions avec Asker | de=Fragen mit Asker
+icon: ❓
+group: create
 ---
 
 # Generating and reviewing Asker's questions
@@ -8,6 +11,8 @@ description: Generate quiz questions from a checked Asker definitions file with 
 Asker writes the questions; the person decides which reach a course. No question is imported that the person hasn't seen in a list or read through. The input must pass `check_input` first (see `asker-inputs`).
 
 ## Generating
+
+Without a definitions file yet, start with `asker-inputs`. With one, agree the options with the person in one short question (the folder, the formats, the types or templates to leave out, the category, whether wrong answers take points off), then generate.
 
 **`generate_questions`** writes files on this computer: say where first. Use a subfolder of the definitions' folder (`…/questions`), never the definitions' folder itself: Asker reads every `.xml` next to an input, and a Moodle XML there would stop its next run (the server refuses it). It never writes over files unless `overwrite: true`, which only goes with the person's yes.
 

@@ -1,6 +1,10 @@
 ---
 name: class-progress
 description: Read how a Moodle class is doing with moodle-mcp - completion, grades, submissions, quiz results and question statistics, choice and survey results, attendance, who hasn't accessed the course, participation and views - telling what Moodle says from what it doesn't, and write to the students concerned with the person's yes. Use when the person asks who's falling behind, how a group, an activity or a quiz's questions went, what a survey or choice got, who missed classes, or for a progress report.
+label: es=Cómo va la clase | en=How the class is doing | fr=Où en est la classe | de=Wie die Klasse vorankommt
+icon: 📊
+group: classroom
+needs-classroom: true
 ---
 
 # The class's progress in Moodle
@@ -27,6 +31,8 @@ What the data means for teaching is the person's reading (or the agent's teachin
 | Who has completed the course | `get_course_completion_status` (a group with `groupId`) | Only with course completion on (see `course-check`); scheduled tasks work some criteria out later |
 
 Deadlines are in `list_deadlines` and each activity's settings: "overdue" is relative to a student's own dates (overrides and extensions in `get_submissions`).
+
+For a question that covers the whole course, several activities or several groups, the `class-reporter` subagent reads the reports and returns counts, patterns and aliases, writing nothing; acting on it stays here, with the person.
 
 ## Reporting it
 
