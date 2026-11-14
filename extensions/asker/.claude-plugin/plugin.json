@@ -1,6 +1,6 @@
 {
   "name": "asker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Quiz questions from your own definitions with Asker: your agent drafts the definitions file from your notes and checks it, Asker generates the questions (true or false, multiple choice, short answer, matching, ordering) as Moodle XML or GIFT, and you review them, leaving out the ones you don't want, before moodle-teacher imports the rest.",
   "author": {
     "name": "Falken's Lab",

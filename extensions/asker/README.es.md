@@ -57,7 +57,7 @@ No necesita ajustes; reinicia la aplicación si instalaste Ruby con ella abierta
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `npx -y @falkenslab/asker-mcp@0.1.0`: `asker_input_reference`, `check_input`, `generate_questions`, `read_questions`, `exclude_questions`, `check_requirements`, `server_info` |
+| 🔌 Servidor | `npx -y @falkenslab/asker-mcp@0.1.1`: `asker_input_reference`, `check_input`, `generate_questions`, `read_questions`, `exclude_questions`, `check_requirements`, `server_info` |
 | 🧩 `asker-inputs` | Escribir un archivo de definiciones a partir de los apuntes de la persona tal como lo lee Asker y como aconseja su autor (definiciones inequívocas, nombres de verdad, tablas que se pueden compartir, secuencias reales, problemas para las materias prácticas), y comprobarlo y pulirlo |
 | 🧩 `asker-questions` | Generar con las opciones y la carpeta de salida adecuadas, revisar cada pregunta con la persona por grupo y plantilla, dejar fuera las rechazadas e importar el resto con moodle-teacher; en miyagi, el botón «Preguntas con Asker» |
 | 🧩 `asker-troubleshooting` | Qué sale mal y cómo arreglarlo: la instalación, archivos que Asker no lee, otros archivos en la carpeta, imágenes y enlaces, preguntas que faltan o se rechazan |

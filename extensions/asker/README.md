@@ -57,7 +57,7 @@ It needs no settings; restart the app if Ruby was installed while it was open (t
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `npx -y @falkenslab/asker-mcp@0.1.0`: `asker_input_reference`, `check_input`, `generate_questions`, `read_questions`, `exclude_questions`, `check_requirements`, `server_info` |
+| 🔌 Server | `npx -y @falkenslab/asker-mcp@0.1.1`: `asker_input_reference`, `check_input`, `generate_questions`, `read_questions`, `exclude_questions`, `check_requirements`, `server_info` |
 | 🧩 `asker-inputs` | Writing a definitions file from the person's notes as Asker reads it and as its author advises (unambiguous definitions, real names, tables that may be shared, true sequences, problems for practical subjects), and checking and refining it |
 | 🧩 `asker-questions` | Generating with the right options and output folder, reviewing every question with the person by group and template, leaving out the rejected ones, and importing the rest with moodle-teacher; in miyagi, the button "Questions with Asker" |
 | 🧩 `asker-troubleshooting` | What goes wrong and how to fix it: installing, files Asker won't read, other files in the folder, images and links, questions missing or refused |

@@ -100,7 +100,7 @@
       "name": "asker",
       "source": "./extensions/asker",
       "description": "Quiz questions from your own definitions with Asker: a definitions file written from your notes and checked, questions generated as Moodle XML or GIFT, and reviewed with you before moodle-teacher imports them.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "education",
       "tags": [
         "asker",
