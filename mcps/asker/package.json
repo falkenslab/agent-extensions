@@ -1,6 +1,6 @@
 {
   "name": "@falkenslab/asker-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Asker for AI agents: a definitions file checked, questions generated from it as Moodle XML or GIFT, read back for review and filtered before importing.",
   "license": "MIT",
   "author": "Falken's Lab",
