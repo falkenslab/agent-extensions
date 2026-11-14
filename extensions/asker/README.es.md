@@ -43,7 +43,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install asker@falkenslab
 ```
 
-No necesita ajustes; reinicia la aplicación si instalaste Ruby con ella abierta (el agente lo comprueba con `check_requirements`). Luego pide: «Haz preguntas con Asker a partir de mis apuntes sobre dispositivos de red, en mi carpeta Documentos/asker». Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add asker@falkenslab`), y allí funcionan igual sus skills y su servidor; no tiene subagentes ni hooks.
+No necesita ajustes; reinicia la aplicación si instalaste Ruby con ella abierta (el agente lo comprueba con `check_requirements`). Luego pide: «Haz preguntas con Asker a partir de mis apuntes sobre dispositivos de red, en mi carpeta Documentos/asker». Codex también la instala (`codex plugin marketplace add falkenslab/agent-extensions` y luego `codex plugin add asker@falkenslab`), y allí funcionan igual sus skills y su servidor; su hook también funciona allí cuando lo apruebas en `/hooks`.
 
 ## 💬 Qué puedes pedir
 
@@ -63,7 +63,7 @@ No necesita ajustes; reinicia la aplicación si instalaste Ruby con ella abierta
 | 🧩 `asker-troubleshooting` | Qué sale mal y cómo arreglarlo: la instalación, archivos que Asker no lee, otros archivos en la carpeta, imágenes y enlaces, preguntas que faltan o se rechazan |
 | 🤖 `input-reviewer` | Subagente: revisa un archivo de definiciones según las reglas de Asker y los apuntes de la persona, y devuelve qué arreglar (no cambia nada) |
 | 🤖 `question-reviewer` | Subagente: repasa un archivo generado y devuelve las preguntas que dejar fuera o mirar, con el motivo (no cambia nada) |
-| 🪝 Hook | En Claude Code, después de escribir o editar un `.haml`: un vistazo rápido a tabuladores, caracteres invisibles, sangrías impares y definiciones vacías, y un recordatorio de pasar `check_input` |
+| 🪝 Hook | En Claude Code y Codex, después de escribir o editar un `.haml`: un vistazo rápido a tabuladores, caracteres invisibles, sangrías impares y definiciones vacías, y un recordatorio de pasar `check_input` |
 
 ## 📐 Buenas prácticas con Asker
 

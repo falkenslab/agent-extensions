@@ -1,7 +1,7 @@
-// Claude Code's PreToolUse hook for the canva extension: before a tool that sends texts, images or files
+// The canva extension's PreToolUse hook, for Claude Code and Codex: before a tool that sends texts, images or files
 // to Canva, it adds the what-goes-to-canva skill's rule to the model's context. It neither asks nor denies:
 // the person's own permission settings decide. It reads only the hook's input and sends nothing anywhere.
-// No dependencies: Node's own modules. agent-kit and Codex don't run plugin hooks; the skill says the same.
+// No dependencies: Node's own modules. agent-kit doesn't run plugin hooks; the skill says the same.
 import { readFileSync } from "node:fs";
 
 try {

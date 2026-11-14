@@ -100,7 +100,7 @@
       "name": "asker",
       "source": "./extensions/asker",
       "description": "Quiz questions from your own definitions with Asker: a definitions file written from your notes and checked, questions generated as Moodle XML or GIFT, and reviewed with you before moodle-teacher imports them.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "education",
       "tags": [
         "asker",
@@ -125,7 +125,7 @@
       "name": "docker-lab",
       "source": "./extensions/docker-lab",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
-      "version": "0.2.6",
+      "version": "0.2.7",
       "category": "development",
       "tags": [
         "docker",
@@ -141,7 +141,7 @@
       "name": "canva",
       "source": "./extensions/canva",
       "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "category": "design",
       "tags": [
         "canva",

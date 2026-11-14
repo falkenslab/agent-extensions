@@ -1,9 +1,10 @@
-// Claude Code's PostToolUse hook for the asker extension: after a .haml (or an Asker .xml) is written
+// The asker extension's PostToolUse hook, for Claude Code and Codex: after a .haml (or an Asker .xml) is written
 // or edited, a quick look for what Asker trips on (tabs, invisible characters, odd indentation, a
 // byte-order mark, an empty %def, a %map without lang), told to the model with its lines, and a
-// reminder to run check_input. It reads only the file the tool wrote, and never changes anything.
-// No dependencies: Node's own modules. agent-kit and Codex don't run plugin hooks; the skills say the same.
+// reminder to run check_input. It reads only the files the tool wrote, and never changes anything.
+// No dependencies: Node's own modules. agent-kit doesn't run plugin hooks; the skills say the same.
 import { readFileSync } from "node:fs";
+import path from "node:path";
 
 const LANGUAGES = ["en", "es", "fr", "ca", "du"];
 // Non-breaking, zero-width and other invisible spaces, built from their codes so this file stays ASCII.
@@ -54,25 +55,37 @@ function lint(file, text) {
   return found;
 }
 
-const input = readInput();
-const file = input?.tool_input?.file_path ?? input?.tool_input?.path;
-if (typeof file !== "string" || !/\.(haml|xml)$/i.test(file)) process.exit(0);
-let text;
-try {
-  text = readFileSync(file, "utf8");
-} catch {
-  process.exit(0);
+// The files the tool wrote: Claude Code's Write and Edit give file_path; Codex's apply_patch gives the
+// patch in command, naming each file it adds, updates or moves to, relative to the session's folder.
+function filesWritten(input) {
+  const given = input?.tool_input?.file_path ?? input?.tool_input?.path;
+  if (typeof given === "string") return [given];
+  const command = input?.tool_input?.command;
+  const patch = Array.isArray(command) ? command.join("\n") : typeof command === "string" ? command : "";
+  const cwd = typeof input?.cwd === "string" ? input.cwd : process.cwd();
+  return [...patch.matchAll(/^\*\*\* (?:Add File|Update File|Move to): (.+)$/gm)].map((m) => path.resolve(cwd, m[1].trim()));
 }
-// An .xml that isn't an Asker input (a Moodle XML, say) isn't this hook's business.
-if (/\.xml$/i.test(file) && !/<map[\s>]/.test(text)) process.exit(0);
-if (/\.haml$/i.test(file) && !/%map\b/.test(text) && !/%concept\b/.test(text)) process.exit(0);
 
-const found = lint(file, text);
-const context = [
-  `${file} is an Asker definitions file.`,
-  found.length ? `A quick look found: ${found.slice(0, 10).join("; ")}${found.length > 10 ? `; and ${found.length - 10} more` : ""}.` : "",
-  "Run check_input on it (asker server) before generating questions, and fix what it says.",
-]
-  .filter(Boolean)
-  .join(" ");
+const input = readInput();
+const notes = [];
+for (const file of new Set(filesWritten(input))) {
+  if (!/\.(haml|xml)$/i.test(file)) continue;
+  let text;
+  try {
+    text = readFileSync(file, "utf8");
+  } catch {
+    continue;
+  }
+  // An .xml that isn't an Asker input (a Moodle XML, say) isn't this hook's business.
+  if (/\.xml$/i.test(file) && !/<map[\s>]/.test(text)) continue;
+  if (/\.haml$/i.test(file) && !/%map\b/.test(text) && !/%concept\b/.test(text)) continue;
+  const found = lint(file, text);
+  notes.push(
+    [`${file} is an Asker definitions file.`, found.length ? `A quick look found: ${found.slice(0, 10).join("; ")}${found.length > 10 ? `; and ${found.length - 10} more` : ""}.` : ""]
+      .filter(Boolean)
+      .join(" "),
+  );
+}
+if (!notes.length) process.exit(0);
+const context = [...notes, "Run check_input on it (asker server) before generating questions, and fix what it says."].join(" ");
 process.stdout.write(JSON.stringify({ hookSpecificOutput: { hookEventName: "PostToolUse", additionalContext: context } }));

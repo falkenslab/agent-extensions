@@ -88,7 +88,7 @@ Change them later with `my-agent extension config docker-lab`, in the chat with 
 | ✅ `verify-by-running` | Whether code, instructions, a statement and its solution or a submission work, with a verdict and its evidence, and writing a lab's check |
 | 🤖 `lab-runner` | Subagent: runs one try or verification in a lab and returns the verdict with its evidence, not the whole logs |
 | 🐳 `use-docker` | Your Docker: containers, images, volumes, networks, Compose and clean-ups, what to confirm, the dangerous options, a missing Docker |
-| 🪝 Hook | In Claude Code, before a shell command runs `docker`: a reminder to use docker-mcp's tools, which keep your mode and the labs' policy |
+| 🪝 Hook | In Claude Code and Codex, before a shell command runs `docker`: a reminder to use docker-mcp's tools, which keep your mode and the labs' policy |
 
 ## 📚 Documentation
 

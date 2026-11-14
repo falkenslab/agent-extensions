@@ -43,7 +43,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install asker@falkenslab
 ```
 
-It needs no settings; restart the app if Ruby was installed while it was open (the agent checks it with `check_requirements`). Then ask: "Make questions with Asker from my notes on network devices, in my Documents/asker folder." Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add asker@falkenslab`), and there its skills and server work the same; it has no subagents or hooks.
+It needs no settings; restart the app if Ruby was installed while it was open (the agent checks it with `check_requirements`). Then ask: "Make questions with Asker from my notes on network devices, in my Documents/asker folder." Codex installs it too (`codex plugin marketplace add falkenslab/agent-extensions`, then `codex plugin add asker@falkenslab`), and there its skills and server work the same; its hook runs there too once you trust it in `/hooks`.
 
 ## 💬 What you can ask
 
@@ -63,7 +63,7 @@ It needs no settings; restart the app if Ruby was installed while it was open (t
 | 🧩 `asker-troubleshooting` | What goes wrong and how to fix it: installing, files Asker won't read, other files in the folder, images and links, questions missing or refused |
 | 🤖 `input-reviewer` | Subagent: reviews a definitions file against Asker's rules and the person's notes, and returns what to fix (changes nothing) |
 | 🤖 `question-reviewer` | Subagent: goes through a generated file and returns the questions to leave out or look at, with the reason (changes nothing) |
-| 🪝 Hook | In Claude Code, after a `.haml` is written or edited: a quick look for tabs, invisible characters, odd indentation and empty definitions, and a reminder to run `check_input` |
+| 🪝 Hook | In Claude Code and Codex, after a `.haml` is written or edited: a quick look for tabs, invisible characters, odd indentation and empty definitions, and a reminder to run `check_input` |
 
 ## 📐 Good practice with Asker
 

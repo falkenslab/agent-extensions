@@ -119,7 +119,7 @@
     },
     {
       "name": "asker",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Quiz questions from your own definitions with Asker: a definitions file written from your notes and checked, questions generated as Moodle XML or GIFT, and reviewed with you before moodle-teacher imports them.",
       "descriptions": {
         "en": "Quiz questions from your own definitions with Asker: a definitions file written from your notes and checked, questions generated as Moodle XML or GIFT, and reviewed with you before moodle-teacher imports them.",
@@ -416,7 +416,7 @@
     },
     {
       "name": "canva",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
       "descriptions": {
         "en": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
@@ -977,7 +977,7 @@
     },
     {
       "name": "docker-lab",
-      "version": "0.2.6",
+      "version": "0.2.7",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
       "descriptions": {
         "en": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
