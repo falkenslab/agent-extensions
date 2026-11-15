@@ -1,6 +1,6 @@
 {
   "name": "moodle-teacher",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -129,6 +129,7 @@
         "get_rubric",
         "get_forum_grades",
         "get_workshop",
+        "get_my_workshop",
         "get_workshop_submission",
         "list_workshop_examples",
         "get_workshop_allocation",
@@ -367,6 +368,7 @@
             "create_activity",
             "update_activity",
             "get_workshop",
+            "get_my_workshop",
             "set_workshop_phase",
             "get_workshop_allocation",
             "allocate_workshop_randomly",
@@ -2056,6 +2058,24 @@
             "phrase": [
               "leyó un taller",
               "leyó {n} talleres"
+            ],
+            "result": "Taller leído"
+          }
+        },
+        "get_my_workshop": {
+          "en": {
+            "label": "Reading your workshop",
+            "phrase": [
+              "read a workshop as you take part",
+              "read {n} workshops as you take part"
+            ],
+            "result": "Workshop read"
+          },
+          "es": {
+            "label": "Leyendo tu taller",
+            "phrase": [
+              "leyó un taller como participante",
+              "leyó {n} talleres como participante"
             ],
             "result": "Taller leído"
           }

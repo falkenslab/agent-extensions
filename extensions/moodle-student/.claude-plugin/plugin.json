@@ -1,6 +1,6 @@
 {
   "name": "moodle-student",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
   "author": {
     "name": "Falken's Lab",
@@ -116,6 +116,7 @@
         "get_attempt_review",
         "get_assignment",
         "get_workshop_submission",
+        "get_my_workshop",
         "list_notifications",
         "list_conversations",
         "get_conversation",
@@ -293,6 +294,7 @@
             "assess_workshop_submission",
             "set_completion",
             "get_workshop_submission",
+            "get_my_workshop",
             "save_workshop_submission",
             "list_glossary_entries",
             "add_glossary_entry",
@@ -1270,6 +1272,24 @@
               "leyó {n} entregas del taller"
             ],
             "result": "Entrega leída"
+          }
+        },
+        "get_my_workshop": {
+          "en": {
+            "label": "Reading your workshop",
+            "phrase": [
+              "read a workshop as you take part",
+              "read {n} workshops as you take part"
+            ],
+            "result": "Workshop read"
+          },
+          "es": {
+            "label": "Leyendo tu taller",
+            "phrase": [
+              "leyó un taller como participante",
+              "leyó {n} talleres como participante"
+            ],
+            "result": "Taller leído"
           }
         },
         "list_notifications": {

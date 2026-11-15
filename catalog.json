@@ -1833,7 +1833,7 @@
     },
     {
       "name": "moodle-student",
-      "version": "0.4.6",
+      "version": "0.4.7",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
@@ -2015,6 +2015,7 @@
             "assess_workshop_submission",
             "set_completion",
             "get_workshop_submission",
+            "get_my_workshop",
             "save_workshop_submission",
             "list_glossary_entries",
             "add_glossary_entry",
@@ -2099,7 +2100,7 @@
           "name": "moodle",
           "kind": "package",
           "package": "@falkenslab/moodle-mcp",
-          "version": "0.11.1",
+          "version": "0.12.0",
           "url": "https://www.npmjs.com/package/@falkenslab/moodle-mcp"
         }
       ],
@@ -2448,6 +2449,14 @@
           "readOnly": true
         },
         {
+          "name": "get_my_workshop",
+          "labels": {
+            "en": "Reading your workshop",
+            "es": "Leyendo tu taller"
+          },
+          "readOnly": true
+        },
+        {
           "name": "get_quiz_attempt",
           "labels": {
             "en": "Reading an attempt's questions",
@@ -2776,7 +2785,7 @@
     },
     {
       "name": "moodle-teacher",
-      "version": "0.8.2",
+      "version": "0.8.3",
       "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
@@ -2970,6 +2979,7 @@
             "create_activity",
             "update_activity",
             "get_workshop",
+            "get_my_workshop",
             "set_workshop_phase",
             "get_workshop_allocation",
             "allocate_workshop_randomly",
@@ -3408,7 +3418,7 @@
           "name": "moodle",
           "kind": "package",
           "package": "@falkenslab/moodle-mcp",
-          "version": "0.11.1",
+          "version": "0.12.0",
           "url": "https://www.npmjs.com/package/@falkenslab/moodle-mcp"
         }
       ],
@@ -4393,6 +4403,14 @@
           "labels": {
             "en": "Checking who you are in Moodle",
             "es": "Comprobando quién eres en Moodle"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_my_workshop",
+          "labels": {
+            "en": "Reading your workshop",
+            "es": "Leyendo tu taller"
           },
           "readOnly": true
         },

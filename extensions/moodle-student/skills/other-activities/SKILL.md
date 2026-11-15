@@ -26,14 +26,14 @@ Read each one before acting (its own `get_*` tool), say what's final, and act on
 
 ## Workshop: submitting, and assessing classmates
 
-In the submission phase, `save_workshop_submission` adds or changes the person's work (a title, HTML text with images in `embed`, attached files), within the workshop's dates; check the HTML first with `validate_html` (with the same `embed`), and `get_workshop_submission` reads it back. Reviewers will read it: confirm first.
+`get_my_workshop` says which phase the workshop is in and what it asks of the person now. In the submission phase, `save_workshop_submission` adds or changes the person's work (a title, HTML text with images in `embed`, attached files), within the workshop's dates; check the HTML first with `validate_html` (with the same `embed`), and `get_workshop_submission` reads it back. Reviewers will read it: confirm first.
 
 In the assessment phase, the person assesses the classmates' work Moodle allocated to them, through the workshop's form:
 
-1. **What's allocated, and the form.** No tool lists the submissions allocated to the person or the form's criteria yet: read them on the workshop's page with `browser_navigate` and `browser_snapshot`, only to read (the assessment itself still goes through `assess_workshop_submission`). Note each allocated submission's id, and each criterion with its levels or points and its description.
+1. **What's allocated, and the form.** `get_my_workshop` reads the workshop as its page shows it to the person: the phase and their tasks in it, the instructions for reviewers, their own submission, and the submissions allocated to them (id, title, author, whether assessed, the grade given). While assessing is open it adds the form: each criterion's description, the grades it takes as `assess_workshop_submission` takes them (a rubric's levels by position: Moodle doesn't show reviewers their points), whether it takes a comment, and whether there's overall feedback. Authors show as aliases while the server pseudonymizes.
 2. **Each submission in full**, with `get_workshop_submission` (its `submissionId`), text and attachments, before assessing it.
-3. **The assessment**: `assess_workshop_submission` with a grade per criterion, in the form's order (a level's name or its points, as the form gives them), a comment per criterion where the form has one, and the overall feedback, which is what the author reads. The author reads all of it: confirm the assessment with the person first. Feedback has no aliases in it.
-4. **Read it back** on the workshop's page (`browser_snapshot`): the assessment is there with the grades given.
+3. **The assessment**: `assess_workshop_submission` with a grade per criterion, in the form's order (as `get_my_workshop` gives them), a comment per criterion where the form has one, and the overall feedback, which is what the author reads. The author reads all of it: confirm the assessment with the person first. Feedback has no aliases in it.
+4. **Read it back** with `get_my_workshop`: the submission shows as assessed, with the grade given.
 
 ## Glossary, wiki and database
 

@@ -5,7 +5,7 @@ description: Run a Moodle workshop (peer assessment) with moodle-mcp - its setup
 
 # Workshop: peer assessment
 
-Create it hidden with `create_activity` (`type: "workshop"`), learn its form's field names from `get_activity_settings` on one like it, and follow the `publishing` skill. `get_workshop` reads its phase and its report: every submission (author, title, grade once calculated) and every assessment (reviewer, author, grade given, weight, grade for assessing), people as aliases while the server pseudonymizes.
+Create it hidden with `create_activity` (`type: "workshop"`), learn its form's field names from `get_activity_settings` on one like it, and follow the `publishing` skill. `get_workshop` reads its phase and its report: every submission (author, title, grade once calculated) and every assessment (reviewer, author, grade given, weight, grade for assessing), people as aliases while the server pseudonymizes. `get_my_workshop` reads it as its page shows it to the person: the phase, their tasks and the instructions for authors and reviewers in this phase, which is what students see as instructions.
 
 ## Phases
 
