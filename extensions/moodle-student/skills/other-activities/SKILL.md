@@ -28,7 +28,12 @@ Read each one before acting (its own `get_*` tool), say what's final, and act on
 
 In the submission phase, `save_workshop_submission` adds or changes the person's work (a title, HTML text with images in `embed`, attached files), within the workshop's dates; check the HTML first with `validate_html` (with the same `embed`), and `get_workshop_submission` reads it back. Reviewers will read it: confirm first.
 
-In the assessment phase, `assess_workshop_submission` assesses an allocated classmate's work through the workshop's form: a grade and comment per criterion, in the form's order, and overall feedback. The author reads it: confirm the assessment with the person. Feedback has no aliases in it.
+In the assessment phase, the person assesses the classmates' work Moodle allocated to them, through the workshop's form:
+
+1. **What's allocated, and the form.** No tool lists the submissions allocated to the person or the form's criteria yet: read them on the workshop's page with `browser_navigate` and `browser_snapshot`, only to read (the assessment itself still goes through `assess_workshop_submission`). Note each allocated submission's id, and each criterion with its levels or points and its description.
+2. **Each submission in full**, with `get_workshop_submission` (its `submissionId`), text and attachments, before assessing it.
+3. **The assessment**: `assess_workshop_submission` with a grade per criterion, in the form's order (a level's name or its points, as the form gives them), a comment per criterion where the form has one, and the overall feedback, which is what the author reads. The author reads all of it: confirm the assessment with the person first. Feedback has no aliases in it.
+4. **Read it back** on the workshop's page (`browser_snapshot`): the assessment is there with the grades given.
 
 ## Glossary, wiki and database
 
