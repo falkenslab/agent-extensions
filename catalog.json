@@ -254,6 +254,12 @@
           "description": "Goes through the questions Asker generated in a Moodle XML file, page by page, and returns the ones it would leave out or have the person look at, each with its name and the reason, without changing anything. Use when a generated file has too many questions to review one by one in the conversation, before exclude_questions and an import."
         }
       ],
+      "hooks": {
+        "description": "After a .haml (or an Asker .xml) is written or edited, a quick look for what Asker trips on, with a reminder to run check_input.",
+        "events": [
+          "PostToolUse"
+        ]
+      },
       "tools": [
         {
           "name": "asker_input_reference",
@@ -654,6 +660,12 @@
           "description": "What may and may not be sent to Canva through its MCP server - everything sent leaves this computer for Canva's servers and the person's account, so students' and other people's personal data (names, class lists, grades, photos, certificates) never goes without the person's explicit yes. Use before any Canva call that carries names, a list of people, grades, photos of people or a document about someone, and whenever the person asks to make certificates, class lists, seating plans or anything with other people's data in Canva."
         }
       ],
+      "hooks": {
+        "description": "Before a Canva tool sends content to Canva, a reminder of what may go there: no other people's personal data without the person's explicit yes.",
+        "events": [
+          "PreToolUse"
+        ]
+      },
       "tools": [
         {
           "name": "comment-on-design",
@@ -1233,6 +1245,12 @@
           "description": "Runs one try or one verification in a docker-mcp lab - writes the lab inside the labs folder, starts it, runs the commands, reads the logs, stops it - and returns a verdict with its evidence (each command, its exit code, the relevant output quoted and trimmed) instead of the whole logs. Use for try-in-a-lab or verify-by-running when the runs and logs would be long, once the person has said yes to what will run."
         }
       ],
+      "hooks": {
+        "description": "Before a shell command that runs docker, a reminder that docker-mcp's tools (and the mode the person chose) are the way to use Docker here.",
+        "events": [
+          "PreToolUse"
+        ]
+      },
       "tools": [
         {
           "name": "build_image",

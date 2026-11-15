@@ -77,6 +77,7 @@ const TEXTS = {
     sheetSkills: "Skills",
     sheetCommands: "Commands",
     sheetAgents: "Subagents",
+    sheetHooks: "Hooks (Claude Code and Codex)",
     sheetTools: (n) => `Tools (${n})`,
     sheetOther: "Other tools",
     markRead: "Only reads",
@@ -149,6 +150,7 @@ const TEXTS = {
     sheetSkills: "Skills",
     sheetCommands: "Comandos",
     sheetAgents: "Subagentes",
+    sheetHooks: "Hooks (Claude Code y Codex)",
     sheetTools: (n) => `Herramientas (${n})`,
     sheetOther: "Otras herramientas",
     markRead: "Solo lee",
@@ -486,11 +488,11 @@ function howTo(extension, key, data) {
   return [steps];
 }
 // The technical sheet, folded under "Install and use it": what the extension holds, from catalog.json
-// (agent-kit-catalog 0.7: servers, skills, commands, agents, tools, kit).
+// (agent-kit-catalog 0.8: servers, skills, commands, agents, hooks, tools, kit).
 const firstSentence = (text) => (text ?? "").split(/(?<=[.!?])\s+(?=Use\b|Úsala\b)/)[0];
 function techSheet(extension) {
-  const { servers = [], skills = [], commands = [], agents = [], tools = [] } = extension;
-  if (!servers.length && !skills.length && !commands.length && !agents.length && !tools.length) return null;
+  const { servers = [], skills = [], commands = [], agents = [], hooks, tools = [] } = extension;
+  if (!servers.length && !skills.length && !commands.length && !agents.length && !hooks && !tools.length) return null;
   const sheet = document.createElement("details");
   sheet.className = "sheet";
   const part = (title, html) => `<h4>${escape(title)}</h4>${html}`;
@@ -511,6 +513,8 @@ function techSheet(extension) {
   if (skills.length) html += skills.length > 5 ? `<details class="group"><summary>${escape(t("sheetSkills"))} <span class="n">${skills.length}</span></summary><div class="tools">${skillList}</div></details>` : part(t("sheetSkills"), skillList);
   if (commands.length) html += part(t("sheetCommands"), list(commands.map((c) => named(`/${extension.name}:${c.name}`, c.description))));
   if (agents.length) html += part(t("sheetAgents"), list(agents.map((a) => named(a.name, a.description))));
+  // Hooks: when they run (their events) and what they do; agent-kit doesn't run them.
+  if (hooks) html += part(t("sheetHooks"), list([`<li>${(hooks.events ?? []).map((e) => `<code>${escape(e)}</code>`).join(" ")}${hooks.description ? `<span>${escape(hooks.description)}</span>` : ""}</li>`]));
   if (tools.length) {
     const byName = new Map(tools.map((tool) => [tool.name, tool]));
     const groups = (extension.capabilities ?? []).map((c) => [(c.texts?.[lang] ?? c.texts?.en ?? { label: c.id }).label, (c.tools ?? []).filter((name) => byName.has(name))]);
