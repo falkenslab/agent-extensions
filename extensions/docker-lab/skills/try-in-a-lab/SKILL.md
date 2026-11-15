@@ -24,7 +24,7 @@ The computer the agent works on is the person's real machine: nothing gets insta
 6. **Report** what happened: the image, each command, its exit code and the relevant output quoted literally, and anything you couldn't try and why.
 When the try has many steps or long output, the `lab-runner` subagent can do steps 3 to 6 after the person's yes to step 4, and return only the report.
 
-7. **Clean up**: `lab_down` when the try is over (its containers and volumes go; its folder stays), and offer to delete the lab's folder if it was only for this. In full mode, an image you pulled for the try (check `list_images` before `lab_up`, which pulls them) can go too, with the person's yes; an image they already had stays.
+7. **Clean up**: `lab_down` when the try is over (its containers and volumes go; its folder stays), and offer to delete the lab's folder if it was only for this. If `lab_down` is refused (a no, or nobody to answer in an unattended run), say the lab is still running, with its name, and don't call it again. In full mode, an image you pulled for the try (check `list_images` before `lab_up`, which pulls them) can go too, with the person's yes; an image they already had stays.
 
 ## Rules
 

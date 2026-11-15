@@ -989,7 +989,7 @@
     },
     {
       "name": "docker-lab",
-      "version": "0.2.7",
+      "version": "0.2.8",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
       "descriptions": {
         "en": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
@@ -1833,7 +1833,7 @@
     },
     {
       "name": "moodle-student",
-      "version": "0.4.5",
+      "version": "0.4.6",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
       "descriptions": {
         "en": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",

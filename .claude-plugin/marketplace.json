@@ -26,7 +26,7 @@
       "name": "moodle-student",
       "source": "./extensions/moodle-student",
       "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
-      "version": "0.4.5",
+      "version": "0.4.6",
       "category": "education",
       "tags": [
         "moodle",
@@ -125,7 +125,7 @@
       "name": "docker-lab",
       "source": "./extensions/docker-lab",
       "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
-      "version": "0.2.7",
+      "version": "0.2.8",
       "category": "development",
       "tags": [
         "docker",
