@@ -166,6 +166,21 @@
         "miyagi",
         "padawan"
       ]
+    },
+    {
+      "name": "work-placements",
+      "source": "./extensions/work-placements",
+      "description": "Find, contact and follow the companies where your students do their work placements: companies by sector from OpenStreetMap (and Google Places with your key), their public sites read, a local record of companies and contacts with its follow-ups, CSV and Excel for the department, and one email draft per company that you review and send.",
+      "version": "0.1.0",
+      "category": "education",
+      "tags": [
+        "work-placements",
+        "internships",
+        "companies",
+        "teaching",
+        "teacher",
+        "miyagi"
+      ]
     }
   ]
 }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="work-placements extension logo: a company building with a map pin over it and an envelope beside it">
+  <rect x="14" y="14" width="92" height="92" rx="18" fill="#ffffff" stroke="#0f5c4d" stroke-width="5"/>
+  <rect x="30" y="50" width="38" height="42" rx="3" fill="#0f5c4d"/>
+  <rect x="37" y="58" width="8" height="8" rx="1.5" fill="#bfe8dc"/>
+  <rect x="53" y="58" width="8" height="8" rx="1.5" fill="#bfe8dc"/>
+  <rect x="37" y="72" width="8" height="8" rx="1.5" fill="#bfe8dc"/>
+  <rect x="53" y="72" width="8" height="8" rx="1.5" fill="#bfe8dc"/>
+  <rect x="44" y="84" width="10" height="8" fill="#ffffff"/>
+  <path d="M49 24c-7.2 0-13 5.6-13 12.6 0 9.2 13 19.4 13 19.4s13-10.2 13-19.4C62 29.6 56.2 24 49 24z" fill="#ff6b57"/>
+  <circle cx="49" cy="36.5" r="5" fill="#ffffff"/>
+  <rect x="70" y="66" width="24" height="17" rx="3" fill="#ffffff" stroke="#2a9d84" stroke-width="3"/>
+  <path d="M71.5 68l10.5 8 10.5-8" fill="none" stroke="#2a9d84" stroke-width="3" stroke-linejoin="round"/>
+</svg>
