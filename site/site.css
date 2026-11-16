@@ -106,6 +106,8 @@ code.cmd { font-family: var(--mono); font-size: 14px; background: var(--code); b
 .how .d-panel { fill: var(--panel); stroke: var(--line); }
 .how .d-tile { fill: var(--bg-2); stroke: var(--line); }
 .how .d-tile.on { stroke: var(--accent); stroke-width: 1.5; }
+.how .d-panel.on { stroke: var(--accent); stroke-width: 1.5; }
+.how .d-zoom { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.9; }
 .how .d-mark { fill: var(--b2); }
 .how .d-accent { fill: var(--accent); }
 .how .d-eye { fill: var(--panel); }
@@ -119,7 +121,7 @@ code.cmd { font-family: var(--mono); font-size: 14px; background: var(--code); b
 .how .d-cap { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
 .how .d-badge { fill: var(--chip); stroke: var(--line); }
 .how .d-badge.on { fill: var(--accent); stroke: var(--accent); }
-.how .d-step { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; fill: var(--accent); }
+.how .d-step { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; fill: var(--accent); paint-order: stroke; stroke: var(--bg-2); stroke-width: 6px; stroke-linejoin: round; }
 .how .d-title { font-size: 16px; font-weight: 800; }
 .how .d-mono, .how .d-mono-title { font-family: var(--mono); }
 .how .d-mono { font-size: 13px; fill: var(--text); }

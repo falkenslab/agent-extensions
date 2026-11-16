@@ -93,8 +93,8 @@ const TEXTS = {
     formula: ["📖 Skills", "🔧 Tools", "✨ A capability"],
     how: {
       aria: "How it fits together: this site holds extensions; an extension such as moodle-teacher brings skills and tools; the grading and to-grade skills with the tools that read submissions and rubrics and save grades make the Grading capability; installed, your agent gains it beside what it already knew.",
-      step: ["1 · This site", "2 · One extension", "3 · Your agent"],
-      site: "Extensions",
+      step: ["1 · Extensions", "2 · One extension, up close", "3 · Your agent"],
+      site: "agent-extensions",
       more: "and more…",
       skills: "📖 Skills",
       tools: "🔧 Tools",
@@ -182,8 +182,8 @@ const TEXTS = {
     formula: ["📖 Habilidades", "🔧 Herramientas", "✨ Una capacidad"],
     how: {
       aria: "Cómo encaja todo: este sitio reúne extensiones; una extensión como moodle-teacher trae habilidades y herramientas; las habilidades de corregir, con las herramientas que leen entregas y rúbricas y guardan notas, forman la capacidad Corregir; al instalarla, tu agente la gana junto a lo que ya sabía.",
-      step: ["1 · Este sitio", "2 · Una extensión", "3 · Tu agente"],
-      site: "Extensiones",
+      step: ["1 · Extensiones", "2 · Una extensión, de cerca", "3 · Tu agente"],
+      site: "agent-extensions",
       more: "y más…",
       skills: "📖 Habilidades",
       tools: "🔧 Herramientas",
@@ -209,43 +209,50 @@ function howDiagram(h, layout) {
   const e = escape;
   const wide = layout === "wide";
   const out = [];
+  const logo = (name) => asset(`https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/${name}/assets/logo.svg`);
   const text = (x, y, s, cls, anchor = "start") => out.push(`<text x="${x}" y="${y}" class="${cls}" text-anchor="${anchor}">${e(s)}</text>`);
-  const panel = (x, y, w, hh) => out.push(`<rect x="${x}" y="${y}" width="${w}" height="${hh}" rx="16" class="d-panel"/>`);
+  const image = (x, y, size, name) => out.push(`<image href="${e(logo(name))}" x="${x}" y="${y}" width="${size}" height="${size}"/>`);
+  const panel = (x, y, w, hh, cls = "") => out.push(`<rect x="${x}" y="${y}" width="${w}" height="${hh}" rx="16" class="d-panel ${cls}"/>`);
   const pill = (x, y, w, s, cls = "") => { out.push(`<rect x="${x}" y="${y}" width="${w}" height="30" rx="15" class="d-pill ${cls}"/>`); text(x + 14, y + 20, s, "d-mono"); };
   const arrow = (d) => out.push(`<path d="${d}" class="d-arrow" marker-end="url(#d-head-${layout})"/>`);
   const tile = (x, y, w, name, on) => {
     out.push(`<rect x="${x}" y="${y}" width="${w}" height="40" rx="10" class="d-tile${on ? " on" : ""}"/>`);
-    out.push(`<rect x="${x + 10}" y="${y + 10}" width="20" height="20" rx="6" class="${on ? "d-accent" : "d-mark"}"/>`);
+    image(x + 9, y + 9, 22, name);
     text(x + 40, y + 25, name, "d-mono");
   };
-  // Column origins: side by side on a wide screen, stacked on a phone.
   const A = wide ? { x: 10, y: 44 } : { x: 10, y: 40 };
-  const B = wide ? { x: 250, y: 44 } : { x: 10, y: 300 };
-  const C = wide ? { x: 690, y: 44 } : { x: 10, y: 800 };
-  const W = wide ? 960 : 360;
+  const B = wide ? { x: 270, y: 44 } : { x: 10, y: 300 };
+  const C = wide ? { x: 700, y: 44 } : { x: 10, y: 800 };
+  const W = wide ? 970 : 360;
   const H = wide ? 400 : 1080;
   out.push(`<defs><marker id="d-head-${layout}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker></defs>`);
 
-  // 1. This site: extension tiles, the first one opened next.
+  // 1. Extensions: this site's, as tiles with their logos; moodle-teacher is the one looked at up close.
   const aw = wide ? 210 : 340;
+  const names = wide ? ["moodle-teacher", "canva", "docker-lab", "video"] : ["canva", "docker-lab", "moodle-teacher", "video"];
+  const opened = names.indexOf("moodle-teacher");
+  const place = (i) => (wide ? { x: A.x + 16, y: A.y + 48 + i * 52, w: 178 } : { x: A.x + 14 + (i % 2) * 162, y: A.y + 48 + Math.floor(i / 2) * 52, w: 156 });
+  const bw = wide ? 400 : 340;
+  const bh = wide ? 310 : 440;
   text(A.x + 4, A.y - 16, h.step[0], "d-step");
   panel(A.x, A.y, aw, wide ? 310 : 190);
-  text(A.x + 18, A.y + 30, h.site, "d-title");
-  const names = ["moodle-teacher", "canva", "docker-lab", "video"];
-  names.forEach((name, i) => {
-    const col = wide ? 0 : i % 2;
-    const row = wide ? i : Math.floor(i / 2);
-    tile(A.x + 14 + col * 162, A.y + 48 + row * 52, wide ? 178 : 156, name, i === 0);
-  });
-  text(A.x + 18, A.y + (wide ? 280 : 168), h.more, "d-dim");
+  // The zoom: from moodle-teacher's tile to the panel that shows it up close, drawn under both.
+  const t = place(opened);
+  out.push(wide
+    ? `<path d="M${t.x + t.w} ${t.y} L${B.x} ${B.y} L${B.x} ${B.y + bh} L${t.x + t.w} ${t.y + 40} Z" class="d-zoom"/>`
+    : `<path d="M${t.x} ${t.y + 40} L${B.x} ${B.y} L${B.x + bw} ${B.y} L${t.x + t.w} ${t.y + 40} Z" class="d-zoom"/>`);
+  text(A.x + 18, A.y + 30, h.site, "d-title d-mono-title");
+  names.forEach((name, i) => { const p = place(i); tile(p.x, p.y, p.w, name, i === opened); });
+  if (wide) text(A.x + 18, A.y + 280, h.more, "d-dim");
+  else text(A.x + aw - 18, A.y + 172, h.more, "d-dim", "end");
 
-  // 2. One extension: its skills and its tools, and the capability they make.
-  const bw = wide ? 400 : 340;
-  text(B.x + 4, B.y - 16, h.step[1], "d-step");
-  panel(B.x, B.y, bw, wide ? 310 : 440);
-  text(B.x + 18, B.y + 30, "moodle-teacher", "d-title d-mono-title");
+  // 2. moodle-teacher up close: its skills and its tools, and the capability they make.
+  text(wide ? B.x + 4 : B.x + bw - 4, B.y - 16, h.step[1], "d-step", wide ? "start" : "end");
+  panel(B.x, B.y, bw, bh, "on");
+  image(B.x + 18, B.y + 13, 24, "moodle-teacher");
+  text(B.x + 50, B.y + 31, "moodle-teacher", "d-title d-mono-title");
   const sx = B.x + 18, tx = wide ? B.x + 210 : B.x + 18;
-  const sy = B.y + 56, ty = wide ? B.y + 56 : B.y + 176;
+  const sy = B.y + 60, ty = wide ? B.y + 60 : B.y + 180;
   text(sx, sy, h.skills, "d-label");
   out.push(`<rect x="${sx - 8}" y="${sy + 10}" width="${wide ? 180 : 312}" height="82" rx="14" class="d-group"/>`);
   pill(sx, sy + 18, wide ? 164 : 296, "grading", "on");
@@ -255,8 +262,7 @@ function howDiagram(h, layout) {
   pill(tx, ty + 18, wide ? 164 : 296, "get_submissions", "on");
   pill(tx, ty + 56, wide ? 164 : 296, "get_rubric", "on");
   pill(tx, ty + 94, wide ? 164 : 296, "grade_submission", "on");
-  const cap = wide ? { x: B.x + 80, y: B.y + 222, w: 240 } : { x: B.x + 50, y: B.y + 334, w: 240 };
-  // Skills and tools meet in the capability.
+  const cap = wide ? { x: B.x + 80, y: B.y + 226, w: 240 } : { x: B.x + 50, y: B.y + 338, w: 240 };
   if (wide) {
     out.push(`<path d="M${sx + 82} ${sy + 92} C${sx + 82} ${cap.y - 20}, ${cap.x + 70} ${cap.y - 30}, ${cap.x + 90} ${cap.y}" class="d-join"/>`);
     out.push(`<path d="M${tx + 82} ${ty + 130} C${tx + 82} ${cap.y - 20}, ${cap.x + 170} ${cap.y - 30}, ${cap.x + 150} ${cap.y}" class="d-join"/>`);
@@ -267,7 +273,7 @@ function howDiagram(h, layout) {
   out.push(`<rect x="${cap.x}" y="${cap.y}" width="${cap.w}" height="58" rx="14" class="d-cap"/>`);
   text(cap.x + cap.w / 2, cap.y + 24, h.capability, "d-cap-kicker", "middle");
   text(cap.x + cap.w / 2, cap.y + 45, `${h.capLabel} · lms-grading`, "d-cap-name", "middle");
-  text(B.x + bw / 2, B.y + (wide ? 334 : 420), h.caption, "d-dim", "middle");
+  text(B.x + bw / 2, B.y + (wide ? 334 : 424), h.caption, "d-dim", "middle");
 
   // 3. Your agent: the capability joins what it already knew.
   const cw = wide ? 260 : 340;
@@ -281,16 +287,11 @@ function howDiagram(h, layout) {
     out.push(`<rect x="${C.x + 30}" y="${y}" width="${cw - 60}" height="30" rx="15" class="d-badge${i === 0 ? " on" : ""}"/>`);
     text(hx, y + 20, `✓ ${badge}`, i === 0 ? "d-badge-on" : "d-badge-text", "middle");
   });
-  text(hx, C.y + (wide ? 250 : 248), h.before, "d-dim", "middle");
+  text(hx, C.y + 248, h.before, "d-dim", "middle");
 
-  // The arrows: the opened extension, and the capability reaching the agent.
-  if (wide) {
-    arrow(`M${A.x + 194} ${A.y + 68} C${A.x + 225} ${A.y + 68}, ${B.x - 20} ${B.y + 24}, ${B.x - 2} ${B.y + 24}`);
-    arrow(`M${cap.x + cap.w} ${cap.y + 29} C${cap.x + cap.w + 80} ${cap.y + 29}, ${C.x - 40} ${C.y + 125}, ${C.x + 28} ${C.y + 125}`);
-  } else {
-    arrow(`M${A.x + 170} ${A.y + 196} L${A.x + 170} ${B.y - 32}`);
-    arrow(`M${A.x + 170} ${B.y + 446} L${A.x + 170} ${C.y - 32}`);
-  }
+  // The capability reaches the agent.
+  if (wide) arrow(`M${cap.x + cap.w} ${cap.y + 29} C${cap.x + cap.w + 60} ${cap.y + 29}, ${C.x - 40} ${C.y + 125}, ${C.x + 28} ${C.y + 125}`);
+  else arrow(`M${A.x + 170} ${B.y + bh + 6} L${A.x + 170} ${C.y - 32}`);
   return `<svg class="how-${layout}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${e(h.aria)}">${out.join("")}</svg>`;
 }
 
