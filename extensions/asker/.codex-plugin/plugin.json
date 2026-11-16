@@ -1,0 +1,47 @@
+{
+  "name": "asker",
+  "version": "0.1.2",
+  "description": "Quiz questions from your own definitions with Asker: your agent drafts the definitions file from your notes and checks it, Asker generates the questions (true or false, multiple choice, short answer, matching, ordering) as Moodle XML or GIFT, and you review them, leaving out the ones you don't want, before moodle-teacher imports the rest.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/asker",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "asker",
+    "questions",
+    "quiz",
+    "question-bank",
+    "gift",
+    "moodle-xml",
+    "mcp",
+    "miyagi"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Asker",
+    "shortDescription": "Your AI agent turns your own definitions into quiz questions with Asker, reviewed with you before they reach Moodle.",
+    "longDescription": "Quiz questions from your own definitions with Asker: your agent drafts the definitions file from your notes and checks it, Asker generates the questions (true or false, multiple choice, short answer, matching, ordering) as Moodle XML or GIFT, and you review them, leaving out the ones you don't want, before moodle-teacher imports the rest.",
+    "developerName": "Falken's Lab",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/asker",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "Write an Asker file from these notes on the water cycle, and show it to me before generating.",
+      "Check my definitions file and tell me what Asker doesn't like.",
+      "Generate only the sequence and matching questions, without the misspelled-word ones, in the category Unit 3."
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}

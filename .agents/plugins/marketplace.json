@@ -1,0 +1,140 @@
+{
+  "name": "falkenslab",
+  "interface": {
+    "displayName": "Falken's Lab"
+  },
+  "plugins": [
+    {
+      "name": "moodle-teacher",
+      "source": {
+        "source": "local",
+        "path": "./extensions/moodle-teacher"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    },
+    {
+      "name": "moodle-student",
+      "source": {
+        "source": "local",
+        "path": "./extensions/moodle-student"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    },
+    {
+      "name": "moodle-ui-kit",
+      "source": {
+        "source": "local",
+        "path": "./extensions/moodle-ui-kit"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    },
+    {
+      "name": "documents",
+      "source": {
+        "source": "local",
+        "path": "./extensions/documents"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    },
+    {
+      "name": "calendar",
+      "source": {
+        "source": "local",
+        "path": "./extensions/calendar"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    },
+    {
+      "name": "anki",
+      "source": {
+        "source": "local",
+        "path": "./extensions/anki"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    },
+    {
+      "name": "asker",
+      "source": {
+        "source": "local",
+        "path": "./extensions/asker"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    },
+    {
+      "name": "weather",
+      "source": {
+        "source": "local",
+        "path": "./extensions/weather"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "docker-lab",
+      "source": {
+        "source": "local",
+        "path": "./extensions/docker-lab"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "canva",
+      "source": {
+        "source": "local",
+        "path": "./extensions/canva"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    },
+    {
+      "name": "h5p",
+      "source": {
+        "source": "local",
+        "path": "./extensions/h5p"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    }
+  ]
+}

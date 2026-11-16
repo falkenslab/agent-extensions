@@ -1,0 +1,47 @@
+{
+  "name": "h5p",
+  "version": "0.1.2",
+  "description": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/h5p",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "h5p",
+    "interactive",
+    "quizzes",
+    "flashcards",
+    "presentations",
+    "self-assessment",
+    "mcp",
+    "miyagi",
+    "padawan"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "H5P",
+    "shortDescription": "Your AI agent writes interactive H5P content, as a package ready to upload.",
+    "longDescription": "Interactive H5P content for your agent: multiple choice, true/false, fill in the blanks, drag the words, cards, question sets and course presentations, built as content-only .h5p packages on your computer, checked before they're written, through h5p-mcp.",
+    "developerName": "Falken's Lab",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/h5p",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "Make a ten-question quiz on HTML5 semantics as an H5P Question Set, in Spanish.",
+      "Turn these vocabulary pairs into Dialog Cards.",
+      "Write a fill-in-the-blanks text about the parts of a cell, and show me the preview."
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}

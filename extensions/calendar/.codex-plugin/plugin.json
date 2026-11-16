@@ -1,0 +1,46 @@
+{
+  "name": "calendar",
+  "version": "0.1.1",
+  "description": "Calendar files for your agent: events, deadlines and plans as an .ics file (iCalendar) that Google Calendar, Outlook and Apple Calendar import, with your time zone, all-day events, repetitions and reminders, written on your computer and read back.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/calendar",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "calendar",
+    "ics",
+    "icalendar",
+    "events",
+    "reminders",
+    "mcp",
+    "miyagi",
+    "padawan"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Calendar",
+    "shortDescription": "Your AI agent puts your dates in a calendar file, ready to import.",
+    "longDescription": "Calendar files for your agent: events, deadlines and plans as an .ics file (iCalendar) that Google Calendar, Outlook and Apple Calendar import, with your time zone, all-day events, repetitions and reminders, written on your computer and read back.",
+    "developerName": "Falken's Lab",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/calendar",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "Make an .ics with my Tuesday and Thursday classes from 15 September to 18 December, 10:00 to 11:30, except the week of 2 November.",
+      "Put the unit's three deadlines in a calendar file, each with a reminder a week and a day before.",
+      "Turn my study plan for the exams into a calendar I can import into Google Calendar."
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "documents",
+  "version": "0.1.2",
+  "description": "Word documents in your school's template for your agent: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, on your computer, then read back to check it.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/documents",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "documents",
+    "docx",
+    "word",
+    "templates",
+    "reports",
+    "office",
+    "mcp",
+    "miyagi"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Documents",
+    "shortDescription": "Your AI agent writes Word documents in your school's template.",
+    "longDescription": "Word documents in your school's template for your agent: a .docx written from Markdown in the template's own styles, with its header, footer and logo kept and its placeholders filled, on your computer, then read back to check it.",
+    "developerName": "Falken's Lab",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/documents",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "What styles and fields does this template have?",
+      "Write the module's annual report in the school's template, with the results table and the chart.",
+      "Fill the template's course, module and teacher fields, and put the document where it says {{content}}."
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}

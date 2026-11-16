@@ -1,0 +1,40 @@
+{
+  "name": "weather",
+  "version": "0.1.10",
+  "description": "The weather in your city, for an agent that plans with you: today and the next days, from Open-Meteo.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://falkenslab.github.io/agent-kit/docs/extensions/writing",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "weather",
+    "planning",
+    "example"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Weather",
+    "shortDescription": "The weather in your city, for an agent that plans with you.",
+    "longDescription": "The weather in your city, for an agent that plans with you: today and the next days, from Open-Meteo.",
+    "developerName": "Falken's Lab",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "websiteURL": "https://falkenslab.github.io/agent-kit/docs/extensions/writing",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "What's the weather like this week?",
+      "Will it rain tomorrow afternoon? Should I take an umbrella?",
+      "Which day this week is best for cycling to work?"
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}

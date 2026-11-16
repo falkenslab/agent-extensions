@@ -1,0 +1,41 @@
+{
+  "name": "moodle-ui-kit",
+  "version": "0.1.7",
+  "description": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on @noeper's moodle-ui-kit.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/moodle-ui-kit",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "moodle",
+    "lms",
+    "style",
+    "teaching",
+    "teacher",
+    "miyagi"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Moodle UI Kit",
+    "shortDescription": "A clean visual style for what your AI agent publishes in Moodle.",
+    "longDescription": "A clean visual style for what your agent publishes in Moodle: assignment statements, code blocks, solutions, quiz questions and feedback, with inline styles that work on any Moodle site. Based on @noeper's moodle-ui-kit.",
+    "developerName": "Falken's Lab",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/moodle-ui-kit",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "Create the unit 3 practice with the moodle-ui-kit style: goal, statement with the commands, and what to hand in.",
+      "Make a quiz on volumes with two questions, styled, with feedback for each answer.",
+      "Restyle the statement of practice 2 with moodle-ui-kit, keeping its text."
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}

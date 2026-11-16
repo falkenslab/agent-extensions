@@ -1,0 +1,48 @@
+{
+  "name": "canva",
+  "version": "0.2.5",
+  "description": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/canva",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "canva",
+    "design",
+    "graphics",
+    "presentations",
+    "worksheets",
+    "images",
+    "mcp",
+    "miyagi",
+    "padawan"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Canva",
+    "shortDescription": "Your AI agent makes, edits and exports your Canva designs.",
+    "longDescription": "Canva for your agent, through Canva's official remote MCP server: finding, creating, editing and exporting your designs, with images and brand kits, signing in with your Canva account. Not made by Canva.",
+    "developerName": "Falken's Lab",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/canva",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "Make a 10-slide presentation introducing photosynthesis for 12-year-olds, in Spanish.",
+      "Turn this outline into a one-page worksheet, and export it as a PDF to print.",
+      "Make an infographic of the water cycle in my school's brand kit."
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}

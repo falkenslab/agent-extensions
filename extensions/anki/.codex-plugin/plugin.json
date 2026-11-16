@@ -1,0 +1,47 @@
+{
+  "name": "anki",
+  "version": "0.1.1",
+  "description": "Anki decks from your agent: flashcards (question and answer, both ways, or fill the gap) with tags, images and audio, written as an .apkg on your computer that Anki, AnkiDroid and AnkiMobile import; exported again, it updates the cards instead of duplicating them, and an existing deck's export can take more.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/anki",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "anki",
+    "flashcards",
+    "apkg",
+    "decks",
+    "cloze",
+    "study",
+    "mcp",
+    "padawan",
+    "miyagi"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Anki",
+    "shortDescription": "Your AI agent turns what you study into an Anki deck, ready to import.",
+    "longDescription": "Anki decks from your agent: flashcards (question and answer, both ways, or fill the gap) with tags, images and audio, written as an .apkg on your computer that Anki, AnkiDroid and AnkiMobile import; exported again, it updates the cards instead of duplicating them, and an existing deck's export can take more.",
+    "developerName": "Falken's Lab",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/anki",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "Turn my notes on the French Revolution into Anki cards, one fact each.",
+      "Make cloze cards from these definitions, and tag them by unit.",
+      "A deck of Spanish–English vocabulary, both ways, with the audio files in this folder."
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}

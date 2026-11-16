@@ -1,0 +1,47 @@
+{
+  "name": "moodle-student",
+  "version": "0.4.8",
+  "description": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/moodle-student",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "moodle",
+    "lms",
+    "learning",
+    "student",
+    "mcp",
+    "padawan"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Moodle Student",
+    "shortDescription": "Your AI agent helps in the Moodle courses you take, as you, and knows how to do it well.",
+    "longDescription": "Work in your Moodle courses as a student, through moodle-mcp: what you have left and when, assignments, quizzes, forums and the other activities, your grades and feedback, with how to do each well in Moodle.",
+    "developerName": "Falken's Lab",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/moodle-student",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "What do I have to hand in this week, and what should I do first?",
+      "Upload my report.pdf to the unit 2 assignment, and show me before submitting it.",
+      "How many attempts does the unit 1 quiz have, and is there a time limit?"
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg",
+    "screenshots": [
+      "./assets/screenshot.png"
+    ]
+  }
+}

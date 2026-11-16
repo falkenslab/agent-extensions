@@ -1,0 +1,48 @@
+{
+  "name": "docker-lab",
+  "version": "0.2.9",
+  "description": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/docker-lab",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "docker",
+    "containers",
+    "compose",
+    "labs",
+    "sandbox",
+    "practices",
+    "mcp",
+    "miyagi",
+    "padawan"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Docker Lab",
+    "shortDescription": "Your AI agent runs and tries software in Docker labs, without touching your computer.",
+    "longDescription": "Docker as a lab for your agent: it runs and tries software (tools, services, someone's code) in isolated containers without touching your computer, verifies that things work by running them, and manages your Docker, through docker-mcp, in the mode you choose (only read, only labs, or everything).",
+    "developerName": "Falken's Lab",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/docker-lab",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "I don't have Python 3.13: try this script with it, without installing anything.",
+      "Someone sent me this repository: does it build and do its tests pass?",
+      "Start a PostgreSQL 17 with a volume for its data, on port 5432 only for this computer."
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}

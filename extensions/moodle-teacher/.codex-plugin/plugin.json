@@ -1,0 +1,47 @@
+{
+  "name": "moodle-teacher",
+  "version": "0.8.4",
+  "description": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/moodle-teacher",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "moodle",
+    "lms",
+    "teaching",
+    "teacher",
+    "mcp",
+    "miyagi"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Moodle Teacher",
+    "shortDescription": "Your AI agent works in the Moodle courses you teach, as you, and knows how to do it well.",
+    "longDescription": "Work in your Moodle courses as their teacher, through moodle-mcp: building them, grading, following the class, checking and reusing courses, with how to do each well in Moodle.",
+    "developerName": "Falken's Lab",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/moodle-teacher",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "Grade the essays of unit 3 with their rubric, and show me the proposals first.",
+      "Make a 10-question quiz on fractions from the course's question bank.",
+      "Copy last year's unit 2 from my old school's Moodle into this year's course."
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg",
+    "screenshots": [
+      "./assets/screenshot.png"
+    ]
+  }
+}

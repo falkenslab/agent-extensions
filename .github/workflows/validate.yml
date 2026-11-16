@@ -16,6 +16,8 @@ jobs:
       - run: npm install --global @anthropic-ai/claude-code@latest
       - name: The catalog is up to date
         run: npx -y @falkenslab/agent-kit-catalog@0.8.0 --check
+      - name: Codex's manifests are up to date
+        run: node scripts/codex-manifests.mjs --check
       - name: The marketplace
         run: claude plugin validate --strict .
       # Ruby and Asker, so asker's tests run with the real Asker too (mcps/asker), not only its fake.
