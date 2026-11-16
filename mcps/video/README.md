@@ -25,13 +25,13 @@ video-mcp is an MCP server that lets an AI agent work with a video: a file on yo
 
 ## 🚀 Quick start
 
-With [Node.js](https://nodejs.org) 20 or later and the programs you need ([ffmpeg](https://ffmpeg.org/download.html) for frames, [faster-whisper](https://github.com/SYSTRAN/faster-whisper#installation) for transcribing, [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for YouTube), build it here (`npm install`, `npm run build`) and add it to Claude Code:
+With [Node.js](https://nodejs.org) 20 or later and the programs you need ([ffmpeg](https://ffmpeg.org/download.html) for frames, [faster-whisper](https://github.com/SYSTRAN/faster-whisper#installation) for transcribing, [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for YouTube), add it to Claude Code:
 
 ```bash
-claude mcp add video-mcp -- node /path/to/agent-extensions/mcps/video/dist/server.mjs
+claude mcp add video-mcp -- npx -y @falkenslab/video-mcp
 ```
 
-Then ask about a video. In an agent built on agent-kit, or in Claude Code with its skills, install the [video extension](../../extensions/video/) instead. Once it's on npm, `npx -y @falkenslab/video-mcp` will run it.
+Then ask about a video. In an agent built on agent-kit, or in Claude Code with its skills, install the [video extension](../../extensions/video/) instead.
 
 ## 💬 What you can ask
 
@@ -79,7 +79,7 @@ Environment variables, all optional; one left as an unexpanded `${user_config.*}
 
 ## 🛠️ Developing
 
-In this folder: `npm install`, then `npm run typecheck`, `npm run lint`, `npm test`, `npm run build` (one file, `dist/server.mjs`, with esbuild) and `npm run check` (the built server's tools, complete). The tests fake ffmpeg, ffprobe, yt-dlp and Python (`test/fake.ts`), so they need none of them. Until the package is on npm, the build also copies `dist/server.mjs` into `extensions/video/dist/`, which the extension runs and which is committed; CI fails if that copy is stale. `npm publish` runs all the checks first; releases are published to npm by the owner.
+In this folder: `npm install`, then `npm run typecheck`, `npm run lint`, `npm test`, `npm run build` (one file, `dist/server.mjs`, with esbuild) and `npm run check` (the built server's tools, complete). The tests fake ffmpeg, ffprobe, yt-dlp and Python (`test/fake.ts`), so they need none of them. `npm publish` runs all the checks first; releases are published to npm by the owner.
 
 <div align="center">
 

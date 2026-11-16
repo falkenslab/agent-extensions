@@ -1,9 +1,10 @@
 {
   "mcpServers": {
     "work-placements": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+        "-y",
+        "@falkenslab/work-placements-mcp@0.1.0"
       ],
       "env": {
         "WORK_PLACEMENTS_AREA": "${user_config.area}",

@@ -44,7 +44,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install video@falkenslab
 ```
 
-Pregunta, todo opcional, por una carpeta de trabajo (donde van las descargas, las transcripciones y los fotogramas), el modelo de transcripción (`small` por defecto), el idioma habitual de tus vídeos y, cuando faster-whisper está en un entorno virtual (como hace falta en macOS y Linux), el Python de ese entorno. Reinicia la aplicación si instalaste un programa con ella abierta; el agente los comprueba con `check_requirements`. Luego pide: «¿Qué dice este vídeo sobre las rutas estáticas? https://www.youtube.com/watch?v=…». Codex aún no lo ejecuta: ejecuta el servidor desde su carpeta, cosa que Codex no puede, hasta que se publique en npm.
+Pregunta, todo opcional, por una carpeta de trabajo (donde van las descargas, las transcripciones y los fotogramas), el modelo de transcripción (`small` por defecto), el idioma habitual de tus vídeos y, cuando faster-whisper está en un entorno virtual (como hace falta en macOS y Linux), el Python de ese entorno. Reinicia la aplicación si instalaste un programa con ella abierta; el agente los comprueba con `check_requirements`. Luego pide: «¿Qué dice este vídeo sobre las rutas estáticas? https://www.youtube.com/watch?v=…». En Codex, que no tiene ajustes, usa los valores por defecto, y el idioma se lo puedes decir en el chat.
 
 ## 💬 Qué puedes pedir
 
@@ -58,7 +58,7 @@ Pregunta, todo opcional, por una carpeta de trabajo (donde van las descargas, la
 
 | Parte | Qué es |
 | --- | --- |
-| 🔌 Servidor | `node dist/server.mjs` ([video-mcp](../../mcps/video/) 0.1.0, incluido hasta que esté en npm): `get_video_info`, `get_captions`, `transcribe_video`, `extract_frames`, `write_subtitles`, `clean_up_video`, `check_requirements`, `server_info` |
+| 🔌 Servidor | `npx -y @falkenslab/video-mcp@0.1.0` ([video-mcp](../../mcps/video/)): `get_video_info`, `get_captions`, `transcribe_video`, `extract_frames`, `write_subtitles`, `clean_up_video`, `check_requirements`, `server_info` |
 | 🧩 `video-understanding` | Qué dice y qué muestra un vídeo: conseguirlo (un archivo, YouTube, un archivo de Moodle descargado antes), primero los subtítulos, una transcripción solo cuando no los tiene, fotogramas donde cambia la pantalla, los vídeos largos por páginas o por tramos, y citar con tiempos |
 | 🧩 `video-subtitles` | Un `.vtt` para un vídeo: transcribirlo, revisar la transcripción y acordar las correcciones con la persona, escribirlo y dónde va en Moodle; también convertir un `.srt` |
 | 🤖 `video-transcriber` | Subagente: convierte un vídeo en un documento Markdown con lo que se dice y lo que se ve, tramo a tramo y en orden, con sus fotogramas descritos y sus términos corregidos, y luego limpia las descargas; para `video-understanding` con vídeos largos o varios |
@@ -82,7 +82,7 @@ Un agente con agent-kit mantiene lo que este ordenador puede hacer y te dice qu�
 
 ## 🛠️ Desarrollo
 
-La extensión es un plugin de Claude Code: `.claude-plugin/plugin.json` (los datos de agent-kit en `metadata["agent-kit"]`), `.mcp.json` y `skills/`. El código del servidor está en [`mcps/video/`](../../mcps/video/); hasta que se publique en npm como `@falkenslab/video-mcp`, su compilación copia aquí `dist/server.mjs`, que se incluye en el repositorio y que `.mcp.json` ejecuta con `node`. Para probar un cambio, enlázala en un agente (`my-agent extension add ./extensions/video --link`) y compruébala con `claude plugin validate --strict extensions/video`.
+La extensión es un plugin de Claude Code: `.claude-plugin/plugin.json` (los datos de agent-kit en `metadata["agent-kit"]`), `.mcp.json` y `skills/`. El código del servidor está en [`mcps/video/`](../../mcps/video/), publicado en npm como `@falkenslab/video-mcp`, que `.mcp.json` ejecuta con `npx` en una versión fija. Para probar un cambio, enlázala en un agente (`my-agent extension add ./extensions/video --link`) y compruébala con `claude plugin validate --strict extensions/video`.
 
 <div align="center">
 

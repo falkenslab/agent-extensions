@@ -40,7 +40,7 @@ claude plugin marketplace add falkenslab/agent-extensions
 claude plugin install work-placements@falkenslab
 ```
 
-It asks for three settings, all optional: your area (a town or region searched when you don't say one), your Google Places API key (a secret, only to search Google Maps' businesses too), and the folder for drafts and exports (else `Documents/work-placements`). Then ask: "Find IT companies in La Laguna that aren't in my record yet." Its server runs from the extension's folder until it's published to npm, so Codex, which doesn't expand `${CLAUDE_PLUGIN_ROOT}`, loads its skills but not its server yet.
+It asks for three settings, all optional: your area (a town or region searched when you don't say one), your Google Places API key (a secret, only to search Google Maps' businesses too), and the folder for drafts and exports (else `Documents/work-placements`). Then ask: "Find IT companies in La Laguna that aren't in my record yet." In Codex, which has no settings, say the area in the chat; Google Places isn't searched there.
 
 ## 💬 What you can ask
 
@@ -56,7 +56,7 @@ It asks for three settings, all optional: your area (a town or region searched w
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | work-placements-mcp, bundled (`node dist/server.mjs`): `search_companies`, `read_company_site`, `add_company`, `update_company`, `log_contact`, `list_companies`, `pipeline_summary`, `import_companies`, `export_companies`, `draft_emails`, `server_info` |
+| 🔌 Server | `npx -y @falkenslab/work-placements-mcp@0.1.0` ([work-placements-mcp](../../mcps/work-placements/)): `search_companies`, `read_company_site`, `add_company`, `update_company`, `log_contact`, `list_companies`, `pipeline_summary`, `import_companies`, `export_companies`, `draft_emails`, `server_info` |
 | 🧩 `find-companies` | The sources in order (the record, your spreadsheets, OpenStreetMap, Google Places with your key, the companies' websites), areas and sectors, and adding only what you choose, without duplicates; in miyagi, the button "Find companies" |
 | 🧩 `company-outreach` | One draft per company from your own letter, to its generic address, identified and with a line to opt out, never a mass mailing; calls, visits and sent emails logged as contacts |
 | 🧩 `placement-tracker` | The statuses, today's follow-ups and the quiet companies, and the department's export; in miyagi, the button "Company follow-up" |
@@ -81,7 +81,7 @@ It asks for three settings, all optional: your area (a town or region searched w
 
 ## 🛠️ Developing
 
-The server's code is in [`mcps/work-placements/`](../../mcps/work-placements/), to be published to npm as `@falkenslab/work-placements-mcp`; there `npm install`, `npm run build` and `npm test` build and test it, and the build copies `dist/server.mjs` here, committed, which the extension runs until its `.mcp.json` moves to the published package. To try a change, link the extension into an agent (`my-agent extension add ./extensions/work-placements --link`) and check it with `claude plugin validate --strict extensions/work-placements` and `node scripts/check-tools.mjs work-placements`.
+The server's code is in [`mcps/work-placements/`](../../mcps/work-placements/), published to npm as `@falkenslab/work-placements-mcp`, which `.mcp.json` runs at a fixed version with `npx`; there `npm install`, `npm run build` and `npm test` build and test it. To try a change, link the extension into an agent (`my-agent extension add ./extensions/work-placements --link`) and check it with `claude plugin validate --strict extensions/work-placements` and `node scripts/check-tools.mjs work-placements`.
 
 <div align="center">
 

@@ -1,9 +1,10 @@
 {
   "mcpServers": {
     "video": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+        "-y",
+        "@falkenslab/video-mcp@0.1.0"
       ],
       "env": {
         "VIDEO_MCP_WORK_DIR": "${user_config.work_folder}",

@@ -1,6 +1,6 @@
 {
   "name": "work-placements",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Find, contact and follow the companies where your students do their work placements: companies by sector from OpenStreetMap (and Google Places with your key), their public sites read, a local record of companies and contacts with its follow-ups, CSV and Excel for the department, and one email draft per company that you review and send.",
   "author": {
     "name": "Falken's Lab",
@@ -139,132 +139,198 @@
         "search_companies": {
           "en": {
             "label": "Searching for companies",
-            "phrase": ["searched for companies", "searched for companies {n} times"],
+            "phrase": [
+              "searched for companies",
+              "searched for companies {n} times"
+            ],
             "result": "Companies found"
           },
           "es": {
             "label": "Buscando empresas",
-            "phrase": ["buscó empresas", "buscó empresas {n} veces"],
+            "phrase": [
+              "buscó empresas",
+              "buscó empresas {n} veces"
+            ],
             "result": "Empresas encontradas"
           }
         },
         "read_company_site": {
           "en": {
             "label": "Reading a company's website",
-            "phrase": ["read a company's website", "read {n} companies' websites"],
+            "phrase": [
+              "read a company's website",
+              "read {n} companies' websites"
+            ],
             "result": "Website read"
           },
           "es": {
             "label": "Leyendo la web de una empresa",
-            "phrase": ["leyó la web de una empresa", "leyó las webs de {n} empresas"],
+            "phrase": [
+              "leyó la web de una empresa",
+              "leyó las webs de {n} empresas"
+            ],
             "result": "Web leída"
           }
         },
         "add_company": {
           "en": {
             "label": "Adding \"{name}\" to the record",
-            "phrase": ["added a company", "added {n} companies"],
+            "phrase": [
+              "added a company",
+              "added {n} companies"
+            ],
             "result": "Company added to the record"
           },
           "es": {
             "label": "Añadiendo «{name}» al registro",
-            "phrase": ["añadió una empresa", "añadió {n} empresas"],
+            "phrase": [
+              "añadió una empresa",
+              "añadió {n} empresas"
+            ],
             "result": "Empresa añadida al registro"
           }
         },
         "update_company": {
           "en": {
             "label": "Updating a company in the record",
-            "phrase": ["updated a company", "updated {n} companies"],
+            "phrase": [
+              "updated a company",
+              "updated {n} companies"
+            ],
             "result": "Company updated"
           },
           "es": {
             "label": "Actualizando una empresa del registro",
-            "phrase": ["actualizó una empresa", "actualizó {n} empresas"],
+            "phrase": [
+              "actualizó una empresa",
+              "actualizó {n} empresas"
+            ],
             "result": "Empresa actualizada"
           }
         },
         "log_contact": {
           "en": {
             "label": "Noting a contact with a company",
-            "phrase": ["noted a contact", "noted {n} contacts"],
+            "phrase": [
+              "noted a contact",
+              "noted {n} contacts"
+            ],
             "result": "Contact noted"
           },
           "es": {
             "label": "Anotando un contacto con una empresa",
-            "phrase": ["anotó un contacto", "anotó {n} contactos"],
+            "phrase": [
+              "anotó un contacto",
+              "anotó {n} contactos"
+            ],
             "result": "Contacto anotado"
           }
         },
         "list_companies": {
           "en": {
             "label": "Looking at the companies in the record",
-            "phrase": ["looked at the record", "looked at the record {n} times"],
+            "phrase": [
+              "looked at the record",
+              "looked at the record {n} times"
+            ],
             "result": "Companies listed"
           },
           "es": {
             "label": "Mirando las empresas del registro",
-            "phrase": ["miró el registro", "miró el registro {n} veces"],
+            "phrase": [
+              "miró el registro",
+              "miró el registro {n} veces"
+            ],
             "result": "Empresas listadas"
           }
         },
         "pipeline_summary": {
           "en": {
             "label": "Summing up the placement companies",
-            "phrase": ["summed up the companies", "summed up the companies {n} times"],
+            "phrase": [
+              "summed up the companies",
+              "summed up the companies {n} times"
+            ],
             "result": "Summary ready"
           },
           "es": {
             "label": "Resumiendo las empresas de prácticas",
-            "phrase": ["resumió las empresas", "resumió las empresas {n} veces"],
+            "phrase": [
+              "resumió las empresas",
+              "resumió las empresas {n} veces"
+            ],
             "result": "Resumen listo"
           }
         },
         "import_companies": {
           "en": {
             "label": "Importing companies from a spreadsheet",
-            "phrase": ["imported a spreadsheet", "imported {n} spreadsheets"],
+            "phrase": [
+              "imported a spreadsheet",
+              "imported {n} spreadsheets"
+            ],
             "result": "Spreadsheet read"
           },
           "es": {
             "label": "Importando empresas de una hoja de cálculo",
-            "phrase": ["importó una hoja de cálculo", "importó {n} hojas de cálculo"],
+            "phrase": [
+              "importó una hoja de cálculo",
+              "importó {n} hojas de cálculo"
+            ],
             "result": "Hoja de cálculo leída"
           }
         },
         "export_companies": {
           "en": {
             "label": "Exporting the companies",
-            "phrase": ["exported the companies", "exported the companies {n} times"],
+            "phrase": [
+              "exported the companies",
+              "exported the companies {n} times"
+            ],
             "result": "Spreadsheet saved on this computer"
           },
           "es": {
             "label": "Exportando las empresas",
-            "phrase": ["exportó las empresas", "exportó las empresas {n} veces"],
+            "phrase": [
+              "exportó las empresas",
+              "exportó las empresas {n} veces"
+            ],
             "result": "Hoja de cálculo guardada en este ordenador"
           }
         },
         "draft_emails": {
           "en": {
             "label": "Writing email drafts",
-            "phrase": ["wrote email drafts", "wrote email drafts {n} times"],
+            "phrase": [
+              "wrote email drafts",
+              "wrote email drafts {n} times"
+            ],
             "result": "Drafts saved, unsent"
           },
           "es": {
             "label": "Escribiendo borradores de correo",
-            "phrase": ["escribió borradores de correo", "escribió borradores de correo {n} veces"],
+            "phrase": [
+              "escribió borradores de correo",
+              "escribió borradores de correo {n} veces"
+            ],
             "result": "Borradores guardados, sin enviar"
           }
         },
         "server_info": {
           "en": {
             "label": "Reading work-placements-mcp's settings",
-            "phrase": ["read its settings", "read its settings {n} times"],
+            "phrase": [
+              "read its settings",
+              "read its settings {n} times"
+            ],
             "result": "Settings read"
           },
           "es": {
             "label": "Leyendo los ajustes de work-placements-mcp",
-            "phrase": ["leyó sus ajustes", "leyó sus ajustes {n} veces"],
+            "phrase": [
+              "leyó sus ajustes",
+              "leyó sus ajustes {n} veces"
+            ],
             "result": "Ajustes leídos"
           }
         }

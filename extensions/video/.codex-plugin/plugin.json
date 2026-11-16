@@ -1,6 +1,6 @@
 {
   "name": "video",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Videos your agent understands, on your computer: their captions read as a timed transcript (YouTube's, a .vtt or .srt, or a file's own), the speech transcribed with faster-whisper when there are none, frames where the screen changes to see slides and code, and WebVTT subtitles ready to upload to Moodle with the video.",
   "author": {
     "name": "Falken's Lab",

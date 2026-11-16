@@ -26,11 +26,10 @@ work-placements-mcp is an MCP server for a teacher who looks for placement compa
 
 ## 🚀 Quick start
 
-With [Node.js](https://nodejs.org) 20 or later, add it to Claude Code from this repository's folder (it isn't on npm yet):
+With [Node.js](https://nodejs.org) 20 or later, add it to Claude Code:
 
 ```bash
-cd mcps/work-placements && npm install && npm run build
-claude mcp add work-placements -e WORK_PLACEMENTS_AREA="La Laguna, Tenerife" -- node "$PWD/dist/server.mjs"
+claude mcp add work-placements -e WORK_PLACEMENTS_AREA="La Laguna, Tenerife" -- npx -y @falkenslab/work-placements-mcp
 ```
 
 Then ask for companies. In an agent built on agent-kit, or in Claude Code with its skills, install the [work-placements extension](../../extensions/work-placements/) instead.
@@ -79,7 +78,7 @@ A setting left as a literal `${user_config.*}`, as Codex passes it, counts as no
 
 ## 🛠️ Developing
 
-In this folder: `npm install`, then `npm run typecheck`, `npm run lint`, `npm test` (with every network call faked), `npm run build` (one file, `dist/server.mjs`, with esbuild, copied into `extensions/work-placements/dist/` while it isn't on npm) and `npm run check` (the built server's tools, complete). CI builds and tests it with the other servers in `mcps/` and fails if the extension's copy is stale. `npm publish` runs all of them first; releases are published to npm by the owner.
+In this folder: `npm install`, then `npm run typecheck`, `npm run lint`, `npm test` (with every network call faked), `npm run build` (one file, `dist/server.mjs`, with esbuild) and `npm run check` (the built server's tools, complete). CI builds and tests it with the other servers in `mcps/`. `npm publish` runs all of them first; releases are published to npm by the owner.
 
 <div align="center">
 
