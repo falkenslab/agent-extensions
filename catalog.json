@@ -5381,6 +5381,275 @@
       "kit": ">=0.22.0"
     },
     {
+      "name": "video",
+      "version": "0.1.0",
+      "description": "Videos your agent understands, on your computer: their captions read as a timed transcript, the speech transcribed with faster-whisper when there are none, frames where the screen changes, and WebVTT subtitles ready to upload to Moodle with the video.",
+      "descriptions": {
+        "en": "Videos your agent understands, on your computer: their captions read as a timed transcript, the speech transcribed with faster-whisper when there are none, frames where the screen changes, and WebVTT subtitles ready to upload to Moodle with the video.",
+        "es": "Vídeos que tu agente entiende, en tu ordenador: sus subtítulos leídos como una transcripción con tiempos (los de YouTube, un .vtt o .srt, o los del propio archivo), el habla transcrita con faster-whisper cuando no los tiene, fotogramas donde cambia la pantalla para ver diapositivas y código, y subtítulos WebVTT listos para subir a Moodle con el vídeo."
+      },
+      "category": "education",
+      "topics": [
+        "video",
+        "subtitles",
+        "captions",
+        "transcription",
+        "webvtt",
+        "accessibility",
+        "youtube",
+        "mcp",
+        "miyagi",
+        "padawan",
+        "teaching",
+        "learning",
+        "education"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/video",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/video/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/video/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/video/README.es.md"
+      },
+      "install": {
+        "claudeCode": "claude plugin install video@falkenslab",
+        "agentKit": "extension add video@falkenslab"
+      },
+      "capabilities": [
+        {
+          "id": "video-captions",
+          "skills": [
+            "video-understanding"
+          ],
+          "tools": [
+            "get_video_info",
+            "get_captions",
+            "check_requirements",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "A video's captions",
+              "description": "The subtitles a video already has, read as a timed transcript: YouTube's, a .vtt or .srt file, or a video file's own; and which videos have none."
+            },
+            "es": {
+              "label": "Los subtítulos de un vídeo",
+              "description": "Los subtítulos que ya tiene un vídeo, leídos como una transcripción con tiempos: los de YouTube, un archivo .vtt o .srt, o los del propio archivo de vídeo; y qué vídeos no tienen."
+            }
+          }
+        },
+        {
+          "id": "video-transcription",
+          "skills": [],
+          "tools": [
+            "transcribe_video"
+          ],
+          "texts": {
+            "en": {
+              "label": "Transcribing a video",
+              "description": "What's said in a video without subtitles, as text with its times, transcribed on your computer with faster-whisper."
+            },
+            "es": {
+              "label": "Transcribir un vídeo",
+              "description": "Lo que se dice en un vídeo sin subtítulos, como texto con sus tiempos, transcrito en tu ordenador con faster-whisper."
+            }
+          }
+        },
+        {
+          "id": "video-visual",
+          "skills": [],
+          "tools": [
+            "extract_frames"
+          ],
+          "texts": {
+            "en": {
+              "label": "What a video shows",
+              "description": "Frames where the screen changes (a new slide, another window, code written), each with its time, for the agent to look at alongside what's said."
+            },
+            "es": {
+              "label": "Lo que muestra un vídeo",
+              "description": "Fotogramas donde cambia la pantalla (una diapositiva nueva, otra ventana, código escrito), cada uno con su tiempo, para que el agente los mire junto a lo que se dice."
+            }
+          }
+        },
+        {
+          "id": "video-online",
+          "skills": [],
+          "tools": [
+            "get_video_info",
+            "get_captions",
+            "transcribe_video",
+            "extract_frames"
+          ],
+          "texts": {
+            "en": {
+              "label": "YouTube and online videos",
+              "description": "A YouTube video, or another site's, by its address: its details and captions read, and its audio or picture downloaded to transcribe it or see it."
+            },
+            "es": {
+              "label": "YouTube y vídeos en línea",
+              "description": "Un vídeo de YouTube, o de otro sitio, por su dirección: sus datos y subtítulos leídos, y su audio o su imagen descargados para transcribirlo o verlo."
+            }
+          }
+        },
+        {
+          "id": "subtitles",
+          "skills": [
+            "video-subtitles"
+          ],
+          "tools": [
+            "write_subtitles"
+          ],
+          "texts": {
+            "en": {
+              "label": "Subtitles for a video",
+              "description": "A WebVTT subtitle file made from a transcription and corrected with you, ready to upload to Moodle with the video."
+            },
+            "es": {
+              "label": "Subtítulos para un vídeo",
+              "description": "Un archivo de subtítulos WebVTT hecho a partir de una transcripción y corregido contigo, listo para subirlo a Moodle con el vídeo."
+            }
+          }
+        }
+      ],
+      "requirements": [
+        {
+          "name": "ffmpeg",
+          "program": "ffmpeg",
+          "version": {
+            "args": [
+              "-version"
+            ],
+            "min": "5.1.0"
+          },
+          "install": {
+            "windows": "winget install Gyan.FFmpeg",
+            "macos": "brew install ffmpeg",
+            "linux": "sudo apt install ffmpeg",
+            "url": "https://ffmpeg.org/download.html"
+          },
+          "for": [
+            "video-transcription",
+            "video-visual"
+          ]
+        },
+        {
+          "name": "Python with faster-whisper",
+          "program": "python3",
+          "version": {
+            "args": [
+              "--version"
+            ],
+            "min": "3.9.0"
+          },
+          "install": {
+            "windows": "py -m pip install faster-whisper",
+            "macos": "python3 -m venv ~/.video-mcp-python && ~/.video-mcp-python/bin/pip install faster-whisper (then set the Python setting to ~/.video-mcp-python/bin/python)",
+            "linux": "python3 -m venv ~/.video-mcp-python && ~/.video-mcp-python/bin/pip install faster-whisper (then set the Python setting to ~/.video-mcp-python/bin/python)",
+            "url": "https://github.com/SYSTRAN/faster-whisper#installation"
+          },
+          "for": [
+            "video-transcription"
+          ]
+        },
+        {
+          "name": "yt-dlp",
+          "program": "yt-dlp",
+          "version": {
+            "args": [
+              "--version"
+            ],
+            "min": "2024.12.13"
+          },
+          "install": {
+            "windows": "winget install yt-dlp.yt-dlp",
+            "macos": "brew install yt-dlp",
+            "linux": "pipx install yt-dlp",
+            "url": "https://github.com/yt-dlp/yt-dlp/wiki/Installation"
+          },
+          "for": [
+            "video-online"
+          ]
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/video/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/video/assets/banner.svg",
+      "servers": [
+        {
+          "name": "video",
+          "kind": "bundled",
+          "command": "node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+        }
+      ],
+      "skills": [
+        {
+          "name": "video-subtitles",
+          "description": "Make a WebVTT subtitle file (.vtt) for a video with the video server - transcribe it with transcribe_video, review the transcript with the person and agree the corrections (names, terms, code), write it with write_subtitles, and hand it over to upload with the video to Moodle; also convert an .srt to .vtt or tidy an existing one. Use when the person asks for subtitles or captions for their own video, to make a video accessible, or to turn a transcript or an .srt into a .vtt."
+        },
+        {
+          "name": "video-understanding",
+          "description": "Find out what a video says and shows with the video server - its captions first (YouTube's tracks, a .vtt or .srt, a file's own subtitles) with get_captions, a transcription with faster-whisper only when it has none, and frames where the screen changes for slides, code and windows - matched by time, quoted with their times, and long videos read a page or a stretch at a time. Use when the person asks what a video or lecture says, to summarize it, find where something is said or shown, list its chapters, read the code or slides in it, or check which videos have subtitles."
+        }
+      ],
+      "tools": [
+        {
+          "name": "check_requirements",
+          "labels": {
+            "en": "Checking ffmpeg, faster-whisper and yt-dlp",
+            "es": "Comprobando ffmpeg, faster-whisper y yt-dlp"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "extract_frames",
+          "labels": {
+            "en": "Taking frames from a video",
+            "es": "Sacando fotogramas de un vídeo"
+          }
+        },
+        {
+          "name": "get_captions",
+          "labels": {
+            "en": "Reading a video's captions",
+            "es": "Leyendo los subtítulos de un vídeo"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "get_video_info",
+          "labels": {
+            "en": "Reading a video's details",
+            "es": "Leyendo los datos de un vídeo"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "server_info",
+          "labels": {
+            "en": "Reading the video server's settings",
+            "es": "Leyendo los ajustes del servidor de vídeo"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "transcribe_video",
+          "labels": {
+            "en": "Transcribing a video",
+            "es": "Transcribiendo un vídeo"
+          }
+        },
+        {
+          "name": "write_subtitles",
+          "labels": {
+            "en": "Writing subtitles",
+            "es": "Escribiendo subtítulos"
+          }
+        }
+      ],
+      "kit": ">=0.22.0"
+    },
+    {
       "name": "weather",
       "version": "0.1.10",
       "description": "The weather in your city, for an agent that plans with you: today and the next days. Also agent-kit's example of an extension with its own MCP server.",
