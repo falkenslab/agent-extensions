@@ -181,6 +181,22 @@
         "teacher",
         "miyagi"
       ]
+    },
+    {
+      "name": "video",
+      "source": "./extensions/video",
+      "description": "Videos your agent understands, on your computer: their captions read as a timed transcript, the speech transcribed with faster-whisper when there are none, frames where the screen changes, and WebVTT subtitles ready to upload to Moodle with the video.",
+      "version": "0.1.0",
+      "category": "education",
+      "tags": [
+        "video",
+        "subtitles",
+        "accessibility",
+        "teaching",
+        "learning",
+        "miyagi",
+        "padawan"
+      ]
     }
   ]
 }

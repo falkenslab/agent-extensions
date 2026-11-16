@@ -1,0 +1,48 @@
+{
+  "name": "video",
+  "version": "0.1.0",
+  "description": "Videos your agent understands, on your computer: their captions read as a timed transcript (YouTube's, a .vtt or .srt, or a file's own), the speech transcribed with faster-whisper when there are none, frames where the screen changes to see slides and code, and WebVTT subtitles ready to upload to Moodle with the video.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/video",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "subtitles",
+    "captions",
+    "transcription",
+    "webvtt",
+    "accessibility",
+    "youtube",
+    "mcp",
+    "miyagi",
+    "padawan"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Video",
+    "shortDescription": "Your AI agent understands a video and writes its subtitles, on your computer.",
+    "longDescription": "Videos your agent understands, on your computer: their captions read as a timed transcript (YouTube's, a .vtt or .srt, or a file's own), the speech transcribed with faster-whisper when there are none, frames where the screen changes to see slides and code, and WebVTT subtitles ready to upload to Moodle with the video.",
+    "developerName": "Falken's Lab",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/video",
+    "supportURL": "https://github.com/falkenslab/agent-extensions/issues",
+    "defaultPrompt": [
+      "Summarize this lecture with its chapters, and the code it shows.",
+      "When does the teacher explain recursion in this video?",
+      "Make Spanish subtitles for my video lesson.mp4, ready to upload to Moodle."
+    ],
+    "brandColor": "#E5483A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}
