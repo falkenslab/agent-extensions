@@ -13,6 +13,8 @@ const params = new URLSearchParams(location.search);
 // ?topic=miyagi (several, comma-separated): an agent links to the extensions it offers.
 const chosen = new Set((params.get("topic") ?? "").split(",").map((topic) => topic.trim().toLowerCase()).filter(Boolean));
 let catalog = { extensions: [] };
+// Extensions in the marketplace that the site doesn't show (installable by name, not advertised).
+const HIDDEN = new Set(["work-placements"]);
 let failed = false;
 
 // Shared by the home page (index.html) and the catalog (catalog.html): each runs only its own parts.
@@ -599,7 +601,7 @@ async function load() {
 applyLang();
 load()
   .then((loaded) => {
-    catalog = loaded;
+    catalog = { ...loaded, extensions: (loaded.extensions ?? []).filter((extension) => !HIDDEN.has(extension.name)) };
     if (page === "home") renderAdd();
     if (page === "catalog") {
       renderCount();
