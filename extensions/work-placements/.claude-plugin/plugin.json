@@ -1,0 +1,274 @@
+{
+  "name": "work-placements",
+  "version": "0.1.0",
+  "description": "Find, contact and follow the companies where your students do their work placements: companies by sector from OpenStreetMap (and Google Places with your key), their public sites read, a local record of companies and contacts with its follow-ups, CSV and Excel for the department, and one email draft per company that you review and send.",
+  "author": {
+    "name": "Falken's Lab",
+    "url": "https://github.com/falkenslab"
+  },
+  "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/work-placements",
+  "repository": "https://github.com/falkenslab/agent-extensions",
+  "license": "MIT",
+  "keywords": [
+    "work-placements",
+    "internships",
+    "companies",
+    "openstreetmap",
+    "outreach",
+    "excel",
+    "mcp",
+    "miyagi"
+  ],
+  "userConfig": {
+    "area": {
+      "type": "string",
+      "title": "Your area",
+      "description": "Where to look for companies when you don't say: a town or a region, e.g. La Laguna, Tenerife. Empty: the agent asks.",
+      "default": ""
+    },
+    "places_key": {
+      "type": "string",
+      "title": "Google Places API key (optional)",
+      "description": "Your own key for Google's Places API (New), to search Google Maps' businesses too. Empty: only OpenStreetMap.",
+      "sensitive": true,
+      "default": ""
+    },
+    "output_dir": {
+      "type": "string",
+      "title": "Folder for drafts and exports",
+      "description": "Where email drafts and spreadsheets are written, e.g. C:\\Users\\you\\Documents\\work-placements. Empty: Documents/work-placements.",
+      "default": ""
+    }
+  },
+  "metadata": {
+    "agent-kit": {
+      "kit": ">=0.22.0",
+      "description": {
+        "es": "Busca, contacta y sigue a las empresas donde tu alumnado hace sus prácticas: empresas por sector de OpenStreetMap (y de Google Places con tu clave), sus webs públicas leídas, un registro local de empresas y contactos con sus seguimientos, CSV y Excel para el departamento, y un borrador de correo por empresa que revisas y envías tú."
+      },
+      "catalog": {
+        "logo": "assets/logo.svg",
+        "banner": "assets/banner.svg"
+      },
+      "provides": [
+        "work-placements"
+      ],
+      "requires": [],
+      "capabilities": [
+        {
+          "id": "placement-prospecting",
+          "skills": [
+            "find-companies",
+            "linkedin-and-sites"
+          ],
+          "tools": [
+            "search_companies",
+            "read_company_site",
+            "add_company",
+            "list_companies",
+            "import_companies",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Finding placement companies",
+              "description": "Companies by sector in your town or around it, from OpenStreetMap and, with your key, Google Places; their websites read for a generic email and a phone; and those you already have, never repeated."
+            },
+            "es": {
+              "label": "Buscar empresas de prácticas",
+              "description": "Empresas por sector en tu municipio o alrededor, de OpenStreetMap y, con tu clave, de Google Places; sus webs leídas para un correo genérico y un teléfono; y las que ya tienes, sin repetirlas."
+            }
+          }
+        },
+        {
+          "id": "placement-outreach",
+          "skills": [
+            "company-outreach"
+          ],
+          "tools": [
+            "draft_emails",
+            "log_contact",
+            "list_companies",
+            "read_company_site"
+          ],
+          "texts": {
+            "en": {
+              "label": "Contacting companies",
+              "description": "One email draft per company from your own letter, to its generic address, that opens unsent in Outlook or Thunderbird for you to review and send; and your calls and visits noted."
+            },
+            "es": {
+              "label": "Contactar con empresas",
+              "description": "Un borrador de correo por empresa a partir de tu propia carta, a su dirección genérica, que se abre sin enviar en Outlook o Thunderbird para que lo revises y lo envíes; y tus llamadas y visitas anotadas."
+            }
+          }
+        },
+        {
+          "id": "placement-tracking",
+          "skills": [
+            "placement-tracker"
+          ],
+          "tools": [
+            "list_companies",
+            "pipeline_summary",
+            "log_contact",
+            "update_company",
+            "import_companies",
+            "export_companies"
+          ],
+          "texts": {
+            "en": {
+              "label": "Following placement companies",
+              "description": "Where each company stands, from to contact to hosting students, who to write to or call today, and the record for the department in Excel or CSV."
+            },
+            "es": {
+              "label": "Seguir a las empresas de prácticas",
+              "description": "En qué punto está cada empresa, de por contactar a con alumnado, a quién escribir o llamar hoy, y el registro para el departamento en Excel o CSV."
+            }
+          }
+        }
+      ],
+      "readOnlyTools": [
+        "search_companies",
+        "read_company_site",
+        "list_companies",
+        "pipeline_summary",
+        "server_info"
+      ],
+      "help": "Work placements: I find companies by sector in your area (OpenStreetMap, and Google Places with your key), read their public websites for a generic email and a phone, keep your record of companies and contacts on this computer with its follow-ups, import and export it as Excel or CSV, and write one email draft per company from your own letter. I send nothing: you review and send each draft. My skills are work-placements:find-companies, company-outreach, placement-tracker and linkedin-and-sites.",
+      "labels": {
+        "search_companies": {
+          "en": {
+            "label": "Searching for companies",
+            "phrase": ["searched for companies", "searched for companies {n} times"],
+            "result": "Companies found"
+          },
+          "es": {
+            "label": "Buscando empresas",
+            "phrase": ["buscó empresas", "buscó empresas {n} veces"],
+            "result": "Empresas encontradas"
+          }
+        },
+        "read_company_site": {
+          "en": {
+            "label": "Reading a company's website",
+            "phrase": ["read a company's website", "read {n} companies' websites"],
+            "result": "Website read"
+          },
+          "es": {
+            "label": "Leyendo la web de una empresa",
+            "phrase": ["leyó la web de una empresa", "leyó las webs de {n} empresas"],
+            "result": "Web leída"
+          }
+        },
+        "add_company": {
+          "en": {
+            "label": "Adding \"{name}\" to the record",
+            "phrase": ["added a company", "added {n} companies"],
+            "result": "Company added to the record"
+          },
+          "es": {
+            "label": "Añadiendo «{name}» al registro",
+            "phrase": ["añadió una empresa", "añadió {n} empresas"],
+            "result": "Empresa añadida al registro"
+          }
+        },
+        "update_company": {
+          "en": {
+            "label": "Updating a company in the record",
+            "phrase": ["updated a company", "updated {n} companies"],
+            "result": "Company updated"
+          },
+          "es": {
+            "label": "Actualizando una empresa del registro",
+            "phrase": ["actualizó una empresa", "actualizó {n} empresas"],
+            "result": "Empresa actualizada"
+          }
+        },
+        "log_contact": {
+          "en": {
+            "label": "Noting a contact with a company",
+            "phrase": ["noted a contact", "noted {n} contacts"],
+            "result": "Contact noted"
+          },
+          "es": {
+            "label": "Anotando un contacto con una empresa",
+            "phrase": ["anotó un contacto", "anotó {n} contactos"],
+            "result": "Contacto anotado"
+          }
+        },
+        "list_companies": {
+          "en": {
+            "label": "Looking at the companies in the record",
+            "phrase": ["looked at the record", "looked at the record {n} times"],
+            "result": "Companies listed"
+          },
+          "es": {
+            "label": "Mirando las empresas del registro",
+            "phrase": ["miró el registro", "miró el registro {n} veces"],
+            "result": "Empresas listadas"
+          }
+        },
+        "pipeline_summary": {
+          "en": {
+            "label": "Summing up the placement companies",
+            "phrase": ["summed up the companies", "summed up the companies {n} times"],
+            "result": "Summary ready"
+          },
+          "es": {
+            "label": "Resumiendo las empresas de prácticas",
+            "phrase": ["resumió las empresas", "resumió las empresas {n} veces"],
+            "result": "Resumen listo"
+          }
+        },
+        "import_companies": {
+          "en": {
+            "label": "Importing companies from a spreadsheet",
+            "phrase": ["imported a spreadsheet", "imported {n} spreadsheets"],
+            "result": "Spreadsheet read"
+          },
+          "es": {
+            "label": "Importando empresas de una hoja de cálculo",
+            "phrase": ["importó una hoja de cálculo", "importó {n} hojas de cálculo"],
+            "result": "Hoja de cálculo leída"
+          }
+        },
+        "export_companies": {
+          "en": {
+            "label": "Exporting the companies",
+            "phrase": ["exported the companies", "exported the companies {n} times"],
+            "result": "Spreadsheet saved on this computer"
+          },
+          "es": {
+            "label": "Exportando las empresas",
+            "phrase": ["exportó las empresas", "exportó las empresas {n} veces"],
+            "result": "Hoja de cálculo guardada en este ordenador"
+          }
+        },
+        "draft_emails": {
+          "en": {
+            "label": "Writing email drafts",
+            "phrase": ["wrote email drafts", "wrote email drafts {n} times"],
+            "result": "Drafts saved, unsent"
+          },
+          "es": {
+            "label": "Escribiendo borradores de correo",
+            "phrase": ["escribió borradores de correo", "escribió borradores de correo {n} veces"],
+            "result": "Borradores guardados, sin enviar"
+          }
+        },
+        "server_info": {
+          "en": {
+            "label": "Reading work-placements-mcp's settings",
+            "phrase": ["read its settings", "read its settings {n} times"],
+            "result": "Settings read"
+          },
+          "es": {
+            "label": "Leyendo los ajustes de work-placements-mcp",
+            "phrase": ["leyó sus ajustes", "leyó sus ajustes {n} veces"],
+            "result": "Ajustes leídos"
+          }
+        }
+      }
+    }
+  }
+}

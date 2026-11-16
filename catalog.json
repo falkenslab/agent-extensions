@@ -5458,6 +5458,232 @@
         }
       ],
       "kit": ">=0.22.0"
+    },
+    {
+      "name": "work-placements",
+      "version": "0.1.0",
+      "description": "Find, contact and follow the companies where your students do their work placements: companies by sector from OpenStreetMap (and Google Places with your key), their public sites read, a local record of companies and contacts with its follow-ups, CSV and Excel for the department, and one email draft per company that you review and send.",
+      "descriptions": {
+        "en": "Find, contact and follow the companies where your students do their work placements: companies by sector from OpenStreetMap (and Google Places with your key), their public sites read, a local record of companies and contacts with its follow-ups, CSV and Excel for the department, and one email draft per company that you review and send.",
+        "es": "Busca, contacta y sigue a las empresas donde tu alumnado hace sus prácticas: empresas por sector de OpenStreetMap (y de Google Places con tu clave), sus webs públicas leídas, un registro local de empresas y contactos con sus seguimientos, CSV y Excel para el departamento, y un borrador de correo por empresa que revisas y envías tú."
+      },
+      "category": "education",
+      "topics": [
+        "work-placements",
+        "internships",
+        "companies",
+        "openstreetmap",
+        "outreach",
+        "excel",
+        "mcp",
+        "miyagi",
+        "teaching",
+        "teacher",
+        "education"
+      ],
+      "author": "Falken's Lab",
+      "license": "MIT",
+      "homepage": "https://github.com/falkenslab/agent-extensions/tree/main/extensions/work-placements",
+      "readme": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/work-placements/README.md",
+      "readmes": {
+        "en": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/work-placements/README.md",
+        "es": "https://github.com/falkenslab/agent-extensions/blob/main/extensions/work-placements/README.es.md"
+      },
+      "install": {
+        "claudeCode": "claude plugin install work-placements@falkenslab",
+        "agentKit": "extension add work-placements@falkenslab"
+      },
+      "capabilities": [
+        {
+          "id": "placement-prospecting",
+          "skills": [
+            "find-companies",
+            "linkedin-and-sites"
+          ],
+          "tools": [
+            "search_companies",
+            "read_company_site",
+            "add_company",
+            "list_companies",
+            "import_companies",
+            "server_info"
+          ],
+          "texts": {
+            "en": {
+              "label": "Finding placement companies",
+              "description": "Companies by sector in your town or around it, from OpenStreetMap and, with your key, Google Places; their websites read for a generic email and a phone; and those you already have, never repeated."
+            },
+            "es": {
+              "label": "Buscar empresas de prácticas",
+              "description": "Empresas por sector en tu municipio o alrededor, de OpenStreetMap y, con tu clave, de Google Places; sus webs leídas para un correo genérico y un teléfono; y las que ya tienes, sin repetirlas."
+            }
+          }
+        },
+        {
+          "id": "placement-outreach",
+          "skills": [
+            "company-outreach"
+          ],
+          "tools": [
+            "draft_emails",
+            "log_contact",
+            "list_companies",
+            "read_company_site"
+          ],
+          "texts": {
+            "en": {
+              "label": "Contacting companies",
+              "description": "One email draft per company from your own letter, to its generic address, that opens unsent in Outlook or Thunderbird for you to review and send; and your calls and visits noted."
+            },
+            "es": {
+              "label": "Contactar con empresas",
+              "description": "Un borrador de correo por empresa a partir de tu propia carta, a su dirección genérica, que se abre sin enviar en Outlook o Thunderbird para que lo revises y lo envíes; y tus llamadas y visitas anotadas."
+            }
+          }
+        },
+        {
+          "id": "placement-tracking",
+          "skills": [
+            "placement-tracker"
+          ],
+          "tools": [
+            "list_companies",
+            "pipeline_summary",
+            "log_contact",
+            "update_company",
+            "import_companies",
+            "export_companies"
+          ],
+          "texts": {
+            "en": {
+              "label": "Following placement companies",
+              "description": "Where each company stands, from to contact to hosting students, who to write to or call today, and the record for the department in Excel or CSV."
+            },
+            "es": {
+              "label": "Seguir a las empresas de prácticas",
+              "description": "En qué punto está cada empresa, de por contactar a con alumnado, a quién escribir o llamar hoy, y el registro para el departamento en Excel o CSV."
+            }
+          }
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/work-placements/assets/logo.svg",
+      "banner": "https://raw.githubusercontent.com/falkenslab/agent-extensions/main/extensions/work-placements/assets/banner.svg",
+      "servers": [
+        {
+          "name": "work-placements",
+          "kind": "bundled",
+          "command": "node ${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+        }
+      ],
+      "skills": [
+        {
+          "name": "company-outreach",
+          "description": "Contact placement companies with the work-placements server - one email draft per company from the person's own letter, to its generic address, written as .eml files that Outlook and Thunderbird open unsent for the person to review and send; never sending anything, never a mass mailing; and calls, visits and sent emails logged as contacts with their next step. Use when the person wants to write to companies about placements, prepare emails, or note a call or a visit."
+        },
+        {
+          "name": "find-companies",
+          "description": "Find companies for students' work placements with the work-placements server - the person's record first, then OpenStreetMap by sector in a town or around a point, Google Places when they've set a key, the companies' own websites for a generic email and a phone, and spreadsheets they already have - adding to the record only what they choose, without duplicates. Use when the person asks for companies to host placements, internships, dual training or Erasmus+ students, in a place or a sector."
+        },
+        {
+          "name": "linkedin-and-sites",
+          "description": "What the agent may and may not do with LinkedIn, Google Maps, business directories and companies' websites when looking for placement companies - nothing automated on LinkedIn (its terms forbid scraping and bots, and it suspends accounts), Google Maps only through the Places API with the person's key, directories and sites read only where robots.txt allows - and how the person uses each by hand. Use when the person asks to search LinkedIn, Google Maps or a directory for companies, to find a contact person, or why a site wasn't read."
+        },
+        {
+          "name": "placement-tracker",
+          "description": "Follow placement companies in the work-placements record - where each stands (to contact, contacted, interested, meeting, agreement, hosting students, not now, declined), who to write to or call today and this week, companies that went quiet, statuses moved as things happen, and the record exported to Excel or CSV for the department. Use when the person asks who to follow up with, how the search for companies is going, to update a company, or for the list for their department."
+        }
+      ],
+      "agents": [
+        {
+          "name": "company-researcher",
+          "description": "Researches placement companies with the work-placements server - the record, OpenStreetMap and each company's own website - and returns a short card per company (what it does, how to reach it, whether it's already in the record), without adding or changing anything. Use for the find-companies skill when there are many companies to look into, so the pages read stay out of the conversation."
+        }
+      ],
+      "tools": [
+        {
+          "name": "add_company",
+          "labels": {
+            "en": "Adding \"{name}\" to the record",
+            "es": "Añadiendo «{name}» al registro"
+          }
+        },
+        {
+          "name": "draft_emails",
+          "labels": {
+            "en": "Writing email drafts",
+            "es": "Escribiendo borradores de correo"
+          }
+        },
+        {
+          "name": "export_companies",
+          "labels": {
+            "en": "Exporting the companies",
+            "es": "Exportando las empresas"
+          }
+        },
+        {
+          "name": "import_companies",
+          "labels": {
+            "en": "Importing companies from a spreadsheet",
+            "es": "Importando empresas de una hoja de cálculo"
+          }
+        },
+        {
+          "name": "list_companies",
+          "labels": {
+            "en": "Looking at the companies in the record",
+            "es": "Mirando las empresas del registro"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "log_contact",
+          "labels": {
+            "en": "Noting a contact with a company",
+            "es": "Anotando un contacto con una empresa"
+          }
+        },
+        {
+          "name": "pipeline_summary",
+          "labels": {
+            "en": "Summing up the placement companies",
+            "es": "Resumiendo las empresas de prácticas"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "read_company_site",
+          "labels": {
+            "en": "Reading a company's website",
+            "es": "Leyendo la web de una empresa"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "search_companies",
+          "labels": {
+            "en": "Searching for companies",
+            "es": "Buscando empresas"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "server_info",
+          "labels": {
+            "en": "Reading work-placements-mcp's settings",
+            "es": "Leyendo los ajustes de work-placements-mcp"
+          },
+          "readOnly": true
+        },
+        {
+          "name": "update_company",
+          "labels": {
+            "en": "Updating a company in the record",
+            "es": "Actualizando una empresa del registro"
+          }
+        }
+      ],
+      "kit": ">=0.22.0"
     }
   ]
 }

@@ -46,7 +46,7 @@ codex plugin add moodle-ui-kit@falkenslab
 
 An agent whose own marketplace this is (its `officialMarketplace`) offers them in its chat's catalog, without the first command.
 
-Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` and `h5p` work fully, and `docker-lab` too, in `full` mode; `moodle-teacher` and `moodle-student` too, asking for your Moodle site in the chat (enable only one of them: both name their server `moodle`, and Codex keeps one per name); `anki`, `asker`, `calendar` and `documents` work fully too; `weather` loads its skill but not its server (the tutorial's example, bundled), which runs from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand); `canva`, whose server is Canva's remote one behind its sign-in, isn't checked there yet.
+Codex installs them too, with their skills and servers, but it has no plugin settings and no commands: `moodle-ui-kit` and `h5p` work fully, and `docker-lab` too, in `full` mode; `moodle-teacher` and `moodle-student` too, asking for your Moodle site in the chat (enable only one of them: both name their server `moodle`, and Codex keeps one per name); `anki`, `asker`, `calendar` and `documents` work fully too; `weather` and `work-placements` load their skills but not their servers (bundled: the tutorial's example, and one not on npm yet), which run from the extension's folder (`${CLAUDE_PLUGIN_ROOT}`, which Codex doesn't expand); `canva`, whose server is Canva's remote one behind its sign-in, isn't checked there yet.
 
 ## 🧩 The extensions
 
@@ -62,6 +62,7 @@ Codex installs them too, with their skills and servers, but it has no plugin set
 | 📅 [calendar](extensions/calendar/) | Events, deadlines and plans as an `.ics` file that Google Calendar, Outlook and Apple Calendar import, with your time zone, all-day events, repetitions and reminders |
 | 🗂️ [anki](extensions/anki/) | Anki decks as an `.apkg`: question and answer, both ways or fill the gap, with tags, images and audio; exported again, it updates the cards instead of duplicating them |
 | ❓ [asker](extensions/asker/) | Quiz questions from your own definitions with [Asker](https://github.com/teuton-software/asker): the definitions file written from your notes and checked, the questions generated as Moodle XML or GIFT, and reviewed with you before moodle-teacher imports them |
+| 🏢 [work-placements](extensions/work-placements/) | Finds, contacts and follows the companies where your students do their work placements: companies by sector from OpenStreetMap (and Google Places with your key), their websites read, a record of companies and contacts on your computer with what is due, Excel for the department, and one email draft per company that you review and send, through [work-placements-mcp](mcps/work-placements/) |
 | ☀️ [weather](extensions/weather/) | The weather in your city, for an agent that plans with you; also agent-kit's example of an extension with its own MCP server, built step by step in [its tutorial](https://falkenslab.github.io/agent-kit/docs/extensions/writing) |
 
 ## 🧭 The catalog

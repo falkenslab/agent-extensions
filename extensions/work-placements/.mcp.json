@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "work-placements": {
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+      ],
+      "env": {
+        "WORK_PLACEMENTS_AREA": "${user_config.area}",
+        "WORK_PLACEMENTS_PLACES_KEY": "${user_config.places_key}",
+        "WORK_PLACEMENTS_DIR": "${user_config.output_dir}"
+      }
+    }
+  }
+}
