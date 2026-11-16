@@ -8,6 +8,8 @@ export interface Requirement {
   name: string;
   /** A bare name on the PATH: what agent-kit looks for. */
   program: string;
+  /** The setting that, when set, is the program this server runs: agent-kit (0.37.0 or later) checks that file instead. */
+  setting?: string;
   /** How to read its version, and the minimum. */
   version?: { args: string[]; min: string };
   /** A command per system, and a page. */
@@ -47,6 +49,7 @@ export const FFMPEG: Requirement = {
 export const WHISPER: Requirement = {
   name: "Python with faster-whisper",
   program: "python3",
+  setting: "python",
   version: { args: ["--version"], min: "3.9.0" },
   install: {
     windows: "py -m pip install faster-whisper",

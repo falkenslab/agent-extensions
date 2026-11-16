@@ -32,7 +32,7 @@ describe("requirements", () => {
     const manifest = JSON.parse(readFileSync(new URL("../../../extensions/video/.claude-plugin/plugin.json", import.meta.url), "utf8")) as { metadata: { "agent-kit": { requirements: unknown[] } } };
     assert.deepEqual(
       manifest.metadata["agent-kit"].requirements,
-      REQUIREMENTS.map(({ name, program, version, install, capabilities }) => ({ name, program, version, install, for: capabilities })),
+      REQUIREMENTS.map(({ name, program, setting, version, install, capabilities }) => ({ name, program, ...(setting ? { setting } : {}), version, install, for: capabilities })),
     );
   });
 
