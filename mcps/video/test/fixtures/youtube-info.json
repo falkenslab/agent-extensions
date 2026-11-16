@@ -1,0 +1,23 @@
+{
+  "id": "abcDEF12345",
+  "title": "Routing basics",
+  "duration": 754,
+  "uploader": "A teacher",
+  "language": "en",
+  "width": 1920,
+  "height": 1080,
+  "chapters": [
+    { "start_time": 0, "end_time": 95.5, "title": "Intro" },
+    { "start_time": 95.5, "end_time": 754, "title": "Static routes" }
+  ],
+  "subtitles": {
+    "es": [{ "ext": "vtt", "url": "https://example.org/es.vtt" }],
+    "live_chat": [{ "ext": "json", "url": "https://example.org/chat" }]
+  },
+  "automatic_captions": {
+    "en-orig": [{ "ext": "vtt", "url": "https://example.org/en-orig.vtt" }],
+    "en": [{ "ext": "vtt", "url": "https://example.org/en.vtt" }],
+    "fr": [{ "ext": "vtt", "url": "https://example.org/fr.vtt" }],
+    "de": [{ "ext": "vtt", "url": "https://example.org/de.vtt" }]
+  }
+}

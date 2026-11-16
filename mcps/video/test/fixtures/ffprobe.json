@@ -1,0 +1,12 @@
+{
+  "streams": [
+    { "index": 0, "codec_name": "h264", "codec_type": "video", "width": 1280, "height": 720, "disposition": { "attached_pic": 0 } },
+    { "index": 1, "codec_name": "aac", "codec_type": "audio" },
+    { "index": 2, "codec_name": "mov_text", "codec_type": "subtitle", "tags": { "language": "spa", "title": "Español" } },
+    { "index": 3, "codec_name": "hdmv_pgs_subtitle", "codec_type": "subtitle", "tags": { "language": "und" } }
+  ],
+  "chapters": [
+    { "id": 0, "start_time": "0.000000", "end_time": "60.000000", "tags": { "title": "Part 1" } }
+  ],
+  "format": { "duration": "125.400000", "tags": { "title": "Lesson 3" } }
+}

@@ -1,0 +1,23 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.000 --> 00:00:03.500 align:start position:0%
+ 
+Today<00:00:01.400><c> we</c><00:00:01.600><c> build</c><00:00:02.000><c> a</c><00:00:02.200><c> router</c>
+
+00:00:03.500 --> 00:00:03.510 align:start position:0%
+Today we build a router
+ 
+
+00:00:03.510 --> 00:00:06.000 align:start position:0%
+Today we build a router
+with<00:00:03.900><c> two</c><00:00:04.200><c> interfaces</c>
+
+00:00:06.000 --> 00:00:06.010 align:start position:0%
+with two interfaces
+ 
+
+00:00:10.000 --> 00:00:12.000 align:start position:0%
+with two interfaces
+and<00:00:10.500><c> a</c><00:00:10.700><c> default</c><00:00:11.000><c> route.</c>
