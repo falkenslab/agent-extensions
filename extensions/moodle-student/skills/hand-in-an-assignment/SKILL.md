@@ -15,12 +15,13 @@ What the work says is the person's (or comes from wherever the agent's study kno
 - **The brief's files**: `download_file` saves them to a local folder (a template, a dataset, a statement).
 - **Group work**: one submission for the group; what one member saves is what the group hands in.
 - **The dates**: after the due date it's marked late; after the cut-off date Moodle accepts nothing.
+- **Draft or handed in**: `drafts` says whether saving leaves a draft that `submit_assignment` then submits (`true`) or saving hands it in (`false`), and `statement` is the submission statement the site asks to accept. Before the first save Moodle's pages often don't tell, and `drafts` is absent: don't tell the person either way until `save_submission`'s `changed` says which it was.
 
 ## 2. Saving
 
 `save_submission` with `onlineText` (HTML; it **replaces** what was there, so send the whole text; check it first with `validate_html`, which reports tags left open and what Moodle's cleaning will remove) and/or `files` (absolute local paths; they're added to what's there). Saving changes the submission: confirm with the person first. It returns the assignment as Moodle now has it: check the text and the files are there.
 
-If the assignment doesn't ask students to click submit, saving **is** handing it in: the teacher can see it and grade it from then on. Say so before saving.
+Without drafts (`drafts: false`), saving **is** handing it in: the teacher can see it and grade it from then on. Say so before saving. If the site asks to accept a statement then, the call fails quoting it: show it to the person, and only with their yes save again with `acceptStatement: true`.
 
 ## 3. Submitting for good
 

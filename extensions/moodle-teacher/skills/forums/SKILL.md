@@ -26,7 +26,7 @@ An announcement reaches everyone, usually by email too. It goes in the course's 
 
 ## Private messages
 
-- `send_message` writes to one person privately, its text and recipient approved by the person; no aliases in the text. `message_participants` writes to several at once (by role, by group, or those inactive since a date); confirm the recipients and the text.
+- `send_message` writes to one person privately, its text and recipient approved by the person; no aliases in the text. With classrooms (the courses setting), only to participants of those courses (take them from `list_participants`). `message_participants` writes to several at once (by role, by group, or those inactive since a date); confirm the recipients and the text.
 - `list_conversations` lists the person's conversations, latest first, with their members (aliases while the server pseudonymizes), unread count and last message; `get_conversation` reads one, a page at a time from the newest. Read the conversation before replying in it.
 - Check before any retry, as with posts: `get_conversation` shows whether a message that failed was sent.
 

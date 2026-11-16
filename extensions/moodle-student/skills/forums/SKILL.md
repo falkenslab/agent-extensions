@@ -33,4 +33,4 @@ What to say is the person's (or comes from the agent's study knowledge); this sk
 
 ## Writing to the teacher
 
-A question about the person's own situation (an extension, a grade, a personal matter) goes privately: `send_message` to the teacher (from `list_participants`, by role), confirmed text and recipient. `list_conversations` and `get_conversation` read the replies.
+A question about the person's own situation (an extension, a grade, a personal matter) goes privately: `send_message` to the teacher (from `list_participants`, by role), confirmed text and recipient. `list_conversations` and `get_conversation` read the replies. With classrooms (the courses setting), `send_message` writes only to participants of those courses, and the conversations can't be read: the person reads the reply in Moodle.
