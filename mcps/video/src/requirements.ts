@@ -1,5 +1,5 @@
 // Programs the person installs apart (ADR-004): checked, explained, never installed. ffmpeg (with its
-// ffprobe) cuts audio and frames, Python with faster-whisper transcribes, yt-dlp reads YouTube.
+// ffprobe) takes frames and reads a file's streams, Python with faster-whisper transcribes, yt-dlp reads YouTube.
 import { locate, run } from "./run.js";
 
 /** The same shape as agent-kit's metadata["agent-kit"].requirements, so the manifest can copy it. */
@@ -40,8 +40,8 @@ export const FFMPEG: Requirement = {
   program: "ffmpeg",
   version: { args: ["-version"], min: "5.1.0" },
   install: { windows: "winget install Gyan.FFmpeg", macos: "brew install ffmpeg", linux: "sudo apt install ffmpeg", url: "https://ffmpeg.org/download.html" },
-  for: "extracting the audio to transcribe and the frames to look at",
-  capabilities: ["video-transcription", "video-visual"],
+  for: "the frames to look at, and a video file's details and its own subtitles",
+  capabilities: ["video-visual"],
 };
 
 export const WHISPER: Requirement = {

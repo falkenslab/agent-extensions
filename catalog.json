@@ -5426,7 +5426,8 @@
             "get_video_info",
             "get_captions",
             "check_requirements",
-            "server_info"
+            "server_info",
+            "clean_up_video"
           ],
           "texts": {
             "en": {
@@ -5530,7 +5531,6 @@
             "url": "https://ffmpeg.org/download.html"
           },
           "for": [
-            "video-transcription",
             "video-visual"
           ]
         },
@@ -5589,7 +5589,13 @@
         },
         {
           "name": "video-understanding",
-          "description": "Find out what a video says and shows with the video server - its captions first (YouTube's tracks, a .vtt or .srt, a file's own subtitles) with get_captions, a transcription with faster-whisper only when it has none, and frames where the screen changes for slides, code and windows - matched by time, quoted with their times, and long videos read a page or a stretch at a time. Use when the person asks what a video or lecture says, to summarize it, find where something is said or shown, list its chapters, read the code or slides in it, or check which videos have subtitles."
+          "description": "Find out what a video says and shows with the video server - its captions first (YouTube's tracks, a .vtt or .srt, a file's own subtitles) with get_captions, a transcription with faster-whisper only when it has none, and frames where the screen changes for slides, code and windows - matched by time into one document of what's said and shown (the video-transcriber subagent for long videos), quoted with their times, long videos read a page or a stretch at a time, and its downloads cleaned up afterwards. Use when the person asks what a video or lecture says, to summarize it, find where something is said or shown, list its chapters, read the code or slides in it, or check which videos have subtitles."
+        }
+      ],
+      "agents": [
+        {
+          "name": "video-transcriber",
+          "description": "Turns one video into one Markdown document with what's said and what's shown, in chronological order - its captions or a transcription with the video server, frames where the screen changes, each frame looked at and described, consecutive frames that show the same thing grouped, technical terms corrected to the subject's own - and cleans up the downloads afterwards. Returns the document's path and its content. Use for the video-understanding skill when a video is long, or several videos must be gone through, so the transcripts and frames stay out of the conversation."
         }
       ],
       "tools": [
@@ -5600,6 +5606,13 @@
             "es": "Comprobando ffmpeg, faster-whisper y yt-dlp"
           },
           "readOnly": true
+        },
+        {
+          "name": "clean_up_video",
+          "labels": {
+            "en": "Cleaning up a video's files",
+            "es": "Limpiando los archivos de un vídeo"
+          }
         },
         {
           "name": "extract_frames",

@@ -1,4 +1,5 @@
 import { registerCheckRequirements } from "./checkRequirements.js";
+import { registerCleanUpVideo } from "./cleanUpVideo.js";
 import { registerExtractFrames } from "./extractFrames.js";
 import { registerGetCaptions } from "./getCaptions.js";
 import { registerGetVideoInfo } from "./getVideoInfo.js";
@@ -14,6 +15,7 @@ export const TOOLS: RegisterTool[] = [
   registerTranscribeVideo,
   registerExtractFrames,
   registerWriteSubtitles,
+  registerCleanUpVideo,
   registerCheckRequirements,
   registerServerInfo,
 ];

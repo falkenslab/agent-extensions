@@ -11,17 +11,26 @@ export interface WhisperInfo {
 }
 
 /**
- * The script. Its arguments: the audio file, the model, the language ("" detects it), the device and the
- * compute type. VAD skips silences, which is where whisper makes things up.
+ * The script. Its arguments: the video or audio file, the model, the language ("" detects it), the device,
+ * the compute type, and the stretch (from and to, in seconds; "" for the start or the end). faster-whisper
+ * reads the file itself through PyAV, which it brings, so no ffmpeg is needed (as padawan transcribes). VAD
+ * skips silences, which is where whisper makes things up.
  */
 export const WHISPER_SCRIPT = [
   "import json, sys",
-  "audio, model_name, language, device, compute_type = sys.argv[1:6]",
+  "media, model_name, language, device, compute_type, start, end = sys.argv[1:8]",
   "try:",
-  "    from faster_whisper import WhisperModel",
+  "    from faster_whisper import WhisperModel, decode_audio",
   "except ImportError:",
   "    print(json.dumps({'error': 'faster-whisper is not installed for this Python'}), flush=True)",
   "    sys.exit(3)",
+  "try:",
+  "    audio = decode_audio(media, sampling_rate=16000)",
+  "except Exception as e:",
+  "    print(json.dumps({'error': 'the file has no sound that can be read: ' + str(e)[:200]}), flush=True)",
+  "    sys.exit(4)",
+  "if start or end:",
+  "    audio = audio[int(float(start or 0) * 16000):(int(float(end) * 16000) if end else None)]",
   "model = WhisperModel(model_name, device=device, compute_type=compute_type)",
   "segments, info = model.transcribe(audio, language=language or None, vad_filter=True, beam_size=5)",
   "print(json.dumps({'info': {'language': info.language, 'probability': info.language_probability, 'duration': info.duration}}), flush=True)",

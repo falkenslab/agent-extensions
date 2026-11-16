@@ -27,7 +27,7 @@ This extension gives an agent built on [agent-kit](https://github.com/falkenslab
 
 ## 🚀 Quick start
 
-You need [Node.js](https://nodejs.org) 20 or later, an agent on agent-kit or Claude Code 2.1.271 or later, and, for what needs them, [ffmpeg](https://ffmpeg.org/download.html) (transcribing and frames), [faster-whisper](https://github.com/SYSTRAN/faster-whisper#installation) (transcribing) and [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation) (YouTube and other sites). Reading a `.vtt` or `.srt` needs none of them.
+You need [Node.js](https://nodejs.org) 20 or later, an agent on agent-kit or Claude Code 2.1.271 or later, and, for what needs them, [ffmpeg](https://ffmpeg.org/download.html) (frames), [faster-whisper](https://github.com/SYSTRAN/faster-whisper#installation) (transcribing; it reads the video itself, without ffmpeg) and [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation) (YouTube and other sites). Reading a `.vtt` or `.srt` needs none of them.
 
 ```bash
 # What it uses (Windows; macOS: brew install ffmpeg yt-dlp; Linux: sudo apt install ffmpeg, pipx install yt-dlp)
@@ -58,16 +58,17 @@ It asks, all optional, for a work folder (where downloads, transcripts and frame
 
 | Part | What it is |
 | --- | --- |
-| 🔌 Server | `node dist/server.mjs` ([video-mcp](../../mcps/video/) 0.1.0, bundled until it's on npm): `get_video_info`, `get_captions`, `transcribe_video`, `extract_frames`, `write_subtitles`, `check_requirements`, `server_info` |
+| 🔌 Server | `node dist/server.mjs` ([video-mcp](../../mcps/video/) 0.1.0, bundled until it's on npm): `get_video_info`, `get_captions`, `transcribe_video`, `extract_frames`, `write_subtitles`, `clean_up_video`, `check_requirements`, `server_info` |
 | 🧩 `video-understanding` | What a video says and shows: getting it (a file, YouTube, a Moodle file downloaded first), captions first, a transcription only when it has none, frames where the screen changes, long videos a page or a stretch at a time, and quoting with times |
 | 🧩 `video-subtitles` | A `.vtt` for a video: transcribing it, reviewing the transcript and agreeing corrections with the person, writing it, and where it goes in Moodle; also converting an `.srt` |
+| 🤖 `video-transcriber` | Subagent: turns one video into one Markdown document of what's said and what's shown, stretch by stretch in time order, its frames described and its terms corrected, then cleans up the downloads; for `video-understanding` with long videos or several |
 
 ## 🎯 Capabilities and what they need
 
 | Capability | What it lets the agent do | Needs |
 | --- | --- | --- |
 | `video-captions` | Read the captions a video has, and tell which videos have none | Nothing for a `.vtt` or `.srt`; ffmpeg for a video file's own |
-| `video-transcription` | Transcribe a video's speech | ffmpeg and Python with faster-whisper |
+| `video-transcription` | Transcribe a video's speech | Python with faster-whisper |
 | `video-visual` | Take frames where the screen changes | ffmpeg |
 | `video-online` | Work with YouTube and other sites by address | yt-dlp |
 | `subtitles` | Write a `.vtt` from a transcript, an `.srt` or cues | Nothing |

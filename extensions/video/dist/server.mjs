@@ -3264,8 +3264,8 @@ var require_utils = __commonJS({
       }
       return ind;
     }
-    function removeDotSegments(path9) {
-      let input2 = path9;
+    function removeDotSegments(path10) {
+      let input2 = path10;
       const output2 = [];
       let nextSlash = -1;
       let len = 0;
@@ -3339,11 +3339,11 @@ var require_utils = __commonJS({
       }
       return output2.join("");
     }
-    function removeDotSegmentsRelative(path9) {
-      if (path9 === "" || path9[0] === "/") {
-        return removeDotSegments(path9);
+    function removeDotSegmentsRelative(path10) {
+      if (path10 === "" || path10[0] === "/") {
+        return removeDotSegments(path10);
       }
-      const segments = path9.split("/");
+      const segments = path10.split("/");
       const last = segments.length - 1;
       const output2 = [];
       let trailingDirectory = false;
@@ -3706,8 +3706,8 @@ var require_schemes = __commonJS({
       }
       if (wsComponent.resourceName) {
         const queryIndex = wsComponent.resourceName.indexOf("?");
-        const path9 = queryIndex === -1 ? wsComponent.resourceName : wsComponent.resourceName.slice(0, queryIndex);
-        wsComponent.path = path9 && path9 !== "/" ? path9 : void 0;
+        const path10 = queryIndex === -1 ? wsComponent.resourceName : wsComponent.resourceName.slice(0, queryIndex);
+        wsComponent.path = path10 && path10 !== "/" ? path10 : void 0;
         wsComponent.query = queryIndex === -1 ? void 0 : wsComponent.resourceName.slice(queryIndex + 1);
         wsComponent.resourceName = void 0;
       }
@@ -8077,10 +8077,10 @@ function mergeDefs(...defs) {
 function cloneDef(schema) {
   return mergeDefs(schema._zod.def);
 }
-function getElementAtPath(obj, path9) {
-  if (!path9)
+function getElementAtPath(obj, path10) {
+  if (!path10)
     return obj;
-  return path9.reduce((acc, key) => acc?.[key], obj);
+  return path10.reduce((acc, key) => acc?.[key], obj);
 }
 function promiseAllObject(promisesObj) {
   const keys = Object.keys(promisesObj);
@@ -8420,11 +8420,11 @@ function explicitlyAborted(x, startIndex = 0) {
   }
   return false;
 }
-function prefixIssues(path9, issues) {
+function prefixIssues(path10, issues) {
   return issues.map((iss) => {
     var _a3;
     (_a3 = iss).path ?? (_a3.path = []);
-    iss.path.unshift(path9);
+    iss.path.unshift(path10);
     return iss;
   });
 }
@@ -8886,16 +8886,16 @@ function flattenError(error62, mapper = (issue2) => issue2.message) {
 }
 function formatError(error62, mapper = (issue2) => issue2.message) {
   const fieldErrors = { _errors: [] };
-  const processError = (error63, path9 = []) => {
+  const processError = (error63, path10 = []) => {
     for (const issue2 of error63.issues) {
       if (issue2.code === "invalid_union" && issue2.errors.length) {
-        issue2.errors.map((issues) => processError({ issues }, [...path9, ...issue2.path]));
+        issue2.errors.map((issues) => processError({ issues }, [...path10, ...issue2.path]));
       } else if (issue2.code === "invalid_key") {
-        processError({ issues: issue2.issues }, [...path9, ...issue2.path]);
+        processError({ issues: issue2.issues }, [...path10, ...issue2.path]);
       } else if (issue2.code === "invalid_element") {
-        processError({ issues: issue2.issues }, [...path9, ...issue2.path]);
+        processError({ issues: issue2.issues }, [...path10, ...issue2.path]);
       } else {
-        const fullpath = [...path9, ...issue2.path];
+        const fullpath = [...path10, ...issue2.path];
         if (fullpath.length === 0) {
           fieldErrors._errors.push(mapper(issue2));
         } else {
@@ -8934,17 +8934,17 @@ function formatError(error62, mapper = (issue2) => issue2.message) {
 }
 function treeifyError(error62, mapper = (issue2) => issue2.message) {
   const result = { errors: [] };
-  const processError = (error63, path9 = []) => {
+  const processError = (error63, path10 = []) => {
     var _a3;
     for (const issue2 of error63.issues) {
       if (issue2.code === "invalid_union" && issue2.errors.length) {
-        issue2.errors.map((issues) => processError({ issues }, [...path9, ...issue2.path]));
+        issue2.errors.map((issues) => processError({ issues }, [...path10, ...issue2.path]));
       } else if (issue2.code === "invalid_key") {
-        processError({ issues: issue2.issues }, [...path9, ...issue2.path]);
+        processError({ issues: issue2.issues }, [...path10, ...issue2.path]);
       } else if (issue2.code === "invalid_element") {
-        processError({ issues: issue2.issues }, [...path9, ...issue2.path]);
+        processError({ issues: issue2.issues }, [...path10, ...issue2.path]);
       } else {
-        const fullpath = [...path9, ...issue2.path];
+        const fullpath = [...path10, ...issue2.path];
         if (fullpath.length === 0) {
           result.errors.push(mapper(issue2));
           continue;
@@ -8983,8 +8983,8 @@ function treeifyError(error62, mapper = (issue2) => issue2.message) {
 }
 function toDotPath(_path) {
   const segs = [];
-  const path9 = _path.map((seg) => typeof seg === "object" ? seg.key : seg);
-  for (const seg of path9) {
+  const path10 = _path.map((seg) => typeof seg === "object" ? seg.key : seg);
+  for (const seg of path10) {
     if (typeof seg === "number")
       segs.push(`[${seg}]`);
     else if (typeof seg === "symbol")
@@ -26122,13 +26122,13 @@ function resolveRef(ref, ctx) {
   if (!ref.startsWith("#")) {
     throw new Error("External $ref is not supported, only local refs (#/...) are allowed");
   }
-  const path9 = ref.slice(1).split("/").filter(Boolean);
-  if (path9.length === 0) {
+  const path10 = ref.slice(1).split("/").filter(Boolean);
+  if (path10.length === 0) {
     return ctx.rootSchema;
   }
   const defsKey = ctx.version === "draft-2020-12" ? "$defs" : "definitions";
-  if (path9[0] === defsKey) {
-    const key = path9[1] === void 0 ? void 0 : decodeJSONPointerSegment(path9[1]);
+  if (path10[0] === defsKey) {
+    const key = path10[1] === void 0 ? void 0 : decodeJSONPointerSegment(path10[1]);
     if (!key || !ctx.defs[key]) {
       throw new Error(`Reference not found: ${ref}`);
     }
@@ -28986,8 +28986,8 @@ function getErrorMap2() {
 
 // node_modules/zod/v3/helpers/parseUtil.js
 var makeIssue = (params) => {
-  const { data, path: path9, errorMaps, issueData } = params;
-  const fullPath = [...path9, ...issueData.path || []];
+  const { data, path: path10, errorMaps, issueData } = params;
+  const fullPath = [...path10, ...issueData.path || []];
   const fullIssue = {
     ...issueData,
     path: fullPath
@@ -29102,11 +29102,11 @@ var errorUtil;
 
 // node_modules/zod/v3/types.js
 var ParseInputLazyPath = class {
-  constructor(parent, value, path9, key) {
+  constructor(parent, value, path10, key) {
     this._cachedPath = [];
     this.parent = parent;
     this.data = value;
-    this._path = path9;
+    this._path = path10;
     this._key = key;
   }
   get path() {
@@ -32657,11 +32657,11 @@ function normalizeObjectSchema(schema) {
   }
   return void 0;
 }
-function getDotPath(path9) {
-  if (path9.length === 0) {
+function getDotPath(path10) {
+  if (path10.length === 0) {
     return "object root";
   }
-  return path9.reduce((acc, seg, index) => {
+  return path10.reduce((acc, seg, index) => {
     if (index === 0) {
       return String(seg);
     }
@@ -36785,8 +36785,8 @@ var FFMPEG = {
   program: "ffmpeg",
   version: { args: ["-version"], min: "5.1.0" },
   install: { windows: "winget install Gyan.FFmpeg", macos: "brew install ffmpeg", linux: "sudo apt install ffmpeg", url: "https://ffmpeg.org/download.html" },
-  for: "extracting the audio to transcribe and the frames to look at",
-  capabilities: ["video-transcription", "video-visual"]
+  for: "the frames to look at, and a video file's details and its own subtitles",
+  capabilities: ["video-visual"]
 };
 var WHISPER = {
   name: "Python with faster-whisper",
@@ -36919,152 +36919,9 @@ var registerCheckRequirements = (server) => {
   );
 };
 
-// src/video/extract.ts
-import { mkdirSync as mkdirSync2, readdirSync as readdirSync2, renameSync, rmSync as rmSync2 } from "node:fs";
-import path6 from "node:path";
-
-// src/video/cues.ts
-function clock(seconds) {
-  const total = Math.max(0, Math.floor(seconds));
-  const [h, m, s] = [Math.floor(total / 3600), Math.floor(total % 3600 / 60), total % 60];
-  const two = (n) => String(n).padStart(2, "0");
-  return h ? `${h}:${two(m)}:${two(s)}` : `${two(m)}:${two(s)}`;
-}
-function parseTimestamp(text) {
-  const match = /^(?:(\d+):)?(\d{1,2}):(\d{1,2})(?:[.,](\d{1,3}))?$/.exec(text.trim());
-  if (!match) return void 0;
-  const [, h = "0", m = "0", s = "0", ms = "0"] = match;
-  return Number(h) * 3600 + Number(m) * 60 + Number(s) + Number(ms.padEnd(3, "0")) / 1e3;
-}
-var ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", lrm: "", rlm: "" };
-function plainText(text) {
-  return text.replace(/<\/?(?:c|i|b|u|v|lang|ruby|rt|font|span)\b[^>]*>|<\d[\d:.]*>/gi, "").replace(/\{\\[^}]*\}/g, "").replace(
-    /&(#\d+|#x[0-9a-f]+|[a-z]+);/gi,
-    (whole, name) => name.startsWith("#x") || name.startsWith("#X") ? String.fromCodePoint(Number.parseInt(name.slice(2), 16)) : name.startsWith("#") ? String.fromCodePoint(Number(name.slice(1))) : ENTITIES[name.toLowerCase()] ?? whole
-  );
-}
-var ARROW = /^\s*(\S+)\s+-->\s+(\S+)/;
-function readBlocks(text) {
-  const lines = text.trimStart().replace(/\r\n?/g, "\n").split("\n");
-  const cues = [];
-  for (let i = 0; i < lines.length; i++) {
-    const timing = ARROW.exec(lines[i] ?? "");
-    if (!timing) continue;
-    const [start, end] = [parseTimestamp(timing[1] ?? ""), parseTimestamp(timing[2] ?? "")];
-    const body = [];
-    while (i + 1 < lines.length && (lines[i + 1] ?? "") !== "" && !ARROW.test(lines[i + 1] ?? "")) body.push(lines[++i] ?? "");
-    if (start === void 0 || end === void 0) continue;
-    cues.push({ start, end, text: body.join("\n") });
-  }
-  return cues;
-}
-function cleanCues(cues) {
-  const out = [];
-  let last = [];
-  for (const cue of cues) {
-    const lines = plainText(cue.text).split("\n").map((line) => line.replace(/\s+/g, " ").trim()).filter(Boolean);
-    let fresh = lines;
-    while (fresh.length && last.includes(fresh[0])) fresh = fresh.slice(1);
-    if (lines.length) last = lines;
-    if (!fresh.length) continue;
-    out.push({ start: cue.start, end: Math.max(cue.end, cue.start), text: fresh.join("\n") });
-  }
-  return out;
-}
-function parseVtt(text) {
-  if (!text.trimStart().startsWith("WEBVTT")) throw new Error("it isn't WebVTT: the file doesn't start with WEBVTT");
-  return cleanCues(readBlocks(text));
-}
-function parseSrt(text) {
-  const cues = readBlocks(text);
-  if (!cues.length && text.trim()) throw new Error("it isn't SRT: no line like 00:00:01,000 --> 00:00:04,000");
-  return cleanCues(cues);
-}
-function parseSubtitles(text, extension = "") {
-  if (extension.toLowerCase() === ".vtt" || text.trimStart().startsWith("WEBVTT")) return parseVtt(text);
-  return parseSrt(text);
-}
-function paragraphs(cues, maxChars = 400, maxGap = 3) {
-  const out = [];
-  for (const cue of cues) {
-    const text = cue.text.replace(/\s*\n\s*/g, " ").trim();
-    const previous = out.at(-1);
-    const sentenceDone = previous ? /[.!?…:]["')\]]?$/.test(previous.text) && previous.text.length >= maxChars / 2 : false;
-    if (previous && cue.start - previous.end <= maxGap && previous.text.length + text.length < maxChars && !sentenceDone) {
-      previous.text = `${previous.text} ${text}`;
-      previous.end = Math.max(previous.end, cue.end);
-    } else out.push({ start: cue.start, end: cue.end, text });
-  }
-  return out;
-}
-function transcriptPage(cues, offset = 0, maxChars = 4e4) {
-  const all = paragraphs(cues);
-  const lines = [];
-  let size = 0;
-  let i = offset;
-  for (; i < all.length; i++) {
-    const line = `[${clock(all[i].start)}] ${all[i].text}`;
-    if (lines.length && size + line.length + 1 > maxChars) break;
-    lines.push(line);
-    size += line.length + 1;
-  }
-  return { text: lines.join("\n"), paragraphs: all.length, offset, ...i < all.length ? { next: i } : {} };
-}
-
-// src/video/frames.ts
-function selectExpression(options) {
-  const since = "t-prev_selected_t";
-  if (options.mode === "interval") return `eq(n,0)+gte(${since},${options.every})`;
-  return `eq(n,0)+gte(${since},${options.every})+gt(scene,${options.threshold})*gte(${since},${options.minGap})`;
-}
-function frameArgs(input2, pattern, options) {
-  const filters = [`scale='min(${options.width},iw)':-2`, `select='${selectExpression(options)}'`, "showinfo"].join(",");
-  return [
-    "-hide_banner",
-    "-nostats",
-    "-y",
-    ...options.from !== void 0 ? ["-ss", String(options.from)] : [],
-    ...options.to !== void 0 ? ["-to", String(options.to)] : [],
-    "-i",
-    input2,
-    "-an",
-    "-sn",
-    "-dn",
-    "-vf",
-    filters,
-    "-fps_mode",
-    "vfr",
-    "-q:v",
-    "3",
-    pattern
-  ];
-}
-function parseShowinfo(stderr) {
-  const times = [];
-  for (const line of stderr.split(/\r?\n/)) {
-    if (!/Parsed_showinfo/.test(line)) continue;
-    const time3 = /pts_time:\s*(-?[\d.]+(?:e[-+]?\d+)?)/.exec(line)?.[1];
-    if (time3 !== void 0) times.push(Number(time3));
-  }
-  return times;
-}
-function spread(count, max) {
-  if (count <= max) return Array.from({ length: count }, (_, i) => i);
-  if (max <= 1) return [0];
-  const keep = /* @__PURE__ */ new Set();
-  for (let i = 0; i < max; i++) keep.add(Math.round(i * (count - 1) / (max - 1)));
-  return [...keep].sort((a, b) => a - b);
-}
-function frameName(index, seconds) {
-  const total = Math.floor(seconds);
-  const [h, m, s] = [Math.floor(total / 3600), Math.floor(total % 3600 / 60), total % 60];
-  const two = (n) => String(n).padStart(2, "0");
-  return `frame-${String(index + 1).padStart(3, "0")}-${h ? `${h}h` : ""}${two(m)}m${two(s)}s.jpg`;
-}
-
-// src/video/media.ts
-import { mkdirSync } from "node:fs";
-import path5 from "node:path";
+// src/tools/cleanUpVideo.ts
+import { existsSync as existsSync2, readdirSync, rmSync, statSync as statSync3 } from "node:fs";
+import path4 from "node:path";
 
 // src/config.ts
 import { homedir } from "node:os";
@@ -37209,10 +37066,221 @@ function describe3(source) {
   return source.kind === "file" ? source.path : source.url;
 }
 
+// src/tools/schemas.ts
+var sourceSchema = external_exports.string().min(1).describe("The video: an absolute path to a file on this computer, or an http(s) address (a YouTube video, or another page or file yt-dlp reads). A video on a Moodle site is downloaded first with moodle-mcp's download_file, then given here as a file");
+var languageSchema = external_exports.string().regex(/^[a-zA-Z]{2,3}(-[a-zA-Z0-9]{2,8})?$/, "a language code: es, en, pt-BR").optional();
+var pageInput = {
+  offset: external_exports.number().int().min(0).optional().describe("The paragraph to start at: the previous page's next. 0 by default"),
+  maxChars: external_exports.number().int().min(2e3).max(1e5).optional().describe("The longest page, in characters: 40000 by default")
+};
+var pageOutput = {
+  text: external_exports.string().describe("The transcript, a paragraph per line: [mm:ss] what's said"),
+  paragraphs: external_exports.number().describe("How many paragraphs there are in all"),
+  offset: external_exports.number(),
+  next: external_exports.number().optional().describe("The offset of the next page, when there's more: call again with it")
+};
+var chapterSchema = external_exports.object({ start: external_exports.number(), at: external_exports.string().describe("mm:ss"), title: external_exports.string() });
+var absolutePath = (what) => external_exports.string().min(1).describe(`${what}: an absolute path on this computer`);
+
+// src/tools/cleanUpVideo.ts
+var regenerable = (name) => /^(audio|video)\./.test(name) || name.startsWith("frames-") || /\.(part|ytdl|temp)$/i.test(name) || /\.part-Frag/i.test(name);
+var isTranscript = (name) => /^transcript-.*\.json$/.test(name);
+function sizeOf(target) {
+  const stat = statSync3(target);
+  if (!stat.isDirectory()) return stat.size;
+  return readdirSync(target).reduce((total, name) => total + sizeOf(path4.join(target, name)), 0);
+}
+var registerCleanUpVideo = (server) => {
+  server.registerTool(
+    "clean_up_video",
+    {
+      title: "Clean up a video's files",
+      description: "Delete what this server kept in the work folder for one video once the work with it is done: the audio or picture downloaded from an address, and the frames extracted, all of which can be made again. Its transcripts stay (transcribing again is slow) unless transcripts is true. Never touches the video file itself when it's a file on this computer, nor a .vtt written with write_subtitles, nor anything outside the video's own folder in the work folder. Say what goes first; it's done for the person, at the end, as padawan's transcriber does.",
+      inputSchema: {
+        source: sourceSchema,
+        transcripts: external_exports.boolean().optional().describe("Delete its kept transcripts too (transcribing again is slow): only when the person no longer needs them")
+      },
+      outputSchema: {
+        source: external_exports.string(),
+        folder: external_exports.string().describe("The video's folder in the work folder"),
+        deleted: external_exports.array(external_exports.string()).describe("What was deleted, by name"),
+        kept: external_exports.array(external_exports.string()).describe("What stays in its folder"),
+        freedBytes: external_exports.number().describe("The space freed, in bytes")
+      },
+      annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: true, openWorldHint: false }
+    },
+    async ({ source: given, transcripts = false }) => {
+      const source = parseSource(given);
+      const folder = path4.join(workDir(), slugOf(source));
+      if (!existsSync2(folder)) return reply({ source: describe3(source), folder, deleted: [], kept: [], freedBytes: 0 });
+      const deleted = [];
+      const kept = [];
+      let freedBytes = 0;
+      for (const name of readdirSync(folder).sort()) {
+        const target = path4.join(folder, name);
+        if (regenerable(name) || transcripts && isTranscript(name)) {
+          freedBytes += sizeOf(target);
+          rmSync(target, { recursive: true, force: true });
+          deleted.push(name);
+        } else kept.push(name);
+      }
+      if (!kept.length) rmSync(folder, { recursive: true, force: true });
+      return reply({ source: describe3(source), folder, deleted, kept, freedBytes });
+    }
+  );
+};
+
+// src/video/extract.ts
+import { mkdirSync as mkdirSync2, readdirSync as readdirSync3, renameSync, rmSync as rmSync3 } from "node:fs";
+import path7 from "node:path";
+
+// src/video/cues.ts
+function clock(seconds) {
+  const total = Math.max(0, Math.floor(seconds));
+  const [h, m, s] = [Math.floor(total / 3600), Math.floor(total % 3600 / 60), total % 60];
+  const two = (n) => String(n).padStart(2, "0");
+  return h ? `${h}:${two(m)}:${two(s)}` : `${two(m)}:${two(s)}`;
+}
+function parseTimestamp(text) {
+  const match = /^(?:(\d+):)?(\d{1,2}):(\d{1,2})(?:[.,](\d{1,3}))?$/.exec(text.trim());
+  if (!match) return void 0;
+  const [, h = "0", m = "0", s = "0", ms = "0"] = match;
+  return Number(h) * 3600 + Number(m) * 60 + Number(s) + Number(ms.padEnd(3, "0")) / 1e3;
+}
+var ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", lrm: "", rlm: "" };
+function plainText(text) {
+  return text.replace(/<\/?(?:c|i|b|u|v|lang|ruby|rt|font|span)\b[^>]*>|<\d[\d:.]*>/gi, "").replace(/\{\\[^}]*\}/g, "").replace(
+    /&(#\d+|#x[0-9a-f]+|[a-z]+);/gi,
+    (whole, name) => name.startsWith("#x") || name.startsWith("#X") ? String.fromCodePoint(Number.parseInt(name.slice(2), 16)) : name.startsWith("#") ? String.fromCodePoint(Number(name.slice(1))) : ENTITIES[name.toLowerCase()] ?? whole
+  );
+}
+var ARROW = /^\s*(\S+)\s+-->\s+(\S+)/;
+function readBlocks(text) {
+  const lines = text.trimStart().replace(/\r\n?/g, "\n").split("\n");
+  const cues = [];
+  for (let i = 0; i < lines.length; i++) {
+    const timing = ARROW.exec(lines[i] ?? "");
+    if (!timing) continue;
+    const [start, end] = [parseTimestamp(timing[1] ?? ""), parseTimestamp(timing[2] ?? "")];
+    const body = [];
+    while (i + 1 < lines.length && (lines[i + 1] ?? "") !== "" && !ARROW.test(lines[i + 1] ?? "")) body.push(lines[++i] ?? "");
+    if (start === void 0 || end === void 0) continue;
+    cues.push({ start, end, text: body.join("\n") });
+  }
+  return cues;
+}
+function cleanCues(cues) {
+  const out = [];
+  let last = [];
+  for (const cue of cues) {
+    const lines = plainText(cue.text).split("\n").map((line) => line.replace(/\s+/g, " ").trim()).filter(Boolean);
+    let fresh = lines;
+    while (fresh.length && last.includes(fresh[0])) fresh = fresh.slice(1);
+    if (lines.length) last = lines;
+    if (!fresh.length) continue;
+    out.push({ start: cue.start, end: Math.max(cue.end, cue.start), text: fresh.join("\n") });
+  }
+  return out;
+}
+function parseVtt(text) {
+  if (!text.trimStart().startsWith("WEBVTT")) throw new Error("it isn't WebVTT: the file doesn't start with WEBVTT");
+  return cleanCues(readBlocks(text));
+}
+function parseSrt(text) {
+  const cues = readBlocks(text);
+  if (!cues.length && text.trim()) throw new Error("it isn't SRT: no line like 00:00:01,000 --> 00:00:04,000");
+  return cleanCues(cues);
+}
+function parseSubtitles(text, extension = "") {
+  if (extension.toLowerCase() === ".vtt" || text.trimStart().startsWith("WEBVTT")) return parseVtt(text);
+  return parseSrt(text);
+}
+function paragraphs(cues, maxChars = 400, maxGap = 3) {
+  const out = [];
+  for (const cue of cues) {
+    const text = cue.text.replace(/\s*\n\s*/g, " ").trim();
+    const previous = out.at(-1);
+    const sentenceDone = previous ? /[.!?…:]["')\]]?$/.test(previous.text) && previous.text.length >= maxChars / 2 : false;
+    if (previous && cue.start - previous.end <= maxGap && previous.text.length + text.length < maxChars && !sentenceDone) {
+      previous.text = `${previous.text} ${text}`;
+      previous.end = Math.max(previous.end, cue.end);
+    } else out.push({ start: cue.start, end: cue.end, text });
+  }
+  return out;
+}
+function transcriptPage(cues, offset = 0, maxChars = 4e4) {
+  const all = paragraphs(cues);
+  const lines = [];
+  let size = 0;
+  let i = offset;
+  for (; i < all.length; i++) {
+    const line = `[${clock(all[i].start)}] ${all[i].text}`;
+    if (lines.length && size + line.length + 1 > maxChars) break;
+    lines.push(line);
+    size += line.length + 1;
+  }
+  return { text: lines.join("\n"), paragraphs: all.length, offset, ...i < all.length ? { next: i } : {} };
+}
+
+// src/video/frames.ts
+function selectExpression(options) {
+  const since = "t-prev_selected_t";
+  if (options.mode === "interval") return `eq(n,0)+gte(${since},${options.every})`;
+  return `eq(n,0)+gte(${since},${options.every})+gt(scene,${options.threshold})*gte(${since},${options.minGap})`;
+}
+function frameArgs(input2, pattern, options) {
+  const filters = [`scale='min(${options.width},iw)':-2`, `select='${selectExpression(options)}'`, "showinfo"].join(",");
+  return [
+    "-hide_banner",
+    "-nostats",
+    "-y",
+    ...options.from !== void 0 ? ["-ss", String(options.from)] : [],
+    ...options.to !== void 0 ? ["-to", String(options.to)] : [],
+    "-i",
+    input2,
+    "-an",
+    "-sn",
+    "-dn",
+    "-vf",
+    filters,
+    "-fps_mode",
+    "vfr",
+    "-q:v",
+    "3",
+    pattern
+  ];
+}
+function parseShowinfo(stderr) {
+  const times = [];
+  for (const line of stderr.split(/\r?\n/)) {
+    if (!/Parsed_showinfo/.test(line)) continue;
+    const time3 = /pts_time:\s*(-?[\d.]+(?:e[-+]?\d+)?)/.exec(line)?.[1];
+    if (time3 !== void 0) times.push(Number(time3));
+  }
+  return times;
+}
+function spread(count, max) {
+  if (count <= max) return Array.from({ length: count }, (_, i) => i);
+  if (max <= 1) return [0];
+  const keep = /* @__PURE__ */ new Set();
+  for (let i = 0; i < max; i++) keep.add(Math.round(i * (count - 1) / (max - 1)));
+  return [...keep].sort((a, b) => a - b);
+}
+function frameName(index, seconds) {
+  const total = Math.floor(seconds);
+  const [h, m, s] = [Math.floor(total / 3600), Math.floor(total % 3600 / 60), total % 60];
+  const two = (n) => String(n).padStart(2, "0");
+  return `frame-${String(index + 1).padStart(3, "0")}-${h ? `${h}h` : ""}${two(m)}m${two(s)}s.jpg`;
+}
+
+// src/video/media.ts
+import { mkdirSync } from "node:fs";
+import path6 from "node:path";
+
 // src/video/ytdlp.ts
-import { existsSync as existsSync2, mkdtempSync, readdirSync, readFileSync, rmSync } from "node:fs";
+import { existsSync as existsSync3, mkdtempSync, readdirSync as readdirSync2, readFileSync, rmSync as rmSync2 } from "node:fs";
 import { tmpdir } from "node:os";
-import path4 from "node:path";
+import path5 from "node:path";
 var num = (value) => typeof value === "number" && Number.isFinite(value) ? value : void 0;
 var str = (value) => typeof value === "string" && value ? value : void 0;
 function parseInfo(json2) {
@@ -37281,27 +37349,27 @@ async function remoteInfo(url2) {
   return parseInfo(said.stdout);
 }
 async function remoteCaptions(url2, track) {
-  const dir = mkdtempSync(path4.join(tmpdir(), "video-mcp-"));
+  const dir = mkdtempSync(path5.join(tmpdir(), "video-mcp-"));
   try {
     const write = track.kind === "manual" ? "--write-subs" : "--write-auto-subs";
-    const said = await run(await ytDlp(), ["--skip-download", "--no-playlist", "--no-warnings", write, "--sub-langs", track.key, "--sub-format", "vtt/best", "-o", path4.join(dir, "captions.%(ext)s"), url2], { timeoutMs: 12e4 });
-    const file2 = readdirSync(dir).find((name) => name.startsWith("captions.") && name.endsWith(".vtt"));
+    const said = await run(await ytDlp(), ["--skip-download", "--no-playlist", "--no-warnings", write, "--sub-langs", track.key, "--sub-format", "vtt/best", "-o", path5.join(dir, "captions.%(ext)s"), url2], { timeoutMs: 12e4 });
+    const file2 = readdirSync2(dir).find((name) => name.startsWith("captions.") && name.endsWith(".vtt"));
     if (!file2) throw new Error(`yt-dlp didn't get the ${track.key} captions of ${url2}: ${said.code === 0 ? "it wrote no WebVTT file" : ytDlpError(said.stderr, said.stdout)}`);
-    return parseVtt(readFileSync(path4.join(dir, file2), "utf8"));
+    return parseVtt(readFileSync(path5.join(dir, file2), "utf8"));
   } finally {
-    rmSync(dir, { recursive: true, force: true });
+    rmSync2(dir, { recursive: true, force: true });
   }
 }
 function downloaded(dir, name) {
-  if (!existsSync2(dir)) return void 0;
-  const file2 = readdirSync(dir).find((f) => f.startsWith(`${name}.`) && !/\.(part|ytdl|temp|json)$/i.test(f) && !/\.part-Frag/i.test(f));
-  return file2 ? path4.join(dir, file2) : void 0;
+  if (!existsSync3(dir)) return void 0;
+  const file2 = readdirSync2(dir).find((f) => f.startsWith(`${name}.`) && !/\.(part|ytdl|temp|json)$/i.test(f) && !/\.part-Frag/i.test(f));
+  return file2 ? path5.join(dir, file2) : void 0;
 }
 var FORMATS = { audio: "bestaudio/best", video: "bv*[height<=1080]/b[height<=1080]/bv*/b" };
 async function download(url2, dir, what) {
   const already = downloaded(dir, what);
   if (already) return already;
-  const said = await run(await ytDlp(), ["--no-playlist", "--no-warnings", "--no-progress", "-f", FORMATS[what], "-o", path4.join(dir, `${what}.%(ext)s`), url2], { timeoutMs: 60 * 6e4 });
+  const said = await run(await ytDlp(), ["--no-playlist", "--no-warnings", "--no-progress", "-f", FORMATS[what], "-o", path5.join(dir, `${what}.%(ext)s`), url2], { timeoutMs: 60 * 6e4 });
   const file2 = downloaded(dir, what);
   if (said.code !== 0 || !file2) throw new Error(`yt-dlp couldn't download ${url2}: ${ytDlpError(said.stderr, said.stdout)}`);
   return file2;
@@ -37309,7 +37377,7 @@ async function download(url2, dir, what) {
 
 // src/video/media.ts
 function folderOf(source) {
-  const dir = path5.join(workDir(), slugOf(source));
+  const dir = path6.join(workDir(), slugOf(source));
   mkdirSync(dir, { recursive: true });
   return dir;
 }
@@ -37327,11 +37395,11 @@ async function extractFrames(source, options, maxFrames) {
   const media = await mediaFile(source, "video");
   const ffmpeg = await locate("ffmpeg");
   if (!ffmpeg) throw new Error("ffmpeg wasn't found");
-  const folder = path6.join(folderOf(source), framesFolderName(options));
-  rmSync2(folder, { recursive: true, force: true });
+  const folder = path7.join(folderOf(source), framesFolderName(options));
+  rmSync3(folder, { recursive: true, force: true });
   mkdirSync2(folder, { recursive: true });
-  const said = await run(ffmpeg, frameArgs(media, path6.join(folder, "raw-%05d.jpg"), options), { timeoutMs: 2 * 60 * 6e4 });
-  const raw = readdirSync2(folder).filter((f) => /^raw-\d+\.jpg$/.test(f)).sort();
+  const said = await run(ffmpeg, frameArgs(media, path7.join(folder, "raw-%05d.jpg"), options), { timeoutMs: 2 * 60 * 6e4 });
+  const raw = readdirSync3(folder).filter((f) => /^raw-\d+\.jpg$/.test(f)).sort();
   if (said.code !== 0 || !raw.length) {
     const message = said.stderr.split(/\r?\n/).filter((l) => !/Parsed_showinfo|^\s/.test(l) && l.trim()).slice(-3).join(" ");
     throw new Error(`ffmpeg couldn't take frames from ${describe3(source)}: ${/matches no streams|does not contain any stream/i.test(said.stderr) ? "it has no picture" : message.slice(0, 400) || "no message"}`);
@@ -37344,35 +37412,19 @@ async function extractFrames(source, options, maxFrames) {
   if (keep.size < raw.length) notes.push(`${raw.length} frames were found; ${keep.size} were kept, spread over the video: ask for a stretch (from, to) or a higher threshold to see more of one part`);
   const frames = [];
   raw.forEach((file2, i) => {
-    const from = path6.join(folder, file2);
+    const from = path7.join(folder, file2);
     if (!keep.has(i)) {
-      rmSync2(from, { force: true });
+      rmSync3(from, { force: true });
       return;
     }
     const time3 = Math.round(((times[i] ?? (times.at(-1) ?? 0)) + shift) * 1e3) / 1e3;
-    const to = path6.join(folder, frameName(frames.length, time3));
+    const to = path7.join(folder, frameName(frames.length, time3));
     renameSync(from, to);
     frames.push({ time: time3, at: clock(time3), path: to });
   });
   if (options.mode === "scenes" && frames.length === 1) notes.push("the picture hardly changes: lower the threshold, or use interval mode, to see more");
   return { folder, found: raw.length, frames, notes };
 }
-
-// src/tools/schemas.ts
-var sourceSchema = external_exports.string().min(1).describe("The video: an absolute path to a file on this computer, or an http(s) address (a YouTube video, or another page or file yt-dlp reads). A video on a Moodle site is downloaded first with moodle-mcp's download_file, then given here as a file");
-var languageSchema = external_exports.string().regex(/^[a-zA-Z]{2,3}(-[a-zA-Z0-9]{2,8})?$/, "a language code: es, en, pt-BR").optional();
-var pageInput = {
-  offset: external_exports.number().int().min(0).optional().describe("The paragraph to start at: the previous page's next. 0 by default"),
-  maxChars: external_exports.number().int().min(2e3).max(1e5).optional().describe("The longest page, in characters: 40000 by default")
-};
-var pageOutput = {
-  text: external_exports.string().describe("The transcript, a paragraph per line: [mm:ss] what's said"),
-  paragraphs: external_exports.number().describe("How many paragraphs there are in all"),
-  offset: external_exports.number(),
-  next: external_exports.number().optional().describe("The offset of the next page, when there's more: call again with it")
-};
-var chapterSchema = external_exports.object({ start: external_exports.number(), at: external_exports.string().describe("mm:ss"), title: external_exports.string() });
-var absolutePath = (what) => external_exports.string().min(1).describe(`${what}: an absolute path on this computer`);
 
 // src/tools/extractFrames.ts
 var registerExtractFrames = (server) => {
@@ -37653,25 +37705,32 @@ var registerServerInfo = (server) => {
         whisperModel: whisperModel(),
         language: defaultLanguage() ?? "auto",
         whisperDevice: whisperDevice(),
-        requirements: requirements.map(({ name, ok, version: version2, path: path9, problem }) => ({ name, ok, ...version2 ? { version: version2 } : {}, ...path9 ? { path: path9 } : {}, ...problem ? { problem } : {} }))
+        requirements: requirements.map(({ name, ok, version: version2, path: path10, problem }) => ({ name, ok, ...version2 ? { version: version2 } : {}, ...path10 ? { path: path10 } : {}, ...problem ? { problem } : {} }))
       });
     }
   );
 };
 
 // src/video/transcribe.ts
-import { existsSync as existsSync3, readFileSync as readFileSync3, rmSync as rmSync3, writeFileSync } from "node:fs";
-import path7 from "node:path";
+import { existsSync as existsSync4, readFileSync as readFileSync3, writeFileSync } from "node:fs";
+import path8 from "node:path";
 
 // src/video/whisper.ts
 var WHISPER_SCRIPT = [
   "import json, sys",
-  "audio, model_name, language, device, compute_type = sys.argv[1:6]",
+  "media, model_name, language, device, compute_type, start, end = sys.argv[1:8]",
   "try:",
-  "    from faster_whisper import WhisperModel",
+  "    from faster_whisper import WhisperModel, decode_audio",
   "except ImportError:",
   "    print(json.dumps({'error': 'faster-whisper is not installed for this Python'}), flush=True)",
   "    sys.exit(3)",
+  "try:",
+  "    audio = decode_audio(media, sampling_rate=16000)",
+  "except Exception as e:",
+  "    print(json.dumps({'error': 'the file has no sound that can be read: ' + str(e)[:200]}), flush=True)",
+  "    sys.exit(4)",
+  "if start or end:",
+  "    audio = audio[int(float(start or 0) * 16000):(int(float(end) * 16000) if end else None)]",
   "model = WhisperModel(model_name, device=device, compute_type=compute_type)",
   "segments, info = model.transcribe(audio, language=language or None, vad_filter=True, beam_size=5)",
   "print(json.dumps({'info': {'language': info.language, 'probability': info.language_probability, 'duration': info.duration}}), flush=True)",
@@ -37721,24 +37780,16 @@ function readTranscript(file2) {
 }
 async function transcribe(source, options) {
   const dir = folderOf(source);
-  const file2 = path7.join(dir, transcriptName(options));
-  if (existsSync3(file2)) return { transcript: readTranscript(file2), path: file2, cached: true };
+  const file2 = path8.join(dir, transcriptName(options));
+  if (existsSync4(file2)) return { transcript: readTranscript(file2), path: file2, cached: true };
   const media = await mediaFile(source, "audio");
-  const ffmpeg = await locate("ffmpeg");
   const python = await locate("python");
-  if (!ffmpeg || !python) throw new Error("ffmpeg or Python wasn't found");
-  const wav = path7.join(dir, `audio-${process.pid}-${Date.now()}.wav`);
-  try {
-    const cut = [...options.from !== void 0 ? ["-ss", String(options.from)] : [], ...options.to !== void 0 ? ["-to", String(options.to)] : []];
-    const audio = await run(ffmpeg, ["-hide_banner", "-nostats", "-v", "error", "-y", ...cut, "-i", media, "-vn", "-sn", "-dn", "-ac", "1", "-ar", "16000", "-c:a", "pcm_s16le", wav], { timeoutMs: 60 * 6e4 });
-    if (audio.code !== 0 || !existsSync3(wav)) {
-      const said2 = audio.stderr.trim();
-      throw new Error(`ffmpeg couldn't take the audio out of ${describe3(source)}: ${/does not contain any stream|matches no streams/i.test(said2) ? "it has no sound" : said2.slice(0, 300) || "no message"}`);
-    }
+  if (!python) throw new Error("Python wasn't found");
+  {
     let info;
     const cues = [];
     let failure2;
-    const said = await run(python, ["-c", WHISPER_SCRIPT, wav, options.model, options.language ?? "", whisperDevice(), "int8"], {
+    const said = await run(python, ["-c", WHISPER_SCRIPT, media, options.model, options.language ?? "", whisperDevice(), "int8", options.from !== void 0 ? String(options.from) : "", options.to !== void 0 ? String(options.to) : ""], {
       timeoutMs: 6 * 60 * 6e4,
       onLine: (line) => {
         const parsed = parseWhisperLine(line);
@@ -37751,7 +37802,8 @@ async function transcribe(source, options) {
         }
       }
     });
-    if (said.code === NOT_INSTALLED || failure2) throw new Error(`${failure2 ?? "faster-whisper isn't installed"}: check_requirements says how to install it`);
+    if (said.code === NOT_INSTALLED) throw new Error(`${failure2 ?? "faster-whisper isn't installed"}: check_requirements says how to install it`);
+    if (failure2) throw new Error(`faster-whisper couldn't transcribe ${describe3(source)}: ${failure2}`);
     if (said.code !== 0) throw new Error(`faster-whisper couldn't transcribe ${describe3(source)}${said.timedOut ? " (it took over 6 hours)" : ""}: ${whisperError(said.stderr)}`);
     const shift = options.from ?? 0;
     const transcript = {
@@ -37767,8 +37819,6 @@ async function transcribe(source, options) {
     writeFileSync(file2, `${JSON.stringify(transcript, null, 2)}
 `);
     return { transcript, path: file2, cached: false };
-  } finally {
-    rmSync3(wav, { force: true });
   }
 }
 var round = (n) => Math.round(n * 1e3) / 1e3;
@@ -37779,7 +37829,7 @@ var registerTranscribeVideo = (server) => {
     "transcribe_video",
     {
       title: "Transcribe a video",
-      description: "Transcribe what's said in a video that has no captions, on this computer: ffmpeg takes the audio out and faster-whisper turns it into timed text (a YouTube or web address is downloaded first with yt-dlp, the audio only). Slow: about a third of the video's length with the default model on a laptop, more for bigger models; the first use of a model downloads it once. Try get_captions first. The transcript is kept as JSON in the work folder (transcript): calling again with the same options, for the next page (next), reads it instead of transcribing again, and write_subtitles turns it into a .vtt. Speech-to-text mishears names and technical terms: read it with that in mind. Needs ffmpeg and Python with faster-whisper, and yt-dlp for an address. Writes only in the work folder.",
+      description: "Transcribe what's said in a video that has no captions, on this computer: faster-whisper reads it and turns it into timed text (a YouTube or web address is downloaded first with yt-dlp, the audio only). Slow: about a third of the video's length with the default model on a laptop, more for bigger models; the first use of a model downloads it once. Try get_captions first. The transcript is kept as JSON in the work folder (transcript): calling again with the same options, for the next page (next), reads it instead of transcribing again, and write_subtitles turns it into a .vtt. Speech-to-text mishears names and technical terms: read it with that in mind. Needs Python with faster-whisper (no ffmpeg), and yt-dlp for an address. Writes only in the work folder.",
       inputSchema: {
         source: sourceSchema,
         language: languageSchema.describe("The spoken language (es, en\u2026): better and faster than detecting it. By default the setting, else detected"),
@@ -37805,10 +37855,10 @@ var registerTranscribeVideo = (server) => {
       const source = parseSource(given);
       if (SUBTITLE_EXTENSIONS.includes(source.extension)) throw new Error(`${describe3(source)} is a subtitle file: read it with get_captions`);
       if (from !== void 0 && to !== void 0 && to <= from) throw new Error("to must be after from");
-      await needs("ffmpeg", "whisper", ...source.kind === "url" ? ["yt-dlp"] : []);
+      await needs("whisper", ...source.kind === "url" ? ["yt-dlp"] : []);
       const progressToken = extra._meta?.progressToken;
       let lastSent = 0;
-      const { transcript, path: path9, cached: cached2 } = await transcribe(source, {
+      const { transcript, path: path10, cached: cached2 } = await transcribe(source, {
         model: model ?? whisperModel(),
         language: language ?? defaultLanguage(),
         ...from !== void 0 ? { from } : {},
@@ -37821,7 +37871,7 @@ var registerTranscribeVideo = (server) => {
       });
       return reply({
         source: transcript.source,
-        transcript: path9,
+        transcript: path10,
         cached: cached2,
         model: transcript.model,
         language: transcript.language,
@@ -37835,8 +37885,8 @@ var registerTranscribeVideo = (server) => {
 };
 
 // src/tools/writeSubtitles.ts
-import { existsSync as existsSync4, mkdirSync as mkdirSync3, readFileSync as readFileSync4, writeFileSync as writeFileSync2 } from "node:fs";
-import path8 from "node:path";
+import { existsSync as existsSync5, mkdirSync as mkdirSync3, readFileSync as readFileSync4, writeFileSync as writeFileSync2 } from "node:fs";
+import path9 from "node:path";
 
 // src/video/vtt.ts
 function vttTimestamp(seconds) {
@@ -37944,9 +37994,9 @@ ${blocks.join("\n\n")}
 // src/tools/writeSubtitles.ts
 var cueSchema = external_exports.object({ start: external_exports.number().min(0).describe("Seconds"), end: external_exports.number().min(0).describe("Seconds"), text: external_exports.string() });
 function cuesFrom(file2) {
-  if (!path8.isAbsolute(file2)) throw new Error(`${file2}: give an absolute path`);
-  if (!existsSync4(file2)) throw new Error(`${file2}: there's no such file`);
-  const extension = path8.extname(file2).toLowerCase();
+  if (!path9.isAbsolute(file2)) throw new Error(`${file2}: give an absolute path`);
+  if (!existsSync5(file2)) throw new Error(`${file2}: there's no such file`);
+  const extension = path9.extname(file2).toLowerCase();
   if (extension === ".json") return readTranscript(file2).cues;
   if (extension === ".vtt" || extension === ".srt") return parseSubtitles(readFileSync4(file2, "utf8"), extension);
   throw new Error(`${file2}: from takes transcribe_video's transcript (.json), a .vtt or an .srt file`);
@@ -37976,14 +38026,14 @@ var registerWriteSubtitles = (server) => {
       annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: true, openWorldHint: false }
     },
     async ({ outputPath, from, cues: given, corrections, maxLineLength, maxLines, overwrite }) => {
-      if (!path8.isAbsolute(outputPath)) throw new Error(`${outputPath}: give an absolute path`);
-      if (path8.extname(outputPath).toLowerCase() !== ".vtt") throw new Error(`${outputPath}: the file must end in .vtt (WebVTT)`);
+      if (!path9.isAbsolute(outputPath)) throw new Error(`${outputPath}: give an absolute path`);
+      if (path9.extname(outputPath).toLowerCase() !== ".vtt") throw new Error(`${outputPath}: the file must end in .vtt (WebVTT)`);
       if (Boolean(from) === Boolean(given)) throw new Error("Give either from (a transcript, .srt or .vtt file) or cues, not both or neither");
-      if (existsSync4(outputPath) && !overwrite) throw new Error(`${outputPath} is there already: choose another name, or overwrite: true with the person's yes`);
+      if (existsSync5(outputPath) && !overwrite) throw new Error(`${outputPath} is there already: choose another name, or overwrite: true with the person's yes`);
       const input2 = from ? cuesFrom(from) : given ?? [];
       if (!input2.length) throw new Error(`${from ?? "cues"}: there are no cues to write`);
       const { vtt, cues, notes } = toVtt(input2, { ...maxLineLength ? { maxLineLength } : {}, ...maxLines ? { maxLines } : {}, ...corrections ? { corrections } : {} });
-      mkdirSync3(path8.dirname(outputPath), { recursive: true });
+      mkdirSync3(path9.dirname(outputPath), { recursive: true });
       writeFileSync2(outputPath, vtt);
       const preview = cues.slice(0, 3).map((cue) => `${vttTimestamp(cue.start)} --> ${vttTimestamp(cue.end)}
 ${cue.text}`).join("\n\n");
@@ -37999,6 +38049,7 @@ var TOOLS = [
   registerTranscribeVideo,
   registerExtractFrames,
   registerWriteSubtitles,
+  registerCleanUpVideo,
   registerCheckRequirements,
   registerServerInfo
 ];

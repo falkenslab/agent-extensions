@@ -25,7 +25,7 @@ video-mcp is an MCP server that lets an AI agent work with a video: a file on yo
 
 ## 🚀 Quick start
 
-With [Node.js](https://nodejs.org) 20 or later and the programs you need ([ffmpeg](https://ffmpeg.org/download.html), [faster-whisper](https://github.com/SYSTRAN/faster-whisper#installation) for transcribing, [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for YouTube), build it here (`npm install`, `npm run build`) and add it to Claude Code:
+With [Node.js](https://nodejs.org) 20 or later and the programs you need ([ffmpeg](https://ffmpeg.org/download.html) for frames, [faster-whisper](https://github.com/SYSTRAN/faster-whisper#installation) for transcribing, [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for YouTube), build it here (`npm install`, `npm run build`) and add it to Claude Code:
 
 ```bash
 claude mcp add video-mcp -- node /path/to/agent-extensions/mcps/video/dist/server.mjs
@@ -51,9 +51,10 @@ Then ask about a video. In an agent built on agent-kit, or in Claude Code with i
 | --- | --- |
 | `get_video_info` | A video's title, length, picture, sound, chapters and the captions it has (YouTube's tracks or a file's subtitle streams); only reads |
 | `get_captions` | Its captions as a timed transcript, a page at a time: YouTube's (someone's, automatic or translated), a `.vtt` or `.srt` file or address, or a file's own; only reads |
-| `transcribe_video` | The speech as a timed transcript when there are no captions: ffmpeg takes the audio out, faster-whisper transcribes it; kept as JSON for the next page and for subtitles |
+| `transcribe_video` | The speech as a timed transcript when there are no captions: faster-whisper reads the video and transcribes it, without ffmpeg; kept as JSON for the next page and for subtitles |
 | `extract_frames` | Frames where the picture changes, or at an interval, as JPEG files with their times |
 | `write_subtitles` | A `.vtt` from a transcript, a `.srt` or `.vtt`, or cues, tidied as subtitles, with corrections |
+| `clean_up_video` | Deletes what was kept for a video once it's done with: its downloads and frames, and its transcripts if asked; never the person's own file |
 | `check_requirements` | ffmpeg, Python with faster-whisper and yt-dlp: found or not, their versions and how to install each; only reads |
 | `server_info` | The version, the settings and the programs found; only reads |
 
@@ -72,7 +73,7 @@ Environment variables, all optional; one left as an unexpanded `${user_config.*}
 ## 🔧 How it works
 
 - **Programs, never a shell.** ffmpeg, ffprobe and yt-dlp are found on the PATH (yt-dlp also as `python -m yt_dlp`), and run with an argument list. Python is `VIDEO_MCP_PYTHON`, else the first `python3` or `python` on the PATH (`python`, then `py -3` on Windows, skipping the Microsoft Store's stubs) that has faster-whisper.
-- **Transcription.** ffmpeg writes the audio as 16 kHz mono WAV, and a short Python script passed with `-c` runs faster-whisper on it (int8, voice activity detection to skip silences), printing a JSON line per segment, which the server reads as it comes and reports as progress. The transcript is kept as `transcript-<model>-<language>.json` in the video's folder; the WAV is deleted.
+- **Transcription.** A short Python script passed with `-c` has faster-whisper read the video (or its downloaded audio) itself, through the PyAV it brings, as padawan does, so ffmpeg isn't needed; it cuts the stretch asked for and runs faster-whisper (int8, voice activity detection to skip silences), printing a JSON line per segment, which the server reads as it comes and reports as progress. The transcript is kept as `transcript-<model>-<language>.json` in the video's folder. `clean_up_video` deletes the downloads and frames afterwards.
 - **Frames.** One ffmpeg pass with a `select` filter: the first frame, a frame where the scene score passes the threshold (but not within 2 seconds of the last), and one at least every `every` seconds; `showinfo` gives each frame's time. Over `maxFrames`, an even spread is kept.
 - **YouTube.** yt-dlp reads the video's details and captions tracks (`-J`) and downloads the chosen track as WebVTT; YouTube's rolling automatic captions are read once each. To transcribe or take frames, it downloads the audio alone, or the picture alone up to 1080p, into the video's folder, where they're reused.
 

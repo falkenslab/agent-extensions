@@ -14,7 +14,7 @@ export const registerTranscribeVideo: RegisterTool = (server) => {
     {
       title: "Transcribe a video",
       description:
-        "Transcribe what's said in a video that has no captions, on this computer: ffmpeg takes the audio out and faster-whisper turns it into timed text (a YouTube or web address is downloaded first with yt-dlp, the audio only). Slow: about a third of the video's length with the default model on a laptop, more for bigger models; the first use of a model downloads it once. Try get_captions first. The transcript is kept as JSON in the work folder (transcript): calling again with the same options, for the next page (next), reads it instead of transcribing again, and write_subtitles turns it into a .vtt. Speech-to-text mishears names and technical terms: read it with that in mind. Needs ffmpeg and Python with faster-whisper, and yt-dlp for an address. Writes only in the work folder.",
+        "Transcribe what's said in a video that has no captions, on this computer: faster-whisper reads it and turns it into timed text (a YouTube or web address is downloaded first with yt-dlp, the audio only). Slow: about a third of the video's length with the default model on a laptop, more for bigger models; the first use of a model downloads it once. Try get_captions first. The transcript is kept as JSON in the work folder (transcript): calling again with the same options, for the next page (next), reads it instead of transcribing again, and write_subtitles turns it into a .vtt. Speech-to-text mishears names and technical terms: read it with that in mind. Needs Python with faster-whisper (no ffmpeg), and yt-dlp for an address. Writes only in the work folder.",
       inputSchema: {
         source: sourceSchema,
         language: languageSchema.describe("The spoken language (es, en…): better and faster than detecting it. By default the setting, else detected"),
@@ -40,7 +40,7 @@ export const registerTranscribeVideo: RegisterTool = (server) => {
       const source = parseSource(given);
       if (SUBTITLE_EXTENSIONS.includes(source.extension)) throw new Error(`${describe(source)} is a subtitle file: read it with get_captions`);
       if (from !== undefined && to !== undefined && to <= from) throw new Error("to must be after from");
-      await needs("ffmpeg", "whisper", ...(source.kind === "url" ? (["yt-dlp"] as const) : []));
+      await needs("whisper", ...(source.kind === "url" ? (["yt-dlp"] as const) : []));
       const progressToken = extra._meta?.progressToken;
       let lastSent = 0;
       const { transcript, path, cached } = await transcribe(source, {

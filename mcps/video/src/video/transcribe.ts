@@ -1,7 +1,7 @@
-// Transcribing: ffmpeg takes the audio out as 16 kHz mono WAV (what whisper reads), faster-whisper
-// turns it into timed text, and the transcript is kept as JSON in the source's folder, so a second
+// Transcribing: faster-whisper reads the video (or its downloaded audio) itself, through the PyAV it brings,
+// so no ffmpeg is needed, and turns it into timed text, and the transcript is kept as JSON in the source's folder, so a second
 // call (the next page, or write_subtitles) doesn't transcribe again.
-import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { whisperDevice } from "../config.js";
 import { locate, run } from "../run.js";
@@ -65,23 +65,14 @@ export async function transcribe(source: Source, options: TranscribeOptions): Pr
   if (existsSync(file)) return { transcript: readTranscript(file), path: file, cached: true };
 
   const media = await mediaFile(source, "audio");
-  const ffmpeg = await locate("ffmpeg");
   const python = await locate("python");
-  if (!ffmpeg || !python) throw new Error("ffmpeg or Python wasn't found");
+  if (!python) throw new Error("Python wasn't found");
 
-  const wav = path.join(dir, `audio-${process.pid}-${Date.now()}.wav`);
-  try {
-    const cut = [...(options.from !== undefined ? ["-ss", String(options.from)] : []), ...(options.to !== undefined ? ["-to", String(options.to)] : [])];
-    const audio = await run(ffmpeg, ["-hide_banner", "-nostats", "-v", "error", "-y", ...cut, "-i", media, "-vn", "-sn", "-dn", "-ac", "1", "-ar", "16000", "-c:a", "pcm_s16le", wav], { timeoutMs: 60 * 60_000 });
-    if (audio.code !== 0 || !existsSync(wav)) {
-      const said = audio.stderr.trim();
-      throw new Error(`ffmpeg couldn't take the audio out of ${describe(source)}: ${/does not contain any stream|matches no streams/i.test(said) ? "it has no sound" : said.slice(0, 300) || "no message"}`);
-    }
-
+  {
     let info: WhisperInfo | undefined;
     const cues: Cue[] = [];
     let failure: string | undefined;
-    const said = await run(python, ["-c", WHISPER_SCRIPT, wav, options.model, options.language ?? "", whisperDevice(), "int8"], {
+    const said = await run(python, ["-c", WHISPER_SCRIPT, media, options.model, options.language ?? "", whisperDevice(), "int8", options.from !== undefined ? String(options.from) : "", options.to !== undefined ? String(options.to) : ""], {
       timeoutMs: 6 * 60 * 60_000,
       onLine: (line) => {
         const parsed = parseWhisperLine(line);
@@ -94,7 +85,8 @@ export async function transcribe(source: Source, options: TranscribeOptions): Pr
         }
       },
     });
-    if (said.code === NOT_INSTALLED || failure) throw new Error(`${failure ?? "faster-whisper isn't installed"}: check_requirements says how to install it`);
+    if (said.code === NOT_INSTALLED) throw new Error(`${failure ?? "faster-whisper isn't installed"}: check_requirements says how to install it`);
+    if (failure) throw new Error(`faster-whisper couldn't transcribe ${describe(source)}: ${failure}`);
     if (said.code !== 0) throw new Error(`faster-whisper couldn't transcribe ${describe(source)}${said.timedOut ? " (it took over 6 hours)" : ""}: ${whisperError(said.stderr)}`);
 
     const shift = options.from ?? 0;
@@ -110,8 +102,6 @@ export async function transcribe(source: Source, options: TranscribeOptions): Pr
     };
     writeFileSync(file, `${JSON.stringify(transcript, null, 2)}\n`);
     return { transcript, path: file, cached: false };
-  } finally {
-    rmSync(wav, { force: true });
   }
 }
 

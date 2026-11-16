@@ -17,6 +17,7 @@ describe("createServer", () => {
       transcribe_video: false,
       extract_frames: false,
       write_subtitles: false,
+      clean_up_video: false,
       check_requirements: true,
       server_info: true,
     });

@@ -1,6 +1,6 @@
 // The tools through an MCP client, against the fake programs: no ffmpeg, Python or network needed.
 import assert from "node:assert/strict";
-import { existsSync, mkdtempSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { after, afterEach, before, describe, it } from "node:test";
@@ -105,13 +105,9 @@ describe("transcribe_video and write_subtitles", () => {
     assert.match(String(first.text), /^\[00:00\] Hola a todos, hoy vemos git hub\./);
     const transcript = String(first.transcript);
     assert.ok(existsSync(transcript));
-    assert.deepEqual(
-      readdirSync(path.dirname(transcript)).filter((f) => f.endsWith(".wav")),
-      [],
-      "the audio taken out is deleted",
-    );
     const whisper = calls.find((c) => c.program === "python" && c.args[0] === "-c" && c.args[1]?.includes("WhisperModel"));
-    assert.deepEqual(whisper?.args.slice(3), ["base", "", "cpu", "int8"]);
+    assert.deepEqual(whisper?.args.slice(2), [video, "base", "", "cpu", "int8", "", ""], "faster-whisper reads the video itself");
+    assert.equal(calls.filter((c) => c.program === "ffmpeg").length, 0, "no ffmpeg to transcribe");
 
     const second = await call(client, "transcribe_video", { source: video, model: "base" });
     assert.equal(second.cached, true);
@@ -134,8 +130,9 @@ describe("transcribe_video and write_subtitles", () => {
     assert.equal(result.languageProbability, 1);
     const download = calls.find((c) => c.program === "yt-dlp" && c.args.includes("-f"));
     assert.equal(download?.args[download.args.indexOf("-f") + 1], "bestaudio/best");
-    const ffmpeg = calls.find((c) => c.program === "ffmpeg" && c.args.at(-1)?.endsWith(".wav"));
-    assert.deepEqual(ffmpeg?.args.slice(5, 9), ["-ss", "60", "-to", "120"]);
+    const whisper = calls.find((c) => c.program === "python" && c.args[1]?.includes("WhisperModel"));
+    assert.deepEqual(whisper?.args.slice(-2), ["60", "120"]);
+    assert.match(String(whisper?.args[2]), /audio\.\w+$/);
   });
 
   it("fail saying how to install faster-whisper when it isn't there", async () => {
@@ -151,6 +148,30 @@ describe("transcribe_video and write_subtitles", () => {
     assert.equal(written.cues, 1);
     await assert.rejects(call(client, "write_subtitles", { cues: [{ start: 1, end: 2, text: "Hola" }], outputPath: path.join(files, "hand.srt") }), /must end in \.vtt/);
     await assert.rejects(call(client, "write_subtitles", { outputPath: path.join(files, "none.vtt") }), /either from .* or cues/);
+  });
+});
+
+describe("clean_up_video", () => {
+  it("deletes an address's downloads and frames, keeps its transcripts unless asked, and never the person's file", async () => {
+    restore = fakePrograms().restore;
+    const client = await connect();
+    const first = await call(client, "transcribe_video", { source: youtube, language: "es" });
+    const folder = path.dirname(String(first.transcript));
+    writeFileSync(path.join(folder, "video.mp4"), "picture");
+    mkdirSync(path.join(folder, "frames-scenes"));
+    writeFileSync(path.join(folder, "frames-scenes", "frame-001.jpg"), "jpeg");
+    const cleaned = await call(client, "clean_up_video", { source: youtube });
+    assert.deepEqual([...(cleaned.deleted as string[])].sort(), ["audio.webm", "frames-scenes", "video.mp4"]);
+    assert.ok((cleaned.kept as string[]).includes(path.basename(String(first.transcript))));
+    assert.ok((cleaned.kept as string[]).every((name) => name.startsWith("transcript-")), "only transcripts stay");
+    assert.ok(Number(cleaned.freedBytes) > 0);
+    const all = await call(client, "clean_up_video", { source: youtube, transcripts: true });
+    assert.ok((all.deleted as string[]).includes(path.basename(String(first.transcript))));
+    assert.deepEqual(all.kept, []);
+    assert.ok(!existsSync(folder), "an empty folder goes too");
+    await call(client, "transcribe_video", { source: video, model: "base" });
+    await call(client, "clean_up_video", { source: video, transcripts: true });
+    assert.ok(existsSync(video), "the person's own video stays");
   });
 });
 

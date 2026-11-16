@@ -67,6 +67,6 @@ describe("requirements", () => {
 
   it("stop a tool that needs one, saying what to install and never installing it", async () => {
     restore = fakePrograms({ missing: ["ffmpeg"] }).restore;
-    await assert.rejects(needs("ffmpeg"), (error: Error) => error instanceof RequirementMissing && /^ffmpeg is needed for extracting .*To install it, run .*Never install it yourself/.test(error.message));
+    await assert.rejects(needs("ffmpeg"), (error: Error) => error instanceof RequirementMissing && /^ffmpeg is needed for the frames .*To install it, run .*Never install it yourself/.test(error.message));
   });
 });

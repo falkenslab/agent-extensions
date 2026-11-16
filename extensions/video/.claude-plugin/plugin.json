@@ -76,7 +76,8 @@
             "get_video_info",
             "get_captions",
             "check_requirements",
-            "server_info"
+            "server_info",
+            "clean_up_video"
           ],
           "texts": {
             "en": {
@@ -180,7 +181,6 @@
             "url": "https://ffmpeg.org/download.html"
           },
           "for": [
-            "video-transcription",
             "video-visual"
           ]
         },
@@ -229,7 +229,7 @@
         "check_requirements",
         "server_info"
       ],
-      "help": "Video: I read what a video says from its captions (YouTube's, a .vtt or .srt, or a file's own), transcribe it on this computer with faster-whisper when it has none, take frames where the screen changes to see slides and code, and write WebVTT subtitles for a video, corrected with the person. My skills video:video-understanding and video:video-subtitles hold how. It runs ffmpeg, faster-whisper and yt-dlp, which the person installs; check_requirements says what's missing and how to install it.",
+      "help": "Video: I read what a video says from its captions (YouTube's, a .vtt or .srt, or a file's own), transcribe it on this computer with faster-whisper when it has none, take frames where the screen changes to see slides and code, put what's said and shown together in one document (my video:video-transcriber subagent, for long videos), and write WebVTT subtitles for a video, corrected with the person. My skills video:video-understanding and video:video-subtitles hold how. It runs ffmpeg (frames), faster-whisper (transcribing, without ffmpeg) and yt-dlp (addresses), which the person installs, and clean_up_video deletes a video's downloads afterwards; check_requirements says what's missing and how to install it.",
       "labels": {
         "get_video_info": {
           "en": {
@@ -319,6 +319,24 @@
               "escribió archivos de subtítulos {n} veces"
             ],
             "result": "Subtítulos guardados en este ordenador"
+          }
+        },
+        "clean_up_video": {
+          "en": {
+            "label": "Cleaning up a video's files",
+            "phrase": [
+              "cleaned up a video's files",
+              "cleaned up the files of {n} videos"
+            ],
+            "result": "Downloads and frames deleted"
+          },
+          "es": {
+            "label": "Limpiando los archivos de un vídeo",
+            "phrase": [
+              "limpió los archivos de un vídeo",
+              "limpió los archivos de {n} vídeos"
+            ],
+            "result": "Descargas y fotogramas borrados"
           }
         },
         "check_requirements": {
