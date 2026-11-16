@@ -19,7 +19,7 @@ Reading code or instructions says what they should do; running them says what th
 1. Put what's verified in the lab's folder: the code, the starting files, the solution, each in its own subfolder so runs don't mix.
 2. **`lab_up`** (say what it starts and let the session's question be the yes), then run each step with **`lab_exec`** (a `timeoutSeconds` that fits), or **`lab_check`** when the lab has a check.
 3. Watch the services too: `lab_status` and `lab_logs` say whether a failure is the thing verified or the lab around it.
-4. **`lab_down`** when done. If docker-mcp's question gets a no, or nobody can answer it (an unattended run, an app without elicitation), the lab keeps running: don't call it again, and report it as still running, with its name, so the person can stop it. A refused `lab_reset` between a statement and its solution goes in the verdict: both ran in the same lab.
+4. **`lab_down`** when done: it doesn't ask, so stop every lab you started. A refused `lab_reset` between a statement and its solution (a no, or nobody to answer in an unattended run) goes in the verdict: both ran in the same lab.
 
 When the runs or the logs will be long, the `lab-runner` subagent can do steps 1 to 4 once the person has said yes to what runs, and return only the verdict and its evidence.
 
