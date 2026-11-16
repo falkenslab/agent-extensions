@@ -64,7 +64,7 @@ export const YT_DLP: Requirement = {
   version: { args: ["--version"], min: "2024.12.13" },
   install: { windows: "winget install yt-dlp.yt-dlp", macos: "brew install yt-dlp", linux: "pipx install yt-dlp", url: "https://github.com/yt-dlp/yt-dlp/wiki/Installation" },
   for: "reading YouTube videos (their captions, and downloading them)",
-  capabilities: ["video-captions", "video-transcription", "video-visual"],
+  capabilities: ["video-online"],
 };
 
 /** The requirements of this server. */

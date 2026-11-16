@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "video": {
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"
+      ],
+      "env": {
+        "VIDEO_MCP_WORK_DIR": "${user_config.work_folder}",
+        "VIDEO_MCP_WHISPER_MODEL": "${user_config.whisper_model}",
+        "VIDEO_MCP_LANGUAGE": "${user_config.language}",
+        "VIDEO_MCP_PYTHON": "${user_config.python}"
+      }
+    }
+  }
+}

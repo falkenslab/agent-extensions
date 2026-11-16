@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { afterEach, describe, it } from "node:test";
 import { REQUIREMENTS, RequirementMissing, atLeast, checkRequirements, howToInstall, needs } from "../src/requirements.js";
 import { fakePrograms } from "./fake.js";
@@ -25,6 +26,14 @@ describe("requirements", () => {
       assert.ok(requirement.install.windows && requirement.install.macos && requirement.install.linux && requirement.install.url);
       assert.ok(requirement.capabilities.length);
     }
+  });
+
+  it("are the ones the video extension's manifest declares, for the same capabilities", () => {
+    const manifest = JSON.parse(readFileSync(new URL("../../../extensions/video/.claude-plugin/plugin.json", import.meta.url), "utf8")) as { metadata: { "agent-kit": { requirements: unknown[] } } };
+    assert.deepEqual(
+      manifest.metadata["agent-kit"].requirements,
+      REQUIREMENTS.map(({ name, program, version, install, capabilities }) => ({ name, program, version, install, for: capabilities })),
+    );
   });
 
   it("say how to install them on each system", () => {
