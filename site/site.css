@@ -96,6 +96,44 @@ code.cmd { font-family: var(--mono); font-size: 14px; background: var(--code); b
 /* What an extension holds, under the install card: four cards in plain words. */
 .concepts { max-width: 1000px; margin: 64px auto 0; }
 .concepts h2 { margin: 0 0 22px; font-size: clamp(24px, 3.4vw, 32px); font-weight: 800; letter-spacing: -0.03em; }
+.concepts .lead { margin: -6px auto 26px; max-width: 64ch; font-size: 17px; color: var(--text-2); }
+.concepts .lead strong { color: var(--text); }
+.how { margin: 0 auto 22px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 18px; padding: 26px 18px 14px; }
+.how svg { display: block; width: 100%; height: auto; }
+.how .how-tall { display: none; max-width: 420px; margin: 0 auto; }
+@media (max-width: 680px) { .how .how-wide { display: none; } .how .how-tall { display: block; } .how { padding: 20px 8px 8px; } }
+.how text { font-family: var(--sans); fill: var(--text); }
+.how .d-panel { fill: var(--panel); stroke: var(--line); }
+.how .d-tile { fill: var(--bg-2); stroke: var(--line); }
+.how .d-tile.on { stroke: var(--accent); stroke-width: 1.5; }
+.how .d-mark { fill: var(--b2); }
+.how .d-accent { fill: var(--accent); }
+.how .d-eye { fill: var(--panel); }
+.how .d-antenna { stroke: var(--b2); stroke-width: 3; stroke-linecap: round; }
+.how .d-pill { fill: var(--chip); stroke: var(--line); }
+.how .d-pill.on { stroke: var(--accent); }
+.how .d-group { fill: none; stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 5 4; opacity: 0.7; }
+.how .d-join { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0.75; }
+.how .d-arrow { fill: none; stroke: var(--dim); stroke-width: 2; }
+.how .d-head { fill: var(--dim); }
+.how .d-cap { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
+.how .d-badge { fill: var(--chip); stroke: var(--line); }
+.how .d-badge.on { fill: var(--accent); stroke: var(--accent); }
+.how .d-step { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; fill: var(--accent); }
+.how .d-title { font-size: 16px; font-weight: 800; }
+.how .d-mono, .how .d-mono-title { font-family: var(--mono); }
+.how .d-mono { font-size: 13px; fill: var(--text); }
+.how .d-label { font-size: 13px; font-weight: 700; fill: var(--text-2); }
+.how .d-dim { font-size: 13px; fill: var(--dim); }
+.how .how-tall .d-dim { font-size: 10.5px; }
+.how .d-cap-kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; fill: var(--accent); }
+.how .d-cap-name { font-size: 15px; font-weight: 800; }
+.how .d-badge-on { font-size: 14px; font-weight: 700; fill: var(--accent-ink); }
+.how .d-badge-text { font-size: 14px; font-weight: 600; fill: var(--text-2); }
+.formula { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin: 0 auto 26px; font-weight: 700; }
+.formula span { background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; box-shadow: var(--shadow); }
+.formula span:last-child { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.formula b { color: var(--dim); font-size: 20px; }
 .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; text-align: left; }
 .concept { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow); }
 .concept .icon { font-size: 26px; line-height: 1; }

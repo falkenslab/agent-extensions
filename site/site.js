@@ -88,12 +88,28 @@ const TEXTS = {
     signInClaude: "Sign in with your account: run `/mcp` in Claude Code, pick its server and follow the link.",
     signInCodex: "It signs in to its server with your account; not checked in Codex yet.",
     signInAgent: (name) => `Sign in with your account from the chat: \`/extensions sign-in ${name}\` gives you the link to open. A new session doesn't ask again.`,
-    conceptsTitle: "What's in an extension",
+    conceptsTitle: "How it works",
+    conceptsLead: "This site is a <strong>marketplace of extensions</strong>. You install the ones you need in your agent, and each one gives it new <strong>capabilities</strong>: things it can now do well, such as grading in Moodle or making a design in Canva. A capability is never only a tool, nor only know-how: it's <strong>skills and tools together</strong>.",
+    formula: ["📖 Skills", "🔧 Tools", "✨ A capability"],
+    how: {
+      aria: "How it fits together: this site holds extensions; an extension such as moodle-teacher brings skills and tools; the grading and to-grade skills with the tools that read submissions and rubrics and save grades make the Grading capability; installed, your agent gains it beside what it already knew.",
+      step: ["1 · This site", "2 · One extension", "3 · Your agent"],
+      site: "Extensions",
+      more: "and more…",
+      skills: "📖 Skills",
+      tools: "🔧 Tools",
+      capability: "✨ Capability",
+      capLabel: "Grading",
+      caption: "Other skills and tools make its other capabilities",
+      agent: "Your agent",
+      badges: ["Grading", "Quizzes", "Checking a course"],
+      before: "+ what it already knew",
+    },
     concepts: [
-      ["🧩", "Extension", "A pack you add to your agent, like an app on your phone. Each one lets it work with something new: your Moodle courses, your Canva designs, Docker…"],
-      ["📖", "Skills", "The know-how that comes with it: how to do each task well, step by step, and when to ask you first. Like the notes an expert would leave you."],
-      ["🔧", "Tools", "What lets your agent actually do things instead of only talking about them: look up your courses, create a design, start a program."],
-      ["✨", "Capabilities", "What your agent can do thanks to an extension, in plain words: grading, creating designs, copying a course. Skills and tools together, and what each extension's card lists."],
+      ["🧩", "Extension", "A pack you add to your agent, like an app on your phone. Each one lets it work with something new: your Moodle courses, your Canva designs, Docker… This site lists them, and each card says how to install it."],
+      ["📖", "Skills", "The know-how that comes with it, written for the agent: how to do each task well, step by step, in that platform's own terms, and when to ask you first. Like the notes an expert would leave you."],
+      ["🔧", "Tools", "What lets your agent actually do things instead of only talking about them: look up your courses, save a grade, create a design, start a program. They come from the extension's MCP server."],
+      ["✨", "Capabilities", "Skills and tools together, named in plain words: grading, building quizzes, copying a course. It's what the agent gains, what each card and technical sheet list, and what an agent like miyagi asks for when it needs it."],
     ],
   },
   es: {
@@ -161,15 +177,123 @@ const TEXTS = {
     signInClaude: "Inicia sesión con tu cuenta: ejecuta `/mcp` en Claude Code, elige su servidor y sigue el enlace.",
     signInCodex: "Inicia sesión en su servidor con tu cuenta; aún no está probada en Codex.",
     signInAgent: (name) => `Inicia sesión con tu cuenta desde el chat: \`/extensions sign-in ${name}\` te da el enlace que abrir. Una sesión nueva no lo vuelve a pedir.`,
-    conceptsTitle: "Qué hay en una extensión",
+    conceptsTitle: "Cómo funciona",
+    conceptsLead: "Este sitio es un <strong>marketplace de extensiones</strong>. Instalas en tu agente las que necesitas, y cada una le da nuevas <strong>capacidades</strong>: cosas que ahora sabe hacer bien, como corregir en Moodle o hacer un diseño en Canva. Una capacidad nunca es solo una herramienta, ni solo saber hacer: son <strong>habilidades y herramientas juntas</strong>.",
+    formula: ["📖 Habilidades", "🔧 Herramientas", "✨ Una capacidad"],
+    how: {
+      aria: "Cómo encaja todo: este sitio reúne extensiones; una extensión como moodle-teacher trae habilidades y herramientas; las habilidades de corregir, con las herramientas que leen entregas y rúbricas y guardan notas, forman la capacidad Corregir; al instalarla, tu agente la gana junto a lo que ya sabía.",
+      step: ["1 · Este sitio", "2 · Una extensión", "3 · Tu agente"],
+      site: "Extensiones",
+      more: "y más…",
+      skills: "📖 Habilidades",
+      tools: "🔧 Herramientas",
+      capability: "✨ Capacidad",
+      capLabel: "Corregir",
+      caption: "Otras habilidades y herramientas forman sus otras capacidades",
+      agent: "Tu agente",
+      badges: ["Corregir", "Cuestionarios", "Revisar un curso"],
+      before: "+ lo que ya sabía",
+    },
     concepts: [
-      ["🧩", "Extensión", "Un paquete que añades a tu agente, como una app en el móvil. Cada una le permite trabajar con algo nuevo: tus cursos de Moodle, tus diseños de Canva, Docker…"],
-      ["📖", "Habilidades", "El saber hacer que trae: cómo hacer bien cada tarea, paso a paso, y cuándo preguntarte antes. Como las notas que te dejaría alguien experto."],
-      ["🔧", "Herramientas", "Lo que permite a tu agente hacer las cosas de verdad, y no solo hablar de ellas: consultar tus cursos, crear un diseño, arrancar un programa."],
-      ["✨", "Capacidades", "Lo que tu agente sabe hacer gracias a una extensión, dicho en llano: calificar, crear diseños, copiar un curso. Son las habilidades y las herramientas juntas, y lo que muestra la tarjeta de cada extensión."],
+      ["🧩", "Extensión", "Un paquete que añades a tu agente, como una app en el móvil. Cada una le permite trabajar con algo nuevo: tus cursos de Moodle, tus diseños de Canva, Docker… Este sitio las reúne, y cada tarjeta dice cómo instalarla."],
+      ["📖", "Habilidades", "El saber hacer que trae, escrito para el agente: cómo hacer bien cada tarea, paso a paso, con los términos de esa plataforma, y cuándo preguntarte antes. Como las notas que te dejaría alguien experto."],
+      ["🔧", "Herramientas", "Lo que permite a tu agente hacer las cosas de verdad, y no solo hablar de ellas: consultar tus cursos, guardar una nota, crear un diseño, arrancar un programa. Las aporta el servidor MCP de la extensión."],
+      ["✨", "Capacidades", "Habilidades y herramientas juntas, con un nombre en llano: corregir, crear cuestionarios, copiar un curso. Es lo que gana el agente, lo que listan cada tarjeta y su ficha técnica, y lo que pide un agente como miyagi cuando lo necesita."],
     ],
   },
 };
+// The home page's diagram: this site's extensions, one of them opened (its skills and tools, and the
+// capability they make together), and the agent that gains it. Drawn for a wide screen and for a phone
+// (CSS shows one); its colors are the page's tokens, so it follows the theme.
+function howDiagram(h, layout) {
+  const e = escape;
+  const wide = layout === "wide";
+  const out = [];
+  const text = (x, y, s, cls, anchor = "start") => out.push(`<text x="${x}" y="${y}" class="${cls}" text-anchor="${anchor}">${e(s)}</text>`);
+  const panel = (x, y, w, hh) => out.push(`<rect x="${x}" y="${y}" width="${w}" height="${hh}" rx="16" class="d-panel"/>`);
+  const pill = (x, y, w, s, cls = "") => { out.push(`<rect x="${x}" y="${y}" width="${w}" height="30" rx="15" class="d-pill ${cls}"/>`); text(x + 14, y + 20, s, "d-mono"); };
+  const arrow = (d) => out.push(`<path d="${d}" class="d-arrow" marker-end="url(#d-head-${layout})"/>`);
+  const tile = (x, y, w, name, on) => {
+    out.push(`<rect x="${x}" y="${y}" width="${w}" height="40" rx="10" class="d-tile${on ? " on" : ""}"/>`);
+    out.push(`<rect x="${x + 10}" y="${y + 10}" width="20" height="20" rx="6" class="${on ? "d-accent" : "d-mark"}"/>`);
+    text(x + 40, y + 25, name, "d-mono");
+  };
+  // Column origins: side by side on a wide screen, stacked on a phone.
+  const A = wide ? { x: 10, y: 44 } : { x: 10, y: 40 };
+  const B = wide ? { x: 250, y: 44 } : { x: 10, y: 300 };
+  const C = wide ? { x: 690, y: 44 } : { x: 10, y: 800 };
+  const W = wide ? 960 : 360;
+  const H = wide ? 400 : 1080;
+  out.push(`<defs><marker id="d-head-${layout}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker></defs>`);
+
+  // 1. This site: extension tiles, the first one opened next.
+  const aw = wide ? 210 : 340;
+  text(A.x + 4, A.y - 16, h.step[0], "d-step");
+  panel(A.x, A.y, aw, wide ? 310 : 190);
+  text(A.x + 18, A.y + 30, h.site, "d-title");
+  const names = ["moodle-teacher", "canva", "docker-lab", "video"];
+  names.forEach((name, i) => {
+    const col = wide ? 0 : i % 2;
+    const row = wide ? i : Math.floor(i / 2);
+    tile(A.x + 14 + col * 162, A.y + 48 + row * 52, wide ? 178 : 156, name, i === 0);
+  });
+  text(A.x + 18, A.y + (wide ? 280 : 168), h.more, "d-dim");
+
+  // 2. One extension: its skills and its tools, and the capability they make.
+  const bw = wide ? 400 : 340;
+  text(B.x + 4, B.y - 16, h.step[1], "d-step");
+  panel(B.x, B.y, bw, wide ? 310 : 440);
+  text(B.x + 18, B.y + 30, "moodle-teacher", "d-title d-mono-title");
+  const sx = B.x + 18, tx = wide ? B.x + 210 : B.x + 18;
+  const sy = B.y + 56, ty = wide ? B.y + 56 : B.y + 176;
+  text(sx, sy, h.skills, "d-label");
+  out.push(`<rect x="${sx - 8}" y="${sy + 10}" width="${wide ? 180 : 312}" height="82" rx="14" class="d-group"/>`);
+  pill(sx, sy + 18, wide ? 164 : 296, "grading", "on");
+  pill(sx, sy + 56, wide ? 164 : 296, "to-grade", "on");
+  text(tx, ty, h.tools, "d-label");
+  out.push(`<rect x="${tx - 8}" y="${ty + 10}" width="${wide ? 180 : 312}" height="120" rx="14" class="d-group"/>`);
+  pill(tx, ty + 18, wide ? 164 : 296, "get_submissions", "on");
+  pill(tx, ty + 56, wide ? 164 : 296, "get_rubric", "on");
+  pill(tx, ty + 94, wide ? 164 : 296, "grade_submission", "on");
+  const cap = wide ? { x: B.x + 80, y: B.y + 222, w: 240 } : { x: B.x + 50, y: B.y + 334, w: 240 };
+  // Skills and tools meet in the capability.
+  if (wide) {
+    out.push(`<path d="M${sx + 82} ${sy + 92} C${sx + 82} ${cap.y - 20}, ${cap.x + 70} ${cap.y - 30}, ${cap.x + 90} ${cap.y}" class="d-join"/>`);
+    out.push(`<path d="M${tx + 82} ${ty + 130} C${tx + 82} ${cap.y - 20}, ${cap.x + 170} ${cap.y - 30}, ${cap.x + 150} ${cap.y}" class="d-join"/>`);
+  } else {
+    out.push(`<path d="M${sx + 304} ${sy + 51} C${sx + 316} ${sy + 51}, ${sx + 316} ${cap.y + 28}, ${cap.x + cap.w} ${cap.y + 28}" class="d-join"/>`);
+    out.push(`<path d="M${tx + 152} ${ty + 130} L${tx + 152} ${cap.y}" class="d-join"/>`);
+  }
+  out.push(`<rect x="${cap.x}" y="${cap.y}" width="${cap.w}" height="58" rx="14" class="d-cap"/>`);
+  text(cap.x + cap.w / 2, cap.y + 24, h.capability, "d-cap-kicker", "middle");
+  text(cap.x + cap.w / 2, cap.y + 45, `${h.capLabel} · lms-grading`, "d-cap-name", "middle");
+  text(B.x + bw / 2, B.y + (wide ? 334 : 420), h.caption, "d-dim", "middle");
+
+  // 3. Your agent: the capability joins what it already knew.
+  const cw = wide ? 260 : 340;
+  text(C.x + 4, C.y - 16, h.step[2], "d-step");
+  panel(C.x, C.y, cw, wide ? 310 : 270);
+  const hx = C.x + cw / 2;
+  out.push(`<rect x="${hx - 30}" y="${C.y + 22}" width="60" height="46" rx="14" class="d-mark"/><circle cx="${hx - 12}" cy="${C.y + 45}" r="5" class="d-eye"/><circle cx="${hx + 12}" cy="${C.y + 45}" r="5" class="d-eye"/><path d="M${hx} ${C.y + 22}V${C.y + 12}" class="d-antenna"/><circle cx="${hx}" cy="${C.y + 10}" r="4" class="d-accent"/>`);
+  text(hx, C.y + 92, h.agent, "d-title", "middle");
+  h.badges.forEach((badge, i) => {
+    const y = C.y + 110 + i * 40;
+    out.push(`<rect x="${C.x + 30}" y="${y}" width="${cw - 60}" height="30" rx="15" class="d-badge${i === 0 ? " on" : ""}"/>`);
+    text(hx, y + 20, `✓ ${badge}`, i === 0 ? "d-badge-on" : "d-badge-text", "middle");
+  });
+  text(hx, C.y + (wide ? 250 : 248), h.before, "d-dim", "middle");
+
+  // The arrows: the opened extension, and the capability reaching the agent.
+  if (wide) {
+    arrow(`M${A.x + 194} ${A.y + 68} C${A.x + 225} ${A.y + 68}, ${B.x - 20} ${B.y + 24}, ${B.x - 2} ${B.y + 24}`);
+    arrow(`M${cap.x + cap.w} ${cap.y + 29} C${cap.x + cap.w + 80} ${cap.y + 29}, ${C.x - 40} ${C.y + 125}, ${C.x + 28} ${C.y + 125}`);
+  } else {
+    arrow(`M${A.x + 170} ${A.y + 196} L${A.x + 170} ${B.y - 32}`);
+    arrow(`M${A.x + 170} ${B.y + 446} L${A.x + 170} ${C.y - 32}`);
+  }
+  return `<svg class="how-${layout}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${e(h.aria)}">${out.join("")}</svg>`;
+}
+
 // ?lang=es, else what the person chose last time, else the browser's language.
 function stored(key) {
   try { return localStorage.getItem(key); } catch { return null; }
@@ -217,6 +341,9 @@ function applyLang() {
   setText("cta-browse", t("browse"));
   setText("catalog-eyebrow", t("catalog"));
   setText("concepts-title", t("conceptsTitle"));
+  if ($("concepts-lead")) $("concepts-lead").innerHTML = t("conceptsLead");
+  if ($("formula")) $("formula").innerHTML = t("formula").map((part) => `<span>${escape(part)}</span>`).join('<b aria-hidden="true">+</b>').replace(/<b aria-hidden="true">\+<\/b>(?!.*<b)/, '<b aria-hidden="true">=</b>');
+  if ($("how")) $("how").innerHTML = howDiagram(t("how"), "wide") + howDiagram(t("how"), "tall");
   if ($("concepts")) $("concepts").replaceChildren(...t("concepts").map(([icon, name, text]) => {
     const card = document.createElement("div");
     card.className = "concept";
