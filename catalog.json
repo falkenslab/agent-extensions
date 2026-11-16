@@ -5382,7 +5382,7 @@
     },
     {
       "name": "video",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Videos your agent understands, on your computer: their captions read as a timed transcript, the speech transcribed with faster-whisper when there are none, frames where the screen changes, and WebVTT subtitles ready to upload to Moodle with the video.",
       "descriptions": {
         "en": "Videos your agent understands, on your computer: their captions read as a timed transcript, the speech transcribed with faster-whisper when there are none, frames where the screen changes, and WebVTT subtitles ready to upload to Moodle with the video.",
@@ -5537,6 +5537,7 @@
         {
           "name": "Python with faster-whisper",
           "program": "python3",
+          "setting": "python",
           "version": {
             "args": [
               "--version"
